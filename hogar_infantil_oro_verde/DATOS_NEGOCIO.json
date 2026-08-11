@@ -1,0 +1,54 @@
+{
+  "negocio": {
+    "nombre": "Hogar Infantil Oro Verde",
+    "subtitulo": "Educación Inicial & Cuidado de la Primera Infancia",
+    "eslogan": "El futuro brillante de tus hijos empieza aquí. Educamos con amor, principios y valores.",
+    "categoria": "Jardín Infantil, Guardería & Preescolar",
+    "telefono": "+573116789012",
+    "whatsapp": "+573116789012",
+    "whatsapp_url": "https://wa.me/573116789012?text=Hola%20Hogar%20Infantil%20Oro%20Verde,%20quisiera%20informaci%C3%B3n%20sobre%20matr%C3%ADculas%20y%20programas.",
+    "email": "contacto@hogarinfantiloroverde.com",
+    "direccion": "Calle 100 # 99-22, Barrio Oro Verde, Apartadó, Antioquia, Urabá",
+    "ciudad": "Apartadó, Antioquia",
+    "google_maps": "https://share.google/WnjNGT9QSqjxx3gWi",
+    "horarios": "Lunes a Viernes: 6:30 AM - 6:00 PM | Jornada Completa y Media Jornada"
+  },
+  "programas": [
+    {
+      "id": "sala-cuna",
+      "nombre": "Sala Cuna & Estimulación Temprana",
+      "edad": "0 a 12 meses",
+      "descripcion": "Entorno cálido y seguro enfocado en el desarrollo sensorial, vínculo afectivo, estimulación motriz y cuidado constante por profesionales de la salud e infancia.",
+      "color_tema": "teal",
+      "icono": "fa-baby-carriage"
+    },
+    {
+      "id": "parvulos-caminadores",
+      "nombre": "Párvulos & Caminadores",
+      "descripcion": "Desarrollo del lenguaje, motricidad fina y gruesa, control de esfínteres asistido y actividades lúdicas grupales.",
+      "edad": "1 a 3 años",
+      "color_tema": "orange",
+      "icono": "fa-shapes"
+    },
+    {
+      "id": "prejardin-jardin",
+      "nombre": "Prejardín & Jardín Infantil",
+      "descripcion": "Preparación previa a la etapa escolar, razonamiento lógico, expresión artística, autonomía personal, música y principios en valores.",
+      "edad": "3 a 5 años",
+      "color_tema": "purple",
+      "icono": "fa-graduation-cap"
+    }
+  ],
+  "actividades_culturales": [
+    { "titulo": "Lectura & Cuentacuentos", "desc": "Comprensión lectora temprana y desarrollo de imaginación", "icono": "fa-book-open" },
+    { "titulo": "Arte & Manualidades", "desc": "Pintura, plastilina y exploración de texturas creativas", "icono": "fa-palette" },
+    { "titulo": "Música & Expresión Corporal", "desc": "Ritmo, canto y desarrollo de coordinación psicomotriz", "icono": "fa-music" },
+    { "titulo": "Juegos Lógicos & Brain Train", "desc": "Rompecabezas, bloques de construcción y concentración", "icono": "fa-brain" }
+  ],
+  "docentes": [
+    { "nombre": "Lic. Mónica Arango", "rol": "Directora Pedagógica", "estudios": "Licenciada en Educación Infantil" },
+    { "nombre": "Lic. Diana Martínez", "rol": "Docente Párvulos", "estudios": "Especialista en Estimulación Temprana" },
+    { "nombre": "Lic. Carolina Ramos", "rol": "Docente Jardín", "estudios": "Educadora Preescolar & Arte" },
+    { "nombre": "Dra. Sofía Blandón", "rol": "Nutricionista Infantil", "estudios": "Supervisora de Minuta Alimenticia" }
+  ]
+}
