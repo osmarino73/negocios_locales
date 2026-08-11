@@ -1,0 +1,62 @@
+{
+  "negocio": {
+    "nombre": "Cris Barbershop",
+    "subtitulo": "Barbería Premium & Grooming Masculino",
+    "eslogan": "Más que un corte de cabello, es una experiencia para caballeros modernos.",
+    "categoria": "Barbería, Grooming & Estilo Masculino",
+    "telefono": "+573004567890",
+    "whatsapp": "+573004567890",
+    "whatsapp_url": "https://wa.me/573004567890?text=Hola%20Cris%20Barbershop,%20quisiera%20agendar%20un%20turno%20para%20corte%20o%20barba.",
+    "email": "citas@crisbarbershop.com",
+    "direccion": "Zona Comercial Principal, Colombia",
+    "ciudad": "Colombia",
+    "google_maps": "https://share.google/viX5ybxJGwEqL1fCr",
+    "horarios": "Lunes a Sábado: 9:00 AM - 8:00 PM | Domingos: 10:00 AM - 4:00 PM"
+  },
+  "servicios": [
+    {
+      "id": "corte-cabello",
+      "nombre": "Corte de Cabello Premium",
+      "descripcion": "Cortes de precisión adaptados a tu estilo y tipo de rostro. Incluye lavado, marcado a navaja y peinado final.",
+      "precio": "$30.000 COP",
+      "icono": "fa-scissors",
+      "imagen": "assets/images/haircut.png"
+    },
+    {
+      "id": "diseno-barba",
+      "nombre": "Diseño & Ritual de Barba",
+      "descripcion": "Perfilado, diseño con toallas calientes al vapor, aceites naturales hidratantes y acabado a navaja libre.",
+      "precio": "$20.000 COP",
+      "icono": "fa-user-ninja",
+      "imagen": "assets/images/beard.png"
+    },
+    {
+      "id": "afeitado-tradicional",
+      "nombre": "Afeitado Tradicional a Navaja",
+      "descripcion": "Afeitado clásico con espuma caliente, toallas herbales al vapor y masaje facial post-afeitado reconstituyente.",
+      "precio": "$25.000 COP",
+      "icono": "fa-wind",
+      "imagen": "assets/images/shave.png"
+    },
+    {
+      "id": "tratamiento-capilar",
+      "nombre": "Tratamiento Capilar & Cuero Cabelludo",
+      "descripcion": "Exfoliación capilar profunda, ampolleta fortalecedora anti-caída y masaje de relajación en cuero cabelludo.",
+      "precio": "$35.000 COP",
+      "icono": "fa-pump-soap",
+      "imagen": "assets/images/hero_man.png"
+    }
+  ],
+  "barberos_expertos": [
+    { "nombre": "Cris", "especialidad": "Master Barber & Founder", "experiencia": "8 años" },
+    { "nombre": "Alex", "especialidad": "Fade & Color Specialist", "experiencia": "5 años" },
+    { "nombre": "David", "especialidad": "Beard & Shave Specialist", "experiencia": "6 años" },
+    { "nombre": "Daniel", "especialidad": "Hair & Styling Expert", "experiencia": "4 años" }
+  ],
+  "productos": [
+    { "nombre": "Matte Clay", "desc": "Fijación fuerte y acabado mate natural", "precio": "$45.000 COP" },
+    { "nombre": "Beard Oil", "desc": "Aceite orgánico hidratante y suavizante", "precio": "$38.000 COP" },
+    { "nombre": "Daily Shampoo", "desc": "Fortalecedor capilar con menta fresca", "precio": "$35.000 COP" },
+    { "nombre": "Aftershave Balm", "desc": "Bálsamo refrescante sin alcohol", "precio": "$36.000 COP" }
+  ]
+}
