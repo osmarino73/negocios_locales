@@ -1,0 +1,86 @@
+{
+  "negocio": {
+    "nombre": "Veterinaria Con Sentido",
+    "profesional": "Dra. Diana Veterinaria",
+    "subtitulo": "Cuidado veterinario con cariño, técnica y confianza",
+    "eslogan": "Una clínica veterinaria hecha para cuidar y orientar. La salud de tu mascota no puede esperar.",
+    "categoria": "Veterinaria, Salud & Bienestar Animal",
+    "telefono": "+573127154085",
+    "whatsapp": "+573127154085",
+    "whatsapp_url": "https://wa.me/573127154085?text=Hola%20Dra.%20Diana,%20quisiera%20agendar%20una%20consulta%20m%C3%A9dica%20para%20mi%20mascota%20en%20Veterinaria%20Con%20Sentido.",
+    "email": "contacto@veterinariaconsentido.com",
+    "direccion": "Sede Principal | Atención Presencial y Domiciliaria",
+    "ciudad": "Colombia",
+    "google_maps": "https://share.google/D8tTYXmfmwXdHEgEf",
+    "facebook": "https://www.facebook.com/DraDianaVeterinaria",
+    "horarios": "Lunes a Sábado: 8:00 AM - 7:00 PM | Urgencias 24 Horas"
+  },
+  "servicios": [
+    {
+      "id": "atencion-humanizada",
+      "nombre": "Atención Humanizada & Sin Afán",
+      "descripcion": "Escuchamos al tutor, observamos a la mascota con calma y explicamos cada paso del diagnóstico de forma sencilla, cercana y transparente.",
+      "categoria": "Consulta Médica",
+      "icono": "fa-user-nurse",
+      "imagen": "assets/images/exam_dog.png"
+    },
+    {
+      "id": "estructura-examenes",
+      "nombre": "Estructura & Exámenes de Precisión",
+      "descripcion": "Laboratorio clínico, pruebas diagnósticas y evaluación profunda para identificar la causa real y tratar con precisión sin adivinanzas.",
+      "categoria": "Diagnóstico",
+      "icono": "fa-microscope",
+      "imagen": null
+    },
+    {
+      "id": "vacunas-prevencion",
+      "nombre": "Vacunas & Esquema Preventivo",
+      "descripcion": "Planes de vacunación, desparasitación interna/externa y antipulgas personalizados según la edad, raza y estilo de vida de tu peludo.",
+      "categoria": "Prevención",
+      "icono": "fa-syringe",
+      "imagen": "assets/images/vaccine_dog.png"
+    },
+    {
+      "id": "cirugias-procedimientos",
+      "nombre": "Cirugías & Procedimientos",
+      "descripcion": "Quirófano equipado, protocolos estrictos de anestesia, preparación y acompañamiento pre y post-operatorio amoroso.",
+      "categoria": "Cirugía",
+      "icono": "fa-stethoscope",
+      "imagen": null
+    },
+    {
+      "id": "acompanamiento-continuo",
+      "nombre": "Acompañamiento Continuo",
+      "descripcion": "Revisiones periódicas, monitoreo a distancia y ajuste de tratamiento para garantizar una recuperación sólida y sin recaídas.",
+      "categoria": "Seguimiento",
+      "icono": "fa-notes-medical",
+      "imagen": "assets/images/hero_doctor.png"
+    },
+    {
+      "id": "agendamiento-facil",
+      "nombre": "Atención Fácil & Domicilios",
+      "descripcion": "Agendamiento rápido vía WhatsApp, orientación médica virtual, guardería en casa, servicios especiales y urgencias 24/7.",
+      "categoria": "Bienestar",
+      "icono": "fa-calendar-check",
+      "imagen": null
+    }
+  ],
+  "pautas_prevencion": [
+    {
+      "titulo": "Apatía o Decaimiento",
+      "desc": "Si tu perro o gato no quiere jugar o pasa el día echado sin energía."
+    },
+    {
+      "titulo": "Falta de Apetito o Sed Excesiva",
+      "desc": "Cambios repentinos en el consumo de alimento o agua son señales de alerta."
+    },
+    {
+      "titulo": "Picazón o Problemas en Piel",
+      "desc": "Rascado frecuente, pérdida de pelo, enrojecimiento o heridas."
+    },
+    {
+      "titulo": "Dolor o Cojera",
+      "desc": "Dificultad para levantarse, quejidos o molestias al caminar."
+    }
+  ]
+}
