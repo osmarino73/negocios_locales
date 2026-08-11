@@ -240,11 +240,21 @@ a {
 }
 
 .card-image-box {
-  height: 180px;
+  height: 210px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-dark);
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.demo-card:hover .card-img {
+  transform: scale(1.08);
 }
 
 .bg-teal { background: linear-gradient(135deg, #0d9488, #0f766e); }
@@ -255,12 +265,15 @@ a {
   position: absolute;
   top: 16px;
   left: 16px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
   color: var(--color-dark);
   font-size: 12px;
   font-weight: 800;
-  padding: 4px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-full);
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .mockup-icon {
