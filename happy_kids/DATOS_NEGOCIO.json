@@ -1,0 +1,47 @@
+{
+  "negocio": {
+    "nombre": "Hogar Infantil Happy Kids",
+    "rubro": "Guardería, Jardín Infantil & Educación Inicial",
+    "eslogan": "Un Lugar Feliz para Crecer, Jugar y Aprender",
+    "contacto": {
+      "telefono_principal": "+57 (310) 555-0199",
+      "email": "info@happykids.edu.co",
+      "whatsapp": {
+        "numero": "+573105550199",
+        "link": "https://wa.me/573105550199?text=Hola,%20quisiera%20información%20sobre%20matrículas%20en%20Happy%20Kids"
+      }
+    },
+    "ubicacion": {
+      "google_maps_url": "https://share.google/jqZjSDnwZDji4lboX"
+    },
+    "horario_atencion": "Lunes a Viernes: 7:00 AM – 5:00 PM",
+    "programas_educativos": [
+      {
+        "nombre": "Maternal / Caminantes",
+        "edad": "1.5 – 3 años",
+        "descripcion": "Estimulación sensorial temprana, primeros pasos en autonomía y socialización."
+      },
+      {
+        "nombre": "Preescolar Inicial",
+        "edad": "2 – 3 años",
+        "descripcion": "Desarrollo del lenguaje, motricidad fina, expresión artística y juego."
+      },
+      {
+        "nombre": "Kindergarten",
+        "edad": "3 – 4 años",
+        "descripcion": "Razonamiento lógico, creatividad, iniciación matemática y música."
+      },
+      {
+        "nombre": "Pre-K Program",
+        "edad": "4 – 5 años",
+        "descripcion": "Preparación integral para la escuela primaria y preescritura."
+      }
+    ],
+    "estadisticas_logros": {
+      "ninos_graduados": "500+",
+      "docentes_certificadas": "25+",
+      "anios_experiencia": "15+",
+      "familias_satisfechas": "100%"
+    }
+  }
+}
