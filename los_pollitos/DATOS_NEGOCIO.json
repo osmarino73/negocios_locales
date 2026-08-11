@@ -1,0 +1,45 @@
+{
+  "negocio": {
+    "nombre": "Hogar Infantil Los Pollitos De Apartadó",
+    "rubro": "Cuidado & Educación Inicial Infantil",
+    "ubicacion": {
+      "ciudad": "Apartadó",
+      "departamento": "Antioquia",
+      "pais": "Colombia",
+      "google_maps_url": "https://share.google/uTfsCczTSa7yn04oH"
+    },
+    "contacto": {
+      "telefono_principal": "(312) 000-0000",
+      "telefono_secundario": "(304) 000-0000",
+      "whatsapp": {
+        "numero": "+573120000000",
+        "link": "https://wa.me/573120000000?text=Hola,%20deseo%20información%20sobre%20matrículas%20en%20el%20Hogar%20Infantil%20Los%20Pollitos%20De%20Apartadó"
+      }
+    },
+    "horario_atencion": "Lunes a Viernes: 7:00 AM – 5:00 PM",
+    "servicios": [
+      {
+        "titulo": "Guardería & Cuidado Diario",
+        "descripcion": "Cuidado cariñoso e integral en espacios amplios y seguros."
+      },
+      {
+        "titulo": "Estimulación Temprana",
+        "descripcion": "Ejercicios psicomotrices y estimulación sensorial guiados."
+      },
+      {
+        "titulo": "Iniciación Preescolar",
+        "descripcion": "Desarrollo de lenguaje, habilidades sociales y autonomía."
+      },
+      {
+        "titulo": "Talleres de Arte & Expresión",
+        "descripcion": "Pintura, música, cuentos y manualidades para despertar imaginación."
+      }
+    ],
+    "estadisticas_logros": {
+      "ninos_atendidos": "1500+",
+      "familias_satisfechas": "2000+",
+      "resenas_recomendaciones": "3000+",
+      "docentes_especialistas": "25+"
+    }
+  }
+}

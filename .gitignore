@@ -1,0 +1,7 @@
+# Node dependencies & temporary files
+node_modules/
+.ds_store
+thumbs.db
+*.log
+.gemini/
+.env

@@ -1,0 +1,52 @@
+{
+  "negocio": {
+    "nombre": "Centro Infantil Caritas Mágicas",
+    "rubro": "Guardería & Educación Inicial Preescolar",
+    "eslogan": "Donde las Pequeñas Mentes Crecen & Futuros Brillantes Comienzan",
+    "contacto": {
+      "telefono_principal": "(300) 123-4567",
+      "telefono_secundario": "(601) 234-5678",
+      "whatsapp": {
+        "numero": "+573001234567",
+        "link": "https://wa.me/573001234567?text=Hola,%20deseo%20información%20sobre%20inscripciones%20en%20Caritas%20Mágicas"
+      },
+      "email": "contacto@caritasmagicas.com"
+    },
+    "ubicacion": {
+      "direccion": "Centro Infantil Caritas Mágicas",
+      "google_maps_url": "https://maps.app.goo.gl/83Hj1j1jhyfMi3VV8"
+    },
+    "horario_atencion": {
+      "lunes_a_viernes": "6:30 AM – 6:30 PM",
+      "sabados_y_domingos": "Cerrado / Atención previa cita"
+    },
+    "programas_educativos": [
+      {
+        "nombre": "Lactantes & Bebés",
+        "edad": "6 semanas – 18 meses",
+        "descripcion": "Estimulación temprana sensorial y cuidado amoroso personalizado."
+      },
+      {
+        "nombre": "Caminantes / Maternal",
+        "edad": "18 meses – 3 años",
+        "descripcion": "Exploración activa, desarrollo del lenguaje y motricidad."
+      },
+      {
+        "nombre": "Preescolar Creativo",
+        "edad": "3 – 4 años",
+        "descripcion": "Aprendizaje por proyectos, arte, música y juego guiado."
+      },
+      {
+        "nombre": "Jardín / Pre-K",
+        "edad": "4 – 5 años",
+        "descripcion": "Iniciación a la lectoescritura, razonamiento lógico y preparación escolar."
+      }
+    ],
+    "estadisticas_logros": {
+      "anios_experiencia": "10+",
+      "familias_felices": "200+",
+      "educadoras_certificadas": "25+",
+      "aulas_equipadas": "5"
+    }
+  }
+}
