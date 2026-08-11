@@ -385,8 +385,12 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 40px;
 }
 
+.levels-grid-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .program-card {
-  padding: 36px 24px;
+  padding: 30px 20px;
   border-radius: var(--radius-md);
   text-align: center;
   transition: var(--transition);
@@ -401,6 +405,63 @@ img { max-width: 100%; height: auto; display: block; }
 .card-pink { background-color: var(--color-pink-light); border: 1px solid #fbcfe8; }
 .card-purple { background-color: var(--color-purple-light); border: 1px solid #c7d2fe; }
 .card-teal { background-color: var(--color-teal-light); border: 1px solid #99f6e4; }
+.card-orange { background-color: #ffedd5; border: 1px solid #fed7aa; }
+
+.pautas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  text-align: left;
+}
+
+.pauta-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 28px 24px;
+  border-radius: var(--radius-md);
+  color: white;
+  transition: var(--transition);
+}
+
+.pauta-box:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.pauta-box i {
+  font-size: 32px;
+  color: var(--color-yellow);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.pauta-box h3 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.pauta-box p {
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+.quote-happy {
+  margin-top: 44px;
+  padding: 20px 32px;
+  background-color: rgba(253, 224, 71, 0.15);
+  border-left: 4px solid var(--color-yellow);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.quote-happy-text {
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  color: var(--color-yellow);
+}
 
 .card-icon {
   width: 60px;

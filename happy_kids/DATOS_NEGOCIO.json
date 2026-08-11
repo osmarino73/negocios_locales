@@ -1,47 +1,66 @@
 {
   "negocio": {
-    "nombre": "Hogar Infantil Happy Kids",
+    "nombre": "Centro de Educación Infantil Happy Kids",
     "rubro": "Guardería, Jardín Infantil & Educación Inicial",
-    "eslogan": "Un Lugar Feliz para Crecer, Jugar y Aprender",
+    "eslogan": "Educamos en valores para sembrar en los niños su mayor riqueza ¡la Felicidad!",
     "contacto": {
-      "telefono_principal": "+57 (310) 555-0199",
-      "email": "info@happykids.edu.co",
+      "telefono_apartado": "+57 312 807-0036",
+      "telefono_carepa": "+57 312 658-2546",
+      "email": "c.e.o.happykids@gmail.com",
+      "redes_sociales": "@c.e.i.happykids",
       "whatsapp": {
-        "numero": "+573105550199",
-        "link": "https://wa.me/573105550199?text=Hola,%20quisiera%20información%20sobre%20matrículas%20en%20Happy%20Kids"
+        "numero": "+573128070036",
+        "link": "https://wa.me/573128070036?text=Hola,%20quisiera%20información%20sobre%20matrículas%20en%20Happy%20Kids%20Urabá"
       }
     },
     "ubicacion": {
+      "sedes": [
+        {
+          "nombre": "Sede Apartadó",
+          "telefono": "+57 312 807-0036"
+        },
+        {
+          "nombre": "Sede Carepa",
+          "telefono": "+57 312 658-2546"
+        }
+      ],
+      "region": "Urabá, Antioquia, Colombia",
       "google_maps_url": "https://share.google/jqZjSDnwZDji4lboX"
     },
-    "horario_atencion": "Lunes a Viernes: 7:00 AM – 5:00 PM",
-    "programas_educativos": [
+    "horario_atencion": "Jornada Completa y Media Jornada (Flexibilidad para padres trabajadores)",
+    "niveles_educativos": [
       {
-        "nombre": "Maternal / Caminantes",
-        "edad": "1.5 – 3 años",
-        "descripcion": "Estimulación sensorial temprana, primeros pasos en autonomía y socialización."
+        "nombre": "Sala Cuna",
+        "edad": "4 meses a 12 meses",
+        "descripcion": "Cuidado amoroso, estimulación sensorial y espacio seguro."
       },
       {
-        "nombre": "Preescolar Inicial",
-        "edad": "2 – 3 años",
-        "descripcion": "Desarrollo del lenguaje, motricidad fina, expresión artística y juego."
+        "nombre": "Caminadores",
+        "edad": "1 a 2 años",
+        "descripcion": "Adaptación a la vida escolar y primeros pasos en motricidad."
       },
       {
-        "nombre": "Kindergarten",
-        "edad": "3 – 4 años",
-        "descripcion": "Razonamiento lógico, creatividad, iniciación matemática y música."
+        "nombre": "Párvulos",
+        "edad": "2 a 3 años",
+        "descripcion": "Actividades lúdicas en el desarrollo de motricidad fina y gruesa."
       },
       {
-        "nombre": "Pre-K Program",
-        "edad": "4 – 5 años",
-        "descripcion": "Preparación integral para la escuela primaria y preescritura."
+        "nombre": "Pre-Jardín",
+        "edad": "3 a 4 años",
+        "descripcion": "Inicio guiado de lecto-escritura y razonamiento lúdico."
+      },
+      {
+        "nombre": "Jardín",
+        "edad": "4 a 5 años",
+        "descripcion": "Se refuerza el trabajo de lecto-escritura y preparación para el colegio."
       }
     ],
-    "estadisticas_logros": {
-      "ninos_graduados": "500+",
-      "docentes_certificadas": "25+",
-      "anios_experiencia": "15+",
-      "familias_satisfechas": "100%"
-    }
+    "propuesta_valor": [
+      "Docentes profesionales en primera infancia con carisma y respeto.",
+      "Servicio de jornada completa adaptado a padres trabajadores.",
+      "Instalaciones seguras, amplias, iluminadas y ventiladas.",
+      "Educación en valores sin distinción de raza, credo o cultura.",
+      "Vínculo con colegios reconocidos para la continuidad escolar."
+    ]
   }
 }
