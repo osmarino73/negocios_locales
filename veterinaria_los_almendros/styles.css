@@ -1,0 +1,686 @@
+/* ==========================================================================
+   VETERINARIA LOS ALMENDROS - APARTADÓ, ANTIOQUIA
+   Diseño de Alta Gama en Tonos Cálidos Caramelo, Piedra Beige y Mocha Espresso
+   ========================================================================== */
+
+:root {
+  --color-caramel: #b48a62;
+  --color-caramel-dark: #966e47;
+  --color-caramel-light: #f7f1ea;
+
+  --color-stone: #f3ede8;
+  --color-stone-dark: #e5ddd5;
+
+  --color-mocha: #4a3e3d;
+  --color-mocha-dark: #362a29;
+
+  --color-cream: #fcf9f5;
+  --color-white: #ffffff;
+
+  --color-text: #2c2221;
+  --color-muted: #6e5e5c;
+  --color-border: #e8dfd8;
+
+  --font-main: 'Outfit', sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 36px;
+  --radius-pill: 50px;
+
+  --shadow-sm: 0 4px 12px rgba(74, 62, 61, 0.05);
+  --shadow-md: 0 12px 32px rgba(74, 62, 61, 0.1);
+  --shadow-lg: 0 20px 48px rgba(54, 42, 41, 0.15);
+
+  --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header & Navigation */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(252, 249, 245, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px 24px;
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-mocha);
+  color: var(--color-cream);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 14px rgba(74, 62, 61, 0.2);
+}
+
+.logo-text h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-mocha-dark);
+  line-height: 1.1;
+}
+
+.logo-text span {
+  font-size: 0.78rem;
+  color: var(--color-caramel);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-muted);
+  font-weight: 500;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-caramel);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-caramel {
+  background-color: var(--color-caramel);
+  color: white;
+  box-shadow: 0 6px 18px rgba(180, 138, 98, 0.35);
+}
+
+.btn-caramel:hover {
+  background-color: var(--color-caramel-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(180, 138, 98, 0.45);
+}
+
+.btn-mocha {
+  background-color: var(--color-mocha);
+  color: white;
+  box-shadow: 0 6px 18px rgba(74, 62, 61, 0.3);
+}
+
+.btn-mocha:hover {
+  background-color: var(--color-mocha-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline-mocha {
+  background-color: transparent;
+  color: var(--color-mocha);
+  border: 2px solid var(--color-mocha);
+}
+
+.btn-outline-mocha:hover {
+  background-color: var(--color-mocha);
+  color: white;
+}
+
+/* Hero Section with Warm Arched Container (Ref Design) */
+.hero {
+  padding: 40px 24px 60px;
+}
+
+.hero-arch-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  background-color: var(--color-mocha-dark);
+  background-image: radial-gradient(circle at top center, rgba(180, 138, 98, 0.25), transparent 70%);
+  border-radius: var(--radius-xl);
+  padding: 60px 48px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  color: #f3ede8;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: #fcf9f5;
+  letter-spacing: -0.5px;
+}
+
+.hero-title span {
+  color: #e5be9e;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #d1c4be;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-arch-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-arch-card {
+  width: 100%;
+  max-width: 440px;
+  height: 480px;
+  border-radius: 200px 200px 24px 24px;
+  overflow: hidden;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.hero-arch-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Glassmorphism Cards from Reference */
+.floating-glass-card {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  padding: 16px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  color: var(--color-mocha-dark);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  z-index: 10;
+}
+
+.floating-card-1 {
+  top: 40px;
+  left: -20px;
+}
+
+.floating-card-2 {
+  bottom: 40px;
+  right: -20px;
+}
+
+.floating-glass-card strong {
+  display: block;
+  font-size: 15px;
+  color: var(--color-mocha-dark);
+}
+
+.floating-glass-card span {
+  font-size: 12px;
+  color: var(--color-muted);
+}
+
+/* Section Header */
+.section {
+  padding: 80px 24px;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.section-tag {
+  color: var(--color-caramel);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--color-mocha-dark);
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--color-muted);
+}
+
+/* 6 Services Grid (Exact layout & color aesthetic from reference image) */
+.services-grid-6 {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-box {
+  padding: 40px 32px;
+  border-radius: var(--radius-lg);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-box-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+
+.service-box h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.service-box p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.service-box-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Color variations matching reference screenshot */
+.box-caramel {
+  background-color: var(--color-caramel);
+  color: white;
+}
+.box-caramel .service-box-icon {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.box-caramel p { color: #f3ede8; }
+.box-caramel .service-box-footer { color: white; }
+
+.box-beige {
+  background-color: var(--color-stone);
+  color: var(--color-mocha-dark);
+  border: 1px solid var(--color-border);
+}
+.box-beige .service-box-icon {
+  background-color: white;
+  color: var(--color-caramel);
+  box-shadow: var(--shadow-sm);
+}
+.box-beige p { color: var(--color-muted); }
+.box-beige .service-box-footer { color: var(--color-caramel); }
+
+.box-mocha {
+  background-color: var(--color-mocha);
+  color: white;
+}
+.box-mocha .service-box-icon {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #e5be9e;
+}
+.box-mocha p { color: #d1c4be; }
+.box-mocha .service-box-footer { color: #e5be9e; }
+
+.box-white {
+  background-color: var(--color-white);
+  color: var(--color-mocha-dark);
+  border: 1px solid var(--color-border);
+}
+.box-white .service-box-icon {
+  background-color: var(--color-caramel-light);
+  color: var(--color-caramel);
+}
+.box-white p { color: var(--color-muted); }
+.box-white .service-box-footer { color: var(--color-mocha); }
+
+/* Doctors Section (Apartadó Team) */
+.doctors-section {
+  background-color: var(--color-stone);
+  border-y: 1px solid var(--color-border);
+}
+
+.doctors-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.doctor-card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.doctor-avatar {
+  width: 90px;
+  height: 90px;
+  background-color: var(--color-caramel-light);
+  color: var(--color-caramel);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  flex-shrink: 0;
+  border: 3px solid var(--color-stone);
+}
+
+.doctor-info h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-mocha-dark);
+  margin-bottom: 4px;
+}
+
+.doctor-info span {
+  font-size: 13px;
+  color: var(--color-caramel);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.doctor-info p {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+/* Contact & Map Section */
+.contact-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.contact-card {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.contact-row-icon {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-caramel-light);
+  color: var(--color-caramel);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-row-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-mocha-dark);
+}
+
+.contact-row-text p, .contact-row-text a {
+  font-size: 14px;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.map-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  min-height: 380px;
+}
+
+.map-card iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-mocha-dark);
+  color: #d1c4be;
+  padding: 60px 24px 30px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand h2 {
+  color: #fcf9f5;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  color: #b8a8a2;
+  max-width: 400px;
+}
+
+.footer-col h4 {
+  color: #fcf9f5;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  color: #b8a8a2;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 30px auto 0;
+  text-align: center;
+  color: #8c7b77;
+  font-size: 13px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  transition: var(--transition);
+  animation: pulse-wa 2s infinite;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .hero-arch-container {
+    grid-template-columns: 1fr;
+    padding: 48px 28px;
+  }
+  .services-grid-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .services-grid-6 {
+    grid-template-columns: 1fr;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

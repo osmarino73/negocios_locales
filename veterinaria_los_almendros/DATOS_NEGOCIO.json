@@ -1,0 +1,61 @@
+{
+  "negocio": {
+    "nombre": "Veterinaria Los Almendros",
+    "subtitulo": "Clínica Veterinaria & Centro de Bienestar Animal",
+    "eslogan": "Atención especializada con calidad humana y tecnología avanzada para tus mascotas en Apartadó.",
+    "categoria": "Veterinaria, Salud & Peluquería Canina",
+    "telefono": "+573108459201",
+    "whatsapp": "+573108459201",
+    "whatsapp_url": "https://wa.me/573108459201?text=Hola%20Veterinaria%20Los%20Almendros,%20quisiera%20agendar%20una%20consulta%20m%C3%A9dica%20o%20servicio%20para%20mi%20mascota.",
+    "email": "contacto@veterinarialosalmendros.com",
+    "direccion": "Carrera 99A, Apartadó, Antioquia, Urabá",
+    "ciudad": "Apartadó, Antioquia",
+    "google_maps": "https://share.google/Yjng6GoLKRtNFADvf",
+    "horarios": "Atención 24 Horas | Lunes a Domingo",
+    "medicos_destacados": ["Dra. Mónica Blandón", "Dr. Diego"]
+  },
+  "servicios": [
+    {
+      "id": "vacunacion-prevencion",
+      "nombre": "Vacunación & Prevención",
+      "descripcion": "Esquemas vacunales completos, desparasitación interna y profilaxis preventiva para proteger a tu perro o gato en cada etapa.",
+      "icono": "fa-syringe",
+      "estilo_tarjeta": "caramel"
+    },
+    {
+      "id": "grooming-estetica",
+      "nombre": "Peluquería & Estética (Grooming)",
+      "descripcion": "Baño relajante, corte especializado por raza, limpieza de oídos y spa completo con productos dermatológicos hipoalergénicos.",
+      "icono": "fa-scissors",
+      "estilo_tarjeta": "beige"
+    },
+    {
+      "id": "cirugias-procedimientos",
+      "nombre": "Cirugías & Procedimientos",
+      "descripcion": "Quirófano moderno con monitoreo de signos vitales, cirugía general, esterilizaciones y procedimientos de tejidos blandos.",
+      "icono": "fa-heart-pulse",
+      "estilo_tarjeta": "mocha"
+    },
+    {
+      "id": "hospitalizacion-reanimacion",
+      "nombre": "Hospitalización & UCI 24/7",
+      "descripcion": "Módulos individuales climatizados, fluidoterapia y monitoreo veterinario continuo durante las 24 horas del día.",
+      "icono": "fa-hospital",
+      "estilo_tarjeta": "beige"
+    },
+    {
+      "id": "examenes-laboratorio",
+      "nombre": "Exámenes & Laboratorio Clínico",
+      "descripcion": "Hemogramas, ecografía, radiografía digital y diagnóstico rápido para decisiones médicas oportunas y certeras.",
+      "icono": "fa-microscope",
+      "estilo_tarjeta": "mocha"
+    },
+    {
+      "id": "atencion-medica-confianza",
+      "nombre": "Consulta Médica & Confianza",
+      "descripcion": "Valoración clínica integral con la calidad humana de los doctores Mónica Blandón y Diego en un ambiente tranquilo.",
+      "icono": "fa-user-doctor",
+      "estilo_tarjeta": "white"
+    }
+  ]
+}
