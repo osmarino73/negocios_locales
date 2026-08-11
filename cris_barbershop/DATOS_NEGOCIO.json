@@ -16,35 +16,103 @@
   "servicios": [
     {
       "id": "corte-cabello",
-      "nombre": "Corte de Cabello Premium",
-      "descripcion": "Cortes de precisión adaptados a tu estilo y tipo de rostro. Incluye lavado, marcado a navaja y peinado final.",
+      "nombre": "Corte de Cabello (Fade / Clásico)",
+      "descripcion": "Cortes de precisión (Low, Mid, High Fade o Clásico) adaptados a tu estilo personal y tipo de rostro. Incluye lavado, marcado a navaja y peinado final.",
       "precio": "$30.000 COP",
+      "duracion": "45 min",
+      "categoria": "Cortes & Fades",
       "icono": "fa-scissors",
       "imagen": "assets/images/haircut.png"
     },
     {
       "id": "diseno-barba",
-      "nombre": "Diseño & Ritual de Barba",
-      "descripcion": "Perfilado, diseño con toallas calientes al vapor, aceites naturales hidratantes y acabado a navaja libre.",
+      "nombre": "Diseño & Arreglo de Barba",
+      "descripcion": "Perfilado con navaja libre, recortado de longitud, alineación de pómulos y cuello, toallas calientes al vapor y aceites esenciales hidratantes.",
       "precio": "$20.000 COP",
+      "duracion": "30 min",
+      "categoria": "Barba & Afeitado",
       "icono": "fa-user-ninja",
       "imagen": "assets/images/beard.png"
     },
     {
+      "id": "combo-corte-barba",
+      "nombre": "Combo VIP: Corte + Barba + Lavado",
+      "descripcion": "El paquete preferido. Corte de cabello completo + diseño y perfilado de barba + lavado refrescante con masaje de cuero cabelludo.",
+      "precio": "$45.000 COP",
+      "duracion": "60 min",
+      "categoria": "Combos VIP",
+      "icono": "fa-crown",
+      "imagen": "assets/images/hero_man.png"
+    },
+    {
       "id": "afeitado-tradicional",
       "nombre": "Afeitado Tradicional a Navaja",
-      "descripcion": "Afeitado clásico con espuma caliente, toallas herbales al vapor y masaje facial post-afeitado reconstituyente.",
+      "descripcion": "Afeitado clásico al estilo antiguo con espuma caliente al vapor, toallas herbales relajantes, pase de navaja y bálsamo reconstituyente.",
       "precio": "$25.000 COP",
+      "duracion": "35 min",
+      "categoria": "Barba & Afeitado",
       "icono": "fa-wind",
       "imagen": "assets/images/shave.png"
     },
     {
-      "id": "tratamiento-capilar",
-      "nombre": "Tratamiento Capilar & Cuero Cabelludo",
-      "descripcion": "Exfoliación capilar profunda, ampolleta fortalecedora anti-caída y masaje de relajación en cuero cabelludo.",
+      "id": "limpieza-facial-black-mask",
+      "nombre": "Limpieza Facial + Mascarilla Negra (Black Mask)",
+      "descripcion": "Exfoliación facial para eliminar impurezas y puntos negros, aplicación de mascarilla negra purificante y crema hidratante.",
+      "precio": "$25.000 COP",
+      "duracion": "30 min",
+      "categoria": "Tratamientos Faciales & Capilares",
+      "icono": "fa-mask-face",
+      "imagen": "assets/images/interior.png"
+    },
+    {
+      "id": "perfilado-cejas",
+      "nombre": "Perfilado & Diseño de Cejas",
+      "descripcion": "Limpieza y marcado de cejas masculinas a navaja o hilo respetando la masculinidad y expresión natural de tu rostro.",
+      "precio": "$10.000 COP",
+      "duracion": "15 min",
+      "categoria": "Tratamientos Faciales & Capilares",
+      "icono": "fa-eye",
+      "imagen": null
+    },
+    {
+      "id": "corte-infantil",
+      "nombre": "Corte Infantil (Niños)",
+      "descripcion": "Atención paciente y divertida para niños. Cortes modernos, peinados divertidos y ambiente cómodo.",
+      "precio": "$25.000 COP",
+      "duracion": "35 min",
+      "categoria": "Cortes & Fades",
+      "icono": "fa-child",
+      "imagen": null
+    },
+    {
+      "id": "pigmentacion-canas",
+      "nombre": "Pigmentación & Camuflaje de Canas",
+      "descripcion": "Tinte o pigmentación sutil para barba o cabello. Devuelve el tono natural sin verse artificial ni sobrecargado.",
       "precio": "$35.000 COP",
+      "duracion": "40 min",
+      "categoria": "Cortes & Fades",
+      "icono": "fa-spray-can",
+      "imagen": null
+    },
+    {
+      "id": "tratamiento-capilar",
+      "nombre": "Tratamiento Capilar Hidratante Anticaída",
+      "descripcion": "Exfoliación capilar profunda, ampolleta fortalecedora anti-caída con biotina y masaje de estimulación folicular.",
+      "precio": "$35.000 COP",
+      "duracion": "30 min",
+      "categoria": "Tratamientos Faciales & Capilares",
       "icono": "fa-pump-soap",
-      "imagen": "assets/images/hero_man.png"
+      "imagen": null
+    },
+    {
+      "id": "experiencia-full-vip",
+      "nombre": "Experiencia Full VIP Cris Barber",
+      "descripcion": "Servicio de lujo completo: Corte Premium + Ritual de Barba + Mascarilla Negra Facial + Lavado Especial + Bebida de cortesía.",
+      "precio": "$65.000 COP",
+      "duracion": "75 min",
+      "categoria": "Combos VIP",
+      "icono": "fa-gem",
+      "imagen": "assets/images/interior.png"
     }
   ],
   "barberos_expertos": [
@@ -56,7 +124,7 @@
   "productos": [
     { "nombre": "Matte Clay", "desc": "Fijación fuerte y acabado mate natural", "precio": "$45.000 COP" },
     { "nombre": "Beard Oil", "desc": "Aceite orgánico hidratante y suavizante", "precio": "$38.000 COP" },
-    { "nombre": "Daily Shampoo", "desc": "Fortalecedor capilar con menta fresca", "precio": "$35.000 COP" },
+    { "nombre": "Daily Shampoo", "desc": "Champú diario fortalecedor con menta fresca", "precio": "$35.000 COP" },
     { "nombre": "Aftershave Balm", "desc": "Bálsamo refrescante sin alcohol", "precio": "$36.000 COP" }
   ]
 }

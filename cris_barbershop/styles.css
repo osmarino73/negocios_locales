@@ -337,12 +337,12 @@ body {
   color: var(--color-bronze);
 }
 
-/* 4 Services Grid (Reference layout) */
-.services-grid-4 {
+/* Services Grid (Catalogue layout for 10 services) */
+.services-grid-10 {
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -360,11 +360,21 @@ body {
 .service-card-item:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-md);
-  border-color: #d4d4d8;
+  border-color: var(--color-bronze);
 }
 
 .service-card-header {
-  padding: 24px;
+  padding: 28px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .service-card-icon {
@@ -377,33 +387,65 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  margin-bottom: 16px;
+}
+
+.badge-duration {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-muted);
+  background-color: #f4f4f5;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
 }
 
 .service-card-item h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   color: var(--color-charcoal);
+  line-height: 1.25;
 }
 
 .service-card-item p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-muted);
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.service-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
 }
 
 .service-price {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  color: var(--color-bronze);
+}
+
+.service-book-btn {
+  color: var(--color-charcoal);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.service-book-btn:hover {
   color: var(--color-bronze);
 }
 
 .service-card-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  margin-top: auto;
 }
 
 /* Dark Leather Barbershop Stats Banner */
