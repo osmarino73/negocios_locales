@@ -112,12 +112,28 @@ Este manual es la guía oficial de ventas para el equipo de **Makloz Tech**. Con
 
 ---
 
+## 🟣 Categoria 5: Posicionamiento Local & Google Maps
+
+### ❓ Objeción 10: *"Nosotros ya aparecemos en Google Maps, pero no nos llegan casi llamadas por ahí."*
+
+- **El Miedo Real del Cliente**: Piensa que tener el pin creado en Google Maps es suficiente y que estar ahí no genera llamadas reales.
+- **Estructura de Respuesta (Educación en SEO Local & Optimización de Ficha)**:
+  > *"Aparecer en el mapa es solo el primer paso, [Nombre Directora]. El verdadero secreto está en **cómo está optimizada la ficha para ganar los 3 primeros lugares (Local Pack)** cuando un padre busca 'guarderías o jardines cerca de mí' en [Nombre de la Ciudad].*
+  > 
+  > *En **Makloz Tech** no solo creamos la ficha: vinculamos su nuevo sitio web de regalo, configuramos las categorías exactas, añadimos fotos de alta resolución y activamos el sistema de recolección de reseñas de 5 estrellas con sus padres actuales.*
+  > 
+  > *Una ficha optimizada en el top 3 de Google Maps recibe hasta **5 veces más llamadas y mensajes por WhatsApp** que una ficha abandonada."*
+
+---
+
 ## 🛠️ Resumen de Matriz de Cierre Rápido
 
 | Objeción del Cliente | Respuesta Clave de Makloz Tech | Acción Inmediata |
 | :--- | :--- | :--- |
 | **"¿Por qué es gratis?"** | *"Transparencia: es nuestro regalo de entrada; tú solo activas tu dominio."* | Enviar demo web personalizada. |
 | **"Ya tengo Facebook."** | *"Instagram no atiende a las 10 PM. Nuestro Agente de IA en WhatsApp sí."* | Enviar enlace del Probador de IA. |
+| **"Nadie llama de Google Maps."** | *"Estar en el mapa no es suficiente; optimizamos tu ficha para estar en el Top 3 y recibir 5x llamadas."* | Mostrar auditoría rápida de Google Maps. |
 | **"No hay presupuesto."** | *"Aprovechemos el $0 COP de desarrollo web hoy sin asumir costos de software."* | Asegurar la activación de la web de regalo. |
 | **"Es muy difícil."** | *"Funciona 100% por WhatsApp. No tienes que aprender nada nuevo."* | Mostrar prueba de envío de nota de voz. |
 | **"Tengo que consultarlo."** | *"Te envío la demo y el simulador de IA para que tu junta lo pruebe en vivo."* | Agendar llamada de seguimiento a 24h. |
+
