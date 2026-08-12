@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function notifyModeChange(modeName) {
-    const timeStr = getCurrentTime();
     const systemNoticeHTML = `
       <div class="msg-row received" style="align-self: center; max-width: 90%;">
         <div class="msg-bubble" style="background-color: #0f172a; color: #f97316; border: 1px solid #334155; text-align: center; font-size: 12px; font-weight: 600;">
@@ -45,10 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToBottom();
   }
 
+  // Text normalization to strip accents (cuánto -> cuanto, pensión -> pension)
+  function normalizeText(str) {
+    return (str || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+  }
+
   // Base Knowledge Base (Commercial / Admissions)
   const commercialKnowledge = [
     {
-      keywords: ['cupo', 'cupos', 'inscripci', 'matri', 'vacante', 'edad', 'años', 'meses', 'admision'],
+      keywords: ['cupo', 'cupos', 'inscripci', 'matri', 'vacante', 'edad', 'anos', 'meses', 'admision'],
       response: `✨ ¡Hola! Claro que sí, con mucho gusto te brindo información de cupos. 🎒
 
 En nuestro Jardín tenemos admisiones abiertas para los siguientes niveles:
@@ -59,7 +66,7 @@ En nuestro Jardín tenemos admisiones abiertas para los siguientes niveles:
 ¿Para cuántos años o meses buscas el cupo de tu pequeño/a?`
     },
     {
-      keywords: ['precio', 'costo', 'valor', 'cuanto', 'mensualidad', 'pension', 'tarif', 'pagar'],
+      keywords: ['precio', 'precios', 'costo', 'costos', 'valor', 'valores', 'cuanto', 'cuanta', 'mensualidad', 'mensualidades', 'pension', 'pensiones', 'tarif', 'tarifa', 'tarifas', 'pagar', 'cuesta', 'cobran', 'dinero'],
       response: `💰 **Nuestras Tarifas & Planes 2026**:
 
 1. **Jornada Completa** (6:30 AM - 5:30 PM): Incluye alimentación completa (almuerzo + 2 refrigerios supervisados por nutricionista).
@@ -137,12 +144,18 @@ Para agendar tu **Visita Guiada VIP**, por favor indícame:
     }, delay);
   }
 
-  // Match intent algorithm with Mode Checking
+  // Match intent algorithm with Normalized Accents & Mode Checking
   function generateAIAnswer(userText) {
-    const textLower = userText.toLowerCase();
+    const textNorm = normalizeText(userText);
 
-    // Check if user is asking about student/daily report
-    const isStudentQuery = studentKeywords.some(kw => textLower.includes(kw));
+    // 1. First Check Tarifas & Mensualidades directly for high priority
+    const tariffItem = commercialKnowledge.find(item => item.keywords.includes('mensualidades') || item.keywords.includes('pension'));
+    if (tariffItem && tariffItem.keywords.some(kw => textNorm.includes(normalizeText(kw)))) {
+      return tariffItem.response;
+    }
+
+    // 2. Check if user is asking about student/daily report
+    const isStudentQuery = studentKeywords.some(kw => textNorm.includes(normalizeText(kw)));
 
     if (isStudentQuery) {
       if (currentAiMode === 'standard') {
@@ -172,17 +185,18 @@ Actualmente estás probando el **Agente IA Estándar (Comercial & Admisiones)**,
       }
     }
 
-    // Check if user is giving name/appointment details
-    if (textLower.includes('mañana') || textLower.includes('tarde') || textLower.includes('cita') || textLower.includes('agendar')) {
-      triggerLeadModal();
-    }
-
+    // 3. Check general commercial intents
     for (const item of commercialKnowledge) {
       for (const kw of item.keywords) {
-        if (textLower.includes(kw)) {
+        if (textNorm.includes(normalizeText(kw))) {
           return item.response;
         }
       }
+    }
+
+    // 4. Check if user is giving name/appointment details
+    if (textNorm.includes('manana') || textNorm.includes('tarde') || textNorm.includes('cita') || textNorm.includes('agendar')) {
+      triggerLeadModal();
     }
 
     // Default Fallback Response
