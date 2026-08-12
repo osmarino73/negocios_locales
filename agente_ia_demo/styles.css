@@ -146,15 +146,45 @@ body {
   gap: 20px;
 }
 
-.sidebar-box-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #f8fafc;
+/* Mode Selector Radio Options */
+.mode-option-btn {
   display: flex;
   align-items: center;
-  gap: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  gap: 10px;
+  padding: 10px 12px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  color: #cbd5e1;
+}
+
+.mode-option-btn strong {
+  display: block;
+  font-size: 12px;
+  color: white;
+}
+
+.mode-option-btn span {
+  display: block;
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.mode-option-btn i {
+  font-size: 16px;
+  color: #64748b;
+}
+
+.mode-option-btn.active {
+  background-color: rgba(249, 115, 22, 0.15);
+  border-color: var(--makloz-orange);
+  color: white;
+}
+
+.mode-option-btn.active i {
+  color: var(--makloz-orange);
 }
 
 .preset-btn {

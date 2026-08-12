@@ -1,6 +1,7 @@
 /**
  * AGENTE DE IA DEMOSTRACIÓN - MAKLOZ TECH & MIOWEKIDS
  * Lógica Conversacional de IA para Atención a Padres de Familia en Guarderías de Colombia
+ * Soporta Modo Estándar (Sin MioWeKids) y Modo Avanzado (Con MioWeKids)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,16 +10,43 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendBtn = document.getElementById('sendBtn');
   const suggestionChips = document.getElementById('suggestionChips');
 
-  // Lead Appointment State
-  let leadData = {
-    nombrePadre: '',
-    edadNino: '',
-    nivelDeseado: '',
-    fechaVisita: ''
-  };
+  // Mode Selection State ('standard' vs 'miowekids')
+  let currentAiMode = 'standard';
 
-  // Knowledge Base of AI Agent (MioWeKids Core Intelligence)
-  const knowledgeBase = [
+  const modeStdBtn = document.getElementById('modeStdBtn');
+  const modeFullBtn = document.getElementById('modeFullBtn');
+
+  if (modeStdBtn && modeFullBtn) {
+    modeStdBtn.addEventListener('click', () => {
+      currentAiMode = 'standard';
+      modeStdBtn.classList.add('active');
+      modeFullBtn.classList.remove('active');
+      notifyModeChange('Agente IA Estándar (Sin MioWeKids)');
+    });
+
+    modeFullBtn.addEventListener('click', () => {
+      currentAiMode = 'miowekids';
+      modeFullBtn.classList.add('active');
+      modeStdBtn.classList.remove('active');
+      notifyModeChange('Agente IA + MioWeKids (Conectado al Sistema)');
+    });
+  }
+
+  function notifyModeChange(modeName) {
+    const timeStr = getCurrentTime();
+    const systemNoticeHTML = `
+      <div class="msg-row received" style="align-self: center; max-width: 90%;">
+        <div class="msg-bubble" style="background-color: #0f172a; color: #f97316; border: 1px solid #334155; text-align: center; font-size: 12px; font-weight: 600;">
+          <i class="fa-solid fa-arrows-rotate"></i> Modo de Agente IA cambiado a: <strong>${modeName}</strong>
+        </div>
+      </div>
+    `;
+    chatStream.insertAdjacentHTML('beforeend', systemNoticeHTML);
+    scrollToBottom();
+  }
+
+  // Base Knowledge Base (Commercial / Admissions)
+  const commercialKnowledge = [
     {
       keywords: ['cupo', 'cupos', 'inscripci', 'matri', 'vacante', 'edad', 'años', 'meses', 'admision'],
       response: `✨ ¡Hola! Claro que sí, con mucho gusto te brindo información de cupos. 🎒
@@ -51,36 +79,17 @@ Para agendar tu **Visita Guiada VIP**, por favor indícame:
 3. ¿Prefieres visitarnos en la mañana (9:00 AM) o en la tarde (3:00 PM)?`
     },
     {
-      keywords: ['reporte', 'miowekids', 'boletin', 'como esta', 'hijo', 'mateo', 'sofia', 'comer', 'almuerzo', 'siesta', 'asistencia'],
-      response: `📊 **[Integración MioWeKids - Reporte en Tiempo Real]**
-
-☀️ **Reporte Diario de hoy para el alumno Mateo Silva**:
-• **Entrada**: 7:15 AM (Puntual 🟢)
-• **Almuerzo**: Consumió el 100% de su minuta (Crema de verduras, pechuga y fruta fresca) 🍎
-• **Siesta**: 1:00 PM - 2:30 PM (Descansó muy bien 💤)
-• **Actividad del día**: Pintura de dedos & Lectura de cuentos 🎨
-• **Estado de Ánimo**: Muy feliz y participativo.
-
-*Este reporte se envía automáticamente a los padres a través de nuestra plataforma **MioWeKids**.*`
-    },
-    {
       keywords: ['horario', 'hora', 'abren', 'cierran', 'dias', 'sabado'],
       response: `⏰ **Nuestros Horarios de Atención**:
 • **Lunes a Viernes**: 6:30 AM a 5:30 PM (Jornada Completa y Media Jornada).
 • **Atención de Coordinación**: 8:00 AM a 4:00 PM.
 
 📍 **Ubicación**: Zona central con fácil acceso y parqueo seguro.`
-    },
-    {
-      keywords: ['comida', 'almuerz', 'nutri', 'alimenta', 'menu', 'minuta'],
-      response: `🍎 **Nutrición Balanceada & Saludable**:
-
-Todas nuestras minutas alimenticias son diseñadas por una **Nutricionista Infantil**:
-• Almuerzo caliente recién preparado.
-• 2 Refrigerios saludables (fruta fresca, lácteos y cereales integrales).
-• Opción especial para niños con alergias o requerimientos médicos.`
     }
   ];
+
+  // Specific Student / Operational Queries
+  const studentKeywords = ['reporte', 'como esta', 'mateo', 'sofia', 'comer', 'almuerzo', 'siesta', 'asistencia', 'boletin', 'minuta'];
 
   // Helper: Append User Message
   function appendUserMessage(text) {
@@ -104,7 +113,6 @@ Todas nuestras minutas alimenticias son diseñadas por una **Nutricionista Infan
   function processAIResponse(userText) {
     showTypingIndicator();
 
-    // Random AI response delay between 1.0s and 1.6s for natural feel
     const delay = Math.floor(Math.random() * 600) + 1000;
 
     setTimeout(() => {
@@ -129,16 +137,47 @@ Todas nuestras minutas alimenticias son diseñadas por una **Nutricionista Infan
     }, delay);
   }
 
-  // Match intent algorithm
+  // Match intent algorithm with Mode Checking
   function generateAIAnswer(userText) {
     const textLower = userText.toLowerCase();
+
+    // Check if user is asking about student/daily report
+    const isStudentQuery = studentKeywords.some(kw => textLower.includes(kw));
+
+    if (isStudentQuery) {
+      if (currentAiMode === 'standard') {
+        // Standard Mode (Without MioWeKids) fallback explanation
+        return `🔒 **Respuesta del Agente IA Estándar (Sin MioWeKids)**:
+
+Las consultas sobre *reporte diario, alimentación, siesta y asistencia de alumnos matriculados* corresponden al módulo operativo de **MioWeKids**.
+
+Actualmente estás probando el **Agente IA Estándar (Comercial & Admisiones)**, el cual se encarga de:
+• 🎒 Brindar información de cupos por edad
+• 💰 Tarifas y pensiones
+• 📅 Agendar visitas guiadas presenciales
+
+💡 *Para probar la consulta de reportes de alumnos en tiempo real, cambia al modo **"Agente IA + MioWeKids"** en el panel lateral.*`;
+      } else {
+        // MioWeKids Connected Mode
+        return `📊 **[Conectado a la Base de Datos MioWeKids]**
+
+☀️ **Reporte en Tiempo Real de hoy para el alumno Mateo Silva**:
+• **Entrada**: 7:15 AM (Puntual 🟢)
+• **Almuerzo**: Consumió el 100% de su minuta (Crema de verduras, pechuga y fruta fresca) 🍎
+• **Siesta**: 1:00 PM - 2:30 PM (Descansó muy bien 💤)
+• **Actividad del día**: Pintura de dedos & Lectura de cuentos 🎨
+• **Estado de Ánimo**: Muy feliz y participativo.
+
+*Este reporte lo genera automáticamente el sistema **MioWeKids** para los padres de familia.*`;
+      }
+    }
 
     // Check if user is giving name/appointment details
     if (textLower.includes('mañana') || textLower.includes('tarde') || textLower.includes('cita') || textLower.includes('agendar')) {
       triggerLeadModal();
     }
 
-    for (const item of knowledgeBase) {
+    for (const item of commercialKnowledge) {
       for (const kw of item.keywords) {
         if (textLower.includes(kw)) {
           return item.response;
@@ -147,15 +186,26 @@ Todas nuestras minutas alimenticias son diseñadas por una **Nutricionista Infan
     }
 
     // Default Fallback Response
-    return `🤖 ¡Hola! Gracias por comunicarte con el Jardín Infantil. 
+    if (currentAiMode === 'standard') {
+      return `🤖 ¡Hola! Soy la **Asistente Virtual IA de Admisiones (Makloz Tech - Modo Estándar)**. 
 
-Soy la **Asistente Virtual de IA (impulsada por Makloz Tech & MioWeKids)**. Puedo ayudarte con:
-1. 🎒 **Información de Cupos & Edades**
-2. 💰 **Tarifas de Mensualidad 2026**
-3. 📅 **Agendamiento de Visitas Guiadas**
-4. 📊 **Demostración de Reporte Diario de Alumnos**
+Puedo brindarte información sobre:
+1. 🎒 **Cupos disponibles por edad**
+2. 💰 **Tarifas y mensualidades 2026**
+3. 📅 **Agendamiento de visitas guiadas presenciales**
 
-¿Sobre cuál de estos temas te gustaría saber más?`;
+¿En qué te puedo colaborar hoy?`;
+    } else {
+      return `🤖 ¡Hola! Soy la **Asistente Virtual IA Avanzada (Makloz Tech & MioWeKids)**.
+
+Puedo ayudarte con:
+1. 🎒 **Admisiones & Cupos nuevos**
+2. 💰 **Tarifas & Mensualidades**
+3. 📊 **Reporte diario en tiempo real de alumnos matriculados**
+4. 🍎 **Minuta de alimentación del día**
+
+¿Sobre qué tema deseas consultar?`;
+    }
   }
 
   // Show Typing Indicator
@@ -189,7 +239,6 @@ Soy la **Asistente Virtual de IA (impulsada por Makloz Tech & MioWeKids)**. Pued
     processAIResponse(text);
   }
 
-  // Event Listeners
   sendBtn.addEventListener('click', handleSend);
 
   chatInput.addEventListener('keydown', (e) => {
@@ -229,7 +278,6 @@ Soy la **Asistente Virtual de IA (impulsada por Makloz Tech & MioWeKids)**. Pued
     }
   }
 
-  // Close Lead Modal
   const closeModalBtn = document.getElementById('closeModalBtn');
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', () => {
