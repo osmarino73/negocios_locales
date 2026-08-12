@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente de IA en WhatsApp de Demostración | Makloz Tech & MioWeKids</title>
+  <meta name="description" content="Demostración interactiva del Agente de IA para WhatsApp de Makloz Tech y MioWeKids. Automatiza la atención de cupos, matrículas y reportes diarios para guarderías en Colombia.">
+
+  <!-- PWA & Mobile Theme -->
+  <meta name="theme-color" content="#075e54">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Director Insights Top Banner -->
+  <header class="director-banner">
+    <div class="director-container">
+      <div class="director-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="brand-text">
+          <h2>
+            Agente de IA para WhatsApp (Demostración) 
+            <span class="badge-live"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> IA EN VIVO</span>
+          </h2>
+          <p>Potenciado por <strong>Makloz Tech & MioWeKids</strong> — Automatiza tu Jardín Infantil 24/7</p>
+        </div>
+      </div>
+
+      <div class="director-actions">
+        <a href="https://wa.me/573004567890?text=Hola%20Makloz%20Tech,%20vi%20la%20demostraci%C3%B3n%20del%20Agente%20de%20IA%20y%20quiero%20implementarlo%20en%20mi%20jard%C3%ADn" target="_blank" class="btn-contract">
+          <i class="fa-brands fa-whatsapp"></i> Implementar en Mi Jardín Infantil
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Demo Workspace -->
+  <main class="demo-workspace">
+    
+    <!-- Controls Sidebar -->
+    <aside class="controls-sidebar">
+      <div class="sidebar-box-title">
+        <i class="fa-solid fa-sliders" style="color: var(--makloz-orange);"></i> Escenarios de Prueba
+      </div>
+
+      <p style="font-size: 13px; color: #94a3b8;">
+        Haz clic en cualquiera de estos escenarios para simular preguntas reales de padres de familia:
+      </p>
+
+      <button class="preset-btn" data-prompt="Hola, ¿tienen cupo para un niño de 2 años en párvulos?">
+        <i class="fa-solid fa-child"></i>
+        <span>1. Consulta de Cupos & Edades</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="¿Cuáles son las tarifas y precios de las mensualidades 2026?">
+        <i class="fa-solid fa-calculator"></i>
+        <span>2. Tarifas & Mensualidades</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="Quiero agendar una visita guiada a las instalaciones mañana en la mañana">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>3. Agendamiento de Visita</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="Hola, ¿cómo se portó mi hijo Mateo hoy y qué almorzó?">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>4. Reporte Diario (MioWeKids)</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="¿Qué le dieron de comer hoy en el almuerzo?">
+        <i class="fa-solid fa-apple-whole"></i>
+        <span>5. Minuta Nutricional</span>
+      </button>
+
+      <div style="border-top: 1px solid #334155; padding-top: 16px; margin-top: 10px;">
+        <div class="sidebar-box-title" style="margin-bottom: 12px;">
+          <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> Beneficios Directora
+        </div>
+
+        <ul class="feature-list-mini">
+          <li><i class="fa-solid fa-check"></i> Responde a los padres 24/7 sin importar la hora</li>
+          <li><i class="fa-solid fa-check"></i> Captura datos de prospectos de matrícula</li>
+          <li><i class="fa-solid fa-check"></i> Conectado al sistema MioWeKids</li>
+          <li><i class="fa-solid fa-check"></i> Cero mantenimiento técnico</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- WhatsApp Phone Frame Chat Window -->
+    <section class="chat-window">
+      
+      <!-- WhatsApp Header -->
+      <div class="wa-chat-header">
+        <div class="wa-profile">
+          <div class="wa-avatar">
+            <i class="fa-solid fa-shapes"></i>
+            <div class="wa-online-dot"></div>
+          </div>
+          <div class="wa-name">
+            <h3>Jardín Infantil | Asistente IA 🤖</h3>
+            <span>En línea • Respuestas al instante</span>
+          </div>
+        </div>
+
+        <div class="wa-header-actions">
+          <i class="fa-solid fa-video"></i>
+          <i class="fa-solid fa-phone"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="wa-chat-stream" id="chatStream">
+        
+        <!-- Welcome Initial Message -->
+        <div class="msg-row received">
+          <div class="msg-bubble">
+            👋 ¡Hola! Bienvenido al <strong>Jardín Infantil Oro Verde (Demostración IA)</strong>.
+
+            Soy el <strong>Asistente Virtual con Inteligencia Artificial</strong> desarrollado por **Makloz Tech & MioWeKids**.
+            
+            Puedo ayudarte a resolver dudas sobre cupos, tarifas, agendar visitas presenciales o enviarte el reporte diario de tu hijo en tiempo real. 🎒
+            
+            ¿En qué te puedo colaborar hoy?
+            <div class="msg-meta">
+              <span>Justo ahora</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="suggestion-chips" id="suggestionChips">
+        <button class="chip-btn" data-msg="¿Tienen cupos disponibles?">🎒 ¿Cupos disponibles?</button>
+        <button class="chip-btn" data-msg="¿Cuánto cuesta la pensión mensual?">💰 Tarifas & Mensualidades</button>
+        <button class="chip-btn" data-msg="Deseo agendar una visita guiada al jardín">📅 Agendar Visita</button>
+        <button class="chip-btn" data-msg="Ver reporte diario de mi hijo Mateo">📊 Reporte de mi hijo</button>
+      </div>
+
+      <!-- Chat Input Bar -->
+      <div class="wa-chat-input-bar">
+        <i class="fa-regular fa-face-smile"></i>
+        <i class="fa-solid fa-paperclip"></i>
+        <input type="text" class="wa-input-field" id="chatInput" placeholder="Escribe un mensaje aquí como si fueras un padre de familia..." autocomplete="off">
+        <button class="send-btn" id="sendBtn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lead Appointment Modal Simulation -->
+  <div class="lead-modal-overlay" id="leadModal">
+    <div class="lead-modal-card">
+      <div class="lead-modal-icon">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <h3 style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 10px;">
+        ¡Cita Agendada Exitosamente! 🎉
+      </h3>
+      <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 20px;">
+        El **Agente de IA de Makloz Tech** ha registrado los datos del nuevo prospecto en la base de datos de <strong>MioWeKids</strong> y ha notificado a la directora del jardín.
+      </p>
+
+      <div style="background-color: #0f172a; padding: 16px; border-radius: 12px; border: 1px solid #334155; text-align: left; font-size: 13px; color: #94a3b8; margin-bottom: 24px;">
+        <div><strong style="color: white;">Lead Capturado:</strong> Padre de Familia</div>
+        <div><strong style="color: white;">Interés:</strong> Matrícula Párvulos (2 años)</div>
+        <div><strong style="color: white;">Notificación enviada:</strong> WhatsApp de la Directora 📲</div>
+      </div>
+
+      <button class="btn-contract" id="closeModalBtn" style="width: 100%; justify-content: center; font-size: 15px;">
+        Continuar Demostración
+      </button>
+    </div>
+  </div>
+
+  <script src="ai_agent.js"></script>
+</body>
+</html>

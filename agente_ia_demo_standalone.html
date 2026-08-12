@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agente de IA en WhatsApp de Demostración | Makloz Tech & MioWeKids</title>
+  <meta name="description" content="Demostración interactiva del Agente de IA para WhatsApp de Makloz Tech y MioWeKids. Automatiza la atención de cupos, matrículas y reportes diarios para guarderías en Colombia.">
+
+  <!-- PWA & Mobile Theme -->
+  <meta name="theme-color" content="#075e54">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+/* ==========================================================================
+   AGENTE DE IA DEMOSTRACIÓN - MAKLOZ TECH & MIOWEKIDS
+   Simulador de WhatsApp para Guarderías & Jardines Infantiles en Colombia
+   ========================================================================== */
+
+:root {
+  --wa-header: #075e54;
+  --wa-header-dark: #128c7e;
+  --wa-bg: #efeae2;
+  --wa-bubble-in: #ffffff;
+  --wa-bubble-out: #dcf8c6;
+  --wa-green: #25d366;
+  --wa-blue-check: #34b7f1;
+  --wa-text: #111b21;
+  --wa-muted: #667781;
+
+  --makloz-dark: #0f172a;
+  --makloz-orange: #f97316;
+  --makloz-accent: #38bdf8;
+
+  --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: #0b1120;
+  color: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Director Insights Banner Top */
+.director-banner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-bottom: 2px solid var(--makloz-orange);
+  padding: 16px 24px;
+}
+
+.director-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.director-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--makloz-orange), #ea580c);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
+}
+
+.brand-text h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-text p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.badge-live {
+  background-color: rgba(37, 211, 102, 0.15);
+  color: #4ade80;
+  border: 1px solid #22c55e;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.director-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-contract {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: var(--transition);
+}
+
+.btn-contract:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Main Demo App Container */
+.demo-workspace {
+  flex: 1;
+  max-width: 1240px;
+  width: 100%;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+}
+
+/* Sidebar Presets & Controls */
+.controls-sidebar {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-box-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.preset-btn {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.preset-btn:hover {
+  background-color: #334155;
+  color: white;
+  border-color: var(--makloz-orange);
+}
+
+.preset-btn i {
+  color: var(--makloz-orange);
+  font-size: 16px;
+}
+
+.feature-list-mini {
+  list-style: none;
+  font-size: 13px;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-list-mini li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-list-mini i {
+  color: #4ade80;
+}
+
+/* WhatsApp Phone Frame Simulator */
+.chat-window {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 680px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* WhatsApp Top Bar Header */
+.wa-chat-header {
+  background-color: var(--wa-header);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wa-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.wa-avatar {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--wa-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.wa-online-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #4ade80;
+  border: 2px solid var(--wa-header);
+  border-radius: 50%;
+}
+
+.wa-name h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.wa-name span {
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  opacity: 0.9;
+}
+
+.wa-header-actions {
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+  color: #e2e8f0;
+}
+
+/* Chat Messages Stream Area */
+.wa-chat-stream {
+  flex: 1;
+  background-color: var(--wa-bg);
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 20px 20px;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Message Bubble Formatting */
+.msg-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.msg-row.received {
+  align-self: flex-start;
+}
+
+.msg-row.sent {
+  align-self: flex-end;
+}
+
+.msg-bubble {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--wa-text);
+  line-height: 1.45;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+  word-wrap: break-word;
+}
+
+.msg-row.received .msg-bubble {
+  background-color: var(--wa-bubble-in);
+  border-top-left-radius: 0;
+}
+
+.msg-row.sent .msg-bubble {
+  background-color: var(--wa-bubble-out);
+  border-top-right-radius: 0;
+}
+
+.msg-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--wa-muted);
+  margin-top: 4px;
+}
+
+.msg-meta .ticks {
+  color: var(--wa-blue-check);
+  font-size: 12px;
+}
+
+/* Typing Indicator Animation */
+.typing-bubble {
+  background-color: white;
+  border-radius: 16px;
+  border-top-left-radius: 0;
+  padding: 12px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.typing-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #94a3b8;
+  border-radius: 50%;
+  animation: typing-bounce 1.4s infinite ease-in-out both;
+}
+
+.typing-dot:nth-child(1) { animation-delay: 0s; }
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Quick Suggestion Pills Above Input */
+.suggestion-chips {
+  background-color: #f1f5f9;
+  padding: 10px 16px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  border-top: 1px solid #e2e8f0;
+}
+
+.chip-btn {
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  color: var(--wa-text);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.chip-btn:hover {
+  background-color: var(--wa-header);
+  color: white;
+  border-color: var(--wa-header);
+}
+
+/* Input Bar Bottom */
+.wa-chat-input-bar {
+  background-color: #f0f2f5;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.wa-chat-input-bar i {
+  color: var(--wa-muted);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.wa-input-field {
+  flex: 1;
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-family: var(--font-main);
+  color: var(--wa-text);
+}
+
+.send-btn {
+  width: 44px;
+  height: 44px;
+  background-color: var(--wa-header);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.send-btn:hover {
+  background-color: var(--wa-header-dark);
+  transform: scale(1.05);
+}
+
+/* Modal Confirmation for Lead Appointment */
+.lead-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+
+.lead-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lead-modal-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 24px;
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lead-modal-icon {
+  width: 64px;
+  height: 64px;
+  background-color: rgba(37, 211, 102, 0.2);
+  color: #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin: 0 auto 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .demo-workspace {
+    grid-template-columns: 1fr;
+  }
+  .controls-sidebar {
+    order: 2;
+  }
+  .chat-window {
+    height: 580px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Director Insights Top Banner -->
+  <header class="director-banner">
+    <div class="director-container">
+      <div class="director-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="brand-text">
+          <h2>
+            Agente de IA para WhatsApp (Demostración) 
+            <span class="badge-live"><i class="fa-solid fa-circle" style="font-size: 8px;"></i> IA EN VIVO</span>
+          </h2>
+          <p>Potenciado por <strong>Makloz Tech & MioWeKids</strong> — Automatiza tu Jardín Infantil 24/7</p>
+        </div>
+      </div>
+
+      <div class="director-actions">
+        <a href="https://wa.me/573004567890?text=Hola%20Makloz%20Tech,%20vi%20la%20demostraci%C3%B3n%20del%20Agente%20de%20IA%20y%20quiero%20implementarlo%20en%20mi%20jard%C3%ADn" target="_blank" class="btn-contract">
+          <i class="fa-brands fa-whatsapp"></i> Implementar en Mi Jardín Infantil
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Demo Workspace -->
+  <main class="demo-workspace">
+    
+    <!-- Controls Sidebar -->
+    <aside class="controls-sidebar">
+      <div class="sidebar-box-title">
+        <i class="fa-solid fa-sliders" style="color: var(--makloz-orange);"></i> Escenarios de Prueba
+      </div>
+
+      <p style="font-size: 13px; color: #94a3b8;">
+        Haz clic en cualquiera de estos escenarios para simular preguntas reales de padres de familia:
+      </p>
+
+      <button class="preset-btn" data-prompt="Hola, ¿tienen cupo para un niño de 2 años en párvulos?">
+        <i class="fa-solid fa-child"></i>
+        <span>1. Consulta de Cupos & Edades</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="¿Cuáles son las tarifas y precios de las mensualidades 2026?">
+        <i class="fa-solid fa-calculator"></i>
+        <span>2. Tarifas & Mensualidades</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="Quiero agendar una visita guiada a las instalaciones mañana en la mañana">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>3. Agendamiento de Visita</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="Hola, ¿cómo se portó mi hijo Mateo hoy y qué almorzó?">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>4. Reporte Diario (MioWeKids)</span>
+      </button>
+
+      <button class="preset-btn" data-prompt="¿Qué le dieron de comer hoy en el almuerzo?">
+        <i class="fa-solid fa-apple-whole"></i>
+        <span>5. Minuta Nutricional</span>
+      </button>
+
+      <div style="border-top: 1px solid #334155; padding-top: 16px; margin-top: 10px;">
+        <div class="sidebar-box-title" style="margin-bottom: 12px;">
+          <i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> Beneficios Directora
+        </div>
+
+        <ul class="feature-list-mini">
+          <li><i class="fa-solid fa-check"></i> Responde a los padres 24/7 sin importar la hora</li>
+          <li><i class="fa-solid fa-check"></i> Captura datos de prospectos de matrícula</li>
+          <li><i class="fa-solid fa-check"></i> Conectado al sistema MioWeKids</li>
+          <li><i class="fa-solid fa-check"></i> Cero mantenimiento técnico</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- WhatsApp Phone Frame Chat Window -->
+    <section class="chat-window">
+      
+      <!-- WhatsApp Header -->
+      <div class="wa-chat-header">
+        <div class="wa-profile">
+          <div class="wa-avatar">
+            <i class="fa-solid fa-shapes"></i>
+            <div class="wa-online-dot"></div>
+          </div>
+          <div class="wa-name">
+            <h3>Jardín Infantil | Asistente IA 🤖</h3>
+            <span>En línea • Respuestas al instante</span>
+          </div>
+        </div>
+
+        <div class="wa-header-actions">
+          <i class="fa-solid fa-video"></i>
+          <i class="fa-solid fa-phone"></i>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="wa-chat-stream" id="chatStream">
+        
+        <!-- Welcome Initial Message -->
+        <div class="msg-row received">
+          <div class="msg-bubble">
+            👋 ¡Hola! Bienvenido al <strong>Jardín Infantil Oro Verde (Demostración IA)</strong>.
+
+            Soy el <strong>Asistente Virtual con Inteligencia Artificial</strong> desarrollado por **Makloz Tech & MioWeKids**.
+            
+            Puedo ayudarte a resolver dudas sobre cupos, tarifas, agendar visitas presenciales o enviarte el reporte diario de tu hijo en tiempo real. 🎒
+            
+            ¿En qué te puedo colaborar hoy?
+            <div class="msg-meta">
+              <span>Justo ahora</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="suggestion-chips" id="suggestionChips">
+        <button class="chip-btn" data-msg="¿Tienen cupos disponibles?">🎒 ¿Cupos disponibles?</button>
+        <button class="chip-btn" data-msg="¿Cuánto cuesta la pensión mensual?">💰 Tarifas & Mensualidades</button>
+        <button class="chip-btn" data-msg="Deseo agendar una visita guiada al jardín">📅 Agendar Visita</button>
+        <button class="chip-btn" data-msg="Ver reporte diario de mi hijo Mateo">📊 Reporte de mi hijo</button>
+      </div>
+
+      <!-- Chat Input Bar -->
+      <div class="wa-chat-input-bar">
+        <i class="fa-regular fa-face-smile"></i>
+        <i class="fa-solid fa-paperclip"></i>
+        <input type="text" class="wa-input-field" id="chatInput" placeholder="Escribe un mensaje aquí como si fueras un padre de familia..." autocomplete="off">
+        <button class="send-btn" id="sendBtn">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Lead Appointment Modal Simulation -->
+  <div class="lead-modal-overlay" id="leadModal">
+    <div class="lead-modal-card">
+      <div class="lead-modal-icon">
+        <i class="fa-solid fa-calendar-check"></i>
+      </div>
+      <h3 style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 10px;">
+        ¡Cita Agendada Exitosamente! 🎉
+      </h3>
+      <p style="color: #cbd5e1; font-size: 14px; margin-bottom: 20px;">
+        El **Agente de IA de Makloz Tech** ha registrado los datos del nuevo prospecto en la base de datos de <strong>MioWeKids</strong> y ha notificado a la directora del jardín.
+      </p>
+
+      <div style="background-color: #0f172a; padding: 16px; border-radius: 12px; border: 1px solid #334155; text-align: left; font-size: 13px; color: #94a3b8; margin-bottom: 24px;">
+        <div><strong style="color: white;">Lead Capturado:</strong> Padre de Familia</div>
+        <div><strong style="color: white;">Interés:</strong> Matrícula Párvulos (2 años)</div>
+        <div><strong style="color: white;">Notificación enviada:</strong> WhatsApp de la Directora 📲</div>
+      </div>
+
+      <button class="btn-contract" id="closeModalBtn" style="width: 100%; justify-content: center; font-size: 15px;">
+        Continuar Demostración
+      </button>
+    </div>
+  </div>
+
+  <script>
+/**
+ * AGENTE DE IA DEMOSTRACIÓN - MAKLOZ TECH & MIOWEKIDS
+ * Lógica Conversacional de IA para Atención a Padres de Familia en Guarderías de Colombia
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const chatStream = document.getElementById('chatStream');
+  const chatInput = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendBtn');
+  const suggestionChips = document.getElementById('suggestionChips');
+
+  // Lead Appointment State
+  let leadData = {
+    nombrePadre: '',
+    edadNino: '',
+    nivelDeseado: '',
+    fechaVisita: ''
+  };
+
+  // Knowledge Base of AI Agent (MioWeKids Core Intelligence)
+  const knowledgeBase = [
+    {
+      keywords: ['cupo', 'cupos', 'inscripci', 'matri', 'vacante', 'edad', 'años', 'meses', 'admision'],
+      response: `✨ ¡Hola! Claro que sí, con mucho gusto te brindo información de cupos. 🎒
+
+En nuestro Jardín tenemos admisiones abiertas para los siguientes niveles:
+• **Sala Cuna & Estimulación**: 0 a 12 meses (Cupos disponibles)
+• **Párvulos & Caminadores**: 1 a 3 años (Últimos 3 cupos)
+• **Prejardín & Jardín**: 3 a 5 años (Cupos disponibles)
+
+¿Para cuántos años o meses buscas el cupo de tu pequeño/a?`
+    },
+    {
+      keywords: ['precio', 'costo', 'valor', 'cuanto', 'mensualidad', 'pension', 'tarif', 'pagar'],
+      response: `💰 **Nuestras Tarifas & Planes 2026**:
+
+1. **Jornada Completa** (6:30 AM - 5:30 PM): Incluye alimentación completa (almuerzo + 2 refrigerios supervisados por nutricionista).
+2. **Media Jornada** (7:30 AM - 12:30 PM): Incluye refrigerio am.
+
+Ofrecemos una tarifa muy competitiva con educación en valores y docentes licenciadas. 
+
+¿Te gustaría que agendemos una **visita guiada presencial** sin compromiso para conocer las instalaciones y entregarte el folleto tarifario detallado?`
+    },
+    {
+      keywords: ['visita', 'agendar', 'conocer', 'cita', 'ir', 'sede', 'instalacion', 'donde'],
+      response: `🏫 ¡Excelente idea! Será un gusto recibirte en nuestra sede.
+
+Para agendar tu **Visita Guiada VIP**, por favor indícame:
+1. Tu nombre completo
+2. Nombre y edad de tu hijo/a
+3. ¿Prefieres visitarnos en la mañana (9:00 AM) o en la tarde (3:00 PM)?`
+    },
+    {
+      keywords: ['reporte', 'miowekids', 'boletin', 'como esta', 'hijo', 'mateo', 'sofia', 'comer', 'almuerzo', 'siesta', 'asistencia'],
+      response: `📊 **[Integración MioWeKids - Reporte en Tiempo Real]**
+
+☀️ **Reporte Diario de hoy para el alumno Mateo Silva**:
+• **Entrada**: 7:15 AM (Puntual 🟢)
+• **Almuerzo**: Consumió el 100% de su minuta (Crema de verduras, pechuga y fruta fresca) 🍎
+• **Siesta**: 1:00 PM - 2:30 PM (Descansó muy bien 💤)
+• **Actividad del día**: Pintura de dedos & Lectura de cuentos 🎨
+• **Estado de Ánimo**: Muy feliz y participativo.
+
+*Este reporte se envía automáticamente a los padres a través de nuestra plataforma **MioWeKids**.*`
+    },
+    {
+      keywords: ['horario', 'hora', 'abren', 'cierran', 'dias', 'sabado'],
+      response: `⏰ **Nuestros Horarios de Atención**:
+• **Lunes a Viernes**: 6:30 AM a 5:30 PM (Jornada Completa y Media Jornada).
+• **Atención de Coordinación**: 8:00 AM a 4:00 PM.
+
+📍 **Ubicación**: Zona central con fácil acceso y parqueo seguro.`
+    },
+    {
+      keywords: ['comida', 'almuerz', 'nutri', 'alimenta', 'menu', 'minuta'],
+      response: `🍎 **Nutrición Balanceada & Saludable**:
+
+Todas nuestras minutas alimenticias son diseñadas por una **Nutricionista Infantil**:
+• Almuerzo caliente recién preparado.
+• 2 Refrigerios saludables (fruta fresca, lácteos y cereales integrales).
+• Opción especial para niños con alergias o requerimientos médicos.`
+    }
+  ];
+
+  // Helper: Append User Message
+  function appendUserMessage(text) {
+    const timeStr = getCurrentTime();
+    const msgHTML = `
+      <div class="msg-row sent">
+        <div class="msg-bubble">
+          ${escapeHTML(text)}
+          <div class="msg-meta">
+            <span>${timeStr}</span>
+            <span class="ticks"><i class="fa-solid fa-check-double"></i></span>
+          </div>
+        </div>
+      </div>
+    `;
+    chatStream.insertAdjacentHTML('beforeend', msgHTML);
+    scrollToBottom();
+  }
+
+  // Helper: Append AI Message with typing simulation
+  function processAIResponse(userText) {
+    showTypingIndicator();
+
+    // Random AI response delay between 1.0s and 1.6s for natural feel
+    const delay = Math.floor(Math.random() * 600) + 1000;
+
+    setTimeout(() => {
+      removeTypingIndicator();
+
+      const aiReply = generateAIAnswer(userText);
+      const timeStr = getCurrentTime();
+
+      const msgHTML = `
+        <div class="msg-row received">
+          <div class="msg-bubble">
+            ${formatMarkdown(aiReply)}
+            <div class="msg-meta">
+              <span>${timeStr}</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      chatStream.insertAdjacentHTML('beforeend', msgHTML);
+      scrollToBottom();
+    }, delay);
+  }
+
+  // Match intent algorithm
+  function generateAIAnswer(userText) {
+    const textLower = userText.toLowerCase();
+
+    // Check if user is giving name/appointment details
+    if (textLower.includes('mañana') || textLower.includes('tarde') || textLower.includes('cita') || textLower.includes('agendar')) {
+      triggerLeadModal();
+    }
+
+    for (const item of knowledgeBase) {
+      for (const kw of item.keywords) {
+        if (textLower.includes(kw)) {
+          return item.response;
+        }
+      }
+    }
+
+    // Default Fallback Response
+    return `🤖 ¡Hola! Gracias por comunicarte con el Jardín Infantil. 
+
+Soy la **Asistente Virtual de IA (impulsada por Makloz Tech & MioWeKids)**. Puedo ayudarte con:
+1. 🎒 **Información de Cupos & Edades**
+2. 💰 **Tarifas de Mensualidad 2026**
+3. 📅 **Agendamiento de Visitas Guiadas**
+4. 📊 **Demostración de Reporte Diario de Alumnos**
+
+¿Sobre cuál de estos temas te gustaría saber más?`;
+  }
+
+  // Show Typing Indicator
+  function showTypingIndicator() {
+    const typingHTML = `
+      <div class="msg-row received" id="typingIndicator">
+        <div class="typing-bubble">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      </div>
+    `;
+    chatStream.insertAdjacentHTML('beforeend', typingHTML);
+    scrollToBottom();
+  }
+
+  // Remove Typing Indicator
+  function removeTypingIndicator() {
+    const indicator = document.getElementById('typingIndicator');
+    if (indicator) indicator.remove();
+  }
+
+  // Send Action Trigger
+  function handleSend() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+
+    appendUserMessage(text);
+    chatInput.value = '';
+    processAIResponse(text);
+  }
+
+  // Event Listeners
+  sendBtn.addEventListener('click', handleSend);
+
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      handleSend();
+    }
+  });
+
+  // Suggestion Chips Click Handler
+  suggestionChips.addEventListener('click', (e) => {
+    const chip = e.target.closest('.chip-btn');
+    if (chip) {
+      const text = chip.getAttribute('data-msg') || chip.innerText;
+      appendUserMessage(text);
+      processAIResponse(text);
+    }
+  });
+
+  // Sidebar Presets Handler
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const prompt = btn.getAttribute('data-prompt');
+      if (prompt) {
+        appendUserMessage(prompt);
+        processAIResponse(prompt);
+      }
+    });
+  });
+
+  // Trigger Lead Capture Modal simulation
+  function triggerLeadModal() {
+    const modal = document.getElementById('leadModal');
+    if (modal) {
+      setTimeout(() => {
+        modal.classList.add('active');
+      }, 2000);
+    }
+  }
+
+  // Close Lead Modal
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      document.getElementById('leadModal').classList.remove('active');
+    });
+  }
+
+  // Utilities
+  function getCurrentTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    const ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    return `${hours}:${minutes} ${ampm}`;
+  }
+
+  function escapeHTML(str) {
+    return str.replace(/[&<>'"]/g, 
+      tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+    );
+  }
+
+  function formatMarkdown(text) {
+    let formatted = escapeHTML(text);
+    formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    formatted = formatted.replace(/\n/g, '<br>');
+    return formatted;
+  }
+
+  function scrollToBottom() {
+    chatStream.scrollTop = chatStream.scrollHeight;
+  }
+});
+
+</script>
+</body>
+</html>
