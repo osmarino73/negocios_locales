@@ -1,0 +1,30 @@
+{
+  "negocio": {
+    "nombre": "Makloz Tech",
+    "slogan": "Soluciones Tecnológicas & Agentes de IA para Educación e Infancia en Colombia",
+    "categoria": "Agencia de Software & Inteligencia Artificial Educativa",
+    "descripcion": "Makloz Tech es la empresa líder en soluciones tecnológicas para guarderías, jardines infantiles y centros de educación inicial en Colombia. Desarrollamos sitios web de regalo, agentes de IA para WhatsApp 24/7 y la plataforma de gestión integral MioWeKids.",
+    "telefono_whatsapp": "+573004567890",
+    "whatsapp_url": "https://wa.me/573004567890?text=Hola%20Makloz%20Tech,%20deseo%20informaci%C3%B3n%20sobre%20sus%20soluciones%20tecnol%C3%B3gicas",
+    "email": "contacto@makloztech.com",
+    "sitio_web": "https://osmarino73.github.io/negocios_locales/makloz_tech/index.html",
+    "cobertura": "Colombia (Medellín, Urabá, Bogotá, Cali, Barranquilla y a nivel nacional)",
+    "productos": [
+      {
+        "nombre": "Sitio Web Institucional Gratuito",
+        "precio": "$0 COP (Desarrollo Gratis)",
+        "descripcion": "Diseño y desarrollo web institucional 100% de regalo. El jardín solo activa su propio dominio oficial (.com / .edu.co)."
+      },
+      {
+        "nombre": "Agente de IA para WhatsApp 24/7",
+        "precio": "Desde $190.000 COP / mes",
+        "descripcion": "Asistente inteligente que responde preguntas de cupos, precios y agenda visitas guiadas a cualquier hora sin intervención humana."
+      },
+      {
+        "nombre": "Sistema de Gestión MioWeKids",
+        "precio": "Desde $350.000 COP / mes",
+        "descripcion": "Plataforma integral para control de asistencia, reportes diarios de siesta y alimentación, minuta nutricional y cobro de pensiones."
+      }
+    ]
+  }
+}

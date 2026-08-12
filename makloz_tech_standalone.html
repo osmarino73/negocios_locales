@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makloz Tech | Inteligencia Artificial & Software para Guarderías en Colombia</title>
+  <meta name="description" content="Makloz Tech es la agencia tecnológica experta en IA y software educativo MioWeKids para guarderías y jardines infantiles en Colombia. Ofrecemos páginas web de regalo, agentes de IA en WhatsApp 24/7 y gestión escolar.">
+
+  <!-- PWA Theme Color -->
+  <meta name="theme-color" content="#0b1120">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Makloz Tech | Soluciones de IA para Jardines Infantiles">
+  <meta property="og:description" content="Aumenta tus matrículas y automatiza tu jardín infantil con Agentes de IA en WhatsApp y el sistema MioWeKids.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+/* ==========================================================================
+   LANDING PAGE OFICIAL - MAKLOZ TECH
+   Soluciones Tecnológicas & Agentes de IA para Educación e Infancia
+   ========================================================================== */
+
+:root {
+  --bg-dark: #0b1120;
+  --bg-card: #0f172a;
+  --bg-card-glass: rgba(15, 23, 42, 0.75);
+  --border-glass: rgba(255, 255, 255, 0.1);
+
+  --coral-orange: #f97316;
+  --coral-glow: rgba(249, 115, 22, 0.35);
+  
+  --electric-cyan: #38bdf8;
+  --cyan-glow: rgba(56, 189, 248, 0.3);
+
+  --wa-green: #25d366;
+  --wa-green-dark: #128c7e;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+
+  --font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--bg-card-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 24px;
+}
+
+/* Navigation Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 0;
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--coral-orange), #ea580c);
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 20px var(--coral-glow);
+}
+
+.logo-text h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  font-size: 0.75rem;
+  color: var(--electric-cyan);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-coral {
+  background: linear-gradient(135deg, var(--coral-orange), #ea580c);
+  color: white;
+  box-shadow: 0 6px 20px var(--coral-glow);
+}
+
+.btn-coral:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.5);
+}
+
+.btn-wa {
+  background: linear-gradient(135deg, var(--wa-green), var(--wa-green-dark));
+  color: white;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn-wa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid var(--border-glass);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--electric-cyan);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  padding: 80px 24px 100px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: rgba(249, 115, 22, 0.12);
+  border: 1px solid var(--coral-orange);
+  color: var(--coral-orange);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.highlight-gradient {
+  background: linear-gradient(135deg, var(--coral-orange) 0%, var(--electric-cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 580px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-card-preview {
+  padding: 32px;
+  position: relative;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.glow-ambient {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Trojan Horse Banner Section */
+.trojan-banner-section {
+  padding: 60px 24px;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #0f172a 100%);
+}
+
+.trojan-card {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 48px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.9) 100%);
+  border: 2px solid var(--coral-orange);
+  box-shadow: 0 20px 60px rgba(249, 115, 22, 0.2);
+}
+
+.trojan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+/* Pillars Section */
+.section {
+  padding: 90px 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.section-tag {
+  color: var(--coral-orange);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.pillar-card {
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.pillar-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--coral-orange);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.pillar-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+
+.icon-orange {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--coral-orange);
+}
+
+.icon-cyan {
+  background: rgba(56, 189, 248, 0.15);
+  color: var(--electric-cyan);
+}
+
+.icon-green {
+  background: rgba(37, 211, 102, 0.15);
+  color: var(--wa-green);
+}
+
+/* Interactive ROI Calculator Section */
+.calculator-box {
+  background: #1e293b;
+  border: 1px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 44px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slider-group {
+  margin: 32px 0;
+}
+
+.slider-group label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.range-slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #334155;
+  outline: none;
+  accent-color: var(--coral-orange);
+  cursor: pointer;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.result-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  padding: 24px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.result-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--coral-orange);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+/* Showroom Cards Grid inside Makloz Landing */
+.showroom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.demo-card-item {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.demo-card-item:hover {
+  border-color: var(--electric-cyan);
+  transform: translateY(-4px);
+}
+
+/* Steps Timeline */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.step-card {
+  padding: 28px;
+  position: relative;
+}
+
+.step-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #070c18;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 60px 24px 30px;
+}
+
+.footer-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .hero-grid, .trojan-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareCompany",
+    "name": "Makloz Tech",
+    "url": "https://osmarino73.github.io/negocios_locales/makloz_tech/index.html",
+    "logo": "https://osmarino73.github.io/negocios_locales/assets/images/hero_child.png",
+    "description": "Soluciones de Inteligencia Artificial, Agentes de WhatsApp y Plataforma MioWeKids para jardines infantiles en Colombia.",
+    "telephone": "+573004567890",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO",
+      "addressRegion": "Antioquia / Colombia"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo-box">
+        <div class="logo-icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <div class="logo-text">
+          <h1>Makloz Tech</h1>
+          <span>AI & EdTech Solutions</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#modelo">Modelo Web $0</a></li>
+        <li><a href="#soluciones">Soluciones IA</a></li>
+        <li><a href="#calculadora">Calculadora ROI</a></li>
+        <li><a href="#demos">Ver Demos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <a href="https://wa.me/573004567890?text=Hola%20Makloz%20Tech,%20deseo%20solicitar%20la%20p%C3%A1gina%20web%20gratuita%20para%20mi%20jard%C3%ADn" target="_blank" class="btn btn-coral">
+        Solicitar Web Gratis <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="inicio">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-badge">
+          <i class="fa-solid fa-rocket"></i> Impulsando la Educación Infantil en Colombia
+        </span>
+        <h1 class="hero-title">
+          Transformamos Guarderías con <span class="highlight-gradient">Inteligencia Artificial</span>
+        </h1>
+        <p class="hero-subtitle">
+          Aumenta tus matrículas, automatiza la atención por WhatsApp 24/7 a los padres de familia y simplifica la gestión escolar de tu institución con el ecosistema <strong>MioWeKids</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="../agente_ia_demo/index.html" class="btn btn-wa">
+            <i class="fa-solid fa-robot"></i> Probar Agente IA en Vivo
+          </a>
+          <a href="#modelo" class="btn btn-outline">
+            ¿Cómo funciona la Web Gratis?
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive Preview Glass Card -->
+      <div class="glass-panel hero-card-preview">
+        <div class="glow-ambient"></div>
+        <div style="position: relative; z-index: 1;">
+          <span style="color: var(--coral-orange); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">
+            <i class="fa-solid fa-shield-halved"></i> Ecosistema Completo
+          </span>
+          <h3 style="font-size: 1.6rem; color: white; margin: 10px 0;">Tecnología 360° para tu Jardín</h3>
+          <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+            Diseñado exclusivamente para la primera infancia en Medellín, Urabá, Bogotá, Cali y toda Colombia.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-globe" style="color: var(--electric-cyan); font-size: 20px;"></i>
+              <div style="font-size: 13px;">
+                <strong style="color: white;">Web Institucional Gratuita</strong>
+                <div style="color: var(--text-muted);">Sin costos de desarrollo ni programación</div>
+              </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px;">
+              <i class="fa-brands fa-whatsapp" style="color: var(--wa-green); font-size: 22px;"></i>
+              <div style="font-size: 13px;">
+                <strong style="color: white;">Agente de IA 24/7 en WhatsApp</strong>
+                <div style="color: var(--text-muted);">Captación de matrículas y respuestas de cupos</div>
+              </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 12px; border-radius: 12px; display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-layer-group" style="color: var(--coral-orange); font-size: 20px;"></i>
+              <div style="font-size: 13px;">
+                <strong style="color: white;">Sistema MioWeKids</strong>
+                <div style="color: var(--text-muted);">Reportes diarios de alimentación, siesta y cobros</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trojan Horse Business Model Section -->
+  <section class="trojan-banner-section" id="modelo">
+    <div class="glass-panel trojan-card">
+      <div class="trojan-grid">
+        <div>
+          <span style="color: var(--coral-orange); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">
+            <i class="fa-solid fa-gift"></i> Nuestra Filosofía de Aliados
+          </span>
+          <h2 style="font-size: 2.2rem; color: white; margin: 12px 0; line-height: 1.2;">
+            ¿Por qué regalamos el desarrollo de tu sitio web?
+          </h2>
+          <p style="color: #cbd5e1; font-size: 1.05rem; margin-bottom: 20px;">
+            En <strong>Makloz Tech</strong> no creemos en vender páginas web costosas de una sola vez. Creemos en construir relaciones de largo plazo como el **aliado tecnológico oficial** de tu guardería o jardín infantil.
+          </p>
+          <p style="color: #94a3b8; font-size: 0.95rem;">
+            Nosotros asumimos el 100% del costo del diseño y programación de tu sitio web institucional. Tu jardín únicamente activa su propio dominio oficial (`.com` o `.edu.co`) registrado a tu nombre.
+          </p>
+        </div>
+
+        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; padding: 28px;">
+          <h4 style="color: white; font-size: 1.2rem; margin-bottom: 16px;">
+            <i class="fa-solid fa-check-double" style="color: var(--wa-green);"></i> ¿Qué incluye tu Web de Regalo?
+          </h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 14px; color: #cbd5e1;">
+            <li><i class="fa-solid fa-check" style="color: var(--wa-green); margin-right: 8px;"></i> Diseño 100% personalizado con el logo y fotos de tu jardín.</li>
+            <li><i class="fa-solid fa-check" style="color: var(--wa-green); margin-right: 8px;"></i> Estructura pedagógica por niveles (0 a 5 años).</li>
+            <li><i class="fa-solid fa-check" style="color: var(--wa-green); margin-right: 8px;"></i> Botón directo de contacto por WhatsApp.</li>
+            <li><i class="fa-solid fa-check" style="color: var(--wa-green); margin-right: 8px;"></i> Optimización SEO Local para Google Maps en tu ciudad.</li>
+            <li><i class="fa-solid fa-check" style="color: var(--wa-green); margin-right: 8px;"></i> Formato PWA autónomo ultra-rápido para celulares.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 3 Pillars Section -->
+  <section class="section" id="soluciones">
+    <div class="section-header">
+      <span class="section-tag">Soluciones Tecnológicas</span>
+      <h2 class="section-title">Los 3 Pilares del Ecosistema Makloz Tech</h2>
+      <p style="color: var(--text-muted); margin-top: 12px;">Diseñados para elevar la imagen de tu jardín infantil y automatizar la operación administrativa.</p>
+    </div>
+
+    <div class="pillars-grid">
+      <!-- Pillar 1 -->
+      <article class="glass-panel pillar-card">
+        <div class="pillar-icon icon-cyan">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <span style="color: var(--electric-cyan); font-weight: 700; font-size: 12px; text-transform: uppercase;">Pilar 1: Presencia Web</span>
+        <h3 style="font-size: 1.5rem; color: white; margin: 10px 0;">Sitio Web Institucional PWA</h3>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+          Página web profesional de nivel internacional. Totalmente adaptada a teléfonos móviles, con división pedagógica por edades y reseñas de padres.
+        </p>
+        <div style="font-size: 13px; font-weight: 700; color: var(--coral-orange);">
+          Inversión: $0 COP Desarrollo (Web de Regalo)
+        </div>
+      </article>
+
+      <!-- Pillar 2 -->
+      <article class="glass-panel pillar-card" style="border-color: var(--coral-orange);">
+        <div class="pillar-icon icon-orange">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <span style="color: var(--coral-orange); font-weight: 700; font-size: 12px; text-transform: uppercase;">Pilar 2: Admisiones 24/7</span>
+        <h3 style="font-size: 1.5rem; color: white; margin: 10px 0;">Agente de IA para WhatsApp</h3>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+          Un asistente de IA que atiende a los padres en WhatsApp a cualquier hora. Responde disponibilidad de cupos, muestra las tarifas y agenda citas presenciales.
+        </p>
+        <div style="font-size: 13px; font-weight: 700; color: var(--electric-cyan);">
+          Inversión: Desde $190.000 COP / mes
+        </div>
+      </article>
+
+      <!-- Pillar 3 -->
+      <article class="glass-panel pillar-card">
+        <div class="pillar-icon icon-green">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <span style="color: var(--wa-green); font-weight: 700; font-size: 12px; text-transform: uppercase;">Pilar 3: Gestión Escolar</span>
+        <h3 style="font-size: 1.5rem; color: white; margin: 10px 0;">Plataforma MioWeKids</h3>
+        <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 20px;">
+          Sistema integral para control de asistencia, seguimiento del almuerzo y siesta de los niños, reporte diario a padres y cobranza de pensiones.
+        </p>
+        <div style="font-size: 13px; font-weight: 700; color: var(--wa-green);">
+          Inversión: Desde $350.000 COP / mes
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Interactive ROI Calculator Widget -->
+  <section class="section" id="calculadora">
+    <div class="section-header">
+      <span class="section-tag">Calculadora de Retorno de Inversión (ROI)</span>
+      <h2 class="section-title">Calcula el Impacto de Makloz Tech en tu Jardín</h2>
+    </div>
+
+    <div class="calculator-box">
+      <div class="slider-group">
+        <label>
+          <span>Número de Alumnos Matriculados Actualmente:</span>
+          <span id="studentsVal" style="color: var(--coral-orange); font-size: 1.4rem;">40 Alumnos</span>
+        </label>
+        <input type="range" min="10" max="150" value="40" class="range-slider" id="studentsSlider">
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-number" id="hoursSaved">12 hrs</div>
+          <div style="color: white; font-weight: 600; font-size: 14px;">Horas Administrativas Ahorradas al Mes</div>
+          <p style="color: var(--text-muted); font-size: 12px; margin-top: 6px;">Gracias a las respuestas automáticas de la IA en WhatsApp</p>
+        </div>
+
+        <div class="result-card" style="border-color: var(--coral-orange);">
+          <div class="result-number" id="newStudents" style="color: var(--electric-cyan);">+4 Niños</div>
+          <div style="color: white; font-weight: 600; font-size: 14px;">Nuevas Matrículas Estimadas por Mes</div>
+          <p style="color: var(--text-muted); font-size: 12px; margin-top: 6px;">Por atención inmediata las 24 horas y agendamiento VIP</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showroom of Live Demos Section -->
+  <section class="section" id="demos">
+    <div class="section-header">
+      <span class="section-tag">Demostraciones en Vivo</span>
+      <h2 class="section-title">Explora los Prototipos Desarrollados</h2>
+    </div>
+
+    <div class="showroom-grid">
+      
+      <!-- Demo 1: Hogar Infantil Oro Verde -->
+      <div class="demo-card-item">
+        <div>
+          <span style="color: var(--coral-orange); font-size: 11px; font-weight: 700; text-transform: uppercase;">Apartadó, Antioquia</span>
+          <h3 style="color: white; font-size: 1.25rem; margin: 6px 0;">Hogar Infantil Oro Verde</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Diseño cálido con divisiones en olas de nubes, programas pedagógicos y nutrición.</p>
+        </div>
+        <a href="../hogar_infantil_oro_verde/index.html" target="_blank" class="btn btn-outline" style="margin-top: 20px; width: 100%; justify-content: center;">
+          Ver Sitio Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <!-- Demo 2: Caritas Mágicas -->
+      <div class="demo-card-item">
+        <div>
+          <span style="color: var(--electric-cyan); font-size: 11px; font-weight: 700; text-transform: uppercase;">Jardín Infantil</span>
+          <h3 style="color: white; font-size: 1.25rem; margin: 6px 0;">Caritas Mágicas</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Educación preescolar inicial con testimonios de 5 estrellas y WhatsApp.</p>
+        </div>
+        <a href="../caritas_magicas/index.html" target="_blank" class="btn btn-outline" style="margin-top: 20px; width: 100%; justify-content: center;">
+          Ver Sitio Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <!-- Demo 3: Agente IA Demo -->
+      <div class="demo-card-item" style="border-color: var(--wa-green);">
+        <div>
+          <span style="color: var(--wa-green); font-size: 11px; font-weight: 700; text-transform: uppercase;">Simulador Interactivo</span>
+          <h3 style="color: white; font-size: 1.25rem; margin: 6px 0;">Agente IA para WhatsApp</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Prueba la IA en vivo con selector de modo (Sin MioWeKids vs Con MioWeKids).</p>
+        </div>
+        <a href="../agente_ia_demo/index.html" target="_blank" class="btn btn-wa" style="margin-top: 20px; width: 100%; justify-content: center;">
+          Probar Agente IA <i class="fa-solid fa-robot"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3 Steps Process Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">Proceso Sencillo</span>
+      <h2 class="section-title">¿Cómo Empezar con Makloz Tech?</h2>
+    </div>
+
+    <div class="steps-grid">
+      <div class="glass-panel step-card">
+        <div class="step-num">01</div>
+        <h3 style="color: white; font-size: 1.2rem; margin-bottom: 10px;">Revisas tu Propuesta Web Gratis</h3>
+        <p style="color: var(--text-muted); font-size: 14px;">Te enviamos el enlace de tu sitio web institucional ya diseñado con el nombre de tu jardín.</p>
+      </div>
+
+      <div class="glass-panel step-card">
+        <div class="step-num">02</div>
+        <h3 style="color: white; font-size: 1.2rem; margin-bottom: 10px;">Activamos tu Dominio Oficial</h3>
+        <p style="color: var(--text-muted); font-size: 14px;">Conectamos tu dominio (.com o .edu.co) a tu nombre y configuramos el Agente de IA.</p>
+      </div>
+
+      <div class="glass-panel step-card">
+        <div class="step-num">03</div>
+        <h3 style="color: white; font-size: 1.2rem; margin-bottom: 10px;">Recibes Matrículas & Automatizas</h3>
+        <p style="color: var(--text-muted); font-size: 14px;">Tu jardín empieza a recibir padres interesados las 24 horas y puedes activar MioWeKids.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Banner Section -->
+  <footer class="footer" id="contacto">
+    <div class="footer-container">
+      <div>
+        <div class="logo-box" style="margin-bottom: 16px;">
+          <div class="logo-icon">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div class="logo-text">
+            <h1>Makloz Tech</h1>
+            <span>AI & EdTech Solutions</span>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 14px; max-width: 400px;">
+          Impulsando la transformación digital de la educación inicial en Colombia mediante Inteligencia Artificial, diseño web de alto impacto y la plataforma MioWeKids.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="color: white; font-size: 1rem; margin-bottom: 16px;">Soluciones</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+          <li><a href="#modelo" style="color: var(--text-muted); text-decoration: none;">Página Web Gratuita</a></li>
+          <li><a href="../agente_ia_demo/index.html" style="color: var(--text-muted); text-decoration: none;">Agente de IA para WhatsApp</a></li>
+          <li><a href="#soluciones" style="color: var(--text-muted); text-decoration: none;">Plataforma MioWeKids</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 style="color: white; font-size: 1rem; margin-bottom: 16px;">Contacto Directo</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+          <li><a href="https://wa.me/573004567890" target="_blank" style="color: var(--wa-green); text-decoration: none; font-weight: 600;"><i class="fa-brands fa-whatsapp"></i> +57 (300) 456-7890</a></li>
+          <li style="color: var(--text-muted);"><i class="fa-solid fa-location-dot"></i> Cobertura Nacional en Colombia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2026 Makloz Tech. Todos los derechos reservados. | Tecnología & Inteligencia Artificial para la Educación Inicial.
+    </div>
+  </footer>
+
+  <!-- Interactive Calculator JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('studentsSlider');
+      const studentsVal = document.getElementById('studentsVal');
+      const hoursSaved = document.getElementById('hoursSaved');
+      const newStudents = document.getElementById('newStudents');
+
+      if (slider) {
+        slider.addEventListener('input', (e) => {
+          const val = parseInt(e.target.value);
+          studentsVal.innerText = `${val} Alumnos`;
+
+          // Dynamic calculation: ~0.3 hrs per student saved, ~1 new student per 12 current students
+          const hrs = Math.round(val * 0.3);
+          const news = Math.max(1, Math.round(val / 10));
+
+          hoursSaved.innerText = `${hrs} hrs`;
+          newStudents.innerText = `+${news} Niños`;
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
