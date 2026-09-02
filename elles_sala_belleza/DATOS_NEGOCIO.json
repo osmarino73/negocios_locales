@@ -1,0 +1,123 @@
+{
+  "negocio": {
+    "nombre": "Elles Sala de Belleza & Tienda Cosmética",
+    "nombre_comercial": "Elles Belleza & Cosmética",
+    "rubro": "Sala de Belleza, Estética & Cosmética Profesional",
+    "categoria": "salon_belleza",
+    "eslogan": "Resalta tu elegancia con cuidado capilar, estética profesional y cosmética de alta gama.",
+    "calificacion": "4.9",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 304 340 7429",
+      "telefono_formato_int": "+573043407429",
+      "whatsapp": {
+        "numero": "+573043407429",
+        "link": "https://wa.me/573043407429?text=Hola%20Elles%20Sala%20de%20Belleza%2C%20quisiera%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 115 #98-100, Barrio El Salvador",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "referencia": "Sector El Salvador, Apartadó",
+      "google_maps_url": "https://maps.google.com/maps?q=elles+sala+de+belleza+y+tienda+cosmetica,+Cra.+115+%2398-100,+EL+SALVADOR,+Apartad%C3%B3,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos": "Previa cita",
+      "texto_resumido": "Lun - Sáb: 8:00 AM - 7:00 PM | Dom: Previa Cita"
+    },
+    "servicios": [
+      {
+        "id": "color_balayage",
+        "nombre": "Colorimetría & Balayage",
+        "categoria": "Color",
+        "duracion": "180 min",
+        "precio": "$150.000 COP",
+        "destacado": true,
+        "descripcion": "Diseño de color personalizado, técnicas balayage y mechas con matices luminosos.",
+        "foto": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisado_organico",
+        "nombre": "Alisado Orgánico Espejo",
+        "categoria": "Tratamiento",
+        "duracion": "150 min",
+        "precio": "$140.000 COP",
+        "destacado": true,
+        "descripcion": "Liso sedoso, brillo intenso y nutrición profunda libre de formol.",
+        "foto": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte_cepillado",
+        "nombre": "Corte de Diseño & Cepillado",
+        "categoria": "Estilismo",
+        "duracion": "50 min",
+        "precio": "$35.000 COP",
+        "destacado": true,
+        "descripcion": "Corte adaptado a tus facciones, ondas al agua y cepillado voluminoso.",
+        "foto": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "facial_glow",
+        "nombre": "Limpieza Facial Profunda Glow",
+        "categoria": "Estética",
+        "duracion": "60 min",
+        "precio": "$70.000 COP",
+        "destacado": true,
+        "descripcion": "Higienización, exfoliación ultrasónica, mascarilla nutritiva e hidratación.",
+        "foto": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "maquillaje_social",
+        "nombre": "Maquillaje Social & Pestañas",
+        "categoria": "Maquillaje",
+        "duracion": "60 min",
+        "precio": "$80.000 COP",
+        "destacado": true,
+        "descripcion": "Piel blindada, cejas definidas y pestañas de impacto para eventos especiales.",
+        "foto": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "tienda_cosmetica",
+        "nombre": "Línea Cosmética & Cuidado Capilar",
+        "categoria": "Tienda",
+        "duracion": "Asesoría",
+        "precio": "Desde $25.000 COP",
+        "destacado": true,
+        "descripcion": "Tratamientos profesionales, mascarillas, sérums y productos de belleza para el hogar.",
+        "foto": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Elena Restrepo",
+        "rol": "Master Estilista & Colorista",
+        "nivel": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "nombre": "Valentina Gómez",
+        "rol": "Especialista en Alisados & Keratina",
+        "nivel": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "nombre": "Daniela Marín",
+        "rol": "Cosmetóloga & Estética Facial",
+        "nivel": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "nombre": "Camila Osorio",
+        "rol": "Makeup Artist & Cejas",
+        "nivel": "Pro",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  }
+}
