@@ -122,8 +122,14 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
    - **Prohibición Estricta de Barra Informativa Superior (Top Bar)**: **Ningún archivo HTML debe incluir la mini-barra superior promocional o informativa** (`.promo-topbar` / announcement bar). El sitio web debe iniciar directamente con el Navbar / Smart Header para máxima limpieza visual.
    - **Logotipo Tipográfico Puro (Prohibición de Íconos junto al Nombre)**: En el encabezado y pie de página (`.brand-logo`), **queda terminantemente prohibido colocar íconos decorativos de FontAwesome o emojis junto al nombre del negocio** (ej. coronas, gemas, varitas mágicas, tijeras o destellos). El logotipo debe ser puramente tipográfico, limpio y elegante, compuesto únicamente por el nombre del negocio con estilos tipográficos de marca y su subtítulo de ubicación/categoría.
    - Contenedor `.header-sticky-wrapper` que se oculta suavemente al hacer scroll hacia abajo y reaparece instantáneamente al hacer scroll hacia arriba.
-   - **Vista Móvil (<768px) Ultra Limpia**: Se **elimina por completo el botón de menú hamburguesa** (`display: none;`). El header móvil muestra exclusivamente el **Nombre / Logotipo del Negocio a la izquierda** y el botón **«Agendar» a la derecha** (`.btn-header-cta`).
-   - **Botón del Header**: Texto conciso **«Agendar»** con clase `.btn-header-cta`.
+   - **Soporte Obligatorio de Safe-Area en Móviles**: `.header-sticky-wrapper` debe incluir siempre `padding-top: env(safe-area-inset-top, 0px);` para evitar que el notch, dynamic island o barra de estado del celular empujen o recorten el contenido del encabezado.
+   - **Vista Móvil (<768px) Ultra Limpia y Sin Cortes en el Logotipo**:
+     - Se **elimina por completo el botón de menú hamburguesa** (`display: none;`). El header móvil muestra exclusivamente el **Nombre / Logotipo del Negocio a la izquierda** y el botón **«Agendar» a la derecha** (`.btn-header-cta`).
+     - `.header-nav`: `height: auto; min-height: 64px; padding: 10px 0;` con centrado vertical, evitando alturas fijas rígidas que causen que el subtítulo del negocio roce o se corte contra el borde inferior.
+     - **Proporciones Móviles del Logotipo (`.brand-logo`)**:
+       - Nombre principal (`.brand-name`): `font-size: 1.22rem - 1.25rem; line-height: 1.1; letter-spacing: 0.08em;`
+       - Subtítulo de categoría/ubicación (`.brand-subtitle`): `font-size: 0.58rem; line-height: 1.2; letter-spacing: 0.16em; margin-top: 2px; white-space: nowrap;` (evita desbordes y garantiza un margen inferior holgado para que la parte de abajo nunca se corte).
+   - **Botón del Header**: Texto conciso **«Agendar»** con clase `.btn-header-cta` (`padding: 8px 16px; font-size: 0.78rem; white-space: nowrap; flex-shrink: 0;`).
    - **Botón del Footer**: En el módulo/tarjeta de reserva del footer, el texto debe ser estrictamente **«Agendar»**.
 
 5. **Mapa Interactivo Georreferenciado**:

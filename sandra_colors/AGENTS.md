@@ -17,5 +17,5 @@ Este archivo mantiene la memoria y las reglas de diseño para la landing page de
    - Layout de 2 columnas con fotografía real del salón/tocadores (`photo-1560066984-138dadb4c035`), badge VIP flotante y 4 métricas de autoridad.
    - Grid de **4 columnas en desktop** y **2 columnas en móvil** para las 4 profesionales, avatares circulares 50% con marco de color de marca y badge oculto en móvil.
 5. **Ubicación & Contacto**: Tarjeta con datos y Google Maps embebido con fórmula nominal georreferenciada (`z=16`).
-6. **Smart Header**: Sin barra superior promocional, logotipo puramente tipográfico, menú oculto en móvil con botón conciso «Agendar».
+6. **Smart Header**: Sin barra superior promocional, logotipo puramente tipográfico con soporte `padding-top: env(safe-area-inset-top, 0px)`, menú oculto en móvil con botón conciso «Agendar» y altura elástica (`min-height: 64px; padding: 10px 0`) con escala móvil compacta (`1.25rem` / `0.58rem`) para evitar que la parte de abajo del nombre se corte en celulares.
 7. **Botón Flotante WhatsApp**: `bottom: calc(28px + env(safe-area-inset-bottom, 0px))`, sin `overflow: hidden`.
