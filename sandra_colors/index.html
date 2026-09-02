@@ -350,12 +350,10 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 62%;
+      width: 65%;
       height: 100%;
       z-index: 1;
       pointer-events: none;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.85) 35%, black 100%);
-      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.85) 35%, black 100%);
     }
 
     .hero-bg-img {
@@ -363,13 +361,23 @@
       height: 100%;
       object-fit: cover;
       object-position: center top;
-      opacity: 0.92;
+      opacity: 0.96;
     }
 
     .hero-bg-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, #0f0e0c 42%, rgba(15, 14, 12, 0.75) 65%, rgba(15, 14, 12, 0.15) 100%);
+      background: linear-gradient(
+        90deg, 
+        #0f0e0c 0%, 
+        #0f0e0c 35%, 
+        rgba(15, 14, 12, 0.96) 42%, 
+        rgba(15, 14, 12, 0.8) 50%, 
+        rgba(15, 14, 12, 0.5) 60%, 
+        rgba(15, 14, 12, 0.2) 72%, 
+        rgba(15, 14, 12, 0.05) 84%, 
+        transparent 94%
+      );
       z-index: 2;
       pointer-events: none;
     }
@@ -1134,7 +1142,7 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        padding: 130px 16px 40px;
+        padding: 140px 16px 28px;
       }
 
       .hero-bg-cover {
@@ -1145,34 +1153,68 @@
       }
 
       .hero-bg-img {
-        object-position: center 20%;
-        opacity: 0.88;
+        object-position: center top;
+        opacity: 0.95;
       }
 
       .hero-bg-overlay {
-        background: linear-gradient(to top, #0f0e0c 45%, rgba(15, 14, 12, 0.6) 70%, rgba(15, 14, 12, 0.2) 100%);
+        background: linear-gradient(
+          180deg, 
+          rgba(15, 14, 12, 0) 0%, 
+          rgba(15, 14, 12, 0) 38%, 
+          rgba(15, 14, 12, 0.6) 54%, 
+          rgba(15, 14, 12, 0.92) 74%, 
+          #0f0e0c 96%
+        );
       }
 
       .hero-text-block {
         text-align: center;
         margin: 0 auto;
-        max-width: 380px;
+        max-width: 360px;
         width: 100%;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      }
+
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        margin-bottom: 6px;
       }
 
       .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.95rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .hero-script {
+        font-size: 1.28em;
+        margin-top: 2px;
+      }
+
+      .hero-desc {
+        font-size: 0.86rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        color: #e5dfd7;
       }
 
       .hero-actions {
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 12px;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 0 auto;
       }
 
       .hero-actions .btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+        justify-content: center;
         margin: 0 auto;
       }
 
@@ -1744,7 +1786,7 @@
 
         <div class="map-embed-wrapper">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0792348575024!2d-76.65354342417757!3d7.887751592135002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e500deecda4468f%3A0xe96cf89d4d5a9d80!2sSandra%20Color%C2%B4s!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco" 
+            src="https://maps.google.com/maps?q=Sandra+Color%27s,+Cra.+104+%23103-61,+Apartad%C3%B3,+Antioquia&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">

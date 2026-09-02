@@ -51,18 +51,48 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
 
 1. **Hero Header Inmersivo Full-Width Bleed**:
    - Capa posterior `.hero-bg-cover` con imagen a la derecha (`width: 65%`).
-   - Máscara gradiente `.hero-bg-overlay` fusionada con el color base de la marca con transición aterciopelada y orgánica (sin cortes bruscos ni líneas duras).
    - **Vista de Escritorio (> 768px)**:
      - `.hero-fullwidth-section`: `min-height: 640px; display: flex; align-items: center;`
-     - Máscara con degradado suave y progresivo combinada con `-webkit-mask-image` en la imagen para una integración 100% natural con el fondo oscuro, manteniendo el texto legible a la izquierda y la fotografía nítida a la derecha.
+     - **Prohibición de `mask-image` sobre el contenedor de imagen**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
+     - **Curva de Degradado Orgánica y Aterciopelada (Curva Eased de 8 Paradas en `.hero-bg-overlay`)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo multi-parada:
+       ```css
+       background: linear-gradient(
+         90deg, 
+         #colorBase 0%, 
+         #colorBase 35%, 
+         rgba(..., 0.96) 42%, 
+         rgba(..., 0.8) 50%, 
+         rgba(..., 0.5) 60%, 
+         rgba(..., 0.2) 72%, 
+         rgba(..., 0.05) 84%, 
+         transparent 94%
+       );
+       ```
+       Garantiza 100% de contraste y legibilidad para el texto a la izquierda (0% a 35%) y una fusión como seda hacia la derecha, dejando la fotografía nítida y brillante a partir del 90%.
      - `padding-top: 75px - 85px` en el contenedor para evitar que el navbar tape los titulares.
    - **Móvil Calibrado Obligatorio (< 768px)**:
      - **Regla Mandatoria**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
-     - `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.90 - 0.95;`.
-     - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 720px !important; padding: 140px 16px 36px;`.
-     - `.hero-bg-overlay`: Gradiente vertical translúcido dejando despejado el tercio superior para la foto y generando contraste perfecto en la mitad inferior.
-     - `.hero-text-block`: Centrado simétrico total (`text-align: center; margin: 0 auto; max-width: 380px; width: 100%;`).
-     - Botones apilados (`.btn-primary`, `.btn-secondary`) con ancho máximo de 280px.
+     - `.hero-bg-img`: `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` dejando despejado el tercio superior para la modelo con nitidez total.
+     - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 720px !important; padding: 140px 16px 28px;`.
+     - `.hero-bg-overlay`: Gradiente vertical translúcido:
+       ```css
+       background: linear-gradient(
+         180deg, 
+         rgba(..., 0) 0%, 
+         rgba(..., 0) 38%, 
+         rgba(..., 0.6) 54%, 
+         rgba(..., 0.92) 74%, 
+         #colorFondo 96%
+       );
+       ```
+       El 38% superior es 100% transparente (0% veladuras sobre la modelo).
+     - **Disposición y Escala del Texto en Móvil (Estrictamente en la Mitad Inferior)**:
+       - `.hero-text-block`: Centrado simétrico total (`text-align: center; margin: 0 auto; max-width: 360px; width: 100%; text-shadow: 0 2px 8px rgba(0,0,0,0.9);`).
+       - Eyebrow: `0.72rem; letter-spacing: 0.18em; margin-bottom: 6px;`
+       - Titular (`.hero-title`): `1.85rem - 1.95rem; line-height: 1.12; margin-bottom: 10px;`
+       - Script (`.hero-script`): `1.25em - 1.28em; margin-top: 2px;`
+       - Descripción (`.hero-desc`): `0.85rem - 0.86rem; line-height: 1.5; margin-bottom: 18px - 20px;` (terminantemente prohibido dejarla >1rem en móvil para no empujar el texto sobre la modelo).
+       - Botones apilados al centro: `.hero-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin: 0 auto; }` con botones de `max-width: 275px; padding: 12px 20px; font-size: 0.84rem; justify-content: center;`.
 
 2. **Arquitectura Estándar Crismar para Servicios & Profesionales**:
    - **Tarjetas de Servicios (`.service-card`)**:
@@ -97,6 +127,10 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
    - **Botón del Footer**: En el módulo/tarjeta de reserva del footer, el texto debe ser estrictamente **«Agendar»**.
 
 5. **Mapa Interactivo Georreferenciado**:
+   - **Fórmula Obligatoria Oficial de Google Maps**:
+     `https://maps.google.com/maps?q={NOMBRE_NEGOCIO},+{DIRECCION},+{CIUDAD},+{PAIS}&t=&z=16&ie=UTF8&iwloc=&output=embed`
+   - Parámetros clave: `z=16` (zoom urbano que muestra calles y puntos de referencia), `iwloc=` (limpia popups molestos), `output=embed` (embebido universal y rápido sin API key).
+   - **Prohibición Estricta de Strings Experimentales / pb Strings**: Queda prohibido usar strings opacos o binarios no indexados (`pb=!1m18...`) ya que causan errores o mapas en blanco.
    - `iframe` nominal con `z=16`, zoom urbano y diseño responsive simétrico.
 
 6. **Triángulo de Contexto IA**:

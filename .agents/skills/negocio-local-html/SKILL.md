@@ -43,22 +43,51 @@ Toda página web o landing page generada, independientemente de la imagen de ref
 ---
 
 ### 3. Hero Header Inmersivo a Ancho Completo (Full-Width Bleed)
-- **Impacto Visual Edge-to-Edge**: Cuando el diseño de referencia presente una modelo, producto o composición de fondo continua, se debe implementar el Hero a pantalla completa (`width: 100%`, `min-height: 580px - 620px`) eliminando marcos o cajas pequeñas aisladas.
-- **Técnica de Fusión con Máscara Gradiente en Escritorio (`.hero-bg-overlay`) — Máximo al 50%**:
-  - Se sitúa la imagen en alta resolución en la capa posterior `.hero-bg-cover` posicionada a la derecha (`width: 62%-68%`, `object-fit: cover; object-position: center top;`).
-  - Se aplica un degradado suave horizontal que **termina como máximo al 50% del ancho del Hero**:
-    `linear-gradient(90deg, #colorBase 0%, #colorBase 24%, rgba(..., 0.82) 36%, rgba(..., 0) 50%, transparent 100%)`.
-  - Garantiza **100% de legibilidad y contraste para el texto** a la izquierda (0% a 35%), mientras la mitad derecha (50% a 100%) luce la modelo y la fotografía **100% nítida, brillante y sin veladuras oscuras**.
+- **Impacto Visual Edge-to-Edge**: Cuando el diseño de referencia presente una modelo, producto o composición de fondo continua, se debe implementar el Hero a pantalla completa (`width: 100%`, `min-height: 640px`) eliminando marcos o cajas pequeñas aisladas.
+- **Técnica de Fusión Aterciopelada en Escritorio (`.hero-bg-overlay`) — Curva Eased de 8 Paradas**:
+  - Se sitúa la imagen en alta resolución en la capa posterior `.hero-bg-cover` posicionada a la derecha (`width: 65%`, `object-fit: cover; object-position: center top; opacity: 0.96;`).
+  - **Prohibición Estricta de `mask-image` en el Contenedor**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
+  - **Degradado Orgánico Aterciopelado (Curva Eased Multi-Parada)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo:
+    ```css
+    background: linear-gradient(
+      90deg, 
+      #colorBase 0%, 
+      #colorBase 35%, 
+      rgba(..., 0.96) 42%, 
+      rgba(..., 0.8) 50%, 
+      rgba(..., 0.5) 60%, 
+      rgba(..., 0.2) 72%, 
+      rgba(..., 0.05) 84%, 
+      transparent 94%
+    );
+    ```
+  - Garantiza **100% de legibilidad y contraste para el texto** a la izquierda (0% a 35%), mientras la mitad derecha (50% a 100%) luce la modelo y la fotografía **100% nítida, brillante y sin veladuras oscuras ni franjas intermedias**.
 - **Responsividad Móvil Calibrada (< 768px)**:
-  - **Fotografía Nítida en Alta Fidelidad & +20% Altura Editorial**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.90 - 0.95;` garantizando nitidez total, sin filtros pesados que laven la imagen.
-  - **Texto Centralizado Desde la Mitad Hacia Abajo**:
-    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 700px - 720px; padding: 150px 20px 36px;` (altura expandida un +20% para otorgar mayor respiro y elegancia a la imagen superior, manteniendo los botones accesibles en el primer pantallazo).
-    - `.hero-bg-overlay`: Gradiente vertical translúcido `linear-gradient(180deg, rgba(..., 0) 0%, rgba(..., 0.08) 38%, rgba(..., 0.78) 64%, rgba(..., 0.98) 88%, #colorFondo 100%)` dejando despejado el 40% superior para lucir la fotografía y logrando contraste perfecto en la mitad inferior.
-    - `.hero-text-block`: Centrado simétrico total (`text-align: center; margin: 0 auto; max-width: 380px; width: 100%;`) con sombra tipográfica sutil `text-shadow`.
-    - **Escala Tipográfica Display**: Titular display centrado entre `2.25rem` y `2.5rem`, subtítulo/descripción centrado en `0.85rem - 0.88rem`.
+  - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
+  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` garantizando nitidez total, sin filtros pesados que laven la imagen.
+  - **Texto Centralizado Estrictamente en la Mitad Inferior (Sin tapar a la modelo)**:
+    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 720px !important; padding: 140px 16px 28px;` (bloque de contenido posicionado estrictamente desde el 50% de la altura hacia abajo).
+    - `.hero-bg-overlay`: Gradiente vertical translúcido:
+      ```css
+      background: linear-gradient(
+        180deg, 
+        rgba(..., 0) 0%, 
+        rgba(..., 0) 38%, 
+        rgba(..., 0.6) 54%, 
+        rgba(..., 0.92) 74%, 
+        #colorFondo 96%
+      );
+      ```
+      El 38% superior es 100% transparente, dejando la fotografía limpia y sin veladuras oscuras sobre la modelo.
+    - `.hero-text-block`: Centrado simétrico total (`text-align: center; margin: 0 auto; max-width: 360px; width: 100%; text-shadow: 0 2px 8px rgba(0,0,0,0.9);`).
+    - **Escala Tipográfica Display Compacta en Móvil**:
+      - Eyebrow: `0.72rem; letter-spacing: 0.18em; margin-bottom: 6px;`
+      - Titular (`.hero-title`): `1.85rem - 1.95rem; line-height: 1.12; margin-bottom: 10px;`
+      - Script (`.hero-script`): `1.25em - 1.28em; margin-top: 2px;`
+      - Descripción (`.hero-desc`): `0.85rem - 0.86rem; line-height: 1.5; margin-bottom: 18px - 20px;` (nunca >1rem en móvil).
   - **Botones Optimizados Ergonómicos en Móvil**:
-    - `.hero-actions`: Disposición vertical centrada (`display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin-top: 18px;`).
-    - Botones (`.btn-primary`, `.btn-secondary`): `width: 100%; max-width: 280px; padding: 12px 20px; font-size: 0.84rem - 0.88rem; font-weight: 700; border-radius: 50px; text-align: center; justify-content: center; touch-action: manipulation;`.
+    - `.hero-actions`: Disposición vertical centrada (`display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin: 0 auto;`).
+    - Botones (`.btn-primary`, `.btn-secondary`): `width: 100%; max-width: 275px; padding: 12px 20px; font-size: 0.84rem; font-weight: 700; border-radius: 50px; text-align: center; justify-content: center; touch-action: manipulation;`.
     - Botón primario con color de acento y sombra ambiental suave; botón secundario con acabado *glassmorphism* translúcido de borde suave (`backdrop-filter: blur(8px); border: 1px solid rgba(..., 0.35);`).
   - **Smart Header / Navbar Inteligente**: Barra superior envuelta en `.header-sticky-wrapper` con auto-hide al scrollear hacia abajo y reaparición instantánea al subir. Botón de cabecera reducido a **«Agendar»** con clase `.btn-header-cta` (`padding: 8px 15px; font-size: 0.78rem; white-space: nowrap;`).
 

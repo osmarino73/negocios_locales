@@ -43,20 +43,51 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
     </div>
   </section>
   ```
-- **Dimensiones & Fusión Gradiente**:
-  - `min-height: 620px - 660px; width: 100%;`
-  - `.hero-bg-img`: `width: 65%; height: 100%; object-fit: cover; object-position: center right;`
-  - `.hero-bg-overlay`: Gradiente que nace del color de fondo de la marca hacia la derecha (`linear-gradient(90deg, #colorBase 0%, #colorBase 36%, rgba(...) 52%, transparent 100%)`) garantizando **100% de legibilidad y contraste del texto a la izquierda**.
+- **Dimensiones & Fusión Gradiente en Escritorio (> 768px)**:
+  - `min-height: 640px; width: 100%;`
+  - `.hero-bg-img`: `width: 65%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.96;`
+  - **Prohibición de `mask-image` en el Contenedor**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` para evitar bandas sucias y cortes grisáceos por doble máscara.
+  - **Degradado Orgánico Aterciopelado (Curva Eased de 8 Paradas)**:
+    ```css
+    background: linear-gradient(
+      90deg, 
+      #colorBase 0%, 
+      #colorBase 35%, 
+      rgba(..., 0.96) 42%, 
+      rgba(..., 0.8) 50%, 
+      rgba(..., 0.5) 60%, 
+      rgba(..., 0.2) 72%, 
+      rgba(..., 0.05) 84%, 
+      transparent 94%
+    );
+    ```
+    Garantiza **100% de contraste a la izquierda (0% a 35%)** y una fusión suave como seda hacia la derecha, dejando la fotografía nítida y brillante a partir del 90%.
 - **Adaptabilidad Móvil Calibrada (< 768px)**:
-  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.88 - 0.95;` (fotografía visible, nítida y atractiva, sin capas que la opaquen).
-  - **Texto Centralizado Desde la Mitad Hacia Abajo**:
-    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 580px - 620px; padding: 120px 20px 40px;` (contenido posicionado exclusivamente desde el 50% de la altura hacia abajo).
-    - `.hero-bg-overlay`: Gradiente vertical translúcido `linear-gradient(180deg, rgba(..., 0) 0%, rgba(..., 0.12) 40%, rgba(..., 0.78) 70%, rgba(..., 0.98) 100%)` para mantener la luminosidad y nitidez absoluta de la foto arriba y contraste perfecto abajo.
-    - `.hero-text-block`: Centrado simétrico (`text-align: center; margin: 0 auto; max-width: 380px; width: 100%;`) con sombra sutil `text-shadow`.
-    - **Escala Compacta en Móvil**: Titular display entre `2.25rem` y `2.5rem`, subtítulo `0.85rem - 0.88rem`.
+  - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
+  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` dejando despejado el tercio superior para la modelo con nitidez total.
+  - **Texto Centralizado Estrictamente en la Mitad Inferior (Sin tapar a la modelo)**:
+    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 720px !important; padding: 140px 16px 28px;` (contenido posicionado exclusivamente desde el 50% de la altura hacia abajo).
+    - `.hero-bg-overlay`: Gradiente vertical translúcido:
+      ```css
+      background: linear-gradient(
+        180deg, 
+        rgba(..., 0) 0%, 
+        rgba(..., 0) 38%, 
+        rgba(..., 0.6) 54%, 
+        rgba(..., 0.92) 74%, 
+        #colorFondo 96%
+      );
+      ```
+      El 38% superior es 100% transparente (cero veladuras oscuras sobre la cara de la modelo).
+    - `.hero-text-block`: Centrado simétrico (`text-align: center; margin: 0 auto; max-width: 360px; width: 100%; text-shadow: 0 2px 8px rgba(0,0,0,0.9);`).
+    - **Escala Tipográfica Móvil Compacta**:
+      - Eyebrow: `0.72rem; letter-spacing: 0.18em; margin-bottom: 6px;`
+      - Titular: `1.85rem - 1.95rem; line-height: 1.12; margin-bottom: 10px;`
+      - Script: `1.25em - 1.28em; margin-top: 2px;`
+      - Descripción: `0.85rem - 0.86rem; line-height: 1.5; margin-bottom: 18px - 20px;` (nunca >1rem en móvil).
   - **Botones Optimizados Ergonómicos en Móvil**:
-    - `.hero-actions`: `display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin-top: 18px;`.
-    - Botones (`.btn-primary`, `.btn-secondary`): `width: 100%; max-width: 280px; padding: 12px 20px; font-size: 0.84rem - 0.88rem; font-weight: 700; border-radius: 50px; text-align: center; justify-content: center; touch-action: manipulation;`.
+    - `.hero-actions`: `display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin: 0 auto;`.
+    - Botones (`.btn-primary`, `.btn-secondary`): `width: 100%; max-width: 275px; padding: 12px 20px; font-size: 0.84rem; font-weight: 700; border-radius: 50px; text-align: center; justify-content: center; touch-action: manipulation;`.
     - Botón primario de reserva destacado con sombra ambiental y botón secundario con acabado translúcido tipo píldora (`backdrop-filter: blur(8px); border: 1px solid rgba(..., 0.35);`).
   - **Smart Header / Navbar Inteligente**: Barra superior en `.header-sticky-wrapper` con auto-hide al bajar y aparición al subir. Botón superior compacto **«Agendar»** con `.btn-header-cta`.
   - **Botón de Reserva del Footer**: El botón de la tarjeta de reserva del footer (`.btn-footer-reserve`) debe decir exclusivamente **«Agendar»** (no usar «Agendar por WhatsApp»).
