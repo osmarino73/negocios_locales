@@ -19,7 +19,7 @@ Para mantener los sitios limpios, ultra-rápidos y de alta conversión, cada pá
 
 ## 🌟 2. Hero Header Full-Width Inmersivo Obligatorio (`#inicio`)
 
-En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a ancho completo (Edge-to-Edge Full-Width)**:
+En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a ancho completo (Edge-to-Edge Full-Width)**. Se debe priorizar el banco local de fotografías curadas en WebP en `assets/heroes/{nicho}/` (`barberias/`, `maquillaje/`, `nails/`, `peinados/`, `salon_belleza/`, `spa/`), todas con pesos ultra optimizados (< 70 KB) y fondos oscuros con bokeh cálido para una integración perfecta.
 
 - **Estructura HTML Estándar**:
   ```html

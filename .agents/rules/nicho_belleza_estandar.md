@@ -5,7 +5,7 @@ Esta regla es de cumplimiento estricto y automático para cualquier landing page
 ---
 
 ## 🌟 1. Hero Header Full-Width Bleed Inmersivo Obligatorio
-Todo proyecto de belleza debe implementar el Hero a ancho completo edge-to-edge:
+Todo proyecto de belleza debe implementar el Hero a ancho completo edge-to-edge. Se debe priorizar el uso de las fotografías del banco local curado en `assets/heroes/{nicho}/` (`barberias/`, `maquillaje/`, `nails/`, `peinados/`, `salon_belleza/`, `spa/`), todas optimizadas en WebP (< 70 KB) con fondos oscuros e iluminación de lujo:
 - **Estructura en Escritorio (> 768px)**:
   - Capa de fondo `.hero-bg-cover` con la imagen a la derecha (`width: 65%`, `object-fit: cover; object-position: center top; opacity: 0.96;`).
   - **Prohibición de `mask-image` sobre el contenedor de imagen**: Queda prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` para evitar bandas sucias y cortes grisáceos por doble máscara.

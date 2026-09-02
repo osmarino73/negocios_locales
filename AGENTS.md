@@ -49,6 +49,16 @@ En todo proyecto adaptado a partir de una **imagen de referencia**, se debe clon
 
 Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estética, se deben aplicar estrictamente las siguientes reglas:
 
+0. **Banco Oficial de Fotografías Hero Locales (`assets/heroes/`)**:
+   - Para garantizar velocidad de carga instantánea (<70 KB por imagen) y fondos oscuros con degradado perfecto, se debe priorizar el uso del banco de imágenes local del repositorio según el nicho:
+     - **Barberías**: `assets/heroes/barberias/` (fades modernos, perfilado con navaja, capas negras y sillón clásico).
+     - **Maquillaje / Makeup**: `assets/heroes/maquillaje/` (maquillaje social, novias, cejas laminadas y piel blindada).
+     - **Uñas / Nails**: `assets/heroes/nails/` (nail art 3D floral, acrílicas esculpidas, joyas y manos en primer plano).
+     - **Peinados / Rizos**: `assets/heroes/peinados/` (ondas al agua, cepillado voluminoso y rizos glow).
+     - **Salón de Belleza**: `assets/heroes/salon_belleza/` (color, mechas balayage, alisados y volumen).
+     - **Spa & Bienestar**: `assets/heroes/spa/` (cuidado facial glow, relajación y atmósfera zen).
+   - Al crear un proyecto individual, se puede vincular directamente la ruta relativa `../assets/heroes/{nicho}/{imagen}.webp` o copiar la imagen seleccionada a la carpeta del negocio.
+
 1. **Hero Header Inmersivo Full-Width Bleed**:
    - Capa posterior `.hero-bg-cover` con imagen a la derecha (`width: 65%`).
    - **Vista de Escritorio (> 768px)**:

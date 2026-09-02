@@ -16,7 +16,7 @@ Este skill guía la transformación de **imágenes de referencia visual** en pá
 
 ### 1. Entregable Autónomo & Optimizado
 - **CSS Embebido**: Todo el diseño debe ir en `<style>` dentro del `<head>`.
-- **Fotografía de Alta Gama Optimizada**: Usar el catálogo centralizado [BANCO_IMAGENES.json](file:///c:/Users/Rio%20Belen/negocios_locales/BANCO_IMAGENES.json) con URLs CDN globales en formato WebP optimizado (o fotos del cliente). Evitar Base64 pesado para fotografías de gran tamaño para mantener los archivos HTML ligeros (< 50 KB).
+- **Fotografías Hero de Alta Gama Optimizadas (`assets/heroes/`)**: Priorizar el banco local de imágenes curadas WebP (`assets/heroes/{barberias,maquillaje,nails,peinados,salon_belleza,spa}/`) para velocidad de carga instantánea (< 70 KB) y fondos oscuros con degradado perfecto. Para servicios y ambiente se puede usar [BANCO_IMAGENES.json](file:///c:/Users/Rio%20Belen/negocios_locales/BANCO_IMAGENES.json) o fotografías propias del cliente.
 - **Logotipos e Íconos**: SVGs limpios o FontAwesome para micro-gráficos.
 - **Cero archivos secundarios locales obligatorios**: El `.html` carga instantáneamente y funciona de manera autónoma en cualquier navegador.
 
