@@ -1,31 +1,1280 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="theme-color" content="#d97b8f" />
-  <title>Sandra Color´s | Salón de Belleza & Estilismo de Lujo en Apartadó</title>
-  <meta name="description" content="Salón de belleza LUXE Sandra Color´s en Apartadó. Especialistas en balayage francés, alisados de seda, novias, spa capilar y tratamientos personalizados de alta gama." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Sandra Color´s | Salón de Belleza & Colorimetría Capilar en Apartadó</title>
+  <meta name="description" content="Especialistas en colorimetría, balayage, alisados orgánicos, tratamientos y peinados en Apartadó. Agenda tu cita con las mejores estilistas de Urabá.">
+  <meta name="keywords" content="Sandra Colors, salon de belleza Apartado, balayage Apartado, alisados Apartado, peluqueria Uraba, colorimetria capilar, peinados">
+  <meta name="robots" content="index, follow">
   
-  <!-- OpenGraph Meta Tags -->
-  <meta property="og:title" content="Sandra Color´s | Salón de Belleza & Estilismo en Apartadó" />
-  <meta property="og:description" content="Donde la belleza se encuentra con el lujo. Cuidado profesional y tratamientos personalizados en Apartadó, Antioquia." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.facebook.com/Sandra-Colors-104523494432709" />
-  <meta property="og:image" content="./modelo1.webp" />
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:title" content="Sandra Color´s | Salón de Belleza & Colorimetría Capilar">
+  <meta property="og:description" content="Donde tu estilo abraza tu confianza. Especialistas en color, balayage y alisados en Apartadó.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=85">
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Google Fonts: DM Serif Display, Alex Brush & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ============================================================
+       VARIABLES & DESIGN SYSTEM (LUXEHAIR FORENSIC)
+    ============================================================ */
+    :root {
+      --bg-dark: #0f0e0c;
+      --bg-dark-surface: #181613;
+      --bg-dark-card: #201d19;
+      --bg-light: #faf7f2;
+      --bg-light-surface: #ffffff;
+      --bg-light-card: #f4ede4;
+      
+      --accent-primary: #c89376;
+      --accent-hover: #b57f63;
+      --accent-soft: rgba(200, 147, 118, 0.15);
+      --accent-light: #e8c4ad;
+      --gold-border: rgba(200, 147, 118, 0.35);
+
+      --text-dark-primary: #22201e;
+      --text-dark-muted: #66625d;
+      --text-light-primary: #f7f4ee;
+      --text-light-muted: #d5cfc7;
+
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.12);
+      --shadow-dark: 0 12px 35px rgba(0, 0, 0, 0.4);
+
+      --transition-fast: 0.25s ease;
+      --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      background-color: var(--bg-dark);
+      color: var(--text-dark-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-fast);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY & UTILITIES
+    ============================================================ */
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      color: var(--text-dark-primary);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-bottom: 14px;
+    }
+
+    .section-title.light {
+      color: var(--text-light-primary);
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: "";
+      display: inline-block;
+      width: 45px;
+      height: 1px;
+      background: var(--gold-border);
+    }
+
+    .section-divider-diamond {
+      width: 7px;
+      height: 7px;
+      background: var(--accent-primary);
+      transform: rotate(45deg);
+    }
+
+    .section-desc {
+      font-size: 0.98rem;
+      color: var(--text-dark-muted);
+      line-height: 1.65;
+    }
+
+    .section-desc.light {
+      color: var(--text-light-muted);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      transition: all var(--transition-fast);
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-primary);
+      color: #ffffff;
+      box-shadow: 0 4px 18px rgba(200, 147, 118, 0.35);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(200, 147, 118, 0.45);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-light-primary);
+      border: 1px solid rgba(247, 244, 238, 0.4);
+    }
+
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent-primary);
+      color: var(--accent-light);
+    }
+
+    .btn-dark {
+      background-color: var(--bg-dark);
+      color: #ffffff;
+      border: 1px solid var(--gold-border);
+    }
+
+    .btn-dark:hover {
+      background-color: var(--accent-primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       SMART HEADER / NAVBAR
+    ============================================================ */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 14, 12, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(200, 147, 118, 0.15);
+      transition: transform 0.35s ease, background-color 0.35s ease;
+    }
+
+    .header-sticky-wrapper.hide {
+      transform: translateY(-100%);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    /* Logotipo Tipográfico Puro */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--text-light-primary);
+      text-transform: uppercase;
+      line-height: 1.05;
+    }
+
+    .brand-name span {
+      color: var(--accent-primary);
+    }
+
+    .brand-subtitle {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      color: var(--accent-light);
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light-muted);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-primary);
+      transition: width var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      color: var(--text-light-primary);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-header-cta {
+      padding: 10px 22px;
+      font-size: 0.86rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       HERO FULL-WIDTH BLEED
+    ============================================================ */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      padding-top: 85px;
+      background-color: var(--bg-dark);
+      overflow: hidden;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 62%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.85) 35%, black 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.85) 35%, black 100%);
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.92;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #0f0e0c 42%, rgba(15, 14, 12, 0.75) 65%, rgba(15, 14, 12, 0.15) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--accent-light);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+      color: var(--text-light-primary);
+      line-height: 1.12;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .hero-script {
+      display: block;
+      font-family: var(--font-script);
+      font-size: 1.35em;
+      color: var(--accent-light);
+      font-weight: 400;
+      line-height: 1;
+      margin-top: 6px;
+      text-transform: none;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-light-muted);
+      line-height: 1.7;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       BARRA DE PILARES / GARANTÍAS (5 SELLOS)
+    ============================================================ */
+    .pillars-bar-section {
+      background-color: var(--bg-dark-surface);
+      border-top: 1px solid rgba(200, 147, 118, 0.18);
+      border-bottom: 1px solid rgba(200, 147, 118, 0.18);
+      padding: 26px 0;
+      position: relative;
+      z-index: 4;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 6px 10px;
+    }
+
+    .pillar-icon-box {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: var(--radius-sm);
+      background: rgba(200, 147, 118, 0.12);
+      border: 1px solid var(--gold-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-light);
+      font-size: 1.15rem;
+    }
+
+    .pillar-content h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-light-primary);
+      margin-bottom: 3px;
+    }
+
+    .pillar-content p {
+      font-size: 0.76rem;
+      color: var(--text-light-muted);
+      line-height: 1.35;
+    }
+
+    /* ============================================================
+       CATÁLOGO DE SERVICIOS (GRID 6 COLUMNAS DESKTOP / 2 MÓVIL)
+    ============================================================ */
+    .services-section {
+      background-color: var(--bg-light);
+      padding: 85px 0 95px;
+    }
+
+    .services-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--bg-light-surface);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(200, 147, 118, 0.2);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-primary);
+    }
+
+    .service-img-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: #e8e2d8;
+    }
+
+    .service-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-img {
+      transform: scale(1.08);
+    }
+
+    .service-content {
+      padding: 16px 14px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--text-dark-primary);
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 2 Píldoras Esenciales */
+    .service-badges-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .service-badge-pill {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .pill-duration {
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--text-dark-muted);
+    }
+
+    .pill-price {
+      background: var(--accent-soft);
+      color: #935634;
+      border: 1px solid rgba(200, 147, 118, 0.35);
+    }
+
+    .btn-card-book {
+      margin-top: auto;
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 0.8rem;
+      border-radius: var(--radius-sm);
+      background: var(--bg-dark);
+      color: #ffffff;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: var(--transition-fast);
+    }
+
+    .btn-card-book:hover {
+      background: var(--accent-primary);
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       SOBRE NOSOTROS & PROFESIONALES
+    ============================================================ */
+    .about-section {
+      background-color: var(--bg-light-surface);
+      padding: 90px 0;
+      border-top: 1px solid rgba(200, 147, 118, 0.15);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3;
+    }
+
+    .salon-showcase-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(15, 14, 12, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-border);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .floating-badge-icon {
+      font-size: 1.6rem;
+      color: var(--accent-light);
+    }
+
+    .floating-badge-text h5 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .floating-badge-text p {
+      font-size: 0.76rem;
+      color: var(--text-light-muted);
+    }
+
+    .about-text-col .section-eyebrow {
+      margin-bottom: 6px;
+    }
+
+    .about-text-col .section-title {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    .about-text-col p {
+      font-size: 0.98rem;
+      color: var(--text-dark-muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    /* 4 Métricas de Autoridad */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 20px 0;
+      border-top: 1px solid rgba(200, 147, 118, 0.2);
+      border-bottom: 1px solid rgba(200, 147, 118, 0.2);
+      margin-bottom: 30px;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--accent-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-dark-muted);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       PROFESIONALES (GRID 4 COLUMNAS DESKTOP / 2 MÓVIL)
+    ============================================================ */
+    .team-block-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .team-card {
+      background: var(--bg-light);
+      border-radius: var(--radius-md);
+      padding: 24px 18px 20px;
+      text-align: center;
+      border: 1px solid rgba(200, 147, 118, 0.2);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .team-avatar-wrap {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent-primary);
+      padding: 3px;
+      background: #ffffff;
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: -4px;
+      right: 2px;
+      background: var(--bg-dark);
+      color: var(--accent-light);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--gold-border);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      color: var(--text-dark-primary);
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      color: var(--accent-hover);
+      font-weight: 600;
+      margin-bottom: 8px;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team-stars {
+      color: #e5a93b;
+      font-size: 0.8rem;
+      margin-bottom: 16px;
+    }
+
+    .team-stars span {
+      color: var(--text-dark-muted);
+      font-size: 0.72rem;
+      margin-left: 4px;
+      font-weight: 600;
+    }
+
+    .btn-team-book {
+      margin-top: auto;
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 0.78rem;
+      border-radius: var(--radius-sm);
+      background: var(--accent-primary);
+      color: #ffffff;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: var(--transition-fast);
+    }
+
+    .btn-team-book:hover {
+      background: var(--accent-hover);
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       BANNER PROMOCIONAL ELEGANTE
+    ============================================================ */
+    .promo-banner-section {
+      background: linear-gradient(135deg, var(--bg-dark) 0%, #1e1b17 100%);
+      padding: 70px 0;
+      border-top: 1px solid rgba(200, 147, 118, 0.2);
+      border-bottom: 1px solid rgba(200, 147, 118, 0.2);
+      color: #ffffff;
+    }
+
+    .promo-banner-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-lg);
+      padding: 44px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .promo-text-content h3 {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      color: var(--text-light-primary);
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .promo-text-content p {
+      color: var(--text-light-muted);
+      font-size: 0.98rem;
+      max-width: 540px;
+    }
+
+    /* ============================================================
+       UBICACIÓN & CONTACTO
+    ============================================================ */
+    .location-section {
+      background-color: var(--bg-light);
+      padding: 85px 0;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .location-info-card {
+      background: var(--bg-light-surface);
+      border-radius: var(--radius-md);
+      padding: 36px 32px;
+      border: 1px solid rgba(200, 147, 118, 0.2);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .location-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .location-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .location-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-soft);
+      border: 1px solid rgba(200, 147, 118, 0.3);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .location-detail h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 3px;
+    }
+
+    .location-detail p {
+      font-size: 0.88rem;
+      color: var(--text-dark-muted);
+      line-height: 1.5;
+    }
+
+    .map-embed-wrapper {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(200, 147, 118, 0.25);
+      height: 380px;
+    }
+
+    .map-embed-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ============================================================
+       FOOTER PRINCIPAL
+    ============================================================ */
+    .site-footer {
+      background-color: var(--bg-dark);
+      color: var(--text-light-muted);
+      padding: 70px 0 28px;
+      border-top: 1px solid rgba(200, 147, 118, 0.2);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col .brand-logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-col p {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--gold-border);
+      color: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: var(--transition-fast);
+    }
+
+    .footer-social-btn:hover {
+      background: var(--accent-primary);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-light-primary);
+      font-weight: 400;
+      margin-bottom: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links-list a {
+      font-size: 0.85rem;
+      color: var(--text-light-muted);
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--accent-light);
+      padding-left: 4px;
+    }
+
+    /* Módulo de Reserva en Footer */
+    .footer-booking-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--gold-border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer-booking-card h5 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--text-light-primary);
+      margin-bottom: 6px;
+      font-weight: 400;
+    }
+
+    .footer-booking-card p {
+      font-size: 0.8rem;
+      color: var(--text-light-muted);
+      margin-bottom: 14px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: rgba(213, 207, 199, 0.6);
+    }
+
+    /* ============================================================
+       BOTÓN FLOTANTE WHATSAPP
+    ============================================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    /* ============================================================
+       RESPONSIVE & MOBILE CALIBRATION (< 768px)
+    ============================================================ */
+    @media (max-width: 992px) {
+      .services-grid-6 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .promo-banner-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+      }
+      .promo-text-content p {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none !important;
+      }
+
+      .header-nav {
+        height: 68px;
+      }
+
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+
+      .hero-fullwidth-section {
+        min-height: 720px !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 130px 16px 40px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        height: 100%;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .hero-bg-img {
+        object-position: center 20%;
+        opacity: 0.88;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(to top, #0f0e0c 45%, rgba(15, 14, 12, 0.6) 70%, rgba(15, 14, 12, 0.2) 100%);
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+        width: 100%;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 14px;
+        padding-bottom: 6px;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 250px;
+        scroll-snap-align: start;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(200, 147, 118, 0.2);
+        border-radius: var(--radius-sm);
+        padding: 10px 12px;
+      }
+
+      .services-grid-6 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+      }
+
+      .service-content {
+        padding: 12px 8px 14px;
+      }
+
+      .service-title {
+        font-size: 0.88rem;
+        min-height: 38px;
+        margin-bottom: 8px;
+      }
+
+      .service-badge-pill {
+        font-size: 0.65rem;
+        padding: 3px 6px;
+      }
+
+      .btn-card-book {
+        padding: 8px 6px;
+        font-size: 0.74rem;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+      }
+
+      .team-card {
+        padding: 16px 10px 14px;
+      }
+
+      .team-avatar-wrap {
+        width: 88px;
+        height: 88px;
+        margin-bottom: 12px;
+      }
+
+      .team-badge {
+        display: none !important;
+      }
+
+      .team-name {
+        font-size: 1rem;
+      }
+
+      .team-role {
+        font-size: 0.72rem;
+        min-height: 32px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "Sandra Color´s",
-    "image": "./modelo1.webp",
+    "description": "Salón de Belleza Especializado y Colorimetría Capilar en Apartadó. Expertos en balayage, alisados, cortes y peinados.",
+    "image": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=85",
     "telephone": "+573128755269",
-    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cra. 104 #103-61",
@@ -38,6 +1287,7 @@
       "latitude": 7.8877515,
       "longitude": -76.6513548
     },
+    "url": "https://sandra-colors.local",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -46,2022 +1296,503 @@
         "closes": "19:30"
       }
     ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "1000"
-    }
+    "priceRange": "$$"
   }
   </script>
-
-  <!-- Google Fonts: Playfair Display + Cormorant Garamond + Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- FontAwesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <style>
-    /* SISTEMA DE VARIABLES "LUXE RADIANT ROSE & BLUSH PINK" */
-    :root {
-      --rose-primary: #d6336c;
-      --rose-primary-hover: #b82356;
-      --rose-light: #fce7eb;
-      --rose-subtle: rgba(214, 51, 108, 0.12);
-      --rose-border: rgba(214, 51, 108, 0.22);
-      
-      --pink-hero: #fdf2f4;
-      --surface-white: #ffffff;
-      --dark-plum: #2c131a;
-      --text-mauve: #705a62;
-      --border-soft: #f4dfe3;
-      
-      --font-serif: 'Playfair Display', Georgia, serif;
-      --font-script: 'Cormorant Garamond', Georgia, serif;
-      --font-sans: 'Plus Jakarta Sans', sans-serif;
-      
-      --radius-sm: 6px;
-      --radius-md: 14px;
-      --radius-lg: 22px;
-      --radius-pill: 999px;
-      
-      --shadow-rose: 0 10px 24px rgba(214, 51, 108, 0.28);
-      --shadow-sm: 0 4px 18px rgba(44, 19, 26, 0.04);
-      --shadow-md: 0 12px 32px rgba(44, 19, 26, 0.08);
-    }
-
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      background-color: #fdf6f7;
-      color: var(--dark-plum);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* HEADER STICKY INTELIGENTE */
-    .header-sticky-wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-      will-change: transform;
-    }
-
-    .header-sticky-wrapper.header-hidden {
-      transform: translateY(-100%);
-    }
-
-    .site-header {
-      background: var(--surface-white);
-      border-bottom: 1px solid var(--border-soft);
-      padding: 16px 0;
-      box-shadow: 0 2px 14px rgba(214, 51, 108, 0.04);
-    }
-
-    .nav-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--dark-plum);
-    }
-
-    .logo-lotus-box {
-      width: 44px;
-      height: 44px;
-      border: 1.5px solid var(--rose-primary);
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-primary);
-      font-size: 1.3rem;
-      background: var(--rose-subtle);
-    }
-
-    .logo-text-box h2 {
-      font-family: var(--font-serif);
-      font-size: 1.75rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      line-height: 1;
-      text-transform: uppercase;
-      color: var(--dark-plum);
-    }
-
-    .logo-text-box span {
-      font-family: var(--font-sans);
-      font-size: 0.65rem;
-      font-weight: 800;
-      letter-spacing: 2.5px;
-      color: var(--rose-primary);
-      display: block;
-      margin-top: 2px;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 36px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-family: var(--font-sans);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--dark-plum);
-      transition: color 0.2s ease;
-      position: relative;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--rose-primary);
-    }
-
-    .nav-links a.active::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: var(--rose-primary);
-    }
-
-    /* BOTONES LUXE ROSE */
-    .btn-luxe-rose {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      padding: 13px 26px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      box-shadow: var(--shadow-rose);
-      transition: all 0.3s ease;
-      border: 1px solid var(--rose-primary);
-      cursor: pointer;
-    }
-
-    .btn-luxe-rose:hover {
-      background: var(--rose-primary-hover);
-      border-color: var(--rose-primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(214, 51, 108, 0.4);
-      color: var(--surface-white);
-    }
-
-    .btn-luxe-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--surface-white);
-      color: var(--rose-primary);
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      padding: 12px 24px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      border: 1.5px solid var(--rose-primary);
-      transition: all 0.3s ease;
-    }
-
-    .btn-luxe-outline:hover {
-      background: var(--rose-subtle);
-      transform: translateY(-2px);
-    }
-
-    /* ENCABEZADOS DE SECCIÓN */
-    .section-header-center {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 52px;
-    }
-
-    .eyebrow-rose {
-      display: inline-block;
-      color: var(--rose-primary);
-      font-family: var(--font-sans);
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 8px;
-    }
-
-    .section-title-serif {
-      font-family: var(--font-serif);
-      font-size: 3.2rem;
-      font-weight: 600;
-      line-height: 1.1;
-      color: var(--dark-plum);
-      margin-bottom: 12px;
-    }
-
-    .section-title-serif span.text-rose {
-      color: var(--rose-primary);
-      font-style: italic;
-    }
-
-    .section-desc {
-      font-size: 1rem;
-      color: var(--text-mauve);
-      font-weight: 400;
-    }
-
-    /* ============================================================ */
-    /* 1. SECCIÓN: INICIO / HERO FULL-WIDTH (#inicio)               */
-    /* ============================================================ */
-    .hero-fullwidth-section {
-      position: relative;
-      width: 100%;
-      min-height: 640px;
-      display: flex;
-      align-items: center;
-      background-color: var(--pink-hero);
-      overflow: hidden;
-    }
-
-    .hero-bg-cover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .hero-bg-img {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 65%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center right;
-      display: block;
-    }
-
-    /* MÁSCARA GRADIENTE DE INTEGRACIÓN RUBOR ROSA */
-    .hero-bg-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        90deg, 
-        #fdf2f4 0%, 
-        #fdf2f4 36%, 
-        rgba(253, 242, 244, 0.95) 50%, 
-        rgba(253, 242, 244, 0.3) 68%, 
-        transparent 100%
-      );
-      z-index: 2;
-    }
-
-    .hero-content-wrapper {
-      position: relative;
-      z-index: 3;
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-
-    .hero-text-block {
-      max-width: 580px;
-    }
-
-    .hero-main-title {
-      font-family: var(--font-serif);
-      font-size: 4.5rem;
-      font-weight: 600;
-      line-height: 1.04;
-      color: var(--dark-plum);
-      margin-bottom: 18px;
-    }
-
-    .hero-main-title span.accent-rose {
-      color: var(--rose-primary);
-      font-style: italic;
-      display: block;
-    }
-
-    .hero-subtitle {
-      font-size: 1.05rem;
-      color: var(--text-mauve);
-      margin-bottom: 14px;
-      max-width: 490px;
-      line-height: 1.65;
-    }
-
-    .hero-script-tag {
-      font-family: var(--font-script);
-      font-size: 1.35rem;
-      font-style: italic;
-      color: var(--rose-primary);
-      display: block;
-      margin-bottom: 30px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 28px;
-    }
-
-    /* BADGE FLOTANTE HERO AÑOS DE EXCELENCIA */
-    .hero-floating-badge {
-      position: absolute;
-      right: 6%;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(214, 51, 108, 0.4);
-      z-index: 4;
-      border: 3px solid var(--surface-white);
-    }
-
-    .hero-floating-badge strong {
-      font-family: var(--font-serif);
-      font-size: 2rem;
-      line-height: 1;
-    }
-
-    .hero-floating-badge span {
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 2px;
-    }
-
-    .hero-floating-badge .stars {
-      font-size: 0.6rem;
-      color: #ffd700;
-      margin-top: 3px;
-    }
-
-    /* ============================================================ */
-    /* FRANJA DE 4 SELLOS LUXE ROSE                                 */
-    /* ============================================================ */
-    .benefits-bar-pink {
-      background-color: var(--surface-white);
-      padding: 34px 0;
-      border-bottom: 1px solid var(--border-soft);
-      border-top: 1px solid var(--border-soft);
-    }
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-    }
-
-    .benefit-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .benefit-icon-box {
-      width: 48px;
-      height: 48px;
-      border-radius: var(--radius-sm);
-      background: var(--rose-subtle);
-      border: 1px solid var(--rose-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-primary);
-      font-size: 1.25rem;
-      flex-shrink: 0;
-      transition: all 0.3s ease;
-    }
-
-    .benefit-item:hover .benefit-icon-box {
-      background-color: var(--rose-primary);
-      color: var(--surface-white);
-      transform: scale(1.08) rotate(6deg);
-    }
-
-    .benefit-text h4 {
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: var(--dark-plum);
-      margin-bottom: 2px;
-    }
-
-    .benefit-text p {
-      font-size: 0.78rem;
-      color: var(--text-mauve);
-      line-height: 1.35;
-    }
-
-    /* ============================================================ */
-    /* 2. SECCIÓN: SERVICIOS (#servicios)                           */
-    /* ============================================================ */
-    .services-section {
-      padding: 100px 0;
-      background-color: #fdf6f7;
-    }
-
-    .services-grid-6 {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 18px;
-    }
-
-    .service-card-luxe {
-      background-color: var(--surface-white);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid var(--border-soft);
-      box-shadow: var(--shadow-sm);
-      transition: all 0.35s ease;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .service-card-luxe:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--rose-primary);
-    }
-
-    .service-img-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-    }
-
-    .service-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .service-card-luxe:hover .service-img-wrapper img {
-      transform: scale(1.08);
-    }
-
-    /* BADGE CIRCULAR FLOTANTE SOBRE LA FOTO */
-    .service-floating-badge {
-      position: absolute;
-      bottom: -18px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 38px;
-      height: 38px;
-      background: var(--surface-white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--rose-primary);
-      font-size: 0.95rem;
-      border: 1.5px solid var(--rose-border);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      z-index: 5;
-      transition: all 0.3s ease;
-    }
-
-    .service-card-luxe:hover .service-floating-badge {
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      border-color: var(--rose-primary);
-      transform: translateX(-50%) scale(1.1);
-    }
-
-    .service-body {
-      padding: 28px 14px 20px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .service-name {
-      font-family: var(--font-sans);
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--dark-plum);
-      margin-bottom: 4px;
-    }
-
-    .service-time {
-      font-size: 0.78rem;
-      color: var(--text-mauve);
-      margin-bottom: 14px;
-    }
-
-    .service-price {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: var(--rose-primary);
-      margin-top: auto;
-      margin-bottom: 12px;
-    }
-
-    .btn-card-book {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      background: var(--rose-subtle);
-      color: var(--rose-primary);
-      border: 1px solid var(--rose-border);
-      font-family: var(--font-sans);
-      font-size: 0.76rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      padding: 10px 12px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      transition: all 0.25s ease;
-      width: 100%;
-    }
-
-    .btn-card-book:hover {
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      border-color: var(--rose-primary);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 14px rgba(214, 51, 108, 0.32);
-    }
-
-    /* ============================================================ */
-    /* 3. SECCIÓN: NOSOTROS / EXPERIENCIA & ESPECIALISTAS (#nosotros)*/
-    /* ============================================================ */
-    .about-experience-section {
-      padding: 100px 0;
-      background-color: var(--surface-white);
-      border-top: 1px solid var(--border-soft);
-      border-bottom: 1px solid var(--border-soft);
-    }
-
-    .experience-layout {
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 50px;
-      align-items: center;
-      margin-bottom: 70px;
-    }
-
-    .salon-image-showcase {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border-soft);
-    }
-
-    .salon-image-showcase img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .experience-floating-badge {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      padding: 16px 22px;
-      border-radius: var(--radius-sm);
-      text-align: center;
-      box-shadow: var(--shadow-rose);
-    }
-
-    .experience-floating-badge strong {
-      font-family: var(--font-serif);
-      font-size: 2.3rem;
-      line-height: 1;
-      display: block;
-      font-weight: 700;
-    }
-
-    .experience-floating-badge span {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 800;
-    }
-
-    .experience-text-content h3 {
-      font-family: var(--font-serif);
-      font-size: 3.4rem;
-      font-weight: 600;
-      line-height: 1.08;
-      margin-bottom: 16px;
-      color: var(--dark-plum);
-    }
-
-    .experience-text-content h3 span {
-      color: var(--rose-primary);
-      font-style: italic;
-    }
-
-    .experience-text-content p {
-      color: var(--text-mauve);
-      font-size: 0.98rem;
-      line-height: 1.7;
-      margin-bottom: 28px;
-    }
-
-    /* FRANJA DE 4 ESTADÍSTICAS ROSE */
-    .metrics-rose-box {
-      background: var(--rose-light);
-      padding: 24px 20px;
-      border-radius: var(--radius-md);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 28px;
-      border: 1px solid var(--rose-border);
-    }
-
-    .metric-rose-item {
-      text-align: center;
-    }
-
-    .metric-rose-item strong {
-      font-family: var(--font-serif);
-      font-size: 1.85rem;
-      font-weight: 700;
-      color: var(--rose-primary);
-      display: block;
-    }
-
-    .metric-rose-item span {
-      font-size: 0.72rem;
-      color: var(--dark-plum);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 700;
-    }
-
-    /* GRID ESPECIALISTAS */
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 26px;
-      margin-top: 40px;
-    }
-
-    .team-card {
-      background: #fdf6f7;
-      border-radius: var(--radius-md);
-      padding: 30px 20px 24px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--border-soft);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .team-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--rose-primary);
-      box-shadow: var(--shadow-md);
-    }
-
-    .team-photo-box {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 18px;
-    }
-
-    .team-avatar {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--rose-primary);
-      box-shadow: 0 6px 18px rgba(214, 51, 108, 0.25);
-    }
-
-    .team-badge {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      font-size: 9px;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: var(--radius-pill);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .team-name {
-      font-family: var(--font-serif);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--dark-plum);
-      margin-bottom: 4px;
-    }
-
-    .team-role {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--rose-primary);
-      display: block;
-      margin-bottom: 10px;
-      min-height: 38px;
-    }
-
-    .team-rating {
-      font-size: 0.85rem;
-      color: #f59e0b;
-      margin-bottom: 18px;
-      font-weight: 700;
-    }
-
-    .btn-team-book {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      color: var(--rose-primary);
-      border: 1.5px solid var(--rose-primary);
-      padding: 8px 20px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      transition: all 0.25s ease;
-      background: var(--surface-white);
-    }
-
-    .btn-team-book:hover {
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      transform: translateY(-2px);
-    }
-
-    /* ============================================================ */
-    /* 4. SECCIÓN: UBICACIÓN & GOOGLE MAPS (#ubicacion)             */
-    /* ============================================================ */
-    .map-section {
-      padding: 100px 0;
-      background: #fdf6f7;
-    }
-
-    .map-showcase-card {
-      display: grid;
-      grid-template-columns: 1fr 1.35fr;
-      background: var(--surface-white);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border-soft);
-    }
-
-    .map-info-panel {
-      padding: 48px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .map-title {
-      font-family: var(--font-serif);
-      font-size: 2.8rem;
-      font-weight: 600;
-      line-height: 1.1;
-      margin-bottom: 18px;
-      color: var(--dark-plum);
-    }
-
-    .map-location-item {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      margin-bottom: 18px;
-    }
-
-    .map-location-item i {
-      color: var(--rose-primary);
-      font-size: 1.15rem;
-      margin-top: 4px;
-    }
-
-    .map-location-item p {
-      font-size: 0.95rem;
-      color: var(--text-mauve);
-    }
-
-    .map-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 24px;
-    }
-
-    .map-frame-wrapper {
-      position: relative;
-      width: 100%;
-      min-height: 400px;
-      height: 100%;
-      background: #e2e8f0;
-      overflow: hidden;
-    }
-
-    .map-frame-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
-    }
-
-    /* BANNER CTA PRE-FOOTER ROSE */
-    .cta-banner-section {
-      background: linear-gradient(135deg, #fce7eb 0%, #fdf2f4 100%);
-      padding: 60px 0;
-      border-top: 1px solid var(--border-soft);
-      border-bottom: 1px solid var(--border-soft);
-      text-align: center;
-    }
-
-    .cta-banner-content h2 {
-      font-family: var(--font-serif);
-      font-size: 2.8rem;
-      color: var(--dark-plum);
-      margin-bottom: 8px;
-    }
-
-    .cta-banner-content p {
-      font-size: 1.05rem;
-      color: var(--text-mauve);
-      margin-bottom: 24px;
-    }
-
-    .cta-buttons-wrapper {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    /* FOOTER EDITORIAL LUXE ROSE */
-    .site-footer {
-      background-color: #1f0b12;
-      color: var(--surface-white);
-      padding: 80px 0 30px;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.3fr 0.9fr 1fr 1.2fr;
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .footer-brand p {
-      color: #bfaab1;
-      font-size: 0.9rem;
-      margin: 16px 0 24px;
-      line-height: 1.6;
-    }
-
-    .footer-social-links {
-      display: flex;
-      gap: 12px;
-    }
-
-    .footer-social-btn {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--surface-white);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-
-    .footer-social-btn:hover {
-      background: var(--rose-primary);
-      transform: translateY(-3px);
-    }
-
-    .footer-col-title {
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-      color: var(--surface-white);
-    }
-
-    .footer-links-list {
-      list-style: none;
-    }
-
-    .footer-links-list li {
-      margin-bottom: 12px;
-    }
-
-    .footer-links-list a {
-      color: #bfaab1;
-      text-decoration: none;
-      font-size: 0.88rem;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links-list a:hover {
-      color: var(--rose-primary);
-    }
-
-    .footer-contact-info p {
-      color: #bfaab1;
-      font-size: 0.88rem;
-      margin-bottom: 14px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .footer-contact-info i {
-      color: var(--rose-primary);
-      margin-top: 3px;
-    }
-
-    .footer-newsletter-card p {
-      color: #bfaab1;
-      font-size: 0.88rem;
-      margin-bottom: 16px;
-    }
-
-    .btn-footer-reserve {
-      display: block;
-      text-align: center;
-      background: var(--rose-primary);
-      color: var(--surface-white);
-      font-family: var(--font-sans);
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      padding: 13px 20px;
-      border-radius: var(--radius-sm);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn-footer-reserve:hover {
-      background: var(--rose-primary-hover);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-rose);
-      color: var(--surface-white);
-    }
-
-    .footer-bottom-bar {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      padding-top: 24px;
-      text-align: center;
-      font-size: 0.82rem;
-      color: #8c737b;
-    }
-
-    /* WIDGET FLOTANTE WHATSAPP */
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 9999;
-      background: #25d366;
-      color: #ffffff;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
-      text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .floating-whatsapp:hover {
-      transform: scale(1.12) rotate(8deg);
-      color: #ffffff;
-    }
-
-    /* RESPONSIVE DESIGN */
-    @media (max-width: 1024px) {
-      .hero-bg-img {
-        width: 50%;
-        opacity: 0.4;
-      }
-      .hero-bg-overlay {
-        background: linear-gradient(90deg, #fdf2f4 0%, #fdf2f4 60%, rgba(253, 242, 244, 0.7) 100%);
-      }
-      .services-grid-6 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .experience-layout {
-        grid-template-columns: 1fr;
-      }
-      .benefits-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .hero-floating-badge {
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .btn-header-cta {
-        padding: 8px 15px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-      }
-
-      /* Hero Móvil: +20% de altura (720px), imagen nítida de alta fidelidad, texto centralizado desde la mitad hacia abajo */
-      .hero-fullwidth-section {
-        min-height: 720px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding: 150px 16px 36px;
-        position: relative;
-      }
-
-      .hero-bg-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        opacity: 0.94;
-        display: block;
-      }
-
-      .hero-bg-overlay {
-        background: linear-gradient(
-          180deg, 
-          rgba(253, 242, 244, 0) 0%, 
-          rgba(253, 242, 244, 0.08) 38%, 
-          rgba(253, 242, 244, 0.78) 64%, 
-          rgba(253, 242, 244, 0.98) 88%, 
-          #fdf2f4 100%
-        );
-      }
-
-      .hero-content-wrapper {
-        width: 100%;
-        padding-top: 0;
-        padding-bottom: 0;
-        position: relative;
-        z-index: 3;
-      }
-
-      .hero-text-block {
-        text-align: center;
-        margin: 0 auto;
-        max-width: 380px;
-        width: 100%;
-        text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95);
-      }
-
-      .hero-main-title {
-        font-size: 2.35rem;
-        line-height: 1.08;
-        margin-bottom: 10px;
-      }
-
-      .hero-subtitle {
-        font-size: 0.86rem;
-        line-height: 1.5;
-        max-width: 320px;
-        margin: 0 auto 8px;
-        color: var(--dark-plum);
-      }
-
-      .hero-script-tag {
-        display: block;
-        font-size: 1.35rem;
-        margin-bottom: 18px;
-      }
-
-      .hero-actions {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto 12px;
-      }
-
-      .hero-actions .btn-luxe-rose,
-      .hero-actions .btn-luxe-outline {
-        width: 100%;
-        max-width: 280px;
-        padding: 12px 20px;
-        font-size: 0.85rem;
-        font-weight: 700;
-        border-radius: 50px;
-        justify-content: center;
-        text-align: center;
-        box-shadow: 0 4px 14px rgba(214, 51, 108, 0.25);
-        touch-action: manipulation;
-      }
-
-      .hero-actions .btn-luxe-outline {
-        background: rgba(255, 255, 255, 0.92);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1.5px solid var(--rose-primary);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      }
-
-      .section-title-serif {
-        font-size: 2.2rem;
-      }
-
-      /* CATÁLOGO DOBLE COLUMNA (2 COLUMNAS) EN MÓVIL PARA SERVICIOS Y EQUIPO */
-      .services-grid-6 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .service-card-luxe {
-        border-radius: var(--radius-sm);
-      }
-
-      .service-img-wrapper {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        height: auto;
-      }
-
-      .service-img-wrapper img {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-      }
-
-      /* Limpieza estética: Se eliminan medallas e insignias flotantes entre foto y texto */
-      .service-floating-badge {
-        display: none !important;
-      }
-
-      .service-body {
-        padding: 12px 8px 14px;
-        text-align: center;
-      }
-
-      .service-name {
-        font-size: 0.88rem;
-        font-weight: 800;
-        line-height: 1.25;
-        margin-bottom: 3px;
-        min-height: 2.3em;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-
-      .service-time {
-        font-size: 0.72rem;
-        margin-bottom: 6px;
-      }
-
-      .service-price {
-        font-size: 1.15rem;
-        margin-top: auto;
-        margin-bottom: 8px;
-      }
-
-      .btn-card-book {
-        padding: 8px 6px;
-        font-size: 0.7rem;
-        gap: 4px;
-        letter-spacing: 0.3px;
-        white-space: nowrap;
-      }
-
-      /* SECCIÓN EQUIPO / COLABORADORES DOBLE COLUMNA */
-      .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        margin-top: 25px;
-      }
-
-      .team-card {
-        padding: 16px 8px 14px;
-        border-radius: var(--radius-sm);
-        text-align: center;
-      }
-
-      .team-photo-box {
-        width: 100%;
-        max-width: 96px;
-        aspect-ratio: 1 / 1;
-        height: auto;
-        margin: 0 auto 10px;
-      }
-
-      .team-avatar {
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
-      .team-badge {
-        font-size: 8px;
-        padding: 2px 7px;
-      }
-
-      .team-name {
-        font-size: 0.98rem;
-        line-height: 1.2;
-        margin-bottom: 3px;
-      }
-
-      .team-role {
-        font-size: 0.72rem;
-        min-height: 2.6em;
-        line-height: 1.25;
-        margin-bottom: 6px;
-      }
-
-      .team-rating {
-        font-size: 0.74rem;
-        margin-bottom: 10px;
-      }
-
-      .btn-team-book {
-        padding: 7px 8px;
-        font-size: 0.7rem;
-        width: 100%;
-        text-align: center;
-        white-space: nowrap;
-      }
-
-      .benefits-grid, .footer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .metrics-rose-box {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      /* OPTIMIZACIÓN RESPONSIVE DE LA SECCIÓN DE MAPA */
-      .map-section {
-        padding: 60px 0;
-      }
-      .map-showcase-card {
-        grid-template-columns: 1fr;
-        border-radius: var(--radius-md);
-      }
-      .map-info-panel {
-        padding: 30px 20px;
-      }
-      .map-title {
-        font-size: 2.2rem;
-      }
-      .map-actions {
-        flex-direction: column;
-        width: 100%;
-        gap: 12px;
-      }
-      .map-actions .btn-luxe-rose,
-      .map-actions .btn-luxe-outline {
-        width: 100%;
-        justify-content: center;
-        text-align: center;
-      }
-      .floating-whatsapp {
-        display: none;
-      }
-
-      body {
-        padding-bottom: 70px;
-      }
-
-      /* Barra de Acciones Flotante Inferior (Mobile Action Dock) */
-      .mobile-action-dock {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 64px;
-        background: rgba(30, 20, 24, 0.97);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1.35fr;
-        align-items: center;
-        z-index: 9999;
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
-      }
-
-      .dock-btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color: #cccccc;
-        font-size: 0.68rem;
-        font-weight: 600;
-        gap: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        touch-action: manipulation;
-        transition: all 0.3s ease;
-      }
-
-      .dock-btn i {
-        font-size: 1.15rem;
-      }
-
-      .dock-btn:active, .dock-btn:hover {
-        color: #ffffff;
-      }
-
-      .dock-btn-call i {
-        color: #60a5fa;
-      }
-
-      .dock-btn-map i {
-        color: #f87171;
-      }
-
-      .dock-btn-wa i {
-        color: #25d366;
-        font-size: 1.3rem;
-      }
-
-      .dock-btn-book {
-        background: var(--rose-primary);
-        color: #ffffff !important;
-        border-radius: var(--radius-sm);
-        margin: 6px 8px;
-        height: calc(100% - 12px);
-        font-weight: 700;
-      }
-
-      .dock-btn-book i {
-        color: #ffffff;
-      }
-
-      .dock-btn-book:active {
-        background: var(--rose-primary-hover);
-        transform: scale(0.96);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .services-grid-6,
-      .team-grid {
-        gap: 10px;
-      }
-      .service-body,
-      .team-card {
-        padding: 10px 6px 12px;
-      }
-      .service-name {
-        font-size: 0.82rem;
-      }
-      .service-price {
-        font-size: 1.05rem;
-      }
-      .team-name {
-        font-size: 0.92rem;
-      }
-      .btn-card-book,
-      .btn-team-book {
-        font-size: 0.68rem;
-        padding: 7px 4px;
-      }
-    }
-
-    .mobile-action-dock {
-      display: none;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ENCABEZADO STICKY INTELIGENTE (Auto-hide al scrollear hacia abajo, reaparece hacia arriba) -->
-  <div class="header-sticky-wrapper">
-    <header class="site-header">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="#inicio" class="logo-brand">
-            <div class="logo-lotus-box">
-              <i class="fa-solid fa-spa"></i>
-            </div>
-            <div class="logo-text-box">
-              <h2>Sandra Color´s</h2>
-              <span>Salon & Hair Studio</span>
-            </div>
-          </a>
+  <!-- SMART HEADER -->
+  <header class="header-sticky-wrapper" id="smartHeader">
+    <div class="container">
+      <nav class="header-nav">
+        <a href="#inicio" class="brand-logo">
+          <span class="brand-name">Sandra <span>Color´s</span></span>
+          <span class="brand-subtitle">Hair Salon & Color Studio</span>
+        </a>
 
-          <!-- NAVEGACIÓN (4 SECCIONES ESTRICTAS) -->
-          <ul class="nav-links">
-            <li><a href="#inicio" class="active">Inicio</a></li>
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#profesionales" class="nav-link">Estilistas</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        </ul>
+
+        <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20una%20cita." target="_blank" class="btn btn-primary btn-header-cta">
+          Agendar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO FULL-WIDTH BLEED -->
+  <section class="hero-fullwidth-section" id="inicio">
+    <div class="hero-bg-cover">
+      <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1400&q=85" alt="Sandra Colors Salón de Belleza Apartadó" class="hero-bg-img">
+    </div>
+    <div class="hero-bg-overlay"></div>
+
+    <div class="container hero-container">
+      <div class="hero-text-block">
+        <span class="hero-eyebrow">Cuidado Capilar Personalizado en Apartadó</span>
+        <h1 class="hero-title">
+          Donde tu Estilo
+          <span class="hero-script">Abraza tu Confianza.</span>
+        </h1>
+        <p class="hero-desc">
+          Especialistas en colorimetría, balayage, alisados orgánicos y tratamientos capilares. Diseñamos el look perfecto para resaltar tu belleza natural.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20una%20cita." target="_blank" class="btn btn-primary">
+            <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+          </a>
+          <a href="#servicios" class="btn btn-secondary">
+            Explorar Servicios <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE PILARES -->
+  <section class="pillars-bar-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon-box"><i class="fa-solid fa-scissors"></i></div>
+          <div class="pillar-content">
+            <h4>Estilistas Expertas</h4>
+            <p>Certificadas en color y corte</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon-box"><i class="fa-solid fa-leaf"></i></div>
+          <div class="pillar-content">
+            <h4>Productos Prémium</h4>
+            <p>Cosmética capilar sin daño</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon-box"><i class="fa-solid fa-chair"></i></div>
+          <div class="pillar-content">
+            <h4>Experiencia de Lujo</h4>
+            <p>Espacio cómodo y relajante</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon-box"><i class="fa-solid fa-star"></i></div>
+          <div class="pillar-content">
+            <h4>Satisfacción Total</h4>
+            <p>Resultados a tu medida</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="pillar-content">
+            <h4>Higiene & Seguridad</h4>
+            <p>Protocolos esterilizados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE SERVICIOS -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Carta de Servicios</span>
+        <h2 class="section-title">Nuestros Servicios Exclusivos</h2>
+        <div class="section-divider">
+          <span class="section-divider-diamond"></span>
+        </div>
+        <p class="section-desc">
+          Técnicas avanzadas y productos de la más alta calidad para cuidar y transformar tu cabello en Apartadó.
+        </p>
+      </div>
+
+      <div class="services-grid-6">
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80" alt="Corte & Cepillado de Estilo" class="service-img" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Corte & Cepillado de Estilo</h3>
+            <div class="service-badges-row">
+              <span class="service-badge-pill pill-duration">⏱️ 45 Mins</span>
+              <span class="service-badge-pill pill-price">💰 $35.000 COP</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Corte%20y%20Cepillado." target="_blank" class="btn-card-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80" alt="Colorimetría & Balayage" class="service-img" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Colorimetría & Balayage</h3>
+            <div class="service-badges-row">
+              <span class="service-badge-pill pill-duration">⏱️ 180 Mins</span>
+              <span class="service-badge-pill pill-price">💰 $130.000 COP</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Colorimetr%C3%ADa%20y%20Balayage." target="_blank" class="btn-card-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Tratamientos & Botox Capilar" class="service-img" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Tratamientos & Botox Capilar</h3>
+            <div class="service-badges-row">
+              <span class="service-badge-pill pill-duration">⏱️ 75 Mins</span>
+              <span class="service-badge-pill pill-price">💰 $75.000 COP</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Tratamiento%20y%20Botox%20Capilar." target="_blank" class="btn-card-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Peinados & Styling de Eventos" class="service-img" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Peinados & Styling de Eventos</h3>
+            <div class="service-badges-row">
+              <span class="service-badge-pill pill-duration">⏱️ 60 Mins</span>
+              <span class="service-badge-pill pill-price">💰 $60.000 COP</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20un%20Peinado%20para%20Evento." target="_blank" class="btn-card-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Alisados Orgánicos & Keratina" class="service-img" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Alisados Orgánicos & Keratina</h3>
+            <div class="service-badges-row">
+              <span class="service-badge-pill pill-duration">⏱️ 150 Mins</span>
+              <span class="service-badge-pill pill-price">💰 $160.000 COP</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20Alisado%20Org%C3%A1nico%20o%20Keratina." target="_blank" class="btn-card-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="Extensiones & Mechas" class="service-img" loading="lazy">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">Extensiones & Mechas</h3>
+            <div class="service-badges-row">
+              <span class="service-badge-pill pill-duration">⏱️ 120 Mins</span>
+              <span class="service-badge-pill pill-price">💰 $110.000 COP</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20Extensiones%20o%20Mechas." target="_blank" class="btn-card-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS & PROFESIONALES -->
+  <section class="about-section" id="nosotros">
+    <div class="container">
+      <div class="experience-layout">
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85" alt="Ambiente de Salón Sandra Colors Apartadó" class="salon-showcase-img" loading="lazy">
+          <div class="experience-floating-badge">
+            <div class="floating-badge-icon"><i class="fa-solid fa-crown"></i></div>
+            <div class="floating-badge-text">
+              <h5>Atención Prémium</h5>
+              <p>Experiencia de salón exclusiva</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-col">
+          <span class="section-eyebrow">Sobre Sandra Color´s</span>
+          <h2 class="section-title">Pasión por la Belleza y la Salud de tu Cabello</h2>
+          <p>
+            En Sandra Color´s combinamos el arte de la colorimetría de vanguardia con tratamientos restauradores de alta gama. Nuestro compromiso es brindarte una asesoría personalizada en un ambiente acogedor, asegurando que cada visita transforme tu look y fortalezca la salud de tu fibra capilar.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-item">
+              <div class="metric-value">+8</div>
+              <div class="metric-label">Años de Exp.</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">+2.500</div>
+              <div class="metric-label">Clientas Felices</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">100%</div>
+              <div class="metric-label">Salud Capilar</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-value">4.9 ★</div>
+              <div class="metric-label">En Urabá</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20y%20agendar." target="_blank" class="btn btn-primary">
+            <i class="fa-brands fa-whatsapp"></i> Hablar con una Asesora
+          </a>
+        </div>
+      </div>
+
+      <!-- EQUIPO PROFESIONAL -->
+      <div id="profesionales">
+        <div class="team-block-header">
+          <span class="section-eyebrow">Equipo de Expertas</span>
+          <h2 class="section-title">Nuestras Especialistas</h2>
+          <div class="section-divider">
+            <span class="section-divider-diamond"></span>
+          </div>
+          <p class="section-desc">
+            Manos profesionales y apasionadas listas para darte la mejor atención.
+          </p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="Sandra Gómez" class="team-avatar" loading="lazy">
+              <span class="team-badge">Master</span>
+            </div>
+            <h3 class="team-name">Sandra Gómez</h3>
+            <p class="team-role">Directora & Master Colorista</p>
+            <div class="team-stars">
+              ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20Master%20Sandra%20G%C3%B3mez." target="_blank" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Valentina Ramos" class="team-avatar" loading="lazy">
+              <span class="team-badge">Pro</span>
+            </div>
+            <h3 class="team-name">Valentina Ramos</h3>
+            <p class="team-role">Especialista en Alisados</p>
+            <div class="team-stars">
+              ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Valentina%20Ramos." target="_blank" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Camila Osorio" class="team-avatar" loading="lazy">
+              <span class="team-badge">Senior</span>
+            </div>
+            <h3 class="team-name">Camila Osorio</h3>
+            <p class="team-role">Terapeuta Capilar & Color</p>
+            <div class="team-stars">
+              ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Camila%20Osorio." target="_blank" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80" alt="Daniela Morales" class="team-avatar" loading="lazy">
+              <span class="team-badge">Stylist</span>
+            </div>
+            <h3 class="team-name">Daniela Morales</h3>
+            <p class="team-role">Estilista & Peinados Novias</p>
+            <div class="team-stars">
+              ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20estilista%20Daniela%20Morales." target="_blank" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER VALORACIÓN -->
+  <section class="promo-banner-section">
+    <div class="container">
+      <div class="promo-banner-card">
+        <div class="promo-text-content">
+          <span class="section-eyebrow">Diagnóstico Personalizado</span>
+          <h3>¿Lista para renovar tu imagen?</h3>
+          <p>
+            Recibe una valoración completa de tu fibra capilar y asesoría experta en colorimetría para elegir el tono y tratamiento ideal.
+          </p>
+        </div>
+        <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20solicitar%20un%20diagn%C3%B3stico%20capilar%20personalizado." target="_blank" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Solicitar Valoración
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN & CONTACTO -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Encuéntranos</span>
+        <h2 class="section-title">Visita Nuestro Salón</h2>
+        <div class="section-divider">
+          <span class="section-divider-diamond"></span>
+        </div>
+        <p class="section-desc">
+          Ubicados en un sector céntrico y cómodo de Apartadó para tu máxima tranquilidad.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-info-card">
+          <div class="location-item">
+            <div class="location-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="location-detail">
+              <h4>Dirección Física</h4>
+              <p>Cra. 104 #103-61, Apartadó, Antioquia, Colombia</p>
+            </div>
+          </div>
+
+          <div class="location-item">
+            <div class="location-icon-box"><i class="fa-solid fa-clock"></i></div>
+            <div class="location-detail">
+              <h4>Horario de Atención</h4>
+              <p>Lunes a Sábado: 8:00 AM - 7:30 PM<br>Domingos & Festivos: Con Cita Previa</p>
+            </div>
+          </div>
+
+          <div class="location-item">
+            <div class="location-icon-box"><i class="fa-solid fa-phone"></i></div>
+            <div class="location-detail">
+              <h4>Teléfono & WhatsApp</h4>
+              <p>(+57) 312 875 5269</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 24px;">
+            <a href="https://www.google.com/maps/place/Sandra+Color%C2%B4s/@7.8877515,-76.6513548,15z" target="_blank" class="btn btn-dark" style="width: 100%;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar en Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="map-embed-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0792348575024!2d-76.65354342417757!3d7.887751592135002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e500deecda4468f%3A0xe96cf89d4d5a9d80!2sSandra%20Color%C2%B4s!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="#inicio" class="brand-logo">
+            <span class="brand-name">Sandra <span>Color´s</span></span>
+            <span class="brand-subtitle">Hair Salon & Color Studio</span>
+          </a>
+          <p>
+            Salón de belleza especializado en colorimetría, balayage y cuidado capilar en Apartadó. Resaltamos tu estilo con acabados profesionales.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/Sandra-Colors-104523494432709" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/573128755269" target="_blank" class="footer-social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#profesionales">Nuestras Estilistas</a></li>
             <li><a href="#ubicacion">Ubicación</a></li>
           </ul>
+        </div>
 
-          <div>
-            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-luxe-rose btn-header-cta">
+        <div class="footer-col">
+          <h4 class="footer-heading">Horarios</h4>
+          <ul class="footer-links-list">
+            <li>Lunes a Sábado</li>
+            <li style="color: var(--accent-light); font-weight: 600;">8:00 AM - 7:30 PM</li>
+            <li style="margin-top: 8px;">Domingos & Festivos</li>
+            <li style="color: var(--accent-light); font-weight: 600;">Cita Previa</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-booking-card">
+            <h5>Agenda tu Cita</h5>
+            <p>Atención personalizada y sin largas esperas por WhatsApp.</p>
+            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20una%20cita." target="_blank" class="btn btn-primary" style="width: 100%;">
               Agendar
             </a>
           </div>
         </div>
       </div>
-    </header>
-  </div>
 
-  <!-- 1. SECCIÓN: INICIO / HERO FULL-WIDTH (#inicio) -->
-  <main>
-    <section class="hero-fullwidth-section" id="inicio">
-      
-      <!-- IMAGEN DE FONDO A PANTALLA COMPLETA & MÁSCARA RUBOR ROSA -->
-      <div class="hero-bg-cover">
-        <img src="./modelo1.webp" alt="Sandra Color´s Belleza & Estilismo Apartadó" class="hero-bg-img" />
-        <div class="hero-bg-overlay"></div>
-      </div>
-
-      <!-- BADGE FLOTANTE 5+ AÑOS DE EXCELENCIA -->
-      <div class="hero-floating-badge">
-        <strong>5+</strong>
-        <span>Años de<br />Excelencia</span>
-        <div class="stars">★★★★★</div>
-      </div>
-
-      <!-- CONTENIDO PRINCIPAL -->
-      <div class="container hero-content-wrapper">
-        <div class="hero-text-block">
-          <h1 class="hero-main-title">
-            Donde la Belleza <br />
-            <span class="accent-rose">Se Encuentra con el Lujo</span>
-          </h1>
-          <p class="hero-subtitle">
-            Disfruta del verdadero lujo. Revela tu mejor versión con procedimientos exclusivos de colorimetría y cuidado capilar.
-          </p>
-          <span class="hero-script-tag">creado especialmente para ti.</span>
-
-          <div class="hero-actions">
-            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-luxe-rose">
-              <i class="fa-regular fa-calendar-check"></i> Agendar Cita
-            </a>
-            <a href="#servicios" class="btn-luxe-outline">
-              Explorar Servicios <i class="fa-solid fa-arrow-right-long"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- FRANJA DE 4 SELLOS LUXE ROSE -->
-    <section class="benefits-bar-pink">
-      <div class="container">
-        <div class="benefits-grid">
-          
-          <div class="benefit-item">
-            <div class="benefit-icon-box">
-              <i class="fa-solid fa-gem"></i>
-            </div>
-            <div class="benefit-text">
-              <h4>Calidad Premium</h4>
-              <p>Cosmética francesa y de alta gama</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon-box">
-              <i class="fa-solid fa-user-tie"></i>
-            </div>
-            <div class="benefit-text">
-              <h4>Estilistas Expertas</h4>
-              <p>Profesionales certificadas master</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon-box">
-              <i class="fa-solid fa-shield-heart"></i>
-            </div>
-            <div class="benefit-text">
-              <h4>Higiene & Seguridad</h4>
-              <p>Espacios esterilizados y confortables</p>
-            </div>
-          </div>
-
-          <div class="benefit-item">
-            <div class="benefit-icon-box">
-              <i class="fa-solid fa-heart"></i>
-            </div>
-            <div class="benefit-text">
-              <h4>100% Satisfacción</h4>
-              <p>Resultados que superan expectativas</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. SECCIÓN: SERVICIOS (#servicios) -->
-    <section class="services-section" id="servicios">
-      <div class="container">
-        
-        <div class="section-header-center">
-          <span class="eyebrow-rose">NUESTROS SERVICIOS</span>
-          <h2 class="section-title-serif">Servicios Populares</h2>
-          <p class="section-desc">De pies a cabeza, ofrecemos todo lo necesario para resaltar tu brillo natural.</p>
-        </div>
-
-        <div class="services-grid-6">
-          
-          <!-- Servicio 1 -->
-          <article class="service-card-luxe">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Corte & Styling en Sandra Color's" />
-              <div class="service-floating-badge"><i class="fa-solid fa-scissors"></i></div>
-            </div>
-            <div class="service-body">
-              <h3 class="service-name">Corte & Styling</h3>
-              <span class="service-time">60 mins</span>
-              <span class="service-price">$45.000</span>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Corte%20%26%20Styling." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Servicio 2 -->
-          <article class="service-card-luxe">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Faciales & Glow en Sandra Color's" />
-              <div class="service-floating-badge"><i class="fa-solid fa-sparkles"></i></div>
-            </div>
-            <div class="service-body">
-              <h3 class="service-name">Faciales & Glow</h3>
-              <span class="service-time">60 mins</span>
-              <span class="service-price">$65.000</span>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Faciales%20%26%20Glow." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Servicio 3 -->
-          <article class="service-card-luxe">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Maquillaje & Novias en Sandra Color's" />
-              <div class="service-floating-badge"><i class="fa-solid fa-ring"></i></div>
-            </div>
-            <div class="service-body">
-              <h3 class="service-name">Maquillaje & Novias</h3>
-              <span class="service-time">90 mins</span>
-              <span class="service-price">$120.000</span>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Maquillaje%20%26%20Novias." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Servicio 4 -->
-          <article class="service-card-luxe">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&q=80" alt="Nail Art & Spa en Sandra Color's" />
-              <div class="service-floating-badge"><i class="fa-solid fa-hand-sparkles"></i></div>
-            </div>
-            <div class="service-body">
-              <h3 class="service-name">Nail Art & Spa</h3>
-              <span class="service-time">60 mins</span>
-              <span class="service-price">$55.000</span>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Nail%20Art%20%26%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Servicio 5 -->
-          <article class="service-card-luxe">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Spa Corporal en Sandra Color's" />
-              <div class="service-floating-badge"><i class="fa-solid fa-spa"></i></div>
-            </div>
-            <div class="service-body">
-              <h3 class="service-name">Spa Corporal</h3>
-              <span class="service-time">60 mins</span>
-              <span class="service-price">$75.000</span>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Spa%20Corporal." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-          <!-- Servicio 6 -->
-          <article class="service-card-luxe">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Balayage & Colorimetría en Sandra Color's" />
-              <div class="service-floating-badge"><i class="fa-solid fa-palette"></i></div>
-            </div>
-            <div class="service-body">
-              <h3 class="service-name">Balayage & Color</h3>
-              <span class="service-time">120 mins</span>
-              <span class="service-price">$150.000</span>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20el%20servicio%20de%20Balayage%20%26%20Color." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 3. SECCIÓN: NOSOTROS / EXPERIENCIA & ESPECIALISTAS (#nosotros) -->
-    <section class="about-experience-section" id="nosotros">
-      <div class="container">
-        
-        <!-- COMPOSICIÓN EDITORIAL DE SALÓN -->
-        <div class="experience-layout">
-          <div class="salon-image-showcase">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="Ambiente Sandra Color´s LUXE" />
-            <div class="experience-floating-badge">
-              <strong>LUXE</strong>
-              <span>Experiencia Rosa</span>
-            </div>
-          </div>
-
-          <div class="experience-text-content">
-            <span class="eyebrow-rose">SOBRE NOSOTROS</span>
-            <h3>Más que un Salón, <br /><span>Es una Experiencia</span></h3>
-            <p>
-              En Sandra Color´s creemos que la belleza es un arte. Nuestra misión es realzar lo mejor de ti con atención personalizada, técnicas avanzadas francesas y un servicio incomparable en el corazón de Apartadó.
-            </p>
-
-            <div class="metrics-rose-box">
-              <div class="metric-rose-item">
-                <strong>1000+</strong>
-                <span>Clientas</span>
-              </div>
-              <div class="metric-rose-item">
-                <strong>10+</strong>
-                <span>Especialistas</span>
-              </div>
-              <div class="metric-rose-item">
-                <strong>5+</strong>
-                <span>Años Exp.</span>
-              </div>
-              <div class="metric-rose-item">
-                <strong>98%</strong>
-                <span>Satisfacción</span>
-              </div>
-            </div>
-
-            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="btn-luxe-rose">
-              Conoce Nuestro Salón <i class="fa-solid fa-arrow-right-long"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- GRID DE ESPECIALISTAS MASTER -->
-        <div class="section-header-center" style="margin-top: 60px; margin-bottom: 30px;">
-          <span class="eyebrow-rose">NUESTRO EQUIPO</span>
-          <h3 class="section-title-serif" style="font-size: 2.6rem;">Especialistas <span class="text-rose">Certificadas</span></h3>
-        </div>
-
-        <div class="team-grid" id="equipo">
-          
-          <!-- Especialista 1 -->
-          <div class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="Sandra Gómez" class="team-avatar" />
-              <span class="team-badge">Master</span>
-            </div>
-            <div class="team-info">
-              <h4 class="team-name">Sandra Gómez</h4>
-              <span class="team-role">Directora & Especialista Balayage</span>
-              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20Master%20Sandra%20G%C3%B3mez." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar</a>
-            </div>
-          </div>
-
-          <!-- Especialista 2 -->
-          <div class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Valentina Ramos" class="team-avatar" />
-              <span class="team-badge">Pro</span>
-            </div>
-            <div class="team-info">
-              <h4 class="team-name">Valentina Ramos</h4>
-              <span class="team-role">Especialista en Alisados & Keratinas</span>
-              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Valentina%20Ramos." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar</a>
-            </div>
-          </div>
-
-          <!-- Especialista 3 -->
-          <div class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Camila Osorio" class="team-avatar" />
-              <span class="team-badge">Senior</span>
-            </div>
-            <div class="team-info">
-              <h4 class="team-name">Camila Osorio</h4>
-              <span class="team-role">Colorista & Terapeuta Capilar</span>
-              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Camila%20Osorio." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar</a>
-            </div>
-          </div>
-
-          <!-- Especialista 4 -->
-          <div class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80" alt="Daniela Morales" class="team-avatar" />
-              <span class="team-badge">Top Stylist</span>
-            </div>
-            <div class="team-info">
-              <h4 class="team-name">Daniela Morales</h4>
-              <span class="team-role">Estilista & Peinados de Novia</span>
-              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20estilista%20Daniela%20Morales." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 4. SECCIÓN: UBICACIÓN & GOOGLE MAPS (#ubicacion) -->
-    <section class="map-section" id="ubicacion">
-      <div class="container">
-        
-        <div class="map-showcase-card">
-          <div class="map-info-panel">
-            <span class="eyebrow-rose">SEDE PRINCIPAL</span>
-            <h2 class="map-title">Visítanos en Apartadó</h2>
-            
-            <div class="map-location-item">
-              <i class="fa-solid fa-map-pin"></i>
-              <div>
-                <strong>Dirección:</strong>
-                <p>Cra. 104 #103-61, Apartadó, Antioquia</p>
-              </div>
-            </div>
-
-            <div class="map-location-item">
-              <i class="fa-solid fa-clock"></i>
-              <div>
-                <strong>Horario de Atención:</strong>
-                <p>Lunes a Sábado: 8:00 AM - 7:30 PM<br />Domingos & Festivos: Citas Especiales 9:00 AM - 3:00 PM</p>
-              </div>
-            </div>
-
-            <div class="map-actions">
-              <a href="https://www.google.com/maps/place/Sandra+Color%C2%B4s/@7.8877515,-76.6513548,15z" target="_blank" rel="noopener noreferrer" class="btn-luxe-rose">
-                <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar (Google Maps)
-              </a>
-              <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20necesito%20indicaciones%20para%20llegar%20al%20sal%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-luxe-outline">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="map-frame-wrapper">
-            <iframe 
-              src="https://maps.google.com/maps?q=Sandra+Color%27s,+Cra.+104+%23103-61,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación de Sandra Color´s en Apartadó">
-            </iframe>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- BANNER CTA PRE-FOOTER OFERTA ESPECIAL -->
-    <section class="cta-banner-section">
-      <div class="container">
-        <div class="cta-banner-content">
-          <span class="eyebrow-rose" style="font-size: 0.85rem;">OFERTA EXCLUSIVA</span>
-          <h2>Obtén 20% OFF en Tu Primera Visita</h2>
-          <p>Agenda tu cita hoy mismo y vive la experiencia Sandra Color´s en Apartadó.</p>
-          <div class="cta-buttons-wrapper">
-            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20reclamar%20mi%20descuento%20del%2020%25%20y%20agendar%20cita." target="_blank" rel="noopener noreferrer" class="btn-luxe-rose">
-              <i class="fa-regular fa-calendar-check"></i> Reclamar Oferta Ahora
-            </a>
-            <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20consultar%20por%20WhatsApp." target="_blank" rel="noopener noreferrer" class="btn-luxe-outline">
-              <i class="fa-brands fa-whatsapp"></i> Chatear por WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER EDITORIAL LUXE ROSE -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        
-        <div class="footer-brand">
-          <div class="logo-brand" style="color: #ffffff; margin-bottom: 6px;">
-            <div class="logo-lotus-box" style="background: rgba(214, 51, 108, 0.2); border-color: var(--rose-primary);">
-              <i class="fa-solid fa-spa" style="color: var(--rose-primary);"></i>
-            </div>
-            <div class="logo-text-box">
-              <h2 style="color: #ffffff;">Sandra Color´s</h2>
-              <span style="color: #fce7eb;">Salon & Hair Studio</span>
-            </div>
-          </div>
-          <p>
-            Donde la belleza se encuentra con el lujo. Técnicas francesas de colorimetría, balayage y alisados orgánicos en Apartadó.
-          </p>
-          <div class="footer-social-links">
-            <a href="https://www.facebook.com/Sandra-Colors-104523494432709" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://wa.me/573128755269" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Navegación</h4>
-          <ul class="footer-links-list">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-col-title">Contacto</h4>
-          <div class="footer-contact-info">
-            <p><i class="fa-solid fa-phone"></i> (+57) 312 875 5269</p>
-            <p><i class="fa-solid fa-map-pin"></i> Cra. 104 #103-61, Apartadó</p>
-            <p><i class="fa-regular fa-clock"></i> Lun - Sáb: 8:00 AM - 7:30 PM</p>
-          </div>
-        </div>
-
-        <div class="footer-newsletter-card">
-          <h4 class="footer-col-title">Reserva tu Cita</h4>
-          <p>Atención personalizada con nuestras especialistas master.</p>
-          <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20mi%20cita%20con%20una%20especialista." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
-            <i class="fa-regular fa-calendar-check"></i> Agendar
-          </a>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom-bar">
-        <p>© 2026 Sandra Color´s. Todos los derechos reservados. Belleza y distinción en Apartadó.</p>
+      <div class="footer-bottom">
+        <p>© 2026 Sandra Color´s. Todos los derechos reservados. Apartadó, Antioquia.</p>
+        <p>Optimizado para SEO Local & Conversión Directa</p>
       </div>
     </div>
   </footer>
 
-  <!-- BOTÓN FLOTANTE DE WHATSAPP (Desktop) -->
-  <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20consultar%20por%20un%20servicio%20y%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+  <!-- BOTÓN WHATSAPP -->
+  <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- BARRA DE ACCIONES RÁPIDAS MÓVIL (Sticky Bottom Action Dock) -->
-  <nav class="mobile-action-dock" aria-label="Acciones rápidas en móvil">
-    <a href="tel:+573128755269" class="dock-btn dock-btn-call" aria-label="Llamar a Sandra Colors">
-      <i class="fa-solid fa-phone"></i>
-      <span>Llamar</span>
-    </a>
-    <a href="#ubicacion" class="dock-btn dock-btn-map" aria-label="Ver mapa y cómo llegar">
-      <i class="fa-solid fa-location-dot"></i>
-      <span>Ubicación</span>
-    </a>
-    <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20consultar%20por%20un%20servicio." target="_blank" rel="noopener noreferrer" class="dock-btn dock-btn-wa" aria-label="Chat por WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
-    <a href="#servicios" class="dock-btn dock-btn-book" aria-label="Ver catálogo y agendar">
-      <i class="fa-solid fa-calendar-check"></i>
-      <span>Agendar</span>
-    </a>
-  </nav>
-
-  <!-- SCRIPT INTERACTIVO: SMART NAVBAR (Hide on scroll down, Show on scroll up) -->
+  <!-- SCRIPT SMART HEADER -->
   <script>
-    (function() {
-      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-      const headerWrapper = document.querySelector('.header-sticky-wrapper');
-      
-      if (!headerWrapper) return;
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById('smartHeader');
 
-      window.addEventListener('scroll', () => {
-        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-        
-        // Si el usuario scrollea hacia abajo más de 70px, ocultar
-        if (currentScrollY > 70 && currentScrollY > lastScrollY) {
-          headerWrapper.classList.add('header-hidden');
-        } 
-        // Si el usuario scrollea hacia arriba, mostrar
-        else if (currentScrollY < lastScrollY) {
-          headerWrapper.classList.remove('header-hidden');
-        }
-        
-        // Si vuelve a la cima, asegurar visibilidad
-        if (currentScrollY <= 10) {
-          headerWrapper.classList.remove('header-hidden');
-        }
-        
-        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-      }, { passive: true });
-    })();
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > 100 && currentScrollY > lastScrollY) {
+        header.classList.add('hide');
+      } else {
+        header.classList.remove('hide');
+      }
+
+      lastScrollY = currentScrollY;
+    }, { passive: true });
   </script>
 </body>
 </html>

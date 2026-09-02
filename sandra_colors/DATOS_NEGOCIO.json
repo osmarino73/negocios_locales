@@ -1,9 +1,10 @@
 {
   "negocio": {
     "nombre": "Sandra Color´s",
-    "rubro": "Centro de Estética & Salón de Belleza Especializado",
+    "subtitulo": "Hair Salon & Color Studio",
+    "rubro": "Salón de Belleza Especializado & Colorimetría Capilar",
     "categoria": "BeautySalon",
-    "eslogan": "Realza tu belleza con expertos en colorimetría, balayage, alisados y tratamientos capilares de alta gama en Apartadó",
+    "eslogan": "Donde tu estilo abraza tu confianza. Especialistas en colorimetría, balayage, alisados y salud capilar en Apartadó.",
     "calificacion": "4.9",
     "resenas": "48",
     "contacto": {
@@ -19,51 +20,96 @@
       "departamento_pais": "Antioquia, Colombia",
       "google_maps_url": "https://www.google.com/maps/place/Sandra+Color%C2%B4s/@7.8877515,-76.6513548,15z"
     },
-    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:30 PM | Domingos & Festivos: Citas Especiales 9:00 AM - 3:00 PM",
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:30 PM | Domingos & Festivos: Con Cita Previa",
     "sitio_web": "https://www.facebook.com/Sandra-Colors-104523494432709",
+    "pilares": [
+      {
+        "titulo": "Estilistas Expertas",
+        "desc": "Profesionales certificadas en color y corte.",
+        "icono": "fa-scissors"
+      },
+      {
+        "titulo": "Productos Prémium",
+        "desc": "Cosmética capilar de alta gama sin daño.",
+        "icono": "fa-leaf"
+      },
+      {
+        "titulo": "Experiencia de Lujo",
+        "desc": "Espacio relajante, cómodo y exclusivo.",
+        "icono": "fa-chair"
+      },
+      {
+        "titulo": "Satisfacción Total",
+        "desc": "Resultados garantizados a tu gusto.",
+        "icono": "fa-star"
+      },
+      {
+        "titulo": "Higiene & Seguridad",
+        "desc": "Herramientas 100% esterilizadas.",
+        "icono": "fa-shield-halved"
+      }
+    ],
     "servicios": [
       {
-        "id": "colorimetria-balayage",
-        "nombre": "Colorimetría & Balayage de Autor",
-        "precio": "Desde $120.000",
-        "desc": "Técnicas modernas de degradé, mechas babylights, corrección de color y matices personalizados para brillo radiante.",
-        "icono": "fa-wand-magic-sparkles",
-        "numero": "01",
-        "img": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        "id": "alisados-terapia",
-        "nombre": "Alisados Orgánicos & Keratina Silk",
-        "precio": "Desde $150.000",
-        "desc": "Tratamiento intensivo libre de formol que restaura la fibra capilar, elimina el frizz y aporta liso espejo duradero.",
-        "icono": "fa-sparkles",
-        "numero": "02",
-        "img": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        "id": "peinados-styling",
-        "nombre": "Peinados Glamour & Styling para Eventos",
-        "precio": "Desde $60.000",
-        "desc": "Ondas de agua, recogidos de gala, peinados para novias y quinceañeras con fijación flexible y acabado premium.",
+        "id": "corte-diseno",
+        "nombre": "Corte & Cepillado de Estilo",
+        "precio": "$35.000",
+        "duracion": "45 min",
+        "desc": "Cortes personalizados según tu tipo de rostro y textura capilar, con lavado hidratante y finalizado pulido.",
         "icono": "fa-scissors",
-        "numero": "03",
-        "img": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+        "img": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=80"
       },
       {
-        "id": "spa-capilar-lavado",
-        "nombre": "Spa Capilar & Hidro-Lavado Detox",
-        "precio": "Desde $45.000",
-        "desc": "Limpieza profunda con exfoliación de cuero cabelludo, masaje craneal relajante y mascarilla nutritiva de argán.",
-        "icono": "fa-shower",
-        "numero": "04",
-        "img": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+        "id": "colorimetria-balayage",
+        "nombre": "Colorimetría & Balayage",
+        "precio": "$130.000",
+        "duracion": "180 min",
+        "desc": "Degradados iluminados, babylights, corrección de color y matices personalizados para un brillo radiante.",
+        "icono": "fa-wand-magic-sparkles",
+        "img": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "terapia-repolarizacion",
+        "nombre": "Tratamientos & Botox Capilar",
+        "precio": "$75.000",
+        "duracion": "75 min",
+        "desc": "Nutrición profunda y sellado de cutícula para cabellos maltratados o secos, devolviendo elasticidad y suavidad.",
+        "icono": "fa-droplet",
+        "img": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "peinados-eventos",
+        "nombre": "Peinados & Styling de Eventos",
+        "precio": "$60.000",
+        "duracion": "60 min",
+        "desc": "Ondas suaves, recogidos elegantes y peinados para novias, graduaciones o fiestas con fijación duradera.",
+        "icono": "fa-sparkles",
+        "img": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "alisados-keratina",
+        "nombre": "Alisados Orgánicos & Keratina",
+        "precio": "$160.000",
+        "duracion": "150 min",
+        "desc": "Fórmula libre de formol que elimina el frizz, alinea la fibra y deja un liso brillante y sedoso por meses.",
+        "icono": "fa-water",
+        "img": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": "extensiones-iluminacion",
+        "nombre": "Extensiones & Mechas",
+        "precio": "$110.000",
+        "duracion": "120 min",
+        "desc": "Aplicación profesional de extensiones para mayor volumen y longitud con integración 100% natural.",
+        "icono": "fa-user-check",
+        "img": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80"
       }
     ],
     "equipo": [
       {
         "id": 1,
         "nombre": "Sandra Gómez",
-        "cargo": "Directora & Especialista Balayage",
+        "cargo": "Directora & Master Colorista",
         "rango": "Master",
         "calificacion": "5.0",
         "foto_url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80",
@@ -90,18 +136,18 @@
       {
         "id": 4,
         "nombre": "Daniela Morales",
-        "cargo": "Estilista & Peinados de Novia / Eventos",
+        "cargo": "Estilista & Peinados de Novia",
         "rango": "Top Stylist",
         "calificacion": "5.0",
         "foto_url": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80",
         "link_reserva": "https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20estilista%20Daniela%20Morales."
       }
     ],
-    "valores_marca": [
-      { "titulo": "Profesionales Expertas", "desc": "Estilistas certificadas en técnicas de vanguardia.", "icono": "fa-gem" },
-      { "titulo": "Productos de Calidad", "desc": "Cosmética capilar sin químicos agresivos.", "icono": "fa-leaf" },
-      { "titulo": "Ambiente Limpio & Seguro", "desc": "Protocolos rigurosos de bioseguridad y confort.", "icono": "fa-heart" },
-      { "titulo": "100% Satisfacción", "desc": "Tu belleza y bienestar son nuestra prioridad.", "icono": "fa-star" }
+    "metricas": [
+      { "valor": "+8", "etiqueta": "Años de Experiencia" },
+      { "valor": "+2.500", "etiqueta": "Clientas Felices" },
+      { "valor": "100%", "etiqueta": "Cuidado Capilar" },
+      { "valor": "4.9 ★", "etiqueta": "Calificación Urabá" }
     ]
   }
 }

@@ -1,21 +1,21 @@
-# Guía del Proyecto para Inteligencia Artificial: Sandra Color´s
+# Contexto IA y Reglas Específicas: Sandra Color´s
 
-Bienvenido agente de IA. Este proyecto contiene la landing page exclusiva y optimizada para SEO Local de **Sandra Color´s** (Centro de Estética & Salón de Belleza) en **Apartadó, Antioquia, Colombia**.
+Este archivo mantiene la memoria y las reglas de diseño para la landing page de **Sandra Color´s**.
 
----
+## 📌 Identidad del Negocio
+- **Nombre**: Sandra Color´s (Hair Salon & Color Studio)
+- **Rubro**: Salón de Belleza Especializado & Colorimetría Capilar
+- **Ubicación**: Cra. 104 #103-61, Apartadó, Antioquia
+- **WhatsApp**: +57 312 875 5269
+- **Inspiración Visual Forense**: LUXEHAIR (Deep Obsidian / Espresso + Camel Rose Warm Nude + Crema Marfil)
 
-## 📁 Triángulo de Contexto IA
-
-1. **`DATOS_NEGOCIO.json`**: Fuente única de verdad con teléfonos, WhatsApp pre-configurado (`+57 312 875 5269`), dirección física en la Cra. 104 #103-61, enlace de Google Maps y catálogo de precios.
-2. **`FICHA_DISENO.md`**: Manual de marca con paletas Magenta (`#d92672`), Deep Navy (`#241442`) y Soft Pink (`#fbf2f6`), tipografías (`Outfit`, `Alex Brush` y `Plus Jakarta Sans`) y diseño de componentes.
-3. **`AGENTS.md`**: Este archivo de directrices para asegurar la continuidad del proyecto.
-4. **`index.html`**: Landing page 100% autónoma (*standalone*), con CSS embebido, imágenes optimizadas de alta gama de `BANCO_IMAGENES.json` y Schema.org JSON-LD para Apartadó.
-
----
-
-## 🏆 Reglas Obligatorias de Modificación
-
-- **Estilo Visual Fiel a la Referencia (Glow Beauty Salon)**: Mantener el titular a dos tonos (Navy + Magenta), el saludo en letra cursiva, las tarjetas numeradas con píldoras de precios y la tarjeta morada de agendamiento en el footer.
-- **Temporada y Vigencia 2027**: Mantener el año 2027 en banners y copyright.
-- **Cero Iconos Genéricos**: Mantener los contenedores geométricos estilizados con fondos tonales.
-- **Conversión Directa**: Botones enlazados al WhatsApp de Sandra Color´s con mensaje pre-cargado.
+## 📐 Reglas Estructurales Obligatorias
+1. **Hero Full-Width Bleed**: Titular editorial con script caligráfico (*Alex Brush*), imagen inmersiva a la derecha en desktop y centrada con `min-height: 720px !important` en móvil.
+2. **5 Pilares / Garantías**: Íconos de línea minimalistas con carrusel horizontal con scroll snap en móvil.
+3. **Catálogo de Servicios**: Grid de **6 columnas en desktop** y **2 columnas en móvil**, con foto 1:1, 2 píldoras esenciales (`⏱️ Duración` y `💰 Precio`) y botón de agendamiento 100% de ancho directo a WhatsApp.
+4. **Sobre Nosotros & Profesionales**:
+   - Layout de 2 columnas con fotografía real del salón/tocadores (`photo-1560066984-138dadb4c035`), badge VIP flotante y 4 métricas de autoridad.
+   - Grid de **4 columnas en desktop** y **2 columnas en móvil** para las 4 profesionales, avatares circulares 50% con marco de color de marca y badge oculto en móvil.
+5. **Ubicación & Contacto**: Tarjeta con datos y Google Maps embebido (`z=16`).
+6. **Smart Header**: Sin barra superior promocional, logotipo puramente tipográfico, menú oculto en móvil con botón conciso «Agendar».
+7. **Botón Flotante WhatsApp**: `bottom: calc(28px + env(safe-area-inset-bottom, 0px))`, sin `overflow: hidden`.
