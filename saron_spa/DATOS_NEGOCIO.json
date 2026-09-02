@@ -1,0 +1,129 @@
+{
+  "negocio": {
+    "nombre": "Sarón Spa Centro de Estética y Belleza",
+    "nombre_corto": "Sarón Spa",
+    "rubro": "Spa & Centro de Estética Médica",
+    "categoria": "spa",
+    "eslogan": "Realza tu belleza, descubre tu mejor versión en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 305 358 4269",
+      "telefono_raw": "+573053584269",
+      "whatsapp": {
+        "numero": "+573053584269",
+        "link": "https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20una%20cita%20o%20solicitar%20informaci%C3%B3n%20sobre%20sus%20tratamientos."
+      },
+      "instagram": "https://www.instagram.com/saron.spa/"
+    },
+    "ubicacion": {
+      "direccion": "Nueva Civilización vía al estadio, Cl. 104 #101 - 24, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Sar%C3%B3n+Spa+Centro+de+Est%C3%A9tica+y+Belleza/@7.8885294,-76.6497571,15z/data=!4m10!1m2!2m1!1sest%C3%A9tica+en+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500d0538e63eef:0xd69bd69b3b8e7fba!8m2!3d7.8885294!4d-76.6317327!15sCiFlc3TDqXRpY2EgZW4gQXBhcnRhZMOzLCBBbnRpb3F1aWFaIiIgZXN0w6l0aWNhIGVuIGFwYXJ0YWTDsyBhbnRpb3F1aWGSAQNzcGGaASRDaGREU1VoTk1HOW5TMFZKUTBGblRVTm5iVGQxT1RsQlJSQULgAQD6AQQIABBD!16s%2Fg%2F11rpx0tmzh",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Sar%C3%B3n+Spa+Centro+de+Est%C3%A9tica+y+Belleza,+Cl.+104+%23101+-+24,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa reserva y disponibilidad"
+    },
+    "sitio_web": "https://www.instagram.com/saron.spa/",
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Atención personalizada y agendamiento directo vía WhatsApp"
+    },
+    "servicios": [
+      {
+        "id": "limpieza-facial-profunda",
+        "nombre": "Hidrodermoabrasión & Limpieza Facial",
+        "descripcion": "Extracción profunda, vapor de ozono, peeling ultrasónico e hidratación con ácido hialurónico.",
+        "duracion": "60 Mins",
+        "badge": "Efecto Piel de Seda",
+        "precio": "$80.000 COP",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "rejuvenecimiento-facial",
+        "nombre": "Rejuvenecimiento Facial & Glow",
+        "descripcion": "Protocolo antiedad con radiofrecuencia, principios activos tensores y máscara de fototerapia LED.",
+        "duracion": "50 Mins",
+        "badge": "Luminosidad Inmediata",
+        "precio": "$95.000 COP",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "moldeo-corporal",
+        "nombre": "Moldeo Corporal & Drenaje Linfático",
+        "descripcion": "Cavitación y drenaje localizado para reducir medidas, tonificar y eliminar toxinas de forma no invasiva.",
+        "duracion": "60 Mins",
+        "badge": "Reducción & Firmeza",
+        "precio": "$90.000 COP",
+        "icono": "fa-person-dress",
+        "imagen": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "masaje-relajante",
+        "nombre": "Masaje Relajante con Piedras Volcánicas",
+        "descripcion": "Terapia descontracturante completa con aromaterapia, aceites esenciales calientes y piedras termales.",
+        "duracion": "60 Mins",
+        "badge": "Bienestar & Antiestrés",
+        "precio": "$75.000 COP",
+        "icono": "fa-hand-holding-heart",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "cejas-pestanas-hd",
+        "nombre": "Diseño de Cejas & Pestañas HD",
+        "descripcion": "Depilación hindú, micropigmentación temporal con henna y lifting de pestañas con keratina.",
+        "duracion": "45 Mins",
+        "badge": "Mirada de Impacto",
+        "precio": "$55.000 COP",
+        "icono": "fa-eye",
+        "imagen": "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "maderoterapia-anticelulitica",
+        "nombre": "Maderoterapia & Tratamiento Anticelulítico",
+        "descripcion": "Técnica milenaria con maderas terapéuticas para activar la microcirculación y reafirmar tejidos.",
+        "duracion": "50 Mins",
+        "badge": "Moldeo & Tonificación",
+        "precio": "$85.000 COP",
+        "icono": "fa-heart-pulse",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Dra. Sara Vélez",
+        "rol": "Directora & Especialista en Estética Médica",
+        "badge": "Directora",
+        "avatar": "https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Valentina Cardona",
+        "rol": "Cosmiatra & Terapeuta Facial",
+        "badge": "Master Facial",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Camila Murillo",
+        "rol": "Especialista en Moldeo Corporal",
+        "badge": "Terapeuta Pro",
+        "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "4.9"
+      },
+      {
+        "nombre": "Marcela Rentería",
+        "rol": "Masoterapeuta & Bienestar Spa",
+        "badge": "Senior Spa",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "4.9"
+      }
+    ]
+  }
+}

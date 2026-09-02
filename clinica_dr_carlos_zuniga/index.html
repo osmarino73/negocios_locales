@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Dr. Carlos Zúñiga | Cirugía Plástica & Estética Avanzada en Apartadó</title>
+  <meta name="description" content="Clínica del Dr. Carlos Zúñiga en Apartadó. Cirugía plástica estética y reconstructiva de alta gama: mamoplastia, rinoplastia, liposucción HD y rejuvenecimiento." />
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Clínica Dr. Carlos Zúñiga | Cirugía Plástica en Apartadó" />
+  <meta property="og:description" content="Garantizamos tu mejor versión y máxima seguridad médica en Apartadó, Antioquia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drcarloszuniga.com.co/" />
+  <meta property="og:image" content="./hero_onelife.jpg" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Clínica Dr. Carlos Zúñiga",
+    "image": "./hero_onelife.jpg",
+    "telephone": "+573337588617",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 105 #95A - 12, Barrio Nuevo",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.881747,
+      "longitude": -76.636408
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "95"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans + Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* SISTEMA DE VARIABLES "ONELIFE CHAMPAGNE & SKY BLUE" */
+    :root {
+      --sky-blue: #6ec1e4;
+      --sky-blue-hover: #5ab3d8;
+      --terracotta: #cf7e5e;
+      --terracotta-dark: #b8694a;
+      
+      --champagne-hero: #fcf5ec;
+      --surface-white: #ffffff;
+      --surface-beige: #f6eedf;
+      --dark-charcoal: #2c3539;
+      --dark-panel: #1d2427;
+      --text-muted: #707b82;
+      --border-soft: #ece2d4;
+      
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      
+      --radius-sm: 4px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-pill: 999px;
+      
+      --shadow-sky: 0 8px 22px rgba(110, 193, 228, 0.35);
+      --shadow-sm: 0 4px 16px rgba(44, 53, 57, 0.04);
+      --shadow-md: 0 10px 30px rgba(44, 53, 57, 0.08);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #faf7f2;
+      color: var(--dark-charcoal);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TOP BAR CLÍNICA */
+    .top-bar-onelife {
+      background-color: #f7f3ec;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-left a {
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .top-bar-left a:hover {
+      color: var(--sky-blue);
+    }
+
+    /* HEADER */
+    .site-header {
+      background: var(--surface-white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-soft);
+      padding: 16px 0;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--dark-charcoal);
+    }
+
+    .logo-mark {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--dark-charcoal);
+      text-transform: uppercase;
+    }
+
+    .logo-mark span {
+      color: var(--sky-blue);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--dark-charcoal);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--sky-blue);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--sky-blue);
+    }
+
+    /* BOTONES ONELIFE */
+    .btn-onelife-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sky-blue);
+      color: var(--surface-white);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      box-shadow: var(--shadow-sky);
+      transition: all 0.3s ease;
+      border: 1px solid var(--sky-blue);
+      cursor: pointer;
+    }
+
+    .btn-onelife-blue:hover {
+      background: var(--sky-blue-hover);
+      border-color: var(--sky-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(110, 193, 228, 0.45);
+      color: var(--surface-white);
+    }
+
+    .btn-onelife-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sky-blue);
+      color: var(--surface-white);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      padding: 13px 28px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 1px solid var(--sky-blue);
+      opacity: 0.9;
+    }
+
+    .btn-onelife-outline:hover {
+      background: var(--sky-blue-hover);
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    /* ENCABEZADOS DE SECCIÓN */
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 52px;
+    }
+
+    .eyebrow-sky {
+      display: inline-block;
+      color: var(--sky-blue);
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .eyebrow-sky::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--sky-blue);
+      margin: 6px auto 0;
+    }
+
+    .section-title-clean {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--dark-charcoal);
+      margin-bottom: 12px;
+    }
+
+    /* ============================================================ */
+    /* 1. SECCIÓN: INICIO / HERO FULL-WIDTH (#inicio)               */
+    /* ============================================================ */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      background-color: var(--champagne-hero);
+      overflow: hidden;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 65%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      display: block;
+    }
+
+    /* MÁSCARA GRADIENTE CHAMPAGNE CÁLIDO */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg, 
+        #fcf5ec 0%, 
+        #fcf5ec 38%, 
+        rgba(252, 245, 236, 0.95) 50%, 
+        rgba(252, 245, 236, 0.3) 68%, 
+        transparent 100%
+      );
+      z-index: 2;
+    }
+
+    .hero-content-wrapper {
+      position: relative;
+      z-index: 3;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-main-title {
+      font-family: var(--font-display);
+      font-size: 3.8rem;
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--dark-charcoal);
+      margin-bottom: 24px;
+    }
+
+    .hero-main-title span.accent-terracotta {
+      color: var(--terracotta);
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    /* BADGE PREMIO DE AUTOR / CERTIFICACIÓN MÉDICA */
+    .hero-award-badge {
+      background: var(--surface-white);
+      border: 1px solid var(--border-soft);
+      padding: 14px 22px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .award-icon-wreath {
+      font-size: 1.8rem;
+      color: var(--terracotta);
+    }
+
+    .award-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--dark-charcoal);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .award-text span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================================ */
+    /* 2. SECCIÓN: PROCEDIMIENTOS (#servicios)                      */
+    /* ============================================================ */
+    .services-section {
+      padding: 100px 0;
+      background-color: var(--surface-white);
+    }
+
+    .services-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .service-card-circle {
+      text-align: center;
+      padding: 20px 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card-circle:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-circle-frame {
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      padding: 6px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-sm);
+      background: var(--surface-white);
+      transition: all 0.35s ease;
+    }
+
+    .service-card-circle:hover .service-circle-frame {
+      border-color: var(--sky-blue);
+      box-shadow: var(--shadow-sky);
+      transform: scale(1.04);
+    }
+
+    .service-circle-frame img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--dark-charcoal);
+      margin-bottom: 12px;
+    }
+
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================================ */
+    /* 3. SECCIÓN: NOSOTROS / NUEVA ERA MÉDICA (#nosotros)          */
+    /* ============================================================ */
+    .about-experience-section {
+      padding: 100px 0;
+      background-color: #faf7f2;
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .about-dual-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* TARJETA BEIGE IZQUIERDA */
+    .about-card-beige {
+      background-color: var(--surface-beige);
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--border-soft);
+    }
+
+    .about-card-beige .eyebrow-line {
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--dark-charcoal);
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .about-card-beige blockquote {
+      font-size: 0.98rem;
+      color: #555e64;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .about-card-beige blockquote::before {
+      content: '“';
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: var(--terracotta);
+      line-height: 0;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .doctor-profile-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .doctor-profile-row img {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--terracotta);
+    }
+
+    .doctor-meta h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--dark-charcoal);
+    }
+
+    .doctor-meta span {
+      font-size: 0.8rem;
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+
+    /* PANEL OSCURO DERECHA */
+    .about-panel-dark {
+      background-color: var(--dark-panel);
+      color: var(--surface-white);
+      padding: 50px 44px;
+    }
+
+    .about-panel-dark h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 28px;
+      color: var(--surface-white);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 14px;
+    }
+
+    .procedures-bullet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 24px;
+    }
+
+    .proc-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #b5c2c9;
+    }
+
+    .proc-item i {
+      color: var(--sky-blue);
+      font-size: 0.75rem;
+    }
+
+    /* ============================================================ */
+    /* 4. SECCIÓN: UBICACIÓN & GOOGLE MAPS (#ubicacion)             */
+    /* ============================================================ */
+    .map-section {
+      padding: 100px 0;
+      background: var(--surface-white);
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: #faf7f2;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-soft);
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-title {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 18px;
+      color: var(--dark-charcoal);
+    }
+
+    .map-location-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .map-location-item i {
+      color: var(--sky-blue);
+      font-size: 1.25rem;
+      margin-top: 3px;
+    }
+
+    .map-location-item p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .map-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+      height: 100%;
+      background: #e2e8f0;
+      overflow: hidden;
+    }
+
+    .map-frame-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* FOOTER EDITORIAL ONELIFE DARK */
+    .site-footer {
+      background-color: var(--dark-panel);
+      color: var(--surface-white);
+      padding: 80px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand p {
+      color: #9cb0bb;
+      font-size: 0.9rem;
+      margin: 16px 0 24px;
+      line-height: 1.6;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: var(--surface-white);
+    }
+
+    .footer-links-list {
+      list-style: none;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links-list a {
+      color: #9cb0bb;
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--sky-blue);
+    }
+
+    .footer-contact-info p {
+      color: #9cb0bb;
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .footer-contact-info i {
+      color: var(--sky-blue);
+      margin-top: 3px;
+    }
+
+    .btn-footer-reserve {
+      display: block;
+      text-align: center;
+      background: var(--sky-blue);
+      color: var(--surface-white);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      padding: 13px 20px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--sky-blue-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sky);
+      color: var(--surface-white);
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: #6b869b;
+    }
+
+    /* WIDGET FLOTANTE WHATSAPP */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: #25d366;
+      color: #ffffff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.12) rotate(8deg);
+      color: #ffffff;
+    }
+
+    /* RESPONSIVE DESIGN & MOBILE OPTIMIZADO */
+    @media (max-width: 1024px) {
+      .hero-bg-img {
+        width: 50%;
+        opacity: 0.35;
+      }
+      .hero-bg-overlay {
+        background: linear-gradient(90deg, #fcf5ec 0%, #fcf5ec 60%, rgba(252, 245, 236, 0.7) 100%);
+      }
+      .services-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .about-dual-layout {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar-left, .nav-links {
+        display: none;
+      }
+      .hero-fullwidth-section {
+        min-height: auto;
+      }
+      .hero-bg-img {
+        width: 100%;
+        opacity: 0.2;
+      }
+      .hero-bg-overlay {
+        background: linear-gradient(180deg, #fcf5ec 0%, rgba(252, 245, 236, 0.95) 100%);
+      }
+      .hero-main-title {
+        font-size: 2.6rem;
+      }
+      .section-title-clean {
+        font-size: 2.2rem;
+      }
+      .services-grid-4 {
+        grid-template-columns: 1fr;
+      }
+      .procedures-bullet-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* REGLA ESTÁNDAR RESPONSIVE DEL MAPA EN MÓVIL */
+      .map-section {
+        padding: 60px 0;
+      }
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+        border-radius: var(--radius-md);
+      }
+      .map-info-panel {
+        padding: 30px 20px;
+      }
+      .map-title {
+        font-size: 2.2rem;
+      }
+      .map-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .map-actions .btn-onelife-blue,
+      .map-actions .btn-onelife-outline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-soft);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR CLÍNICA -->
+  <div class="top-bar-onelife">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-location-dot"></i> Cra. 105 #95A - 12, Barrio Nuevo, Apartadó</span>
+        <a href="tel:+573337588617"><i class="fa-solid fa-phone"></i> (+57) 333 758 8617</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-award"></i> Cirujano Miembro Sociedad Colombiana de Cirugía Plástica (SCCP)
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#inicio" class="logo-brand">
+          <div class="logo-mark">
+            ONE<span>LIFE</span>
+          </div>
+        </a>
+
+        <!-- NAVEGACIÓN (4 SECCIONES ESTRICTAS) -->
+        <ul class="nav-links">
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#servicios">Procedimientos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+
+        <div>
+          <a href="https://wa.me/573337588617?text=Hola%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica." target="_blank" rel="noopener noreferrer" class="btn-onelife-blue">
+            Agendar Cita
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. SECCIÓN: INICIO / HERO FULL-WIDTH (#inicio) -->
+  <main>
+    <section class="hero-fullwidth-section" id="inicio">
+      
+      <!-- IMAGEN DE FONDO A PANTALLA COMPLETA & MÁSCARA CHAMPAGNE CÁLIDO -->
+      <div class="hero-bg-cover">
+        <img src="./hero_onelife.jpg" alt="Cirugía Plástica Dr. Carlos Zúñiga Apartadó" class="hero-bg-img" />
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="container hero-content-wrapper">
+        <div class="hero-text-block">
+          <h1 class="hero-main-title">
+            Garantizamos <span class="accent-terracotta">tu mejor versión</span> y máxima seguridad
+          </h1>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/573337588617?text=Hola%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica." target="_blank" rel="noopener noreferrer" class="btn-onelife-blue">
+              Agendar Valoración
+            </a>
+            <a href="#servicios" class="btn-onelife-outline">
+              Ver Servicios
+            </a>
+          </div>
+
+          <div class="hero-award-badge">
+            <i class="fa-solid fa-award award-icon-wreath"></i>
+            <div class="award-text">
+              <strong>Especialista Galardonado & Certificado</strong>
+              <span>Sociedad Colombiana de Cirugía Plástica (SCCP)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 2. SECCIÓN: PROCEDIMIENTOS (#servicios) -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        
+        <div class="section-header-center">
+          <span class="eyebrow-sky">PRINCIPALES PROCEDIMIENTOS</span>
+          <h2 class="section-title-clean">Áreas de Especialidad</h2>
+        </div>
+
+        <div class="services-grid-4">
+          
+          <!-- Área 1 -->
+          <div class="service-card-circle">
+            <div class="service-circle-frame">
+              <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=500&q=80" alt="Cirugía de Busto y Senos" />
+            </div>
+            <h3 class="service-name">BUSTO & SENOS</h3>
+            <p class="service-desc">Mamoplastia de aumento, levantamiento y reducción con implantes de última generación.</p>
+          </div>
+
+          <!-- Área 2 -->
+          <div class="service-card-circle">
+            <div class="service-circle-frame">
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500&q=80" alt="Contorno Corporal y Liposucción" />
+            </div>
+            <h3 class="service-name">CUERPO & CONTORNO</h3>
+            <p class="service-desc">Liposucción de alta definición HD, abdominoplastia y moldeamiento corporal de autor.</p>
+          </div>
+
+          <!-- Área 3 -->
+          <div class="service-card-circle">
+            <div class="service-circle-frame">
+              <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a39439?auto=format&fit=crop&w=500&q=80" alt="Cirugía Facial y Rinoplastia" />
+            </div>
+            <h3 class="service-name">ROSTRO & PERFIL</h3>
+            <p class="service-desc">Rinoplastia ultrasónica estética y funcional, blefaroplastia y lifting de rejuvenecimiento.</p>
+          </div>
+
+          <!-- Área 4 -->
+          <div class="service-card-circle">
+            <div class="service-circle-frame">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" alt="Medicina Estética y Piel" />
+            </div>
+            <h3 class="service-name">PIEL & ESTÉTICA</h3>
+            <p class="service-desc">Toxina botulínica (Botox), ácido hialurónico, bioestimuladores y armonización facial.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SECCIÓN: NOSOTROS / NUEVA ERA MÉDICA (#nosotros) -->
+    <section class="about-experience-section" id="nosotros">
+      <div class="container">
+        
+        <div class="about-dual-layout">
+          
+          <!-- TARJETA BEIGE IZQUIERDA -->
+          <div class="about-card-beige">
+            <div>
+              <span class="eyebrow-line">EL COMIENZO DE UNA NUEVA ERA</span>
+              <blockquote>
+                Cada procedimiento es una obra personalizada donde combinamos la más estricta precisión anatómica con la búsqueda de armonía y naturalidad estética para cada paciente.
+              </blockquote>
+            </div>
+
+            <div class="doctor-profile-row">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&q=80" alt="Dr. Carlos Zúñiga" />
+              <div class="doctor-meta">
+                <h4>Dr. Carlos Zúñiga</h4>
+                <span>Cirujano Plástico Principal, SCCP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL OSCURO DERECHA -->
+          <div class="about-panel-dark">
+            <h3>Nuestra Lista Completa de Procedimientos</h3>
+            
+            <div class="procedures-bullet-grid">
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Cirugía Cosmética Avanzada</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Mamoplastia Reductora</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Liposucción HD & VASER</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Rinoplastia Estructural</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Cirugía Plástica Reconstructiva</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Marcación Abdominal</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Abdominoplastia / Tummy Tuck</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Rejuvenecimiento con Botox</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Blefaroplastia Láser</div>
+              <div class="proc-item"><i class="fa-solid fa-circle"></i> Ácido Hialurónico & Fillers</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SECCIÓN: UBICACIÓN & GOOGLE MAPS (#ubicacion) -->
+    <section class="map-section" id="ubicacion">
+      <div class="container">
+        
+        <div class="map-showcase-card">
+          <div class="map-info-panel">
+            <span class="eyebrow-sky" style="margin-bottom: 14px;">SEDE QUIRÚRGICA</span>
+            <h2 class="map-title">Visítanos en Apartadó</h2>
+            
+            <div class="map-location-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <div>
+                <strong>Dirección:</strong>
+                <p>Cra. 105 #95A - 12, Barrio Nuevo, Apartadó, Antioquia</p>
+              </div>
+            </div>
+
+            <div class="map-location-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Horario de Consultas:</strong>
+                <p>Lunes a Viernes: 8:00 AM - 6:00 PM<br />Sábados: 8:00 AM - 1:00 PM (Valoraciones)</p>
+              </div>
+            </div>
+
+            <div class="map-actions">
+              <a href="https://www.google.com/maps/place/Clinica+Dr.+Carlos+Z%C3%BA%C3%B1iga/@7.8897062,-76.6513177,15z" target="_blank" rel="noopener noreferrer" class="btn-onelife-blue">
+                <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar (Google Maps)
+              </a>
+              <a href="https://wa.me/573337588617?text=Hola%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga%2C%20quisiera%20solicitar%20indicaciones%20para%20llegar." target="_blank" rel="noopener noreferrer" class="btn-onelife-outline">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Clinica+Dr.+Carlos+Zuniga,+Cra.+105+%2395A-12,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de la Clínica Dr. Carlos Zúñiga en Apartadó">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER EDITORIAL ONELIFE DARK -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="logo-mark" style="color: #ffffff; margin-bottom: 6px;">
+            ONE<span style="color: var(--sky-blue);">LIFE</span>
+          </div>
+          <p>
+            Clínica de cirugía plástica y estética de alta definición. Excelencia médica y seguridad quirúrgica en Apartadó y la región de Urabá.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Procedimientos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto Clínico</h4>
+          <div class="footer-contact-info">
+            <p><i class="fa-solid fa-phone"></i> (+57) 333 758 8617</p>
+            <p><i class="fa-solid fa-map-pin"></i> Cra. 105 #95A - 12, Apartadó</p>
+            <p><i class="fa-solid fa-envelope"></i> contacto@drcarloszuniga.com.co</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Agendar Valoración</h4>
+          <p style="color: #9cb0bb; font-size: 0.88rem; margin-bottom: 16px;">Consulta médica personalizada con el Dr. Carlos Zúñiga.</p>
+          <a href="https://wa.me/573337588617?text=Hola%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga%2C%20quisiera%20agendar%20mi%20cita%20de%20valoraci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+            <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Clínica Dr. Carlos Zúñiga. Cirugía Plástica & Estética en Apartadó. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/573337588617?text=Hola%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga%2C%20quisiera%20consultar%20por%20un%20procedimiento%20y%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>

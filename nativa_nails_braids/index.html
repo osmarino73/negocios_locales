@@ -1,0 +1,2005 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Nativa Nails & Braids | Salón de Manicura, Uñas y Trenzas en Apartadó</title>
+  <meta name="description" content="Salón de manicura semipermanente, uñas acrílicas, pedicura spa y trenzas africanas en Apartadó, Antioquia. Calidad prémium, bioseguridad y atención de lujo.">
+  <meta name="theme-color" content="#0d0b0a">
+
+  <!-- OpenGraph / Redes Sociales -->
+  <meta property="og:title" content="Nativa Nails & Braids | Salón de Manicura & Trenzas en Apartadó">
+  <meta property="og:description" content="Cuidado impecable en uñas y trenzas de alta definición en Apartadó. Agenda tu cita online.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=85">
+
+  <!-- Schema.org JSON-LD para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NailSalon",
+    "name": "Nativa Nails & Braids",
+    "image": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1200&q=85",
+    "telephone": "+573134988022",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 97 #97 - 21",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8808912,
+      "longitude": -76.630303
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Playfair Display, Alex Brush & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y DESIGN TOKENS (CLONACIÓN FORENSE LUXÉ NAIL STUDIO)
+       ========================================================================== */
+    :root {
+      /* Paleta Oscura (Hero, Sobre Nosotros, Footer) */
+      --bg-dark-base: #0d0b0a;
+      --bg-dark-surface: #161311;
+      --bg-dark-elevated: #1f1a17;
+      --bg-dark-trans: rgba(13, 11, 10, 0.88);
+
+      /* Paleta Clara Contrastante (Servicios, Ubicación) */
+      --bg-light-base: #ebe4dc;
+      --bg-light-surface: #fbf8f5;
+      --bg-light-card: #ffffff;
+
+      /* Acentos Nude Camel Sand & Warm Champagne */
+      --color-camel: #cbb39c;
+      --color-camel-light: #e4d3c3;
+      --color-camel-dark: #a88d75;
+      --color-camel-hover: #dac4af;
+      --color-champagne: #dfbe9f;
+
+      /* Bordes y Líneas */
+      --border-dark: rgba(203, 179, 156, 0.18);
+      --border-dark-strong: rgba(203, 179, 156, 0.45);
+      --border-light: rgba(26, 22, 20, 0.08);
+      --border-light-strong: rgba(26, 22, 20, 0.18);
+
+      /* Textos */
+      --text-dark-primary: #fcfaf7;
+      --text-dark-secondary: #c9c0b8;
+      --text-dark-muted: #8e847c;
+      --text-dark-title: #0d0b0a;
+
+      --text-light-primary: #1a1614;
+      --text-light-secondary: #524a44;
+      --text-light-muted: #7c726a;
+
+      /* Degradados */
+      --camel-gradient: linear-gradient(135deg, #e4d3c3 0%, #cbb39c 50%, #ad947d 100%);
+      --camel-gradient-hover: linear-gradient(135deg, #ffffff 0%, #e4d3c3 50%, #cbb39c 100%);
+
+      /* Fuentes */
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      /* Sombras y Radios */
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.12);
+      --shadow-dark-md: 0 12px 36px rgba(0, 0, 0, 0.6);
+      --shadow-camel: 0 6px 20px rgba(203, 179, 156, 0.25);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 50px;
+
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset y Estilos Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-dark-base);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark-base);
+      color: var(--text-dark-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: var(--bg-dark-trans);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-dark);
+      transition: transform 0.35s ease, background-color 0.35s ease;
+    }
+
+    .header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .site-header {
+      padding: 14px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      color: var(--color-camel);
+      font-size: 1.4rem;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text-dark-primary);
+    }
+
+    .brand-title span {
+      color: var(--color-camel);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .brand-tagline {
+      display: block;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-camel-light);
+      margin-top: -2px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link {
+      font-size: 0.84rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dark-secondary);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-camel);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--camel-gradient);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-header-cta {
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 9px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-camel);
+      white-space: nowrap;
+    }
+
+    .btn-header-cta:hover {
+      background: var(--camel-gradient-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      background-color: var(--bg-dark-base);
+      overflow: hidden;
+    }
+
+    .hero-fullwidth-section {
+      position: relative;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 18%, rgba(0,0,0,1) 45%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 18%, rgba(0,0,0,1) 45%);
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(90deg, #0d0b0a 0%, #0d0b0a 36%, rgba(13, 11, 10, 0.75) 55%, rgba(13, 11, 10, 0) 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding: 85px 0 65px;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--color-camel-light);
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.5px;
+      color: var(--text-dark-primary);
+      margin-bottom: 12px;
+    }
+
+    .hero-title-script {
+      font-family: var(--font-script);
+      font-size: clamp(3.2rem, 6vw, 4.8rem);
+      color: var(--color-camel);
+      display: block;
+      font-weight: 400;
+      line-height: 0.9;
+      margin: 4px 0 10px;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 30px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-camel);
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-primary:hover {
+      background: var(--camel-gradient-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(203, 179, 156, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text-dark-primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(203, 179, 156, 0.15);
+      border-color: var(--color-camel);
+      color: var(--color-camel);
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS (5 Sellos LUXÉ NAIL Style)
+       ========================================================================== */
+    .pillars-section {
+      background: #0a0807;
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 22px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-right: 1px solid var(--border-dark);
+      padding-right: 14px;
+    }
+
+    .pillar-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-camel);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .pillar-text h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 2px;
+    }
+
+    .pillar-text p {
+      font-size: 0.74rem;
+      color: var(--text-dark-muted);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: NUESTROS SERVICIOS (#servicios - Fondo Claro Contrastante)
+       ========================================================================== */
+    .services-section {
+      padding: 90px 0;
+      background-color: var(--bg-light-base);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-script-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-camel-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-title-light {
+      color: var(--text-light-primary);
+    }
+
+    .section-title-dark {
+      color: var(--text-dark-primary);
+    }
+
+    .section-desc {
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .section-desc-light {
+      color: var(--text-light-secondary);
+    }
+
+    .section-desc-dark {
+      color: var(--text-dark-secondary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-camel);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 155px;
+      overflow: hidden;
+      background: #dfd7ce;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .service-body {
+      padding: 16px 10px 14px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: center;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text-light-primary);
+      margin-bottom: 6px;
+      line-height: 1.25;
+      min-height: 2.5em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-desc {
+      display: none;
+    }
+
+    .service-badges-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .service-badge-pill {
+      background: #dfd7ce;
+      border: 1px solid rgba(26, 22, 20, 0.06);
+      color: var(--text-light-primary);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .service-badge-pill i {
+      color: var(--color-camel-dark);
+      font-size: 0.65rem;
+    }
+
+    .btn-card-book {
+      margin-top: auto;
+      background: #161311;
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 8px 10px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      transition: var(--transition);
+      touch-action: manipulation;
+      white-space: nowrap;
+    }
+
+    .btn-card-book:hover {
+      background: var(--color-camel-dark);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Crismar)
+       ========================================================================== */
+    .about-team-section {
+      padding: 95px 0;
+      background-color: var(--bg-dark-base);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 85px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark-md);
+      border: 1px solid var(--border-dark);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .experience-floating-badge strong {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1;
+      display: block;
+      font-weight: 700;
+    }
+
+    .experience-floating-badge span {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .experience-text-content .experience-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: var(--text-dark-primary);
+    }
+
+    .experience-text-content .experience-title span {
+      color: var(--color-camel-light);
+      font-style: italic;
+    }
+
+    .experience-text-content p {
+      color: var(--text-dark-secondary);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-dark);
+      margin-bottom: 28px;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-item strong {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      color: var(--color-camel-light);
+      display: block;
+    }
+
+    .metric-item span {
+      font-size: 0.74rem;
+      color: var(--text-dark-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 26px 14px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-camel);
+      box-shadow: var(--shadow-camel);
+    }
+
+    .team-photo-box {
+      position: relative;
+      width: 105px;
+      height: 105px;
+      margin: 0 auto 14px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-camel);
+      box-shadow: 0 6px 18px rgba(203, 179, 156, 0.25);
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-camel-light);
+      display: block;
+      margin-bottom: 8px;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    .team-rating {
+      font-size: 0.76rem;
+      color: #f7ba2a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .btn-team-book {
+      background: rgba(203, 179, 156, 0.12);
+      border: 1px solid var(--border-dark);
+      color: var(--text-dark-primary);
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 9px 12px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-team-book:hover {
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      border-color: transparent;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: UBICACIÓN & CONTACTO (#ubicacion)
+       ========================================================================== */
+    .location-section {
+      padding: 90px 0;
+      background-color: var(--bg-light-base);
+    }
+
+    .map-showcase-card {
+      background: var(--bg-light-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-info-panel {
+      padding: 44px 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .location-header h3 {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      color: var(--text-light-primary);
+      margin-bottom: 6px;
+    }
+
+    .location-header p {
+      font-size: 0.88rem;
+      color: var(--text-light-secondary);
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .info-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #dfd7ce;
+      border: 1px solid rgba(26, 22, 20, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-camel-dark);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .info-text strong {
+      display: block;
+      font-size: 0.86rem;
+      color: var(--text-light-primary);
+      margin-bottom: 2px;
+    }
+
+    .info-text span {
+      font-size: 0.82rem;
+      color: var(--text-light-secondary);
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background-color: #080606;
+      border-top: 1px solid var(--border-dark);
+      padding: 70px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 50px;
+      margin-bottom: 45px;
+    }
+
+    .footer-col-brand .brand-title {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .footer-col-brand p {
+      font-size: 0.86rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark-primary);
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-camel);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark-primary);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.84rem;
+      color: var(--text-dark-muted);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-camel);
+      padding-left: 5px;
+    }
+
+    .footer-reserve-box {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .footer-reserve-box h5 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-camel-light);
+      margin-bottom: 6px;
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.8rem;
+      color: var(--text-dark-muted);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .btn-footer-reserve {
+      background: var(--camel-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      box-shadow: var(--shadow-camel);
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--camel-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(203, 179, 156, 0.4);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-dark-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      line-height: 1;
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
+      z-index: 999999;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      touch-action: manipulation;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) translateY(-3px) translate3d(0, 0, 0);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    .whatsapp-float i {
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (< 768px - MÓVIL OPTIMIZADO)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+      }
+
+      .btn-header-cta {
+        padding: 7px 15px;
+        font-size: 0.74rem;
+      }
+
+      /* Hero Móvil Calibrado a 720px !important */
+      .hero-fullwidth-section {
+        min-height: 720px !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 130px 16px 36px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+      }
+
+      .hero-bg-img {
+        opacity: 0.92;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(180deg, rgba(13, 11, 10, 0.05) 0%, rgba(13, 11, 10, 0.15) 30%, rgba(13, 11, 10, 0.88) 65%, #0d0b0a 100%);
+      }
+
+      .hero-content {
+        padding: 0;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+
+      .hero-title-script {
+        font-size: 3rem;
+      }
+
+      .hero-description {
+        font-size: 0.88rem;
+        margin-bottom: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.82rem;
+      }
+
+      /* Barra de Pilares Carrusel Horizontal Deslizable en Móvil */
+      .pillars-section {
+        padding: 16px 0;
+      }
+
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        padding: 4px 16px 8px;
+        margin: 0 -16px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 calc(75% - 10px);
+        scroll-snap-align: start;
+        border-right: none;
+        background: var(--bg-dark-surface);
+        border: 1px solid var(--border-dark);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+      }
+
+      .pillar-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+      }
+
+      .pillar-text h4 {
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+
+      .pillar-text p {
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+
+      /* Servicios y Equipo en 2 Columnas en Móvil (<768px) */
+      .services-grid,
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .service-body,
+      .team-card {
+        padding: 14px 10px 12px;
+      }
+
+      .service-img-wrapper {
+        height: 120px;
+      }
+
+      .service-title,
+      .team-name {
+        font-size: 0.95rem;
+        line-height: 1.2;
+      }
+
+      .service-desc {
+        display: none;
+      }
+
+      .service-badge-pill {
+        font-size: 0.65rem;
+        padding: 2px 7px;
+      }
+
+      .btn-card-book,
+      .btn-team-book {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.72rem;
+        padding: 7px 8px;
+        white-space: nowrap;
+      }
+
+      .team-photo-box {
+        width: 100%;
+        max-width: 84px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 auto 8px;
+      }
+
+      .team-avatar {
+        width: 100%;
+        height: 100%;
+      }
+
+      .team-badge {
+        display: none !important;
+      }
+
+      .team-role {
+        font-size: 0.7rem;
+        min-height: 2.4em;
+        line-height: 1.2;
+        margin-bottom: 4px;
+      }
+
+      .team-rating {
+        font-size: 0.72rem;
+        margin-bottom: 8px;
+      }
+
+      /* Sobre Nosotros en Móvil */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .salon-image-showcase img {
+        height: 280px;
+      }
+
+      .experience-floating-badge {
+        bottom: 16px;
+        left: 16px;
+        padding: 10px 16px;
+      }
+
+      .experience-floating-badge strong {
+        font-size: 1.8rem;
+      }
+
+      .experience-text-content {
+        text-align: center;
+      }
+
+      .experience-text-content .experience-title {
+        font-size: 2.2rem;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .metric-item strong {
+        font-size: 1.7rem;
+      }
+
+      /* Mapa Responsive en Móvil */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-light);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .whatsapp-float {
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 18px !important;
+        width: 54px !important;
+        height: 54px !important;
+        font-size: 1.8rem !important;
+        z-index: 999999 !important;
+        overflow: hidden !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== */ -->
+  <header class="header-sticky-wrapper" id="stickyHeader">
+    <div class="site-header">
+      <div class="container nav-container">
+        <a href="#inicio" class="brand-logo" aria-label="Inicio Nativa Nails & Braids">
+          <div>
+            <span class="brand-title">NATIVA <span>NAILS & BRAIDS</span></span>
+            <span class="brand-tagline">Salón de Uñas & Trenzas • Apartadó</span>
+          </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#inicio" class="nav-link active">Inicio</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#ubicacion" class="nav-link">Ubicación</a>
+        </nav>
+
+        <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%20%26%20Braids%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+         ========================================================================== -->
+    <section class="hero-section" id="inicio">
+      <div class="hero-fullwidth-section">
+        <div class="hero-bg-cover">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1920&q=85" alt="Uñas elegantes y trenzas en Nativa Nails Apartadó" class="hero-bg-img" loading="eager">
+        </div>
+        <div class="hero-bg-overlay"></div>
+
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-text-block">
+              <span class="hero-tag">✦ Uñas de Lujo & Trenzas en Apartadó</span>
+              <h1 class="hero-title">
+                Lujo & Estilo
+                <span class="hero-title-script">Al Alcance de Tus Manos</span>
+              </h1>
+              <p class="hero-description">
+                Especialistas en manicura semipermanente, extensiones acrílicas, pedicura spa y trenzas africanas en Apartadó. Cuidado impecable, bioseguridad y acabado de alta definición.
+              </p>
+              <div class="hero-actions">
+                <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%20%26%20Braids%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+                </a>
+                <a href="#servicios" class="btn-secondary">
+                  <i class="fa-solid fa-sparkles"></i> Ver Servicios
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BARRA DE PILARES / GARANTÍAS (5 Sellos de Confianza)
+         ========================================================================== -->
+    <section class="pillars-section" aria-label="Garantías y Pilares del Salón">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="pillar-text">
+              <h4>Esmaltes Prémium</h4>
+              <p>Marcas líderes & alta duración</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-shield-virus"></i></div>
+            <div class="pillar-text">
+              <h4>Esterilización Clínica</h4>
+              <p>Bioseguridad & kits sellados</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="pillar-text">
+              <h4>Manicuristas Máster</h4>
+              <p>Técnicas certificadas</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-spa"></i></div>
+            <div class="pillar-text">
+              <h4>Trenzas & Braids</h4>
+              <p>Diseños y estilos protectores</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="pillar-text">
+              <h4>Satisfacción Total</h4>
+              <p>Calificación 5.0 ★ en Apartadó</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: SERVICIOS (#servicios — Grid 6 Columnas)
+         ========================================================================== -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-script-eyebrow">Nuestra Carta de Servicios</span>
+          <h2 class="section-title section-title-light">Servicios Populares</h2>
+          <p class="section-desc section-desc-light">Técnicas modernas en cuidado de uñas, extensiones esculpidas y trenzas africanas.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1 -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Semipermanente Nude & Black en Apartadó" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Semipermanente</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $45.000 COP</span>
+              </div>
+              <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20Semipermanente." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2 -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas en Apartadó" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Uñas Acrílicas</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 90 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> Desde $85K</span>
+              </div>
+              <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20U%C3%B1as%20Acr%C3%ADlicas." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3 -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art Minimalista en Apartadó" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Nail Art HD</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 45 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> Desde $25K</span>
+              </div>
+              <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20Nail%20Art." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 4 -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Trenzas y Braids en Apartadó" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Trenzas & Braids</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 120 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> Desde $90K</span>
+              </div>
+              <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20Trenzas%20%26%20Braids." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 5 -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa y Relax en Apartadó" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Pedicura Spa</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $40.000 COP</span>
+              </div>
+              <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20Pedicura%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 6 -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping & Nivelación Gel en Apartadó" loading="lazy">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Kapping Gel</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $55.000 COP</span>
+              </div>
+              <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20Kapping%20Gel." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Crismar)
+         ========================================================================== -->
+    <section class="about-team-section" id="nosotros">
+      <div class="container">
+        <!-- Bloque 1: Experiencia y Autoridad -->
+        <div class="experience-layout">
+          <div class="salon-image-showcase">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones Nativa Nails Apartadó" loading="lazy">
+            <div class="experience-floating-badge">
+              <strong>VIP</strong>
+              <span>Salón Studio</span>
+            </div>
+          </div>
+
+          <div class="experience-text-content">
+            <span class="section-script-eyebrow" style="color: var(--color-camel-light);">Sobre Nosotros</span>
+            <h2 class="experience-title">
+              Precisión. Estilo. <span>Confianza Total.</span>
+            </h2>
+            <p>
+              En Nativa Nails & Braids fusionamos el cuidado profesional de uñas con el arte de las trenzas protectoras. Nuestro salón en Apartadó ofrece un espacio confortable, higiénico y moderno donde cada detalle está pensado para realzar tu belleza y brindarte una atención de primera.
+            </p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <strong>+7</strong>
+                <span>Años Exp.</span>
+              </div>
+              <div class="metric-item">
+                <strong>+10K</strong>
+                <span>Servicios</span>
+              </div>
+              <div class="metric-item">
+                <strong>100%</strong>
+                <span>Esterilizado</span>
+              </div>
+              <div class="metric-item">
+                <strong>5.0</strong>
+                <span>Calificación</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quiero%20conocer%20m%C3%A1s%20y%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-calendar-check"></i> Conoce Nuestro Salón
+            </a>
+          </div>
+        </div>
+
+        <!-- Bloque 2: Nuestro Equipo (Grid 4 Columnas) -->
+        <div class="section-header-center" style="margin-bottom: 36px;">
+          <span class="section-script-eyebrow" style="color: var(--color-camel-light);">Nuestro Equipo</span>
+          <h3 class="section-title section-title-dark">Especialistas Certificadas</h3>
+          <p class="section-desc section-desc-dark">Artistas apasionadas por el detalle, la simetría y el cuidado integral de tu estilo.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Especialista 1 -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Nativa Gómez Master Nail Artist" class="team-avatar" loading="lazy">
+              <span class="team-badge">Master</span>
+            </div>
+            <h4 class="team-name">Nativa Gómez</h4>
+            <span class="team-role">Fundadora & Master Nail Artist</span>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573134988022?text=Hola%20Nativa%2C%20quisiera%20agendar%20cita%20contigo%20en%20Nativa%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </article>
+
+          <!-- Especialista 2 -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Yurani Mosquera Especialista en Trenzas" class="team-avatar" loading="lazy">
+              <span class="team-badge">Pro</span>
+            </div>
+            <h4 class="team-name">Yurani Mosquera</h4>
+            <span class="team-role">Especialista en Trenzas & Braids</span>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573134988022?text=Hola%20Yurani%2C%20quisiera%20agendar%20cita%20para%20Trenzas%20en%20Nativa%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </article>
+
+          <!-- Especialista 3 -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Daniela Palacios Técnica en Acrílicas" class="team-avatar" loading="lazy">
+              <span class="team-badge">Senior</span>
+            </div>
+            <h4 class="team-name">Daniela Palacios</h4>
+            <span class="team-role">Técnica en Estructuras Acrílicas</span>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573134988022?text=Hola%20Daniela%2C%20quisiera%20agendar%20cita%20para%20Acr%C3%ADlicas%20en%20Nativa%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </article>
+
+          <!-- Especialista 4 -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Leidy Córdoba Terapeuta Pedicura" class="team-avatar" loading="lazy">
+              <span class="team-badge">Pro</span>
+            </div>
+            <h4 class="team-name">Leidy Córdoba</h4>
+            <span class="team-role">Terapeuta de Pedicura & Spa</span>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573134988022?text=Hola%20Leidy%2C%20quisiera%20agendar%20cita%20de%20Pedicura%20Spa%20en%20Nativa%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: UBICACIÓN & CONTACTO (#ubicacion)
+         ========================================================================== -->
+    <section class="location-section" id="ubicacion">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-script-eyebrow">Visítanos en Apartadó</span>
+          <h2 class="section-title section-title-light">Ubicación & Horarios</h2>
+          <p class="section-desc section-desc-light">Encuéntranos en una ubicación céntrica y de fácil acceso con atención personalizada.</p>
+        </div>
+
+        <div class="map-showcase-card">
+          <div class="map-info-panel">
+            <div>
+              <div class="location-header">
+                <h3>Nativa Nails & Braids</h3>
+                <p>Salón de Manicura, Pedicura & Trenzas</p>
+              </div>
+
+              <div class="info-list">
+                <div class="info-row">
+                  <div class="info-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="info-text">
+                    <strong>Dirección</strong>
+                    <span>Cra. 97 #97 - 21, Apartadó, Antioquia</span>
+                  </div>
+                </div>
+
+                <div class="info-row">
+                  <div class="info-icon-box"><i class="fa-solid fa-clock"></i></div>
+                  <div class="info-text">
+                    <strong>Horario de Atención</strong>
+                    <span>Lunes a Sábado: 8:00 AM - 7:00 PM</span>
+                  </div>
+                </div>
+
+                <div class="info-row">
+                  <div class="info-icon-box"><i class="fa-solid fa-phone"></i></div>
+                  <div class="info-text">
+                    <strong>Teléfono Directo</strong>
+                    <span>(+57) 313 498 8022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com/maps?q=Nativa+Nails+%26+Braids,+Cra.+97+%2397-21,+Apartad%C3%B3,+Antioquia,+Colombia" target="_blank" rel="noopener noreferrer" class="btn-primary" style="justify-content: center; width: 100%;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar con Google Maps
+            </a>
+          </div>
+
+          <div class="map-frame-wrapper">
+            <iframe
+              src="https://maps.google.com/maps?q=Nativa+Nails+%26+Braids,+Cra.+97+%2397-21,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              allowfullscreen=""
+              title="Mapa de ubicación Nativa Nails & Braids en Apartadó"
+              aria-label="Mapa de Google con la ubicación de Nativa Nails & Braids">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="brand-title">NATIVA <span>NAILS & BRAIDS</span></div>
+          <p>
+            Tu salón de confianza en Apartadó para uñas impecables y trenzas africanas. Cuidado profesional, esterilización clínica y ambiente de confort.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/573134988022" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación & Horarios</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Agenda Tu Cita VIP</h4>
+          <div class="footer-reserve-box">
+            <h5>Atención Inmediata</h5>
+            <p>Escríbenos por WhatsApp para consultar disponibilidad y agendar tu turno.</p>
+            <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+              <i class="fa-solid fa-calendar-check"></i> Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Nativa Nails & Braids. Todos los derechos reservados. Apartadó, Antioquia.</p>
+        <p>Salón Especializado en Uñas & Trenzas • Calificación 5.0 ★</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== -->
+  <a href="https://wa.me/573134988022?text=Hola%20Nativa%20Nails%20%26%20Braids%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       JAVASCRIPT AUTÓNOMO (Smart Header, Smooth Scroll & Auto-Scroll Pilares)
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smart Header con Auto-hide al scrollear
+      let lastScrollY = window.pageYOffset;
+      const header = document.getElementById('stickyHeader');
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.pageYOffset;
+        
+        if (currentScrollY > 120) {
+          if (currentScrollY > lastScrollY) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // Smooth scroll para todos los enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              targetElement.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
+      const pillarsGrid = document.querySelector('.pillars-grid');
+      if (pillarsGrid) {
+        let scrollInterval = null;
+        let isUserInteracting = false;
+        let resumeTimeout = null;
+
+        const getScrollStep = () => {
+          const firstCard = pillarsGrid.querySelector('.pillar-item');
+          return firstCard ? firstCard.offsetWidth + 12 : 220;
+        };
+
+        const autoScroll = () => {
+          if (window.innerWidth <= 768 && !isUserInteracting) {
+            const maxScrollLeft = pillarsGrid.scrollWidth - pillarsGrid.clientWidth;
+            const step = getScrollStep();
+            
+            if (pillarsGrid.scrollLeft >= maxScrollLeft - 10) {
+              pillarsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              pillarsGrid.scrollBy({ left: step, behavior: 'smooth' });
+            }
+          }
+        };
+
+        const startAutoScroll = () => {
+          if (!scrollInterval) {
+            scrollInterval = setInterval(autoScroll, 3000);
+          }
+        };
+
+        const stopAutoScroll = () => {
+          if (scrollInterval) {
+            clearInterval(scrollInterval);
+            scrollInterval = null;
+          }
+        };
+
+        const handleInteraction = () => {
+          isUserInteracting = true;
+          stopAutoScroll();
+          clearTimeout(resumeTimeout);
+          resumeTimeout = setTimeout(() => {
+            isUserInteracting = false;
+            startAutoScroll();
+          }, 4000);
+        };
+
+        pillarsGrid.addEventListener('touchstart', handleInteraction, { passive: true });
+        pillarsGrid.addEventListener('touchmove', handleInteraction, { passive: true });
+        pillarsGrid.addEventListener('scroll', () => {
+          if (!isUserInteracting) {
+            clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => {
+              isUserInteracting = false;
+            }, 1000);
+          }
+        }, { passive: true });
+
+        startAutoScroll();
+      }
+    });
+  </script>
+</body>
+</html>

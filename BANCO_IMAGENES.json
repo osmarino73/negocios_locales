@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "descripcion": "Banco Centralizado de Imágenes Curadas de Alta Gama para Landing Pages de Negocios Locales",
+  "version": "2.1.0",
+  "optimizacion_cdn": {
+    "proveedor": "Unsplash Global CDN",
+    "parametros_hero_fullwidth": "?auto=format&fit=crop&w=1920&q=85",
+    "parametros_card": "?auto=format&fit=crop&w=800&q=80",
+    "parametros_thumb": "?auto=format&fit=crop&w=400&q=80",
+    "parametros_ambiente_nosotros": "?auto=format&fit=crop&w=1200&q=80"
+  },
+  "nichos": {
+    "salon_unas_manicura": {
+      "nombre_nicho": "Salón de Manicura, Pedicura & Nail Art",
+      "hero_principal": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1920&q=85",
+      "ambiente_nosotros_recomendado": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=80",
+      "ambientes_alternativos": [
+        "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "servicios": {
+        "semipermanente": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80",
+        "unas_acrilicas": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+        "nail_art_hd": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80",
+        "pedicura_spa": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80",
+        "kapping_gel": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+        "retiro_calcio": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
+      }
+    },
+    "spa_estetica_bienestar": {
+      "nombre_nicho": "Centro de Estética, Masajes & Spa",
+      "hero_principal": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85",
+      "ambiente_nosotros_recomendado": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80",
+      "ambientes_alternativos": [
+        "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "servicios": {
+        "facial_hidrodermo": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+        "masaje_relajante": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80",
+        "piedras_volcanicas": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+        "moldeo_corporal": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
+      }
+    },
+    "peluqueria_rizos_salon": {
+      "nombre_nicho": "Peluquería, Salón de Belleza & Rizos",
+      "hero_principal": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1920&q=85",
+      "ambiente_nosotros_recomendado": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
+      "ambientes_alternativos": [
+        "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "servicios": {
+        "corte_rizos": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80",
+        "balayage": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+        "alisado_organico": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+        "lavado_spa": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      }
+    },
+    "barberia_masculina": {
+      "nombre_nicho": "Barbería VIP & Club Masculino",
+      "hero_principal": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=85",
+      "ambiente_nosotros_recomendado": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80",
+      "ambientes_alternativos": [
+        "https://images.unsplash.com/photo-1593702295094-ada7554100c3?auto=format&fit=crop&w=1200&q=80"
+      ],
+      "servicios": {
+        "corte_fade": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80",
+        "ritual_barba": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80",
+        "toalla_caliente": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+      }
+    },
+    "maquillaje_cejas_pestanas": {
+      "nombre_nicho": "Studio de Maquillaje, Cejas & Pestañas",
+      "hero_principal": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1920&q=85",
+      "ambiente_nosotros_recomendado": "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=80",
+      "servicios": {
+        "makeup_glam": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+        "diseno_cejas": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+      }
+    }
+  }
+}

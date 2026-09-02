@@ -1,0 +1,2047 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sarón Spa | Centro de Estética & Belleza en Apartadó, Antioquia</title>
+  <meta name="description" content="Centro de estética médica y spa en Apartadó. Tratamientos faciales avanzados, hidrodermoabrasión, rejuvenecimiento, moldeo corporal y masajes relajantes.">
+  <meta name="theme-color" content="#141312">
+
+  <!-- OpenGraph / Redes Sociales -->
+  <meta property="og:title" content="Sarón Spa | Centro de Estética & Belleza en Apartadó">
+  <meta property="og:description" content="Realza tu belleza natural con tratamientos estéticos y faciales no invasivos en Apartadó, Antioquia. Agenda tu cita online.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85">
+
+  <!-- Schema.org JSON-LD para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DaySpa",
+    "name": "Sarón Spa Centro de Estética y Belleza",
+    "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85",
+    "telephone": "+573053584269",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nueva Civilización vía al estadio, Cl. 104 #101 - 24",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8885294,
+      "longitude": -76.6317327
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y DESIGN TOKENS (CLONACIÓN FORENSE NOVA MED SPA)
+       ========================================================================== */
+    :root {
+      /* Paleta Oscura (Hero, Sobre Nosotros, Footer) */
+      --bg-dark-base: #141312;
+      --bg-dark-surface: #1b1917;
+      --bg-dark-elevated: #22201d;
+      --bg-dark-trans: rgba(20, 19, 18, 0.88);
+
+      /* Paleta Clara Contrastante (Servicios, Resultados) */
+      --bg-light-base: #f6f3ed;
+      --bg-light-surface: #ffffff;
+      --bg-light-card: #fcfbf9;
+
+      /* Acentos Nude Sand / Taupe Gold */
+      --color-sand: #d8c7b5;
+      --color-sand-light: #ede3d7;
+      --color-sand-dark: #9c8774;
+      --color-sand-gold: #c8b39b;
+
+      /* Bordes y Líneas */
+      --border-dark: rgba(216, 199, 181, 0.18);
+      --border-dark-strong: rgba(216, 199, 181, 0.45);
+      --border-light: rgba(20, 19, 18, 0.08);
+      --border-light-strong: rgba(20, 19, 18, 0.18);
+
+      /* Tipografía y Textos */
+      --text-dark-primary: #fbf9f6;
+      --text-dark-secondary: #c9c2b8;
+      --text-dark-muted: #8e877e;
+      --text-dark-title: #141312;
+
+      --text-light-primary: #1a1816;
+      --text-light-secondary: #524c46;
+      --text-light-muted: #7c746c;
+
+      /* Degradados */
+      --sand-gradient: linear-gradient(135deg, #ede3d7 0%, #d8c7b5 50%, #bca58f 100%);
+      --sand-gradient-hover: linear-gradient(135deg, #ffffff 0%, #ede3d7 50%, #d8c7b5 100%);
+
+      /* Fuentes */
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      /* Sombras y Radios */
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.12);
+      --shadow-dark-md: 0 12px 36px rgba(0, 0, 0, 0.6);
+      --shadow-sand: 0 6px 20px rgba(216, 199, 181, 0.25);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 50px;
+
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset y Estilos Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      background-color: var(--bg-dark-base);
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark-base);
+      color: var(--text-dark-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-py {
+      padding: 95px 0;
+    }
+
+    /* ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.35s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .site-header {
+      background: var(--bg-dark-trans);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 14px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      color: var(--color-sand);
+      font-size: 1.2rem;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+    }
+
+    .brand-title span {
+      color: var(--color-sand);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .brand-tagline {
+      display: block;
+      font-size: 0.64rem;
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-dark-muted);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-dark-secondary);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-sand);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--color-sand);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-header-cta {
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-sand);
+      transition: var(--transition);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--sand-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(216, 199, 181, 0.4);
+    }
+
+    /* ==========================================================================
+       HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+       ========================================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      background-color: var(--bg-dark-base);
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 85px;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.95) 55%, black 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.95) 55%, black 100%);
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #141312 0%, #141312 38%, rgba(20, 19, 18, 0.88) 56%, rgba(20, 19, 18, 0.2) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding-top: 40px;
+      padding-bottom: 50px;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-sand);
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5vw, 3.8rem);
+      line-height: 1.08;
+      font-weight: 600;
+      color: var(--text-dark-primary);
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--color-sand-light);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: var(--text-dark-secondary);
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .hero-subtitle strong {
+      color: var(--color-sand);
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 15px 32px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-sand);
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-primary:hover {
+      background: var(--sand-gradient-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(216, 199, 181, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text-dark-primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(216, 199, 181, 0.15);
+      border-color: var(--color-sand);
+      color: var(--color-sand);
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS (5 Sellos NOVA MED SPA Style)
+       ========================================================================== */
+    .pillars-section {
+      background: #11100f;
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 22px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-right: 1px solid var(--border-dark);
+      padding-right: 14px;
+    }
+
+    .pillar-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-sand);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .pillar-item:hover .pillar-icon {
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      transform: scale(1.08) rotate(6deg);
+    }
+
+    .pillar-text h4 {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 2px;
+      letter-spacing: 0.2px;
+    }
+
+    .pillar-text p {
+      font-size: 0.72rem;
+      color: var(--text-dark-muted);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       SECCIÓN CATÁLOGO: NUESTROS TRATAMIENTOS (#servicios) — CONTRASTE CASHMERE
+       ========================================================================== */
+    .services-section {
+      padding: 95px 0;
+      background-color: var(--bg-light-base);
+      color: var(--text-light-primary);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-script-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-sand-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .section-title-light {
+      color: var(--text-light-primary);
+    }
+
+    .section-title-dark {
+      color: var(--text-dark-primary);
+    }
+
+    .section-desc {
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .section-desc-light {
+      color: var(--text-light-secondary);
+    }
+
+    .section-desc-dark {
+      color: var(--text-dark-secondary);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-sand-gold);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 155px;
+      overflow: hidden;
+      background: #e6e2db;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .service-body {
+      padding: 16px 10px 14px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: center;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text-light-primary);
+      margin-bottom: 6px;
+      line-height: 1.25;
+      min-height: 2.5em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-desc {
+      display: none;
+    }
+
+    .service-badges-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .service-badge-pill {
+      background: #ede8df;
+      border: 1px solid rgba(20, 19, 18, 0.06);
+      color: var(--text-light-primary);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .service-badge-pill i {
+      color: var(--color-sand-dark);
+      font-size: 0.65rem;
+    }
+
+    .btn-card-book {
+      margin-top: auto;
+      background: #1b1917;
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 8px 10px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      transition: var(--transition);
+      touch-action: manipulation;
+      white-space: nowrap;
+    }
+
+    .btn-card-book:hover {
+      background: var(--color-sand-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(156, 135, 116, 0.35);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       SECCIÓN OFICIAL: SOBRE NOSOTROS & PROFESIONALES (#nosotros) — CRISMAR
+       ========================================================================== */
+    .specialists-section {
+      background: var(--bg-dark-base);
+      padding: 95px 0;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    /* Composición Editorial Sobre Nosotros */
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark-md);
+      border: 1px solid var(--border-dark);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .experience-floating-badge strong {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1;
+      display: block;
+      font-weight: 700;
+    }
+
+    .experience-floating-badge span {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .experience-text-content .experience-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: var(--text-dark-primary);
+    }
+
+    .experience-text-content .experience-title span {
+      color: var(--color-sand-light);
+      font-style: italic;
+    }
+
+    .experience-text-content p {
+      color: var(--text-dark-secondary);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-dark);
+      margin-bottom: 28px;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-item strong {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      color: var(--color-sand-light);
+      display: block;
+    }
+
+    .metric-item span {
+      font-size: 0.74rem;
+      color: var(--text-dark-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 26px 14px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-sand);
+      box-shadow: var(--shadow-sand);
+    }
+
+    .team-photo-box {
+      position: relative;
+      width: 105px;
+      height: 105px;
+      margin: 0 auto 14px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-sand);
+      box-shadow: 0 6px 18px rgba(216, 199, 181, 0.25);
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-sand-light);
+      display: block;
+      margin-bottom: 8px;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    .team-rating {
+      font-size: 0.78rem;
+      color: #f7ba2a;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .btn-team-book {
+      background: rgba(216, 199, 181, 0.12);
+      border: 1px solid var(--border-dark);
+      color: var(--text-dark-primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-team-book:hover {
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      border-color: var(--color-sand);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sand);
+    }
+
+    /* ==========================================================================
+       SECCIÓN MAPA & CONTACTO (#ubicacion)
+       ========================================================================== */
+    .map-section {
+      background-color: var(--bg-light-base);
+      padding: 95px 0;
+      color: var(--text-light-primary);
+    }
+
+    .map-showcase-card {
+      background: var(--bg-light-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+    }
+
+    .map-info-panel {
+      padding: 44px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info-panel h3 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--text-light-primary);
+      margin-bottom: 12px;
+    }
+
+    .map-info-panel p {
+      font-size: 0.9rem;
+      color: var(--text-light-muted);
+      margin-bottom: 26px;
+      line-height: 1.6;
+    }
+
+    .location-details-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .loc-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .loc-item-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ede8df;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-sand-dark);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .loc-item-text strong {
+      font-size: 0.88rem;
+      color: var(--text-light-primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .loc-item-text span {
+      font-size: 0.8rem;
+      color: var(--text-light-muted);
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      min-height: 420px;
+      position: relative;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+      display: block;
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background: #0f0e0d;
+      border-top: 1px solid var(--border-dark);
+      padding: 80px 0 35px;
+      color: var(--text-dark-secondary);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand .brand-title {
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .footer-brand p {
+      font-size: 0.86rem;
+      line-height: 1.6;
+      color: var(--text-dark-muted);
+      margin-bottom: 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      color: var(--color-sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sand);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark-primary);
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.84rem;
+      color: var(--text-dark-muted);
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-sand);
+      padding-left: 5px;
+    }
+
+    .footer-reserve-box {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .footer-reserve-box h5 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-sand-light);
+      margin-bottom: 6px;
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.8rem;
+      color: var(--text-dark-muted);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .btn-footer-reserve {
+      background: var(--sand-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      box-shadow: var(--shadow-sand);
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--sand-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(216, 199, 181, 0.4);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-dark-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      line-height: 1;
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
+      z-index: 999999;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      touch-action: manipulation;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) translateY(-3px) translate3d(0, 0, 0);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    .whatsapp-float i {
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (Media Queries)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pillar-item:nth-child(3) {
+        border-right: none;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none !important;
+      }
+
+      .brand-title {
+        font-size: 1.35rem;
+      }
+
+      .brand-tagline {
+        font-size: 0.62rem;
+      }
+
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      /* Hero Móvil Calibrado (MÍNIMO 720px OBLIGATORIO) */
+      .hero-fullwidth-section {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: 720px !important;
+        padding: 130px 16px 36px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-bg-img {
+        object-position: center top;
+        opacity: 0.92;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(20, 19, 18, 0) 0%,
+          rgba(20, 19, 18, 0.2) 36%,
+          rgba(20, 19, 18, 0.85) 64%,
+          rgba(20, 19, 18, 0.98) 88%,
+          #141312 100%
+        );
+      }
+
+      .hero-content {
+        padding: 0;
+        width: 100%;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+        width: 100%;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.86rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.86rem;
+      }
+
+      /* Pilares en Móvil: Carrusel Horizontal con Scroll Snap */
+      .pillars-section {
+        padding: 16px 0;
+        overflow: hidden;
+      }
+
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 16px 8px;
+        margin: 0 -16px;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 auto;
+        min-width: 220px;
+        max-width: 250px;
+        scroll-snap-align: start;
+        background: var(--bg-dark-surface);
+        border: 1px solid var(--border-dark);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+        border-right: 1px solid var(--border-dark);
+        border-bottom: none;
+      }
+
+      .pillar-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+      }
+
+      .pillar-text h4 {
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+
+      .pillar-text p {
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+
+      /* REGLA MANDATORIA: SERVICIOS Y EQUIPO EN 2 COLUMNAS EN MÓVIL (<768px) */
+      .services-grid,
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .service-body,
+      .team-card {
+        padding: 14px 10px 12px;
+      }
+
+      .service-img-wrapper {
+        height: 120px;
+      }
+
+      .service-title,
+      .team-name {
+        font-size: 0.95rem;
+        line-height: 1.2;
+      }
+
+      .service-desc {
+        display: none;
+      }
+
+      .service-badge-pill {
+        font-size: 0.65rem;
+        padding: 2px 7px;
+      }
+
+      .btn-card-book,
+      .btn-team-book {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.72rem;
+        padding: 7px 8px;
+        white-space: nowrap;
+      }
+
+      .team-photo-box {
+        width: 100%;
+        max-width: 84px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 auto 8px;
+      }
+
+      .team-avatar {
+        width: 100%;
+        height: 100%;
+      }
+
+      .team-badge {
+        display: none !important;
+      }
+
+      .team-role {
+        font-size: 0.7rem;
+        min-height: 2.4em;
+        line-height: 1.2;
+        margin-bottom: 4px;
+      }
+
+      .team-rating {
+        font-size: 0.72rem;
+        margin-bottom: 8px;
+      }
+
+      /* Sobre Nosotros en Móvil */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .salon-image-showcase img {
+        height: 280px;
+      }
+
+      .experience-floating-badge {
+        bottom: 16px;
+        left: 16px;
+        padding: 10px 16px;
+      }
+
+      .experience-floating-badge strong {
+        font-size: 1.8rem;
+      }
+
+      .experience-text-content {
+        text-align: center;
+      }
+
+      .experience-text-content .experience-title {
+        font-size: 2.2rem;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .metric-item strong {
+        font-size: 1.7rem;
+      }
+
+      /* Mapa Responsive en Móvil */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-light);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .whatsapp-float {
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 18px !important;
+        width: 54px !important;
+        height: 54px !important;
+        font-size: 1.8rem !important;
+        z-index: 999999 !important;
+        overflow: hidden !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <header class="header-sticky-wrapper" id="stickyHeader">
+    <div class="site-header">
+      <div class="container nav-container">
+        <a href="#inicio" class="brand-logo" aria-label="Inicio Sarón Spa">
+          <i class="fa-solid fa-sparkles brand-icon"></i>
+          <div>
+            <span class="brand-title">SARÓN <span>SPA</span></span>
+            <span class="brand-tagline">Centro de Estética & Belleza • Apartadó</span>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#servicios" class="nav-link">Tratamientos</a></li>
+            <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+            <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+            <i class="fa-solid fa-calendar-check"></i> Agendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+         ========================================================================== -->
+    <section class="hero-fullwidth-section" id="inicio">
+      <!-- Fotografía de Modelo Spa a la Derecha -->
+      <div class="hero-bg-cover">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1920&q=85" alt="Modelo de Belleza y Estética en Sarón Spa" class="hero-bg-img" loading="eager" width="1920" height="1080">
+      </div>
+
+      <!-- Overlay Máscara Gradiente -->
+      <div class="hero-bg-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text-block">
+          <span class="hero-eyebrow"><i class="fa-solid fa-spa"></i> Centro de Estética & Spa • Apartadó</span>
+
+          <h1 class="hero-title">
+            Realza Tu Belleza.
+            <span>Descubre Tu Mejor Versión.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Tratamientos faciales avanzados, moldeo corporal y spa relajante en <strong>Nueva Civilización, Apartadó</strong>. Procedimientos no invasivos y atención personalizada para consentir tu piel y cuerpo.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20mi%20cita%20de%20est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-calendar-days"></i> Agendar Cita
+            </a>
+            <a href="#servicios" class="btn-secondary">
+              Ver Tratamientos <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BARRA DE PILARES / GARANTÍAS (5 Sellos NOVA MED SPA Style)
+         ========================================================================== -->
+    <section class="pillars-section" aria-label="Nuestras Garantías">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-shield-heart"></i></div>
+            <div class="pillar-text">
+              <h4>Seguridad Clínica</h4>
+              <p>Protocolos de máxima higiene</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="pillar-text">
+              <h4>Tecnología Segura</h4>
+              <p>Tratamientos no invasivos</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-user-check"></i></div>
+            <div class="pillar-text">
+              <h4>Cuidado Personal</h4>
+              <p>Evaluación previa a tu sesión</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-spa"></i></div>
+            <div class="pillar-text">
+              <h4>Cabinas VIP</h4>
+              <p>Privacidad, confort y paz</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="pillar-text">
+              <h4>Satisfacción Total</h4>
+              <p>Resultados visibles y reales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SECCIÓN CATÁLOGO: NUESTROS TRATAMIENTOS (#servicios) — CONTRASTE CASHMERE
+       ========================================================================== -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-script-eyebrow">Catálogo de Estética & Bienestar</span>
+          <h2 class="section-title section-title-light">Cuidado Integral para Ti</h2>
+          <p class="section-desc section-desc-light">Tecnologías de vanguardia y terapias manuales para embellecer y revitalizar tu piel.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Hidrodermoabrasión -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Hidrodermoabrasión & Limpieza Facial" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Hidrodermoabrasión & Facial</h3>
+              <p class="service-desc">Extracción profunda, vapor de ozono, peeling ultrasónico e hidratación con ácido hialurónico.</p>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-sparkles"></i> Piel de Seda</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $80.000 COP</span>
+              </div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20el%20servicio%20de%20Hidrodermoabrasi%C3%B3n%20%26%20Facial." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2: Rejuvenecimiento Facial -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80" alt="Rejuvenecimiento Facial & Glow" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Rejuvenecimiento Glow</h3>
+              <p class="service-desc">Protocolo antiedad con radiofrecuencia, principios tensores y máscara de fototerapia LED.</p>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 50 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Glow Inmediato</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $95.000 COP</span>
+              </div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20el%20servicio%20de%20Rejuvenecimiento%20Glow." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3: Moldeo Corporal -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" alt="Moldeo Corporal & Drenaje Linfático" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Moldeo & Drenaje Linfático</h3>
+              <p class="service-desc">Cavitación y drenaje localizado para reducir medidas, tonificar y eliminar toxinas.</p>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-person-dress"></i> Reducción & Firmeza</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $90.000 COP</span>
+              </div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20el%20servicio%20de%20Moldeo%20%26%20Drenaje%20Linf%C3%A1tico." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 4: Masaje con Piedras Volcánicas -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masaje Relajante con Piedras Volcánicas" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Masaje Piedras Volcánicas</h3>
+              <p class="service-desc">Terapia descontracturante con aromaterapia, aceites esenciales calientes y piedras termales.</p>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-hand-holding-heart"></i> Antiestrés Total</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $75.000 COP</span>
+              </div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20el%20Masaje%20con%20Piedras%20Volc%C3%A1nicas." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 5: Cejas & Pestañas HD -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=80" alt="Diseño de Cejas & Pestañas HD" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Cejas & Pestañas HD</h3>
+              <p class="service-desc">Depilación hindú, micropigmentación temporal con henna y lifting de pestañas con keratina.</p>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 45 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-eye"></i> Mirada de Impacto</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $55.000 COP</span>
+              </div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20el%20Dise%C3%B1o%20de%20Cejas%20%26%20Pesta%C3%B1as%20HD." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 6: Maderoterapia Anticelulítica -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Maderoterapia & Tratamiento Anticelulítico" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Maderoterapia & Anticelulítico</h3>
+              <p class="service-desc">Técnica con maderas terapéuticas para activar la microcirculación y reafirmar tejidos.</p>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 50 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-heart-pulse"></i> Firmeza & Moldeo</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $85.000 COP</span>
+              </div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20Maderoterapia%20Anticelul%C3%ADtica." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN OFICIAL: SOBRE NOSOTROS & PROFESIONALES (#nosotros) — CRISMAR
+         ========================================================================== -->
+    <section class="specialists-section" id="nosotros">
+      <div class="container">
+        
+        <!-- 1. COMPOSICIÓN EDITORIAL: SOBRE NOSOTROS (NOVA MED SPA Style) -->
+        <div class="experience-layout">
+          <div class="salon-image-showcase">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" alt="Ambiente y Cabinas VIP en Sarón Spa" loading="lazy" width="1000" height="700">
+            <div class="experience-floating-badge">
+              <strong>VIP</strong>
+              <span>Experiencia Spa</span>
+            </div>
+          </div>
+
+          <div class="experience-text-content">
+            <span class="section-script-eyebrow">Sobre Nosotros</span>
+            <h2 class="experience-title">CIENCIA. BIENESTAR. <br><span>RESULTADOS REALES.</span></h2>
+            <p>
+              En Sarón Spa combinamos el cuidado médico estético no invasivo con la calidez del spa tradicional en Apartadó. Diseñamos cada sesión según las necesidades únicas de tu piel y cuerpo para brindarte una transformación visible, natural y duradera.
+            </p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <strong>+8</strong>
+                <span>Años Exp.</span>
+              </div>
+              <div class="metric-item">
+                <strong>+5K</strong>
+                <span>Tratamientos</span>
+              </div>
+              <div class="metric-item">
+                <strong>100%</strong>
+                <span>No Invasivo</span>
+              </div>
+              <div class="metric-item">
+                <strong>5.0</strong>
+                <span>Calificación ★</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20el%20spa." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-sparkles"></i> Conoce Nuestro Spa
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. GRID DE ESPECIALISTAS -->
+        <div class="section-header-center" style="margin-top: 60px; margin-bottom: 30px;">
+          <span class="section-script-eyebrow">Nuestro Equipo</span>
+          <h2 class="section-title section-title-dark">Especialistas Certificadas</h2>
+          <p class="section-desc section-desc-dark">Profesionales dedicadas a brindarte un servicio ético, cálido y de excelencia.</p>
+        </div>
+
+        <div class="team-grid" id="equipo">
+          <!-- Especialista 1: Dra. Sara Vélez -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=500&q=80" alt="Dra. Sara Vélez" class="team-avatar">
+              <span class="team-badge">Directora</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dra. Sara Vélez</h3>
+              <span class="team-role">Directora & Estética Médica</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20cita%20con%20la%20Dra.%20Sara%20V%C3%A9lez." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Especialista 2: Valentina Cardona -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Valentina Cardona" class="team-avatar">
+              <span class="team-badge">Master Facial</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Valentina Cardona</h3>
+              <span class="team-role">Cosmiatra & Terapeuta Facial</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20cita%20con%20Valentina%20Cardona." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Especialista 3: Camila Murillo -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Camila Murillo" class="team-avatar">
+              <span class="team-badge">Terapeuta Pro</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Camila Murillo</h3>
+              <span class="team-role">Especialista en Moldeo Corporal</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20cita%20con%20Camila%20Murillo." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Especialista 4: Marcela Rentería -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Marcela Rentería" class="team-avatar">
+              <span class="team-badge">Senior Spa</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Marcela Rentería</h3>
+              <span class="team-role">Masoterapeuta & Relajación</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+              <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20cita%20con%20Marcela%20Renter%C3%ADa." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN MAPA & CONTACTO (#ubicacion)
+         ========================================================================== -->
+    <section class="map-section" id="ubicacion">
+      <div class="container">
+        <div class="map-showcase-card">
+          <div class="map-info-panel">
+            <span class="section-script-eyebrow">Encuéntranos en Apartadó</span>
+            <h3>Visítanos en Nuestro Spa</h3>
+            <p>Ubicados en un sector exclusivo y tranquilo para brindarte la mayor privacidad, comodidad y confort en cada cita.</p>
+
+            <div class="location-details-list">
+              <div class="loc-item">
+                <div class="loc-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="loc-item-text">
+                  <strong>Dirección Principal</strong>
+                  <span>Nueva Civilización vía al estadio, Cl. 104 #101 - 24, Apartadó, Antioquia</span>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <div class="loc-item-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="loc-item-text">
+                  <strong>Teléfono & WhatsApp</strong>
+                  <span>(+57) 305 358 4269</span>
+                </div>
+              </div>
+
+              <div class="loc-item">
+                <div class="loc-item-icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="loc-item-text">
+                  <strong>Horarios de Atención</strong>
+                  <span>Lunes a Sábado: 8:00 AM - 7:00 PM</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20deseo%20agendar%20mi%20cita%20o%20conocer%20la%20ubicaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-primary" style="align-self: flex-start;">
+              <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+            </a>
+          </div>
+
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Sar%C3%B3n+Spa+Centro+de+Est%C3%A9tica+y+Belleza,+Cl.+104+%23101+-+24,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              title="Mapa de Ubicación Sarón Spa Apartadó">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <span class="brand-title">SARÓN <span>SPA</span></span>
+          <p>Centro de Estética Médica & Bienestar en Apartadó, Antioquia. Tratamientos no invasivos diseñados para realzar tu belleza y renovar tu cuerpo.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/573053584269" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/saron.spa/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Tratamientos</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#nosotros">Especialistas</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tratamientos</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Hidrodermoabrasión</a></li>
+            <li><a href="#servicios">Rejuvenecimiento Glow</a></li>
+            <li><a href="#servicios">Moldeo Corporal</a></li>
+            <li><a href="#servicios">Piedras Volcánicas</a></li>
+            <li><a href="#servicios">Cejas & Pestañas HD</a></li>
+            <li><a href="#servicios">Maderoterapia</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-reserve-box">
+            <h5>Agenda Tu Cita VIP</h5>
+            <p>Atención personalizada en cabinas privadas de spa.</p>
+            <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+              <i class="fa-solid fa-calendar-check"></i> Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sarón Spa Centro de Estética y Belleza. Todos los derechos reservados. Apartadó, Antioquia.</p>
+        <p>Estética No Invasiva & Bienestar • Calificación 5.0 ★</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== -->
+  <a href="https://wa.me/573053584269?text=Hola%20Sar%C3%B3n%20Spa%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       JAVASCRIPT AUTÓNOMO (Smart Header, Smooth Scroll & Auto-Scroll Pilares)
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smart Header con Auto-hide al scrollear
+      let lastScrollY = window.pageYOffset;
+      const header = document.getElementById('stickyHeader');
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.pageYOffset;
+        
+        if (currentScrollY > 120) {
+          if (currentScrollY > lastScrollY) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          header.classList.remove('header-hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // Smooth scroll para todos los enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              targetElement.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
+      const pillarsGrid = document.querySelector('.pillars-grid');
+      if (pillarsGrid) {
+        let scrollInterval = null;
+        let isUserInteracting = false;
+        let resumeTimeout = null;
+
+        const getScrollStep = () => {
+          const firstItem = pillarsGrid.querySelector('.pillar-item');
+          if (!firstItem) return 240;
+          const gap = parseInt(window.getComputedStyle(pillarsGrid).gap) || 12;
+          return firstItem.offsetWidth + gap;
+        };
+
+        const autoScrollStep = () => {
+          if (isUserInteracting || window.innerWidth > 768) return;
+          const maxScroll = pillarsGrid.scrollWidth - pillarsGrid.clientWidth;
+          const step = getScrollStep();
+          
+          if (pillarsGrid.scrollLeft + step >= maxScroll - 10) {
+            pillarsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            pillarsGrid.scrollBy({ left: step, behavior: 'smooth' });
+          }
+        };
+
+        const startAutoScroll = () => {
+          if (!scrollInterval) {
+            scrollInterval = setInterval(autoScrollStep, 3000);
+          }
+        };
+
+        const pauseOnTouch = () => {
+          isUserInteracting = true;
+          if (resumeTimeout) clearTimeout(resumeTimeout);
+          resumeTimeout = setTimeout(() => {
+            isUserInteracting = false;
+          }, 4000);
+        };
+
+        pillarsGrid.addEventListener('touchstart', pauseOnTouch, { passive: true });
+        pillarsGrid.addEventListener('touchmove', pauseOnTouch, { passive: true });
+        pillarsGrid.addEventListener('mousedown', pauseOnTouch);
+
+        startAutoScroll();
+      }
+    });
+  </script>
+</body>
+</html>

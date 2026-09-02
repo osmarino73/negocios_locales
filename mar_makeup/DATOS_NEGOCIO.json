@@ -1,0 +1,149 @@
+{
+  "negocio": {
+    "nombre": "Mar_makeup💕",
+    "rubro": "Centro de Estética & Maquillaje Profesional",
+    "categoria": "estetica_maquillaje",
+    "eslogan": "Realza Tu Belleza. Revela Tu Mejor Versión en Turbo.",
+    "calificacion": "4.8",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 305 934 2141",
+      "telefono_limpio": "+573059342141",
+      "whatsapp": {
+        "numero": "+573059342141",
+        "link": "https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita.",
+        "mensaje_base": "Hola Mar_makeup💕, quisiera solicitar información y agendar una cita."
+      },
+      "email": "contacto@marmakeup.com",
+      "instagram": "@mar_makeup"
+    },
+    "ubicacion": {
+      "direccion": "Barrio Baltazar",
+      "barrio_referencia": "Sector Baltazar",
+      "ciudad": "Turbo",
+      "departamento_pais": "Antioquia, Colombia",
+      "coordenadas": {
+        "lat": "8.0943539",
+        "lng": "-76.7259609"
+      },
+      "google_maps_url": "https://www.google.com/maps/place/Mar_makeup%F0%9F%92%95/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e506505259c10e7:0xdd4a99aa5f4f70c7!8m2!3d8.0943539!4d-76.7259609!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11vyhxh8nm",
+      "iframe_formula": "https://maps.google.com/maps?q=Mar_makeup,+Barrio+Baltazar,+Turbo,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 6:30 PM",
+      "domingo": "Previa Cita",
+      "festivos": "Previa Cita"
+    },
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "canal_directo": "WhatsApp Instantáneo & Llamada Telefónica"
+    },
+    "pilares_garantia": [
+      {
+        "titulo": "Esteticistas Expertas",
+        "descripcion": "Profesionales certificadas en maquillaje HD, cosmetología y micropigmentación."
+      },
+      {
+        "titulo": "Productos Prémium",
+        "descripcion": "Marcas dermatológicas y cosmética de alta fidelidad hipoalergénica."
+      },
+      {
+        "titulo": "Diagnóstico Personalizado",
+        "descripcion": "Evaluación previa de piel y morfología facial para resultados armoniosos."
+      },
+      {
+        "titulo": "Higiene & Bioseguridad",
+        "descripcion": "Protocolos estrictos de esterilización, descartables y cabina clínica limpia."
+      },
+      {
+        "titulo": "Satisfacción 100%",
+        "descripcion": "Atención cálida, puntual y adaptada a cada ocasión y estilo personal."
+      }
+    ],
+    "servicios": [
+      {
+        "id": "maquillaje-glam-vip",
+        "nombre": "Maquillaje Social & Glam VIP",
+        "categoria": "Maquillaje Profesional",
+        "descripcion": "Preparación cutánea blindada, contornos definidos, pestañas de visón y fijación de 24 horas.",
+        "precio": "$75.000",
+        "duracion": "75 min",
+        "badge": "⭐ Bestseller",
+        "imagen": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Mar_makeup💕, deseo agendar el servicio de Maquillaje Social & Glam VIP."
+      },
+      {
+        "id": "facial-glow-profundo",
+        "nombre": "Limpieza Facial Profunda & Glow",
+        "categoria": "Estética Facial",
+        "descripcion": "Higienización clínica, hidro-peeling ultrasónico, extracción sin dolor, alta frecuencia y mascarilla hidratante.",
+        "precio": "$50.000",
+        "duracion": "60 min",
+        "badge": "Piel Radiante",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Mar_makeup💕, deseo agendar el servicio de Limpieza Facial Profunda & Glow."
+      },
+      {
+        "id": "diseno-laminado-cejas",
+        "nombre": "Diseño, Henna & Laminado de Cejas",
+        "categoria": "Mirada Perfecta",
+        "descripcion": "Visagismo facial milimétrico, perfilado orgánico, nutrición con keratina y pigmentación semipermanente.",
+        "precio": "$35.000",
+        "duracion": "45 min",
+        "badge": "Efecto Natural",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Mar_makeup💕, deseo agendar el servicio de Diseño, Henna & Laminado de Cejas."
+      },
+      {
+        "id": "pestanas-pelo-a-pelo",
+        "nombre": "Pestañas Pelo a Pelo & Lifting",
+        "categoria": "Extensiones & Mirada",
+        "descripcion": "Aplicación minuciosa técnica clásica o volumen ruso ligero con curvatura perfecta y adhesivo médico hipoalergénico.",
+        "precio": "$60.000",
+        "duracion": "90 min",
+        "badge": "Mirada Impacto",
+        "imagen": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Mar_makeup💕, deseo agendar el servicio de Pestañas Pelo a Pelo & Lifting."
+      },
+      {
+        "id": "tratamiento-anti-acne",
+        "nombre": "Terapia Anti-Acné & Control Sebo",
+        "categoria": "Cuidado Clínico",
+        "descripcion": "Protocolo desincrustante, fototerapia LED azul antibacteriana y sueros seborreguladores botánicos.",
+        "precio": "$55.000",
+        "duracion": "60 min",
+        "badge": "Regenerativo",
+        "imagen": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Mar_makeup💕, deseo agendar el servicio de Terapia Anti-Acné & Control Sebo."
+      },
+      {
+        "id": "spa-relajante-facial",
+        "nombre": "Ritual Spa Facial & Masaje Craneal",
+        "categoria": "Bienestar & Relax",
+        "descripcion": "Drenaje linfático facial, mascarilla de alginatos fríos, cuarzos de jade y masaje relajante de cuello y hombros.",
+        "precio": "$45.000",
+        "duracion": "50 min",
+        "badge": "Anti-Estrés",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Mar_makeup💕, deseo agendar el servicio de Ritual Spa Facial & Masaje Craneal."
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Mar Ramos",
+        "rol": "Directora & Master Makeup Artist",
+        "experiencia": "+8 años de experiencia",
+        "descripcion": "Especialista en maquillaje social de alta definición, visagismo y protocolos de estética facial avanzada.",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Camila Suárez",
+        "rol": "Cosmiatra & Especialista en Mirada",
+        "experiencia": "+5 años de experiencia",
+        "descripcion": "Experta en hidro-faciales, laminado de cejas, extensiones de pestañas pelo a pelo y dermo-tratamientos.",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+}

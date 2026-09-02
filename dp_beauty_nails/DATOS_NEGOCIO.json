@@ -1,0 +1,123 @@
+{
+  "negocio": {
+    "nombre": "Dp Beauty Nails",
+    "rubro": "Salón de manicura y pedicura",
+    "categoria": "nails",
+    "eslogan": "Dp Beauty Nails — Salón de manicura, pedicura y nail art en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 300 507 8357",
+      "telefono_raw": "+573005078357",
+      "whatsapp": {
+        "numero": "+573005078357",
+        "link": "https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 97 #98-20, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Dp+Beauty+Nails/@7.8816604,-76.6480189,15z/data=!4m10!1m2!2m1!1ssalones+de+belleza+en+apartado!3m6!1s0x8e500da8fd35207d:0x3f81c666f93c9320!8m2!3d7.8816604!4d-76.6299945!15sCh5zYWxvbmVzIGRlIGJlbGxlemEgZW4gYXBhcnRhZG9aICIec2Fsb25lcyBkZSBiZWxsZXphIGVuIGFwYXJ0YWRvkgEKbmFpbF9zYWxvbpoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQycG5lVTlHYUhWT1ZqbHpUVmRqTTJSclJrTk9NMWt3V25reE5GUnJSUkFC4AEA-gEECAAQOw!16s%2Fg%2F11n554kfcp",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Dp+Beauty+Nails,+Cra.+97+%2398-20,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa cita y disponibilidad"
+    },
+    "servicios": [
+      {
+        "id": "manicura-clasica",
+        "nombre": "Manicura Clásica & Spa",
+        "precio": "$25.000 COP",
+        "duracion": "45 min",
+        "tecnica": "Esmaltado Tradicional",
+        "icono": "fa-hand-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "esmaltado-semipermanente",
+        "nombre": "Esmaltado Semipermanente",
+        "precio": "$45.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Brillo Intacto 21 Días",
+        "icono": "fa-gem",
+        "imagen": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "unas-acrilicas",
+        "nombre": "Extensiones Acrílicas",
+        "precio": "Desde $85.000 COP",
+        "duracion": "90 min",
+        "tecnica": "Esculpido & Estructura",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "nail-art-diseno",
+        "nombre": "Nail Art & Diseños",
+        "precio": "Desde $20.000 COP",
+        "duracion": "30 min",
+        "tecnica": "Mano Alzada & Efectos",
+        "icono": "fa-paint-brush",
+        "imagen": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "pedicura-spa",
+        "nombre": "Pedicura Spa & Relax",
+        "precio": "$40.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Exfoliación & Hidratación",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "kapping-nivelacion",
+        "nombre": "Kapping & Gel Nivelador",
+        "precio": "$55.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Protección & Crecimiento",
+        "icono": "fa-shield-halved",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": "diana-perez",
+        "nombre": "Diana Pérez",
+        "rol": "Directora & Master Nail Artist",
+        "experiencia": "+8 años exp.",
+        "badge": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "camila-morales",
+        "nombre": "Camila Morales",
+        "rol": "Especialista en Estructuras Acrílicas",
+        "experiencia": "+5 años exp.",
+        "badge": "Pro",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "valeria-ospina",
+        "nombre": "Valeria Ospina",
+        "rol": "Artista de Nail Art & Diseños HD",
+        "experiencia": "+4 años exp.",
+        "badge": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "mariana-rua",
+        "nombre": "Mariana Rúa",
+        "rol": "Terapeuta de Pedicura & Spa",
+        "experiencia": "+6 años exp.",
+        "badge": "Pro",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  }
+}

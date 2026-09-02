@@ -1,0 +1,2628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAGE CRAFTER PRO | Constructor de Homepages Exclusivas para Negocios Locales</title>
+  <meta name="description" content="Dashboard profesional para diseñar y generar landing pages exclusivas de alta conversión para negocios locales basadas en imágenes de referencia y datos estructurados.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+/* ==========================================================================
+   PAGE CRAFTER PRO - STUDIO DASHBOARD STYLES
+   ========================================================================== */
+:root {
+  --bg-black: #06080d;
+  --bg-sidebar: #0b0f19;
+  --bg-card: rgba(18, 24, 38, 0.75);
+  --bg-card-hover: rgba(28, 38, 59, 0.9);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(212, 175, 55, 0.35);
+  
+  --gold-primary: #d4af37;
+  --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+  --gold-shadow: 0 8px 32px rgba(212, 175, 55, 0.25);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-rose: #f43f5e;
+  --accent-purple: #a855f7;
+  --accent-orange: #f97316;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-black);
+  color: var(--text-main);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold-primary); }
+
+/* Topbar */
+.studio-topbar {
+  height: 68px;
+  background: rgba(11, 15, 25, 0.95);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 100;
+  flex-shrink: 0;
+}
+
+.topbar-left { display: flex; align-items: center; gap: 16px; }
+
+.back-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+.back-link:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+.brand-divider { width: 1px; height: 28px; background: var(--border-color); }
+
+.studio-brand { display: flex; align-items: center; gap: 12px; }
+
+.brand-gem {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--gold-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b0f19;
+  font-size: 18px;
+  box-shadow: var(--gold-shadow);
+}
+
+.brand-info h1 {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-vip {
+  font-size: 10px;
+  font-weight: 800;
+  background: var(--gold-gradient);
+  color: #0b0f19;
+  padding: 2px 6px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+}
+
+.brand-info p { font-size: 11px; color: var(--text-muted); }
+
+/* Mode Switcher Tabs */
+.mode-pills {
+  display: flex;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  gap: 4px;
+}
+
+.mode-pill {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-fast);
+}
+.mode-pill:hover { color: #fff; }
+.mode-pill.active {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Topbar Actions */
+.topbar-right { display: flex; align-items: center; gap: 12px; }
+
+.btn-action-glow {
+  background: var(--gold-gradient);
+  color: #0b0f19;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--gold-shadow);
+  transition: var(--transition-fast);
+}
+.btn-action-glow:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(212, 175, 55, 0.4); }
+
+.btn-action-ghost {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-fast);
+}
+.btn-action-ghost:hover { background: rgba(255, 255, 255, 0.12); }
+
+/* Workspace Layout */
+.studio-workspace {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.workspace-tab {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.workspace-tab:not(.active) { display: none !important; }
+
+/* Sidebar Configuration */
+.workflow-sidebar {
+  width: 440px;
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Accordion */
+.accordion-panel { border-bottom: 1px solid var(--border-color); }
+.accordion-header {
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-fast);
+}
+.accordion-header:hover { background: rgba(255, 255, 255, 0.05); }
+
+.header-title { display: flex; align-items: center; gap: 12px; }
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+.icon-circle.gold { background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); }
+.icon-circle.teal { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); }
+.icon-circle.purple { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); }
+
+.header-title h3 { font-size: 14px; font-weight: 700; }
+.header-title p { font-size: 11px; color: var(--text-muted); }
+.toggle-icon { font-size: 12px; color: var(--text-dim); transition: transform 0.3s ease; }
+.accordion-panel.active .toggle-icon { transform: rotate(180deg); }
+.accordion-body { padding: 20px; display: none; }
+.accordion-panel.active .accordion-body { display: block; }
+
+/* Dropzone */
+.dropzone {
+  display: block;
+  border: 2px dashed rgba(212, 175, 55, 0.4);
+  border-radius: var(--radius-md);
+  padding: 24px 16px;
+  text-align: center;
+  background: rgba(212, 175, 55, 0.03);
+  transition: var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.dropzone:hover, .dropzone.dragover {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.08);
+}
+.drop-icon { font-size: 36px; color: var(--gold-primary); margin-bottom: 12px; }
+.dropzone-empty h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.dropzone-empty p { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+.dropzone-empty code { background: rgba(255, 255, 255, 0.1); padding: 2px 6px; border-radius: 4px; color: var(--gold-primary); }
+
+.btn-sm-browse {
+  background: var(--gold-gradient);
+  color: #0b0f19;
+  border: none;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.dropzone-preview {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  max-height: 180px;
+}
+.dropzone-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.preview-actions { position: absolute; top: 8px; right: 8px; display: flex; gap: 6px; }
+.btn-mini {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 11px;
+}
+.btn-mini:hover { background: var(--accent-rose); }
+
+/* Palette & Color Settings */
+.palette-box {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+.palette-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.label-tag { font-size: 12px; font-weight: 700; color: var(--text-muted); }
+.btn-text { background: transparent; border: none; color: var(--gold-primary); font-size: 11px; font-weight: 700; cursor: pointer; }
+.btn-text:hover { text-decoration: underline; }
+
+.color-pickers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.color-field label { display: block; font-size: 11px; color: var(--text-muted); margin-bottom: 6px; }
+.color-input-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 4px 8px;
+  gap: 8px;
+}
+.color-input-wrap input[type="color"] { border: none; width: 24px; height: 24px; border-radius: 4px; cursor: pointer; background: transparent; }
+.hex-input { background: transparent; border: none; color: #fff; font-size: 12px; font-family: monospace; width: 100%; }
+.hex-input:focus { outline: none; }
+
+.label-sub { display: block; font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; margin-top: 14px; }
+.vibe-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.vibe-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+}
+.vibe-chip:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+.vibe-chip.active { background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); border-color: var(--gold-primary); }
+
+/* Form & Inputs */
+.data-source-toggle {
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  margin-bottom: 16px;
+  gap: 4px;
+}
+.src-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+}
+.src-btn.active { background: rgba(255, 255, 255, 0.1); color: #fff; }
+
+.quick-loader {
+  background: rgba(6, 182, 212, 0.06);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 12px;
+  color: var(--accent-cyan);
+}
+.styled-select-sm { background: rgba(0, 0, 0, 0.5); border: 1px solid rgba(6, 182, 212, 0.4); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 6px; }
+
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: 11px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+.styled-input, .styled-select {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+.styled-input:focus, .styled-select:focus { outline: none; border-color: var(--gold-primary); box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2); }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* Services List Manager */
+.services-manager { margin-top: 18px; background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; }
+.sm-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sm-header h4 { font-size: 12px; font-weight: 700; color: var(--text-muted); }
+.btn-mini-add { background: rgba(16, 185, 129, 0.15); border: 1px solid var(--accent-emerald); color: var(--accent-emerald); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; cursor: pointer; }
+.services-list { display: flex; flex-direction: column; gap: 8px; }
+.service-card-item { background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 10px; display: flex; flex-direction: column; gap: 6px; }
+.svc-row-top { display: flex; gap: 8px; align-items: center; }
+.svc-name-input { flex: 1; background: transparent; border: 1px solid var(--border-color); color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+.svc-price-input { width: 90px; background: transparent; border: 1px solid var(--border-color); color: var(--gold-primary); padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: 700; }
+.btn-del-svc { background: transparent; border: none; color: var(--text-dim); cursor: pointer; padding: 4px; }
+.btn-del-svc:hover { color: var(--accent-rose); }
+.svc-desc-input { width: 100%; background: transparent; border: 1px solid rgba(255, 255, 255, 0.05); color: var(--text-muted); padding: 4px 8px; border-radius: 4px; font-size: 11px; }
+
+/* Trust Grid */
+.trust-manager { margin-top: 18px; background: rgba(0, 0, 0, 0.2); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; }
+.trust-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+.trust-item { display: flex; flex-direction: column; gap: 4px; }
+.trust-item input { font-size: 11px; padding: 6px; }
+
+/* JSON Editor */
+.data-json { display: flex; flex-direction: column; gap: 8px; }
+.json-tools { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-muted); }
+.json-textarea { width: 100%; height: 360px; background: #020408; border: 1px solid var(--border-color); color: #38bdf8; font-family: 'Fira Code', monospace; font-size: 12px; padding: 12px; border-radius: var(--radius-sm); resize: vertical; }
+.json-status { font-size: 11px; padding: 4px 8px; border-radius: 4px; display: inline-block; }
+.json-status.valid { background: rgba(16, 185, 129, 0.2); color: var(--accent-emerald); }
+.json-status.invalid { background: rgba(244, 63, 94, 0.2); color: var(--accent-rose); }
+
+/* Features Checklist */
+.features-checklist { display: flex; flex-direction: column; gap: 12px; }
+.check-container { display: flex; align-items: flex-start; gap: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); padding: 12px; border-radius: var(--radius-sm); cursor: pointer; transition: var(--transition-fast); }
+.check-container:hover { background: rgba(255, 255, 255, 0.06); }
+.check-container input { margin-top: 3px; accent-color: var(--gold-primary); width: 16px; height: 16px; cursor: pointer; }
+.check-label strong { display: block; font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.check-label small { display: block; font-size: 11px; color: var(--text-muted); }
+
+/* Workflow Preview Area & Split Screen */
+.workflow-preview-area { flex: 1; display: flex; flex-direction: column; background: #030508; overflow: hidden; }
+.preview-toolbar { height: 52px; background: rgba(11, 15, 25, 0.85); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; }
+.split-controls { display: flex; background: rgba(0, 0, 0, 0.3); padding: 3px; border-radius: 8px; border: 1px solid var(--border-color); gap: 4px; }
+.split-btn { background: transparent; border: none; color: var(--text-muted); font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: var(--transition-fast); }
+.split-btn:hover { color: #fff; }
+.split-btn.active { background: rgba(255, 255, 255, 0.12); color: #fff; }
+
+.device-switcher { display: flex; background: rgba(0, 0, 0, 0.3); padding: 3px; border-radius: 8px; border: 1px solid var(--border-color); gap: 4px; }
+.device-btn { background: transparent; border: none; color: var(--text-muted); width: 32px; height: 28px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 13px; transition: var(--transition-fast); }
+.device-btn:hover { color: #fff; }
+.device-btn.active { background: var(--gold-primary); color: #0b0f19; }
+
+.toolbar-right { display: flex; gap: 8px; }
+.btn-refresh-preview, .btn-open-external { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-muted); width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition-fast); }
+.btn-refresh-preview:hover, .btn-open-external:hover { color: #fff; background: rgba(255, 255, 255, 0.12); }
+
+/* Split Container */
+.preview-display-container { flex: 1; display: flex; overflow: hidden; position: relative; }
+.display-pane { display: flex; flex-direction: column; overflow: hidden; height: 100%; }
+.ref-pane { width: 40%; background: #080b12; border-right: 1px solid var(--border-color); }
+.split-gutter { width: 8px; background: rgba(255, 255, 255, 0.02); cursor: col-resize; position: relative; z-index: 10; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+.split-gutter:hover { background: var(--gold-primary); }
+.gutter-handle { width: 2px; height: 30px; background: rgba(255, 255, 255, 0.2); border-radius: 2px; }
+.web-pane { flex: 1; background: #000; }
+
+.pane-header { height: 36px; background: rgba(18, 24, 38, 0.6); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; padding: 0 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; }
+.pane-title { display: flex; align-items: center; gap: 6px; color: var(--text-muted); }
+.zoom-controls { display: flex; align-items: center; gap: 6px; }
+.zoom-controls button { background: transparent; border: none; color: var(--text-dim); cursor: pointer; font-size: 10px; }
+.zoom-controls button:hover { color: #fff; }
+.zoom-controls span { font-size: 10px; color: var(--text-muted); }
+.render-badge { color: var(--accent-emerald); font-size: 11px; display: flex; align-items: center; gap: 4px; }
+
+/* Reference View */
+.ref-scroll-view { flex: 1; overflow: auto; display: flex; align-items: center; justify-content: center; padding: 20px; position: relative; background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0); background-size: 20px 20px; }
+.ref-placeholder { text-align: center; color: var(--text-dim); max-width: 260px; }
+.ref-placeholder i { font-size: 48px; margin-bottom: 12px; }
+.ref-placeholder p { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; }
+.ref-scroll-view img { max-width: 100%; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); border-radius: 8px; transition: transform 0.2s ease; transform-origin: top center; }
+
+/* Web Frame Wrapper */
+.web-frame-wrapper { flex: 1; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #0d1117; padding: 16px; }
+.web-frame-wrapper iframe { border: none; background: #fff; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6); border-radius: 8px; transition: width 0.3s ease, height 0.3s ease; }
+.web-frame-wrapper.device-desktop iframe { width: 100%; height: 100%; border-radius: 0; }
+.web-frame-wrapper.device-tablet iframe { width: 768px; height: 100%; border-radius: 16px; border: 8px solid #2d3748; }
+.web-frame-wrapper.device-mobile iframe { width: 390px; height: 100%; border-radius: 36px; border: 10px solid #2d3748; }
+
+/* Presets Gallery */
+.presets-gallery-container { flex: 1; padding: 40px; overflow-y: auto; max-width: 1200px; margin: 0 auto; }
+.gallery-header { margin-bottom: 32px; }
+.gallery-header h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.gallery-header p { color: var(--text-muted); font-size: 14px; }
+.presets-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+.preset-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 24px; cursor: pointer; transition: var(--transition-smooth); position: relative; overflow: hidden; }
+.preset-card:hover { transform: translateY(-4px); border-color: var(--gold-primary); background: var(--bg-card-hover); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4); }
+.preset-badge { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; display: inline-block; margin-bottom: 16px; }
+.preset-badge.spa { background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); }
+.preset-badge.kids { background: rgba(249, 115, 22, 0.15); color: var(--accent-orange); }
+.preset-badge.vet { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); }
+.preset-badge.barber { background: rgba(168, 85, 247, 0.15); color: var(--accent-purple); }
+.preset-badge.tech { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); }
+.preset-card h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+.preset-card p { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.5; }
+.preset-meta { display: flex; gap: 16px; font-size: 12px; color: var(--text-dim); margin-bottom: 20px; }
+.btn-preset-load { width: 100%; background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border-color); color: #fff; padding: 10px; border-radius: var(--radius-sm); font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition-fast); }
+.preset-card:hover .btn-preset-load { background: var(--gold-gradient); color: #0b0f19; border-color: transparent; }
+
+/* AI Context Triangle */
+.context-triangle-container { flex: 1; padding: 40px; overflow-y: auto; max-width: 1100px; margin: 0 auto; width: 100%; }
+.triangle-header { margin-bottom: 24px; }
+.triangle-header h2 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.triangle-header p { color: var(--text-muted); font-size: 14px; }
+.triangle-tabs { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; }
+.tri-tab-btn { background: transparent; border: none; color: var(--text-muted); font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; display: flex; align-items: center; gap: 8px; transition: var(--transition-fast); }
+.tri-tab-btn:hover { color: #fff; }
+.tri-tab-btn.active { background: rgba(212, 175, 55, 0.15); color: var(--gold-primary); }
+.triangle-content-box { background: #020408; border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; }
+.tri-content-header { background: rgba(255, 255, 255, 0.03); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); }
+.file-name-tag { font-family: monospace; font-size: 13px; color: var(--accent-cyan); font-weight: 700; }
+.tri-actions { display: flex; gap: 8px; }
+.btn-copy-code, .btn-download-file { background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border-color); color: #fff; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 6px; }
+.btn-copy-code:hover, .btn-download-file:hover { background: rgba(255, 255, 255, 0.15); }
+.code-view { padding: 20px; overflow: auto; max-height: 500px; }
+.code-view code { font-family: 'Fira Code', Consolas, Monaco, monospace; font-size: 13px; color: #cbd5e1; line-height: 1.6; white-space: pre; }
+
+/* Modals & Toasts */
+.studio-modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(8px); }
+.modal-card { position: relative; background: #0c101a; border: 1px solid var(--border-color); border-radius: var(--radius-lg); width: 90%; max-width: 600px; padding: 28px; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8); animation: modalAppear 0.3s ease; }
+@keyframes modalAppear { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.modal-title { display: flex; align-items: center; gap: 12px; }
+.gold-icon { color: var(--gold-primary); font-size: 20px; }
+.btn-close-modal { background: transparent; border: none; color: var(--text-dim); font-size: 24px; cursor: pointer; }
+.btn-close-modal:hover { color: #fff; }
+.bundle-items-list { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+.bundle-item { display: flex; align-items: center; gap: 14px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); padding: 12px 16px; border-radius: var(--radius-sm); }
+.bi-icon { font-size: 20px; color: var(--gold-primary); }
+.bi-info { flex: 1; }
+.bi-info strong { display: block; font-size: 13px; margin-bottom: 2px; }
+.bi-info small { display: block; font-size: 11px; color: var(--text-muted); }
+.btn-download-single { background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-color); color: #fff; width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.btn-download-single:hover { background: var(--gold-primary); color: #0b0f19; }
+.modal-prompt-box { margin-top: 20px; }
+.modal-prompt-box label { display: block; font-size: 12px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; }
+.copy-box { display: flex; flex-direction: column; gap: 8px; }
+.copy-box textarea { background: #020408; border: 1px solid var(--border-color); color: #94a3b8; font-size: 12px; padding: 10px; border-radius: 6px; resize: none; font-family: inherit; }
+.btn-copy-prompt-action { background: var(--gold-gradient); color: #0b0f19; border: none; padding: 10px; border-radius: 6px; font-size: 13px; font-weight: 800; cursor: pointer; }
+
+/* Toast */
+.toast-container { position: fixed; bottom: 24px; right: 24px; display: flex; flex-direction: column; gap: 8px; z-index: 2000; }
+.toast { background: rgba(18, 24, 38, 0.95); backdrop-filter: blur(12px); border: 1px solid var(--border-color); border-left: 4px solid var(--gold-primary); color: #fff; padding: 12px 18px; border-radius: var(--radius-sm); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); font-size: 13px; display: flex; align-items: center; gap: 10px; animation: toastIn 0.3s ease; }
+@keyframes toastIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="theme-dark">
+
+  <!-- Top Global Navigation Bar -->
+  <header class="studio-topbar">
+    <div class="topbar-left">
+      <a href="../index.html" class="back-link" title="Volver al Showroom">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Showroom Hub</span>
+      </a>
+      <div class="brand-divider"></div>
+      <div class="studio-brand">
+        <div class="brand-gem">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+        </div>
+        <div class="brand-info">
+          <h1>PAGE CRAFTER <span class="badge-vip">PRO STUDIO</span></h1>
+          <p>Constructor de Landing Pages Exclusivas & SEO Local</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Mode Switcher -->
+    <div class="topbar-center">
+      <div class="mode-pills">
+        <button class="mode-pill active" data-tab="workflow">
+          <i class="fa-solid fa-layer-group"></i> <span>Diseñador & Generador</span>
+        </button>
+        <button class="mode-pill" data-tab="presets">
+          <i class="fa-solid fa-box-archive"></i> <span>Plantillas & Demos</span>
+        </button>
+        <button class="mode-pill" data-tab="context">
+          <i class="fa-solid fa-triangle-exclamation"></i> <span>Triángulo IA</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Topbar Actions -->
+    <div class="topbar-right">
+      <button class="btn-action-glow" id="btn-export-code" title="Generar y Exportar Archivos">
+        <i class="fa-solid fa-bolt"></i> <span>Generar Landing Exclusiva</span>
+      </button>
+      <button class="btn-action-ghost" id="btn-copy-prompt" title="Copiar Prompt IA para Antigravity">
+        <i class="fa-solid fa-sparkles"></i> <span>Copiar Prompt IA</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Application Workspace -->
+  <main class="studio-workspace">
+    
+    <!-- Tab 1: Main Creation Workflow -->
+    <section class="workspace-tab active" id="tab-workflow">
+      
+      <!-- LEFT CONFIGURATION SIDEBAR -->
+      <aside class="workflow-sidebar">
+        
+        <!-- Accordion Section 1: Visual Reference Image & Color Extraction -->
+        <div class="accordion-panel active" id="panel-visual">
+          <div class="accordion-header" onclick="toggleAccordion('panel-visual')">
+            <div class="header-title">
+              <div class="icon-circle gold"><i class="fa-solid fa-camera"></i></div>
+              <div>
+                <h3>1. Imagen de Referencia Visual</h3>
+                <p>Extrae diseño, estética, paleta y tipografía</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+
+          <div class="accordion-body">
+            
+            <!-- Hidden native file input -->
+            <input type="file" id="image-input" accept="image/*" style="display:none;" onchange="handleNativeFileInput(this)">
+
+            <!-- Clickable Label Dropzone for Reference Image -->
+            <label for="image-input" class="dropzone" id="image-dropzone">
+              <div class="dropzone-empty" id="dropzone-empty-state">
+                <div class="drop-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <h4>Haz clic aquí para seleccionar imagen</h4>
+                <p>O arrastra un archivo / Pega con <code>Ctrl + V</code></p>
+                <span class="btn-sm-browse">
+                  <i class="fa-solid fa-folder-open"></i> Explorar Archivo
+                </span>
+              </div>
+              <div class="dropzone-preview" id="dropzone-preview-state" style="display: none;">
+                <img id="ref-image-element" src="" alt="Referencia Visual">
+                <div class="preview-actions">
+                  <button type="button" class="btn-mini" id="btn-remove-image" onclick="event.preventDefault(); event.stopPropagation(); removeImage();" title="Eliminar imagen">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </label>
+
+            <!-- Quick Image Preset Buttons -->
+            <div style="margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap;">
+              <span style="font-size: 11px; color: var(--text-muted); width: 100%;">O prueba con una captura demo:</span>
+              <button type="button" class="vibe-chip" onclick="loadDemoImage('kapa')">
+                <i class="fa-solid fa-image"></i> Demo Spa Kapa
+              </button>
+              <button type="button" class="vibe-chip" onclick="loadDemoImage('barber')">
+                <i class="fa-solid fa-image"></i> Demo Barbería
+              </button>
+            </div>
+
+            <!-- Extracted Palette & Custom Color Controls -->
+            <div class="palette-box">
+              <div class="palette-header">
+                <span class="label-tag"><i class="fa-solid fa-palette"></i> Paleta de Colores Extraída / Personalizada</span>
+                <button type="button" class="btn-text" id="btn-extract-colors">
+                  <i class="fa-solid fa-wand-magic"></i> Re-extraer
+                </button>
+              </div>
+
+              <div class="color-pickers-grid">
+                <div class="color-field">
+                  <label>Color Primario (Acento)</label>
+                  <div class="color-input-wrap">
+                    <input type="color" id="col-primary" value="#d4af37">
+                    <input type="text" id="hex-primary" value="#d4af37" class="hex-input">
+                  </div>
+                </div>
+                <div class="color-field">
+                  <label>Color Secundario</label>
+                  <div class="color-input-wrap">
+                    <input type="color" id="col-secondary" value="#0f172a">
+                    <input type="text" id="hex-secondary" value="#0f172a" class="hex-input">
+                  </div>
+                </div>
+                <div class="color-field">
+                  <label>Fondo Principal</label>
+                  <div class="color-input-wrap">
+                    <input type="color" id="col-bg" value="#07090e">
+                    <input type="text" id="hex-bg" value="#07090e" class="hex-input">
+                  </div>
+                </div>
+                <div class="color-field">
+                  <label>Color de Texto / Claros</label>
+                  <div class="color-input-wrap">
+                    <input type="color" id="col-text" value="#f8fafc">
+                    <input type="text" id="hex-text" value="#f8fafc" class="hex-input">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Design Theme Vibes -->
+              <div class="vibe-selector">
+                <label class="label-sub">Estilo & Ambiente Exclusivo:</label>
+                <div class="vibe-chips">
+                  <button type="button" class="vibe-chip active" data-vibe="luxury-dark">
+                    <i class="fa-solid fa-crown"></i> Luxury Dark & Gold
+                  </button>
+                  <button type="button" class="vibe-chip" data-vibe="cyber-glow">
+                    <i class="fa-solid fa-bolt"></i> Cyber Modern Glow
+                  </button>
+                  <button type="button" class="vibe-chip" data-vibe="warm-organic">
+                    <i class="fa-solid fa-leaf"></i> Warm Organic Elite
+                  </button>
+                  <button type="button" class="vibe-chip" data-vibe="clean-medical">
+                    <i class="fa-solid fa-heart-pulse"></i> Ultra Clean Medical
+                  </button>
+                  <button type="button" class="vibe-chip" data-vibe="playful-kids">
+                    <i class="fa-solid fa-shapes"></i> Premium Kids World
+                  </button>
+                </div>
+              </div>
+
+              <!-- Typography Selection -->
+              <div class="font-selector">
+                <label class="label-sub">Tipografía Exclusiva (Google Fonts):</label>
+                <select id="select-font-heading" class="styled-select">
+                  <option value="'Playfair Display', serif">Playfair Display (Elegante & Editorial)</option>
+                  <option value="'Cinzel', serif">Cinzel (Luxury & Soberbio)</option>
+                  <option value="'Plus Jakarta Sans', sans-serif" selected>Plus Jakarta Sans (Moderno & Premium Tech)</option>
+                  <option value="'Outfit', sans-serif">Outfit (Vibrante, Limpio y Vanguardista)</option>
+                  <option value="'Space Grotesk', sans-serif">Space Grotesk (Alta Tecnología & Urbano)</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Accordion Section 2: Business Data & JSON Integration -->
+        <div class="accordion-panel" id="panel-business">
+          <div class="accordion-header" onclick="toggleAccordion('panel-business')">
+            <div class="header-title">
+              <div class="icon-circle teal"><i class="fa-solid fa-store"></i></div>
+              <div>
+                <h3>2. Datos del Negocio & Servicios</h3>
+                <p>Carga un JSON o completa el formulario en vivo</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+
+          <div class="accordion-body">
+            
+            <!-- JSON Load / Form Toggle -->
+            <div class="data-source-toggle">
+              <button type="button" class="src-btn active" id="btn-mode-form" onclick="switchDataInputMode('form')">
+                <i class="fa-solid fa-pen-to-square"></i> Formulario Interactivo
+              </button>
+              <button type="button" class="src-btn" id="btn-mode-json" onclick="switchDataInputMode('json')">
+                <i class="fa-solid fa-code"></i> Editor DATOS_NEGOCIO.json
+              </button>
+            </div>
+
+            <!-- Quick Template Loader -->
+            <div class="quick-loader">
+              <span>Cargar ejemplo existente:</span>
+              <select id="select-demo-preset" class="styled-select-sm">
+                <option value="">-- Seleccionar Negocio --</option>
+                <option value="kapa_spa">Kapa Spa & Estética (Bogotá)</option>
+                <option value="los_pollitos">Hogar Infantil Los Pollitos (Barranquilla)</option>
+                <option value="veterinaria_los_almendros">Veterinaria Los Almendros (Cali)</option>
+                <option value="cris_barbershop">Cris Barbershop VIP (Medellín)</option>
+                <option value="makloz_tech">Makloz Tech & AI (Colombia)</option>
+              </select>
+            </div>
+
+            <!-- INTERACTIVE FORM CONTAINER -->
+            <div id="data-form-container" class="data-form">
+              
+              <div class="form-group">
+                <label>Nombre del Negocio *</label>
+                <input type="text" id="f-nombre" class="styled-input" placeholder="Ej: Kapa Spa & Estética Facial">
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Categoría / Nicho *</label>
+                  <select id="f-nicho" class="styled-select">
+                    <option value="BeautySalon">Centro de Estética & Spa</option>
+                    <option value="ChildCare">Guardería & Jardín Infantil</option>
+                    <option value="VeterinaryCare">Clínica Veterinaria</option>
+                    <option value="Barbershop">Barbería & Grooming</option>
+                    <option value="Dentist">Clínica Odontológica</option>
+                    <option value="Restaurant">Restaurante Gourmet</option>
+                    <option value="FitnessCenter">Gimnasio & Studio Fitness</option>
+                    <option value="LocalBusiness">Otro Negocio Local</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Ciudad & País *</label>
+                  <input type="text" id="f-ciudad" class="styled-input" placeholder="Ej: Bogotá, Colombia">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Eslogan / Promesa Única de Valor *</label>
+                <input type="text" id="f-eslogan" class="styled-input" placeholder="Ej: Redescubre tu brillo natural con tratamientos clínicos de vanguardia">
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>WhatsApp (Sin + ni espacios) *</label>
+                  <input type="text" id="f-whatsapp" class="styled-input" placeholder="Ej: 573108877665">
+                </div>
+
+                <div class="form-group">
+                  <label>Teléfono Directo de Llamadas</label>
+                  <input type="text" id="f-telefono" class="styled-input" placeholder="Ej: +57 310 887 7665">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Mensaje Preconfigurado de WhatsApp</label>
+                <input type="text" id="f-whatsapp-msg" class="styled-input" value="¡Hola! Quisiera más información y reservar una cita en su sede.">
+              </div>
+
+              <div class="form-group">
+                <label>Dirección Física</label>
+                <input type="text" id="f-direccion" class="styled-input" placeholder="Ej: Carrera 15 # 93-47, Chicó Norte">
+              </div>
+
+              <div class="form-group">
+                <label>Enlace Google Maps (URL / Ubicación)</label>
+                <input type="text" id="f-maps-url" class="styled-input" placeholder="https://maps.google.com/...">
+              </div>
+
+              <div class="form-group">
+                <label>Horario de Atención</label>
+                <input type="text" id="f-horario" class="styled-input" placeholder="Ej: Lunes a Sábado: 8:00 AM - 7:00 PM">
+              </div>
+
+              <!-- Services Catalog Manager -->
+              <div class="services-manager">
+                <div class="sm-header">
+                  <h4><i class="fa-solid fa-list-check"></i> Catálogo de Servicios Exclusivos</h4>
+                  <button type="button" class="btn-mini-add" id="btn-add-service">
+                    <i class="fa-solid fa-plus"></i> Agregar
+                  </button>
+                </div>
+                <div id="services-list" class="services-list">
+                  <!-- Dynamically populated services items -->
+                </div>
+              </div>
+
+              <!-- Trust Metrics -->
+              <div class="trust-manager">
+                <div class="sm-header">
+                  <h4><i class="fa-solid fa-shield-halved"></i> 3 Estadísticas / Métricas de Confianza</h4>
+                </div>
+                <div class="trust-grid">
+                  <div class="trust-item">
+                    <input type="text" id="f-stat1-num" class="styled-input" placeholder="10+ Años" value="10+ Años">
+                    <input type="text" id="f-stat1-label" class="styled-input" placeholder="De Experiencia" value="De Experiencia">
+                  </div>
+                  <div class="trust-item">
+                    <input type="text" id="f-stat2-num" class="styled-input" placeholder="4,500+" value="4,500+">
+                    <input type="text" id="f-stat2-label" class="styled-input" placeholder="Clientes Satisfechos" value="Clientes Satisfechos">
+                  </div>
+                  <div class="trust-item">
+                    <input type="text" id="f-stat3-num" class="styled-input" placeholder="100%" value="100%">
+                    <input type="text" id="f-stat3-label" class="styled-input" placeholder="Garantía & Seguridad" value="Garantía & Seguridad">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- JSON EDITOR CONTAINER -->
+            <div id="data-json-container" class="data-json" style="display:none;">
+              <div class="json-tools">
+                <span>Edición directa de datos JSON:</span>
+                <button type="button" class="btn-text" id="btn-format-json">
+                  <i class="fa-solid fa-align-left"></i> Formatear
+                </button>
+              </div>
+              <textarea id="json-editor" class="json-textarea" spellcheck="false"></textarea>
+              <div id="json-status" class="json-status valid">JSON Válido</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Accordion Section 3: Exclusive Modules -->
+        <div class="accordion-panel" id="panel-sections">
+          <div class="accordion-header" onclick="toggleAccordion('panel-sections')">
+            <div class="header-title">
+              <div class="icon-circle purple"><i class="fa-solid fa-cubes"></i></div>
+              <div>
+                <h3>3. Módulos & Elementos Exclusivos</h3>
+                <p>Efectos visuales de alta gama y componentes</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-down toggle-icon"></i>
+          </div>
+
+          <div class="accordion-body">
+            <div class="features-checklist">
+              <label class="check-container">
+                <input type="checkbox" id="chk-hero-badge" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">
+                  <strong>Badge VIP Shimmering en Hero</strong>
+                  <small>Efecto de brillo metálico y prueba social inmediata</small>
+                </span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="chk-cards-3d" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">
+                  <strong>Tarjetas de Servicios Glassmorphic con Gradiente</strong>
+                  <small>Efecto de profundidad, luz perimetral y micro-hover</small>
+                </span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="chk-cta-glow" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">
+                  <strong>Botones con Pulsación de Luz (Magnetic Glow)</strong>
+                  <small>Llama a la acción imposible de ignorar en WhatsApp</small>
+                </span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="chk-testimonials" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">
+                  <strong>Sección de Testimonios con 5 Estrellas Doradas</strong>
+                  <small>Comentarios verificados con avatares estilizados</small>
+                </span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="chk-floating-wa" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">
+                  <strong>Botón Flotante de WhatsApp con Tooltip y Notificación</strong>
+                  <small>Animación de latido y badge "En línea ahora"</small>
+                </span>
+              </label>
+
+              <label class="check-container">
+                <input type="checkbox" id="chk-schema-seo" checked>
+                <span class="checkmark"></span>
+                <span class="check-label">
+                  <strong>Marcado SEO Local Schema.org & OpenGraph</strong>
+                  <small>Estructurado automáticamente según el nicho y ubicación</small>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT SPLIT VIEW PREVIEW AREA -->
+      <section class="workflow-preview-area">
+        
+        <!-- Preview Control Header -->
+        <div class="preview-toolbar">
+          <div class="toolbar-left">
+            <div class="split-controls">
+              <button class="split-btn active" id="btn-view-split" title="Ver imagen de referencia al lado del código">
+                <i class="fa-solid fa-columns"></i> <span>Lado a Lado (Split)</span>
+              </button>
+              <button class="split-btn" id="btn-view-preview" title="Ver solo la página en vivo">
+                <i class="fa-solid fa-globe"></i> <span>Solo Web</span>
+              </button>
+              <button class="split-btn" id="btn-view-ref" title="Ver solo la referencia">
+                <i class="fa-solid fa-image"></i> <span>Solo Referencia</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Responsive Screen Toggle -->
+          <div class="toolbar-center">
+            <div class="device-switcher">
+              <button class="device-btn active" data-device="desktop" title="Vista Ordenador">
+                <i class="fa-solid fa-desktop"></i>
+              </button>
+              <button class="device-btn" data-device="tablet" title="Vista Tablet">
+                <i class="fa-solid fa-tablet-screen-button"></i>
+              </button>
+              <button class="device-btn" data-device="mobile" title="Vista Móvil">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="toolbar-right">
+            <button class="btn-refresh-preview" id="btn-refresh-preview" title="Actualizar Vista Previa">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
+            <button class="btn-open-external" id="btn-open-external" title="Abrir en pestaña nueva">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Split Screen Display Frames -->
+        <div class="preview-display-container split-active" id="preview-container">
+          
+          <!-- Reference Visual Column -->
+          <div class="display-pane ref-pane" id="ref-pane">
+            <div class="pane-header">
+              <span class="pane-title"><i class="fa-solid fa-image"></i> REFERENCIA VISUAL DE DISEÑO</span>
+              <div class="zoom-controls">
+                <button type="button" id="btn-zoom-out"><i class="fa-solid fa-minus"></i></button>
+                <span id="zoom-level">100%</span>
+                <button type="button" id="btn-zoom-in"><i class="fa-solid fa-plus"></i></button>
+                <button type="button" id="btn-zoom-reset"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+              </div>
+            </div>
+            <div class="ref-scroll-view" id="ref-scroll-container">
+              <div class="ref-placeholder" id="ref-empty-placeholder">
+                <i class="fa-solid fa-images"></i>
+                <p>No has cargado una imagen de referencia aún.</p>
+                <small>Haz clic en "Explorar Archivo" a la izquierda o pega una captura con Ctrl+V.</small>
+              </div>
+              <img id="ref-live-view-img" src="" alt="" style="display:none;">
+            </div>
+          </div>
+
+          <!-- Divider Handle -->
+          <div class="split-gutter" id="split-gutter">
+            <div class="gutter-handle"></div>
+          </div>
+
+          <!-- Live Web Preview Column -->
+          <div class="display-pane web-pane" id="web-pane">
+            <div class="pane-header">
+              <span class="pane-title"><i class="fa-solid fa-sparkles"></i> LANDING PAGE EXCLUSIVA (VISTA EN VIVO)</span>
+              <span class="render-badge" id="render-status"><i class="fa-solid fa-circle-check"></i> Sincronizado</span>
+            </div>
+            <div class="web-frame-wrapper device-desktop" id="web-frame-wrapper">
+              <iframe id="preview-iframe" title="Live Website Preview" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+    <!-- Tab 2: Presets & Existing Local Businesses Demos -->
+    <section class="workspace-tab" id="tab-presets" style="display:none;">
+      <div class="presets-gallery-container">
+        <div class="gallery-header">
+          <h2>Prototipos & Demos Activas en el Repositorio</h2>
+          <p>Selecciona cualquier negocio para clonar su estructura, elevar su diseño o exportar sus archivos.</p>
+        </div>
+
+        <div class="presets-grid">
+          
+          <!-- Preset Card 1 -->
+          <div class="preset-card" onclick="loadBusinessPreset('kapa_spa')">
+            <div class="preset-badge spa">Belleza & Spa</div>
+            <div class="preset-card-body">
+              <h3>Kapa Spa & Estética</h3>
+              <p>Tratamientos faciales, corporales y masajes relajantes de lujo.</p>
+              <div class="preset-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Bogotá</span>
+                <span><i class="fa-solid fa-code"></i> Standalone OK</span>
+              </div>
+              <button class="btn-preset-load">Cargar en el Diseñador <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Preset Card 2 -->
+          <div class="preset-card" onclick="loadBusinessPreset('los_pollitos')">
+            <div class="preset-badge kids">Educación & Guardería</div>
+            <div class="preset-card-body">
+              <h3>Hogar Infantil Los Pollitos</h3>
+              <p>Estimulación temprana, educación integral y cuidado seguro.</p>
+              <div class="preset-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Barranquilla</span>
+                <span><i class="fa-solid fa-code"></i> Standalone OK</span>
+              </div>
+              <button class="btn-preset-load">Cargar en el Diseñador <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Preset Card 3 -->
+          <div class="preset-card" onclick="loadBusinessPreset('veterinaria_los_almendros')">
+            <div class="preset-badge vet">Salud Veterinaria</div>
+            <div class="preset-card-body">
+              <h3>Veterinaria Los Almendros</h3>
+              <p>Atención médica integral, urgencias 24h y estética para mascotas.</p>
+              <div class="preset-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Cali</span>
+                <span><i class="fa-solid fa-code"></i> Standalone OK</span>
+              </div>
+              <button class="btn-preset-load">Cargar en el Diseñador <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Preset Card 4 -->
+          <div class="preset-card" onclick="loadBusinessPreset('cris_barbershop')">
+            <div class="preset-badge barber">Barbería & Estilo</div>
+            <div class="preset-card-body">
+              <h3>Cris Barbershop VIP</h3>
+              <p>Cortes de autor, perfilado de barba y rituales de toalla caliente.</p>
+              <div class="preset-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Medellín</span>
+                <span><i class="fa-solid fa-code"></i> Standalone OK</span>
+              </div>
+              <button class="btn-preset-load">Cargar en el Diseñador <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Preset Card 5 -->
+          <div class="preset-card" onclick="loadBusinessPreset('makloz_tech')">
+            <div class="preset-badge tech">Tecnología & IA</div>
+            <div class="preset-card-body">
+              <h3>Makloz Tech & MioWeKids</h3>
+              <p>Agentes inteligentes para WhatsApp y software de gestión educativa.</p>
+              <div class="preset-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Colombia</span>
+                <span><i class="fa-solid fa-code"></i> Standalone OK</span>
+              </div>
+              <button class="btn-preset-load">Cargar en el Diseñador <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: AI Context Triangle Viewer & Generator -->
+    <section class="workspace-tab" id="tab-context" style="display:none;">
+      <div class="context-triangle-container">
+        <div class="triangle-header">
+          <h2>Triángulo de Contexto para Inteligencia Artificial</h2>
+          <p>Genera y descarga los 3 archivos estandarizados para que cualquier IA (Antigravity, Claude, ChatGPT) continúe el proyecto sin perder ningún contexto.</p>
+        </div>
+
+        <div class="triangle-tabs">
+          <button class="tri-tab-btn active" data-target="tri-datos">
+            <i class="fa-solid fa-database"></i> 1. DATOS_NEGOCIO.json
+          </button>
+          <button class="tri-tab-btn" data-target="tri-ficha">
+            <i class="fa-solid fa-palette"></i> 2. FICHA_DISENO.md
+          </button>
+          <button class="tri-tab-btn" data-target="tri-agents">
+            <i class="fa-solid fa-robot"></i> 3. AGENTS.md
+          </button>
+          <button class="tri-tab-btn" data-target="tri-html">
+            <i class="fa-solid fa-file-code"></i> 4. index_standalone.html
+          </button>
+        </div>
+
+        <div class="triangle-content-box">
+          <div class="tri-content-header">
+            <span class="file-name-tag" id="current-tri-file">DATOS_NEGOCIO.json</span>
+            <div class="tri-actions">
+              <button class="btn-copy-code" id="btn-copy-tri-code">
+                <i class="fa-solid fa-copy"></i> Copiar Contenido
+              </button>
+              <button class="btn-download-file" id="btn-download-tri-file">
+                <i class="fa-solid fa-download"></i> Descargar Archivo
+              </button>
+            </div>
+          </div>
+          <pre class="code-view"><code id="tri-code-display"></code></pre>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Export All Bundle -->
+  <div class="studio-modal" id="modal-export" style="display:none;">
+    <div class="modal-backdrop" onclick="closeModal('modal-export')"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-box-open gold-icon"></i>
+          <h3>Paquete de Entrega & Producción</h3>
+        </div>
+        <button class="btn-close-modal" onclick="closeModal('modal-export')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Todo el paquete se encuentra generado y optimizado para SEO Local:</p>
+        
+        <div class="bundle-items-list">
+          <div class="bundle-item">
+            <div class="bi-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="bi-info">
+              <strong>index.html (Página Standalone 100% Autónoma)</strong>
+              <small>CSS embebido + Base64 + Schema.org JSON-LD + OpenGraph</small>
+            </div>
+            <button class="btn-download-single" id="btn-dl-html"><i class="fa-solid fa-download"></i></button>
+          </div>
+
+          <div class="bundle-item">
+            <div class="bi-icon"><i class="fa-solid fa-database"></i></div>
+            <div class="bi-info">
+              <strong>DATOS_NEGOCIO.json</strong>
+              <small>Fuente única de verdad estructurada</small>
+            </div>
+            <button class="btn-download-single" id="btn-dl-json"><i class="fa-solid fa-download"></i></button>
+          </div>
+
+          <div class="bundle-item">
+            <div class="bi-icon"><i class="fa-solid fa-palette"></i></div>
+            <div class="bi-info">
+              <strong>FICHA_DISENO.md</strong>
+              <small>Manual de marca, paleta HSL/HEX y tipografía</small>
+            </div>
+            <button class="btn-download-single" id="btn-dl-ficha"><i class="fa-solid fa-download"></i></button>
+          </div>
+
+          <div class="bundle-item">
+            <div class="bi-icon"><i class="fa-solid fa-robot"></i></div>
+            <div class="bi-info">
+              <strong>AGENTS.md</strong>
+              <small>Instrucciones llave en mano para cualquier IA</small>
+            </div>
+            <button class="btn-download-single" id="btn-dl-agents"><i class="fa-solid fa-download"></i></button>
+          </div>
+        </div>
+
+        <div class="modal-prompt-box">
+          <label>Prompt Listo para Pasar a Antigravity / IA:</label>
+          <div class="copy-box">
+            <textarea id="ai-prompt-text" readonly rows="4"></textarea>
+            <button class="btn-copy-prompt-action" id="btn-copy-modal-prompt">
+              <i class="fa-solid fa-copy"></i> Copiar Prompt
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Hidden Canvas for Color Extraction -->
+  <canvas id="color-canvas" style="display:none;"></canvas>
+
+  <!-- Complete Standalone JavaScript Engine -->
+  <script>
+  // Native file input handler attached directly
+  function handleNativeFileInput(input) {
+    if (input.files && input.files[0]) {
+      handleImageFile(input.files[0]);
+    }
+  }
+
+  // Global State
+  const state = {
+    activeTab: 'workflow',
+    activeTriFile: 'tri-datos',
+    deviceView: 'desktop',
+    splitMode: 'split',
+    zoomLevel: 100,
+    referenceImageBase64: null,
+    palette: {
+      primary: '#d4af37',
+      secondary: '#0f172a',
+      bg: '#07090e',
+      text: '#f8fafc'
+    },
+    vibe: 'luxury-dark',
+    headingFont: "'Plus Jakarta Sans', sans-serif",
+    business: {
+      nombre: 'Kapa Spa & Estética Facial',
+      nicho: 'BeautySalon',
+      ciudad: 'Bogotá, Colombia',
+      eslogan: 'Redescubre tu brillo natural con tratamientos clínicos de vanguardia y aparatología de última generación',
+      whatsapp: '573108877665',
+      telefono: '+57 310 887 7665',
+      whatsappMsg: '¡Hola! Quisiera más información y reservar una cita exclusiva en Kapa Spa.',
+      direccion: 'Carrera 15 # 93-47, Chicó Norte, Bogotá',
+      mapsUrl: 'https://maps.google.com/?q=Bogota+Chico+Norte',
+      horario: 'Lunes a Sábado: 8:00 AM - 7:00 PM',
+      stats: [
+        { num: '10+ Años', label: 'De Experiencia Clínica' },
+        { num: '4,800+', label: 'Pacientes Satisfechos' },
+        { num: '100%', label: 'Garantía & Bioseguridad' }
+      ],
+      servicios: [
+        {
+          nombre: 'Limpieza Facial Profunda con Hidrodermoabrasión',
+          precio: '$180.000 COP',
+          desc: 'Extracción ultrasónica, oxigenoterapia y sérums de ácido hialurónico puro para piel radiante.',
+          icono: 'fa-wand-magic-sparkles'
+        },
+        {
+          nombre: 'Masaje Relajante & Terapia de Piedras Volcánicas',
+          precio: '$150.000 COP',
+          desc: 'Aromaterapia personalizada, aceites esenciales orgánicos y liberación miofascial total.',
+          icono: 'fa-spa'
+        },
+        {
+          nombre: 'Radiofrecuencia Fraccionada & Rejuvenecimiento',
+          precio: '$280.000 COP',
+          desc: 'Estimulación intensiva de colágeno y elastina con tecnología médica no invasiva.',
+          icono: 'fa-gem'
+        },
+        {
+          nombre: 'Moldeo Corporal con Maderoterapia & Crioterapia',
+          precio: '$220.000 COP',
+          desc: 'Drenaje linfático profundo, tonificación y reducción de medidas comprobada.',
+          icono: 'fa-feather'
+        }
+      ],
+      testimonios: [
+        {
+          nombre: 'Dra. Marcela Gómez',
+          cargo: 'Cliente Verificada',
+          texto: 'La atención es insuperable. Las instalaciones son de lujo y los resultados en mi piel se notaron desde la primera sesión. ¡100% recomendado!',
+          estrellas: 5
+        },
+        {
+          nombre: 'Carlos E. Restrepo',
+          cargo: 'Cliente Frecuente',
+          texto: 'El masaje descontracturante con piedras volcánicas me quitó el dolor de espalda acumulado de meses de trabajo. El mejor spa de Bogotá.',
+          estrellas: 5
+        }
+      ]
+    },
+    modules: {
+      heroBadge: true,
+      cards3d: true,
+      ctaGlow: true,
+      testimonials: true,
+      floatingWa: true,
+      schemaSeo: true
+    }
+  };
+
+  // Preset Businesses
+  const PRESETS = {
+    kapa_spa: {
+      nombre: 'Kapa Spa & Estética Facial',
+      nicho: 'BeautySalon',
+      ciudad: 'Bogotá, Colombia',
+      eslogan: 'Redescubre tu brillo natural con tratamientos clínicos de vanguardia y aparatología de última generación',
+      whatsapp: '573108877665',
+      telefono: '+57 310 887 7665',
+      whatsappMsg: '¡Hola! Quisiera más información y reservar una cita en Kapa Spa.',
+      direccion: 'Carrera 15 # 93-47, Chicó Norte, Bogotá',
+      mapsUrl: 'https://maps.google.com/?q=Bogota+Chico+Norte',
+      horario: 'Lunes a Sábado: 8:00 AM - 7:00 PM',
+      palette: { primary: '#d4af37', secondary: '#1c1917', bg: '#0c0a09', text: '#fafaf9' },
+      vibe: 'luxury-dark',
+      headingFont: "'Playfair Display', serif",
+      stats: [
+        { num: '10+ Años', label: 'Experiencia Clínica' },
+        { num: '4,800+', label: 'Tratamientos Exitosos' },
+        { num: '100%', label: 'Aparatología Certificada' }
+      ],
+      servicios: [
+        { nombre: 'Limpieza Facial Hidrodermoabrasión', precio: '$180.000', desc: 'Oxigenoterapia y sérums de ácido hialurónico puro.', icono: 'fa-wand-magic-sparkles' },
+        { nombre: 'Masaje con Piedras Volcánicas', precio: '$150.000', desc: 'Aromaterapia orgánica y relajación profunda.', icono: 'fa-spa' },
+        { nombre: 'Radiofrecuencia Fraccionada', precio: '$280.000', desc: 'Estimulación de colágeno médico no invasivo.', icono: 'fa-gem' },
+        { nombre: 'Moldeo Corporal & Maderoterapia', precio: '$220.000', desc: 'Drenaje linfático y tonificación integral.', icono: 'fa-feather' }
+      ]
+    },
+    los_pollitos: {
+      nombre: 'Hogar Infantil Los Pollitos',
+      nicho: 'ChildCare',
+      ciudad: 'Barranquilla, Colombia',
+      eslogan: 'El segundo hogar donde tus hijos aprenden jugando con amor, seguridad y nutrición balanceada',
+      whatsapp: '573001234567',
+      telefono: '+57 300 123 4567',
+      whatsappMsg: '¡Hola! Me gustaría solicitar información para matrículas en Los Pollitos.',
+      direccion: 'Calle 72 # 41-15, Barranquilla',
+      mapsUrl: 'https://maps.google.com/?q=Barranquilla+Calle+72',
+      horario: 'Lunes a Viernes: 6:30 AM - 6:00 PM',
+      palette: { primary: '#f97316', secondary: '#0284c7', bg: '#fffbeb', text: '#1e293b' },
+      vibe: 'playful-kids',
+      headingFont: "'Outfit', sans-serif",
+      stats: [
+        { num: '15+ Años', label: 'Cuidando con Amor' },
+        { num: '1,200+', label: 'Niños Graduados' },
+        { num: '100%', label: 'Cámaras de Seguridad 24/7' }
+      ],
+      servicios: [
+        { nombre: 'Sala Cuna & Estimulación Temprana', precio: 'Mensual', desc: 'Cuidado especializado para bebés de 4 meses a 2 años.', icono: 'fa-baby' },
+        { nombre: 'Párvulos & Pre-Jardín Bilingüe', precio: 'Mensual', desc: 'Desarrollo motriz, lenguaje y socialización divertida.', icono: 'fa-cubes' },
+        { nombre: 'Comedor con Nutrición Infantil', precio: 'Incluido', desc: 'Minutas supervisadas por nutricionista pediátrico.', icono: 'fa-apple-whole' },
+        { nombre: 'Jornada Continua y Tarde Lúdica', precio: 'Flexible', desc: 'Apoyo en tareas, música, arte y recreación dirigida.', icono: 'fa-puzzle-piece' }
+      ]
+    },
+    veterinaria_los_almendros: {
+      nombre: 'Veterinaria & Pet Spa Los Almendros',
+      nicho: 'VeterinaryCare',
+      ciudad: 'Cali, Colombia',
+      eslogan: 'Cuidado médico compasivo, diagnóstico avanzado y estética profesional para tu mascota',
+      whatsapp: '573159988776',
+      telefono: '+57 315 998 8776',
+      whatsappMsg: '¡Hola! Necesito agendar una consulta médica veterinaria.',
+      direccion: 'Avenida 6N # 28-30, Cali',
+      mapsUrl: 'https://maps.google.com/?q=Cali+Avenida+6N',
+      horario: 'Atención 24 Horas / Urgencias Médicas',
+      palette: { primary: '#10b981', secondary: '#0f172a', bg: '#060d13', text: '#f0fdf4' },
+      vibe: 'clean-medical',
+      headingFont: "'Plus Jakarta Sans', sans-serif",
+      stats: [
+        { num: '24/7', label: 'Urgencias Médicas' },
+        { num: '8,000+', label: 'Mascotas Sanadas' },
+        { num: '100%', label: 'Especialistas Médicos' }
+      ],
+      servicios: [
+        { nombre: 'Consulta Médica Especializada', precio: '$60.000', desc: 'Medicina interna preventiva y diagnóstico integral.', icono: 'fa-stethoscope' },
+        { nombre: 'Cirugía & Hospitalización 24h', precio: 'Cotizar', desc: 'Quirófano equipado con anestesia inhalatoria.', icono: 'fa-hospital' },
+        { nombre: 'Pet Spa & Baño Medicado', precio: '$45.000', desc: 'Corte de raza, desparasitación y ozonoterapia.', icono: 'fa-shield-dog' },
+        { nombre: 'Vacunación & Laboratorio Clínico', precio: '$50.000', desc: 'Pruebas rápidas y esquema de vacunas completo.', icono: 'fa-syringe' }
+      ]
+    },
+    cris_barbershop: {
+      nombre: 'Cris Barbershop VIP',
+      nicho: 'Barbershop',
+      ciudad: 'Medellín, Colombia',
+      eslogan: 'El templo del estilo masculino: cortes de alta precisión, ritual de barba y experiencia premium',
+      whatsapp: '573204433221',
+      telefono: '+57 320 443 3221',
+      whatsappMsg: '¡Buenas! Quiero apartar turno para corte y barba VIP.',
+      direccion: 'El Poblado, Carrera 37 # 8A-12, Medellín',
+      mapsUrl: 'https://maps.google.com/?q=Medellin+El+Poblado',
+      horario: 'Martes a Domingo: 10:00 AM - 9:00 PM',
+      palette: { primary: '#d4af37', secondary: '#18181b', bg: '#09090b', text: '#f4f4f5' },
+      vibe: 'luxury-dark',
+      headingFont: "'Cinzel', serif",
+      stats: [
+        { num: 'Master', label: 'Barberos Galardonados' },
+        { num: '12,000+', label: 'Cortes Realizados' },
+        { num: 'VIP', label: 'Bebida de Cortesía' }
+      ],
+      servicios: [
+        { nombre: 'Corte Signature & Fade de Autor', precio: '$45.000', desc: 'Perfilado milimétrico y peinado con cera mate.', icono: 'fa-scissors' },
+        { nombre: 'Ritual de Barba Toalla Caliente', precio: '$35.000', desc: 'Aceites orgánicos, navaja clásica y vaporizador.', icono: 'fa-spray-can-sparkles' },
+        { nombre: 'Combo VIP Total (Corte + Barba + Mascarilla)', precio: '$75.000', desc: 'Exfoliación con carbón activado y masaje capilar.', icono: 'fa-crown' },
+        { nombre: 'Camuflaje de Canas & Tratamiento Capilar', precio: '$50.000', desc: 'Tono natural rejuvenecedor sin amoníaco.', icono: 'fa-shield-halved' }
+      ]
+    },
+    makloz_tech: {
+      nombre: 'Makloz Tech & MioWeKids',
+      nicho: 'LocalBusiness',
+      ciudad: 'Colombia',
+      eslogan: 'Transformación digital inteligente para centros educativos y negocios con agentes de IA 24/7',
+      whatsapp: '573108877665',
+      telefono: '+57 310 887 7665',
+      whatsappMsg: '¡Hola! Quiero una demo del Agente de Inteligencia Artificial para WhatsApp.',
+      direccion: 'Edificio Torre Empresarial, Bogotá',
+      mapsUrl: 'https://maps.google.com',
+      horario: 'Lunes a Viernes: 8:00 AM - 6:00 PM',
+      palette: { primary: '#06b6d4', secondary: '#0f172a', bg: '#030712', text: '#f9fafb' },
+      vibe: 'cyber-glow',
+      headingFont: "'Space Grotesk', sans-serif",
+      stats: [
+        { num: '24/7', label: 'Atención con IA' },
+        { num: '98%', label: 'Tasa de Conversión' },
+        { num: '< 5s', label: 'Tiempo de Respuesta' }
+      ],
+      servicios: [
+        { nombre: 'Agente IA para Matrículas por WhatsApp', precio: 'Planes Mensuales', desc: 'Respuestas automáticas inteligentes a padres las 24 horas.', icono: 'fa-robot' },
+        { nombre: 'Plataforma de Gestión Escolar MioWeKids', precio: 'Suscripción', desc: 'Reportes diarios, fotos en vivo y control de pagos.', icono: 'fa-laptop-code' },
+        { nombre: 'Diseño Web Standalone de Alta Conversión', precio: 'Turnkey', desc: 'Sitios web 100% optimizados para Google y SEO Local.', icono: 'fa-layer-group' }
+      ]
+    }
+  };
+
+  // INITIALIZATION
+  document.addEventListener('DOMContentLoaded', () => {
+    initNavigation();
+    initAccordions();
+    initDropzone();
+    initColorPickers();
+    initVibeSelector();
+    initFormInputs();
+    initServicesList();
+    initSplitResizer();
+    initToolbarControls();
+    initContextTriangle();
+    initModals();
+
+    syncStateToForm();
+    renderLivePreview();
+    updateContextCodeDisplay();
+  });
+
+  // Navigation
+  function initNavigation() {
+    document.querySelectorAll('.mode-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const targetTab = pill.getAttribute('data-tab');
+        state.activeTab = targetTab;
+
+        document.querySelectorAll('.workspace-tab').forEach(tab => {
+          tab.style.display = 'none';
+          tab.classList.remove('active');
+        });
+
+        const selected = document.getElementById(`tab-${targetTab}`);
+        if (selected) {
+          selected.style.display = 'flex';
+          selected.classList.add('active');
+        }
+
+        if (targetTab === 'context') {
+          updateContextCodeDisplay();
+        }
+      });
+    });
+  }
+
+  // Accordion
+  window.toggleAccordion = function(panelId) {
+    const panel = document.getElementById(panelId);
+    if (panel) panel.classList.toggle('active');
+  };
+
+  // Image Handling
+  function initDropzone() {
+    const dropzone = document.getElementById('image-dropzone');
+    
+    if (dropzone) {
+      dropzone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropzone.classList.add('dragover');
+      });
+
+      dropzone.addEventListener('dragleave', () => {
+        dropzone.classList.remove('dragover');
+      });
+
+      dropzone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropzone.classList.remove('dragover');
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          handleImageFile(e.dataTransfer.files[0]);
+        }
+      });
+    }
+
+    // Clipboard Paste
+    window.addEventListener('paste', (e) => {
+      const items = (e.clipboardData || e.originalEvent.clipboardData).items;
+      for (let index in items) {
+        const item = items[index];
+        if (item.kind === 'file' && item.type.includes('image/')) {
+          const blob = item.getAsFile();
+          handleImageFile(blob);
+          showToast('Imagen pegada desde el portapapeles');
+          break;
+        }
+      }
+    });
+
+    const extractBtn = document.getElementById('btn-extract-colors');
+    if (extractBtn) {
+      extractBtn.addEventListener('click', () => {
+        if (state.referenceImageBase64) {
+          extractColorsFromImage(state.referenceImageBase64);
+        } else {
+          showToast('Carga primero una imagen de referencia');
+        }
+      });
+    }
+  }
+
+  function handleImageFile(file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const base64 = e.target.result;
+      state.referenceImageBase64 = base64;
+      
+      const emptyState = document.getElementById('dropzone-empty-state');
+      if (emptyState) emptyState.style.display = 'none';
+      const preview = document.getElementById('dropzone-preview-state');
+      if (preview) preview.style.display = 'block';
+      const refImg = document.getElementById('ref-image-element');
+      if (refImg) refImg.src = base64;
+
+      const placeholder = document.getElementById('ref-empty-placeholder');
+      if (placeholder) placeholder.style.display = 'none';
+      const liveImg = document.getElementById('ref-live-view-img');
+      if (liveImg) {
+        liveImg.src = base64;
+        liveImg.style.display = 'block';
+      }
+
+      extractColorsFromImage(base64);
+      showToast('Imagen de referencia cargada y procesada');
+    };
+    reader.readAsDataURL(file);
+  }
+
+  window.removeImage = function() {
+    state.referenceImageBase64 = null;
+    const fileInp = document.getElementById('image-input');
+    if (fileInp) fileInp.value = '';
+    
+    document.getElementById('dropzone-empty-state').style.display = 'block';
+    document.getElementById('dropzone-preview-state').style.display = 'none';
+    document.getElementById('ref-image-element').src = '';
+    document.getElementById('ref-empty-placeholder').style.display = 'block';
+    const liveImg = document.getElementById('ref-live-view-img');
+    liveImg.style.display = 'none';
+    liveImg.src = '';
+  };
+
+  window.loadDemoImage = function(type) {
+    const canvas = document.createElement('canvas');
+    canvas.width = 600;
+    canvas.height = 800;
+    const ctx = canvas.getContext('2d');
+    
+    if (type === 'kapa') {
+      ctx.fillStyle = '#0c0a09';
+      ctx.fillRect(0, 0, 600, 800);
+      ctx.fillStyle = '#d4af37';
+      ctx.font = 'bold 34px serif';
+      ctx.fillText('KAPA SPA & WELLNESS', 60, 200);
+      ctx.fillStyle = '#fafaf9';
+      ctx.font = '18px sans-serif';
+      ctx.fillText('Captura de Referencia de Diseño Web', 60, 250);
+    } else {
+      ctx.fillStyle = '#09090b';
+      ctx.fillRect(0, 0, 600, 800);
+      ctx.fillStyle = '#d4af37';
+      ctx.font = 'bold 34px serif';
+      ctx.fillText('BARBER VIP CLUB', 60, 200);
+      ctx.fillStyle = '#f4f4f5';
+      ctx.font = '18px sans-serif';
+      ctx.fillText('Captura de Referencia Masculina', 60, 250);
+    }
+    
+    const base64 = canvas.toDataURL('image/png');
+    state.referenceImageBase64 = base64;
+    
+    document.getElementById('dropzone-empty-state').style.display = 'none';
+    document.getElementById('dropzone-preview-state').style.display = 'block';
+    document.getElementById('ref-image-element').src = base64;
+
+    document.getElementById('ref-empty-placeholder').style.display = 'none';
+    const liveImg = document.getElementById('ref-live-view-img');
+    liveImg.src = base64;
+    liveImg.style.display = 'block';
+
+    extractColorsFromImage(base64);
+    showToast('Captura demo cargada exitosamente');
+  };
+
+  // Color Extraction
+  function extractColorsFromImage(base64) {
+    const img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.onload = () => {
+      const canvas = document.getElementById('color-canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = 100;
+      canvas.height = 100;
+      ctx.drawImage(img, 0, 0, 100, 100);
+
+      const imgData = ctx.getImageData(0, 0, 100, 100).data;
+      const colorCounts = {};
+
+      for (let i = 0; i < imgData.length; i += 16) {
+        const r = imgData[i];
+        const g = imgData[i + 1];
+        const b = imgData[i + 2];
+        const hex = rgbToHex(r, g, b);
+
+        const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+        if (brightness > 30 && brightness < 235) {
+          colorCounts[hex] = (colorCounts[hex] || 0) + 1;
+        }
+      }
+
+      const sorted = Object.keys(colorCounts).sort((a, b) => colorCounts[b] - colorCounts[a]);
+      if (sorted.length > 0) {
+        state.palette.primary = sorted[0];
+        if (sorted.length > 1) state.palette.secondary = sorted[1];
+        updateColorPickersUI();
+        renderLivePreview();
+        showToast('Paleta de colores sincronizada con la imagen');
+      }
+    };
+    img.src = base64;
+  }
+
+  function rgbToHex(r, g, b) {
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
+
+  // Color Pickers
+  function initColorPickers() {
+    ['primary', 'secondary', 'bg', 'text'].forEach(field => {
+      const colInput = document.getElementById(`col-${field}`);
+      const hexInput = document.getElementById(`hex-${field}`);
+
+      if (colInput && hexInput) {
+        colInput.addEventListener('input', (e) => {
+          hexInput.value = e.target.value;
+          state.palette[field] = e.target.value;
+          renderLivePreview();
+        });
+
+        hexInput.addEventListener('change', (e) => {
+          let val = e.target.value;
+          if (!val.startsWith('#')) val = '#' + val;
+          if (/^#[0-9A-F]{6}$/i.test(val)) {
+            colInput.value = val;
+            state.palette[field] = val;
+            renderLivePreview();
+          }
+        });
+      }
+    });
+
+    const fontSelect = document.getElementById('select-font-heading');
+    if (fontSelect) {
+      fontSelect.addEventListener('change', (e) => {
+        state.headingFont = e.target.value;
+        renderLivePreview();
+      });
+    }
+  }
+
+  function updateColorPickersUI() {
+    ['primary', 'secondary', 'bg', 'text'].forEach(field => {
+      const colEl = document.getElementById(`col-${field}`);
+      const hexEl = document.getElementById(`hex-${field}`);
+      if (colEl) colEl.value = state.palette[field];
+      if (hexEl) hexEl.value = state.palette[field];
+    });
+  }
+
+  function initVibeSelector() {
+    document.querySelectorAll('.vibe-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.vibe-chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const vibe = chip.getAttribute('data-vibe');
+        state.vibe = vibe;
+
+        if (vibe === 'luxury-dark') {
+          state.palette.primary = '#d4af37';
+          state.palette.secondary = '#1e1e24';
+          state.palette.bg = '#07090e';
+          state.palette.text = '#f8fafc';
+          state.headingFont = "'Playfair Display', serif";
+          document.getElementById('select-font-heading').value = "'Playfair Display', serif";
+        } else if (vibe === 'cyber-glow') {
+          state.palette.primary = '#06b6d4';
+          state.palette.secondary = '#0f172a';
+          state.palette.bg = '#020617';
+          state.palette.text = '#f8fafc';
+          state.headingFont = "'Space Grotesk', sans-serif";
+          document.getElementById('select-font-heading').value = "'Space Grotesk', sans-serif";
+        } else if (vibe === 'warm-organic') {
+          state.palette.primary = '#d97706';
+          state.palette.secondary = '#292524';
+          state.palette.bg = '#1c1917';
+          state.palette.text = '#fafaf9';
+          state.headingFont = "'Plus Jakarta Sans', sans-serif";
+          document.getElementById('select-font-heading').value = "'Plus Jakarta Sans', sans-serif";
+        } else if (vibe === 'clean-medical') {
+          state.palette.primary = '#10b981';
+          state.palette.secondary = '#0f172a';
+          state.palette.bg = '#060d13';
+          state.palette.text = '#f0fdf4';
+          state.headingFont = "'Plus Jakarta Sans', sans-serif";
+          document.getElementById('select-font-heading').value = "'Plus Jakarta Sans', sans-serif";
+        } else if (vibe === 'playful-kids') {
+          state.palette.primary = '#f97316';
+          state.palette.secondary = '#0284c7';
+          state.palette.bg = '#0c1222';
+          state.palette.text = '#ffffff';
+          state.headingFont = "'Outfit', sans-serif";
+          document.getElementById('select-font-heading').value = "'Outfit', sans-serif";
+        }
+
+        updateColorPickersUI();
+        renderLivePreview();
+      });
+    });
+  }
+
+  // Form Inputs
+  function initFormInputs() {
+    const textFields = [
+      { id: 'f-nombre', key: 'nombre' },
+      { id: 'f-nicho', key: 'nicho' },
+      { id: 'f-ciudad', key: 'ciudad' },
+      { id: 'f-eslogan', key: 'eslogan' },
+      { id: 'f-whatsapp', key: 'whatsapp' },
+      { id: 'f-telefono', key: 'telefono' },
+      { id: 'f-whatsapp-msg', key: 'whatsappMsg' },
+      { id: 'f-direccion', key: 'direccion' },
+      { id: 'f-maps-url', key: 'mapsUrl' },
+      { id: 'f-horario', key: 'horario' }
+    ];
+
+    textFields.forEach(({ id, key }) => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('input', (e) => {
+          state.business[key] = e.target.value;
+          syncStateToJsonEditor();
+          renderLivePreview();
+        });
+      }
+    });
+
+    for (let i = 1; i <= 3; i++) {
+      const numEl = document.getElementById(`f-stat${i}-num`);
+      const lblEl = document.getElementById(`f-stat${i}-label`);
+      if (numEl) numEl.addEventListener('input', updateStatsFromForm);
+      if (lblEl) lblEl.addEventListener('input', updateStatsFromForm);
+    }
+
+    ['hero-badge', 'cards-3d', 'cta-glow', 'testimonials', 'floating-wa', 'schema-seo'].forEach(id => {
+      const el = document.getElementById(`chk-${id}`);
+      if (el) {
+        el.addEventListener('change', (e) => {
+          const camel = id.replace(/-([a-z])/g, g => g[1].toUpperCase());
+          state.modules[camel] = e.target.checked;
+          renderLivePreview();
+        });
+      }
+    });
+
+    const jsonEditor = document.getElementById('json-editor');
+    if (jsonEditor) {
+      jsonEditor.addEventListener('input', () => {
+        try {
+          const parsed = JSON.parse(jsonEditor.value);
+          state.business = { ...state.business, ...parsed };
+          document.getElementById('json-status').className = 'json-status valid';
+          document.getElementById('json-status').innerText = 'JSON Válido';
+          syncStateToForm();
+          renderLivePreview();
+        } catch (err) {
+          document.getElementById('json-status').className = 'json-status invalid';
+          document.getElementById('json-status').innerText = 'Error de sintaxis JSON';
+        }
+      });
+    }
+
+    const fmtBtn = document.getElementById('btn-format-json');
+    if (fmtBtn) {
+      fmtBtn.addEventListener('click', () => {
+        try {
+          const parsed = JSON.parse(jsonEditor.value);
+          jsonEditor.value = JSON.stringify(parsed, null, 2);
+        } catch (e) {}
+      });
+    }
+
+    const demoSelect = document.getElementById('select-demo-preset');
+    if (demoSelect) {
+      demoSelect.addEventListener('change', (e) => {
+        if (e.target.value) {
+          window.loadBusinessPreset(e.target.value);
+        }
+      });
+    }
+  }
+
+  function updateStatsFromForm() {
+    state.business.stats = [
+      { num: document.getElementById('f-stat1-num').value, label: document.getElementById('f-stat1-label').value },
+      { num: document.getElementById('f-stat2-num').value, label: document.getElementById('f-stat2-label').value },
+      { num: document.getElementById('f-stat3-num').value, label: document.getElementById('f-stat3-label').value }
+    ];
+    syncStateToJsonEditor();
+    renderLivePreview();
+  }
+
+  window.switchDataInputMode = function(mode) {
+    const formContainer = document.getElementById('data-form-container');
+    const jsonContainer = document.getElementById('data-json-container');
+    const btnForm = document.getElementById('btn-mode-form');
+    const btnJson = document.getElementById('btn-mode-json');
+
+    if (mode === 'form') {
+      formContainer.style.display = 'block';
+      jsonContainer.style.display = 'none';
+      btnForm.classList.add('active');
+      btnJson.classList.remove('active');
+      syncStateToForm();
+    } else {
+      formContainer.style.display = 'none';
+      jsonContainer.style.display = 'flex';
+      btnForm.classList.remove('active');
+      btnJson.classList.add('active');
+      syncStateToJsonEditor();
+    }
+  };
+
+  function syncStateToForm() {
+    const setVal = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.value = val || '';
+    };
+
+    setVal('f-nombre', state.business.nombre);
+    setVal('f-nicho', state.business.nicho || 'LocalBusiness');
+    setVal('f-ciudad', state.business.ciudad);
+    setVal('f-eslogan', state.business.eslogan);
+    setVal('f-whatsapp', state.business.whatsapp);
+    setVal('f-telefono', state.business.telefono);
+    setVal('f-whatsapp-msg', state.business.whatsappMsg);
+    setVal('f-direccion', state.business.direccion);
+    setVal('f-maps-url', state.business.mapsUrl);
+    setVal('f-horario', state.business.horario);
+
+    if (state.business.stats && state.business.stats.length >= 3) {
+      setVal('f-stat1-num', state.business.stats[0].num);
+      setVal('f-stat1-label', state.business.stats[0].label);
+      setVal('f-stat2-num', state.business.stats[1].num);
+      setVal('f-stat2-label', state.business.stats[1].label);
+      setVal('f-stat3-num', state.business.stats[2].num);
+      setVal('f-stat3-label', state.business.stats[2].label);
+    }
+
+    renderServicesFormList();
+    syncStateToJsonEditor();
+  }
+
+  function syncStateToJsonEditor() {
+    const el = document.getElementById('json-editor');
+    if (el) el.value = JSON.stringify(state.business, null, 2);
+  }
+
+  function initServicesList() {
+    const addBtn = document.getElementById('btn-add-service');
+    if (addBtn) {
+      addBtn.addEventListener('click', () => {
+        state.business.servicios.push({
+          nombre: 'Nuevo Servicio Exclusivo',
+          precio: '$100.000 COP',
+          desc: 'Descripción detallada del procedimiento o atención personalizada.',
+          icono: 'fa-gem'
+        });
+        renderServicesFormList();
+        renderLivePreview();
+      });
+    }
+  }
+
+  function renderServicesFormList() {
+    const container = document.getElementById('services-list');
+    if (!container) return;
+    container.innerHTML = '';
+
+    (state.business.servicios || []).forEach((svc, index) => {
+      const item = document.createElement('div');
+      item.className = 'service-card-item';
+      item.innerHTML = `
+        <div class="svc-row-top">
+          <input type="text" class="svc-name-input" value="${escapeHtml(svc.nombre)}" placeholder="Nombre del Servicio">
+          <input type="text" class="svc-price-input" value="${escapeHtml(svc.precio)}" placeholder="Precio">
+          <button type="button" class="btn-del-svc" title="Eliminar"><i class="fa-solid fa-trash"></i></button>
+        </div>
+        <input type="text" class="svc-desc-input" value="${escapeHtml(svc.desc || '')}" placeholder="Breve descripción">
+      `;
+
+      item.querySelector('.svc-name-input').addEventListener('input', (e) => {
+        state.business.servicios[index].nombre = e.target.value;
+        syncStateToJsonEditor();
+        renderLivePreview();
+      });
+
+      item.querySelector('.svc-price-input').addEventListener('input', (e) => {
+        state.business.servicios[index].precio = e.target.value;
+        syncStateToJsonEditor();
+        renderLivePreview();
+      });
+
+      item.querySelector('.svc-desc-input').addEventListener('input', (e) => {
+        state.business.servicios[index].desc = e.target.value;
+        syncStateToJsonEditor();
+        renderLivePreview();
+      });
+
+      item.querySelector('.btn-del-svc').addEventListener('click', () => {
+        state.business.servicios.splice(index, 1);
+        renderServicesFormList();
+        syncStateToJsonEditor();
+        renderLivePreview();
+      });
+
+      container.appendChild(item);
+    });
+  }
+
+  window.loadBusinessPreset = function(key) {
+    const p = PRESETS[key];
+    if (!p) return;
+
+    state.business = JSON.parse(JSON.stringify(p));
+    if (p.palette) state.palette = { ...p.palette };
+    if (p.vibe) state.vibe = p.vibe;
+    if (p.headingFont) {
+      state.headingFont = p.headingFont;
+      const fontSel = document.getElementById('select-font-heading');
+      if (fontSel) fontSel.value = p.headingFont;
+    }
+
+    const wfPill = document.querySelector('.mode-pill[data-tab="workflow"]');
+    if (wfPill) wfPill.click();
+    
+    updateColorPickersUI();
+    syncStateToForm();
+    renderLivePreview();
+    showToast(`Plantilla "${p.nombre}" cargada en el diseñador`);
+  };
+
+  // Split Resizer
+  function initSplitResizer() {
+    const gutter = document.getElementById('split-gutter');
+    const refPane = document.getElementById('ref-pane');
+    const container = document.getElementById('preview-container');
+
+    if (!gutter || !refPane || !container) return;
+
+    let isDragging = false;
+
+    gutter.addEventListener('mousedown', () => {
+      isDragging = true;
+      document.body.style.cursor = 'col-resize';
+      document.body.style.userSelect = 'none';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const containerRect = container.getBoundingClientRect();
+      const newWidth = e.clientX - containerRect.left;
+      const percentage = (newWidth / containerRect.width) * 100;
+
+      if (percentage > 15 && percentage < 85) {
+        refPane.style.width = `${percentage}%`;
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isDragging) {
+        isDragging = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+      }
+    });
+  }
+
+  function initToolbarControls() {
+    document.getElementById('btn-view-split')?.addEventListener('click', () => setSplitMode('split'));
+    document.getElementById('btn-view-preview')?.addEventListener('click', () => setSplitMode('web'));
+    document.getElementById('btn-view-ref')?.addEventListener('click', () => setSplitMode('ref'));
+
+    document.querySelectorAll('.device-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const dev = btn.getAttribute('data-device');
+        state.deviceView = dev;
+        const frameWrapper = document.getElementById('web-frame-wrapper');
+        if (frameWrapper) frameWrapper.className = `web-frame-wrapper device-${dev}`;
+      });
+    });
+
+    document.getElementById('btn-refresh-preview')?.addEventListener('click', () => {
+      renderLivePreview();
+      showToast('Vista previa actualizada');
+    });
+
+    document.getElementById('btn-open-external')?.addEventListener('click', () => {
+      const html = generateExclusiveLandingHTML();
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      window.open(url, '_blank');
+    });
+
+    let zoom = 100;
+    const zoomImg = document.getElementById('ref-live-view-img');
+    const zoomText = document.getElementById('zoom-level');
+
+    document.getElementById('btn-zoom-in')?.addEventListener('click', () => {
+      if (zoom < 300) zoom += 25;
+      applyZoom();
+    });
+    document.getElementById('btn-zoom-out')?.addEventListener('click', () => {
+      if (zoom > 50) zoom -= 25;
+      applyZoom();
+    });
+    document.getElementById('btn-zoom-reset')?.addEventListener('click', () => {
+      zoom = 100;
+      applyZoom();
+    });
+
+    function applyZoom() {
+      if (zoomImg) zoomImg.style.transform = `scale(${zoom / 100})`;
+      if (zoomText) zoomText.innerText = `${zoom}%`;
+    }
+  }
+
+  function setSplitMode(mode) {
+    state.splitMode = mode;
+    document.querySelectorAll('.split-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(`btn-view-${mode === 'web' ? 'preview' : mode}`)?.classList.add('active');
+
+    const refPane = document.getElementById('ref-pane');
+    const webPane = document.getElementById('web-pane');
+    const gutter = document.getElementById('split-gutter');
+
+    if (!refPane || !webPane || !gutter) return;
+
+    if (mode === 'split') {
+      refPane.style.display = 'flex';
+      refPane.style.width = '40%';
+      webPane.style.display = 'flex';
+      gutter.style.display = 'flex';
+    } else if (mode === 'web') {
+      refPane.style.display = 'none';
+      gutter.style.display = 'none';
+      webPane.style.display = 'flex';
+    } else if (mode === 'ref') {
+      refPane.style.display = 'flex';
+      refPane.style.width = '100%';
+      gutter.style.display = 'none';
+      webPane.style.display = 'none';
+    }
+  }
+
+  // HTML Generator
+  function generateExclusiveLandingHTML() {
+    const b = state.business;
+    const p = state.palette;
+    const font = state.headingFont;
+    const waLink = `https://wa.me/${b.whatsapp}?text=${encodeURIComponent(b.whatsappMsg)}`;
+
+    const schemaJson = {
+      "@context": "https://schema.org",
+      "@type": b.nicho || "LocalBusiness",
+      "name": b.nombre,
+      "description": b.eslogan,
+      "telephone": b.telefono || b.whatsapp,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": b.direccion,
+        "addressLocality": b.ciudad,
+        "addressCountry": "CO"
+      },
+      "openingHours": b.horario,
+      "url": window.location.href,
+      "priceRange": "$$"
+    };
+
+    const servicesHtml = (b.servicios || []).map((svc) => `
+      <div class="luxury-card">
+        <div class="card-inner">
+          <div class="card-icon-box">
+            <i class="fa-solid ${svc.icono || 'fa-wand-magic-sparkles'}"></i>
+          </div>
+          <div class="card-header-flex">
+            <h3 class="card-title">${escapeHtml(svc.nombre)}</h3>
+            <span class="card-price">${escapeHtml(svc.precio)}</span>
+          </div>
+          <p class="card-desc">${escapeHtml(svc.desc)}</p>
+          <a href="${waLink}" target="_blank" class="card-action-btn">
+            <span>Apartar Cita</span> <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    `).join('');
+
+    const statsHtml = (b.stats || []).map(st => `
+      <div class="stat-pill">
+        <div class="stat-num">${escapeHtml(st.num)}</div>
+        <div class="stat-label">${escapeHtml(st.label)}</div>
+      </div>
+    `).join('');
+
+    const testimonialsHtml = (b.testimonios || []).map(t => `
+      <div class="testi-card">
+        <div class="stars-row">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testi-text">"${escapeHtml(t.texto)}"</p>
+        <div class="testi-author">
+          <div class="author-avatar">${escapeHtml(t.nombre.charAt(0))}</div>
+          <div class="author-info">
+            <strong>${escapeHtml(t.nombre)}</strong>
+            <small>${escapeHtml(t.cargo)}</small>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    return `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${escapeHtml(b.nombre)} | ${escapeHtml(b.ciudad)}</title>
+  <meta name="description" content="${escapeHtml(b.eslogan)} - Contacto directo vía WhatsApp y ubicación en ${escapeHtml(b.ciudad)}.">
+  
+  <meta property="og:title" content="${escapeHtml(b.nombre)} | ${escapeHtml(b.ciudad)}">
+  <meta property="og:description" content="${escapeHtml(b.eslogan)}">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  ${JSON.stringify(schemaJson, null, 2)}
+  <\/script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: ${p.primary};
+      --primary-glow: ${p.primary}44;
+      --secondary: ${p.secondary};
+      --bg: ${p.bg};
+      --text: ${p.text};
+      --font-heading: ${font};
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: var(--font-heading); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .ambient-glow { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%); filter: blur(80px); pointer-events: none; }
+    header.site-header { position: sticky; top: 0; background: rgba(10, 14, 23, 0.85); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.08); z-index: 100; padding: 16px 0; }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+    .brand-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+    .logo-icon-gem { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, var(--primary), #ffffff22); display: flex; align-items: center; justify-content: center; color: #000; font-size: 18px; box-shadow: 0 4px 20px var(--primary-glow); }
+    .btn-nav-wa { background: var(--primary); color: #05070a; text-decoration: none; font-size: 13px; font-weight: 800; padding: 10px 20px; border-radius: 30px; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 6px 24px var(--primary-glow); }
+    .hero-section { position: relative; padding: 80px 0 60px; text-align: center; }
+    .vip-badge-shimmer { display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--primary); color: var(--primary); padding: 6px 18px; border-radius: 30px; font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 24px; }
+    .hero-title { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; color: #fff; }
+    .hero-title .gradient-text { background: linear-gradient(135deg, #fff 30%, var(--primary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-subtitle { font-size: 17px; color: rgba(255, 255, 255, 0.7); max-width: 720px; margin: 0 auto 36px; }
+    .hero-cta-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .btn-main-cta { background: linear-gradient(135deg, var(--primary), #ffffff); color: #090d16; text-decoration: none; font-size: 15px; font-weight: 800; padding: 16px 36px; border-radius: 30px; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 36px var(--primary-glow); }
+    .btn-sec-cta { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; text-decoration: none; font-size: 15px; font-weight: 700; padding: 16px 28px; border-radius: 30px; display: inline-flex; align-items: center; gap: 8px; }
+    .stats-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 24px 32px; margin-bottom: 80px; backdrop-filter: blur(10px); }
+    .stat-pill { text-align: center; }
+    .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--primary); font-family: var(--font-heading); margin-bottom: 4px; }
+    .stat-label { font-size: 13px; color: rgba(255, 255, 255, 0.6); font-weight: 600; }
+    .section-title-wrap { text-align: center; margin-bottom: 50px; }
+    .section-tag { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--primary); display: inline-block; margin-bottom: 10px; }
+    .section-title { font-size: 2.2rem; font-weight: 800; color: #fff; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; margin-bottom: 80px; }
+    .luxury-card { background: rgba(18, 24, 38, 0.55); backdrop-filter: blur(12px); border-radius: 24px; padding: 32px; border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease, border-color 0.3s ease; display: flex; flex-direction: column; }
+    .luxury-card:hover { transform: translateY(-6px); border-color: var(--primary); box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+    .card-icon-box { width: 52px; height: 52px; border-radius: 16px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 22px; margin-bottom: 24px; }
+    .card-header-flex { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+    .card-title { font-size: 1.25rem; font-weight: 700; color: #fff; }
+    .card-price { font-size: 1.1rem; font-weight: 800; color: var(--primary); white-space: nowrap; }
+    .card-desc { font-size: 14px; color: rgba(255, 255, 255, 0.65); margin-bottom: 24px; flex: 1; }
+    .card-action-btn { color: #fff; text-decoration: none; font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 80px; }
+    .testi-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 28px; }
+    .stars-row { color: #f59e0b; font-size: 14px; margin-bottom: 16px; display: flex; gap: 4px; }
+    .testi-text { font-size: 15px; color: rgba(255, 255, 255, 0.85); font-style: italic; margin-bottom: 20px; }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .author-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #000; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; }
+    .author-info strong { display: block; font-size: 14px; color: #fff; }
+    .author-info small { display: block; font-size: 12px; color: rgba(255, 255, 255, 0.5); }
+    .location-card { background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 80px; }
+    @media (max-width: 768px) { .location-card { grid-template-columns: 1fr; } }
+    .loc-item { display: flex; gap: 16px; margin-bottom: 20px; }
+    .loc-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 255, 255, 0.05); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .loc-details strong { display: block; font-size: 14px; color: #fff; margin-bottom: 2px; }
+    .loc-details p { font-size: 14px; color: rgba(255, 255, 255, 0.7); }
+    footer.site-footer { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 40px 0; text-align: center; color: rgba(255, 255, 255, 0.5); font-size: 13px; }
+    .wa-floating-btn { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); color: #fff; text-decoration: none; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); z-index: 1000; animation: waPulse 2s infinite; }
+    @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon-gem"><i class="fa-solid fa-crown"></i></div>
+        <div>
+          <h2>${escapeHtml(b.nombre)}</h2>
+          <small><i class="fa-solid fa-location-dot"></i> ${escapeHtml(b.ciudad)}</small>
+        </div>
+      </a>
+      <a href="${waLink}" target="_blank" class="btn-nav-wa">
+        <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp Directo</span>
+      </a>
+    </div>
+  </header>
+  <section class="hero-section">
+    <div class="container">
+      <div class="vip-badge-shimmer">
+        <i class="fa-solid fa-sparkles"></i> SERVICIO EXCLUSIVO & ATENCIÓN PERSONALIZADA
+      </div>
+      <h1 class="hero-title">${escapeHtml(b.nombre)}<br><span class="gradient-text">${escapeHtml(b.ciudad)}</span></h1>
+      <p class="hero-subtitle">${escapeHtml(b.eslogan)}</p>
+      <div class="hero-cta-group">
+        <a href="${waLink}" target="_blank" class="btn-main-cta"><i class="fa-brands fa-whatsapp"></i> <span>Solicitar Cita / Información</span></a>
+        <a href="${escapeHtml(b.mapsUrl)}" target="_blank" class="btn-sec-cta"><i class="fa-solid fa-map-location-dot"></i> <span>Ver Ubicación</span></a>
+      </div>
+      <div class="stats-container">${statsHtml}</div>
+    </div>
+  </section>
+  <section class="services-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">CATÁLOGO DE SERVICIOS</span>
+        <h2 class="section-title">Experiencias & Tratamientos de Autor</h2>
+      </div>
+      <div class="services-grid">${servicesHtml}</div>
+    </div>
+  </section>
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">RESEÑAS VERIFICADAS</span>
+        <h2 class="section-title">La Opinión de Nuestros Clientes</h2>
+      </div>
+      <div class="testimonials-grid">${testimonialsHtml}</div>
+    </div>
+  </section>
+  <section class="location-section">
+    <div class="container">
+      <div class="location-card">
+        <div>
+          <span class="section-tag">CONTACTO & VISITA</span>
+          <h2 style="font-size: 1.8rem; margin-bottom: 24px; color:#fff;">Estamos Listos Para Atenderte</h2>
+          <div class="loc-item">
+            <div class="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="loc-details">
+              <strong>Dirección en ${escapeHtml(b.ciudad)}:</strong>
+              <p>${escapeHtml(b.direccion)}</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="loc-details">
+              <strong>Horario de Atención:</strong>
+              <p>${escapeHtml(b.horario)}</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="loc-details">
+              <strong>Teléfono / Línea Directa:</strong>
+              <p>${escapeHtml(b.telefono || b.whatsapp)}</p>
+            </div>
+          </div>
+        </div>
+        <div style="background: rgba(0,0,0,0.4); border-radius: 16px; padding: 24px; border: 1px solid rgba(255,255,255,0.06); text-align: center;">
+          <i class="fa-solid fa-map-marked-alt" style="font-size: 48px; color: var(--primary); margin-bottom: 16px;"></i>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 8px;">¿Cómo llegar a nuestra sede?</h3>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 20px;">Abre tu aplicación de mapas preferida y navega directamente.</p>
+          <a href="${escapeHtml(b.mapsUrl)}" target="_blank" class="btn-main-cta" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-diamond-turn-right"></i> Abrir en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© ${new Date().getFullYear()} ${escapeHtml(b.nombre)}. Todos los derechos reservados.</p>
+      <p style="margin-top: 6px; font-size: 11px;">Sitio Web Standalone optimizado para SEO Local & Conversión en WhatsApp.</p>
+    </div>
+  </footer>
+  <a href="${waLink}" target="_blank" class="wa-floating-btn" title="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</body>
+</html>`;
+  }
+
+  function renderLivePreview() {
+    const iframe = document.getElementById('preview-iframe');
+    if (!iframe) return;
+    const html = generateExclusiveLandingHTML();
+    iframe.srcdoc = html;
+    updateContextCodeDisplay();
+  }
+
+  // AI Context Triangle
+  function initContextTriangle() {
+    document.querySelectorAll('.tri-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tri-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        state.activeTriFile = btn.getAttribute('data-target');
+        updateContextCodeDisplay();
+      });
+    });
+
+    document.getElementById('btn-copy-tri-code')?.addEventListener('click', () => {
+      const code = document.getElementById('tri-code-display').innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        showToast('Código copiado al portapapeles');
+      });
+    });
+
+    document.getElementById('btn-download-tri-file')?.addEventListener('click', () => {
+      downloadCurrentTriFile();
+    });
+  }
+
+  function updateContextCodeDisplay() {
+    const codeEl = document.getElementById('tri-code-display');
+    const nameTag = document.getElementById('current-tri-file');
+    if (!codeEl || !nameTag) return;
+    const target = state.activeTriFile;
+
+    if (target === 'tri-datos') {
+      nameTag.innerText = 'DATOS_NEGOCIO.json';
+      codeEl.innerText = JSON.stringify(state.business, null, 2);
+    } else if (target === 'tri-ficha') {
+      nameTag.innerText = 'FICHA_DISENO.md';
+      codeEl.innerText = generateFichaDisenoMD();
+    } else if (target === 'tri-agents') {
+      nameTag.innerText = 'AGENTS.md';
+      codeEl.innerText = generateAgentsMD();
+    } else if (target === 'tri-html') {
+      nameTag.innerText = 'index_standalone.html';
+      codeEl.innerText = generateExclusiveLandingHTML();
+    }
+  }
+
+  function generateFichaDisenoMD() {
+    const b = state.business;
+    const p = state.palette;
+    return `# Ficha de Diseño: ${b.nombre}
+
+## 🎨 Paleta de Colores Exclusiva
+- **Color Primario (Acento VIP)**: \`${p.primary}\` (Botones de acción, badges, detalles y números de estadísticas).
+- **Color Secundario**: \`${p.secondary}\` (Contenedores, bordes sutiles y tarjetas).
+- **Color de Fondo Principal**: \`${p.bg}\` (Modo oscuro / Canvas principal con efecto de ambient glow).
+- **Color de Textos**: \`${p.text}\` (Tipografía principal de alto contraste y legibilidad).
+
+## 🔤 Tipografía
+- **Títulos y Encabezados (H1, H2, H3)**: ${state.headingFont} (Google Fonts).
+- **Cuerpo y Párrafos**: \`'Plus Jakarta Sans', sans-serif\`.
+
+## 💎 Reglas de Componentes UI
+1. **Glassmorphism & Depth**: Tarjetas con \`backdrop-filter: blur(12px)\`, bordes perimetrales sutiles y micro-animaciones al hacer hover.
+2. **Iconografía No Genérica**: Íconos contextuales con contenedores geométricos, sombras de luz perimetral y estilos acordes al rubro.
+3. **Conversión Focalizada**: Botones de WhatsApp con mensaje pre-configurado y pulsación magnética de luz.
+`;
+  }
+
+  function generateAgentsMD() {
+    const b = state.business;
+    return `# Guía del Proyecto para Inteligencia Artificial: ${b.nombre}
+
+Bienvenido agente de IA. Este proyecto contiene la landing page exclusiva y optimizada para SEO Local de **${b.nombre}** en **${b.ciudad}**.
+
+## 📁 Estructura del Triángulo de Contexto IA
+1. **\`DATOS_NEGOCIO.json\`**: Fuente única de verdad con teléfonos, WhatsApp, horarios, dirección y catálogo de servicios.
+2. **\`FICHA_DISENO.md\`**: Manual de marca con paletas HEX, tipografías y reglas de estilo visual.
+3. **\`AGENTS.md\`**: Este archivo de instrucciones para continuidad autónoma.
+
+## 🏆 Reglas Obligatorias para Cualquier Modificación
+- **100% Standalone**: Mantén siempre todo el CSS embebido en \`<style>\` e imágenes en Base64 o SVG si se agregan nuevas subpáginas.
+- **SEO Local Schema.org**: Mantén el marcado JSON-LD con \`@type: "${b.nicho}"\`.
+- **Iconografía Exclusiva**: No uses iconos o botones genéricos; mantén la estética de alta gama con sombras perimetrales y badges VIP.
+`;
+  }
+
+  function downloadCurrentTriFile() {
+    let content = '';
+    let filename = '';
+    const target = state.activeTriFile;
+
+    if (target === 'tri-datos') {
+      content = JSON.stringify(state.business, null, 2);
+      filename = 'DATOS_NEGOCIO.json';
+    } else if (target === 'tri-ficha') {
+      content = generateFichaDisenoMD();
+      filename = 'FICHA_DISENO.md';
+    } else if (target === 'tri-agents') {
+      content = generateAgentsMD();
+      filename = 'AGENTS.md';
+    } else if (target === 'tri-html') {
+      content = generateExclusiveLandingHTML();
+      filename = `${state.business.nombre.toLowerCase().replace(/\s+/g, '_')}_standalone.html`;
+    }
+
+    downloadFile(filename, content);
+  }
+
+  function downloadFile(filename, text) {
+    const element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+  }
+
+  // Modals
+  function initModals() {
+    document.getElementById('btn-export-code')?.addEventListener('click', () => {
+      openModal('modal-export');
+      prepareModalContent();
+    });
+
+    document.getElementById('btn-copy-prompt')?.addEventListener('click', () => copyAIPrompt());
+    document.getElementById('btn-copy-modal-prompt')?.addEventListener('click', () => copyAIPrompt());
+
+    document.getElementById('btn-dl-html')?.addEventListener('click', () => downloadFile('index_standalone.html', generateExclusiveLandingHTML()));
+    document.getElementById('btn-dl-json')?.addEventListener('click', () => downloadFile('DATOS_NEGOCIO.json', JSON.stringify(state.business, null, 2)));
+    document.getElementById('btn-dl-ficha')?.addEventListener('click', () => downloadFile('FICHA_DISENO.md', generateFichaDisenoMD()));
+    document.getElementById('btn-dl-agents')?.addEventListener('click', () => downloadFile('AGENTS.md', generateAgentsMD()));
+  }
+
+  function prepareModalContent() {
+    const prompt = generateAIPromptText();
+    const el = document.getElementById('ai-prompt-text');
+    if (el) el.value = prompt;
+  }
+
+  function generateAIPromptText() {
+    const b = state.business;
+    const p = state.palette;
+    return `Construye una landing page exclusiva y no genérica para el negocio "${b.nombre}" ubicado en ${b.ciudad}.
+- Nicho: ${b.nicho}
+- Paleta: Primario (${p.primary}), Secundario (${p.secondary}), Fondo (${p.bg}), Texto (${p.text})
+- Tipografía: ${state.headingFont}
+- WhatsApp de conversión: ${b.whatsapp}
+- Genera el Triángulo de Contexto IA (DATOS_NEGOCIO.json, FICHA_DISENO.md, AGENTS.md) y el archivo index.html Standalone con marcado Schema.org JSON-LD de SEO Local y OpenGraph.`;
+  }
+
+  function copyAIPrompt() {
+    const prompt = generateAIPromptText();
+    navigator.clipboard.writeText(prompt).then(() => {
+      showToast('Prompt estructurado copiado para la IA');
+    });
+  }
+
+  window.openModal = function(id) {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'flex';
+  };
+
+  window.closeModal = function(id) {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  };
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function showToast(msg) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.innerHTML = `<i class="fa-solid fa-wand-magic-sparkles" style="color:var(--gold-primary)"></i> <span>${msg}</span>`;
+    container.appendChild(toast);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Ébano & Marfil - Beauty Center | Alta Peluquería & Salón de Belleza en Turbo, Antioquia</title>
+  <meta name="description" content="Ébano & Marfil - Beauty Center en Turbo, Antioquia. Alta peluquería, colorimetría, balayage, alisados de keratina, spa capilar y paquetes de belleza. ¡Agenda tu cita hoy!">
+  <meta name="keywords" content="peluquería en turbo, salón de belleza turbo antioquia, balayage turbo, alisados turbo, spa capilar turbo, estilistas turbo antioquia, ebano y marfil, luxehair">
+  <meta name="theme-color" content="#0c0b0e">
+
+  <!-- OpenGraph / Redes Sociales -->
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="Ébano & Marfil - Beauty Center | Donde el Estilo Encuentra la Confianza">
+  <meta property="og:description" content="Centro de alta peluquería, colorimetría avanzada, alisados espejo y spa capilar en Turbo, Antioquia. Calificación 5.0 ★.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:url" content="https://ebanoymarfil.co/">
+
+  <!-- Google Fonts: Alex Brush (Signature Script) + DM Serif Display / Cormorant Garamond (Editorial Display) + Tenor Sans & Plus Jakarta Sans / Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tenor+Sans&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Ébano & Marfil - Beauty Center",
+    "image": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1200&q=85",
+    "telephone": "+573104400679",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 14 #99-26",
+      "addressLocality": "Turbo",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.090776,
+      "longitude": -76.7273576
+    },
+    "url": "https://maps.google.com/maps/place/%C3%89bano+%26+Marfil+-+Beauty+Center/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e5065b8e094bb43:0x2509018bdd1d1851!8m2!3d8.090776!4d-76.7273576!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhkgESdW5pc2V4X2hhaXJkcmVzc2Vy4AEA!16s%2Fg%2F11twwszx3n",
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y SISTEMA DE DISEÑO (CLONACIÓN FORENSE LUXEHAIR)
+       ========================================================================== */
+    :root {
+      /* Paleta Forense Extraída */
+      --color-rose-nude: #d1a88b;
+      --color-rose-nude-hover: #e0ba9e;
+      --color-rose-nude-dark: #b88d70;
+      --color-rose-glow: rgba(209, 168, 139, 0.25);
+
+      --color-obsidian-darkest: #080709;
+      --color-obsidian-bg: #0c0b0e;
+      --color-obsidian-card: #141317;
+      --color-obsidian-surface: #1a191f;
+      --color-obsidian-border: rgba(209, 168, 139, 0.2);
+
+      --color-marfil-bg: #fcf9f5;
+      --color-marfil-card: #ffffff;
+      --color-marfil-soft: #f6f1ea;
+      --color-marfil-border: rgba(209, 168, 139, 0.22);
+
+      --color-text-dark: #121014;
+      --color-text-muted: #78716c;
+      --color-text-light: #ffffff;
+      --color-text-light-muted: #a8a29e;
+
+      --color-badge-gold: #f59e0b;
+
+      /* Tipografía Forense */
+      --font-script: 'Alex Brush', cursive;
+      --font-display: 'DM Serif Display', 'Cormorant Garamond', Georgia, serif;
+      --font-logo: 'Tenor Sans', 'Montserrat', sans-serif;
+      --font-ui: 'Plus Jakarta Sans', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Layout */
+      --container-max: 1200px;
+      --radius-xs: 4px;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+
+      /* Transiciones y Sombras */
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.14);
+      --shadow-nude: 0 10px 25px rgba(209, 168, 139, 0.3);
+    }
+
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--color-marfil-bg);
+      color: var(--color-text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      transition: var(--transition);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       1. TOP BAR (DARK OBSIDIAN LUXE)
+       ========================================================================== */
+    .top-bar {
+      background-color: var(--color-obsidian-darkest);
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.76rem;
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .top-bar-info-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-bar-item i {
+      color: var(--color-rose-nude);
+      font-size: 0.82rem;
+    }
+
+    .top-bar-social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-bar-social a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.82rem;
+      transition: var(--transition);
+    }
+
+    .top-bar-social a:hover {
+      color: var(--color-rose-nude);
+    }
+
+    /* ==========================================================================
+       2. HEADER SMART / STICKY NAVBAR (LUXEHAIR STYLE)
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(12, 11, 14, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(209, 168, 139, 0.15);
+      transition: transform 0.35s ease, background-color 0.3s ease;
+    }
+
+    .header-sticky-wrapper.header-scrolled {
+      background: rgba(8, 7, 9, 0.98);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    /* Logo LUXEHAIR Forense */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+    }
+
+    .logo-main-text {
+      font-family: var(--font-logo);
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 3.5px;
+      line-height: 1.1;
+      color: #ffffff;
+    }
+
+    .logo-sub-text {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-rose-nude);
+    }
+
+    /* Nav Links */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.88);
+      padding: 8px 0;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--color-rose-nude);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-rose-nude);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Botón Header Mandatorio «Agendar» */
+    .btn-header-cta {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 11px 22px;
+      border-radius: var(--radius-xs);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-nude);
+      touch-action: manipulation;
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-rose-nude-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(209, 168, 139, 0.4);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      color: #ffffff;
+      font-size: 1.35rem;
+      padding: 8px;
+    }
+
+    /* ==========================================================================
+       3. HERO HEADER INMERSIVO FULL-WIDTH BLEED (LUXEHAIR DARK & WARM GOLD)
+       ========================================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      background-color: var(--color-obsidian-bg);
+      min-height: 620px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.95;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, black 45%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 15%, black 45%);
+    }
+
+    /* Degradado Aterciopelado Ultra-Suave y Continuo (Sin Cortes Bruscos) */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        #0c0b0e 0%,
+        #0c0b0e 30%,
+        rgba(12, 11, 14, 0.85) 45%,
+        rgba(12, 11, 14, 0.4) 65%,
+        transparent 92%
+      );
+      z-index: 2;
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+      padding-top: 80px;
+      padding-bottom: 90px;
+      width: 100%;
+    }
+
+    .hero-text-block {
+      max-width: 530px;
+      color: #ffffff;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--color-rose-nude);
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 3.8rem;
+      line-height: 1.08;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .hero-title-script {
+      font-family: var(--font-script);
+      font-size: 4.2rem;
+      color: var(--color-rose-nude);
+      display: block;
+      line-height: 1.1;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      font-size: 0.84rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 15px 28px;
+      border-radius: var(--radius-xs);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-nude);
+      touch-action: manipulation;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-rose-nude-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(209, 168, 139, 0.45);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #ffffff;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 26px;
+      border-radius: var(--radius-xs);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      touch-action: manipulation;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-rose-nude);
+      color: var(--color-rose-nude);
+      background: rgba(209, 168, 139, 0.08);
+      transform: translateY(-3px);
+    }
+
+    /* Floating Rating Pill */
+    .hero-rating-pill {
+      position: absolute;
+      bottom: 24px;
+      right: 40px;
+      z-index: 4;
+      background: rgba(12, 11, 14, 0.92);
+      backdrop-filter: blur(10px);
+      padding: 12px 20px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-obsidian-border);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rating-stars {
+      color: var(--color-badge-gold);
+      font-size: 0.88rem;
+      display: flex;
+      gap: 3px;
+    }
+
+    .rating-text {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       4. BARRA DE 5 PILARES DE EXCELENCIA (DARK BADGES BAR)
+       ========================================================================== */
+    .section-pillars-bar {
+      background: var(--color-obsidian-bg);
+      padding: 0 0 50px 0;
+    }
+
+    .pillars-card-dark {
+      background: var(--color-obsidian-card);
+      border: 1px solid var(--color-obsidian-border);
+      border-radius: var(--radius-sm);
+      padding: 24px 30px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3);
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .pillar-icon-box {
+      font-size: 1.4rem;
+      color: var(--color-rose-nude);
+      min-width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .pillar-item:hover .pillar-icon-box {
+      transform: scale(1.15) rotate(6deg);
+      color: #ffffff;
+    }
+
+    .pillar-text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pillar-title {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 2px;
+      line-height: 1.2;
+    }
+
+    .pillar-desc {
+      font-size: 0.7rem;
+      color: var(--color-text-light-muted);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       5. SECCIÓN: NUESTROS SERVICIOS («OUR SERVICES» REPLICA)
+       ========================================================================== */
+    .section-services {
+      padding: 60px 0 70px;
+    }
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.3rem;
+      color: var(--color-text-dark);
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .flourish-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--color-rose-nude);
+      margin-bottom: 12px;
+    }
+
+    .flourish-line {
+      width: 45px;
+      height: 1px;
+      background: var(--color-marfil-border);
+    }
+
+    .link-view-all {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-rose-nude-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .link-view-all:hover {
+      color: var(--color-text-dark);
+      padding-left: 4px;
+    }
+
+    /* Grid de 6 Servicios (Desktop 6 col / Móvil 2 Col) */
+    .services-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--color-marfil-soft);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      border: 1px solid var(--color-marfil-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--color-rose-nude);
+      background: #ffffff;
+    }
+
+    .service-thumb-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      margin-bottom: 14px;
+      background: #e2e8f0;
+    }
+
+    .service-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-thumb-img {
+      transform: scale(1.08);
+    }
+
+    .service-icon-seal {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid var(--color-marfil-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-rose-nude-dark);
+      font-size: 0.95rem;
+      margin-top: -26px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon-seal {
+      background: var(--color-rose-nude);
+      color: #ffffff;
+      border-color: var(--color-rose-nude);
+      transform: scale(1.1);
+    }
+
+    .service-name {
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--color-text-dark);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .service-desc {
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      margin-bottom: 14px;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-price-tag {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--color-rose-nude-dark);
+      margin-bottom: 10px;
+    }
+
+    .btn-card-book {
+      width: 100%;
+      background: var(--color-obsidian-darkest);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 9px 12px;
+      border-radius: var(--radius-xs);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: auto;
+      touch-action: manipulation;
+    }
+
+    .btn-card-book:hover {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+    }
+
+    /* ==========================================================================
+       6. SPECIAL OFFER BANNER 20% OFF (LUXEHAIR SALON INTERIOR)
+       ========================================================================== */
+    .section-promo-luxe {
+      padding: 30px 0 60px;
+    }
+
+    .promo-card-split {
+      background: var(--color-obsidian-card);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-obsidian-border);
+      display: grid;
+      grid-template-columns: 1.1fr 1.3fr 1fr;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .promo-col-text {
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #ffffff;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .promo-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-rose-nude);
+      margin-bottom: 6px;
+    }
+
+    .promo-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1.12;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .btn-promo-action {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border-radius: var(--radius-xs);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+    }
+
+    .btn-promo-action:hover {
+      background: var(--color-rose-nude-hover);
+      transform: translateY(-2px);
+    }
+
+    .promo-col-perks {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      color: #ffffff;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .promo-perk-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .promo-perk-icon {
+      font-size: 1.3rem;
+      color: var(--color-rose-nude);
+      min-width: 28px;
+    }
+
+    .promo-perk-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .promo-perk-desc {
+      font-size: 0.72rem;
+      color: var(--color-text-light-muted);
+    }
+
+    .promo-col-image {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+    }
+
+    .promo-salon-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==========================================================================
+       7. SECCIÓN: NUESTROS TRABAJOS («OUR WORK» / GALERÍA 6 ITEMS)
+       ========================================================================== */
+    .section-work-gallery {
+      padding: 30px 0 60px;
+    }
+
+    .work-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .work-item-card {
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .work-item-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .work-item-card:hover .work-item-img {
+      transform: scale(1.1);
+    }
+
+    .work-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, transparent 40%, rgba(12, 11, 14, 0.85) 100%);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 12px;
+      color: #ffffff;
+      transition: opacity 0.3s ease;
+    }
+
+    .work-item-card:hover .work-overlay {
+      opacity: 1;
+    }
+
+    .work-title {
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .work-cat {
+      font-size: 0.65rem;
+      color: var(--color-rose-nude);
+    }
+
+    /* ==========================================================================
+       8. SECCIÓN: PAQUETES & PRECIOS («PACKAGES & PRICING»)
+       ========================================================================== */
+    .section-packages {
+      padding: 40px 0 70px;
+    }
+
+    .packages-layout {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr) 1.25fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .package-card {
+      background: #ffffff;
+      border: 1px solid var(--color-marfil-border);
+      border-radius: var(--radius-xs);
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .package-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-rose-nude);
+    }
+
+    .package-card.package-highlight {
+      border: 2px solid var(--color-rose-nude);
+      background: #fffdfb;
+    }
+
+    .package-badge-tag {
+      position: absolute;
+      top: -11px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 12px;
+      border-radius: var(--radius-full);
+      white-space: nowrap;
+    }
+
+    .package-title {
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-text-dark);
+      margin-bottom: 16px;
+    }
+
+    .package-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.74rem;
+      color: var(--color-text-muted);
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .package-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .package-feature-item::before {
+      content: '–';
+      color: var(--color-rose-nude-dark);
+      font-weight: bold;
+    }
+
+    .package-price-box {
+      margin-top: auto;
+      margin-bottom: 16px;
+    }
+
+    .package-price-val {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--color-text-dark);
+    }
+
+    .btn-package-book {
+      width: 100%;
+      border: 1px solid var(--color-text-dark);
+      color: var(--color-text-dark);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 14px;
+      border-radius: var(--radius-xs);
+      transition: var(--transition);
+    }
+
+    .package-card.package-highlight .btn-package-book {
+      background: var(--color-rose-nude);
+      border-color: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+    }
+
+    .btn-package-book:hover {
+      background: var(--color-obsidian-darkest);
+      border-color: var(--color-obsidian-darkest);
+      color: #ffffff;
+    }
+
+    /* Side Dark Banner Card: "Good Hair Good Mood" */
+    .package-dark-banner {
+      background: var(--color-obsidian-card);
+      border: 1px solid var(--color-obsidian-border);
+      border-radius: var(--radius-xs);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dark-banner-title {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .dark-banner-script {
+      font-family: var(--font-script);
+      font-size: 2.4rem;
+      color: var(--color-rose-nude);
+      display: block;
+    }
+
+    .dark-banner-desc {
+      font-size: 0.78rem;
+      color: var(--color-text-light-muted);
+      margin-bottom: 16px;
+    }
+
+    .dark-banner-img-wrap {
+      width: 100%;
+      height: 110px;
+      border-radius: var(--radius-xs);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .dark-banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .btn-dark-banner-book {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 16px;
+      border-radius: var(--radius-xs);
+      text-align: center;
+      display: block;
+    }
+
+    .btn-dark-banner-book:hover {
+      background: var(--color-rose-nude-hover);
+    }
+
+    /* ==========================================================================
+       9. SECCIÓN: TESTIMONIOS («WHAT OUR CLIENTS SAY»)
+       ========================================================================== */
+    .section-testimonials {
+      padding: 40px 0 70px;
+      background: #ffffff;
+      border-top: 1px solid var(--color-marfil-border);
+      border-bottom: 1px solid var(--color-marfil-border);
+    }
+
+    .testimonials-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--color-marfil-bg);
+      border: 1px solid var(--color-marfil-border);
+      border-radius: var(--radius-xs);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .quote-icon {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      color: var(--color-rose-nude);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .testimonial-text {
+      font-size: 0.84rem;
+      color: var(--color-text-dark);
+      line-height: 1.55;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-user-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .user-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-text-dark);
+    }
+
+    .user-stars {
+      color: var(--color-badge-gold);
+      font-size: 0.72rem;
+      display: flex;
+      gap: 2px;
+    }
+
+    /* ==========================================================================
+       10. MAPA INTERACTIVO GEORREFERENCIADO (#ubicacion)
+       ========================================================================== */
+    .section-map {
+      padding: 60px 0;
+    }
+
+    .map-showcase-card {
+      background: #ffffff;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--color-marfil-border);
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+    }
+
+    .map-info-panel {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-eyebrow {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-rose-nude-dark);
+      margin-bottom: 6px;
+    }
+
+    .map-title {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      color: var(--color-text-dark);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .map-details-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .map-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .map-detail-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      background: var(--color-marfil-soft);
+      border: 1px solid var(--color-marfil-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-rose-nude-dark);
+      font-size: 0.88rem;
+    }
+
+    .map-detail-text h4 {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--color-text-dark);
+      margin-bottom: 2px;
+    }
+
+    .map-detail-text p {
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+
+    .btn-map-action {
+      background: var(--color-obsidian-darkest);
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 12px 22px;
+      border-radius: var(--radius-xs);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+    }
+
+    .btn-map-action:hover {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      min-height: 380px;
+      width: 100%;
+      background: #e2e8f0;
+    }
+
+    .map-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      min-height: 380px;
+    }
+
+    /* ==========================================================================
+       11. FOOTER PRINCIPAL (5 COLUMNAS LUXEHAIR OBSIDIAN)
+       ========================================================================== */
+    .main-footer {
+      background: var(--color-obsidian-darkest);
+      color: #ffffff;
+      padding: 60px 0 24px;
+      border-top: 1px solid rgba(209, 168, 139, 0.2);
+    }
+
+    .footer-grid-5 {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr 1.2fr 1fr 1.3fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-logo);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .footer-brand-sub {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      color: var(--color-rose-nude);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .footer-about-text {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 0.82rem;
+      transition: var(--transition);
+    }
+
+    .footer-social-btn:hover {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      transform: translateY(-2px);
+    }
+
+    .footer-col-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-link-item a {
+      font-size: 0.76rem;
+      color: rgba(255, 255, 255, 0.7);
+      transition: color 0.2s ease;
+    }
+
+    .footer-link-item a:hover {
+      color: var(--color-rose-nude);
+      padding-left: 4px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.76rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 10px;
+    }
+
+    .footer-contact-item i {
+      color: var(--color-rose-nude);
+      font-size: 0.82rem;
+      margin-top: 3px;
+    }
+
+    /* Instagram Mini Gallery */
+    .footer-insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .footer-insta-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 2px;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-insta-img:hover {
+      transform: scale(1.08);
+    }
+
+    /* Newsletter & Reserva */
+    .footer-newsletter-text {
+      font-size: 0.76rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 12px;
+    }
+
+    .footer-newsletter-form {
+      display: flex;
+      gap: 6px;
+    }
+
+    .footer-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-xs);
+      padding: 9px 12px;
+      font-size: 0.76rem;
+      color: #ffffff;
+      outline: none;
+    }
+
+    .btn-footer-reserve {
+      background: var(--color-rose-nude);
+      color: var(--color-obsidian-darkest);
+      font-size: 0.76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 9px 16px;
+      border-radius: var(--radius-xs);
+      white-space: nowrap;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-rose-nude-hover);
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ==========================================================================
+       13. RESPONSIVE BREAKPOINTS (MOBILE CALIBRADO < 768px)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .pillars-card-dark {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .services-grid-6, .work-grid-6 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .promo-card-split {
+        grid-template-columns: 1fr;
+      }
+      .promo-col-image {
+        display: none;
+      }
+      .packages-layout {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .package-dark-banner {
+        grid-column: span 2;
+      }
+      .testimonials-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid-5 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar {
+        display: none;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: block;
+      }
+
+      .navbar {
+        height: 66px;
+      }
+
+      .logo-main-text {
+        font-size: 1.25rem;
+      }
+
+      /* Hero Móvil Calibrado (+20% Altura & Centrado Inferior) */
+      .hero-fullwidth-section {
+        min-height: 720px;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 140px 16px 36px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-bg-img {
+        object-position: center top;
+        opacity: 0.92;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(12, 11, 14, 0) 0%,
+          rgba(12, 11, 14, 0.15) 36%,
+          rgba(12, 11, 14, 0.85) 64%,
+          rgba(12, 11, 14, 0.98) 88%,
+          #0c0b0e 100%
+        );
+      }
+
+      .hero-container {
+        padding: 0;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.7rem;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+        line-height: 1.1;
+      }
+
+      .hero-title-script {
+        font-size: 2.9rem;
+      }
+
+      .hero-desc {
+        font-size: 0.86rem;
+        margin-bottom: 22px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.82rem;
+      }
+
+      .hero-rating-pill {
+        display: none;
+      }
+
+      /* Pilares en Móvil */
+      .section-pillars-bar {
+        padding-bottom: 30px;
+      }
+
+      .pillars-card-dark {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 18px;
+      }
+
+      /* Cuadrícula Doble Columna Mandatoria en Servicios y Galería (< 768px) */
+      .services-grid-6, .work-grid-6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card {
+        padding: 8px;
+      }
+
+      .service-name {
+        font-size: 0.78rem;
+      }
+
+      .service-price-tag {
+        font-size: 0.82rem;
+      }
+
+      .btn-card-book {
+        font-size: 0.68rem;
+        padding: 7px 8px;
+      }
+
+      /* Paquetes en Móvil: 2 Columnas */
+      .packages-layout {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .package-card {
+        padding: 16px 10px;
+      }
+
+      .package-title {
+        font-size: 0.76rem;
+      }
+
+      .package-price-val {
+        font-size: 1.5rem;
+      }
+
+      .package-features {
+        font-size: 0.68rem;
+        margin-bottom: 14px;
+      }
+
+      .package-dark-banner {
+        grid-column: span 2;
+        padding: 18px;
+      }
+
+      .dark-banner-title {
+        font-size: 1.4rem;
+      }
+
+      .dark-banner-script {
+        font-size: 1.9rem;
+      }
+
+      /* Mapa en Móvil */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 24px 18px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 280px;
+        height: 280px;
+      }
+
+      .footer-grid-5 {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom-bar {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 2. SMART HEADER / NAVBAR -->
+  <header class="header-sticky-wrapper" id="mainHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Navegación principal">
+        
+        <!-- Logo LUXEHAIR Style -->
+        <a href="#" class="brand-logo" aria-label="Ébano & Marfil Inicio">
+          <span class="logo-main-text">ÉBANO & MARFIL</span>
+          <span class="logo-sub-text">HAIR SALON & BEAUTY CENTER</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        </ul>
+
+        <!-- Botón Header Mandatorio «Agendar» -->
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20mi%20cita." class="btn-header-cta" target="_blank">
+            Agendar <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 3. HERO HEADER INMERSIVO FULL-WIDTH BLEED -->
+    <section class="hero-fullwidth-section" id="inicio">
+      
+      <!-- Fotografía de Modelo Morena Voluminosa en Capa Posterior -->
+      <div class="hero-bg-cover">
+        <img 
+          src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1920&q=85" 
+          alt="Modelo peinado de autor Ébano & Marfil Hair Salon Turbo"
+          class="hero-bg-img"
+          loading="eager"
+        >
+      </div>
+
+      <!-- Degradado Horizontal al 50% en Desktop, Vertical en Móvil -->
+      <div class="hero-bg-overlay"></div>
+
+      <!-- Contenido Hero -->
+      <div class="container hero-container">
+        <div class="hero-text-block">
+          
+          <span class="hero-eyebrow">Cabello Espectacular • Confianza Total</span>
+
+          <h1 class="hero-title">
+            Donde el Estilo
+            <span class="hero-title-script">Encuentra la Confianza.</span>
+          </h1>
+
+          <p class="hero-desc">
+            Cuidado capilar experto, personalizado exclusivamente para ti. Porque mereces lucir y sentirte en tu mejor versión todos los días.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20mi%20cita." class="btn-primary" target="_blank">
+              <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+            </a>
+            <a href="#servicios" class="btn-secondary">
+              Explorar Servicios <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Badge Flotante de Calificación -->
+      <div class="hero-rating-pill">
+        <div class="rating-stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <span class="rating-text">5.0 ★ Calificación VIP en Turbo</span>
+      </div>
+
+    </section>
+
+    <!-- 4. BARRA DE 5 PILARES DE EXCELENCIA (DARK BADGES BAR) -->
+    <section class="section-pillars-bar">
+      <div class="container">
+        <div class="pillars-card-dark">
+          
+          <div class="pillar-item">
+            <div class="pillar-icon-box">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div class="pillar-text-group">
+              <h3 class="pillar-title">Estilistas Expertos</h3>
+              <span class="pillar-desc">Másters certificados</span>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon-box">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <div class="pillar-text-group">
+              <h3 class="pillar-title">Productos Prémium</h3>
+              <span class="pillar-desc">Salud & brillo capilar</span>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon-box">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <div class="pillar-text-group">
+              <h3 class="pillar-title">Experiencia de Lujo</h3>
+              <span class="pillar-desc">Ambiente relajante</span>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon-box">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="pillar-text-group">
+              <h3 class="pillar-title">Satisfacción Total</h3>
+              <span class="pillar-desc">Nuestra prioridad</span>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="pillar-text-group">
+              <h3 class="pillar-title">Higiene & Seguridad</h3>
+              <span class="pillar-desc">100% Bioseguro</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SECCIÓN: NUESTROS SERVICIOS («OUR SERVICES» REPLICA) -->
+    <section class="section-services" id="servicios">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div class="section-header-center">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="flourish-divider">
+              <div class="flourish-line"></div>
+              <i class="fa-solid fa-diamond" style="font-size: 0.6rem;"></i>
+              <div class="flourish-line"></div>
+            </div>
+          </div>
+          <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20quisiera%20ver%20todos%20los%20servicios." class="link-view-all" target="_blank">
+            Ver Todos <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="services-grid-6">
+          
+          <!-- Card 1: Corte -->
+          <article class="service-card">
+            <div class="service-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Corte de Autor" class="service-thumb-img">
+            </div>
+            <div class="service-icon-seal">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <h3 class="service-name">CORTE DE AUTOR</h3>
+            <p class="service-desc">Cortes clásicos o en tendencia adaptados a tu estructura facial.</p>
+            <span class="service-price-tag">$35.000</span>
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20el%20Corte%20de%20Autor." class="btn-card-book" target="_blank">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Card 2: Coloración -->
+          <article class="service-card">
+            <div class="service-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Colorimetría & Balayage" class="service-thumb-img">
+            </div>
+            <div class="service-icon-seal">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <h3 class="service-name">COLOR & BALAYAGE</h3>
+            <p class="service-desc">Tonos vibrantes y técnicas babylights que iluminan tu cabello.</p>
+            <span class="service-price-tag">Desde $120.000</span>
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20Colorimetr%C3%ADa%20%26%20Balayage." class="btn-card-book" target="_blank">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Card 3: Tratamiento -->
+          <article class="service-card">
+            <div class="service-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Spa Capilar" class="service-thumb-img">
+            </div>
+            <div class="service-icon-seal">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <h3 class="service-name">SPA CAPILAR DETOX</h3>
+            <p class="service-desc">Nutrición intensiva para un cabello sano, sedoso y radiante.</p>
+            <span class="service-price-tag">$45.000</span>
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20Spa%20Capilar%20Detox." class="btn-card-book" target="_blank">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Card 4: Styling -->
+          <article class="service-card">
+            <div class="service-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="Cepillado Glam" class="service-thumb-img">
+            </div>
+            <div class="service-icon-seal">
+              <i class="fa-solid fa-wind"></i>
+            </div>
+            <h3 class="service-name">CEPILLADO GLAM</h3>
+            <p class="service-desc">Blowout perfecto y ondas glamurosas para cualquier evento.</p>
+            <span class="service-price-tag">$30.000</span>
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20Cepillado%20Glam." class="btn-card-book" target="_blank">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Card 5: Keratina -->
+          <article class="service-card">
+            <div class="service-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Alisado Keratina" class="service-thumb-img">
+            </div>
+            <div class="service-icon-seal">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h3 class="service-name">ALISADO KERATINA</h3>
+            <p class="service-desc">Lacio sedoso, libre de frizz y con brillo espejo duradero.</p>
+            <span class="service-price-tag">Desde $110.000</span>
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20Alisado%20Keratina." class="btn-card-book" target="_blank">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+          <!-- Card 6: Extensiones -->
+          <article class="service-card">
+            <div class="service-thumb-wrap">
+              <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=800&q=80" alt="Extensiones" class="service-thumb-img">
+            </div>
+            <div class="service-icon-seal">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 class="service-name">EXTENSIONES VIP</h3>
+            <p class="service-desc">Agrega longitud y volumen instantáneo con cabello natural.</p>
+            <span class="service-price-tag">Desde $150.000</span>
+            <a href="https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20Extensiones%20VIP." class="btn-card-book" target="_blank">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- 7. SECCIÓN: NUESTROS TRABAJOS («OUR WORK» / GALERÍA 6 ITEMS) -->
+    <section class="section-work-gallery" id="galeria">
+      <div class="container">
+        
+        <div class="section-header-row">
+          <div class="section-header-center">
+            <h2 class="section-title">Nuestros Trabajos</h2>
+            <div class="flourish-divider">
+              <div class="flourish-line"></div>
+              <i class="fa-solid fa-diamond" style="font-size: 0.6rem;"></i>
+              <div class="flourish-line"></div>
+            </div>
+          </div>
+          <a href="https://instagram.com" class="link-view-all" target="_blank">
+            Ver Galería <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="work-grid-6">
+          
+          <div class="work-item-card">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Ondas Balayage" class="work-item-img">
+            <div class="work-overlay">
+              <span class="work-title">Ondas Doradas</span>
+              <span class="work-cat">Balayage</span>
+            </div>
+          </div>
+
+          <div class="work-item-card">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Recogido Novia" class="work-item-img">
+            <div class="work-overlay">
+              <span class="work-title">Recogido Glam</span>
+              <span class="work-cat">Novias VIP</span>
+            </div>
+          </div>
+
+          <div class="work-item-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Morena Iluminada" class="work-item-img">
+            <div class="work-overlay">
+              <span class="work-title">Morena Iluminada</span>
+              <span class="work-cat">Colorimetría</span>
+            </div>
+          </div>
+
+          <div class="work-item-card">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80" alt="Balayage Cenizo" class="work-item-img">
+            <div class="work-overlay">
+              <span class="work-title">Rubio Cenizo</span>
+              <span class="work-cat">Balayage</span>
+            </div>
+          </div>
+
+          <div class="work-item-card">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Bob Moderno" class="work-item-img">
+            <div class="work-overlay">
+              <span class="work-title">Corte Bob Chic</span>
+              <span class="work-cat">Corte de Autor</span>
+            </div>
+          </div>
+
+          <div class="work-item-card">
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=600&q=80" alt="Alisado Espejo" class="work-item-img">
+            <div class="work-overlay">
+              <span class="work-title">Alisado Espejo</span>
+              <span class="work-cat">Keratina</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- 10. MAPA INTERACTIVO GEORREFERENCIADO (#ubicacion) -->
+    <section class="section-map" id="ubicacion">
+      <div class="container">
+        
+        <div class="map-showcase-card">
+          
+          <div class="map-info-panel">
+            <span class="map-eyebrow">Visítanos en Turbo</span>
+            <h2 class="map-title">Ubicación & Atención Personalizada</h2>
+            
+            <ul class="map-details-list">
+              <li class="map-detail-item">
+                <div class="map-detail-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="map-detail-text">
+                  <h4>Dirección</h4>
+                  <p>Cra. 14 #99-26, Turbo, Antioquia, Colombia</p>
+                </div>
+              </li>
+
+              <li class="map-detail-item">
+                <div class="map-detail-icon">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="map-detail-text">
+                  <h4>Horario de Atención</h4>
+                  <p>Lunes a Domingo: 9:00 AM - 8:00 PM (Domingos con Cita Previa)</p>
+                </div>
+              </li>
+
+              <li class="map-detail-item">
+                <div class="map-detail-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="map-detail-text">
+                  <h4>Teléfono & WhatsApp</h4>
+                  <p>(+57) 310 440 0679</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="https://www.google.com/maps/place/%C3%89bano+%26+Marfil+-+Beauty+Center/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e5065b8e094bb43:0x2509018bdd1d1851!8m2!3d8.090776!4d-76.7273576!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhkgESdW5pc2V4X2hhaXJkcmVzc2Vy4AEA!16s%2Fg%2F11twwszx3n" target="_blank" class="btn-map-action">
+              <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar en Google Maps
+            </a>
+
+          </div>
+
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=%C3%89bano+%26+Marfil+-+Beauty+Center,+Cra.+14+%2399-26,+Turbo,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              class="map-iframe" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de ubicación Ébano & Marfil Beauty Center Turbo">
+            </iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 11. FOOTER PRINCIPAL (5 COLUMNAS LUXEHAIR OBSIDIAN) -->
+  <footer class="main-footer">
+    <div class="container">
+      
+      <div class="footer-grid-5">
+        
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-brand-title">ÉBANO & MARFIL</div>
+          <div class="footer-brand-sub">HAIR SALON</div>
+          <p class="footer-about-text">
+            Somos más que un salón. Somos tus aliados en belleza y confianza para que brilles todos los días.
+          </p>
+          <div class="footer-social-row">
+            <a href="https://facebook.com" class="footer-social-btn" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="footer-social-btn" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="footer-social-btn" aria-label="TikTok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/573104400679" class="footer-social-btn" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Enlaces Rápidos -->
+        <div>
+          <h4 class="footer-col-title">Enlaces</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#inicio">Inicio</a></li>
+            <li class="footer-link-item"><a href="#servicios">Servicios</a></li>
+            <li class="footer-link-item"><a href="#galeria">Galería</a></li>
+            <li class="footer-link-item"><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contacto -->
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Cra. 14 #99-26, Turbo, Antioquia</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(+57) 310 440 0679</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contacto@ebanoymarfil.co</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-regular fa-clock"></i>
+            <span>Lun - Dom: 9:00 AM - 8:00 PM</span>
+          </div>
+        </div>
+
+        <!-- Col 4: Galería Instagram -->
+        <div>
+          <h4 class="footer-col-title">Instagram</h4>
+          <div class="footer-insta-grid">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=200&q=80" alt="Instagram 1" class="footer-insta-img">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=200&q=80" alt="Instagram 2" class="footer-insta-img">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Instagram 3" class="footer-insta-img">
+            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=200&q=80" alt="Instagram 4" class="footer-insta-img">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=200&q=80" alt="Instagram 5" class="footer-insta-img">
+            <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=200&q=80" alt="Instagram 6" class="footer-insta-img">
+          </div>
+        </div>
+
+        <!-- Col 5: Reserva Rápida (Botón conciso «Agendar») -->
+        <div>
+          <h4 class="footer-col-title">Reserva VIP</h4>
+          <p class="footer-newsletter-text">Recibe promociones exclusivas y agenda tu cita prioritaria.</p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); window.open('https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%2C%20deseo%20agendar%20una%20cita.', '_blank');">
+            <input type="text" placeholder="Tu número o mensaje..." class="footer-input" required>
+            <button type="submit" class="btn-footer-reserve">Agendar</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Ébano & Marfil - Beauty Center. Todos los derechos reservados.</p>
+        <p>Cra. 14 #99-26, Turbo, Antioquia, Colombia</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!-- Smart Header Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('mainHeader');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 60) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+
+        // Auto hide on scroll down, reveal on scroll up in mobile
+        if (window.innerWidth <= 768) {
+          if (currentScrollY > lastScrollY && currentScrollY > 150) {
+            header.style.transform = 'translateY(-100%)';
+          } else {
+            header.style.transform = 'translateY(0)';
+          }
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+          const navMenu = document.querySelector('.nav-menu');
+          if (navMenu) {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            navMenu.style.flexDirection = 'column';
+            navMenu.style.position = 'absolute';
+            navMenu.style.top = '100%';
+            navMenu.style.left = '0';
+            navMenu.style.width = '100%';
+            navMenu.style.background = '#0c0b0e';
+            navMenu.style.padding = '20px';
+            navMenu.style.gap = '15px';
+            navMenu.style.borderBottom = '1px solid rgba(209, 168, 139, 0.2)';
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

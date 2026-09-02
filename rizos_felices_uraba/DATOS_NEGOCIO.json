@@ -1,0 +1,153 @@
+{
+  "negocio": {
+    "nombre": "Rizos Felices Urabá",
+    "rubro": "Centro de Estética & Salón Especializado en Rizos, Ondas y Afro",
+    "categoria": "estetica_capilar_rizos",
+    "eslogan": "Rizos Que Reflejan Tu Esencia — Especialistas en Cabello Rizado en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 310 726 7538",
+      "telefono_limpio": "+573107267538",
+      "whatsapp": {
+        "numero": "+573107267538",
+        "link": "https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita.",
+        "mensaje_base": "Hola Rizos Felices Urabá, quisiera solicitar información y agendar una cita."
+      },
+      "email": "contacto@rizosfelicesuraba.com",
+      "instagram": "@rizosfelicesuraba"
+    },
+    "ubicacion": {
+      "direccion": "Cl. 100 #108-37",
+      "barrio_referencia": "Sector Centro",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "coordenadas": {
+        "lat": "7.8850285",
+        "lng": "-76.6365327"
+      },
+      "google_maps_url": "https://www.google.com/maps/place/Rizos+Felices+Urab%C3%A1/@7.8850285,-76.6794023,13z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e500d0075ed1aa7:0xda727573bd52357b!8m2!3d7.8850285!4d-76.6365327!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhWiciJXNhbG9uZXMgZGUgYmVsbGV6YSBlbiB0dXJibyBhbnRpb3F1aWGSAQxiZWF1dHlfc2Fsb26aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjFrYjJKSGFIVk5WVEZEWVVSc1ZHRXdWbmhPYmtKNVRXNXdjMDFyUlJBQuABAPoBBAgAEC4!16s%2Fg%2F11wnh9hknk",
+      "iframe_formula": "https://maps.google.com/maps?q=Rizos+Felices+Urab%C3%A1,+Cl.+100+%23108-37,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingo": "Con Cita Previa",
+      "festivos": "Con Cita Previa"
+    },
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "canal_directo": "WhatsApp Instantáneo & Llamada Telefónica"
+    },
+    "pilares_garantia": [
+      {
+        "titulo": "Terapeutas Capilares",
+        "descripcion": "Especialistas certificadas en técnicas de corte en seco y método curly."
+      },
+      {
+        "titulo": "Productos Limpios",
+        "descripcion": "Fórmulas botánicas 100% libres de sulfatos, parabenos, siliconas y petrolatos."
+      },
+      {
+        "titulo": "Diagnóstico de Hebra",
+        "descripcion": "Evaluación personalizada de porosidad, elasticidad, densidad y tipo de rizo (2A a 4C)."
+      },
+      {
+        "titulo": "Higiene & Confort",
+        "descripcion": "Espacio acogedor con protocolos de esterilización y atención VIP sin prisas."
+      },
+      {
+        "titulo": "Amor por Tus Rizos",
+        "descripcion": "Educación y asesoría para que mantengas tus rizos sanos, definidos y con volumen en casa."
+      }
+    ],
+    "servicios": [
+      {
+        "id": "corte-en-seco-rizo-a-rizo",
+        "nombre": "Corte en Seco & Definición Rizo a Rizo",
+        "categoria": "Corte & Estilismo Curly",
+        "descripcion": "Corte personalizado hebra por hebra respetando tu caída natural, lavado botánico y definición con difusor.",
+        "precio": "$55.000",
+        "duracion": "75 min",
+        "badge": "⭐ Bestseller",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Rizos Felices Urabá, deseo agendar el servicio de Corte en Seco & Definición Rizo a Rizo."
+      },
+      {
+        "id": "terapia-hidronutricion-profunda",
+        "nombre": "Terapia de Hidronutrición & Recuperación",
+        "categoria": "Tratamiento Capilar",
+        "descripcion": "Baño de hidratación profunda con mantecas naturales, aminoácidos y vapor ozonizado para eliminar el frizz.",
+        "precio": "$60.000",
+        "duracion": "60 min",
+        "badge": "Anti-Frizz",
+        "imagen": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Rizos Felices Urabá, deseo agendar el servicio de Terapia de Hidronutrición & Recuperación."
+      },
+      {
+        "id": "detox-cuero-cabelludo",
+        "nombre": "Detox Capilar & Exfoliación Purificante",
+        "categoria": "Salud Capilar",
+        "descripcion": "Limpieza profunda de residuos acumulados, exfoliación de cuero cabelludo y estimulación del crecimiento.",
+        "precio": "$45.000",
+        "duracion": "50 min",
+        "badge": "Purificante",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Rizos Felices Urabá, deseo agendar el servicio de Detox Capilar & Exfoliación Purificante."
+      },
+      {
+        "id": "transicion-capilar-reconstruccion",
+        "nombre": "Protocolo de Transición & Reconstrucción",
+        "categoria": "Cuidado Especializado",
+        "descripcion": "Tratamiento intensivo con proteínas hidrolizadas y aceites vegetales para hebras procesadas o en transición.",
+        "precio": "$70.000",
+        "duracion": "90 min",
+        "badge": "Restauración",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Rizos Felices Urabá, deseo agendar el servicio de Protocolo de Transición & Reconstrucción."
+      },
+      {
+        "id": "color-iluminacion-curly",
+        "nombre": "Iluminación Pintura & Balayage Curly",
+        "categoria": "Colorimetría Rizada",
+        "descripcion": "Técnica de pintura a mano alzada para iluminar tus rizos sin alterar su patrón de onda ni deshidratar la hebra.",
+        "precio": "$120.000",
+        "duracion": "120 min",
+        "badge": "Luz & Definición",
+        "imagen": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Rizos Felices Urabá, deseo agendar el servicio de Iluminación Pintura & Balayage Curly."
+      },
+      {
+        "id": "definicion-glow-peinado-social",
+        "nombre": "Definición Glow & Peinado para Eventos",
+        "categoria": "Estilismo & Ocasiones",
+        "descripcion": "Técnicas de fitagem y finger coils para una definición de máxima duración, brillo extremo y recogidos elegantes.",
+        "precio": "$50.000",
+        "duracion": "60 min",
+        "badge": "Larga Duración",
+        "imagen": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Rizos Felices Urabá, deseo agendar el servicio de Definición Glow & Peinado para Eventos."
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Yurany Córdoba",
+        "rol": "Master Curly Stylist & Fundadora",
+        "badge": "Master Curly",
+        "experiencia": "+9 años de experiencia",
+        "calificacion": "5.0",
+        "descripcion": "Especialista en corte en seco rizo a rizo, visagismo curly, recuperación de hebras maltratadas y transición capilar.",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80"
+      },
+      {
+        "nombre": "Kelly Palacios",
+        "rol": "Terapeuta Capilar & Especialista Afro",
+        "badge": "Terapeuta Pro",
+        "experiencia": "+6 años de experiencia",
+        "calificacion": "5.0",
+        "descripcion": "Experta en cronogramas capilares personalizados, detox de cuero cabelludo, nutrición profunda y técnicas de definición.",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80"
+      }
+    ]
+  }
+}

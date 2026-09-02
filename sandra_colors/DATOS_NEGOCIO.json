@@ -1,0 +1,107 @@
+{
+  "negocio": {
+    "nombre": "Sandra Color´s",
+    "rubro": "Centro de Estética & Salón de Belleza Especializado",
+    "categoria": "BeautySalon",
+    "eslogan": "Realza tu belleza con expertos en colorimetría, balayage, alisados y tratamientos capilares de alta gama en Apartadó",
+    "calificacion": "4.9",
+    "resenas": "48",
+    "contacto": {
+      "telefono_principal": "(+57) 312 875 5269",
+      "whatsapp": {
+        "numero": "573128755269",
+        "link": "https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 104 #103-61, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Sandra+Color%C2%B4s/@7.8877515,-76.6513548,15z"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:30 PM | Domingos & Festivos: Citas Especiales 9:00 AM - 3:00 PM",
+    "sitio_web": "https://www.facebook.com/Sandra-Colors-104523494432709",
+    "servicios": [
+      {
+        "id": "colorimetria-balayage",
+        "nombre": "Colorimetría & Balayage de Autor",
+        "precio": "Desde $120.000",
+        "desc": "Técnicas modernas de degradé, mechas babylights, corrección de color y matices personalizados para brillo radiante.",
+        "icono": "fa-wand-magic-sparkles",
+        "numero": "01",
+        "img": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisados-terapia",
+        "nombre": "Alisados Orgánicos & Keratina Silk",
+        "precio": "Desde $150.000",
+        "desc": "Tratamiento intensivo libre de formol que restaura la fibra capilar, elimina el frizz y aporta liso espejo duradero.",
+        "icono": "fa-sparkles",
+        "numero": "02",
+        "img": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "peinados-styling",
+        "nombre": "Peinados Glamour & Styling para Eventos",
+        "precio": "Desde $60.000",
+        "desc": "Ondas de agua, recogidos de gala, peinados para novias y quinceañeras con fijación flexible y acabado premium.",
+        "icono": "fa-scissors",
+        "numero": "03",
+        "img": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "spa-capilar-lavado",
+        "nombre": "Spa Capilar & Hidro-Lavado Detox",
+        "precio": "Desde $45.000",
+        "desc": "Limpieza profunda con exfoliación de cuero cabelludo, masaje craneal relajante y mascarilla nutritiva de argán.",
+        "icono": "fa-shower",
+        "numero": "04",
+        "img": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "equipo": [
+      {
+        "id": 1,
+        "nombre": "Sandra Gómez",
+        "cargo": "Directora & Especialista Balayage",
+        "rango": "Master",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20Master%20Sandra%20G%C3%B3mez."
+      },
+      {
+        "id": 2,
+        "nombre": "Valentina Ramos",
+        "cargo": "Especialista en Alisados & Keratinas",
+        "rango": "Pro",
+        "calificacion": "4.9",
+        "foto_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Valentina%20Ramos."
+      },
+      {
+        "id": 3,
+        "nombre": "Camila Osorio",
+        "cargo": "Colorista & Terapeuta Capilar",
+        "rango": "Senior",
+        "calificacion": "4.9",
+        "foto_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Camila%20Osorio."
+      },
+      {
+        "id": 4,
+        "nombre": "Daniela Morales",
+        "cargo": "Estilista & Peinados de Novia / Eventos",
+        "rango": "Top Stylist",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20agendar%20cita%20con%20la%20estilista%20Daniela%20Morales."
+      }
+    ],
+    "valores_marca": [
+      { "titulo": "Profesionales Expertas", "desc": "Estilistas certificadas en técnicas de vanguardia.", "icono": "fa-gem" },
+      { "titulo": "Productos de Calidad", "desc": "Cosmética capilar sin químicos agresivos.", "icono": "fa-leaf" },
+      { "titulo": "Ambiente Limpio & Seguro", "desc": "Protocolos rigurosos de bioseguridad y confort.", "icono": "fa-heart" },
+      { "titulo": "100% Satisfacción", "desc": "Tu belleza y bienestar son nuestra prioridad.", "icono": "fa-star" }
+    ]
+  }
+}

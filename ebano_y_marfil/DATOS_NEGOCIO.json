@@ -1,0 +1,273 @@
+{
+  "negocio": {
+    "nombre": "Ébano & Marfil - Beauty Center",
+    "nombre_comercial": "Ébano & Marfil",
+    "rubro": "Alta Peluquería & Salón de Belleza de Lujo",
+    "categoria": "salon",
+    "tipo_schema": "BeautySalon",
+    "eslogan": "Donde el Estilo se Encuentra con la Confianza — Alta Peluquería en Turbo",
+    "descripcion": "Centro de alta peluquería, colorimetría avanzada, balayage de autor, alisados espejo, spa capilar y paquetes de belleza integral en Turbo, Antioquia. Experiencia de lujo, estilistas certificados y resultados impecables.",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 310 440 0679",
+      "telefono_tel": "+573104400679",
+      "whatsapp": {
+        "numero": "+573104400679",
+        "link": "https://wa.me/573104400679?text=Hola%20%C3%89bano%20%26%20Marfil%20-%20Beauty%20Center%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 14 #99-26",
+      "barrio_sector": "Centro / Zona Urbana",
+      "ciudad": "Turbo",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/%C3%89bano+%26+Marfil+-+Beauty+Center/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e5065b8e094bb43:0x2509018bdd1d1851!8m2!3d8.090776!4d-76.7273576!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhkgESdW5pc2V4X2hhaXJkcmVzc2Vy4AEA!16s%2Fg%2F11twwszx3n",
+      "coordenadas": {
+        "lat": 8.090776,
+        "lng": -76.7273576
+      }
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "9:00 AM - 8:00 PM",
+      "domingos_festivos": "Previa cita",
+      "formato_texto": "Lunes a Domingo: 9:00 AM - 8:00 PM (Domingos con Cita Previa)"
+    },
+    "redes_sociales": {
+      "instagram": "@ebano.marfil.beauty",
+      "facebook": "EbanoMarfilBeautyCenter",
+      "tiktok": "@ebanomarfilbeauty"
+    },
+    "garantias_y_pilares": [
+      {
+        "titulo": "Estilistas Expertos",
+        "descripcion": "Profesionales máster entrenados y certificados en alta peluquería",
+        "icono": "fa-scissors"
+      },
+      {
+        "titulo": "Productos Prémium",
+        "descripcion": "Fórmulas de alta gama para la salud y brillo de tu fibra capilar",
+        "icono": "fa-leaf"
+      },
+      {
+        "titulo": "Experiencia de Lujo",
+        "descripcion": "Ambiente relajante, exclusivo y diseñado para tu confort total",
+        "icono": "fa-couch"
+      },
+      {
+        "titulo": "Satisfacción Garantizada",
+        "descripcion": "Tu felicidad y confianza son nuestra máxima prioridad",
+        "icono": "fa-star"
+      },
+      {
+        "titulo": "Higiene & Bioseguridad",
+        "descripcion": "Espacios limpios, seguros y esterilizados en todo momento",
+        "icono": "fa-shield-halved"
+      }
+    ],
+    "servicios": [
+      {
+        "id": "corte-estilismo-autor",
+        "nombre": "Corte de Autor & Visagismo",
+        "categoria": "Corte",
+        "precio": "$35.000",
+        "duracion": "45 min",
+        "destacado": true,
+        "descripcion": "Cortes clásicos o en tendencia adaptados a tu estructura facial y estilo personal.",
+        "icono": "fa-scissors",
+        "imagen": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "colorimetria-balayage",
+        "nombre": "Colorimetría & Balayage",
+        "categoria": "Color",
+        "precio": "Desde $120.000",
+        "duracion": "3 - 4 hrs",
+        "destacado": true,
+        "descripcion": "Tonos vibrantes, babylights y técnicas balayage que iluminan tu personalidad.",
+        "icono": "fa-palette",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "spa-capilar-nutricion",
+        "nombre": "Tratamiento & Spa Capilar",
+        "categoria": "Tratamientos",
+        "precio": "$45.000",
+        "duracion": "60 min",
+        "destacado": true,
+        "descripcion": "Nutrición intensiva y desintoxicación para un cabello sano, sedoso y radiante.",
+        "icono": "fa-droplet",
+        "imagen": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "peinado-brushing-glam",
+        "nombre": "Peinado & Cepillado Glam",
+        "categoria": "Styling",
+        "precio": "$30.000",
+        "duracion": "45 min",
+        "destacado": true,
+        "descripcion": "Blowout perfecto, ondas glamurosas y peinados de autor para cualquier ocasión.",
+        "icono": "fa-wind",
+        "imagen": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisado-keratina-espejo",
+        "nombre": "Alisado Orgánico & Keratina",
+        "categoria": "Alisados",
+        "precio": "Desde $110.000",
+        "duracion": "2.5 - 3 hrs",
+        "destacado": true,
+        "descripcion": "Lacio sedoso, libre de frizz y con brillo espejo duradero sin formol agresivo.",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "extensiones-volumen-vip",
+        "nombre": "Extensiones & Volumen VIP",
+        "categoria": "Extensiones",
+        "precio": "Desde $150.000",
+        "duracion": "2 hrs",
+        "destacado": true,
+        "descripcion": "Agrega longitud, volumen y densidad instantánea con cabello 100% natural.",
+        "icono": "fa-gem",
+        "imagen": "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "paquetes_precios": [
+      {
+        "id": "paquete-basico",
+        "nombre": "Paquete Básico",
+        "precio": "$49.000",
+        "destacado": false,
+        "badge": "",
+        "incluye": [
+          "Corte de Autor",
+          "Cepillado & Secado",
+          "Lavado Capilar Básico",
+          "Finalizado con Gotas de Seda"
+        ]
+      },
+      {
+        "id": "paquete-premium",
+        "nombre": "Paquete Prémium",
+        "precio": "$99.000",
+        "destacado": true,
+        "badge": "MÁS POPULAR",
+        "incluye": [
+          "Corte & Visagismo",
+          "Baño de Color / Matiz",
+          "Hidratación Profunda",
+          "Cepillado Glam con Ondas"
+        ]
+      },
+      {
+        "id": "paquete-lujo",
+        "nombre": "Paquete Lujo Total",
+        "precio": "$159.000",
+        "destacado": false,
+        "badge": "",
+        "incluye": [
+          "Corte Personalizado",
+          "Colorimetría / Balayage",
+          "Tratamiento Keratina / Spa",
+          "Secado & Estilismo VIP"
+        ]
+      },
+      {
+        "id": "paquete-novias",
+        "nombre": "Paquete Novias & Eventos",
+        "precio": "$199.000",
+        "destacado": false,
+        "badge": "EXCLUSIVO",
+        "incluye": [
+          "Peinado de Novia / Prueba",
+          "Maquillaje HD Larga Duración",
+          "Colocación de Accesorios",
+          "Retoque Final de Autor"
+        ]
+      }
+    ],
+    "galeria_trabajos": [
+      {
+        "titulo": "Ondas Doradas & Balayage",
+        "categoria": "Color",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "titulo": "Recogido Editorial de Novia",
+        "categoria": "Peinado",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "titulo": "Melena Morena Iluminada",
+        "categoria": "Color",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "titulo": "Balayage Rubio Cenizo",
+        "categoria": "Color",
+        "imagen": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "titulo": "Corte Bob Chic Moderno",
+        "categoria": "Corte",
+        "imagen": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "titulo": "Alisado Espejo Sedoso",
+        "categoria": "Alisado",
+        "imagen": "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=600&q=80"
+      }
+    ],
+    "testimonios": [
+      {
+        "nombre": "Jessica Morales",
+        "comentario": "¡Una experiencia increíble! La estilista entendió exactamente lo que quería y me dio el look perfecto. ¡Súper recomendados!",
+        "calificacion": 5,
+        "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+      },
+      {
+        "nombre": "Amanda Rodríguez",
+        "comentario": "¡El mejor salón de Turbo! Personal amable, ambiente hermoso y resultados excelentes en mi balayage cada vez que voy.",
+        "calificacion": 5,
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+      },
+      {
+        "nombre": "Paola Sierra",
+        "comentario": "¡Amo mi nuevo cabello! El color y el corte quedaron impecables. Definitivamente volveré muy pronto.",
+        "calificacion": 5,
+        "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Valentina Rivas",
+        "rol": "Master Colorista & Estilista Principal",
+        "experiencia": "8+ Años de Experiencia",
+        "especialidad": "Balayage, Rubios Perfectos & Visagismo",
+        "imagen": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Camila Gómez",
+        "rol": "Especialista en Alisados & Terapias Capilares",
+        "experiencia": "6+ Años de Experiencia",
+        "especialidad": "Alisados Orgánicos & Reconstrucción de Fibras",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Isabella Mendoza",
+        "rol": "Make-up Artist & Nail Designer",
+        "experiencia": "5+ Años de Experiencia",
+        "especialidad": "Maquillaje HD Novias, Nail Art & Efecto Gel",
+        "imagen": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Mariana Palacio",
+        "rol": "Terapeuta Spa & Cuidado Facial",
+        "experiencia": "4+ Años de Experiencia",
+        "especialidad": "Spa Capilar, Limpieza Facial & Masajes Relax",
+        "imagen": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+}

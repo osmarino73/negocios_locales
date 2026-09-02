@@ -1,0 +1,2166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0c0c0e" />
+  <title>Crismar Barbershop | Barbería VIP & Club Masculino en Apartadó</title>
+  <meta name="description" content="Crismar Barbershop en Apartadó. Cortes Fade de precisión, perfilado de barba, afeitado tradicional con toalla caliente y estilismo masculino de alta gama." />
+  
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Crismar Barbershop | Barbería VIP en Apartadó" />
+  <meta property="og:description" content="Más que un corte, un estilo de vida. Cortes degradados, rituales de barba y afeitado tradicional en Apartadó, Antioquia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.google.com/maps/place/Crismar+Barbershop" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Crismar Barbershop",
+    "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+573000000000",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 104 #113-53 a 113-1",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8896613,
+      "longitude": -76.6364776
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "20:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "09:30",
+        "closes": "16:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "120"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Cinzel (Serif Clásica de Lujo) + Oswald (Display Compacto) + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Oswald:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* SISTEMA DE VARIABLES "LEGEND DARK & AMBER GOLD" */
+    :root {
+      --amber-gold: #e5a854;
+      --amber-gold-hover: #f0be76;
+      --gold-subtle: rgba(229, 168, 84, 0.15);
+      --dark-obsidian: #0c0c0e;
+      --dark-card: #16161a;
+      --dark-card-hover: #1e1e24;
+      --text-white: #f4f4f6;
+      --text-muted: #9e9ea7;
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(229, 168, 84, 0.25);
+      
+      --font-display: 'Oswald', sans-serif;
+      --font-serif: 'Cinzel', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 6px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-pill: 999px;
+      
+      --shadow-gold: 0 10px 24px rgba(229, 168, 84, 0.25);
+      --shadow-dark: 0 14px 34px rgba(0, 0, 0, 0.5);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--dark-obsidian);
+      color: var(--text-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* TOP ANNOUNCEMENT BAR */
+    .top-bar {
+      background-color: #070708;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .top-bar-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .top-bar-left a {
+      color: var(--text-muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .top-bar-left a:hover {
+      color: var(--amber-gold);
+    }
+
+    .top-promo {
+      color: var(--amber-gold);
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.5px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .top-socials {
+      display: flex;
+      gap: 14px;
+    }
+
+    .top-socials a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s ease;
+    }
+
+    .top-socials a:hover {
+      color: var(--amber-gold);
+    }
+
+    /* HEADER STICKY INTELIGENTE */
+    .header-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+      will-change: transform;
+    }
+
+    .header-sticky-wrapper.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .site-header {
+      background: rgba(12, 12, 14, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 18px 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-white);
+    }
+
+    .logo-icon-box {
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid var(--amber-gold);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber-gold);
+      font-size: 1.25rem;
+      background: var(--gold-subtle);
+    }
+
+    .logo-text-box h2 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--text-white);
+    }
+
+    .logo-text-box span {
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--amber-gold);
+      display: block;
+      margin-top: 1px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-white);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--amber-gold);
+    }
+
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--amber-gold);
+    }
+
+    /* BOTONES */
+    .btn-legend-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      box-shadow: var(--shadow-gold);
+      transition: all 0.3s ease;
+      border: 1px solid var(--amber-gold);
+      cursor: pointer;
+    }
+
+    .btn-legend-gold:hover {
+      background: var(--amber-gold-hover);
+      border-color: var(--amber-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(229, 168, 84, 0.4);
+      color: var(--dark-obsidian);
+    }
+
+    .btn-legend-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 13px 26px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-legend-outline:hover {
+      border-color: var(--amber-gold);
+      color: var(--amber-gold);
+      background: var(--gold-subtle);
+      transform: translateY(-2px);
+    }
+
+    /* ENCABEZADOS DE SECCIÓN */
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 52px;
+    }
+
+    .eyebrow-gold {
+      display: inline-block;
+      color: var(--amber-gold);
+      font-family: var(--font-sans);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 8px;
+    }
+
+    .section-title-display {
+      font-family: var(--font-display);
+      font-size: 3.6rem;
+      letter-spacing: 2px;
+      line-height: 1;
+      color: var(--text-white);
+      margin-bottom: 12px;
+    }
+
+    .section-title-display span.text-gold {
+      color: var(--amber-gold);
+    }
+
+    .section-desc {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    /* ============================================================ */
+    /* 1. SECCIÓN: INICIO / HERO FULL-WIDTH (#inicio)               */
+    /* ============================================================ */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      background-color: var(--dark-obsidian);
+      overflow: hidden;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 65%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      display: block;
+    }
+
+    /* MÁSCARA GRADIENTE DE INTEGRACIÓN OSCURA */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg, 
+        #0c0c0e 0%, 
+        #0c0c0e 38%, 
+        rgba(12, 12, 14, 0.95) 50%, 
+        rgba(12, 12, 14, 0.4) 68%, 
+        transparent 100%
+      );
+      z-index: 2;
+    }
+
+    .hero-content-wrapper {
+      position: relative;
+      z-index: 3;
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    .hero-text-block {
+      max-width: 600px;
+    }
+
+    .hero-eyebrow-text {
+      color: var(--amber-gold);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .hero-main-title {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      letter-spacing: 2px;
+      line-height: 0.96;
+      color: var(--text-white);
+      margin-bottom: 18px;
+    }
+
+    .hero-main-title span.accent-gold {
+      color: var(--amber-gold);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 34px;
+      max-width: 500px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    /* SOCIAL PROOF RATING HERO */
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .avatar-group {
+      display: flex;
+    }
+
+    .avatar-group img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid var(--dark-obsidian);
+      margin-left: -10px;
+      object-fit: cover;
+    }
+
+    .avatar-group img:first-child {
+      margin-left: 0;
+    }
+
+    .proof-text strong {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.92rem;
+      color: var(--text-white);
+    }
+
+    .proof-text strong i {
+      color: #f59e0b;
+      font-size: 0.85rem;
+    }
+
+    .proof-text span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    /* ============================================================ */
+    /* FRANJA DE 4 SELLOS DE GARANTÍA LEGEND                        */
+    /* ============================================================ */
+    .benefits-bar-dark {
+      background-color: #111114;
+      padding: 34px 0;
+      border-bottom: 1px solid var(--border-dark);
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .benefit-icon-ring {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--gold-subtle);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber-gold);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+    }
+
+    .benefit-item:hover .benefit-icon-ring {
+      background-color: var(--amber-gold);
+      color: var(--dark-obsidian);
+      transform: scale(1.08) rotate(6deg);
+    }
+
+    .benefit-text h4 {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-white);
+      margin-bottom: 2px;
+    }
+
+    .benefit-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* ============================================================ */
+    /* 2. SECCIÓN: SERVICIOS (#servicios)                           */
+    /* ============================================================ */
+    .services-section {
+      padding: 100px 0;
+      background-color: var(--dark-obsidian);
+    }
+
+    .services-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .service-card-legend {
+      background-color: var(--dark-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-dark);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .service-card-legend:hover {
+      transform: translateY(-8px);
+      border-color: var(--amber-gold);
+      background-color: var(--dark-card-hover);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      height: 190px;
+      overflow: hidden;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card-legend:hover .service-img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    /* ICON BADGE FLOTANTE */
+    .service-floating-icon {
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 38px;
+      height: 38px;
+      background: var(--dark-card);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--amber-gold);
+      font-size: 0.95rem;
+      border: 1.5px solid var(--border-gold);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      z-index: 5;
+    }
+
+    .service-body {
+      padding: 28px 14px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .service-name {
+      font-family: var(--font-sans);
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-white);
+      margin-bottom: 8px;
+    }
+
+    .service-badges-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .service-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-dark);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.2px;
+    }
+
+    .service-badge-pill i {
+      color: var(--amber-gold);
+      font-size: 0.68rem;
+    }
+
+    .btn-card-book {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--gold-subtle);
+      color: var(--amber-gold);
+      border: 1px solid var(--border-gold);
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 9px 12px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .btn-card-book:hover {
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      border-color: var(--amber-gold);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(229, 168, 84, 0.35);
+    }
+
+    /* ============================================================ */
+    /* 3. SECCIÓN: NOSOTROS / EXPERIENCIA & BARBEROS (#nosotros)    */
+    /* ============================================================ */
+    .about-experience-section {
+      padding: 100px 0;
+      background-color: #111114;
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 70px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark);
+      border: 1px solid var(--border-dark);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      padding: 16px 22px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .experience-floating-badge strong {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      line-height: 1;
+      display: block;
+      font-weight: 700;
+    }
+
+    .experience-floating-badge span {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .experience-text-content h3 {
+      font-family: var(--font-display);
+      font-size: 3.6rem;
+      letter-spacing: 1.5px;
+      line-height: 0.98;
+      margin-bottom: 16px;
+      color: var(--text-white);
+    }
+
+    .experience-text-content h3 span {
+      color: var(--amber-gold);
+    }
+
+    .experience-text-content p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-dark);
+      margin-bottom: 28px;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-item strong {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      color: var(--amber-gold);
+      display: block;
+    }
+
+    .metric-item span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* GRID BARBEROS */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+      margin-top: 40px;
+    }
+
+    .team-card {
+      background: var(--dark-card);
+      border-radius: var(--radius-md);
+      padding: 30px 20px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-dark);
+      border: 1px solid var(--border-dark);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--amber-gold);
+    }
+
+    .team-photo-box {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 18px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--amber-gold);
+      box-shadow: 0 6px 18px rgba(229, 168, 84, 0.2);
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      color: var(--text-white);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--amber-gold);
+      display: block;
+      margin-bottom: 10px;
+      min-height: 38px;
+    }
+
+    .team-rating {
+      font-size: 0.85rem;
+      color: #f59e0b;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .btn-team-book {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--amber-gold);
+      border: 1.5px solid var(--amber-gold);
+      padding: 8px 20px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.25s ease;
+      background: transparent;
+    }
+
+    .btn-team-book:hover {
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================ */
+    /* 4. SECCIÓN: UBICACIÓN & GOOGLE MAPS (#ubicacion)             */
+    /* ============================================================ */
+    .map-section {
+      padding: 100px 0;
+      background: var(--dark-obsidian);
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--dark-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark);
+      border: 1px solid var(--border-dark);
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-title {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      letter-spacing: 1.5px;
+      line-height: 1;
+      margin-bottom: 18px;
+      color: var(--text-white);
+    }
+
+    .map-location-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+    }
+
+    .map-location-item i {
+      color: var(--amber-gold);
+      font-size: 1.15rem;
+      margin-top: 4px;
+    }
+
+    .map-location-item p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .map-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+      height: 100%;
+      background: #202024;
+      overflow: hidden;
+    }
+
+    .map-frame-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* FOOTER DARK CLUB */
+    .site-footer {
+      background-color: #070708;
+      color: var(--text-white);
+      padding: 80px 0 30px;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 16px 0 24px;
+      line-height: 1.6;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-white);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-dark);
+    }
+
+    .footer-social-btn:hover {
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      border-color: var(--amber-gold);
+      transform: translateY(-3px);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: var(--text-white);
+    }
+
+    .footer-links-list {
+      list-style: none;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--amber-gold);
+    }
+
+    .footer-contact-info p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .footer-contact-info i {
+      color: var(--amber-gold);
+      margin-top: 3px;
+    }
+
+    /* NEWSLETTER / AGENDAMIENTO */
+    .footer-newsletter-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+    }
+
+    .btn-footer-reserve {
+      display: block;
+      text-align: center;
+      background: var(--amber-gold);
+      color: var(--dark-obsidian);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 13px 20px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--amber-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+      color: var(--dark-obsidian);
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid var(--border-dark);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* WIDGET FLOTANTE WHATSAPP */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 9999;
+      background: #25d366;
+      color: #ffffff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.12) rotate(8deg);
+      color: #ffffff;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+      .hero-bg-img {
+        width: 50%;
+        opacity: 0.4;
+      }
+      .hero-bg-overlay {
+        background: linear-gradient(90deg, #0c0c0e 0%, #0c0c0e 60%, rgba(12, 12, 14, 0.7) 100%);
+      }
+      .services-grid-6 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .experience-layout {
+        grid-template-columns: 1fr;
+      }
+      .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .top-bar-left, .nav-links {
+        display: none;
+      }
+
+      .btn-header-cta {
+        padding: 8px 15px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        white-space: nowrap;
+      }
+
+      /* Hero Móvil: +20% de altura (720px), imagen nítida de alta fidelidad, texto centralizado desde la mitad hacia abajo */
+      .hero-fullwidth-section {
+        min-height: 720px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 150px 16px 36px;
+        position: relative;
+      }
+
+      .hero-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.94;
+        display: block;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          rgba(12, 12, 14, 0) 0%, 
+          rgba(12, 12, 14, 0.08) 38%, 
+          rgba(12, 12, 14, 0.80) 64%, 
+          rgba(12, 12, 14, 0.98) 88%, 
+          #0c0c0e 100%
+        );
+      }
+
+      .hero-content-wrapper {
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        z-index: 3;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+        width: 100%;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .hero-eyebrow-text {
+        font-size: 0.72rem;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .hero-main-title {
+        font-size: 2.35rem;
+        line-height: 1.05;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+
+      .hero-subtitle {
+        font-size: 0.86rem;
+        line-height: 1.5;
+        max-width: 320px;
+        margin: 0 auto 16px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 18px;
+      }
+
+      .hero-actions .btn-legend-gold,
+      .hero-actions .btn-legend-outline {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        border-radius: 50px;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
+        touch-action: manipulation;
+      }
+
+      .hero-actions .btn-legend-outline {
+        background: rgba(12, 12, 14, 0.75);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1.5px solid var(--border-dark);
+        color: var(--text-white);
+      }
+
+      .hero-social-proof {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .avatar-group {
+        justify-content: center;
+      }
+
+      .proof-text strong {
+        font-size: 0.85rem;
+      }
+
+      .proof-text span {
+        font-size: 0.74rem;
+      }
+
+      .section-title-display {
+        font-size: 2.35rem;
+      }
+
+      /* CATÁLOGO DOBLE COLUMNA (2 COLUMNAS) EN MÓVIL PARA SERVICIOS */
+      .services-grid-6 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card-legend {
+        border-radius: var(--radius-sm);
+      }
+
+      .service-img-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+      }
+
+      .service-img-wrapper img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      /* Limpieza estética: Se eliminan iconos circulares flotantes entre foto y texto */
+      .service-floating-icon {
+        display: none !important;
+      }
+
+      .service-body {
+        padding: 12px 8px 12px;
+        text-align: center;
+      }
+
+      .service-name {
+        font-size: 0.88rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin-bottom: 4px;
+        min-height: 2.3em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .service-badges-wrap {
+        gap: 4px;
+        margin-bottom: 10px;
+      }
+
+      .service-badge-pill {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+        letter-spacing: 0;
+      }
+
+      .service-badge-pill i {
+        font-size: 0.6rem;
+      }
+
+      .btn-card-book {
+        padding: 8px 6px;
+        font-size: 0.7rem;
+        gap: 4px;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      /* SECCIÓN EQUIPO / BARBEROS DOBLE COLUMNA (2 COLUMNAS) */
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      .team-card {
+        padding: 16px 8px 14px;
+        border-radius: var(--radius-sm);
+        text-align: center;
+      }
+
+      .team-photo-box {
+        width: 100%;
+        max-width: 88px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 auto 10px;
+      }
+
+      .team-avatar {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .team-badge {
+        font-size: 8px;
+        padding: 2px 7px;
+      }
+
+      .team-name {
+        font-size: 0.95rem;
+        line-height: 1.2;
+        margin-bottom: 2px;
+      }
+
+      .team-role {
+        font-size: 0.72rem;
+        min-height: 2.5em;
+        line-height: 1.25;
+        margin-bottom: 4px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .team-rating {
+        font-size: 0.74rem;
+        margin-bottom: 10px;
+      }
+
+      .btn-team-book {
+        padding: 7px 8px;
+        font-size: 0.7rem;
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      /* MÉTRICAS EN MÓVIL (2 COLUMNAS) */
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .metric-item strong {
+        font-size: 1.85rem;
+      }
+
+      .metric-item span {
+        font-size: 0.7rem;
+      }
+
+      .experience-text-content h3 {
+        font-size: 2.4rem;
+      }
+
+      .benefits-grid, .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* OPTIMIZACIÓN RESPONSIVE DE LA SECCIÓN DE MAPA */
+      .map-section {
+        padding: 60px 0;
+      }
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+        border-radius: var(--radius-md);
+      }
+      .map-info-panel {
+        padding: 30px 20px;
+      }
+      .map-title {
+        font-size: 2.2rem;
+      }
+      .map-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .map-actions .btn-legend-gold,
+      .map-actions .btn-legend-outline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+      .floating-whatsapp {
+        display: none;
+      }
+
+      body {
+        padding-bottom: 74px;
+      }
+
+      /* Barra de Acciones Flotante Inferior (Mobile Action Dock) */
+      .mobile-action-dock {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 64px;
+        background: rgba(12, 12, 14, 0.97);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid rgba(229, 168, 84, 0.25);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.35fr;
+        align-items: center;
+        z-index: 9999;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .dock-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        height: 100%;
+        color: #b0b0b8;
+        font-size: 0.68rem;
+        font-weight: 600;
+        gap: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        touch-action: manipulation;
+        transition: all 0.3s ease;
+      }
+
+      .dock-btn i {
+        font-size: 1.15rem;
+      }
+
+      .dock-btn:active, .dock-btn:hover {
+        color: #ffffff;
+      }
+
+      .dock-btn-call i {
+        color: #60a5fa;
+      }
+
+      .dock-btn-map i {
+        color: #f87171;
+      }
+
+      .dock-btn-wa i {
+        color: #25d366;
+        font-size: 1.3rem;
+      }
+
+      .dock-btn-book {
+        background: var(--amber-gold);
+        color: var(--dark-obsidian) !important;
+        border-radius: var(--radius-sm);
+        margin: 6px 8px;
+        height: calc(100% - 12px);
+        font-weight: 800;
+      }
+
+      .dock-btn-book i {
+        color: var(--dark-obsidian);
+      }
+
+      .dock-btn-book:active {
+        background: var(--amber-gold-hover);
+        transform: scale(0.96);
+      }
+    }
+
+    .mobile-action-dock {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO STICKY INTELIGENTE (Auto-hide al scrollear hacia abajo, reaparece hacia arriba) -->
+  <div class="header-sticky-wrapper">
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <div class="top-bar-left">
+          <span><i class="fa-solid fa-location-dot"></i> Cl. 104 #113-53, Apartadó</span>
+          <a href="tel:+573000000000"><i class="fa-solid fa-phone"></i> (+57) 300 000 0000</a>
+        </div>
+        <div class="top-promo">
+          <i class="fa-solid fa-scissors"></i> Atención con y sin cita previa
+        </div>
+        <div class="top-socials">
+          <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.google.com/maps/place/Crismar+Barbershop" target="_blank" rel="noopener noreferrer" aria-label="Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#inicio" class="logo-brand">
+            <div class="logo-icon-box">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div class="logo-text-box">
+              <h2>Crismar</h2>
+              <span>Barbershop Apartadó</span>
+            </div>
+          </a>
+
+          <!-- NAVEGACIÓN (4 SECCIONES ESTRICTAS) -->
+          <ul class="nav-links">
+            <li><a href="#inicio" class="active">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+
+          <div>
+            <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-legend-gold btn-header-cta">
+              Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- 1. SECCIÓN: INICIO / HERO FULL-WIDTH (#inicio) -->
+  <main>
+    <section class="hero-fullwidth-section" id="inicio">
+      
+      <!-- IMAGEN DE FONDO A PANTALLA COMPLETA & MÁSCARA DARK -->
+      <div class="hero-bg-cover">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1920&q=85" alt="Crismar Barbershop en Apartadó" class="hero-bg-img" />
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- CONTENIDO PRINCIPAL -->
+      <div class="container hero-content-wrapper">
+        <div class="hero-text-block">
+          <span class="hero-eyebrow-text">LUCE BIEN. SIENTE CONFIANZA.</span>
+          <h1 class="hero-main-title">
+            MÁS QUE UN CORTE. <br />
+            ES UN <span class="accent-gold">ESTILO DE VIDA.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Cortes de precisión, degradados limpios y estilo atemporal diseñados por barberos profesionales en Apartadó.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-legend-gold">
+              <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+            </a>
+            <a href="#servicios" class="btn-legend-outline">
+              Ver Servicios
+            </a>
+          </div>
+
+          <div class="hero-social-proof">
+            <div class="avatar-group">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Cliente Barbershop" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Cliente Satisfecho" />
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Cliente Crismar" />
+            </div>
+            <div class="proof-text">
+              <strong><i class="fa-solid fa-star"></i> 4.9 de Calificación</strong>
+              <span>Más de 120+ Clientes satisfechos en Apartadó</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- FRANJA DE 4 SELLOS LEGEND DARK -->
+    <section class="benefits-bar-dark">
+      <div class="container">
+        <div class="benefits-grid">
+          
+          <div class="benefit-item">
+            <div class="benefit-icon-ring">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Barberos Expertos</h4>
+              <p>Profesionales altamente calificados</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon-ring">
+              <i class="fa-solid fa-pump-soap"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Productos Premium</h4>
+              <p>Cosmética capilar y aceites de autor</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon-ring">
+              <i class="fa-solid fa-chair"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>Higiene & Confort</h4>
+              <p>Máxima bioseguridad y esterilización</p>
+            </div>
+          </div>
+
+          <div class="benefit-item">
+            <div class="benefit-icon-ring">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="benefit-text">
+              <h4>100% Satisfacción</h4>
+              <p>Resultados que superan expectativas</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SECCIÓN: SERVICIOS (#servicios) -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        
+        <div class="section-header-center">
+          <span class="eyebrow-gold">NUESTRA CARTA</span>
+          <h2 class="section-title-display">SERVICIOS <span class="text-gold">POPULARES</span></h2>
+          <p class="section-desc">Procedimientos exclusivos con técnicas clásicas de navaja y degradados modernos.</p>
+        </div>
+
+        <div class="services-grid-6">
+          
+          <!-- Servicio 1 -->
+          <article class="service-card-legend">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=600&q=80" alt="Corte Clásico & Fade" />
+              <div class="service-floating-icon"><i class="fa-solid fa-scissors"></i></div>
+            </div>
+            <div class="service-body">
+              <div>
+                <h3 class="service-name">Corte Clásico & Fade</h3>
+                <div class="service-badges-wrap">
+                  <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 45 mins</span>
+                  <span class="service-badge-pill"><i class="fa-solid fa-check"></i> Perfilado Navaja</span>
+                </div>
+              </div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20el%20servicio%20de%20Corte%20Cl%C3%A1sico%20%26%20Fade." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-regular fa-calendar-check"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2 -->
+          <article class="service-card-legend">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=600&q=80" alt="Perfilado de Barba" />
+              <div class="service-floating-icon"><i class="fa-solid fa-beard"></i></div>
+            </div>
+            <div class="service-body">
+              <div>
+                <h3 class="service-name">Perfilado de Barba</h3>
+                <div class="service-badges-wrap">
+                  <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 30 mins</span>
+                  <span class="service-badge-pill"><i class="fa-solid fa-check"></i> Aceites & Navaja</span>
+                </div>
+              </div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20el%20servicio%20de%20Perfilado%20de%20Barba." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-regular fa-calendar-check"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3 -->
+          <article class="service-card-legend">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=600&q=80" alt="Afeitado Toalla Caliente" />
+              <div class="service-floating-icon"><i class="fa-solid fa-spa"></i></div>
+            </div>
+            <div class="service-body">
+              <div>
+                <h3 class="service-name">Toalla Caliente</h3>
+                <div class="service-badges-wrap">
+                  <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 40 mins</span>
+                  <span class="service-badge-pill"><i class="fa-solid fa-check"></i> Ritual Spa Clásico</span>
+                </div>
+              </div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20el%20servicio%20de%20Afeitado%20Toalla%20Caliente." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-regular fa-calendar-check"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 4 -->
+          <article class="service-card-legend">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="Corte Infantil & Kids" />
+              <div class="service-floating-icon"><i class="fa-solid fa-child"></i></div>
+            </div>
+            <div class="service-body">
+              <div>
+                <h3 class="service-name">Corte Kids</h3>
+                <div class="service-badges-wrap">
+                  <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 35 mins</span>
+                  <span class="service-badge-pill"><i class="fa-solid fa-check"></i> Estilo & Paciencia</span>
+                </div>
+              </div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20el%20servicio%20de%20Corte%20Kids." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-regular fa-calendar-check"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 5 -->
+          <article class="service-card-legend">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=600&q=80" alt="Hair Tattoo & Diseños" />
+              <div class="service-floating-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            </div>
+            <div class="service-body">
+              <div>
+                <h3 class="service-name">Diseños & Tattoo</h3>
+                <div class="service-badges-wrap">
+                  <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 45 mins</span>
+                  <span class="service-badge-pill"><i class="fa-solid fa-check"></i> Arte de Autor</span>
+                </div>
+              </div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20el%20servicio%20de%20Hair%20Tattoo%20%26%20Dise%C3%B1os." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-regular fa-calendar-check"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 6 -->
+          <article class="service-card-legend">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=600&q=80" alt="Lavado Spa & Exfoliación" />
+              <div class="service-floating-icon"><i class="fa-solid fa-water"></i></div>
+            </div>
+            <div class="service-body">
+              <div>
+                <h3 class="service-name">Lavado & Spa</h3>
+                <div class="service-badges-wrap">
+                  <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 25 mins</span>
+                  <span class="service-badge-pill"><i class="fa-solid fa-check"></i> Tónico & Exfoliación</span>
+                </div>
+              </div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20el%20servicio%20de%20Lavado%20Spa%20%26%20Exfoliaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-regular fa-calendar-check"></i> Agendar
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SECCIÓN: NOSOTROS / EXPERIENCIA & BARBEROS (#nosotros) -->
+    <section class="about-experience-section" id="nosotros">
+      <div class="container">
+        
+        <!-- COMPOSICIÓN EDITORIAL DE BARBERÍA -->
+        <div class="experience-layout">
+          <div class="salon-image-showcase">
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=80" alt="Ambiente Crismar Barbershop" />
+            <div class="experience-floating-badge">
+              <strong>VIP</strong>
+              <span>Experiencia Club</span>
+            </div>
+          </div>
+
+          <div class="experience-text-content">
+            <span class="eyebrow-gold">SOBRE NOSOTROS</span>
+            <h3>PRECISIÓN. ESTILO. <br /><span>CONFIANZA TOTAL.</span></h3>
+            <p>
+              En Crismar Barbershop creemos que un gran corte es mucho más que un servicio: es una declaración de identidad. Combinamos la tradición del afeitado clásico con las últimas tendencias de degradados para que luzcas imponente.
+            </p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <strong>8+</strong>
+                <span>Años Exp.</span>
+              </div>
+              <div class="metric-item">
+                <strong>20K+</strong>
+                <span>Cortes Realizados</span>
+              </div>
+              <div class="metric-item">
+                <strong>4</strong>
+                <span>Master Barberos</span>
+              </div>
+              <div class="metric-item">
+                <strong>4.9</strong>
+                <span>Calificación</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20el%20servicio." target="_blank" rel="noopener noreferrer" class="btn-legend-gold">
+              Conoce Nuestro Club
+            </a>
+          </div>
+        </div>
+
+        <!-- GRID DE BARBEROS MASTER -->
+        <div class="section-header-center" style="margin-top: 60px; margin-bottom: 30px;">
+          <span class="eyebrow-gold">NUESTRO EQUIPO</span>
+          <h3 class="section-title-display" style="font-size: 2.8rem;">BARBEROS <span class="text-gold">CERTIFICADOS</span></h3>
+        </div>
+
+        <div class="team-grid" id="equipo">
+          
+          <!-- Barbero 1 -->
+          <div class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Cristian Martínez" class="team-avatar" />
+              <span class="team-badge">Master</span>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Cristian 'Crismar'</h4>
+              <span class="team-role">Master Barber & Fundador</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20cita%20con%20el%20Master%20Cristian." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar Cita</a>
+            </div>
+          </div>
+
+          <!-- Barbero 2 -->
+          <div class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Andrés Murillo" class="team-avatar" />
+              <span class="team-badge">Pro</span>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Andrés 'Andy Fade'</h4>
+              <span class="team-role">Especialista en Fades & Diseños</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20cita%20con%20Andr%C3%A9s%20Murillo." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar Cita</a>
+            </div>
+          </div>
+
+          <!-- Barbero 3 -->
+          <div class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Mateo Rentería" class="team-avatar" />
+              <span class="team-badge">Senior</span>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Mateo 'Teo'</h4>
+              <span class="team-role">Especialista en Barbas Clásicas</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20cita%20con%20Mateo%20Renter%C3%ADa." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar Cita</a>
+            </div>
+          </div>
+
+          <!-- Barbero 4 -->
+          <div class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=500&q=80" alt="Samuel Córdoba" class="team-avatar" />
+              <span class="team-badge">Top Barber</span>
+            </div>
+            <div class="team-info">
+              <h4 class="team-name">Samuel Córdoba</h4>
+              <span class="team-role">Barbero Estilista Moderno</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.8)</div>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20cita%20con%20Samuel%20C%C3%B3rdoba." target="_blank" rel="noopener noreferrer" class="btn-team-book">Agendar Cita</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SECCIÓN: UBICACIÓN & GOOGLE MAPS (#ubicacion) -->
+    <section class="map-section" id="ubicacion">
+      <div class="container">
+        
+        <div class="map-showcase-card">
+          <div class="map-info-panel">
+            <span class="eyebrow-gold">SEDE PRINCIPAL</span>
+            <h2 class="map-title">VISÍTANOS EN APARTADÓ</h2>
+            
+            <div class="map-location-item">
+              <i class="fa-solid fa-map-pin"></i>
+              <div>
+                <strong>Dirección:</strong>
+                <p>Cl. 104 #113-53 a 113-1, Apartadó, Antioquia</p>
+              </div>
+            </div>
+
+            <div class="map-location-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Horario de Atención:</strong>
+                <p>Lunes a Sábado: 8:30 AM - 8:30 PM<br />Domingos & Festivos: 9:30 AM - 4:00 PM</p>
+              </div>
+            </div>
+
+            <div class="map-actions">
+              <a href="https://www.google.com/maps/place/Crismar+Barbershop/@7.8896639,-76.6513177,15z" target="_blank" rel="noopener noreferrer" class="btn-legend-gold">
+                <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar (Google Maps)
+              </a>
+              <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20necesito%20indicaciones%20para%20llegar%20al%20local." target="_blank" rel="noopener noreferrer" class="btn-legend-outline">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Crismar+Barbershop,+Cl.+104+%23113-53,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de Crismar Barbershop en Apartadó">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER DARK CLUB -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <div class="logo-brand" style="margin-bottom: 6px;">
+            <div class="logo-icon-box">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <div class="logo-text-box">
+              <h2>Crismar</h2>
+              <span>Barbershop Apartadó</span>
+            </div>
+          </div>
+          <p>
+            Cortes de precisión, degradados limpios y afeitado tradicional en un ambiente exclusivo para caballeros en Apartadó.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.google.com/maps/place/Crismar+Barbershop" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Google Maps">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <div class="footer-contact-info">
+            <p><i class="fa-solid fa-phone"></i> (+57) 300 000 0000</p>
+            <p><i class="fa-solid fa-map-pin"></i> Cl. 104 #113-53, Apartadó</p>
+            <p><i class="fa-regular fa-clock"></i> Lun - Sáb: 8:30 AM - 8:30 PM</p>
+          </div>
+        </div>
+
+        <div class="footer-newsletter-card">
+          <h4 class="footer-col-title">Reserva tu Turno</h4>
+          <p>Atención personalizada con nuestros barberos master.</p>
+          <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20agendar%20mi%20cita%20con%20un%20barbero." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+            <i class="fa-brands fa-whatsapp"></i> Agendar
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 Crismar Barbershop Apartadó. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP (Desktop) -->
+  <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20consultar%20por%20un%20corte%20y%20agendar%20mi%20turno." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- BARRA DE ACCIONES RÁPIDAS MÓVIL (Sticky Bottom Action Dock) -->
+  <nav class="mobile-action-dock" aria-label="Acciones rápidas en móvil">
+    <a href="tel:+573000000000" class="dock-btn dock-btn-call" aria-label="Llamar a Crismar Barbershop">
+      <i class="fa-solid fa-phone"></i>
+      <span>Llamar</span>
+    </a>
+    <a href="#ubicacion" class="dock-btn dock-btn-map" aria-label="Ver mapa y cómo llegar">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Ubicación</span>
+    </a>
+    <a href="https://wa.me/573000000000?text=Hola%20Crismar%20Barbershop%2C%20quisiera%20consultar%20por%20un%20servicio." target="_blank" rel="noopener noreferrer" class="dock-btn dock-btn-wa" aria-label="Chat por WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#servicios" class="dock-btn dock-btn-book" aria-label="Ver cortes y agendar">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Agendar</span>
+    </a>
+  </nav>
+
+  <!-- SCRIPT INTERACTIVO: SMART NAVBAR (Hide on scroll down, Show on scroll up) -->
+  <script>
+    (function() {
+      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const headerWrapper = document.querySelector('.header-sticky-wrapper');
+      
+      if (!headerWrapper) return;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Si el usuario scrollea hacia abajo más de 70px, ocultar
+        if (currentScrollY > 70 && currentScrollY > lastScrollY) {
+          headerWrapper.classList.add('header-hidden');
+        } 
+        // Si el usuario scrollea hacia arriba, mostrar
+        else if (currentScrollY < lastScrollY) {
+          headerWrapper.classList.remove('header-hidden');
+        }
+        
+        // Si vuelve a la cima, asegurar visibilidad
+        if (currentScrollY <= 10) {
+          headerWrapper.classList.remove('header-hidden');
+        }
+        
+        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>

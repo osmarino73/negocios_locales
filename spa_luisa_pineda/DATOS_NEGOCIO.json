@@ -1,0 +1,149 @@
+{
+  "negocio": {
+    "nombre": "Spa Luisa Pineda",
+    "rubro": "Peluquería & Spa de Belleza",
+    "categoria": "spa_peluqueria",
+    "eslogan": "Belleza, Cuidado Capilar y Experiencia Spa de Alta Gama en Turbo",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 323 393 2013",
+      "telefono_limpio": "+573233932013",
+      "whatsapp": {
+        "numero": "+573233932013",
+        "link": "https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita.",
+        "mensaje_base": "Hola Spa Luisa Pineda, quisiera solicitar información y agendar una cita."
+      },
+      "email": "contacto@spaluisapineda.com",
+      "instagram": "@spaluisapineda"
+    },
+    "ubicacion": {
+      "direccion": "Cl. 100 #15-3",
+      "barrio_referencia": "Zona Centro Comercial",
+      "ciudad": "Turbo",
+      "departamento_pais": "Antioquia, Colombia",
+      "coordenadas": {
+        "lat": "8.0922037",
+        "lng": "-76.7258596"
+      },
+      "google_maps_url": "https://www.google.com/maps/place/Spa+Luisa+Pineda/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e506500705bfee7:0x41bb6c54cb384b58!8m2!3d8.0922037!4d-76.7258596!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhWiciJXNhbG9uZXMgZGUgYmVsbGV6YSBlbiB0dXJibyBhbnRpb3F1aWGSAQpoYWlyX3NhbG9umgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwUk1HTXphRE5TYWtvMVltcGtXVkZYY0VSV1ZtUk1ZVmRHYTJGdFl4QULgAQD6AQQIABBJ!16s%2Fg%2F11w3vxlf_y",
+      "iframe_formula": "https://maps.google.com/maps?q=Spa+Luisa+Pineda,+Cl.+100+%2315-3,+Turbo,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingo": "Previa Cita",
+      "festivos": "Previa Cita"
+    },
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "canal_directo": "WhatsApp Instantáneo & Llamada Telefónica"
+    },
+    "pilares_garantia": [
+      {
+        "titulo": "Estilistas Expertas",
+        "descripcion": "Profesionales certificadas en colorimetría, estética facial y masoterapia."
+      },
+      {
+        "titulo": "Productos Prémium",
+        "descripcion": "Líneas orgánicas y dermocosmética de alta gama para resultados superiores."
+      },
+      {
+        "titulo": "Experiencia de Lujo",
+        "descripcion": "Ambiente privado, relajante y acogedor con atención personalizada VIP."
+      },
+      {
+        "titulo": "Satisfacción Total",
+        "descripcion": "Diagnóstico capilar y facial personalizado antes de cada procedimiento."
+      },
+      {
+        "titulo": "Higiene & Bioseguridad",
+        "descripcion": "Esterilización de instrumental y protocolos clínicos rigurosos."
+      }
+    ],
+    "servicios": [
+      {
+        "id": "facial-glow-radiance",
+        "nombre": "Facial Glow & Hidratación Profunda",
+        "categoria": "Spa Facial",
+        "descripcion": "Limpieza profunda, hidro-exfoliación, sérum vitamínico y mascarilla iluminadora con fototerapia.",
+        "precio": "$55.000",
+        "duracion": "60 min",
+        "badge": "⭐ Más Solicitado",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Spa Luisa Pineda, deseo agendar el servicio de Facial Glow & Hidratación Profunda."
+      },
+      {
+        "id": "alisado-organico-espejo",
+        "nombre": "Alisado Orgánico Efecto Espejo",
+        "categoria": "Peluquería & Capilar",
+        "descripcion": "Tratamiento termoactivo libre de formol que aporta lacio perfecto, sedosidad y brillo extremo.",
+        "precio": "$130.000",
+        "duracion": "120 min",
+        "badge": "Brillo Espejo",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Spa Luisa Pineda, deseo agendar el servicio de Alisado Orgánico Efecto Espejo."
+      },
+      {
+        "id": "balayage-color-autor",
+        "nombre": "Balayage & Colorimetría de Autor",
+        "categoria": "Peluquería & Color",
+        "descripcion": "Diseño de iluminación personalizada con matices dorados, miel o champagne con protección Olaplex.",
+        "precio": "$150.000",
+        "duracion": "180 min",
+        "badge": "Técnica de Autor",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Spa Luisa Pineda, deseo agendar el servicio de Balayage & Colorimetría de Autor."
+      },
+      {
+        "id": "ritual-spa-relajante",
+        "nombre": "Ritual Spa Relajante & Piedras Calientes",
+        "categoria": "Masajes & Relax",
+        "descripcion": "Masaje corporal completo con aceites esenciales botánicos, piedras volcánicas y aromaterapia.",
+        "precio": "$75.000",
+        "duracion": "60 min",
+        "badge": "100% Relajación",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Spa Luisa Pineda, deseo agendar el servicio de Ritual Spa Relajante & Piedras Calientes."
+      },
+      {
+        "id": "spa-capilar-lavado-zen",
+        "nombre": "Spa Capilar Detox & Terapia Keratina",
+        "categoria": "Cuidado Capilar",
+        "descripcion": "Exfoliación de cuero cabelludo, lavado zen con agua tibia, mascarilla reconstructora y masaje craneal.",
+        "precio": "$60.000",
+        "duracion": "50 min",
+        "badge": "Salud Capilar",
+        "imagen": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Spa Luisa Pineda, deseo agendar el servicio de Spa Capilar Detox & Terapia Keratina."
+      },
+      {
+        "id": "maquillaje-glam-social",
+        "nombre": "Maquillaje Glam & Peinado Social",
+        "categoria": "Estilismo & Eventos",
+        "descripcion": "Maquillaje de alta definición para eventos y novias con pestañas de visón y ondas al agua de salón.",
+        "precio": "$90.000",
+        "duracion": "90 min",
+        "badge": "Larga Duración",
+        "imagen": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+        "whatsapp_msg": "Hola Spa Luisa Pineda, deseo agendar el servicio de Maquillaje Glam & Peinado Social."
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Luisa Pineda",
+        "rol": "Directora & Master en Colorimetría y Estética",
+        "experiencia": "+10 años de trayectoria",
+        "descripcion": "Especialista en transformaciones capilares de alta costura y protocolos de spa rejuvenecedores.",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Valentina Gómez",
+        "rol": "Terapeuta Spa & Cosmiatra",
+        "experiencia": "+6 años de experiencia",
+        "descripcion": "Experta en dermolimpias profundas, hidro-faciales y masajes descontracturantes con piedras volcánicas.",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+}

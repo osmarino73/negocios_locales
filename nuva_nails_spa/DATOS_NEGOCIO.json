@@ -1,0 +1,124 @@
+{
+  "negocio": {
+    "nombre": "NÜVA NAILS SPA",
+    "rubro": "Salón de manicura y pedicura",
+    "categoria": "spa",
+    "eslogan": "NÜVA NAILS SPA — Salón de manicura y pedicura en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 313 746 3374",
+      "telefono_raw": "+573137463374",
+      "whatsapp": {
+        "numero": "+573137463374",
+        "link": "https://wa.me/573137463374?text=Hola%20N%C3%9CVA%20NAILS%20SPA%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      },
+      "instagram": "https://www.instagram.com/nuvanailsspa/"
+    },
+    "ubicacion": {
+      "direccion": "Cra. 104, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/N%C3%9CVA+NAILS+SPA/@7.8865719,-76.6515904,15z/data=!4m10!1m2!2m1!1snail+en+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500d0c13679167:0x2f41de481eb9ba0b!8m2!3d7.8865719!4d-76.633566!15sChxuYWlsIGVuIEFwYXJ0YWTDsywgQW50aW9xdWlhkgEKbmFpbF9zYWxvbuABAA!16s%2Fg%2F11n_yn1zm5",
+      "iframe_embed_url": "https://maps.google.com/maps?q=N%C3%9CVA+NAILS+SPA,+Cra.+104,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa cita y disponibilidad"
+    },
+    "servicios": [
+      {
+        "id": "semipermanente-mocca",
+        "nombre": "Semipermanente Mocca",
+        "precio": "$45.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Brillo Intacto 21 Días",
+        "icono": "fa-gem",
+        "imagen": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "unas-acrilicas",
+        "nombre": "Extensiones Acrílicas",
+        "precio": "Desde $85.000 COP",
+        "duracion": "90 min",
+        "tecnica": "Esculpido & Estructura",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "nail-art-minimalista",
+        "nombre": "Nail Art & Diseños",
+        "precio": "Desde $25.000 COP",
+        "duracion": "45 min",
+        "tecnica": "Líneas Finas & Efectos",
+        "icono": "fa-paint-brush",
+        "imagen": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "kapping-nivelacion",
+        "nombre": "Kapping & Gel Nivelador",
+        "precio": "$55.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Protección & Crecimiento",
+        "icono": "fa-shield-halved",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "pedicura-spa",
+        "nombre": "Pedicura Spa & Relax",
+        "precio": "$40.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Exfoliación & Masaje",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "retiro-calcio",
+        "nombre": "Retiro & Baño de Calcio",
+        "precio": "$15.000 COP",
+        "duracion": "30 min",
+        "tecnica": "Nutrición & Cuidado",
+        "icono": "fa-hand-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": "valentina-naranjo",
+        "nombre": "Valentina Naranjo",
+        "rol": "Directora & Master Nail Artist",
+        "experiencia": "+8 años exp.",
+        "badge": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "sofia-montoya",
+        "nombre": "Sofía Montoya",
+        "rol": "Especialista en Estructuras Acrílicas",
+        "experiencia": "+6 años exp.",
+        "badge": "Pro",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "isabella-cardenas",
+        "nombre": "Isabella Cárdenas",
+        "rol": "Artista de Nail Art & Diseños HD",
+        "experiencia": "+5 años exp.",
+        "badge": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "juliana-correa",
+        "nombre": "Juliana Correa",
+        "rol": "Terapeuta de Pedicura & Spa",
+        "experiencia": "+4 años exp.",
+        "badge": "Pro",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  }
+}

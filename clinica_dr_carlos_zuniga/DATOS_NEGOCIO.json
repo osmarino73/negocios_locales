@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "negocio": {
+    "nombre": "Clínica Dr. Carlos Zúñiga",
+    "rubro": "Cirugía Plástica & Medicina Estética Avanzada",
+    "categoria": "cirugia_plastica_medicina_estetica",
+    "eslogan": "Excelencia Quirúrgica, Seguridad y Armonía Estética en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "95+",
+    "contacto": {
+      "telefono_principal": "(+57) 333 758 8617",
+      "whatsapp": {
+        "numero": "+573337588617",
+        "link": "https://wa.me/573337588617?text=Hola%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n%20m%C3%A9dica."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 105 #95A - 12, Barrio Nuevo",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Clinica+Dr.+Carlos+Z%C3%BA%C3%B1iga/@7.8897062,-76.6513177,15z/data=!4m10!1m2!2m1!1scirujano+estetico++en+apartado!3m6!1s0x8e500d5e4092c6cf:0xfb5a9dc918c9ac1c!8m2!3d7.881747!4d-76.636408!15sCh5jaXJ1amFubyBlc3RldGljbyAgZW4gYXBhcnRhZG9aHyIdY2lydWphbm8gZXN0ZXRpY28gZW4gYXBhcnRhZG-SAQZkb2N0b3KaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnBrZVZWV1JtOVpNRGwwVTNwa2JWTnJjR3RYYm10M1VXdFNSbEZWUlJBQuABAPoBBAgAECw!16s%2Fg%2F11y_hfg0_5",
+      "coordenadas": {
+        "lat": 7.881747,
+        "lng": -76.636408
+      }
+    },
+    "horario_atencion": {
+      "lunes_a_viernes": "8:00 AM - 6:00 PM",
+      "sabados": "8:00 AM - 1:00 PM (Valoraciones y Controles)"
+    },
+    "sitio_web": "https://drcarloszuniga.com.co/",
+    "servicios": [
+      {
+        "id": 1,
+        "nombre": "Mamoplastia de Aumento",
+        "descripcion": "Realce y proyección de busto con implantes de última generación y técnicas de recuperación rápida.",
+        "duracion": "Quirúrgico",
+        "precio_desde": "Valoración Médica",
+        "foto_url": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 2,
+        "nombre": "Rinoplastia Estética & Funcional",
+        "descripcion": "Armonización del perfil nasal preservando y mejorando la capacidad respiratoria del paciente.",
+        "duracion": "Quirúrgico",
+        "precio_desde": "Valoración Médica",
+        "foto_url": "https://images.unsplash.com/photo-1512290900672-1f02e6a39439?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 3,
+        "nombre": "Liposucción de Alta Definición (HD)",
+        "descripcion": "Moldeamiento corporal avanzado para esculpir abdomen, cintura y espalda con retracción de piel.",
+        "duracion": "Quirúrgico",
+        "precio_desde": "Valoración Médica",
+        "foto_url": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 4,
+        "nombre": "Armonización Facial & Botox",
+        "descripcion": "Atenuación de líneas de expresión, relleno con ácido hialurónico y perfilamiento mandibular.",
+        "duracion": "45 mins",
+        "precio_desde": "Desde $450.000 COP",
+        "foto_url": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 5,
+        "nombre": "Abdominoplastia (Tummy Tuck)",
+        "descripcion": "Corrección de flacidez abdominal y fortalecimiento de pared muscular post-embarazo o pérdida de peso.",
+        "duracion": "Quirúrgico",
+        "precio_desde": "Valoración Médica",
+        "foto_url": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "id": 6,
+        "nombre": "Blefaroplastia & Rejuvenecimiento",
+        "descripcion": "Eliminación de bolsas y exceso de piel en párpados para una mirada fresca, joven y descansada.",
+        "duracion": "Quirúrgico",
+        "precio_desde": "Valoración Médica",
+        "foto_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": 1,
+        "nombre": "Dr. Carlos Zúñiga",
+        "cargo": "Cirujano Plástico, Estético & Reconstructivo",
+        "rango": "Director Médico",
+        "registro_medico": "Sociedad Colombiana de Cirugía Plástica (SCCP)",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573337588617?text=Hola%2C%20quisiera%20agendar%20cita%20con%20el%20Dr.%20Carlos%20Z%C3%BA%C3%B1iga."
+      }
+    ]
+  }
+}

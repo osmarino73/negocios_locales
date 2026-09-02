@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Spa Luisa Pineda | Peluquería & Spa de Lujo en Turbo, Antioquia</title>
+  <meta name="description" content="Spa Luisa Pineda en Turbo, Antioquia. Salón de belleza y spa de alta gama: faciales glow, balayage de autor, alisados orgánicos y masajes relajantes. ¡Agenda tu cita!">
+  <meta name="keywords" content="spa en turbo, peluqueria turbo antioquia, salon de belleza turbo, balayage turbo, faciales turbo, alisado organico turbo, spa luisa pineda">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:title" content="Spa Luisa Pineda | Salón & Spa de Alta Gama en Turbo">
+  <meta property="og:description" content="Descubre una experiencia de belleza y relajación de autor en Turbo, Antioquia. Faciales, colorimetría, spa capilar y masajes terapéuticos.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Spa Luisa Pineda">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20y=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond, Alex Brush & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Spa Luisa Pineda",
+    "image": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+573233932013",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 100 #15-3",
+      "addressLocality": "Turbo",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.0922037,
+      "longitude": -76.7258596
+    },
+    "url": "https://wa.me/573233932013",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y SISTEMA DE DISEÑO FORENSE ("Tabbsum Shah Beauty" Palette)
+       ========================================================================== */
+    :root {
+      --bg-base: #0d0f12;
+      --bg-gradient-hero: radial-gradient(circle at 75% 30%, #1a1e27 0%, #0d0f12 70%);
+      --bg-surface: #15181f;
+      --bg-surface-elevated: #1c202a;
+      --bg-surface-translucent: rgba(21, 24, 31, 0.85);
+      
+      /* Acentos Dorados Champagne & Ámbar Lujo */
+      --color-gold: #d4af37;
+      --color-gold-light: #e5be58;
+      --color-gold-hover: #f3d178;
+      --color-gold-dark: #b8860b;
+      --gold-gradient: linear-gradient(135deg, #e5be58 0%, #d4af37 50%, #b8860b 100%);
+      --gold-gradient-hover: linear-gradient(135deg, #f5d175 0%, #e5be58 50%, #c59b27 100%);
+      
+      /* Tipografía & Colores de Texto */
+      --text-primary: #fdfaf3;
+      --text-secondary: #c4bfb5;
+      --text-muted: #8e897e;
+      --text-dark: #0d0f12;
+      
+      /* Bordes & Sombras */
+      --border-gold: rgba(212, 175, 55, 0.25);
+      --border-gold-strong: rgba(212, 175, 55, 0.55);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.45);
+      --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.25);
+      
+      /* Fuentes */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-pill: 50px;
+      
+      --container-max: 1240px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      background-image: 
+        radial-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+        radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px, 20px 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       TOP BAR DORADA PROMOCIONAL (Referencia Exacta)
+       ========================================================================== */
+    .promo-topbar {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-align: center;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+    }
+
+    /* ==========================================================================
+       SMART HEADER & NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.35s ease, background 0.35s ease;
+    }
+
+    .header-sticky-wrapper.hide-header {
+      transform: translateY(-100%);
+    }
+
+    .site-header {
+      background: rgba(13, 15, 18, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 16px 0;
+      transition: var(--transition);
+    }
+
+    .site-header.scrolled {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-gold);
+      background: rgba(13, 15, 18, 0.98);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--text-primary);
+      line-height: 1.1;
+    }
+
+    .brand-tagline {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-gold-light);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background: var(--color-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-gold-light);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-header-cta {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--gold-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-gold);
+      color: var(--color-gold);
+      font-size: 1.25rem;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+       ========================================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      background: var(--bg-base);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    /* Capa de Fotografía a la Derecha */
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.95;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 40%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 40%);
+    }
+
+    /* Overlay Máscara Gradiente - Máximo al 50% */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #0d0f12 0%, #0d0f12 28%, rgba(13, 15, 18, 0.85) 42%, rgba(13, 15, 18, 0) 55%, transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding: 70px 0;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-badge-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(21, 24, 31, 0.85);
+      border: 1px solid var(--border-gold);
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-gold-light);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-badge-rating .stars {
+      color: #f59e0b;
+      font-size: 0.85rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.08;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .glow-script {
+      font-family: var(--font-script);
+      font-size: 1.15em;
+      color: var(--color-gold-light);
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .hero-subtitle strong {
+      color: var(--color-gold-light);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 14px 32px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-secondary {
+      background: rgba(21, 24, 31, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text-primary);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid var(--border-gold);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: var(--color-gold-light);
+      color: var(--color-gold-light);
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS (5 Sellos de Confianza)
+       ========================================================================== */
+    .pillars-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-gold);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 26px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 12px;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .pillar-item:last-child {
+      border-right: none;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .pillar-item:hover .pillar-icon {
+      background: var(--color-gold);
+      color: var(--text-dark);
+      transform: scale(1.08) rotate(6deg);
+    }
+
+    .pillar-text h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .pillar-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       SECCIÓN CATÁLOGO: NUESTROS SERVICIOS (#servicios) — ESTÁNDAR CRISMAR
+       ========================================================================== */
+    .section-py {
+      padding: 85px 0;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-gold-light);
+      display: block;
+      margin-bottom: -5px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .service-card:hover {
+      border-color: var(--border-gold);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 155px;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card:hover .service-img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .service-body {
+      padding: 16px 10px 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.25;
+      min-height: 2.5em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-badges-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .service-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    .service-badge-pill i {
+      color: var(--color-gold);
+      font-size: 0.65rem;
+    }
+
+    .btn-card-book {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(212, 175, 55, 0.12);
+      color: var(--color-gold-light);
+      border: 1px solid var(--border-gold);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      margin-top: auto;
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .btn-card-book:hover {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+    }
+
+    /* ==========================================================================
+       SECCIÓN OFICIAL: SOBRE NOSOTROS & PROFESIONALES (#nosotros) — CRISMAR
+       ========================================================================== */
+    .specialists-section {
+      background: var(--bg-surface-elevated);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 85px 0;
+    }
+
+    /* Composición Editorial Sobre Nosotros */
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-gold);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .experience-floating-badge strong {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1;
+      display: block;
+      font-weight: 700;
+    }
+
+    .experience-floating-badge span {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .experience-text-content .experience-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .experience-text-content .experience-title span {
+      color: var(--color-gold-light);
+      font-style: italic;
+    }
+
+    .experience-text-content p {
+      color: var(--text-secondary);
+      font-size: 0.96rem;
+      line-height: 1.65;
+      margin-bottom: 26px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-gold);
+      margin-bottom: 28px;
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-item strong {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+      color: var(--color-gold-light);
+      display: block;
+    }
+
+    .metric-item span {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 26px 14px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border-gold);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .team-photo-box {
+      position: relative;
+      width: 105px;
+      height: 105px;
+      margin: 0 auto 14px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-gold);
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.25);
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-gold-light);
+      display: block;
+      margin-bottom: 8px;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.2;
+    }
+
+    .team-rating {
+      font-size: 0.85rem;
+      color: #f59e0b;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .btn-team-book {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--color-gold-light);
+      border: 1.5px solid var(--border-gold);
+      padding: 8px 22px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      background: transparent;
+      width: 100%;
+    }
+
+    .btn-team-book:hover {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+    }
+
+    /* ==========================================================================
+       MAPA & CONTACTO GEORREFERENCIADO (#ubicacion)
+       ========================================================================== */
+    .location-section {
+      background: var(--bg-base);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-info-panel {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .map-info-panel h3 {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .map-info-panel p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+    }
+
+    .contact-details-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-item-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-gold);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text h5 {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text p, 
+    .contact-item-text a {
+      font-size: 0.92rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .contact-item-text a:hover {
+      color: var(--color-gold-light);
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-map-action {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .btn-map-action:hover {
+      background: var(--gold-gradient-hover);
+    }
+
+    .btn-map-secondary {
+      background: transparent;
+      border: 1px solid var(--border-gold);
+      color: var(--color-gold-light);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .btn-map-secondary:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      min-height: 420px;
+      width: 100%;
+      background: #111;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      min-height: 420px;
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL DE LUJO
+       ========================================================================== */
+    .site-footer {
+      background: #090a0d;
+      border-top: 1px solid var(--border-gold);
+      padding: 70px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      margin: 16px 0 20px;
+      line-height: 1.6;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .social-btn:hover {
+      border-color: var(--border-gold);
+      color: var(--color-gold);
+      transform: translateY(-3px);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28px;
+      height: 1px;
+      background: var(--color-gold);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-gold-light);
+      padding-left: 4px;
+    }
+
+    /* Módulo de Reserva en Footer con Botón Conciso "Agendar" */
+    .footer-reserve-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .footer-reserve-box h5 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-gold-light);
+      margin-bottom: 6px;
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .btn-footer-reserve {
+      background: var(--gold-gradient);
+      color: var(--text-dark);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--gold-gradient-hover);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      right: 20px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      line-height: 1;
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
+      z-index: 999999;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      touch-action: manipulation;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) translateY(-3px) translate3d(0, 0, 0);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    .whatsapp-float i {
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (Media Queries)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pillar-item:nth-child(3) {
+        border-right: none;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-toggle,
+      .nav-menu {
+        display: none !important;
+      }
+
+      .brand-title {
+        font-size: 1.35rem;
+      }
+
+      .brand-tagline {
+        font-size: 0.62rem;
+      }
+
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      /* Hero Móvil Calibrado (+20% Altura & Centrado) */
+      .hero-fullwidth-section {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: 720px !important;
+        padding: 130px 16px 36px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.92;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(180deg, rgba(13, 15, 18, 0.05) 0%, rgba(13, 15, 18, 0.25) 36%, rgba(13, 15, 18, 0.85) 62%, rgba(13, 15, 18, 0.98) 88%, #0d0f12 100%);
+      }
+
+      .hero-content {
+        padding: 0;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+        width: 100%;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.86rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.86rem;
+      }
+
+      /* Pilares en Móvil: Carrusel Horizontal con Scroll Snap */
+      .pillars-section {
+        padding: 16px 0;
+        overflow: hidden;
+      }
+
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 16px 8px;
+        margin: 0 -16px;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 auto;
+        min-width: 220px;
+        max-width: 250px;
+        scroll-snap-align: start;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-gold);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+        border-right: 1px solid var(--border-gold);
+        border-bottom: none;
+      }
+
+      .pillar-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+      }
+
+      .pillar-text h4 {
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+
+      .pillar-text p {
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+
+      /* REGLA MANDATORIA: SERVICIOS Y EQUIPO EN 2 COLUMNAS EN MÓVIL (<768px) */
+      .services-grid,
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .service-body,
+      .team-card {
+        padding: 14px 10px 12px;
+      }
+
+      .service-img-wrapper {
+        height: 120px;
+      }
+
+      .service-title,
+      .team-name {
+        font-size: 0.95rem;
+        line-height: 1.2;
+      }
+
+      .service-badge-pill {
+        font-size: 0.65rem;
+        padding: 2px 7px;
+      }
+
+      .btn-card-book,
+      .btn-team-book {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.72rem;
+        padding: 7px 8px;
+        white-space: nowrap;
+      }
+
+      .team-photo-box {
+        width: 100%;
+        max-width: 84px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 auto 8px;
+      }
+
+      .team-avatar {
+        width: 100%;
+        height: 100%;
+      }
+
+      .team-badge {
+        display: none !important;
+      }
+
+      .team-role {
+        font-size: 0.7rem;
+        min-height: 2.4em;
+        line-height: 1.2;
+        margin-bottom: 4px;
+      }
+
+      .team-rating {
+        font-size: 0.72rem;
+        margin-bottom: 8px;
+      }
+
+      /* Sobre Nosotros en Móvil */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .salon-image-showcase img {
+        height: 280px;
+      }
+
+      .experience-floating-badge {
+        bottom: 16px;
+        left: 16px;
+        padding: 10px 16px;
+      }
+
+      .experience-floating-badge strong {
+        font-size: 1.8rem;
+      }
+
+      .experience-text-content {
+        text-align: center;
+      }
+
+      .experience-text-content .experience-title {
+        font-size: 2.2rem;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .metric-item strong {
+        font-size: 1.7rem;
+      }
+
+      /* Mapa Responsive en Móvil */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-gold);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .whatsapp-float {
+        bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 20px !important;
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 1.85rem !important;
+        z-index: 99999 !important;
+      }
+
+      .whatsapp-float .tooltip {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <header class="header-sticky-wrapper" id="stickyHeader">
+    <div class="site-header">
+      <div class="container nav-container">
+        <a href="#inicio" class="brand-logo" aria-label="Inicio Spa Luisa Pineda">
+          <span class="brand-title">Spa Luisa Pineda</span>
+          <span class="brand-tagline">Peluquería & Spa VIP • Turbo</span>
+        </a>
+
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#nosotros" class="nav-link">Profesionales</a></li>
+            <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+            <i class="fa-solid fa-calendar-check"></i> Agendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+         ========================================================================== -->
+    <section class="hero-fullwidth-section" id="inicio">
+      <!-- Fotografía de Modelo a la Derecha -->
+      <div class="hero-bg-cover">
+        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1920&q=85" alt="Modelo de Belleza y Spa Luisa Pineda" class="hero-bg-img" loading="eager" width="1920" height="1080">
+      </div>
+
+      <!-- Overlay Máscara Gradiente -->
+      <div class="hero-bg-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text-block">
+          <h1 class="hero-title">
+            Luce Radiante
+            <span class="glow-script">Peluquería, Color & Spa Facial</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Tu salón de belleza y spa de confianza en <strong>Turbo, Antioquia</strong>. Expertas en tintes, balayage, alisados, limpiezas de cutis y masajes relajantes para consentirte como te mereces.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20quisiera%20agendar%20mi%20cita%20de%20belleza." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-calendar-days"></i> Agendar Cita
+            </a>
+            <a href="#servicios" class="btn-secondary">
+              Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BARRA DE PILARES / GARANTÍAS (5 Sellos)
+         ========================================================================== -->
+    <section class="pillars-section" aria-label="Nuestras Garantías">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="pillar-text">
+              <h4>Estilistas Expertas</h4>
+              <p>Maestras en color & estética</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="pillar-text">
+              <h4>Productos Prémium</h4>
+              <p>Líneas orgánicas y botánicas</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-spa"></i></div>
+            <div class="pillar-text">
+              <h4>Experiencia de Lujo</h4>
+              <p>Atención personalizada VIP</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="pillar-text">
+              <h4>Satisfacción Total</h4>
+              <p>Diagnóstico previo integral</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="pillar-text">
+              <h4>Higiene & Seguridad</h4>
+              <p>Protocolos de bioseguridad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATÁLOGO DE SERVICIOS: NUESTROS BESTSELLERS (#servicios)
+         ========================================================================== -->
+    <section class="section-py" id="servicios">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-script-eyebrow">Tratamientos Bestsellers</span>
+          <h2 class="section-title">Nuestros Servicios Estrella</h2>
+          <p class="section-desc">Procedimientos diseñados para realzar tu belleza natural y brindarte una profunda sensación de bienestar y renovación.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Facial Glow -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Facial Glow & Hidratación Profunda" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Facial Glow & Hidratación</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 50 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-sparkles"></i> Hidro-Exfoliación & Sérum</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $55.000 COP</span>
+              </div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20el%20servicio%20de%20Facial%20Glow%20%26%20Hidrataci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2: Alisado Orgánico -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Alisado Orgánico Efecto Espejo" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Alisado Orgánico Espejo</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 120 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Libre de Formol</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $130.000 COP</span>
+              </div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20el%20servicio%20de%20Alisado%20Org%C3%A1nico%20Espejo." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3: Balayage & Colorimetría -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Balayage & Colorimetría de Autor" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Balayage & Color de Autor</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 180 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-palette"></i> Diseño & Olaplex</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $150.000 COP</span>
+              </div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20el%20servicio%20de%20Balayage%20%26%20Color%20de%20Autor." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 4: Ritual Spa Relajante -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Ritual Spa Relajante & Piedras Calientes" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Ritual Piedras Calientes</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-spa"></i> Aceites Botánicos</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $75.000 COP</span>
+              </div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20el%20servicio%20de%20Ritual%20Spa%20Piedras%20Calientes." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 5: Spa Capilar Detox -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Spa Capilar Detox & Terapia Keratina" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Spa Capilar Detox & Keratina</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 45 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-shower"></i> Lavado Zen & Masaje</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $60.000 COP</span>
+              </div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20el%20servicio%20de%20Spa%20Capilar%20Detox." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 6: Maquillaje Glam & Social -->
+          <article class="service-card">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Glam & Peinado Social" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Maquillaje Glam & Peinado</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 75 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-eye"></i> Pestañas Visón & Ondas</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $90.000 COP</span>
+              </div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20el%20servicio%20de%20Maquillaje%20Glam%20%26%20Peinado." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN OFICIAL: SOBRE NOSOTROS & PROFESIONALES (#nosotros) — CRISMAR
+         ========================================================================== -->
+    <section class="section-py specialists-section" id="nosotros">
+      <div class="container">
+        
+        <!-- 1. COMPOSICIÓN EDITORIAL: SOBRE NOSOTROS -->
+        <div class="experience-layout">
+          <div class="salon-image-showcase">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="Ambiente y Experiencia en Spa Luisa Pineda" loading="lazy" width="1000" height="700">
+            <div class="experience-floating-badge">
+              <strong>VIP</strong>
+              <span>Experiencia Spa</span>
+            </div>
+          </div>
+
+          <div class="experience-text-content">
+            <span class="section-script-eyebrow">Sobre Nosotros</span>
+            <h2 class="experience-title">BELLEZA. BIENESTAR. <br><span>CONFIANZA TOTAL.</span></h2>
+            <p>
+              En Spa Luisa Pineda nos dedicamos a realzar tu belleza y brindarte un espacio de relajación y cuidado integral en Turbo. Combinamos las mejores técnicas en colorimetría, alisados y tratamientos faciales para que te sientas renovada y consentida en cada visita.
+            </p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <strong>+10</strong>
+                <span>Años Exp.</span>
+              </div>
+              <div class="metric-item">
+                <strong>+4K</strong>
+                <span>Clientas Felices</span>
+              </div>
+              <div class="metric-item">
+                <strong>100%</strong>
+                <span>Atención VIP</span>
+              </div>
+              <div class="metric-item">
+                <strong>5.0</strong>
+                <span>Calificación ★</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-sparkles"></i> Conoce Nuestro Spa
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. GRID DE PROFESIONALES -->
+        <div class="section-header-center" style="margin-top: 60px; margin-bottom: 30px;">
+          <span class="section-script-eyebrow">Nuestro Equipo</span>
+          <h2 class="section-title">Nuestros Profesionales</h2>
+          <p class="section-desc">Especialistas apasionadas con años de experiencia en colorimetría, estética capilar y terapias de spa de alta gama.</p>
+        </div>
+
+        <div class="team-grid" id="equipo">
+          <!-- Profesional 1: Luisa Pineda -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Luisa Pineda" class="team-avatar">
+              <span class="team-badge">Master Color</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Luisa Pineda</h3>
+              <span class="team-role">Directora & Master en Colorimetría</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20una%20cita%20con%20Luisa%20Pineda." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Profesional 2: Valentina Gómez -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Valentina Gómez" class="team-avatar">
+              <span class="team-badge">Cosmiatra Pro</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Valentina Gómez</h3>
+              <span class="team-role">Terapeuta Spa & Cosmiatra</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20una%20cita%20con%20Valentina%20G%C3%B3mez." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MAPA & CONTACTO GEORREFERENCIADO (#ubicacion)
+         ========================================================================== -->
+    <section class="section-py location-section" id="ubicacion">
+      <div class="container">
+        <div class="map-showcase-card">
+          <!-- Panel Informativo de Contacto -->
+          <div class="map-info-panel">
+            <div>
+              <span class="section-script-eyebrow" style="font-size: 1.8rem;">Visítanos</span>
+              <h3>Nuestra Ubicación</h3>
+              <p>Te esperamos en nuestro exclusivo salón y spa en Turbo para brindarte la mejor atención y cuidado.</p>
+
+              <ul class="contact-details-list">
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="contact-item-text">
+                    <h5>Dirección</h5>
+                    <p>Cl. 100 #15-3, Turbo, Antioquia, Colombia</p>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                  <div class="contact-item-text">
+                    <h5>Teléfono / WhatsApp</h5>
+                    <a href="tel:+573233932013">(+57) 323 393 2013</a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+                  <div class="contact-item-text">
+                    <h5>Horario de Atención</h5>
+                    <p>Lunes a Sábado: 8:00 AM - 7:00 PM<br>Domingos: Con Cita Previa</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="map-actions">
+              <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-map-action">
+                <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+              </a>
+              <a href="https://www.google.com/maps/place/Spa+Luisa+Pineda/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e506500705bfee7:0x41bb6c54cb384b58!8m2!3d8.0922037!4d-76.7258596!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhWiciJXNhbG9uZXMgZGUgYmVsbGV6YSBlbiB0dXJibyBhbnRpb3F1aWGSAQpoYWlyX3NhbG9umgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJwUk1HTXphRE5TYWtvMVltcGtXVkZYY0VSV1ZtUk1ZVmRHYTJGdFl4QULgAQD6AQQIABBJ!16s%2Fg%2F11w3vxlf_y" target="_blank" rel="noopener noreferrer" class="btn-map-secondary">
+                <i class="fa-solid fa-diamond-turn-right"></i> Abrir en Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Iframe Georreferenciado Exacto -->
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Spa+Luisa+Pineda,+Cl.+100+%2315-3,+Turbo,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              title="Mapa de Ubicación de Spa Luisa Pineda en Turbo"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca & Redes -->
+        <div class="footer-brand">
+          <span class="brand-title">Spa Luisa Pineda</span>
+          <span class="brand-tagline">Peluquería & Spa • Turbo</span>
+          <p>Tu santuario de belleza y cuidado personal en Turbo. Experiencias capilares y faciales de alto nivel con resultados transformadores.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/573233932013" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nuestros Profesionales</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios Principales -->
+        <div class="footer-col">
+          <h4>Tratamientos</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Facial Glow & Hidro-peel</a></li>
+            <li><a href="#servicios">Alisados Orgánicos Espejo</a></li>
+            <li><a href="#servicios">Balayage & Color de Autor</a></li>
+            <li><a href="#servicios">Ritual Spa Piedras Calientes</a></li>
+            <li><a href="#servicios">Spa Capilar Detox & Keratina</a></li>
+            <li><a href="#servicios">Maquillaje de Novias & Eventos</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Reserva Rápida con Botón "Agendar" -->
+        <div class="footer-col">
+          <h4>Reserva Tu Cita</h4>
+          <div class="footer-reserve-box">
+            <h5>Atención Inmediata</h5>
+            <p>Reserva tu turno de manera rápida y cómoda por WhatsApp.</p>
+            <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20deseo%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+              <i class="fa-solid fa-calendar-check"></i> Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Spa Luisa Pineda. Todos los derechos reservados. Cl. 100 #15-3, Turbo, Antioquia, Colombia.</p>
+        <p>Salón de Belleza & Spa de Autor • Calificación 5.0 ★</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== -->
+  <a href="https://wa.me/573233932013?text=Hola%20Spa%20Luisa%20Pineda%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       SCRIPTS INTERACTIVOS (Smart Header & Menú Móvil)
+       ========================================================================== -->
+  <script>
+    // Smart Header (Auto-hide on scroll down, show on scroll up)
+    let lastScrollY = window.scrollY;
+    const headerWrapper = document.getElementById('stickyHeader');
+    const headerEl = headerWrapper.querySelector('.site-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      // Background blur upgrade on scroll
+      if (currentScrollY > 60) {
+        headerEl.classList.add('scrolled');
+      } else {
+        headerEl.classList.remove('scrolled');
+      }
+
+      // Hide / Show header logic
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        headerWrapper.classList.add('hide-header');
+      } else {
+        headerWrapper.classList.remove('hide-header');
+      }
+      
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+
+    // Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
+    const pillarsGrid = document.querySelector('.pillars-grid');
+    if (pillarsGrid) {
+      let scrollInterval = null;
+      let isUserInteracting = false;
+      let resumeTimeout = null;
+
+      const getScrollStep = () => {
+        const firstItem = pillarsGrid.querySelector('.pillar-item');
+        if (!firstItem) return 240;
+        const gap = parseInt(window.getComputedStyle(pillarsGrid).gap) || 12;
+        return firstItem.offsetWidth + gap;
+      };
+
+      const autoScrollStep = () => {
+        if (isUserInteracting || window.innerWidth > 768) return;
+        const maxScroll = pillarsGrid.scrollWidth - pillarsGrid.clientWidth;
+        const step = getScrollStep();
+        
+        if (pillarsGrid.scrollLeft + step >= maxScroll - 10) {
+          pillarsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          pillarsGrid.scrollBy({ left: step, behavior: 'smooth' });
+        }
+      };
+
+      const startAutoScroll = () => {
+        if (!scrollInterval) {
+          scrollInterval = setInterval(autoScrollStep, 3000);
+        }
+      };
+
+      const pauseOnTouch = () => {
+        isUserInteracting = true;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+          isUserInteracting = false;
+        }, 4000);
+      };
+
+      pillarsGrid.addEventListener('touchstart', pauseOnTouch, { passive: true });
+      pillarsGrid.addEventListener('touchmove', pauseOnTouch, { passive: true });
+      pillarsGrid.addEventListener('mousedown', pauseOnTouch);
+
+      startAutoScroll();
+    }
+  </script>
+</body>
+</html>

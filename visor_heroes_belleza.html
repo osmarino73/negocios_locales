@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo Visual: Imágenes Premium para Hero (Nicho Belleza)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <style>
+    :root {
+      --primary: #e11d48;
+      --dark: #181528;
+      --bg: #faf9fc;
+      --card-bg: #ffffff;
+      --text-muted: #64748b;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    body {
+      background-color: var(--bg);
+      color: var(--dark);
+      padding: 40px 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    
+    p.subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+    
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 30px;
+    }
+    
+    .image-card {
+      background: var(--card-bg);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(24, 21, 40, 0.06);
+      border: 1px solid rgba(225, 29, 72, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .image-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(225, 29, 72, 0.14);
+    }
+    
+    .img-preview-box {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+    
+    .img-preview-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center right;
+      transition: transform 0.5s ease;
+    }
+    
+    .image-card:hover .img-preview-box img {
+      transform: scale(1.05);
+    }
+    
+    .badge-number {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--dark);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    
+    .card-body {
+      padding: 22px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    
+    .card-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    
+    .palette-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+    
+    .palette-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    
+    .color-dots {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+    
+    .color-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1.5px solid #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>✨ Biblioteca de Imágenes Premium para Hero</h1>
+      <p class="subtitle">Curadas para formato Full-Width (1920×1080 horizontal con sujeto a la derecha)</p>
+    </header>
+
+    <div class="gallery-grid">
+      
+      <!-- 0.2 • CUSTOM IA MODELO 2 -->
+      <div class="image-card" style="border: 2px solid #d4af37; box-shadow: 0 12px 36px rgba(212, 175, 55, 0.18);">
+        <div class="img-preview-box">
+          <span class="badge-number" style="background:#b8860b;">⭐ TU IMAGEN IA #2 (Activa)</span>
+          <img src="./assets/heroes/modelo2.webp" alt="Spa Capilar & Relax Zen Custom IA" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Spa Capilar & Relax Zen (IA Custom)</h3>
+          <p class="card-desc">Clienta en lava-cabezas con agua tibia, espuma, hojas de eucalipto y luz cálida champagne. Espacio perfecto a la izquierda.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#b8860b;"></span>
+              <span class="color-dot" style="background:#d4af37;"></span>
+              <span class="color-dot" style="background:#fbf8f3;"></span>
+              <span class="color-dot" style="background:#1a1612;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 0 • CUSTOM IA MODELO 1 -->
+      <div class="image-card" style="border: 2px solid #e11d48; box-shadow: 0 12px 36px rgba(225, 29, 72, 0.18);">
+        <div class="img-preview-box">
+          <span class="badge-number" style="background:#e11d48;">⭐ TU IMAGEN IA #1 (Activa)</span>
+          <img src="./assets/heroes/modelo1.webp" alt="GlowCare Radiant Rose Custom IA" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">GlowCare Radiant Rose (IA Custom)</h3>
+          <p class="card-desc">Modelo con piel luminosa, pétalos de rosas rosadas flotantes y suave bruma. Encuadre perfecto a la derecha con espacio a la izquierda.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#e11d48;"></span>
+              <span class="color-dot" style="background:#f43f5e;"></span>
+              <span class="color-dot" style="background:#fae4e9;"></span>
+              <span class="color-dot" style="background:#181528;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#1 • GlowCare</span>
+          <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80" alt="GlowCare Radiant Pink" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Skincare Radiante Pink</h3>
+          <p class="card-desc">Modelo femenina de piel luminosa con flores suaves y estética rosada/fucsia.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#e11d48;"></span>
+              <span class="color-dot" style="background:#f43f5e;"></span>
+              <span class="color-dot" style="background:#fff1f2;"></span>
+              <span class="color-dot" style="background:#181528;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#2 • Spa Capilar</span>
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Spa Capilar Lavado Zen" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Spa Capilar & Relax Detox</h3>
+          <p class="card-desc">Lavado de cabello profesional en lava-cabezas con agua tibia, espuma y máxima sensación zen.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#5b3b8c;"></span>
+              <span class="color-dot" style="background:#805bb5;"></span>
+              <span class="color-dot" style="background:#f7f4fb;"></span>
+              <span class="color-dot" style="background:#1f1a29;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#3 • Glowérive</span>
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Bio-Luxe Esmeralda" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Botánico Esmeralda & Mint</h3>
+          <p class="card-desc">Estética orgánica y natural con hojas verdes, gotas de rocío y piel fresca.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#0d4841;"></span>
+              <span class="color-dot" style="background:#2dd4bf;"></span>
+              <span class="color-dot" style="background:#f0fdf9;"></span>
+              <span class="color-dot" style="background:#132a26;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#4 • Balayage</span>
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Balayage Master Rubio Dorado" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Balayage Master & Gold</h3>
+          <p class="card-desc">Cabello con ondas doradas perfectas, balayage impecable y brillo de salón.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#b8860b;"></span>
+              <span class="color-dot" style="background:#d4af37;"></span>
+              <span class="color-dot" style="background:#fdfbf7;"></span>
+              <span class="color-dot" style="background:#1a1612;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#5 • Alisado</span>
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Alisado Orgánico Espejo Silk" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Alisado Orgánico Silk</h3>
+          <p class="card-desc">Melena morena lacia impecable, efecto espejo ultra-brillante y saludable.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#1c1917;"></span>
+              <span class="color-dot" style="background:#d58b97;"></span>
+              <span class="color-dot" style="background:#fbf8f5;"></span>
+              <span class="color-dot" style="background:#0f0e0e;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#6 • Estilismo (Activa)</span>
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Estilista en Acción y Tijeras" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Estilista en Acción & Tijeras</h3>
+          <p class="card-desc">Estilista profesional trabajando en el peinado o corte con enfoque artístico.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#5b3b8c;"></span>
+              <span class="color-dot" style="background:#d58b97;"></span>
+              <span class="color-dot" style="background:#faf9fc;"></span>
+              <span class="color-dot" style="background:#181528;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#7 • Makeup</span>
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Glam y Novias" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Makeup Glam & Novias VIP</h3>
+          <p class="card-desc">Maquillaje profesional de alta definición para eventos y novias con tonos nude y dorados.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#c2847a;"></span>
+              <span class="color-dot" style="background:#e8c2ba;"></span>
+              <span class="color-dot" style="background:#fdfaf9;"></span>
+              <span class="color-dot" style="background:#241816;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="image-card">
+        <div class="img-preview-box">
+          <span class="badge-number">#8 • Belora</span>
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" alt="Belora Skincare y Lavanda" />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">Belora Skincare & Lavanda</h3>
+          <p class="card-desc">Bodegón de frascos cosméticos premium con flores violetas y textura botánica.</p>
+          <div class="palette-box">
+            <span class="palette-label">Paleta sugerida</span>
+            <div class="color-dots">
+              <span class="color-dot" style="background:#5b3b8c;"></span>
+              <span class="color-dot" style="background:#805bb5;"></span>
+              <span class="color-dot" style="background:#f7f4fb;"></span>
+              <span class="color-dot" style="background:#1f1a29;"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

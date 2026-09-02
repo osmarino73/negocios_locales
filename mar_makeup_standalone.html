@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mar_makeup💕 | Centro de Estética & Maquillaje en Turbo, Antioquia</title>
+  <meta name="description" content="Mar_makeup💕 en Turbo, Antioquia. Centro de estética integral y maquillaje profesional: limpiezas faciales glow, diseño de cejas, pestañas pelo a pelo y estética avanzada.">
+  <meta name="keywords" content="centro de estetica turbo, maquillaje profesional turbo, spa facial turbo, cejas turbo, pestañas turbo, mar makeup turbo antioquia">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:title" content="Mar_makeup💕 | Centro de Estética & Maquillaje en Turbo">
+  <meta property="og:description" content="Realza tu belleza natural y revela tu mejor versión en Turbo, Antioquia. Tratamientos faciales avanzados, maquillaje social y diseño de mirada.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Mar_makeup💕">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20y=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Mar_makeup💕",
+    "image": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+573059342141",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Barrio Baltazar",
+      "addressLocality": "Turbo",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.0943539,
+      "longitude": -76.7259609
+    },
+    "url": "https://wa.me/573059342141",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y SISTEMA DE DISEÑO FORENSE ("NOVA MED SPA" Palette)
+       ========================================================================== */
+    :root {
+      /* Superficies Oscuras (Warm Espresso Obsidian) */
+      --bg-dark: #1b1918;
+      --bg-dark-surface: #24201e;
+      --bg-dark-elevated: #2d2825;
+      
+      /* Superficies Claras (Soft Cashmere Cream & Bone) */
+      --bg-light: #f6f3ee;
+      --bg-light-surface: #efeae1;
+      --bg-card-light: #ffffff;
+      
+      /* Color de Acento Warm Nude Taupe & Champán */
+      --color-accent: #c4a58b;
+      --color-accent-hover: #d4b79f;
+      --color-accent-dark: #8c6e56;
+      --color-accent-soft: rgba(196, 165, 139, 0.15);
+      
+      /* Gradientes Metálicos Nude */
+      --accent-gradient: linear-gradient(135deg, #d4b79f 0%, #c4a58b 50%, #ad8a6e 100%);
+      --accent-gradient-hover: linear-gradient(135deg, #e0c8b3 0%, #d4b79f 50%, #b8977c 100%);
+      
+      /* Colores de Texto */
+      --text-light: #fdfaf7;
+      --text-muted-dark: #c5beb6;
+      --text-dark: #1b1918;
+      --text-muted-light: #66615b;
+      
+      /* Bordes y Sombras */
+      --border-dark: rgba(196, 165, 139, 0.22);
+      --border-subtle-dark: rgba(255, 255, 255, 0.08);
+      --border-light: rgba(0, 0, 0, 0.07);
+      --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.12);
+      --shadow-dark-card: 0 10px 25px rgba(0, 0, 0, 0.4);
+      
+      /* Fuentes */
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 50px;
+      
+      --container-max: 1240px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-ui);
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       SMART HEADER & NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.35s ease, background 0.35s ease;
+    }
+
+    .header-sticky-wrapper.hide-header {
+      transform: translateY(-100%);
+    }
+
+    .site-header {
+      background: rgba(27, 25, 24, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle-dark);
+      padding: 18px 0;
+      transition: var(--transition);
+    }
+
+    .site-header.scrolled {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-dark);
+      background: rgba(27, 25, 24, 0.98);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--text-light);
+      line-height: 1.1;
+    }
+
+    .brand-title span {
+      color: var(--color-accent);
+    }
+
+    .brand-tagline {
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: var(--text-muted-dark);
+      position: relative;
+      padding: 4px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background: var(--color-accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--text-light);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-header-cta {
+      background: var(--accent-gradient);
+      color: var(--text-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 15px rgba(196, 165, 139, 0.25);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--accent-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(196, 165, 139, 0.35);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-dark);
+      color: var(--color-accent);
+      font-size: 1.25rem;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+       ========================================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 660px;
+      display: flex;
+      align-items: center;
+      background: var(--bg-dark);
+      overflow: hidden;
+      border-bottom: 1px solid var(--border-subtle-dark);
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.95;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 42%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.4) 15%, rgba(0, 0, 0, 1) 42%);
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #1b1918 0%, #1b1918 28%, rgba(27, 25, 24, 0.85) 42%, rgba(27, 25, 24, 0) 55%, transparent 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding: 70px 0;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: var(--color-accent);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.06;
+      color: var(--text-light);
+      margin-bottom: 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title span {
+      display: block;
+      color: var(--color-accent);
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      font-size: 1.02rem;
+      font-weight: 300;
+      color: var(--text-muted-dark);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .hero-subtitle strong {
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .btn-primary {
+      background: var(--accent-gradient);
+      color: var(--text-dark);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 14px 32px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 8px 25px rgba(196, 165, 139, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(196, 165, 139, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(36, 32, 30, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text-light);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid var(--border-dark);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(196, 165, 139, 0.12);
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    /* Fila de Estadísticas / Credenciales */
+    .hero-stats-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      border-top: 1px solid var(--border-subtle-dark);
+      padding-top: 24px;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      color: var(--text-muted-dark);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS (5 Sellos de Confianza)
+       ========================================================================== */
+    .pillars-section {
+      background: var(--bg-dark-surface);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-subtle-dark);
+      padding: 26px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 12px;
+      border-right: 1px solid var(--border-subtle-dark);
+    }
+
+    .pillar-item:last-child {
+      border-right: none;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-accent-soft);
+      border: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .pillar-item:hover .pillar-icon {
+      background: var(--color-accent);
+      color: var(--text-dark);
+      transform: scale(1.08);
+    }
+
+    .pillar-text h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    .pillar-text p {
+      font-size: 0.75rem;
+      color: var(--text-muted-dark);
+    }
+
+    /* ==========================================================================
+       SECCIÓN CATÁLOGO: NUESTROS SERVICIOS (#servicios) — ESTÁNDAR CRISMAR
+       ========================================================================== */
+    .services-section-light {
+      padding: 90px 0;
+      background-color: var(--bg-cream-soft);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-eyebrow-accent {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-accent-dark);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-title-dark {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-desc-dark {
+      font-size: 0.95rem;
+      color: var(--text-muted-light);
+      font-weight: 400;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card-light {
+      background: var(--bg-card-light);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .service-card-light:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-accent);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .service-card-light:hover .service-img-wrapper img {
+      transform: scale(1.08);
+    }
+
+    .service-body {
+      padding: 22px 16px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .service-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .service-badges-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .service-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-muted-light);
+      background: rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border-light);
+      padding: 3px 12px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.3px;
+    }
+
+    .service-badge-pill i {
+      color: var(--color-accent-dark);
+      font-size: 0.7rem;
+    }
+
+    .btn-card-book {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--text-dark);
+      color: var(--text-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      padding: 10px 14px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .btn-card-book:hover {
+      background: var(--color-accent-dark);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(196, 165, 139, 0.35);
+    }
+
+    /* ==========================================================================
+       SECCIÓN OFICIAL: NUESTROS PROFESIONALES (#nosotros) — ESTÁNDAR CRISMAR
+       ========================================================================== */
+    .specialists-section-dark {
+      background: var(--bg-dark);
+      padding: 90px 0;
+      border-top: 1px solid var(--border-subtle-dark);
+    }
+
+    .section-title-light {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 600;
+      color: var(--text-light);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-desc-light {
+      font-size: 0.95rem;
+      color: var(--text-muted-dark);
+      font-weight: 300;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 32px 20px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-dark-card);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent-hover);
+      box-shadow: var(--shadow-gold-accent);
+    }
+
+    .team-photo-box {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--color-accent);
+      box-shadow: 0 6px 18px rgba(196, 165, 139, 0.25);
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--accent-gradient);
+      color: var(--text-dark);
+      font-size: 9px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 8px;
+      min-height: 38px;
+    }
+
+    .team-rating {
+      font-size: 0.85rem;
+      color: #f59e0b;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .btn-team-book {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--color-accent);
+      border: 1.5px solid var(--color-accent);
+      padding: 8px 22px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      background: transparent;
+      width: 100%;
+    }
+
+    .btn-team-book:hover {
+      background: var(--accent-gradient);
+      color: var(--text-dark);
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(196, 165, 139, 0.35);
+    }
+
+    /* ==========================================================================
+       MAPA & CONTACTO GEORREFERENCIADO (#ubicacion)
+       ========================================================================== */
+    .location-section {
+      background: var(--bg-dark-surface);
+      padding: 90px 0;
+      border-top: 1px solid var(--border-subtle-dark);
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--bg-dark);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark-card);
+    }
+
+    .map-info-panel {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .map-info-panel h3 {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      color: var(--text-light);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .map-info-panel p {
+      font-size: 0.9rem;
+      color: var(--text-muted-dark);
+      margin-bottom: 28px;
+    }
+
+    .contact-details-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .contact-item-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--color-accent-soft);
+      border: 1px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-text h5 {
+      font-size: 0.85rem;
+      color: var(--text-muted-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+
+    .contact-item-text p, 
+    .contact-item-text a {
+      font-size: 0.92rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .contact-item-text a:hover {
+      color: var(--color-accent-hover);
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-map-action {
+      background: var(--accent-gradient);
+      color: var(--text-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .btn-map-action:hover {
+      background: var(--accent-gradient-hover);
+    }
+
+    .btn-map-secondary {
+      background: transparent;
+      border: 1px solid var(--border-dark);
+      color: var(--color-accent);
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .btn-map-secondary:hover {
+      background: rgba(196, 165, 139, 0.1);
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      min-height: 420px;
+      width: 100%;
+      background: #111;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      min-height: 420px;
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background: #141211;
+      border-top: 1px solid var(--border-dark);
+      padding: 70px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p {
+      font-size: 0.86rem;
+      color: var(--text-muted-dark);
+      margin: 16px 0 20px;
+      line-height: 1.6;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-subtle-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted-dark);
+      font-size: 0.9rem;
+    }
+
+    .social-btn:hover {
+      border-color: var(--border-dark);
+      color: var(--color-accent);
+      transform: translateY(-3px);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28px;
+      height: 1px;
+      background: var(--color-accent);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--text-muted-dark);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent-hover);
+      padding-left: 4px;
+    }
+
+    /* Módulo de Reserva en Footer con Botón Conciso "Agendar" */
+    .footer-reserve-box {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .footer-reserve-box h5 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-accent);
+      margin-bottom: 6px;
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.8rem;
+      color: var(--text-muted-dark);
+      margin-bottom: 14px;
+    }
+
+    .btn-footer-reserve {
+      background: var(--accent-gradient);
+      color: var(--text-dark);
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--accent-gradient-hover);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-subtle-dark);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted-dark);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.85rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    .whatsapp-float .tooltip {
+      position: absolute;
+      right: 68px;
+      background: #1b1918;
+      border: 1px solid var(--border-dark);
+      color: var(--color-accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover .tooltip {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (Media Queries)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .pillar-item:nth-child(3) {
+        border-right: none;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-toggle,
+      .nav-menu {
+        display: none !important;
+      }
+
+      .brand-title {
+        font-size: 1.35rem;
+      }
+
+      .brand-tagline {
+        font-size: 0.62rem;
+      }
+
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      /* Hero Móvil Calibrado (+20% Altura & Centrado) */
+      .hero-fullwidth-section {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        min-height: 720px !important;
+        padding: 130px 16px 36px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.92;
+        -webkit-mask-image: none;
+        mask-image: none;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(180deg, rgba(27, 25, 24, 0.05) 0%, rgba(27, 25, 24, 0.25) 36%, rgba(27, 25, 24, 0.85) 62%, rgba(27, 25, 24, 0.98) 88%, #1b1918 100%);
+      }
+
+      .hero-content {
+        padding: 0;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 380px;
+        width: 100%;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.86rem;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.86rem;
+      }
+
+      .hero-stats-row {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .stat-number {
+        font-size: 1.45rem;
+      }
+
+      .stat-label {
+        font-size: 0.65rem;
+      }
+
+      /* Pilares en Móvil: Carrusel Horizontal con Scroll Snap */
+      .pillars-section-dark {
+        padding: 16px 0;
+        overflow: hidden;
+      }
+
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 16px 8px;
+        margin: 0 -16px;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 auto;
+        min-width: 220px;
+        max-width: 250px;
+        scroll-snap-align: start;
+        background: var(--bg-dark-surface);
+        border: 1px solid var(--border-dark);
+        border-radius: var(--radius-md);
+        padding: 12px 14px;
+        border-right: 1px solid var(--border-dark);
+        border-bottom: none;
+      }
+
+      .pillar-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+      }
+
+      .pillar-text h4 {
+        font-size: 0.82rem;
+        white-space: nowrap;
+      }
+
+      .pillar-text p {
+        font-size: 0.68rem;
+        white-space: nowrap;
+      }
+
+      /* REGLA MANDATORIA: SERVICIOS Y EQUIPO EN 2 COLUMNAS EN MÓVIL (<768px) */
+      .services-grid,
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .service-body,
+      .team-card {
+        padding: 14px 10px 12px;
+      }
+
+      .service-img-wrapper {
+        height: 120px;
+      }
+
+      .service-title,
+      .team-name {
+        font-size: 0.95rem;
+        line-height: 1.2;
+      }
+
+      .service-badge-pill {
+        font-size: 0.65rem;
+        padding: 2px 7px;
+      }
+
+      .btn-card-book,
+      .btn-team-book {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.72rem;
+        padding: 7px 8px;
+        white-space: nowrap;
+      }
+
+      .team-photo-box {
+        width: 100%;
+        max-width: 84px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 auto 8px;
+      }
+
+      .team-avatar {
+        width: 100%;
+        height: 100%;
+      }
+
+      .team-role {
+        font-size: 0.7rem;
+        min-height: 2.4em;
+        line-height: 1.2;
+        margin-bottom: 4px;
+      }
+
+      .team-rating {
+        font-size: 0.72rem;
+        margin-bottom: 8px;
+      }
+
+      /* Mapa Responsive en Móvil */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-dark);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .whatsapp-float {
+        bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 20px !important;
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 1.85rem !important;
+        z-index: 99999 !important;
+      }
+
+      .whatsapp-float .tooltip {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <header class="header-sticky-wrapper" id="stickyHeader">
+    <div class="site-header">
+      <div class="container nav-container">
+        <a href="#inicio" class="brand-logo" aria-label="Inicio Mar_makeup💕">
+          <span class="brand-title">Mar_makeup💕</span>
+          <span class="brand-tagline">Centro de Estética • Turbo</span>
+        </a>
+
+        <nav>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#inicio" class="nav-link">Inicio</a></li>
+            <li><a href="#servicios" class="nav-link">Servicios</a></li>
+            <li><a href="#nosotros" class="nav-link">Profesionales</a></li>
+            <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+            <i class="fa-solid fa-calendar-check"></i> Agendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+         ========================================================================== -->
+    <section class="hero-fullwidth-section" id="inicio">
+      <!-- Fotografía de Modelo a la Derecha -->
+      <div class="hero-bg-cover">
+        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=1920&q=85" alt="Modelo de Belleza y Estética Mar_makeup💕" class="hero-bg-img" loading="eager" width="1920" height="1080">
+      </div>
+
+      <!-- Overlay Máscara Gradiente -->
+      <div class="hero-bg-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text-block">
+          <span class="hero-eyebrow">Centro de Estética • Turbo</span>
+
+          <h1 class="hero-title">
+            Realza Tu Belleza
+            <span>Maquillaje Profesional & Cuidado Facial</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Tu centro de estética de confianza en <strong>Barrio Baltazar, Turbo</strong>. Maquillaje para toda ocasión, limpiezas faciales profundas, diseño de cejas y pestañas para resaltar lo mejor de ti.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20quisiera%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-calendar-days"></i> Agendar Cita
+            </a>
+            <a href="#servicios" class="btn-secondary">
+              Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Fila de Estadísticas de Confianza -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">+8 Años</span>
+              <span class="stat-label">De Experiencia</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">+1,500</span>
+              <span class="stat-label">Clientas Felices</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4.8 ★</span>
+              <span class="stat-label">En Google Maps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BARRA DE PILARES / GARANTÍAS (5 Sellos)
+         ========================================================================== -->
+    <section class="pillars-section" aria-label="Nuestras Garantías">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <div class="pillar-text">
+              <h4>Esteticistas Expertas</h4>
+              <p>Maquillaje HD & Cosmetología</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="pillar-text">
+              <h4>Productos Prémium</h4>
+              <p>Cosmética hipoalergénica</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-clipboard-user"></i></div>
+            <div class="pillar-text">
+              <h4>Diagnóstico Facial</h4>
+              <p>Atención personalizada</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-shield-heart"></i></div>
+            <div class="pillar-text">
+              <h4>Higiene & Seguridad</h4>
+              <p>Protocolos de bioseguridad</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
+            <div class="pillar-text">
+              <h4>Satisfacción 100%</h4>
+              <p>Resultados comprobados</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATÁLOGO DE SERVICIOS: NUESTROS SERVICIOS (#servicios) — FONDO CASHMERE
+         ========================================================================== -->
+    <section class="services-section-light" id="servicios">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Cuidado Especializado</span>
+          <h2 class="section-title-dark">Nuestros Servicios</h2>
+          <p class="section-desc-dark">Protocolos estéticos diseñados para revitalizar tu piel, armonizar tu mirada y brindarte un look radiante para cada ocasión.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Maquillaje Glam -->
+          <article class="service-card-light">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Social & Glam VIP" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Maquillaje Glam VIP</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 75 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Piel Blindada & Pestañas</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $75.000 COP</span>
+              </div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20el%20servicio%20de%20Maquillaje%20Social%20%26%20Glam%20VIP." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 2: Limpieza Facial Glow -->
+          <article class="service-card-light">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Limpieza Facial Profunda & Glow" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Limpieza Facial Profunda</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 60 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-sparkles"></i> Hidro-Peel Ultrasónico</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $50.000 COP</span>
+              </div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20el%20servicio%20de%20Limpieza%20Facial%20Profunda." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 3: Cejas & Henna -->
+          <article class="service-card-light">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Diseño, Henna & Laminado de Cejas" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Diseño & Laminado Cejas</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 45 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-eye"></i> Visagismo & Pigmento Orgánico</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $35.000 COP</span>
+              </div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20el%20servicio%20de%20Dise%C3%B1o%20%26%20Laminado%20de%20Cejas." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 4: Pestañas Pelo a Pelo -->
+          <article class="service-card-light">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80" alt="Pestañas Pelo a Pelo & Lifting" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Pestañas Pelo a Pelo</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 90 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-feather"></i> Volumen Natural & Curvatura</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $60.000 COP</span>
+              </div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20el%20servicio%20de%20Pesta%C3%B1as%20Pelo%20a%20Pelo." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 5: Terapia Anti-Acné -->
+          <article class="service-card-light">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80" alt="Terapia Anti-Acné & Control Sebo" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Terapia Anti-Acné</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 55 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-shield-virus"></i> Fototerapia LED Azul</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $55.000 COP</span>
+              </div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20el%20servicio%20de%20Terapia%20Anti-Acn%C3%A9." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Servicio 6: Ritual Spa Facial -->
+          <article class="service-card-light">
+            <div class="service-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Ritual Spa Facial & Masaje Craneal" loading="lazy" width="800" height="800">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Ritual Spa Facial</h3>
+              <div class="service-badges-wrap">
+                <span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 50 Mins</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-spa"></i> Cuarzos Jade & Alginatos</span>
+                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $45.000 COP</span>
+              </div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20el%20servicio%20de%20Ritual%20Spa%20Facial." target="_blank" rel="noopener noreferrer" class="btn-card-book">
+                <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN OFICIAL: NUESTROS PROFESIONALES (#nosotros) — ESTÁNDAR CRISMAR
+         ========================================================================== -->
+    <section class="specialists-section-dark" id="nosotros">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Equipo Profesional</span>
+          <h2 class="section-title-light">Nuestros Profesionales</h2>
+          <p class="section-desc-light">Especialistas apasionadas con trayectoria certificada en estética facial, visagismo y maquillaje de alta costura.</p>
+        </div>
+
+        <div class="team-grid" id="equipo">
+          <!-- Profesional 1: Mar Ramos -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Mar Ramos" class="team-avatar">
+              <span class="team-badge">Master MUA</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Mar Ramos</h3>
+              <span class="team-role">Directora & Master Makeup Artist</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20una%20cita%20con%20Mar%20Ramos." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+
+          <!-- Profesional 2: Camila Suárez -->
+          <article class="team-card">
+            <div class="team-photo-box">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Camila Suárez" class="team-avatar">
+              <span class="team-badge">Cosmiatra Pro</span>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Camila Suárez</h3>
+              <span class="team-role">Cosmiatra & Especialista en Mirada</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (4.8)</div>
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20una%20cita%20con%20Camila%20Su%C3%A1rez." target="_blank" rel="noopener noreferrer" class="btn-team-book">
+                Agendar Cita
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MAPA & CONTACTO GEORREFERENCIADO (#ubicacion)
+         ========================================================================== -->
+    <section class="location-section" id="ubicacion">
+      <div class="container">
+        <div class="map-showcase-card">
+          <!-- Panel Informativo de Contacto -->
+          <div class="map-info-panel">
+            <div>
+              <span class="section-eyebrow">Encuéntranos</span>
+              <h3>Nuestra Ubicación</h3>
+              <p>Te esperamos en nuestro centro de estética en Barrio Baltazar, Turbo, para brindarte la mejor experiencia de cuidado y belleza.</p>
+
+              <ul class="contact-details-list">
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+                  <div class="contact-item-text">
+                    <h5>Dirección</h5>
+                    <p>Barrio Baltazar, Turbo, Antioquia, Colombia</p>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+                  <div class="contact-item-text">
+                    <h5>Teléfono / WhatsApp</h5>
+                    <a href="tel:+573059342141">(+57) 305 934 2141</a>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-item-icon"><i class="fa-solid fa-clock"></i></div>
+                  <div class="contact-item-text">
+                    <h5>Horario de Atención</h5>
+                    <p>Lunes a Sábado: 8:00 AM - 6:30 PM<br>Domingos: Con Cita Previa</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="map-actions">
+              <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-map-action">
+                <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+              </a>
+              <a href="https://www.google.com/maps/place/Mar_makeup%F0%9F%92%95/@8.1160466,-76.751257,13.75z/data=!4m10!1m2!2m1!1sssalones+de+belleza+en+turbo+antioquia!3m6!1s0x8e506505259c10e7:0xdd4a99aa5f4f70c7!8m2!3d8.0943539!4d-76.7259609!15sCiVzYWxvbmVzIGRlIGJlbGxlemEgZW4gdHVyYm8gYW50aW9xdWlhkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11vyhxh8nm" target="_blank" rel="noopener noreferrer" class="btn-map-secondary">
+                <i class="fa-solid fa-diamond-turn-right"></i> Abrir en Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Iframe Georreferenciado Exacto -->
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Mar_makeup,+Barrio+Baltazar,+Turbo,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              loading="lazy" 
+              title="Mapa de Ubicación de Mar_makeup en Turbo"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca & Redes -->
+        <div class="footer-brand">
+          <span class="brand-title">Mar_makeup💕</span>
+          <span class="brand-tagline">Centro de Estética • Turbo</span>
+          <p>Tu espacio de belleza integral, cuidado facial y maquillaje profesional en Turbo. Procedimientos de alta gama con atención cálida y personalizada.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/573059342141" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nuestros Profesionales</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios Principales -->
+        <div class="footer-col">
+          <h4>Tratamientos</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Maquillaje Social & Glam</a></li>
+            <li><a href="#servicios">Limpieza Facial Profunda</a></li>
+            <li><a href="#servicios">Diseño & Laminado Cejas</a></li>
+            <li><a href="#servicios">Pestañas Pelo a Pelo</a></li>
+            <li><a href="#servicios">Terapia Anti-Acné</a></li>
+            <li><a href="#servicios">Ritual Spa Facial</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Reserva Rápida con Botón "Agendar" -->
+        <div class="footer-col">
+          <h4>Reserva Tu Cita</h4>
+          <div class="footer-reserve-box">
+            <h5>Atención Directa</h5>
+            <p>Reserva tu turno de manera ágil y personalizada por WhatsApp.</p>
+            <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20deseo%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+              <i class="fa-solid fa-calendar-check"></i> Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mar_makeup💕. Todos los derechos reservados. Barrio Baltazar, Turbo, Antioquia, Colombia.</p>
+        <p>Centro de Estética & Maquillaje • Calificación 4.8 ★</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== -->
+  <a href="https://wa.me/573059342141?text=Hola%20Mar_makeup%F0%9F%92%95%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip">¿Deseas agendar? Escríbenos</span>
+  </a>
+
+  <!-- ==========================================================================
+       SCRIPTS INTERACTIVOS (Smart Header & Menú Móvil)
+       ========================================================================== -->
+  <script>
+    // Smart Header (Auto-hide on scroll down, show on scroll up)
+    let lastScrollY = window.scrollY;
+    const headerWrapper = document.getElementById('stickyHeader');
+    const headerEl = headerWrapper.querySelector('.site-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      // Background blur upgrade on scroll
+      if (currentScrollY > 60) {
+        headerEl.classList.add('scrolled');
+      } else {
+        headerEl.classList.remove('scrolled');
+      }
+
+      // Hide / Show header logic
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        headerWrapper.classList.add('hide-header');
+      } else {
+        headerWrapper.classList.remove('hide-header');
+      }
+      
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+
+    // Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
+    const pillarsGrid = document.querySelector('.pillars-grid');
+    if (pillarsGrid) {
+      let scrollInterval = null;
+      let isUserInteracting = false;
+      let resumeTimeout = null;
+
+      const getScrollStep = () => {
+        const firstItem = pillarsGrid.querySelector('.pillar-item');
+        if (!firstItem) return 240;
+        const gap = parseInt(window.getComputedStyle(pillarsGrid).gap) || 12;
+        return firstItem.offsetWidth + gap;
+      };
+
+      const autoScrollStep = () => {
+        if (isUserInteracting || window.innerWidth > 768) return;
+        const maxScroll = pillarsGrid.scrollWidth - pillarsGrid.clientWidth;
+        const step = getScrollStep();
+        
+        if (pillarsGrid.scrollLeft + step >= maxScroll - 10) {
+          pillarsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          pillarsGrid.scrollBy({ left: step, behavior: 'smooth' });
+        }
+      };
+
+      const startAutoScroll = () => {
+        if (!scrollInterval) {
+          scrollInterval = setInterval(autoScrollStep, 3000);
+        }
+      };
+
+      const pauseOnTouch = () => {
+        isUserInteracting = true;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+          isUserInteracting = false;
+        }, 4000);
+      };
+
+      pillarsGrid.addEventListener('touchstart', pauseOnTouch, { passive: true });
+      pillarsGrid.addEventListener('touchmove', pauseOnTouch, { passive: true });
+      pillarsGrid.addEventListener('mousedown', pauseOnTouch);
+
+      startAutoScroll();
+    }
+  </script>
+</body>
+</html>

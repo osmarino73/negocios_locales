@@ -1,0 +1,102 @@
+{
+  "negocio": {
+    "nombre": "CENTRO DE DESARROLLO INFANTIL CHIQUITIN",
+    "rubro": "Guardería & Centro de Estimulación Temprana",
+    "categoria": "ChildCare",
+    "eslogan": "El segundo hogar en Apartadó donde tus pequeños aprenden, juegan y crecen con amor, seguridad y nutrición integral",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "+57 300 000 0000",
+      "whatsapp": {
+        "numero": "573000000000",
+        "link": "https://wa.me/573000000000?text=Hola%20CENTRO%20DE%20DESARROLLO%20INFANTIL%20CHIQUITIN%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20matr%C3%ADculas%20y%20jornadas."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 101 #97-60, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/CENTRO+DE+DESARROLLO+INFANTIL+CHIQUITIN/@7.8852589,-76.6294003,16z"
+    },
+    "horario_atencion": "Lunes a Viernes: 6:30 AM - 6:00 PM | Sábados: Talleres de Estimulación 8:00 AM - 12:00 PM",
+    "sitio_web": "https://www.instagram.com/javenturasmagicas",
+    "stats": [
+      { "num": "100%", "label": "Amor & Seguridad 24/7" },
+      { "num": "4 Meses a 5 Años", "label": "Edades de Atención" },
+      { "num": "Bilingüe", "label": "Inmersión & Lúdica" },
+      { "num": "5.0 ★", "label": "Calificación de Padres" }
+    ],
+    "servicios": [
+      {
+        "id": "sala-cuna",
+        "nombre": "Sala Cuna & Estimulación Temprana",
+        "edades": "4 meses a 18 meses",
+        "desc": "Espacio seguro y acogedor con estimulación multisensorial, masaje infantil y desarrollo psicomotriz guiado por especialistas.",
+        "icono": "fa-baby",
+        "color": "#ff4757"
+      },
+      {
+        "id": "parvulos-prejardin",
+        "nombre": "Párvulos & Pre-Jardín Lúdico",
+        "edades": "2 a 3 años",
+        "desc": "Desarrollo del lenguaje, socialización positiva, iniciación bilingüe mediante canciones y juego libre estructurado.",
+        "icono": "fa-shapes",
+        "color": "#2ed573"
+      },
+      {
+        "id": "jardin-transicion",
+        "nombre": "Jardín & Transición Bilingüe",
+        "edades": "4 a 5 años",
+        "desc": "Preparación integral para la escuela con lectoescritura divertida, pensamiento lógico-matemático y artes plásticas.",
+        "icono": "fa-graduation-cap",
+        "color": "#1e90ff"
+      },
+      {
+        "id": "comedor-nutricional",
+        "nombre": "Comedor & Nutrición Pediátrica",
+        "edades": "Todas las edades",
+        "desc": "Alimentación balanceada, meriendas saludables y almuerzo supervisado con ingredientes frescos y control nutricional.",
+        "icono": "fa-apple-whole",
+        "color": "#ffa502"
+      },
+      {
+        "id": "tardes-recreativas",
+        "nombre": "Jornada Extendida & Tarde Creativa",
+        "edades": "Flexibilidad horaria",
+        "desc": "Acompañamiento en tareas, talleres de arte, música, psicomotricidad y juego al aire libre para padres que trabajan.",
+        "icono": "fa-palette",
+        "color": "#9b59b6"
+      }
+    ],
+    "beneficios": [
+      { "titulo": "Personal Certificado", "desc": "Licenciadas en pedagogía infantil con vocación y amor.", "icono": "fa-hands-holding-child", "color": "#a855f7" },
+      { "titulo": "Instalaciones Seguras", "desc": "Espacios acolchados, cámaras y protocolos estrictos.", "icono": "fa-shield-halved", "color": "#22c55e" },
+      { "titulo": "Actividades por Edad", "desc": "Currículo pedagógico adaptado a cada etapa de crecimiento.", "icono": "fa-baseball", "color": "#0ea5e9" },
+      { "titulo": "Inmersión en Valores", "desc": "Crianza positiva, empatía, respeto y hábitos saludables.", "icono": "fa-sun", "color": "#eab308" }
+    ],
+    "testimonios": [
+      {
+        "nombre": "Jonathan R.",
+        "parentesco": "Papá de Sofía (3 años)",
+        "texto": "¡Chiquitín es como nuestra segunda familia! La tranquilidad de ir a trabajar sabiendo que mi hija está feliz, segura y bien alimentada no tiene precio.",
+        "bg": "#a3e635",
+        "color": "#1a2e05"
+      },
+      {
+        "nombre": "Rachel T.",
+        "parentesco": "Mamá de Mateo (2 años)",
+        "texto": "El avance en el lenguaje y la motricidad de mi hijo ha sido impresionante. Las docentes son súper amorosas y las instalaciones en Apartadó son hermosas.",
+        "bg": "#f472b6",
+        "color": "#4a042e"
+      },
+      {
+        "nombre": "Kathryn W.",
+        "parentesco": "Mamá de Samuel (4 años)",
+        "texto": "Amamos las actividades lúdicas y la dedicación personalizada. Chiquitín es sin duda el mejor centro de desarrollo infantil de la región de Urabá.",
+        "bg": "#38bdf8",
+        "color": "#082f49"
+      }
+    ]
+  }
+}
