@@ -1,39 +1,18 @@
-# Agentes e Instrucciones de Desarrollo: Rizos Felices Urabá
+# Instrucciones para Agentes de IA: Rizos Felices Urabá
 
-Bienvenido al proyecto web de **Rizos Felices Urabá — Especialistas en Cabello Rizado, Ondulado y Afro** en **Apartadó, Antioquia, Colombia**.
+Este directorio contiene la landing page oficial y archivos de contexto para **Rizos Felices Urabá**, salón especializado en cabello rizado, ondulado y afro en Apartadó, Antioquia.
 
-## 📌 Resumen del Proyecto
+## 🎯 Secciones Oficiales Implementadas
+1. `#inicio`: Hero Full-Width Bleed con modelo de rizos definidos (`Woman_smiling_with_styled_hair_202609021630.webp`), titulares editoriales y botón de agendamiento.
+2. `Barra de Garantías`: 5 sellos de confianza con carrusel horizontal táctil (*Scroll Snap*) en móviles.
+3. `#servicios`: Grid de 6 servicios (6 columnas en escritorio, 2 columnas en móvil) con fotos 1:1, píldoras de duración y precio, y botón «Agendar Cita».
+4. `#nosotros`: Bloque editorial de experiencia con foto de salón, 4 métricas de autoridad y bloque de 4 especialistas (4 columnas en escritorio, 2 columnas en móvil) con botón a WhatsApp.
+5. `#ubicacion`: Panel con dirección, horarios, teléfono y Google Maps embebido con fórmula georreferenciada (`z=16`).
+6. `Footer`: Navegación, contacto, redes y módulo con botón conciso **«Agendar»**.
 
-- **Negocio**: Rizos Felices Urabá
-- **Rubro**: Centro de Estética & Salón Especializado en Rizos, Ondas y Afro
-- **Ubicación**: Cl. 100 #108-37, Apartadó, Antioquia, Colombia
-- **Contacto Principal**: (+57) 310 726 7538 | WhatsApp: +573107267538
-- **Estilo Visual**: Soft Porcelain White (`#ffffff`), Warm Blush Ivory (`#fff8f8`), Coral Rose Blush (`#e87a82`) y Luxury Slate (`#19181a`) extraído de la referencia "GLOW & GRACE".
-- **Archivos Clave**:
-  - `DATOS_NEGOCIO.json`: Datos oficiales y estructurados del negocio.
-  - `FICHA_DISENO.md`: Sistema de diseño, paleta de colores y tipografías.
-  - `index.html`: Sitio web standalone 100% autónomo y optimizado para SEO Local.
-
----
-
-## 🎯 Reglas Mandatorias de Estructura y Código
-
-1. **Estructura Oficial de Secciones**:
-   - `#inicio`: Hero full-width bleed con foto nítida a la derecha y máscara máx. al 50%.
-   - Barra de Pilares de Confianza: 5 sellos de garantía.
-   - `#servicios`: Catálogo de servicios en 2 columnas en móvil (`repeat(2, 1fr)`), fotos 1:1, precios y botón `Agendar`.
-   - `#nosotros`: Sección dedicada a **Nuestros Profesionales** con estructura estándar (avatar circular centrado, badge flotante de nivel, estrellas, rol y botón de agendamiento en 2 columnas en móvil).
-   - `#ubicacion`: Mapa interactivo de Google Maps embebido (`z=16`) y panel de contacto.
-   - Footer: Enlaces, redes, horarios y módulo con botón conciso **«Agendar»**.
-
-2. **Smart Header**:
-   - Navbar inteligente con auto-hide al bajar y reaparición instantánea al subir.
-   - Botón de cabecera debe ser **«Agendar»** (`.btn-header-cta`).
-
-3. **Sin Action Dock Móvil**:
-   - Se mantiene exclusivamente el botón flotante de WhatsApp interactivo.
-
-4. **Standalone y Cero Dependencias Locales**:
-   - Todo el CSS embebido en `<style>`.
-   - Imágenes en CDN WebP optimizado de alta velocidad.
-   - Metadatos Schema.org JSON-LD y OpenGraph completos.
+## 📱 Reglas Críticas
+- En móvil, el hero debe mantener `min-height: 720px !important;`.
+- Servicios y Profesionales deben renderizarse en **2 columnas en móvil**.
+- Botón flotante de WhatsApp con soporte de `safe-area-inset-bottom`.
+- Logotipo puramente tipográfico, sin emojis ni íconos decorativos.
+- Botones concisos con texto **«Agendar»**.

@@ -1,54 +1,32 @@
-# Ficha de Diseño: Rizos Felices Urabá (Edición Lujo Dark Obsidian & Oro Miel)
+# Ficha de Diseño Visual: Rizos Felices Urabá
 
-Esta ficha documenta la clonación forense de estilo a partir de la nueva imagen de referencia visual de alta gama (*Tabbsum Shah Beauty*), adaptada al negocio local **Rizos Felices Urabá** en Apartadó, Antioquia.
+## 🎨 Tríada de Identidad Visual
+* **Paleta de Colores**:
+  * Fondo Oscuro Primario: `#120f0c` (Obsidiana / Chocolate Profundo)
+  * Fondo Superficie Oscura: `#1c1712` (Superficie Header / Cards)
+  * Fondo Claro: `#faf6f0` (Crema Marfil Cálido)
+  * Fondo Superficie Clara: `#ffffff`
+  * Acento Primario: `#d98e58` (Ámbar Terracota / Golden Honey)
+  * Acento Hover: `#c27a44`
+  * Acento Suave: `rgba(217, 142, 88, 0.15)`
+  * Bordes Finos: `rgba(217, 142, 88, 0.35)`
+  * Texto Claro: `#fcfaf7`
+  * Texto Oscuro: `#231e1a`
 
----
+* **Tipografía**:
+  * Titulares Display: `'DM Serif Display', Georgia, serif`
+  * Frase Caligráfica / Signature Script: `'Alex Brush', cursive`
+  * Cuerpo & UI: `'Plus Jakarta Sans', sans-serif`
 
-## 🎨 Tríada Visual & Paleta de Colores Forense
+## 📸 Fotografías & Assets
+* **Hero Principal**: `../assets/heroes/peinados/Woman_smiling_with_styled_hair_202609021630.webp` (WebP ~62 KB, modelo con rizos y ondas doradas radiantes, blusa negra de terciopelo y fondo bokeh cálido)
+* **Ambiente Sobre Nosotros**: `https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80` (Tocadores y estaciones de peinado de salón)
+* **Servicios (1:1)**: Grid de 6 servicios especializados con fotografías cuadradas en alta definición y píldoras esenciales de duración y precio.
 
-| Variable CSS | Código HEX / HSL | Uso Principal |
-| :--- | :--- | :--- |
-| `--bg-base` | `#0d0f12` | Fondo principal oscuro profundo / ébano |
-| `--bg-surface` | `#14171c` | Fondo de tarjetas, paneles y contenedores |
-| `--bg-surface-elevated` | `#1a1e24` | Tarjetas hover y elementos destacados |
-| `--color-gold` | `#dfb77c` | Oro miel cálido de acento principal |
-| `--color-gold-light` | `#f5d59f` | Oro champagne para brillos y titulares |
-| `--color-gold-dark` | `#b8863b` | Oro profundo para sombras y bordes activos |
-| `--border-gold` | `rgba(223, 183, 124, 0.22)` | Bordes sutiles de lujo |
-| `--border-gold-strong`| `rgba(223, 183, 124, 0.55)` | Bordes activos y hover |
-| `--text-primary` | `#fbf9f5` | Texto principal blanco marfil |
-| `--text-secondary` | `#c4c0b8` | Subtítulos y descripciones |
-| `--text-muted` | `#8d8982` | Etiquetas y metadatos secundarios |
-| `--gold-gradient` | `linear-gradient(135deg, #f5d59f 0%, #dfb77c 50%, #c18f4a 100%)` | Botones principales y badges VIP |
-| `--gold-gradient-hover` | `linear-gradient(135deg, #ffffff 0%, #f5d59f 50%, #dfb77c 100%)` | Hover en botones principales |
-
----
-
-## 🔤 Tipografía Forense
-
-1. **Titulares Display & Secciones**:
-   - Familia: `'Playfair Display', serif`
-   - Pesos: `500`, `600`, `700`, `italic`
-   - Estilo de firma / Script: `'Playfair Display', italic` para frases de autor y acentos *Glow Beyond Beauty* ✨.
-
-2. **Cuerpo, UI & Botones**:
-   - Familia: `'Plus Jakarta Sans', sans-serif`
-   - Pesos: `400` (Regular), `500` (Medium), `600` (SemiBold), `700` (Bold), `800` (ExtraBold).
-   - Letter spacing: `0.5px - 2px` en mayúsculas y logotipos.
-
----
-
-## 📐 Estructura de Secciones Oficiales
-
-1. **Top Bar Promocional**: Franja superior degradada en oro cálido.
-2. **Smart Header / Navbar Inteligente**: Logotipo en Playfair con tracking amplio y botón conciso **«Agendar»**.
-3. **`#inicio` (Hero Full-Width Bleed)**:
-   - Portada inmersiva en ébano oscuro con modelo a la derecha.
-   - Titular: *Rizos Radiantes & Cuidados de Autor ✨*.
-   - Botón primario dorado + botón secundario translúcido con borde dorado.
-   - Altura: Desktop `min-height: 640px;` | Móvil `min-height: 720px !important;`.
-4. **Barra de Pilares / Garantías**: Franja de 5 sellos con íconos estilizados en oro.
-5. **`#servicios` (Catálogo de Servicios)**: Grid Crismar de 6 servicios con pastillas de datos (`.service-badge-pill`) y botón directo a WhatsApp (2 columnas en móvil).
-6. **`#nosotros` (Nuestros Profesionales)**: Especialistas certificadas en método curly con avatares circulares 50%, marco de oro y botón a WhatsApp (2 columnas en móvil).
-7. **`#ubicacion` (Mapa & Contacto)**: Panel de Apartadó con Google Maps embebido (`z=16`).
-8. **Footer Principal de Lujo**: Módulo de reserva con botón conciso **«Agendar»**.
+## 📱 Especificaciones Móviles (< 768px)
+* Hero con `min-height: 720px !important;`
+* Degradado vertical con 38% superior 100% transparente para mostrar a la modelo con sus rizos perfectos.
+* Texto y botones centrados en la mitad inferior.
+* Servicios y Especialistas en **2 columnas balanceadas**.
+* Barra de garantías con **carrusel horizontal táctil (Scroll Snap)**.
+* Header móvil sin menú hamburguesa: solo Logotipo a la izquierda y botón **«Agendar»** a la derecha.
