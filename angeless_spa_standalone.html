@@ -1,0 +1,2274 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Angeless Spa | Spa de DÃ­a & Centro de Bienestar en ApartadÃ³</title>
+  <meta name="description" content="Angeless Spa en ApartadÃ³, Antioquia. Tu refugio de serenidad y relajaciÃ³n. Masajes relajantes, piedras volcÃ¡nicas, hidrodermoabrasiÃ³n facial y rituales de bienestar." />
+  
+  <!-- Metatags Open Graph -->
+  <meta property="og:title" content="Angeless Spa | Spa de DÃ­a & Bienestar en ApartadÃ³" />
+  <meta property="og:description" content="DesconÃ©ctate del estrÃ©s y renueva tu energÃ­a con masajes relajantes, faciales glow y terapias de spa de alta gama en ApartadÃ³." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://angeless-spa.co" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Schema.org JSON-LD para Negocio Local (DaySpa) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DaySpa",
+    "name": "Angeless Spa",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85",
+    "description": "Spa de dÃ­a y centro de bienestar en ApartadÃ³, Antioquia. Especialistas en masajes relajantes, piedras volcÃ¡nicas, limpieza facial y rituales corporales.",
+    "telephone": "+573104612507",
+    "url": "https://angeless-spa.co",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 106 #105-69",
+      "addressLocality": "ApartadÃ³",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8916313,
+      "longitude": -76.6351965
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Google Fonts: DM Serif Display, Alex Brush & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ==========================================================
+       VARIABLES Y SISTEMA DE DISENO FORENSE (ANGELESS SPA)
+       ========================================================== */
+    :root {
+      /* Paleta Forense de la Referencia Luxe Spa */
+      --color-bg-dark: #0f0d0c;           /* Obsidiana / Ã‰bano Chocolate */
+      --color-surface-dark: #161311;      /* Superficie Header y Footer */
+      --color-surface-dark-card: #1e1917; /* Tarjetas oscuras */
+      --color-bg-light: #fbf8f4;          /* Marfil crema suave */
+      --color-surface-light: #ffffff;     /* Superficies claras */
+      
+      /* Acentos Cobre Rosa / Camel Nude Satinado */
+      --color-accent: #c49377;
+      --color-accent-hover: #ae7a5e;
+      --color-accent-gradient: linear-gradient(135deg, #ce9e82 0%, #b27b60 100%);
+      --color-accent-soft: rgba(196, 147, 119, 0.14);
+      --color-accent-border: rgba(196, 147, 119, 0.28);
+      
+      /* TipografÃ­a y Textos */
+      --color-text-light: #fbf8f5;
+      --color-text-muted-light: #a89f97;
+      --color-text-dark: #201c19;
+      --color-text-muted-dark: #6e655e;
+      --color-border-soft: #eee6de;
+
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+      --shadow-gold: 0 8px 20px rgba(196, 147, 119, 0.25);
+
+      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Reset Global */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition-smooth);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* ==========================================================
+       SMART HEADER / CABECERA INTELIGENTE
+       ========================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 13, 12, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(196, 147, 119, 0.16);
+      transition: transform 0.35s ease, background-color 0.3s ease;
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+
+    .header-sticky-wrapper.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    /* Logotipo TipogrÃ¡fico Puro */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.48rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--color-text-muted-light);
+      text-transform: uppercase;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-text-light);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 22px;
+      background: var(--color-accent-gradient);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-gold);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(196, 147, 119, 0.4);
+    }
+
+    /* ==========================================================
+       HERO FULL-WIDTH BLEED (#inicio)
+       ========================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      background-color: var(--color-bg-dark);
+      overflow: hidden;
+      padding-top: 85px;
+      padding-bottom: 40px;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 65%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.96;
+    }
+
+    /* Curva Eased de 8 Paradas Aterciopelada sin mask-image */
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        #0f0d0c 0%,
+        #0f0d0c 35%,
+        rgba(15, 13, 12, 0.96) 42%,
+        rgba(15, 13, 12, 0.80) 50%,
+        rgba(15, 13, 12, 0.50) 60%,
+        rgba(15, 13, 12, 0.20) 72%,
+        rgba(15, 13, 12, 0.05) 84%,
+        transparent 94%
+      );
+      pointer-events: none;
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      top: 130px;
+      right: calc(4% + 15px);
+      z-index: 5;
+      background: rgba(15, 13, 12, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(196, 147, 119, 0.35);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .hero-badge-number {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      line-height: 1;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .hero-badge-text {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 4px 0 2px;
+    }
+
+    .hero-badge-stars {
+      color: #e5a93b;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-content-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 14px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background-color: var(--color-accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 3.25rem;
+      font-weight: 400;
+      line-height: 1.12;
+      color: var(--color-text-light);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-script {
+      display: block;
+      font-family: var(--font-script);
+      font-size: 1.25em;
+      color: var(--color-accent);
+      line-height: 1.15;
+      margin-top: 4px;
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: var(--color-text-muted-light);
+      margin-bottom: 30px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 30px;
+      background: var(--color-accent-gradient);
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-gold);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(196, 147, 119, 0.45);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--color-text-light);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(196, 147, 119, 0.4);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(196, 147, 119, 0.15);
+      border-color: var(--color-accent);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================
+       BARRA DE PILARES / GARANTIAS DE CONFIANZA
+       ========================================================== */
+    .guarantees-bar {
+      background-color: var(--color-surface-dark);
+      border-top: 1px solid rgba(196, 147, 119, 0.22);
+      border-bottom: 1px solid rgba(196, 147, 119, 0.22);
+      padding: 30px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .guarantees-track {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .guarantee-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .guarantee-icon-wrapper {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: rgba(196, 147, 119, 0.08);
+      border: 1px solid rgba(196, 147, 119, 0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+
+    .guarantee-icon-wrapper::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1px dashed rgba(196, 147, 119, 0.25);
+      transition: var(--transition-smooth);
+    }
+
+    .guarantee-card:hover .guarantee-icon-wrapper {
+      transform: scale(1.08) rotate(6deg);
+      background: rgba(196, 147, 119, 0.18);
+      border-color: var(--color-accent);
+    }
+
+    .guarantee-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-text-light);
+      margin-bottom: 4px;
+    }
+
+    .guarantee-desc {
+      font-size: 0.74rem;
+      color: var(--color-text-muted-light);
+      line-height: 1.4;
+      max-width: 190px;
+    }
+
+    /* ==========================================================
+       CATALOGO DE SERVICIOS (#servicios) - FONDO CREMA DE REFERENCIA
+       ========================================================== */
+    .services-section {
+      background-color: var(--color-bg-light);
+      color: var(--color-text-dark);
+      padding: 95px 0 80px;
+      position: relative;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--color-text-dark);
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+    }
+
+    .section-title-dark {
+      color: var(--color-text-light);
+    }
+
+    .section-divider-diamond {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+
+    .section-divider-diamond::before,
+    .section-divider-diamond::after {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 1px;
+      background-color: rgba(196, 147, 119, 0.45);
+    }
+
+    .section-divider-diamond i {
+      color: var(--color-accent);
+      font-size: 0.6rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.6;
+    }
+
+    /* Grid de 6 Columnas en Desktop */
+    .services-grid-6 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: var(--color-surface-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-soft);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(196, 147, 119, 0.5);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background-color: #f0eae1;
+    }
+
+    .service-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.08);
+    }
+
+    /* Icon Badge Flotante */
+    .service-floating-icon {
+      position: absolute;
+      bottom: -16px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-surface-light);
+      border: 1px solid rgba(196, 147, 119, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 0.9rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+
+    .service-card-content {
+      padding: 22px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      line-height: 1.25;
+      color: var(--color-text-dark);
+      margin-bottom: 8px;
+      min-height: 42px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-description {
+      font-size: 0.78rem;
+      color: var(--color-text-muted-dark);
+      line-height: 1.45;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 2 PÃ­ldoras Esenciales de DuraciÃ³n y Precio */
+    .service-details-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+      margin-top: auto;
+    }
+
+    .service-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      background: rgba(196, 147, 119, 0.1);
+      color: #92583a;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(196, 147, 119, 0.25);
+    }
+
+    .service-badge-pill i {
+      font-size: 0.68rem;
+      color: var(--color-accent);
+    }
+
+    .btn-card-book {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 10px 12px;
+      background: #f6efe6;
+      color: #382d24;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(196, 147, 119, 0.35);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-card-book:hover {
+      background: var(--color-accent-gradient);
+      color: #ffffff;
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(196, 147, 119, 0.35);
+    }
+
+    /* ==========================================================
+       SOBRE NOSOTROS & NUESTROS ESPECIALISTAS (#nosotros)
+       ========================================================== */
+    .about-section {
+      background-color: #f5f0e8;
+      color: var(--color-text-dark);
+      padding: 95px 0 85px;
+      border-top: 1px solid rgba(196, 147, 119, 0.15);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 55px;
+      align-items: center;
+      margin-bottom: 85px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4 / 3;
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      border: 1px solid rgba(196, 147, 119, 0.4);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 240px;
+    }
+
+    .experience-badge-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--color-text-dark);
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+
+    .experience-badge-sub {
+      font-size: 0.74rem;
+      color: #7d5e49;
+      font-weight: 600;
+    }
+
+    .experience-content .section-eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .experience-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      line-height: 1.18;
+      color: var(--color-text-dark);
+      margin-bottom: 18px;
+    }
+
+    .experience-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-text-muted-dark);
+      margin-bottom: 28px;
+    }
+
+    /* 4 MÃ©tricas de Autoridad */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .metric-card {
+      background: var(--color-surface-light);
+      padding: 16px 12px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid var(--color-border-soft);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      line-height: 1;
+      color: var(--color-accent);
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-text-muted-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Especialistas Grid (4 Columnas en Desktop) */
+    .team-block-wrapper {
+      margin-top: 30px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .team-card {
+      background: var(--color-surface-light);
+      border-radius: var(--radius-md);
+      padding: 24px 18px;
+      text-align: center;
+      border: 1px solid var(--color-border-soft);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: var(--transition-smooth);
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(196, 147, 119, 0.4);
+    }
+
+    .team-avatar-wrapper {
+      position: relative;
+      width: 105px;
+      height: 105px;
+      margin-bottom: 16px;
+    }
+
+    .team-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      box-shadow: 0 0 0 2px var(--color-accent);
+    }
+
+    .team-badge {
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+      background: var(--color-accent-gradient);
+      color: #ffffff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border: 2px solid #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-text-dark);
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      color: #8c644d;
+      font-weight: 600;
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .team-rating {
+      color: #e5a93b;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .btn-team-book {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      padding: 8px 14px;
+      background: #f6efe6;
+      color: #382d24;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(196, 147, 119, 0.35);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-team-book:hover {
+      background: #25d366;
+      color: #ffffff;
+      border-color: #25d366;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+
+    /* ==========================================================
+       UBICACION & CONTACTO (#ubicacion)
+       ========================================================== */
+    .location-section {
+      background-color: var(--color-bg-dark);
+      color: var(--color-text-light);
+      padding: 95px 0 90px;
+    }
+
+    .map-showcase-card {
+      background: var(--color-surface-dark);
+      border: 1px solid rgba(196, 147, 119, 0.28);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1.18;
+      color: var(--color-text-light);
+      margin-bottom: 22px;
+    }
+
+    .location-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .location-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(196, 147, 119, 0.12);
+      border: 1px solid rgba(196, 147, 119, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .location-detail-text h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 2px;
+    }
+
+    .location-detail-text p {
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+      line-height: 1.45;
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      min-height: 420px;
+      position: relative;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(15%) contrast(1.05);
+    }
+
+    /* ==========================================================
+       FOOTER PRINCIPAL
+       ========================================================== */
+    .site-footer {
+      background-color: #0c0a09;
+      color: var(--color-text-light);
+      padding: 70px 0 35px;
+      border-top: 1px solid rgba(196, 147, 119, 0.15);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.2fr 1.3fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted-light);
+      line-height: 1.6;
+      margin: 14px 0 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(196, 147, 119, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+      transition: var(--transition-smooth);
+    }
+
+    .social-link:hover {
+      background: var(--color-accent);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--color-text-light);
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28px;
+      height: 2px;
+      background: var(--color-accent);
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links-list a {
+      font-size: 0.86rem;
+      color: var(--color-text-muted-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--color-accent);
+      transform: translateX(4px);
+    }
+
+    .footer-reserve-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(196, 147, 119, 0.28);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      text-align: center;
+    }
+
+    .footer-reserve-box h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--color-text-light);
+      margin-bottom: 6px;
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.8rem;
+      color: var(--color-text-muted-light);
+      margin-bottom: 16px;
+    }
+
+    .btn-footer-reserve {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 11px 20px;
+      background: var(--color-accent-gradient);
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-gold);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--color-text-muted-light);
+    }
+
+    /* ==========================================================
+       WIDGET FLOTANTE DE WHATSAPP (CON DESPEJE ANTI-CORTE)
+       ========================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 32px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 99999;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(6deg);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.55);
+    }
+
+    /* ==========================================================
+       MOBILE ACTION DOCK (< 768px)
+       ========================================================== */
+    .mobile-action-dock {
+      display: none;
+    }
+
+    /* ==========================================================
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ========================================================== */
+    @media (max-width: 1080px) {
+      .services-grid-6 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .guarantees-track {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 74px; /* Despeje para el dock mÃ³vil */
+      }
+
+      /* Navbar MÃ³vil Ultra Limpia: Sin menÃº hamburguesa */
+      .nav-links {
+        display: none !important;
+      }
+
+      .header-nav {
+        height: auto;
+        min-height: 64px;
+        padding: 10px 0;
+      }
+
+      .brand-name {
+        font-size: 1.22rem;
+        line-height: 1.1;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-subtitle {
+        font-size: 0.58rem;
+        letter-spacing: 0.16em;
+        white-space: nowrap;
+      }
+
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.78rem;
+      }
+
+      /* HERO MÃ“VIL ESTRICTAMENTE >= 720PX */
+      .hero-fullwidth-section {
+        min-height: 720px !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 140px 16px 28px;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+      }
+
+      .hero-bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.95;
+      }
+
+      /* Gradiente vertical con tercio superior limpio */
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(15, 13, 12, 0) 0%,
+          rgba(15, 13, 12, 0) 38%,
+          rgba(15, 13, 12, 0.62) 54%,
+          rgba(15, 13, 12, 0.92) 74%,
+          #0f0d0c 96%
+        );
+      }
+
+      .hero-floating-badge {
+        display: none; /* Oculto en mÃ³vil para no tapar a la modelo */
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 360px;
+        width: 100%;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.85);
+      }
+
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        margin-bottom: 6px;
+        justify-content: center;
+      }
+
+      .hero-title {
+        font-size: 1.88rem;
+        line-height: 1.12;
+        margin-bottom: 8px;
+      }
+
+      .hero-script {
+        font-size: 1.25em;
+        margin-top: 2px;
+      }
+
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.48;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+        justify-content: center;
+        touch-action: manipulation;
+      }
+
+      /* Barra de GarantÃ­as MÃ³vil: Scroll Snap en 1 fila */
+      .guarantees-bar {
+        padding: 18px 0;
+      }
+
+      .guarantees-track {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 14px;
+        padding-bottom: 6px;
+        scrollbar-width: none;
+      }
+
+      .guarantees-track::-webkit-scrollbar {
+        display: none;
+      }
+
+      .guarantee-card {
+        flex: 0 0 160px;
+        scroll-snap-align: start;
+        padding: 6px;
+      }
+
+      .guarantee-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+      }
+
+      .guarantee-title {
+        font-size: 0.76rem;
+      }
+
+      .guarantee-desc {
+        font-size: 0.68rem;
+      }
+
+      /* SERVICIOS EN 2 COLUMNAS BALANCEADAS EN MOVIL */
+      .services-section {
+        padding: 60px 0 50px;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+      }
+
+      .services-grid-6 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .service-card-content {
+        padding: 14px 10px 10px;
+      }
+
+      .service-name {
+        font-size: 0.88rem;
+        min-height: 36px;
+        margin-bottom: 4px;
+      }
+
+      .service-description {
+        display: none; /* Oculto en mÃ³vil para tarjetas compactas */
+      }
+
+      .service-badge-pill {
+        font-size: 0.66rem;
+        padding: 3px 6px;
+      }
+
+      .btn-card-book {
+        padding: 8px 10px;
+        font-size: 0.72rem;
+      }
+
+      /* SOBRE NOSOTROS & ESPECIALISTAS EN MOVIL */
+      .about-section {
+        padding: 60px 0 50px;
+      }
+
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .experience-title {
+        font-size: 1.85rem;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .metric-number {
+        font-size: 1.45rem;
+      }
+
+      /* EQUIPO EN 2 COLUMNAS EN MOVIL */
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      .team-card {
+        padding: 16px 10px;
+      }
+
+      .team-avatar-wrapper {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+      }
+
+      /* Regla CrÃ­tica: Ocultar badge de rol sobre la cara en mÃ³vil */
+      .team-badge {
+        display: none !important;
+      }
+
+      .team-name {
+        font-size: 0.95rem;
+      }
+
+      .team-role {
+        font-size: 0.72rem;
+        min-height: 32px;
+      }
+
+      .team-rating {
+        font-size: 0.7rem;
+        margin-bottom: 12px;
+      }
+
+      .btn-team-book {
+        padding: 7px 8px;
+        font-size: 0.7rem;
+      }
+
+      /* UBICACION EN MOVIL */
+      .location-section {
+        padding: 60px 0;
+      }
+
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 30px 20px;
+      }
+
+      .location-title {
+        font-size: 1.7rem;
+      }
+
+      .map-frame-wrapper {
+        height: 320px;
+        min-height: 320px;
+        border-top: 1px solid rgba(196, 147, 119, 0.2);
+      }
+
+      .map-actions {
+        flex-direction: column;
+      }
+
+      .map-actions .btn-primary,
+      .map-actions .btn-secondary {
+        width: 100%;
+      }
+
+      /* FOOTER EN MOVIL */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      /* DOCK MOVIL INFERIOR */
+      .mobile-action-dock {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 13, 12, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-top: 1px solid rgba(196, 147, 119, 0.3);
+        z-index: 9999;
+        padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .mobile-dock-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 4px;
+        color: var(--color-text-muted-light);
+        text-decoration: none;
+        font-size: 0.65rem;
+        font-weight: 600;
+        gap: 3px;
+        touch-action: manipulation;
+      }
+
+      .mobile-dock-item i {
+        font-size: 1.15rem;
+      }
+
+      .mobile-dock-item.dock-cta {
+        color: #ffffff;
+        background: var(--color-accent-gradient);
+        border-radius: var(--radius-sm);
+        margin: 4px 6px;
+        font-weight: 700;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================
+       SMART HEADER
+       ========================================================== -->
+  <header class="header-sticky-wrapper" id="smartHeader">
+    <div class="container">
+      <nav class="header-nav" aria-label="NavegaciÃ³n Principal">
+        <!-- Logotipo TipogrÃ¡fico Puro (Sin Ã­conos decorativos) -->
+        <a href="#inicio" class="brand-logo" aria-label="Angeless Spa Inicio">
+          <span class="brand-name">Angeless Spa</span>
+          <span class="brand-subtitle">Spa de DÃ­a â€¢ ApartadÃ³</span>
+        </a>
+
+        <!-- Enlaces de NavegaciÃ³n de Escritorio -->
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link">Tratamientos</a></li>
+          <li><a href="#nosotros" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="#ubicacion" class="nav-link">UbicaciÃ³n</a></li>
+        </ul>
+
+        <!-- BotÃ³n Conciso Â«AgendarÂ» -->
+        <div class="header-actions">
+          <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20una%20cita%20o%20solicitar%20informaci%C3%B3n%20sobre%20sus%20tratamientos." class="btn-header-cta" target="_blank" rel="noopener">
+            Agendar
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       HERO SECTION EDGE-TO-EDGE FULL-WIDTH (#inicio)
+       ========================================================== -->
+  <section class="hero-fullwidth-section" id="inicio">
+    <div class="hero-bg-cover">
+      <img src="assets/heroes/spa/Woman_relaxing_at_wellness_spa_202609021629.webp" alt="Angeless Spa en ApartadÃ³" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    
+    <!-- Badge Flotante VIP (Visible en Desktop) -->
+    <div class="hero-floating-badge">
+      <span class="hero-badge-number">5.0</span>
+      <span class="hero-badge-text">Experiencia Zen</span>
+      <div class="hero-badge-stars">â˜…â˜…â˜…â˜…â˜…</div>
+    </div>
+
+    <div class="container hero-content-wrapper">
+      <div class="hero-text-block">
+        <span class="hero-eyebrow">Spa de DÃ­a â€¢ Bienestar â€¢ ApartadÃ³</span>
+        <h1 class="hero-title">
+          Donde la Calma
+          <span class="hero-script">Renueva tu Esencia.</span>
+        </h1>
+        <p class="hero-desc">
+          DesconÃ©ctate del ritmo acelerado y regÃ¡late un momento de serenidad absoluta en ApartadÃ³. Terapias faciales, masajes relajantes y rituales corporales diseÃ±ados para consentirte de pies a cabeza.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20una%20cita." class="btn-primary" target="_blank" rel="noopener">
+            <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+          </a>
+          <a href="#servicios" class="btn-secondary">
+            Ver Tratamientos <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       BARRA DE PILARES / GARANTÃAS DE CONFIANZA
+       ========================================================== -->
+  <section class="guarantees-bar" aria-label="GarantÃ­as y Pilares de Confianza">
+    <div class="container">
+      <div class="guarantees-track" id="guaranteesTrack">
+        <!-- Pilar 1 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-wrapper">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <h3 class="guarantee-title">Terapeutas Certificadas</h3>
+          <p class="guarantee-desc">Profesionales expertas en tÃ©cnicas de relajaciÃ³n y cuidado corporal</p>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-wrapper">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3 class="guarantee-title">Productos PrÃ©mium</h3>
+          <p class="guarantee-desc">Aceites botÃ¡nicos, esencias puras y cosmÃ©tica de alta gama</p>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-wrapper">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <h3 class="guarantee-title">Cabinas Zen Privadas</h3>
+          <p class="guarantee-desc">Ambientes climatizados con mÃºsica relajante y aromaterapia</p>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-wrapper">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="guarantee-title">RelajaciÃ³n Total</h3>
+          <p class="guarantee-desc">AtenciÃ³n personalizada y protocolos diseÃ±ados para liberar el estrÃ©s</p>
+        </div>
+
+        <!-- Pilar 5 -->
+        <div class="guarantee-card">
+          <div class="guarantee-icon-wrapper">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="guarantee-title">Higiene & Confort</h3>
+          <p class="guarantee-desc">Protocolos estrictos de bioseguridad y toallas 100% esterilizadas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       CATALOGO DE SERVICIOS (#servicios) - GRID 6 COLUMNAS
+       ========================================================== -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-eyebrow">Tratamientos Exclusivos</span>
+        <h2 class="section-title">Nuestros Tratamientos</h2>
+        <div class="section-divider-diamond">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <p class="section-subtitle">
+          Elige la experiencia perfecta para renovar tu cuerpo, liberar tensiones y lucir una piel radiante.
+        </p>
+      </div>
+
+      <!-- Grid 6 Columnas Desktop / 2 Columnas MÃ³vil -->
+      <div class="services-grid-6">
+        <!-- Servicio 1 -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masaje Relajante & Aromaterapia" class="service-card-img" />
+            <div class="service-floating-icon">
+              <i class="fa-solid fa-spa"></i>
+            </div>
+          </div>
+          <div class="service-card-content">
+            <h3 class="service-name">Masaje Relajante & Aromaterapia</h3>
+            <p class="service-description">Terapia corporal con aceites esenciales botÃ¡nicos y toallas tibias para disolver tensiones.</p>
+            <div class="service-details-row">
+              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $75.000 COP</span>
+            </div>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20servicio%20de%20Masaje%20Relajante%20y%20Aromaterapia." class="btn-card-book" target="_blank" rel="noopener">
+              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="HidrodermoabrasiÃ³n & Limpieza Facial" class="service-card-img" />
+            <div class="service-floating-icon">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+          </div>
+          <div class="service-card-content">
+            <h3 class="service-name">HidrodermoabrasiÃ³n Facial</h3>
+            <p class="service-description">ExtracciÃ³n profunda, peeling ultrasÃ³nico e infusiÃ³n con sÃ©rum de Ã¡cido hialurÃ³nico.</p>
+            <div class="service-details-row">
+              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
+              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $85.000 COP</span>
+            </div>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20servicio%20de%20Hidrodermoabrasion%20Facial." class="btn-card-book" target="_blank" rel="noopener">
+              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" alt="Terapia con Piedras VolcÃ¡nicas" class="service-card-img" />
+            <div class="service-floating-icon">
+              <i class="fa-solid fa-fire-flame-curved"></i>
+            </div>
+          </div>
+          <div class="service-card-content">
+            <h3 class="service-name">Terapia Piedras VolcÃ¡nicas</h3>
+            <p class="service-description">Masaje tÃ©rmico profundo con piedras volcÃ¡nicas pulidas que relajan el sistema muscular.</p>
+            <div class="service-details-row">
+              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 75 Mins</span>
+              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $95.000 COP</span>
+            </div>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20la%20Terapia%20con%20Piedras%20Volcanicas." class="btn-card-book" target="_blank" rel="noopener">
+              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Moldeo Corporal & Drenaje LinfÃ¡tico" class="service-card-img" />
+            <div class="service-floating-icon">
+              <i class="fa-solid fa-person-dress"></i>
+            </div>
+          </div>
+          <div class="service-card-content">
+            <h3 class="service-name">Moldeo Corporal & Drenaje</h3>
+            <p class="service-description">TÃ©cnicas manuales y aparatologÃ­a no invasiva para tonificar, desinflamar y moldear la figura.</p>
+            <div class="service-details-row">
+              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 50 Mins</span>
+              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $90.000 COP</span>
+            </div>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Moldeo%20Corporal%20y%20Drenaje." class="btn-card-book" target="_blank" rel="noopener">
+              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 5 -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Ritual Spa RenovaciÃ³n Corporal" class="service-card-img" />
+            <div class="service-floating-icon">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+          </div>
+          <div class="service-card-content">
+            <h3 class="service-name">Ritual RenovaciÃ³n Corporal</h3>
+            <p class="service-description">ExfoliaciÃ³n con sales minerales, mascarilla nutritiva y baÃ±o humectante con toallas calientes.</p>
+            <div class="service-details-row">
+              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 80 Mins</span>
+              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $110.000 COP</span>
+            </div>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Ritual%20Renovacion%20Corporal." class="btn-card-book" target="_blank" rel="noopener">
+              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 6 -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80" alt="Facial Antiedad Glow & Fototerapia" class="service-card-img" />
+            <div class="service-floating-icon">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+          </div>
+          <div class="service-card-content">
+            <h3 class="service-name">Facial Antiedad Glow & LED</h3>
+            <p class="service-description">Protocolo tensor reafirmante, estimulaciÃ³n de colÃ¡geno y fototerapia regeneradora.</p>
+            <div class="service-details-row">
+              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 50 Mins</span>
+              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $95.000 COP</span>
+            </div>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Facial%20Antiedad%20Glow." class="btn-card-book" target="_blank" rel="noopener">
+              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       SOBRE NOSOTROS & NUESTROS ESPECIALISTAS (#nosotros)
+       ========================================================== -->
+  <section class="about-section" id="nosotros">
+    <div class="container">
+      
+      <!-- Bloque Editorial Sobre Nosotros (.experience-layout) -->
+      <div class="experience-layout">
+        <!-- FotografÃ­a Coherente con el Nicho: Cabina de Spa Zen -->
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80" alt="Cabina de RelajaciÃ³n en Angeless Spa" />
+          <div class="experience-floating-badge">
+            <div class="experience-badge-title">Ambiente Zen Exclusivo</div>
+            <div class="experience-badge-sub">Cabinas climatizadas & aromaterapia</div>
+          </div>
+        </div>
+
+        <div class="experience-content">
+          <span class="section-eyebrow">Sobre Nosotros</span>
+          <h2 class="experience-title">Tu Refugio de Serenidad en el CorazÃ³n de ApartadÃ³</h2>
+          <p class="experience-desc">
+            En Angeless Spa creamos un espacio para desconectarte de las exigencias del dÃ­a a dÃ­a. Nos enfocamos en tu bienestar integral mediante masajes terapÃ©uticos, protocolos faciales de vanguardia y tratamientos corporales que devuelven la vitalidad a tu cuerpo en un ambiente de calma y privacidad absoluta.
+          </p>
+
+          <!-- 4 MÃ©tricas de Autoridad -->
+          <div class="metrics-row">
+            <div class="metric-card">
+              <div class="metric-number">6+</div>
+              <div class="metric-label">AÃ±os de Exp.</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">1.8K+</div>
+              <div class="metric-label">Sesiones Spa</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Aceites Puros</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-number">5.0â˜…</div>
+              <div class="metric-label">CalificaciÃ³n</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20conocer%20mas%20sobre%20sus%20servicios." class="btn-primary" target="_blank" rel="noopener">
+            Conoce Nuestras Experiencias <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bloque Nuestros Profesionales (.team-grid) -->
+      <div class="team-block-wrapper">
+        <div class="section-header-center">
+          <span class="section-eyebrow">Equipo de Expertas</span>
+          <h2 class="section-title">Nuestras Terapeutas</h2>
+          <div class="section-divider-diamond">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <p class="section-subtitle">
+            Manos profesionales y cÃ¡lidas dedicadas a brindarte una atenciÃ³n personalizada y segura en cada visita.
+          </p>
+        </div>
+
+        <!-- Grid 4 Columnas Desktop / 2 Columnas MÃ³vil -->
+        <div class="team-grid">
+          <!-- Especialista 1 -->
+          <div class="team-card">
+            <div class="team-avatar-wrapper">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Ãngela MarÃ­a LÃ³pez" class="team-avatar" />
+              <span class="team-badge">Directora</span>
+            </div>
+            <h3 class="team-name">Ãngela MarÃ­a LÃ³pez</h3>
+            <p class="team-role">Directora & Terapeuta HolÃ­stica</p>
+            <div class="team-rating">â˜…â˜…â˜…â˜…â˜… (5.0)</div>
+            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20una%20sesion%20con%20Angela%20Maria%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
+              Agendar <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Especialista 2 -->
+          <div class="team-card">
+            <div class="team-avatar-wrapper">
+              <img src="https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=500&q=80" alt="Valentina Restrepo" class="team-avatar" />
+              <span class="team-badge">Master Facial</span>
+            </div>
+            <h3 class="team-name">Valentina Restrepo</h3>
+            <p class="team-role">Cosmiatra & Terapeuta Facial</p>
+            <div class="team-rating">â˜…â˜…â˜…â˜…â˜… (5.0)</div>
+            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20un%20facial%20con%20Valentina%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
+              Agendar <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Especialista 3 -->
+          <div class="team-card">
+            <div class="team-avatar-wrapper">
+              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Camila Morales" class="team-avatar" />
+              <span class="team-badge">Senior Spa</span>
+            </div>
+            <h3 class="team-name">Camila Morales</h3>
+            <p class="team-role">Masoterapeuta & Terapia Zen</p>
+            <div class="team-rating">â˜…â˜…â˜…â˜…â˜… (4.9)</div>
+            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20un%20masaje%20con%20Camila%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
+              Agendar <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+
+          <!-- Especialista 4 -->
+          <div class="team-card">
+            <div class="team-avatar-wrapper">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Dayana MartÃ­nez" class="team-avatar" />
+              <span class="team-badge">Terapeuta Pro</span>
+            </div>
+            <h3 class="team-name">Dayana MartÃ­nez</h3>
+            <p class="team-role">Especialista en Moldeo Corporal</p>
+            <div class="team-rating">â˜…â˜…â˜…â˜…â˜… (5.0)</div>
+            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20con%20Dayana%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
+              Agendar <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       UBICACION & CONTACTO (#ubicacion)
+       ========================================================== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="map-showcase-card">
+        <!-- Panel de InformaciÃ³n -->
+        <div class="map-info-panel">
+          <span class="section-eyebrow">EncuÃ©ntranos</span>
+          <h2 class="location-title">VisÃ­tanos en ApartadÃ³</h2>
+
+          <div class="location-detail-item">
+            <div class="location-icon-box">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="location-detail-text">
+              <h4>DirecciÃ³n FÃ­sica</h4>
+              <p>Cl. 106 #105-69, ApartadÃ³, Antioquia, Colombia</p>
+            </div>
+          </div>
+
+          <div class="location-detail-item">
+            <div class="location-icon-box">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="location-detail-text">
+              <h4>Horario de AtenciÃ³n</h4>
+              <p>Lunes a SÃ¡bado: 8:00 AM â€“ 7:00 PM<br>Domingos y Festivos: Previa reserva</p>
+            </div>
+          </div>
+
+          <div class="location-detail-item">
+            <div class="location-icon-box">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="location-detail-text">
+              <h4>Contacto Directo</h4>
+              <p>(+57) 310 461 2507</p>
+            </div>
+          </div>
+
+          <div class="map-actions">
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20deseo%20agendar%20mi%20cita." class="btn-primary" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+            </a>
+            <a href="https://www.google.com/maps/place/Angeless+Spa/@7.8916313,-76.6532209,15z/data=!4m10!1m2!2m1!1ssalon++de+belleza+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500d27ae9cb397:0x45112b1fb19389a5!8m2!3d7.8916313!4d-76.6351965" class="btn-secondary" target="_blank" rel="noopener">
+              <i class="fa-solid fa-diamond-turn-right"></i> CÃ³mo Llegar
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps Iframe Oficial Georreferenciado -->
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Angeless+Spa,+Cl.+106+%23105-69,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            title="UbicaciÃ³n de Angeless Spa en Google Maps" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================
+       FOOTER PRINCIPAL
+       ========================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna Marca -->
+        <div class="footer-col">
+          <a href="#inicio" class="brand-logo" aria-label="Angeless Spa">
+            <span class="brand-name">Angeless Spa</span>
+            <span class="brand-subtitle">Spa de DÃ­a â€¢ ApartadÃ³</span>
+          </a>
+          <p class="footer-desc">
+            Tu oasis de relajaciÃ³n y bienestar en ApartadÃ³. Tratamientos faciales, masajes terapÃ©uticos y rituales de spa diseÃ±ados para reconectar tu cuerpo y mente.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/573104612507" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/angeless_spa/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="tel:+573104612507" class="social-link" aria-label="TelÃ©fono">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna Enlaces RÃ¡pidos -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">NavegaciÃ³n</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio"><i class="fa-solid fa-angle-right"></i> Inicio</a></li>
+            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Tratamientos</a></li>
+            <li><a href="#nosotros"><i class="fa-solid fa-angle-right"></i> Sobre Nosotros</a></li>
+            <li><a href="#nosotros"><i class="fa-solid fa-angle-right"></i> Nuestras Terapeutas</a></li>
+            <li><a href="#ubicacion"><i class="fa-solid fa-angle-right"></i> UbicaciÃ³n & Mapa</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna InformaciÃ³n de Contacto -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">AtenciÃ³n & Contacto</h4>
+          <ul class="footer-links-list">
+            <li><a href="#ubicacion"><i class="fa-solid fa-location-dot"></i> Cl. 106 #105-69, ApartadÃ³</a></li>
+            <li><a href="tel:+573104612507"><i class="fa-solid fa-phone"></i> (+57) 310 461 2507</a></li>
+            <li><a href="https://wa.me/573104612507" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> WhatsApp Reservas</a></li>
+            <li><span style="font-size: 0.86rem; color: var(--color-text-muted-light);"><i class="fa-regular fa-clock"></i> Lun - SÃ¡b: 8am - 7pm</span></li>
+          </ul>
+        </div>
+
+        <!-- Columna MÃ³dulo de Reserva (BotÃ³n conciso Â«AgendarÂ») -->
+        <div class="footer-col">
+          <div class="footer-reserve-box">
+            <h4>Agenda tu Experiencia</h4>
+            <p>Reserva tu cita con anticipaciÃ³n y disfruta de una atenciÃ³n completamente personalizada.</p>
+            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20mi%20cita." class="btn-footer-reserve" target="_blank" rel="noopener">
+              Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Â© 2026 Angeless Spa. Todos los derechos reservados. ApartadÃ³, Antioquia.</p>
+        <p>Sitio web optimizado para SEO Local y conversiÃ³n directa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       BOTON FLOTANTE DE WHATSAPP CON PROTECCION ANTI-CORTE
+       ========================================================== -->
+  <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================
+       MOBILE ACTION DOCK (< 768px)
+       ========================================================== -->
+  <aside class="mobile-action-dock" aria-label="Acciones RÃ¡pidas MÃ³viles">
+    <a href="tel:+573104612507" class="mobile-dock-item">
+      <i class="fa-solid fa-phone"></i>
+      <span>Llamar</span>
+    </a>
+    <a href="#ubicacion" class="mobile-dock-item">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>UbicaciÃ³n</span>
+    </a>
+    <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20informaci%C3%B3n." class="mobile-dock-item" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20una%20cita." class="mobile-dock-item dock-cta" target="_blank" rel="noopener">
+      <i class="fa-regular fa-calendar-check"></i>
+      <span>Agendar</span>
+    </a>
+  </aside>
+
+  <!-- ==========================================================
+       JAVASCRIPT: HEADER INTELIGENTE & CARRUSEL DE GARANTIAS
+       ========================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Smart Header: Ocultar al bajar, mostrar al subir
+      const header = document.getElementById('smartHeader');
+      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScrollY > 120) {
+          if (currentScrollY > lastScrollY && !header.classList.contains('header-hidden')) {
+            // Bajando: ocultar header suavemente
+            header.classList.add('header-hidden');
+          } else if (currentScrollY < lastScrollY && header.classList.contains('header-hidden')) {
+            // Subiendo: reaparecer
+            header.classList.remove('header-hidden');
+          }
+        } else {
+          header.classList.remove('header-hidden');
+        }
+
+        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+      }, { passive: true });
+
+      // 2. Carrusel Horizontal de GarantÃ­as en MÃ³vil con Auto-Scroll Suave y Pausa TÃ¡ctil
+      const track = document.getElementById('guaranteesTrack');
+      if (track && window.innerWidth <= 768) {
+        let isUserInteracting = false;
+        let scrollDirection = 1;
+        
+        const autoScroll = setInterval(() => {
+          if (isUserInteracting) return;
+
+          const maxScroll = track.scrollWidth - track.clientWidth;
+          if (track.scrollLeft >= maxScroll - 5) {
+            scrollDirection = -1;
+          } else if (track.scrollLeft <= 5) {
+            scrollDirection = 1;
+          }
+
+          track.scrollBy({
+            left: 140 * scrollDirection,
+            behavior: 'smooth'
+          });
+        }, 3200);
+
+        track.addEventListener('touchstart', () => { isUserInteracting = true; }, { passive: true });
+        track.addEventListener('touchend', () => {
+          setTimeout(() => { isUserInteracting = false; }, 4000);
+        }, { passive: true });
+      }
+
+      // 3. Resaltar enlace activo en navegaciÃ³n de escritorio
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let current = '';
+        const scrollPos = window.pageYOffset + 120;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }, { passive: true });
+    });
+  </script>
+</body>
+</html>
+

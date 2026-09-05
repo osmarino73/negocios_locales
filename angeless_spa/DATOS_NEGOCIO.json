@@ -1,0 +1,133 @@
+{
+  "negocio": {
+    "nombre": "Angeless Spa",
+    "nombre_corto": "Angeless Spa",
+    "rubro": "Spa de día & Centro de Bienestar",
+    "categoria": "spa",
+    "eslogan": "Angeless Spa — Tu refugio de bienestar y relajación en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 310 461 2507",
+      "telefono_raw": "+573104612507",
+      "whatsapp": {
+        "numero": "+573104612507",
+        "link": "https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20una%20cita%20o%20solicitar%20informaci%C3%B3n%20sobre%20sus%20tratamientos."
+      },
+      "instagram": "https://www.instagram.com/angeless_spa/"
+    },
+    "ubicacion": {
+      "direccion": "Cl. 106 #105-69, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Angeless+Spa/@7.8916313,-76.6532209,15z/data=!4m10!1m2!2m1!1ssalon++de+belleza+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500d27ae9cb397:0x45112b1fb19389a5!8m2!3d7.8916313!4d-76.6351965!15sCiZzYWxvbiAgZGUgYmVsbGV6YSBBcGFydGFkw7MsIEFudGlvcXVpYZIBB2RheV9zcGHgAQA!16s%2Fg%2F11tcjrnscw",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Angeless+Spa,+Cl.+106+%23105-69,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "coordenadas": {
+        "lat": 7.8916313,
+        "lng": -76.6351965
+      }
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa reserva y disponibilidad"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Atención personalizada y agendamiento directo vía WhatsApp"
+    },
+    "servicios": [
+      {
+        "id": "masaje-relajante-aromaterapia",
+        "nombre": "Masaje Relajante & Aromaterapia",
+        "descripcion": "Terapia corporal antiestrés con aceites esenciales botánicos, piedras tibias y técnicas descontracturantes.",
+        "duracion": "60 Mins",
+        "badge": "Antiestrés Profundo",
+        "precio": "$75.000 COP",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "hidrodermoabrasion-limpieza",
+        "nombre": "Hidrodermoabrasión & Limpieza Facial",
+        "descripcion": "Extracción profunda de impurezas, peeling ultrasónico e infusión de sérum con ácido hialurónico.",
+        "duracion": "60 Mins",
+        "badge": "Efecto Piel de Seda",
+        "precio": "$85.000 COP",
+        "icono": "fa-droplet",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "piedras-volcanicas",
+        "nombre": "Terapia con Piedras Volcánicas",
+        "descripcion": "Terapia termal profunda con piedras volcánicas pulidas que disuelven nudos musculares y calman el estrés.",
+        "duracion": "75 Mins",
+        "badge": "Terapia Térmica Zen",
+        "precio": "$95.000 COP",
+        "icono": "fa-fire-flame-curved",
+        "imagen": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "moldeo-corporal-drenaje",
+        "nombre": "Moldeo Corporal & Drenaje Linfático",
+        "descripcion": "Técnica manual especializada y aparatología no invasiva para tonificar, desinflamar y moldear la figura.",
+        "duracion": "50 Mins",
+        "badge": "Reducción & Firmeza",
+        "precio": "$90.000 COP",
+        "icono": "fa-person-dress",
+        "imagen": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "ritual-spa-renovacion",
+        "nombre": "Ritual Spa Renovación Corporal",
+        "descripcion": "Exfoliación corporal con sales minerales, envoltura hidratante y baño relajante de toallas tibias.",
+        "duracion": "80 Mins",
+        "badge": "Nutrición Total",
+        "precio": "$110.000 COP",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "facial-rejuvenecedor-glow",
+        "nombre": "Facial Antiedad Glow & Fototerapia",
+        "descripcion": "Protocolo tensor con radiofrecuencia, estimulación de colágeno y máscara de fototerapia LED regeneradora.",
+        "duracion": "50 Mins",
+        "badge": "Luminosidad Inmediata",
+        "precio": "$95.000 COP",
+        "icono": "fa-gem",
+        "imagen": "https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Ángela María López",
+        "rol": "Directora & Terapeuta Holística",
+        "badge": "Directora",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Valentina Restrepo",
+        "rol": "Cosmiatra & Terapeuta Facial",
+        "badge": "Master Facial",
+        "avatar": "https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Camila Andrea Morales",
+        "rol": "Masoterapeuta & Terapia Zen",
+        "badge": "Senior Spa",
+        "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "4.9"
+      },
+      {
+        "nombre": "Dayana Paola Martínez",
+        "rol": "Especialista en Moldeo & Drenaje",
+        "badge": "Terapeuta Pro",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+        "calificacion": "5.0"
+      }
+    ]
+  }
+}
