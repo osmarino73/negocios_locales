@@ -134,7 +134,8 @@ Toda página web o landing page generada, independientemente de la imagen de ref
   - Botón de acción directa en CADA tarjeta de servicio (con mensaje precargado del servicio específico).
   - Botón principal del Header / Hero.
   - **Módulo de Reserva en el Footer**: El botón de reserva (`.btn-footer-reserve`) debe tener el texto conciso y elegante **«Agendar»** (no debe decir «Agendar por WhatsApp»).
-  - Widget flotante interactivo de WhatsApp con despeje anti-corte en móvil.
+- **Prohibición Estricta de Barras o Docks Inferiores Fijos**: Queda terminantemente prohibido implementar menús o docks inferiores fijos en móvil (`.mobile-bottom-nav`, `.mobile-action-dock`). La navegación móvil debe constar únicamente del Header minimalista superior y el botón flotante circular de WhatsApp (`.whatsapp-float`).
+- Widget flotante interactivo de WhatsApp con despeje anti-corte en móvil.
 
 ---
 

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -1257,13 +1257,6 @@
     }
 
     /* ==========================================================
-       MOBILE ACTION DOCK (< 768px)
-       ========================================================== */
-    .mobile-action-dock {
-      display: none;
-    }
-
-    /* ==========================================================
        RESPONSIVE DESIGN (MEDIA QUERIES)
        ========================================================== */
     @media (max-width: 1080px) {
@@ -1279,10 +1272,6 @@
     }
 
     @media (max-width: 768px) {
-      body {
-        padding-bottom: 74px; /* Despeje para el dock mÃ³vil */
-      }
-
       /* Navbar MÃ³vil Ultra Limpia: Sin menÃº hamburguesa */
       .nav-links {
         display: none !important;
@@ -1583,49 +1572,6 @@
         flex-direction: column;
         gap: 12px;
         text-align: center;
-      }
-
-      /* DOCK MOVIL INFERIOR */
-      .mobile-action-dock {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(15, 13, 12, 0.96);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid rgba(196, 147, 119, 0.3);
-        z-index: 9999;
-        padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-      }
-
-      .mobile-dock-item {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 4px;
-        color: var(--color-text-muted-light);
-        text-decoration: none;
-        font-size: 0.65rem;
-        font-weight: 600;
-        gap: 3px;
-        touch-action: manipulation;
-      }
-
-      .mobile-dock-item i {
-        font-size: 1.15rem;
-      }
-
-      .mobile-dock-item.dock-cta {
-        color: #ffffff;
-        background: var(--color-accent-gradient);
-        border-radius: var(--radius-sm);
-        margin: 4px 6px;
-        font-weight: 700;
       }
     }
   </style>
@@ -2166,28 +2112,6 @@
   <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
-
-  <!-- ==========================================================
-       MOBILE ACTION DOCK (< 768px)
-       ========================================================== -->
-  <aside class="mobile-action-dock" aria-label="Acciones RÃ¡pidas MÃ³viles">
-    <a href="tel:+573104612507" class="mobile-dock-item">
-      <i class="fa-solid fa-phone"></i>
-      <span>Llamar</span>
-    </a>
-    <a href="#ubicacion" class="mobile-dock-item">
-      <i class="fa-solid fa-location-dot"></i>
-      <span>UbicaciÃ³n</span>
-    </a>
-    <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20informaci%C3%B3n." class="mobile-dock-item" target="_blank" rel="noopener">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
-    <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20una%20cita." class="mobile-dock-item dock-cta" target="_blank" rel="noopener">
-      <i class="fa-regular fa-calendar-check"></i>
-      <span>Agendar</span>
-    </a>
-  </aside>
 
   <!-- ==========================================================
        JAVASCRIPT: HEADER INTELIGENTE & CARRUSEL DE GARANTIAS

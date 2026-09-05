@@ -139,8 +139,9 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
      - **Proporciones Móviles del Logotipo (`.brand-logo`)**:
        - Nombre principal (`.brand-name`): `font-size: 1.22rem - 1.25rem; line-height: 1.1; letter-spacing: 0.08em;`
        - Subtítulo de categoría/ubicación (`.brand-subtitle`): `font-size: 0.58rem; line-height: 1.2; letter-spacing: 0.16em; margin-top: 2px; white-space: nowrap;` (evita desbordes y garantiza un margen inferior holgado para que la parte de abajo nunca se corte).
-   - **Botón del Header**: Texto conciso **«Agendar»** con clase `.btn-header-cta` (`padding: 8px 16px; font-size: 0.78rem; white-space: nowrap; flex-shrink: 0;`).
-   - **Botón del Footer**: En el módulo/tarjeta de reserva del footer, el texto debe ser estrictamente **«Agendar»**.
+     - **Botón del Header**: Texto conciso **«Agendar»** con clase `.btn-header-cta` (`padding: 8px 16px; font-size: 0.78rem; white-space: nowrap; flex-shrink: 0;`).
+     - **Botón del Footer**: En el módulo/tarjeta de reserva del footer, el texto debe ser estrictamente **«Agendar»**.
+     - **Prohibición Estricta de Menús o Barras Inferiores Fijas (Bottom Nav / Action Dock)**: **Queda terminantemente prohibido implementar barras de navegación inferiores fijas** (`.mobile-bottom-nav`, `.mobile-action-dock`, *sticky bottom docks* o menús flotantes tipo pestaña con accesos como "Llamar", "Ubicación", "WhatsApp", "Agendar"). Estas barras saturan la pantalla del celular, roban área de lectura vertical, chocan con las barras del sistema operativo móvil y compiten con el botón flotante oficial de WhatsApp. La navegación móvil debe ser completamente limpia: Header superior minimalista arriba y únicamente el botón flotante circular de WhatsApp (`.whatsapp-float`) abajo a la derecha.
 
 5. **Mapa Interactivo Georreferenciado**:
    - **Fórmula Obligatoria Oficial de Google Maps**:

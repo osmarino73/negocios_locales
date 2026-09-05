@@ -41,5 +41,4 @@
 * Servicios y Especialistas en **2 columnas balanceadas** (`repeat(2, 1fr)`).
 * Barra de garantías con **carrusel deslizable (Scroll Snap)** fluido.
 * Header móvil sin menú hamburguesa: solo Logotipo a la izquierda y botón **«Agendar»** a la derecha.
-* Barra de acciones fijas inferior (`.mobile-action-dock`) con 4 accesos rápidos ergonómicos (Llamar, Ubicación, WhatsApp, Agendar).
 * Botón flotante de WhatsApp con protección anti-corte `safe-area-inset-bottom`.
