@@ -26,10 +26,10 @@ Este skill guía la transformación de **imágenes de referencia visual** en pá
 Toda página web o landing page generada, independientemente de la imagen de referencia utilizada, debe estructurarse obligatoriamente bajo las siguientes **secciones oficiales**:
 1. **`#inicio` (Hero Full-Width Bleed)**: Portada inmersiva con fotografía en alta fidelidad a la derecha (`.hero-bg-cover`), titular de impacto editorial, copy cercano y cálido (cero tecnicismos como "de autor"), descripción y botón principal de agendamiento. Altura desktop `640px` y móvil estrictamente `720px !important`.
 2. **Barra de Pilares / Garantías**: Franja de 4 a 5 sellos de confianza con íconos de marca. En móvil (< 768px): **Carrusel horizontal deslizable (*Scroll Snap*) con auto-scroll inteligente (3s) y pausa táctil** en 1 sola fila compacta.
-3. **`#servicios` (Catálogo de Servicios — Grid 6 Columnas)**: Grid de **6 columnas en escritorio (`repeat(6, 1fr)`)** para mostrar los 6 servicios en una sola fila continua con fotos 1:1, badges de valor, precios claros y botón ancho completo de agendamiento (obligatorio en **2 columnas** en móvil).
-4. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales — Estándar Crismar)**:
+3. **`#servicios` (Catálogo de Servicios — Grid 3 Columnas en Escritorio)**: Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** para mostrar los 6 servicios en 2 filas amplias, aireadas y elegantes con diseño **Full-Bleed Minimalista** (fotografía protagonista al 100%, relación 3:4, degradado inferior, precio claro y enlace minimalista `AGENDAR ➔`; obligatorio en **2 columnas** en móvil).
+4. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales — Estándar Editorial)**:
    - **Bloque Editorial Sobre Nosotros (`.experience-layout`)**: Grid 2 columnas con fotografía del salón/ambiente (`.salon-image-showcase`) con badge flotante VIP (`.experience-floating-badge`), titular editorial, descripción cálida, 4 métricas de autoridad (`.metrics-row` en 2 columnas en móvil) y botón de contacto.
-   - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con especialistas del negocio (fotos circulares 50% con marco de marca, badges de nivel, rol uniforme, 5 estrellas y botón directo a WhatsApp; obligatorio en **2 columnas** en móvil).
+   - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas / Retrato Editorial Full-Bleed)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Full-Bleed (3:4.2)** con fotografías en plano medio de las especialistas, degradado inferior aterciopelado, línea de acento, tipografía display, rol uniforme, 5 estrellas y enlace minimalista `AGENDAR ➔` directo a WhatsApp (obligatorio en **2 columnas** en móvil).
 5. **`#ubicacion` (Mapa & Contacto)**: Panel informativo con dirección física, horarios, teléfono y Google Maps interactivo embebido con fórmula georreferenciada (`z=16`).
 6. **Footer Principal**: Enlaces de navegación, datos de contacto, redes sociales, horarios y módulo de reserva con botón conciso **«Agendar»**.
 
@@ -45,23 +45,23 @@ Toda página web o landing page generada, independientemente de la imagen de ref
 ### 3. Hero Header Inmersivo a Ancho Completo (Full-Width Bleed)
 - **Impacto Visual Edge-to-Edge**: Cuando el diseño de referencia presente una modelo, producto o composición de fondo continua, se debe implementar el Hero a pantalla completa (`width: 100%`, `min-height: 640px`) eliminando marcos o cajas pequeñas aisladas.
 - **Técnica de Fusión Aterciopelada en Escritorio (`.hero-bg-overlay`) — Curva Eased de 8 Paradas**:
-  - Se sitúa la imagen en alta resolución en la capa posterior `.hero-bg-cover` posicionada a la derecha (`width: 65%`, `object-fit: cover; object-position: center top; opacity: 0.96;`).
+  - Se sitúa la imagen en alta resolución en la capa posterior `.hero-bg-cover` posicionada a la derecha (`width: 70% - 72%`, `object-fit: cover; object-position: center top; opacity: 0.96;`).
   - **Prohibición Estricta de `mask-image` en el Contenedor**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
-  - **Degradado Orgánico Aterciopelado (Curva Eased Multi-Parada)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo:
+  - **Degradado Orgánico Aterciopelado Calibrado (Curva Eased Multi-Parada con Luminosidad Optimizada)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo:
     ```css
     background: linear-gradient(
       90deg, 
       #colorBase 0%, 
-      #colorBase 35%, 
-      rgba(..., 0.96) 42%, 
-      rgba(..., 0.8) 50%, 
-      rgba(..., 0.5) 60%, 
-      rgba(..., 0.2) 72%, 
-      rgba(..., 0.05) 84%, 
-      transparent 94%
+      #colorBase 25%, 
+      rgba(..., 0.96) 32%, 
+      rgba(..., 0.8) 40%, 
+      rgba(..., 0.5) 50%, 
+      rgba(..., 0.2) 62%, 
+      rgba(..., 0.05) 74%, 
+      transparent 84%
     );
     ```
-  - Garantiza **100% de legibilidad y contraste para el texto** a la izquierda (0% a 35%), mientras la mitad derecha (50% a 100%) luce la modelo y la fotografía **100% nítida, brillante y sin veladuras oscuras ni franjas intermedias**.
+  - Garantiza **100% de legibilidad y contraste para el texto** a la izquierda (0% a 25%), mientras el resto luce la modelo o el producto **nítido, brillante y sin sombras negras excesivamente extensas** a partir del 84%.
 - **Responsividad Móvil Calibrada (< 768px)**:
   - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
   - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` garantizando nitidez total, sin filtros pesados que laven la imagen.
@@ -104,29 +104,26 @@ Toda página web o landing page generada, independientemente de la imagen de ref
 
 ---
 
-### 4. Tarjetas de Servicios y Equipo: Cuadrícula Doble Columna (2 Columnas) en Móvil & Fotos 1:1
-- **Cuadrícula Doble Columna Mobile-First (≤768px y ≤480px)**:
-  - Las secciones de **Servicios** (`.services-grid`, `.services-grid-6`) y **Colaboradores / Equipo** (`.team-grid`, `.stylists-grid`, `.staff-grid`) se renderizan obligatoriamente en **2 columnas balanceadas (`grid-template-columns: repeat(2, 1fr); gap: 12px;`)** en pantallas móviles.
-  - Esto reduce la longitud de scroll vertical en un **50%**, ofreciendo una experiencia tipo catálogo editorial y e-commerce prémium.
-- **Fotografías Cuadradas (1:1)**:
-  - Las imágenes de las tarjetas adoptan una relación de aspecto cuadrada `aspect-ratio: 1 / 1; width: 100%; object-fit: cover;` para garantizar simetría visual total.
-- **Normalización y Centrado Automático de Encabezados**:
-  - Tipografía proporcional y compacta en móvil: títulos de tarjetas entre `0.9rem` y `1.05rem`, subtítulos/roles en `0.75rem - 0.82rem`.
-  - Distribución ergonómica de badges de duración/técnica y precios.
-- **Limpieza de Íconos / Medallas Desalineadas**:
-  - Se eliminan automáticamente elementos flotantes, medallas circulares o arcos residuales situados entre la foto y el texto para garantizar un acabado limpio, moderno y sin desalineaciones.
-- **Estructura de Badges Esenciales en Tarjetas de Servicios (Regla Estricta)**: 
-  - Toda tarjeta de servicio debe incorporar **únicamente 2 píldoras compactas**:
-    1. **Duración**: (ej. `<span class="service-badge-pill"><i class="fa-solid fa-clock"></i> 45 Mins</span>`)
-    2. **Precio**: (ej. `<span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $45.000 COP</span>`)
-  - **Prohibición de Píldoras Descriptivas / Técnicas Secundarias**: Queda prohibido añadir una tercera píldora descriptiva extensa (ej. *"Técnica de Lavado Botánico"*, *"Fitagem & Duración"*) que sobrecargue la cuadrícula o desborde en móvil y escritorio.
+### 4. Tarjetas de Servicios y Equipo: Diseño Full-Bleed Minimalista & Doble Columna en Móvil
+- **Catálogo de Servicios Full-Bleed (`.service-card`)**:
+  - **Escritorio (> 768px)**: Grid de **3 columnas (`repeat(3, 1fr); gap: 24px;`)** para 6 servicios en 2 filas equilibradas y elegantes.
+  - **Móvil (≤ 768px)**: Grid de **2 columnas (`repeat(2, 1fr); gap: 12px;`)**, reduciendo el scroll vertical en un **50%**.
+  - **Fotografía Protagonista Full-Bleed (3:4)**: La imagen abarca el 100% de la tarjeta (`aspect-ratio: 3/4; min-height: 440px; border-radius: 22px; overflow: hidden; position: relative;`).
+  - **Degradado Aterciopelado Inferior**: Protege la nitidez del procedimiento en el tercio superior (38% superior transparente) y proporciona contraste oscuro aterciopelado en la base.
+  - **Prohibición Estricta de Badges Superiores**: Cero píldoras flotantes arriba (sin etiquetas de duración o técnica) para preservar la fotografía limpia.
+  - **Tercio Inferior Tipográfico**: Línea de acento sutil, título del servicio en display blanca, precio destacado (`.service-card-price`) y botón de acción minimalista **`AGENDAR ➔`** (`.btn-card-book-minimal`): tipografía limpia y ligera, sin fondos de pastilla pesados, con micro-desplazamiento en hover.
+- **Equipo / Especialistas en Retrato Editorial Full-Bleed (`.team-card`)**:
+  - **Escritorio (> 768px)**: Grid de **4 columnas (`repeat(4, 1fr); gap: 20px;`)**.
+  - **Móvil (≤ 768px)**: Grid de **2 columnas (`repeat(2, 1fr); gap: 12px;`)**.
+  - **Retratos Editoriales Verticales (3:4.2)**: Fotografías en plano medio/busto (`aspect-ratio: 3/4.2; min-height: 410px; border-radius: 20px; overflow: hidden; position: relative;`). Sustituye a los avatares circulares tradicionales por una estética visual de revista editorial de lujo.
+  - **Tercio Inferior de Autoridad**: Línea de acento, nombre de la especialista en display blanca, rol en tono cálido, 5 estrellas doradas (`⭐⭐⭐⭐⭐ (5.0)`) y enlace minimalista **`AGENDAR ➔`** directo a WhatsApp.
 - **Botón Flotante WhatsApp Anti-Corte Móvil**:
   - `bottom: calc(28px + env(safe-area-inset-bottom, 0px));`
   - `right: max(20px, env(safe-area-inset-right, 20px));`
   - Sin `overflow: hidden`, asegurando que el ícono quede 100% visible sin ser tapado por la barra de navegación de navegadores móviles.
-- **Botón de Agendamiento Obligatorio en Cada Tarjeta**: Toda tarjeta de servicio y colaborador DEBE incorporar SIEMPRE un botón compacto de acción directo (`.btn-card-book`, `.btn-team-book`) anclado a WhatsApp con mensaje contextual precargado:
+- **Enlace de Agendamiento Minimalista en Cada Tarjeta**: Toda tarjeta incorpora su acción directa anclada a WhatsApp con mensaje contextual precargado:
   ```html
-  <a href="https://wa.me/57XXXXXXXXXX?text=Hola,%20deseo%20agendar%20el%20servicio%20de%20[Nombre%20del%20Servicio]" class="btn-card-book">
+  <a href="https://wa.me/57XXXXXXXXXX?text=Hola,%20deseo%20agendar%20el%20servicio%20de%20[Nombre%20del%20Servicio]" class="btn-card-book-minimal">
     Agendar <i class="fa-solid fa-arrow-right"></i>
   </a>
   ```
@@ -205,6 +202,6 @@ Dado que >85% de los usuarios de negocios locales acceden desde dispositivos mó
 1. **Análisis Visual & Tipográfico**: Identificar paleta de colores, estructura de secciones y la familia tipográfica precisa de la imagen de referencia.
 2. **Extracción y Configuración de Fuentes**: Seleccionar en Google Fonts la tipografía idéntica a la referencia e insertarla en el `<head>` y en `FICHA_DISENO.md`.
 3. **Selección Fotográfica**: Utilizar fotografías temáticas de alta gama desde `BANCO_IMAGENES.json` en formato CDN WebP optimizado.
-4. **Adaptación de Datos Locales & Estándar de Nicho**: Vincular WhatsApp directo (`wa.me`), llamada directa (`tel:`), Google Maps real y verificar lineamientos específicos del sector (ej. [NICHO_BELLEZA_SPA.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_BELLEZA_SPA.md) para salones y spas).
+4. **Adaptación de Datos Locales & Estándar de Nicho**: Vincular WhatsApp directo (`wa.me`), llamada directa (`tel:`), Google Maps real y verificar lineamientos específicos del sector (ej. [NICHO_BELLEZA_SPA.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_BELLEZA_SPA.md) para salones/spas o [NICHO_EDUCACION_INFANTIL.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_EDUCACION_INFANTIL.md) para jardines/preescolares).
 5. **Compilación Standalone + SEO**: Embeber estilos CSS en `<style>` + insertar metadatos Schema.org JSON-LD y OpenGraph.
 6. **Creación del Triángulo de Contexto**: Guardar `DATOS_NEGOCIO.json`, `FICHA_DISENO.md` y `AGENTS.md` en la carpeta del negocio.

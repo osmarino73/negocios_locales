@@ -10,8 +10,8 @@ Para mantener los sitios limpios, ultra-rápidos y de alta conversión, cada pá
 
 1. **`#inicio` (Hero Full-Width Bleed)**: Portada inmersiva con fotografía en alta fidelidad a la derecha (`.hero-bg-cover`), titular de impacto editorial, frase script de autor, descripción y botón principal de agendamiento.
 2. **Barra de Pilares / Garantías**: Franja de 4 a 5 sellos de confianza (*Estilistas Expertos, Productos Prémium, Experiencia de Lujo, Satisfacción Total, Higiene & Seguridad*).
-3. **`#servicios` (Catálogo de Servicios)**: Grid de tarjetas con fotos 1:1, badges de valor, precios claros y botón directo a WhatsApp (obligatorio en **2 columnas** en móvil).
-4. **`#nosotros` / `#equipo` / `#galeria` (Propuesta de Valor)**: Especialistas, galería de transformaciones o paquetes de precios.
+3. **`#servicios` (Catálogo de Servicios — Grid 3 Columnas)**: Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** y **2 columnas en móvil** con diseño **Full-Bleed Minimalista** (fotografía protagonista al 100%, relación 3:4, degradado inferior aterciopelado, precio claro y enlace minimalista `AGENDAR ➔`).
+4. **`#nosotros` (Sobre Nosotros & Retrato Editorial — Grid 4 Columnas)**: Bloque de experiencia editorial a 2 columnas con foto de ambiente representativa y bloque de especialistas en formato **Retrato Editorial Full-Bleed (3:4.2)** en **4 columnas en escritorio (`repeat(4, 1fr)`)** y **2 columnas en móvil**.
 5. **`#ubicacion` (Mapa & Contacto)**: Panel con dirección física, horarios, teléfono y Google Maps embebido (`z=16`).
 6. **Footer Principal**: Enlaces, redes sociales, horarios y módulo de reserva con botón conciso **«Agendar»**.
 
@@ -45,23 +45,24 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
   ```
 - **Dimensiones & Fusión Gradiente en Escritorio (> 768px)**:
   - `min-height: 640px; width: 100%;`
-  - `.hero-bg-img`: `width: 65%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.96;`
+  - `.hero-bg-cover`: `width: 70% - 72%; height: 100%;`
+  - `.hero-bg-img`: `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.96;`
   - **Prohibición de `mask-image` en el Contenedor**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` para evitar bandas sucias y cortes grisáceos por doble máscara.
-  - **Degradado Orgánico Aterciopelado (Curva Eased de 8 Paradas)**:
+  - **Degradado Orgánico Aterciopelado Calibrado (Curva Eased de 8 Paradas con Luminosidad Optimizada)**:
     ```css
     background: linear-gradient(
       90deg, 
       #colorBase 0%, 
-      #colorBase 35%, 
-      rgba(..., 0.96) 42%, 
-      rgba(..., 0.8) 50%, 
-      rgba(..., 0.5) 60%, 
-      rgba(..., 0.2) 72%, 
-      rgba(..., 0.05) 84%, 
-      transparent 94%
+      #colorBase 25%, 
+      rgba(..., 0.96) 32%, 
+      rgba(..., 0.8) 40%, 
+      rgba(..., 0.5) 50%, 
+      rgba(..., 0.2) 62%, 
+      rgba(..., 0.05) 74%, 
+      transparent 84%
     );
     ```
-    Garantiza **100% de contraste a la izquierda (0% a 35%)** y una fusión suave como seda hacia la derecha, dejando la fotografía nítida y brillante a partir del 90%.
+    Garantiza **100% de contraste a la izquierda (0% a 25%)** y una revelación luminosa y sedosa hacia la derecha, dejando la fotografía completamente limpia y radiante a partir del 84%, eliminando sombras oscuras excesivas sobre la modelo.
 - **Adaptabilidad Móvil Calibrada (< 768px)**:
   - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
   - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` dejando despejado el tercio superior para la modelo con nitidez total.
@@ -94,31 +95,41 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
 
 ---
 
-## 💎 3. Tarjetas de Servicios: Catálogo Doble Columna (2 Columnas) en Móvil & Fotos 1:1
+## 💎 3. Tarjetas de Servicios: Catálogo Full-Bleed Minimalista (3 Columnas Desktop / 2 Móvil)
 
-- **Cuadrícula Doble Columna Mobile-First (≤768px y ≤480px)**:
-  - En dispositivos móviles, `.services-grid` y `.services-grid-6` se organizan en **2 columnas balanceadas (`grid-template-columns: repeat(2, 1fr); gap: 12px;`)**, reduciendo el scroll a la mitad y logrando una presentación estética tipo catálogo de belleza prémium.
-- **Fotografías Cuadradas (1:1)**:
-  - `.service-card-img` o `.service-img`: `aspect-ratio: 1 / 1; width: 100%; object-fit: cover; border-radius: var(--radius-sm);`.
-- **Normalización y Centrado Automático**:
-  - Títulos de servicio estilizados y compactos (`font-size: 0.95rem - 1.05rem`), categorías en `0.75rem - 0.8rem`.
-- **Limpieza de Íconos / Medallas Desalineadas**:
-  - Se eliminan elementos flotantes, medallas circulares o arcos desalineados entre la foto y el cuerpo de la tarjeta para un look moderno y limpio.
-- **Precios Numéricos Permitidos y Visibles**: Los precios monetarios pueden mostrarse de manera transparente y clara en las tarjetas cuando el negocio lo requiera (ej. `$25.000`, `Desde $45.000`, etc.), o complementarse con etiquetas de valor, técnica y tiempo.
-- **Enfoque en Valor, Técnica y Duración**: Las tarjetas pueden destacar los beneficios del procedimiento acompañadas de etiquetas de valor o tiempo (ej. `<span>Duración: 45 min</span>`, `<span>Técnica de Autor</span>`, `<span>Cuidado Especializado</span>`, `<span>Atención Personalizada</span>`, `<span>Secado UV/LED</span>`, `<span>Diagnóstico Incluido</span>`).
-- **Botón de Agendamiento Obligatorio en Cada Tarjeta**: Toda tarjeta de servicio DEBE incorporar SIEMPRE un botón compacto `.btn-card-book` con enlace a WhatsApp que precargue el nombre del servicio solicitado (ej. `wa.me/57...?text=Hola,%20deseo%20agendar%20o%20cotizar%20el%20servicio%20de%20[Nombre_Servicio]`) para maximizar la conversión individualizada.
+- **Distribución de Columnas**:
+  - **Escritorio (> 768px)**: Grid de **3 columnas (`repeat(3, 1fr); gap: 24px;`)** para 6 servicios distribuidos en 2 filas elegantes y holgadas.
+  - **Móvil (≤ 768px)**: Grid de **2 columnas (`grid-template-columns: repeat(2, 1fr); gap: 12px;`)**, reduciendo el scroll vertical a la mitad con diseño compacto tipo catálogo de lujo.
+- **Fotografía Protagonista Full-Bleed (3:4)**:
+  - `.service-card`: `position: relative; aspect-ratio: 3 / 4; min-height: 440px; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;`. En móvil: `min-height: 300px; border-radius: 18px;`.
+  - La imagen ocupa el 100% de la tarjeta (`position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;`).
+- **Degradado Aterciopelado Inferior**:
+  - `linear-gradient(180deg, rgba(..., 0) 0%, rgba(..., 0) 38%, rgba(..., 0.72) 65%, rgba(..., 0.96) 92%, #colorFondo 100%)`.
+  - El tercio superior (primeros 38%) es 100% transparente para mostrar la modelo o procedimiento con máxima nitidez.
+- **Prohibición Estricta de Badges o Píldoras Superiores**:
+  - Cero etiquetas de duración o badges flotantes en la parte superior para evitar ensuciar la fotografía.
+- **Tercio Inferior Tipográfico & Minimalista**:
+  - Línea de acento sutil (`.service-card-accent-line`).
+  - Nombre del servicio en tipografía display blanca y legible (`1.25rem - 1.35rem` en desktop, `0.95rem - 1.05rem` en móvil).
+  - Precio monetario claro y visible en tono de marca (`.service-card-price`, ej. `$90.000 COP`).
+  - Enlace de agendamiento minimalista **`AGENDAR ➔`** (`.btn-card-book-minimal`): sin fondo de pastilla pesado (`background: transparent; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;`), con micro-interacción hover con flecha que se desplaza (`translateX(5px)`).
 
 ---
 
-## 👥 4. Sección de Equipo / Especialistas (`#nosotros` / `#equipo`)
+## 👥 4. Sección de Equipo: Retrato Editorial Full-Bleed (4 Columnas Desktop / 2 Móvil)
 
-Al generar la sección de equipo o propuesta de valor:
-- **ID de Sección**: `id="nosotros"` en `<section>` para sincronizar con el menú de navegación.
-- **ID de Grid**: `id="equipo"` (o clase `.team-grid` / `.stylists-grid` / `.why-us-grid`).
-- **Cuadrícula Doble Columna en Móvil**: `grid-template-columns: repeat(2, 1fr); gap: 12px;` en pantallas ≤768px y ≤480px.
-- **Fotos Cuadradas (1:1)**: `.team-avatar-img` o imagen del especialista con `aspect-ratio: 1 / 1; width: 100%; object-fit: cover;`.
-- **Clases en Tarjetas de Especialistas**: `.team-card`, `.team-avatar`, `.team-badge`, `.team-name`, `.team-role`, `.team-rating` y `.btn-team-book`.
-- **Limpieza Estética**: Eliminación de medallas flotantes y arcos intermedios que rompan la simetría de las tarjetas en 2 columnas.
+- **Distribución de Columnas**:
+  - **Escritorio (> 768px)**: Grid de **4 columnas (`repeat(4, 1fr); gap: 20px;`)**.
+  - **Móvil (≤ 768px)**: Grid de **2 columnas (`grid-template-columns: repeat(2, 1fr); gap: 12px;`)**.
+- **Formato Retrato Editorial Vertical (3:4.2)**:
+  - Sustituye los avatares circulares tradicionales por retratos verticales en plano medio/busto de alta fidelidad (`aspect-ratio: 3 / 4.2; min-height: 410px; border-radius: 20px; overflow: hidden; position: relative; display: flex; flex-direction: column; justify-content: flex-end;`). En móvil: `min-height: 310px; border-radius: 18px;`.
+  - Fotografía al 100% en la capa base con degradado vertical envolvente que protege el rostro en la mitad superior.
+- **Tercio Inferior de Autoridad**:
+  - Línea de acento de marca.
+  - Nombre de la especialista en tipografía display blanca (`.team-name`).
+  - Rol profesional con altura uniforme (`.team-role`, ej. `Master Stylist`, `Cosmetóloga Senior`).
+  - Calificación de 5 estrellas (`⭐⭐⭐⭐⭐ (5.0)`).
+  - Enlace directo a WhatsApp **`AGENDAR ➔`** (`.btn-card-book-minimal`) con mensaje personalizado precargado.
 
 ---
 
@@ -130,19 +141,15 @@ Al generar la sección de equipo o propuesta de valor:
 
 ---
 
-## 📱 6. Estándar Mandatorio Mobile-First & Sticky Bottom Action Dock (< 768px)
+## 📱 6. Navegación Móvil Limpia & Botón Flotante Anti-Corte (< 768px)
 
 En todos los proyectos de salones, spas y belleza:
-1. **Dock Flotante Inferior de Alta Conversión (`.mobile-action-dock`)**:
-   - Barra fija en la parte inferior del viewport en móviles (`position: fixed; bottom: 0; left: 0; width: 100%; z-index: 999;`).
-   - Contiene 4 acciones táctiles estratégicas:
-     - 📞 **Llamar**: Enlace `tel:` directo.
-     - 🗺️ **Ubicación**: Enlace a la app de mapas o anclaje a `#ubicacion`.
-     - 💬 **WhatsApp**: Conversación inmediata con mensaje de bienvenida.
-     - 📅 **Agendar Cita**: Botón con color de acento para reservar.
-   - En pantallas de escritorio (`> 768px`), `.mobile-action-dock` se oculta (`display: none;`).
-2. **Espaciado y Compatibilidad iOS/Android**:
-   - `body { padding-bottom: 74px; }` en pantallas móviles para que el contenido no quede oculto detrás del dock.
-   - `padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px))` dentro del dock para evitar interferencia con el indicador de inicio de iPhone.
-3. **Áreas Táctiles Mínimas**:
-   - Mínimo de 48px de altura en botones y `touch-action: manipulation`.
+1. **Prohibición Estricta de Menús o Barras Inferiores Fijas (Action Dock)**:
+   - **Queda terminantemente prohibido implementar barras de navegación inferiores fijas** (`.mobile-bottom-nav`, `.mobile-action-dock` o menús tipo pestaña). Estas barras saturan la pantalla del celular, roban área de lectura vertical, chocan con las barras de navegación de iOS/Android y compiten visualmente con WhatsApp.
+2. **Navegación Móvil Ultra Limpia y Sin Fricción**:
+   - Arriba: Smart Header minimalista con Logotipo tipográfico puro a la izquierda y botón conciso **«Agendar»** a la derecha (`.btn-header-cta`).
+   - Abajo: Únicamente el botón flotante circular oficial de WhatsApp (`.whatsapp-float`).
+3. **Botón Flotante WhatsApp Anti-Corte**:
+   - `bottom: calc(28px + env(safe-area-inset-bottom, 0px));`
+   - `right: max(20px, env(safe-area-inset-right, 20px));`
+   - Cero `overflow: hidden`, asegurando que el ícono quede 100% visible sin ser recortado por las barras de herramientas del navegador móvil.

@@ -294,7 +294,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 65%;
+      width: 72%;
       height: 100%;
       pointer-events: none;
       z-index: 1;
@@ -308,20 +308,20 @@
       opacity: 0.96;
     }
 
-    /* Curva Eased de 8 Paradas Aterciopelada sin mask-image */
+    /* Curva Eased de 8 Paradas Aterciopelada (-10% en extensión de degradado) */
     .hero-bg-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(
         90deg,
         #0f0d0c 0%,
-        #0f0d0c 35%,
-        rgba(15, 13, 12, 0.96) 42%,
-        rgba(15, 13, 12, 0.80) 50%,
-        rgba(15, 13, 12, 0.50) 60%,
-        rgba(15, 13, 12, 0.20) 72%,
-        rgba(15, 13, 12, 0.05) 84%,
-        transparent 94%
+        #0f0d0c 25%,
+        rgba(15, 13, 12, 0.96) 32%,
+        rgba(15, 13, 12, 0.80) 40%,
+        rgba(15, 13, 12, 0.50) 50%,
+        rgba(15, 13, 12, 0.20) 62%,
+        rgba(15, 13, 12, 0.05) 74%,
+        transparent 84%
       );
       pointer-events: none;
     }
@@ -628,150 +628,176 @@
       line-height: 1.6;
     }
 
-    /* Grid de 6 Columnas en Desktop */
+    /* Grid de 3 Columnas en Desktop (2 filas de 3 tarjetas estilo Full-Bleed Minimalista) */
     .services-grid-6 {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
     }
 
     .service-card {
-      background: var(--color-surface-light);
-      border-radius: var(--radius-md);
+      position: relative;
+      border-radius: 22px;
       overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--color-border-soft);
+      aspect-ratio: 3 / 4;
+      min-height: 440px;
       display: flex;
       flex-direction: column;
-      transition: var(--transition-smooth);
-      position: relative;
+      justify-content: flex-end;
+      text-decoration: none;
+      color: #ffffff;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+      background-color: #1a1715;
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(196, 147, 119, 0.5);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3), 0 0 25px rgba(196, 147, 119, 0.25);
+      border-color: rgba(196, 147, 119, 0.6);
     }
 
-    .service-img-wrapper {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background-color: #f0eae1;
-    }
-
-    .service-card-img {
+    /* Imagen Protagonista Full-Bleed */
+    .service-card-bg-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+      object-position: center;
+      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 1;
     }
 
-    .service-card:hover .service-card-img {
+    .service-card:hover .service-card-bg-img {
       transform: scale(1.08);
     }
 
-    /* Icon Badge Flotante */
-    .service-floating-icon {
+    /* Degradado Vertical Orgánico: 40% superior 100% transparente para máxima pureza */
+    .service-card-overlay {
       position: absolute;
-      bottom: -16px;
-      right: 14px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: var(--color-surface-light);
-      border: 1px solid rgba(196, 147, 119, 0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-accent);
-      font-size: 0.9rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(15, 13, 12, 0) 0%,
+        rgba(15, 13, 12, 0) 38%,
+        rgba(15, 13, 12, 0.42) 64%,
+        rgba(15, 13, 12, 0.85) 84%,
+        rgba(15, 13, 12, 0.98) 100%
+      );
       z-index: 2;
+      transition: background 0.4s ease;
     }
 
-    .service-card-content {
-      padding: 22px 14px 14px;
+    .service-card:hover .service-card-overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(15, 13, 12, 0) 0%,
+        rgba(15, 13, 12, 0) 34%,
+        rgba(15, 13, 12, 0.50) 60%,
+        rgba(15, 13, 12, 0.88) 82%,
+        rgba(15, 13, 12, 0.98) 100%
+      );
+    }
+
+    /* Contenido Inferior Minimalista Superpuesto */
+    .service-content-overlay {
+      position: relative;
+      z-index: 3;
+      padding: 24px 22px 20px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+    }
+
+    .service-accent-line {
+      width: 32px;
+      height: 2px;
+      background-color: var(--color-accent);
+      margin-bottom: 10px;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .service-card:hover .service-accent-line {
+      width: 48px;
     }
 
     .service-name {
       font-family: var(--font-display);
-      font-size: 1.05rem;
-      line-height: 1.25;
-      color: var(--color-text-dark);
-      margin-bottom: 8px;
-      min-height: 42px;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 1.38rem;
+      line-height: 1.2;
+      color: #ffffff;
+      margin-bottom: 6px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .service-description {
-      font-size: 0.78rem;
-      color: var(--color-text-muted-dark);
+      font-size: 0.84rem;
       line-height: 1.45;
-      margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 16px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    /* 2 Píldoras Esenciales de Duración y Precio */
-    .service-details-row {
+    /* Fila Inferior: Precio & Botón Minimalista de Agendamiento */
+    .service-bottom-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 14px;
-      margin-top: auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .service-badge-pill {
+    .service-price-tag {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 8px;
-      background: rgba(196, 147, 119, 0.1);
-      color: #92583a;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(196, 147, 119, 0.25);
-    }
-
-    .service-badge-pill i {
-      font-size: 0.68rem;
-      color: var(--color-accent);
-    }
-
-    .btn-card-book {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      width: 100%;
-      padding: 10px 12px;
-      background: #f6efe6;
-      color: #382d24;
-      font-size: 0.78rem;
+      gap: 7px;
+      font-size: 0.94rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(196, 147, 119, 0.35);
-      transition: var(--transition-smooth);
+      color: #fce7db;
+      letter-spacing: 0.02em;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .btn-card-book:hover {
-      background: var(--color-accent-gradient);
+    .service-price-tag i {
+      color: var(--color-accent);
+      font-size: 0.82rem;
+    }
+
+    .service-action-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.88);
+      background: transparent;
+      border: none;
+      padding: 0;
+      transition: color 0.3s ease;
+    }
+
+    .service-action-cta i {
+      font-size: 0.76rem;
+      color: var(--color-accent);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease;
+    }
+
+    .service-card:hover .service-action-cta {
       color: #ffffff;
-      border-color: transparent;
-      box-shadow: 0 4px 12px rgba(196, 147, 119, 0.35);
+    }
+
+    .service-card:hover .service-action-cta i {
+      transform: translateX(5px);
+      color: #ffffff;
     }
 
     /* ==========================================================
@@ -887,115 +913,171 @@
       letter-spacing: 0.05em;
     }
 
-    /* Especialistas Grid (4 Columnas en Desktop) */
+    /* Especialistas Grid (4 Columnas en Desktop - Formato Retrato Editorial Full-Bleed) */
     .team-block-wrapper {
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
+      gap: 24px;
     }
 
     .team-card {
-      background: var(--color-surface-light);
-      border-radius: var(--radius-md);
-      padding: 24px 18px;
-      text-align: center;
-      border: 1px solid var(--color-border-soft);
-      box-shadow: var(--shadow-sm);
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4.2;
+      min-height: 410px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      transition: var(--transition-smooth);
+      justify-content: flex-end;
+      text-decoration: none;
+      color: #ffffff;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s ease;
+      background-color: #1a1715;
     }
 
     .team-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: rgba(196, 147, 119, 0.4);
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3), 0 0 25px rgba(196, 147, 119, 0.25);
+      border-color: rgba(196, 147, 119, 0.6);
     }
 
-    .team-avatar-wrapper {
-      position: relative;
-      width: 105px;
-      height: 105px;
-      margin-bottom: 16px;
-    }
-
-    .team-avatar {
+    .team-card-bg-img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #ffffff;
-      box-shadow: 0 0 0 2px var(--color-accent);
+      object-position: center top;
+      transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 1;
     }
 
-    .team-badge {
+    .team-card:hover .team-card-bg-img {
+      transform: scale(1.08);
+    }
+
+    .team-card-overlay {
       position: absolute;
-      bottom: -4px;
-      right: -4px;
-      background: var(--color-accent-gradient);
-      color: #ffffff;
-      font-size: 0.65rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: var(--radius-full);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      border: 2px solid #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(15, 13, 12, 0) 0%,
+        rgba(15, 13, 12, 0) 38%,
+        rgba(15, 13, 12, 0.45) 64%,
+        rgba(15, 13, 12, 0.86) 84%,
+        rgba(15, 13, 12, 0.98) 100%
+      );
+      z-index: 2;
+      transition: background 0.4s ease;
+    }
+
+    .team-card:hover .team-card-overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(15, 13, 12, 0) 0%,
+        rgba(15, 13, 12, 0) 32%,
+        rgba(15, 13, 12, 0.52) 60%,
+        rgba(15, 13, 12, 0.90) 82%,
+        rgba(15, 13, 12, 0.98) 100%
+      );
+    }
+
+    .team-content-overlay {
+      position: relative;
+      z-index: 3;
+      padding: 22px 18px 18px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-accent-line {
+      width: 28px;
+      height: 2px;
+      background-color: var(--color-accent);
+      margin-bottom: 8px;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    .team-card:hover .team-accent-line {
+      width: 42px;
     }
 
     .team-name {
       font-family: var(--font-display);
-      font-size: 1.15rem;
-      color: var(--color-text-dark);
+      font-size: 1.25rem;
+      line-height: 1.2;
+      color: #ffffff;
       margin-bottom: 4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .team-role {
-      font-size: 0.78rem;
-      color: #8c644d;
-      font-weight: 600;
-      min-height: 38px;
+      font-size: 0.8rem;
+      line-height: 1.35;
+      color: #f5d0b5;
+      font-weight: 500;
+      margin-bottom: 14px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .team-bottom-row {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin-bottom: 8px;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .team-rating {
-      color: #e5a93b;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
-    }
-
-    .btn-team-book {
+    .team-rating-tag {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 6px;
-      width: 100%;
-      padding: 8px 14px;
-      background: #f6efe6;
-      color: #382d24;
-      font-size: 0.78rem;
+      gap: 5px;
+      font-size: 0.8rem;
       font-weight: 700;
-      text-transform: uppercase;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(196, 147, 119, 0.35);
-      transition: var(--transition-smooth);
+      color: #ffffff;
     }
 
-    .btn-team-book:hover {
-      background: #25d366;
+    .team-rating-tag i {
+      color: #e5a93b;
+      font-size: 0.78rem;
+    }
+
+    .team-action-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.9);
+      background: transparent;
+      border: none;
+      padding: 0;
+      transition: color 0.3s ease;
+    }
+
+    .team-action-cta i {
+      font-size: 0.74rem;
+      color: var(--color-accent);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.3s ease;
+    }
+
+    .team-card:hover .team-action-cta {
       color: #ffffff;
-      border-color: #25d366;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    }
+
+    .team-card:hover .team-action-cta i {
+      transform: translateX(4px);
+      color: #ffffff;
     }
 
     /* ==========================================================
@@ -1442,28 +1524,45 @@
         gap: 12px !important;
       }
 
-      .service-card-content {
+      .service-card {
+        aspect-ratio: 3 / 4.4;
+        min-height: 270px;
+        border-radius: 16px;
+      }
+
+      .service-content-overlay {
         padding: 14px 10px 10px;
+      }
+
+      .service-accent-line {
+        width: 20px;
+        height: 1.5px;
+        margin-bottom: 5px;
       }
 
       .service-name {
         font-size: 0.88rem;
-        min-height: 36px;
+        line-height: 1.15;
         margin-bottom: 4px;
       }
 
       .service-description {
-        display: none; /* Oculto en móvil para tarjetas compactas */
+        display: none; /* Oculto en móvil para mantener la fotografía despejada */
       }
 
-      .service-badge-pill {
-        font-size: 0.66rem;
-        padding: 3px 6px;
+      .service-bottom-row {
+        padding-top: 8px;
       }
 
-      .btn-card-book {
-        padding: 8px 10px;
+      .service-price-tag {
         font-size: 0.72rem;
+        gap: 4px;
+      }
+
+      .service-action-cta {
+        padding: 0;
+        font-size: 0.68rem;
+        gap: 4px;
       }
 
       /* SOBRE NOSOTROS & ESPECIALISTAS EN MOVIL */
@@ -1490,44 +1589,56 @@
         font-size: 1.45rem;
       }
 
-      /* EQUIPO EN 2 COLUMNAS EN MOVIL */
+      /* EQUIPO EN 2 COLUMNAS EN MOVIL (Formato Retrato Full-Bleed) */
       .team-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
       }
 
       .team-card {
-        padding: 16px 10px;
+        aspect-ratio: 3 / 4.4;
+        min-height: 270px;
+        border-radius: 16px;
       }
 
-      .team-avatar-wrapper {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 10px;
+      .team-content-overlay {
+        padding: 14px 10px 10px;
       }
 
-      /* Regla Crítica: Ocultar badge de rol sobre la cara en móvil */
-      .team-badge {
-        display: none !important;
+      .team-accent-line {
+        width: 18px;
+        height: 1.5px;
+        margin-bottom: 4px;
       }
 
       .team-name {
-        font-size: 0.95rem;
+        font-size: 0.88rem;
+        line-height: 1.15;
+        margin-bottom: 2px;
       }
 
       .team-role {
-        font-size: 0.72rem;
-        min-height: 32px;
+        font-size: 0.68rem;
+        line-height: 1.25;
+        margin-bottom: 8px;
       }
 
-      .team-rating {
-        font-size: 0.7rem;
-        margin-bottom: 12px;
+      .team-bottom-row {
+        padding-top: 6px;
       }
 
-      .btn-team-book {
-        padding: 7px 8px;
-        font-size: 0.7rem;
+      .team-rating-tag {
+        font-size: 0.68rem;
+        gap: 3px;
+      }
+
+      .team-rating-tag i {
+        font-size: 0.68rem;
+      }
+
+      .team-action-cta {
+        font-size: 0.64rem;
+        gap: 4px;
       }
 
       /* UBICACION EN MOVIL */
@@ -1716,133 +1827,121 @@
         </p>
       </div>
 
-      <!-- Grid 6 Columnas Desktop / 2 Columnas Móvil -->
+      <!-- Grid 3 Columnas Desktop / 2 Columnas Móvil (Full-Bleed Minimalista) -->
       <div class="services-grid-6">
         <!-- Servicio 1 -->
-        <div class="service-card">
-          <div class="service-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masaje Relajante & Aromaterapia" class="service-card-img" />
-            <div class="service-floating-icon">
-              <i class="fa-solid fa-spa"></i>
-            </div>
-          </div>
-          <div class="service-card-content">
+        <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20servicio%20de%20Masaje%20Relajante%20y%20Aromaterapia." class="service-card" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masaje Relajante & Aromaterapia" class="service-card-bg-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-content-overlay">
+            <div class="service-accent-line"></div>
             <h3 class="service-name">Masaje Relajante & Aromaterapia</h3>
-            <p class="service-description">Terapia corporal con aceites esenciales botánicos y toallas tibias para disolver tensiones.</p>
-            <div class="service-details-row">
-              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
-              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $75.000 COP</span>
+            <p class="service-description">Terapia con aceites esenciales botánicos y toallas tibias para disolver tensiones.</p>
+            <div class="service-bottom-row">
+              <span class="service-price-tag">
+                <i class="fa-solid fa-tag"></i> $75.000 COP
+              </span>
+              <span class="service-action-cta">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </div>
-            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20servicio%20de%20Masaje%20Relajante%20y%20Aromaterapia." class="btn-card-book" target="_blank" rel="noopener">
-              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
+        </a>
 
         <!-- Servicio 2 -->
-        <div class="service-card">
-          <div class="service-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Hidrodermoabrasión & Limpieza Facial" class="service-card-img" />
-            <div class="service-floating-icon">
-              <i class="fa-solid fa-droplet"></i>
-            </div>
-          </div>
-          <div class="service-card-content">
+        <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20servicio%20de%20Hidrodermoabrasion%20Facial." class="service-card" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Hidrodermoabrasión & Limpieza Facial" class="service-card-bg-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-content-overlay">
+            <div class="service-accent-line"></div>
             <h3 class="service-name">Hidrodermoabrasión Facial</h3>
-            <p class="service-description">Extracción profunda, peeling ultrasónico e infusión con sérum de ácido hialurónico.</p>
-            <div class="service-details-row">
-              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
-              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $85.000 COP</span>
+            <p class="service-description">Extracción profunda, peeling ultrasónico e infusión con ácido hialurónico.</p>
+            <div class="service-bottom-row">
+              <span class="service-price-tag">
+                <i class="fa-solid fa-tag"></i> $85.000 COP
+              </span>
+              <span class="service-action-cta">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </div>
-            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20servicio%20de%20Hidrodermoabrasion%20Facial." class="btn-card-book" target="_blank" rel="noopener">
-              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
+        </a>
 
         <!-- Servicio 3 -->
-        <div class="service-card">
-          <div class="service-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" alt="Terapia con Piedras Volcánicas" class="service-card-img" />
-            <div class="service-floating-icon">
-              <i class="fa-solid fa-fire-flame-curved"></i>
-            </div>
-          </div>
-          <div class="service-card-content">
+        <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20la%20Terapia%20con%20Piedras%20Volcanicas." class="service-card" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" alt="Terapia con Piedras Volcánicas" class="service-card-bg-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-content-overlay">
+            <div class="service-accent-line"></div>
             <h3 class="service-name">Terapia Piedras Volcánicas</h3>
-            <p class="service-description">Masaje térmico profundo con piedras volcánicas pulidas que relajan el sistema muscular.</p>
-            <div class="service-details-row">
-              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 75 Mins</span>
-              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $95.000 COP</span>
+            <p class="service-description">Masaje térmico profundo con piedras volcánicas pulidas que calman el cuerpo.</p>
+            <div class="service-bottom-row">
+              <span class="service-price-tag">
+                <i class="fa-solid fa-tag"></i> $95.000 COP
+              </span>
+              <span class="service-action-cta">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </div>
-            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20la%20Terapia%20con%20Piedras%20Volcanicas." class="btn-card-book" target="_blank" rel="noopener">
-              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
+        </a>
 
         <!-- Servicio 4 -->
-        <div class="service-card">
-          <div class="service-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Moldeo Corporal & Drenaje Linfático" class="service-card-img" />
-            <div class="service-floating-icon">
-              <i class="fa-solid fa-person-dress"></i>
-            </div>
-          </div>
-          <div class="service-card-content">
+        <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Moldeo%20Corporal%20y%20Drenaje." class="service-card" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Moldeo Corporal & Drenaje Linfático" class="service-card-bg-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-content-overlay">
+            <div class="service-accent-line"></div>
             <h3 class="service-name">Moldeo Corporal & Drenaje</h3>
-            <p class="service-description">Técnicas manuales y aparatología no invasiva para tonificar, desinflamar y moldear la figura.</p>
-            <div class="service-details-row">
-              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 50 Mins</span>
-              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $90.000 COP</span>
+            <p class="service-description">Técnicas manuales y aparatología no invasiva para tonificar y desinflamar.</p>
+            <div class="service-bottom-row">
+              <span class="service-price-tag">
+                <i class="fa-solid fa-tag"></i> $90.000 COP
+              </span>
+              <span class="service-action-cta">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </div>
-            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Moldeo%20Corporal%20y%20Drenaje." class="btn-card-book" target="_blank" rel="noopener">
-              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
+        </a>
 
         <!-- Servicio 5 -->
-        <div class="service-card">
-          <div class="service-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Ritual Spa Renovación Corporal" class="service-card-img" />
-            <div class="service-floating-icon">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
-            </div>
-          </div>
-          <div class="service-card-content">
+        <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Ritual%20Renovacion%20Corporal." class="service-card" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Ritual Spa Renovación Corporal" class="service-card-bg-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-content-overlay">
+            <div class="service-accent-line"></div>
             <h3 class="service-name">Ritual Renovación Corporal</h3>
-            <p class="service-description">Exfoliación con sales minerales, mascarilla nutritiva y baño humectante con toallas calientes.</p>
-            <div class="service-details-row">
-              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 80 Mins</span>
-              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $110.000 COP</span>
+            <p class="service-description">Exfoliación con sales minerales, mascarilla nutritiva y toallas calientes.</p>
+            <div class="service-bottom-row">
+              <span class="service-price-tag">
+                <i class="fa-solid fa-tag"></i> $110.000 COP
+              </span>
+              <span class="service-action-cta">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </div>
-            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Ritual%20Renovacion%20Corporal." class="btn-card-book" target="_blank" rel="noopener">
-              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
+        </a>
 
         <!-- Servicio 6 -->
-        <div class="service-card">
-          <div class="service-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80" alt="Facial Antiedad Glow & Fototerapia" class="service-card-img" />
-            <div class="service-floating-icon">
-              <i class="fa-solid fa-gem"></i>
-            </div>
-          </div>
-          <div class="service-card-content">
+        <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Facial%20Antiedad%20Glow." class="service-card" target="_blank" rel="noopener">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Facial Antiedad Glow & LED" class="service-card-bg-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-content-overlay">
+            <div class="service-accent-line"></div>
             <h3 class="service-name">Facial Antiedad Glow & LED</h3>
-            <p class="service-description">Protocolo tensor reafirmante, estimulación de colágeno y fototerapia regeneradora.</p>
-            <div class="service-details-row">
-              <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 50 Mins</span>
-              <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $95.000 COP</span>
+            <p class="service-description">Protocolo tensor reafirmante, estimulación de colágeno y fototerapia LED.</p>
+            <div class="service-bottom-row">
+              <span class="service-price-tag">
+                <i class="fa-solid fa-tag"></i> $95.000 COP
+              </span>
+              <span class="service-action-cta">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </div>
-            <a href="https://wa.me/573104612507?text=Hola%20Angeless%20Spa%2C%20quisiera%20agendar%20el%20Facial%20Antiedad%20Glow." class="btn-card-book" target="_blank" rel="noopener">
-              Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -1910,63 +2009,83 @@
           </p>
         </div>
 
-        <!-- Grid 4 Columnas Desktop / 2 Columnas Móvil -->
+        <!-- Grid 4 Columnas Desktop / 2 Columnas Móvil (Formato Retrato Full-Bleed) -->
         <div class="team-grid">
           <!-- Especialista 1 -->
-          <div class="team-card">
-            <div class="team-avatar-wrapper">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Ángela María López" class="team-avatar" />
-              <span class="team-badge">Directora</span>
+          <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20una%20sesion%20con%20Angela%20Maria%20en%20Angeless%20Spa." class="team-card" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Ángela María López" class="team-card-bg-img" />
+            <div class="team-card-overlay"></div>
+            <div class="team-content-overlay">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Ángela María López</h3>
+              <p class="team-role">Directora & Terapeuta Holística</p>
+              <div class="team-bottom-row">
+                <span class="team-rating-tag">
+                  <i class="fa-solid fa-star"></i> 5.0 (120+)
+                </span>
+                <span class="team-action-cta">
+                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-            <h3 class="team-name">Ángela María López</h3>
-            <p class="team-role">Directora & Terapeuta Holística</p>
-            <div class="team-rating">★★★★★ (5.0)</div>
-            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20una%20sesion%20con%20Angela%20Maria%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
-              Agendar <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
+          </a>
 
           <!-- Especialista 2 -->
-          <div class="team-card">
-            <div class="team-avatar-wrapper">
-              <img src="https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=500&q=80" alt="Valentina Restrepo" class="team-avatar" />
-              <span class="team-badge">Master Facial</span>
+          <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20un%20facial%20con%20Valentina%20en%20Angeless%20Spa." class="team-card" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80" alt="Valentina Restrepo" class="team-card-bg-img" />
+            <div class="team-card-overlay"></div>
+            <div class="team-content-overlay">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Valentina Restrepo</h3>
+              <p class="team-role">Cosmiatra & Terapeuta Facial</p>
+              <div class="team-bottom-row">
+                <span class="team-rating-tag">
+                  <i class="fa-solid fa-star"></i> 5.0 (95+)
+                </span>
+                <span class="team-action-cta">
+                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-            <h3 class="team-name">Valentina Restrepo</h3>
-            <p class="team-role">Cosmiatra & Terapeuta Facial</p>
-            <div class="team-rating">★★★★★ (5.0)</div>
-            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20un%20facial%20con%20Valentina%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
-              Agendar <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
+          </a>
 
           <!-- Especialista 3 -->
-          <div class="team-card">
-            <div class="team-avatar-wrapper">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80" alt="Camila Morales" class="team-avatar" />
-              <span class="team-badge">Senior Spa</span>
+          <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20un%20masaje%20con%20Camila%20en%20Angeless%20Spa." class="team-card" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Camila Morales" class="team-card-bg-img" />
+            <div class="team-card-overlay"></div>
+            <div class="team-content-overlay">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Camila Morales</h3>
+              <p class="team-role">Masoterapeuta & Terapia Zen</p>
+              <div class="team-bottom-row">
+                <span class="team-rating-tag">
+                  <i class="fa-solid fa-star"></i> 4.9 (110+)
+                </span>
+                <span class="team-action-cta">
+                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-            <h3 class="team-name">Camila Morales</h3>
-            <p class="team-role">Masoterapeuta & Terapia Zen</p>
-            <div class="team-rating">★★★★★ (4.9)</div>
-            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20un%20masaje%20con%20Camila%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
-              Agendar <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
+          </a>
 
           <!-- Especialista 4 -->
-          <div class="team-card">
-            <div class="team-avatar-wrapper">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Dayana Martínez" class="team-avatar" />
-              <span class="team-badge">Terapeuta Pro</span>
+          <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20con%20Dayana%20en%20Angeless%20Spa." class="team-card" target="_blank" rel="noopener">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Dayana Martínez" class="team-card-bg-img" />
+            <div class="team-card-overlay"></div>
+            <div class="team-content-overlay">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Dayana Martínez</h3>
+              <p class="team-role">Especialista en Moldeo Corporal</p>
+              <div class="team-bottom-row">
+                <span class="team-rating-tag">
+                  <i class="fa-solid fa-star"></i> 5.0 (85+)
+                </span>
+                <span class="team-action-cta">
+                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
             </div>
-            <h3 class="team-name">Dayana Martínez</h3>
-            <p class="team-role">Especialista en Moldeo Corporal</p>
-            <div class="team-rating">★★★★★ (5.0)</div>
-            <a href="https://wa.me/573104612507?text=Hola%2C%20deseo%20agendar%20con%20Dayana%20en%20Angeless%20Spa." class="btn-team-book" target="_blank" rel="noopener">
-              Agendar <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </div>
+          </a>
         </div>
       </div>
     </div>

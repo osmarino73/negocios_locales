@@ -1,0 +1,1351 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Barbara Preschool | ChÃ­a - CajicÃ¡ | Preescolar BilingÃ¼e</title>
+    <meta name="description" content="Santa Barbara Preschool - Preescolar bilingÃ¼e en ChÃ­a-CajicÃ¡, Cundinamarca. EducaciÃ³n infantil de excelencia con valores, estimulaciÃ³n temprana y pensamiento creativo.">
+    <meta name="keywords" content="preescolar chia, jardin infantil cajica, guarderia bilingue cundinamarca, preescolar campestre chia cajica">
+
+    <!-- OpenGraph & Social Cards -->
+    <meta property="og:title" content="Santa Barbara Preschool | ChÃ­a - CajicÃ¡ | Preescolar BilingÃ¼e">
+    <meta property="og:description" content="EducaciÃ³n preescolar bilingÃ¼e centrada en valores, estimulaciÃ³n temprana y pensamiento creativo en la Sabana Norte de BogotÃ¡.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:image" content="hero.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#00A3E8',
+                        'brand-green': '#7CB342',
+                        'brand-purple': '#7B1FA2',
+                        'brand-red': '#EA4335',
+                        'brand-yellow': '#F8A825',
+                        'text-dark': '#1E2A38',
+                        'bg-soft': '#F9FBFD',
+                    },
+                    fontFamily: {
+                        'display': ['Nunito', 'Quicksand', 'sans-serif'],
+                        'body': ['Inter', 'Open Sans', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                        'color-blue': '0 10px 30px -5px rgba(0, 163, 232, 0.3)',
+                        'color-green': '0 10px 30px -5px rgba(124, 179, 66, 0.3)',
+                        'color-purple': '0 10px 30px -5px rgba(123, 31, 162, 0.3)',
+                        'color-red': '0 10px 30px -5px rgba(234, 67, 53, 0.3)',
+                        'color-yellow': '0 10px 30px -5px rgba(248, 168, 37, 0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Nunito', sans-serif; font-weight: 800; }
+        
+        .btn-primary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 20px 40px -10px rgba(248, 168, 37, 0.4);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #00A3E8 0%, #7CB342 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Counter animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #F9FBFD; }
+        ::-webkit-scrollbar-thumb { background: #00A3E8; border-radius: 5px; }
+        
+        /* Image hover zoom */
+        .img-zoom {
+            overflow: hidden;
+        }
+        .img-zoom img {
+            transition: transform 0.5s ease;
+        }
+        .img-zoom:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Safe area for floating WhatsApp */
+        .whatsapp-float-btn {
+            bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+            right: max(20px, env(safe-area-inset-right, 20px));
+        }
+
+        /* Smart Header Sticky Inteligente con Auto-Hide & Efecto TranslÃºcido Glassmorphism */
+        .header-sticky-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.82) !important;
+            backdrop-filter: blur(14px) saturate(180%);
+            -webkit-backdrop-filter: blur(14px) saturate(180%);
+            box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+            transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, background 0.3s ease;
+            will-change: transform;
+            padding-top: env(safe-area-inset-top, 0px);
+        }
+        .header-sticky-wrapper.header-hidden {
+            transform: translateY(-100%) !important;
+            box-shadow: none !important;
+        }
+
+        /* Hero Crossfade Slider & Ken Burns Animation */
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: 1;
+            transition: opacity 1.2s ease-in-out, transform 7s ease-out;
+            transform: scale(1);
+            pointer-events: none;
+        }
+        .hero-slide.active {
+            opacity: 1 !important;
+            z-index: 2;
+            transform: scale(1.05);
+            pointer-events: auto;
+        }
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 9999px;
+            background-color: rgba(255, 255, 255, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .hero-dot.active {
+            width: 32px;
+            background-color: #F8A825;
+            border-color: #F8A825;
+            box-shadow: 0 0 12px rgba(248, 168, 37, 0.8);
+        }
+
+        /* Hero Section & Text Placement Calibration */
+        .hero-fullwidth-section {
+            position: relative;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .hero-bg-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            pointer-events: none;
+            background: linear-gradient(
+                135deg, 
+                rgba(30, 42, 56, 0.85) 0%, 
+                rgba(30, 42, 56, 0.55) 50%, 
+                rgba(0, 163, 232, 0.30) 100%
+            );
+        }
+
+        /* Responsive Mobile Layout (< 768px): Texto estrictamente en la mitad inferior */
+        @media (max-width: 767px) {
+            .hero-fullwidth-section {
+                min-height: 740px !important;
+                height: 100vh;
+                max-height: 860px;
+                display: flex !important;
+                align-items: flex-end !important;
+                justify-content: center !important;
+                padding-top: 120px !important;
+                padding-bottom: 28px !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            /* 40% superior 100% transparente para ver a los niÃ±os con total nitidez */
+            .hero-bg-overlay {
+                background: linear-gradient(
+                    180deg, 
+                    rgba(30, 42, 56, 0) 0%, 
+                    rgba(30, 42, 56, 0) 36%, 
+                    rgba(30, 42, 56, 0.55) 50%, 
+                    rgba(30, 42, 56, 0.90) 72%, 
+                    #1E2A38 98%
+                ) !important;
+            }
+
+            .hero-text-block {
+                max-width: 360px !important;
+                margin: 0 auto !important;
+                text-align: center !important;
+                position: relative;
+                z-index: 20;
+            }
+
+            .hero-eyebrow {
+                font-size: 0.68rem !important;
+                letter-spacing: 0.16em !important;
+                padding: 4px 12px !important;
+                margin-bottom: 8px !important;
+                display: inline-block;
+            }
+
+            .hero-title {
+                font-size: 1.85rem !important;
+                line-height: 1.15 !important;
+                margin-bottom: 8px !important;
+                text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            }
+
+            .hero-desc {
+                font-size: 0.82rem !important;
+                line-height: 1.45 !important;
+                margin-bottom: 16px !important;
+                max-width: 320px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                color: #E2E8F0 !important;
+            }
+
+            .hero-actions {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 8px !important;
+                width: 100% !important;
+            }
+
+            .hero-actions .btn-primary, 
+            .hero-actions .btn-campus {
+                width: 100% !important;
+                max-width: 265px !important;
+                padding: 10px 18px !important;
+                font-size: 0.82rem !important;
+                border-radius: 50px !important;
+                justify-content: center !important;
+                text-align: center !important;
+            }
+
+            .hero-dots-container {
+                margin-top: 14px !important;
+            }
+
+            /* Scroll Snap Horizontal para la Barra de Pilares en Celulares */
+            .pillars-scroll-container {
+                display: flex !important;
+                overflow-x: auto !important;
+                scroll-snap-type: x mandatory !important;
+                -webkit-overflow-scrolling: touch !important;
+                padding-bottom: 8px !important;
+                gap: 12px !important;
+            }
+            .pillars-scroll-container::-webkit-scrollbar {
+                display: none;
+            }
+            .pillar-card {
+                flex: 0 0 250px !important;
+                scroll-snap-align: start !important;
+                padding: 18px !important;
+            }
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ChildCare",
+      "name": "Santa Barbara Preschool Chia-Cajica",
+      "description": "EducaciÃ³n preescolar bilingÃ¼e centrada en valores, estimulaciÃ³n temprana y pensamiento creativo en la Sabana Norte de BogotÃ¡.",
+      "url": "https://santabarbarapreschool.edu.co",
+      "telephone": "+573000000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sector ChÃ­a - CajicÃ¡",
+        "addressLocality": "ChÃ­a - CajicÃ¡",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 4.8959161,
+        "longitude": -74.0348085
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:30",
+          "closes": "16:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "350"
+      }
+    }
+    </script>
+</head>
+<body class="bg-bg-soft text-text-dark font-body antialiased">
+
+    <!-- 1. BARRA SUPERIOR DE UTILIDAD (Oculta en mÃ³vil para ganar 120px de foto limpia, visible en desktop) -->
+    <div class="hidden lg:block bg-brand-blue text-white text-sm py-2">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-wrap justify-center lg:justify-between items-center gap-2 text-xs lg:text-sm">
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <span class="flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        UbicaciÃ³n: Sector ChÃ­a - CajicÃ¡, Cundinamarca
+                    </span>
+                    <span class="hidden lg:inline">|</span>
+                    <a href="tel:+573000000000" class="flex items-center gap-1 hover:text-brand-yellow transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        Contacto: (+57) 300 000 0000
+                    </a>
+                    <span class="hidden lg:inline">|</span>
+                    <span class="flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Horario: Lun - Vie 7:30 AM - 4:30 PM
+                    </span>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" class="hover:text-brand-yellow transition-colors flex items-center gap-1">
+                        <span>ðŸ’¬ WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVEGACIÃ“N PRINCIPAL (Smart Header Inteligente con Auto-Hide y +10% Opacidad SÃ³lida) -->
+    <nav class="header-sticky-wrapper" id="mainStickyNavbar">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#inicio" class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center shadow-md">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="font-display font-extrabold text-xl text-text-dark leading-tight tracking-wide">SANTA BARBARA</div>
+                        <div class="text-xs text-brand-blue font-bold tracking-wider">PRESCHOOL Â· ChÃ­a - CajicÃ¡</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#inicio" class="text-text-dark hover:text-brand-blue font-medium transition-colors">Inicio</a>
+                    <a href="#nosotros" class="text-text-dark hover:text-brand-blue font-medium transition-colors">Nosotros</a>
+                    <a href="#pilares" class="text-text-dark hover:text-brand-blue font-medium transition-colors">Pilares</a>
+                    <a href="#niveles" class="text-text-dark hover:text-brand-blue font-medium transition-colors">Niveles</a>
+                    <a href="#programas" class="text-text-dark hover:text-brand-blue font-medium transition-colors">Talleres</a>
+                    <a href="#docentes" class="text-text-dark hover:text-brand-blue font-medium transition-colors">Docentes</a>
+                    <a href="#ubicacion" class="text-text-dark hover:text-brand-blue font-medium transition-colors">UbicaciÃ³n</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#admisiones" class="btn-primary bg-brand-yellow text-text-dark px-6 py-2.5 rounded-full font-bold text-sm shadow-lg hover:shadow-xl">
+                        POSTULAR AHORA
+                    </a>
+                </div>
+
+                <!-- Mobile CTA Button (Navbar ultra limpio sin menÃº hamburguesa) -->
+                <div class="lg:hidden">
+                    <a href="#admisiones" class="btn-primary bg-brand-yellow text-text-dark px-4 py-1.5 rounded-full font-bold text-xs shadow-md">
+                        POSTULAR
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION (100% Bleed, en mÃ³vil texto estrictamente desde la mitad hacia abajo) -->
+    <section id="inicio" class="hero-fullwidth-section relative overflow-hidden">
+        <!-- Background Image Slider (Alternancia Suave) -->
+        <div class="absolute inset-0 z-0 overflow-hidden" id="heroBgSlider">
+            <!-- Slide 1: NiÃ±os en taller lÃºdico de mÃºsica e instrumentos -->
+            <div class="hero-slide active" data-slide="0">
+                <img src="hero.webp" 
+                     alt="NiÃ±os felices en taller de mÃºsica y ritmo - Santa Barbara Preschool" 
+                     class="w-full h-full object-cover object-center">
+            </div>
+            <!-- Slide 2: Cinco niÃ±os jugando con bloques, pintura y tren -->
+            <div class="hero-slide" data-slide="1">
+                <img src="hero-2.webp" 
+                     alt="Cinco niÃ±os jugando y explorando en la guarderÃ­a - Santa Barbara Preschool" 
+                     class="w-full h-full object-cover object-center">
+            </div>
+            <!-- Gradient Overlay Calibrado (38% superior transparente en mÃ³vil) -->
+            <div class="hero-bg-overlay"></div>
+        </div>
+
+        <!-- Content Container (Centrado vertical en desktop, anclado al fondo en mÃ³vil) -->
+        <div class="relative z-20 container mx-auto px-4 lg:px-8 py-16 lg:py-24 flex items-end lg:items-center justify-center">
+            <div class="hero-text-block max-w-3xl mx-auto text-center text-white">
+                <span class="hero-eyebrow inline-block bg-brand-yellow/25 text-brand-yellow border border-brand-yellow/40 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4">
+                    Admisiones Abiertas Â· ChÃ­a - CajicÃ¡
+                </span>
+                <h1 class="hero-title font-display font-extrabold text-4xl lg:text-6xl xl:text-7xl leading-tight mb-4">
+                    Los NiÃ±os Son Los <span class="text-brand-yellow italic">Mejores Exploradores</span> Del Mundo
+                </h1>
+                <p class="hero-desc text-base lg:text-xl text-gray-100 mb-6 leading-relaxed">
+                    EducaciÃ³n preescolar bilingÃ¼e centrada en valores, estimulaciÃ³n temprana y pensamiento creativo en la Sabana Norte de BogotÃ¡.
+                </p>
+                <div class="hero-actions flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                    <a href="#admisiones" class="btn-primary inline-block bg-brand-yellow text-text-dark px-8 py-3.5 lg:py-4 rounded-full font-bold text-base lg:text-lg shadow-2xl hover:shadow-brand-yellow/50">
+                        POSTULAR AHORA
+                    </a>
+                    <a href="#nosotros" class="btn-campus inline-block bg-white/15 backdrop-blur-md text-white border border-white/30 px-8 py-3.5 lg:py-4 rounded-full font-bold text-base lg:text-lg hover:bg-white/25 transition-colors">
+                        CONOCE NUESTRO CAMPUS
+                    </a>
+                </div>
+
+                <!-- Slider Indicator Dots -->
+                <div class="hero-dots-container flex items-center justify-center gap-2.5 mt-6">
+                    <button class="hero-dot active" aria-label="Ver fotografÃ­a de mÃºsica y ritmo" onclick="switchHeroSlide(0)"></button>
+                    <button class="hero-dot" aria-label="Ver fotografÃ­a de juego y arte en guarderÃ­a" onclick="switchHeroSlide(1)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FRANJA DE PILARES Y GARANTÃAS (SecciÃ³n Independiente Fuera del Hero) -->
+    <section id="pilares" class="py-8 lg:py-12 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="pillars-scroll-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div class="bg-brand-blue p-5 lg:p-6 rounded-2xl shadow-color-blue text-white card-hover pillar-card">
+                    <div class="text-3xl lg:text-4xl mb-2 lg:mb-3">ðŸŽ¯</div>
+                    <h3 class="font-display font-bold text-lg lg:text-xl mb-1">EducaciÃ³n Activa</h3>
+                    <p class="text-xs lg:text-sm text-blue-100 leading-relaxed">MetodologÃ­as vivenciales basadas en exploraciÃ³n guiada y juego.</p>
+                </div>
+                <div class="bg-brand-green p-5 lg:p-6 rounded-2xl shadow-color-green text-white card-hover pillar-card">
+                    <div class="text-3xl lg:text-4xl mb-2 lg:mb-3">ðŸ›¡ï¸</div>
+                    <h3 class="font-display font-bold text-lg lg:text-xl mb-1">Ambiente Seguro</h3>
+                    <p class="text-xs lg:text-sm text-green-100 leading-relaxed">Protocolos integrales de cuidado, nutriciÃ³n y bienestar infantil.</p>
+                </div>
+                <div class="bg-brand-purple p-5 lg:p-6 rounded-2xl shadow-color-purple text-white card-hover pillar-card">
+                    <div class="text-3xl lg:text-4xl mb-2 lg:mb-3">ðŸŒ</div>
+                    <h3 class="font-display font-bold text-lg lg:text-xl mb-1">InmersiÃ³n BilingÃ¼e</h3>
+                    <p class="text-xs lg:text-sm text-purple-100 leading-relaxed">Desarrollo natural del inglÃ©s desde los primeros pasos escolares.</p>
+                </div>
+                <div class="bg-brand-red p-5 lg:p-6 rounded-2xl shadow-color-red text-white card-hover pillar-card">
+                    <div class="text-3xl lg:text-4xl mb-2 lg:mb-3">ðŸ’–</div>
+                    <h3 class="font-display font-bold text-lg lg:text-xl mb-1">Desarrollo Emocional</h3>
+                    <p class="text-xs lg:text-sm text-red-100 leading-relaxed">Fortalecimiento de la autonomÃ­a, empatÃ­a, resiliencia y autoestima.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SOBRE NUESTRO PREESCOLAR -->
+    <section id="nosotros" class="py-20 lg:py-28 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <!-- Columna Izquierda - Ventajas Institucionales RediseÃ±adas -->
+                <div class="grid grid-cols-2 gap-4 lg:gap-6">
+                    <!-- Tarjeta 1: Aulas Campestres -->
+                    <div class="bg-white p-5 lg:p-6 rounded-3xl text-center card-hover border border-gray-100/80 border-t-4 border-t-brand-blue shadow-soft hover:shadow-color-blue transition-all duration-300 group flex flex-col items-center justify-between">
+                        <div class="w-full">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-brand-blue/10 text-brand-blue mb-3">
+                                ðŸŒ± 100% Campestre
+                            </span>
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-blue/20 to-brand-blue/5 text-brand-blue rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-display font-bold text-text-dark text-base lg:text-lg mb-1.5">Aulas Campestres</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">Espacios verdes amplios y seguros para jugar al aire libre sin ruido ni poluciÃ³n.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: NutriciÃ³n Balanceada -->
+                    <div class="bg-white p-5 lg:p-6 rounded-3xl text-center card-hover lg:mt-8 border border-gray-100/80 border-t-4 border-t-brand-green shadow-soft hover:shadow-color-green transition-all duration-300 group flex flex-col items-center justify-between">
+                        <div class="w-full">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-brand-green/10 text-brand-green mb-3">
+                                ðŸ¥— NutriciÃ³n Avalada
+                            </span>
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-green/20 to-brand-green/5 text-brand-green rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+                                    <path d="M4 11h16a1 1 0 0 1 1 1c0 5-4 8-9 8s-9-3-9-8a1 1 0 0 1 1-1Z"/>
+                                    <path d="M6 7v4"/>
+                                    <path d="M10 5v6"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-display font-bold text-text-dark text-base lg:text-lg mb-1.5">NutriciÃ³n Saludable</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">Minuta balanceada con ingredientes frescos y fomento de hÃ¡bitos sanos diarios.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Arte y MÃºsica -->
+                    <div class="bg-white p-5 lg:p-6 rounded-3xl text-center card-hover border border-gray-100/80 border-t-4 border-t-brand-purple shadow-soft hover:shadow-color-purple transition-all duration-300 group flex flex-col items-center justify-between">
+                        <div class="w-full">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-brand-purple/10 text-brand-purple mb-3">
+                                ðŸŽ¨ Talleres Diarios
+                            </span>
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 text-brand-purple rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-inner group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                                    <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                                    <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                                    <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.562C22 6.5 17.5 2 12 2Z"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-display font-bold text-text-dark text-base lg:text-lg mb-1.5">Arte & ExpresiÃ³n</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">EstimulaciÃ³n sensorial, motricidad fina y ritmo para despertar su imaginaciÃ³n.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Transporte Escolar -->
+                    <div class="bg-white p-5 lg:p-6 rounded-3xl text-center card-hover lg:mt-8 border border-gray-100/80 border-t-4 border-t-brand-yellow shadow-soft hover:shadow-color-yellow transition-all duration-300 group flex flex-col items-center justify-between">
+                        <div class="w-full">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-brand-yellow/15 text-amber-700 mb-3">
+                                ðŸšŒ Puerta a Puerta
+                            </span>
+                            <div class="w-14 h-14 bg-gradient-to-br from-brand-yellow/25 to-brand-yellow/10 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-inner group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
+                                <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 6v6"/>
+                                    <path d="M15 6v6"/>
+                                    <path d="M2 12h19.6"/>
+                                    <path d="M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.6-.2-1.1-.5-1.5-.7-.8-2.2-1.5-3.5-1.5H5c-1.3 0-2.8.7-3.5 1.5-.3.4-.5.9-.5 1.5 0 .4.1.8.2 1.2.3 1.1.8 2.8.8 2.8h3"/>
+                                    <circle cx="7" cy="18" r="2"/>
+                                    <path d="M9 18h5"/>
+                                    <circle cx="16" cy="18" r="2"/>
+                                </svg>
+                            </div>
+                            <h4 class="font-display font-bold text-text-dark text-base lg:text-lg mb-1.5">Rutas Seguras</h4>
+                            <p class="text-xs text-gray-500 leading-relaxed">Cobertura puerta a puerta en ChÃ­a, CajicÃ¡ y sectores vecinos con monitora fija.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha - Contenido -->
+                <div>
+                    <span class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-2 block">Trayectoria & Confianza</span>
+                    <h2 class="font-display font-extrabold text-4xl lg:text-5xl text-text-dark mb-6 leading-tight">
+                        Bienvenidos a <span class="text-brand-yellow">Santa Barbara Preschool</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Somos una instituciÃ³n educativa de excelencia ubicada estratÃ©gicamente en el sector ChÃ­a-CajicÃ¡, especializada en educaciÃ³n preescolar bilingÃ¼e. Nuestra trayectoria de mÃ¡s de 10 aÃ±os nos ha permitido formar niÃ±os felices, seguros y preparados para el futuro.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Contamos con acreditaciÃ³n pedagÃ³gica y un enfoque humano que prioriza el desarrollo integral de cada niÃ±o, respetando sus ritmos de aprendizaje y fomentando valores fundamentales como el respeto, la solidaridad y la curiosidad por el mundo.
+                    </p>
+                    <a href="#niveles" class="btn-primary inline-block bg-brand-yellow text-text-dark px-8 py-3 rounded-full font-bold shadow-lg">
+                        CONOCER NUESTROS NIVELES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BANNER INTERMEDIO -->
+    <section class="relative py-24 bg-brand-blue overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?w=1600&h=600&fit=crop" 
+                 alt="Docentes y alumnos" 
+                 class="w-full h-full object-cover">
+        </div>
+        <div class="relative container mx-auto px-4 lg:px-8 text-center text-white">
+            <h2 class="font-display font-extrabold text-3xl lg:text-5xl mb-6 leading-tight">
+                EnseÃ±ando a los niÃ±os a construir un gran futuro
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Cada dÃ­a es una nueva oportunidad para aprender, crecer y soÃ±ar en grande.
+            </p>
+            <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20quisiera%20agendar%20una%20visita%20guiada." target="_blank" class="btn-primary inline-block bg-white text-brand-blue px-10 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-white/50">
+                AGENDAR VISITA GUIADA
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. NIVELES EDUCATIVOS -->
+    <section id="niveles" class="py-20 lg:py-28 bg-bg-soft">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-2 block">MatrÃ­culas Abiertas</span>
+                <h2 class="font-display font-extrabold text-4xl lg:text-5xl text-text-dark mb-4">
+                    Nuestros <span class="text-brand-yellow">Niveles Educativos</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Programas adaptados a cada etapa del desarrollo infantil con atenciÃ³n personalizada.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Nivel 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border-t-4 border-brand-blue flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-blue/10 p-6 text-center">
+                            <div class="text-brand-blue font-bold text-sm mb-2 uppercase tracking-wider">Caminadores</div>
+                            <h3 class="font-display font-bold text-2xl text-text-dark">1 a 2 aÃ±os</h3>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                Jornada: Media o Completa
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                AlimentaciÃ³n balanceada incluida
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                EstimulaciÃ³n temprana & sensorial
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20deseo%20consultar%20cupo%20para%20Caminadores" target="_blank" class="block text-center w-full py-3 border-2 border-brand-blue text-brand-blue rounded-xl font-bold hover:bg-brand-blue hover:text-white transition-colors">
+                            CONSULTAR CUPO
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nivel 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border-t-4 border-brand-yellow flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-yellow/10 p-6 text-center">
+                            <div class="text-brand-yellow font-bold text-sm mb-2 uppercase tracking-wider">PÃ¡rvulos</div>
+                            <h3 class="font-display font-bold text-2xl text-text-dark">2 a 3 aÃ±os</h3>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                Jornada: Media o Completa
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                AlimentaciÃ³n balanceada incluida
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                Inicio bilingÃ¼e interactivo
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20deseo%20consultar%20cupo%20para%20P%C3%A1rvulos" target="_blank" class="block text-center w-full py-3 border-2 border-brand-yellow text-brand-yellow rounded-xl font-bold hover:bg-brand-yellow hover:text-white transition-colors">
+                            CONSULTAR CUPO
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nivel 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border-t-4 border-brand-green flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-green/10 p-6 text-center">
+                            <div class="text-brand-green font-bold text-sm mb-2 uppercase tracking-wider">Pre-JardÃ­n</div>
+                            <h3 class="font-display font-bold text-2xl text-text-dark">3 a 4 aÃ±os</h3>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                Jornada: Media o Completa
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                AlimentaciÃ³n balanceada incluida
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                InmersiÃ³n natural en inglÃ©s
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20deseo%20consultar%20cupo%20para%20Pre-Jard%C3%ADn" target="_blank" class="block text-center w-full py-3 border-2 border-brand-green text-brand-green rounded-xl font-bold hover:bg-brand-green hover:text-white transition-colors">
+                            CONSULTAR CUPO
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Nivel 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover border-t-4 border-brand-red flex flex-col justify-between">
+                    <div>
+                        <div class="bg-brand-red/10 p-6 text-center">
+                            <div class="text-brand-red font-bold text-sm mb-2 uppercase tracking-wider">JardÃ­n</div>
+                            <h3 class="font-display font-bold text-2xl text-text-dark">4 a 5 aÃ±os</h3>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                Jornada: Media o Completa
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                AlimentaciÃ³n balanceada incluida
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="text-brand-green font-bold">âœ“</span>
+                                PreparaciÃ³n para transiciÃ³n escolar
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20deseo%20consultar%20cupo%20para%20Jard%C3%ADn" target="_blank" class="block text-center w-full py-3 border-2 border-brand-red text-brand-red rounded-xl font-bold hover:bg-brand-red hover:text-white transition-colors">
+                            CONSULTAR CUPO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PROGRAMAS Y TALLERES PEDAGÃ“GICOS -->
+    <section id="programas" class="py-20 lg:py-28 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-2 block">Aprendizaje Divertido</span>
+                <h2 class="font-display font-extrabold text-4xl lg:text-5xl text-text-dark mb-4">
+                    Nuestros <span class="text-brand-yellow">Talleres Formativos</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Experiencias que potencian los talentos innatos de cada niÃ±o a travÃ©s de metodologÃ­as activas.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Programa 1 -->
+                <div class="flex flex-col lg:flex-row gap-6 bg-bg-soft rounded-3xl overflow-hidden card-hover border border-gray-100">
+                    <div class="lg:w-2/5">
+                        <img src="https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=400&h=400&fit=crop" 
+                             alt="EstimulaciÃ³n temprana" 
+                             class="w-full h-64 lg:h-full object-cover">
+                    </div>
+                    <div class="lg:w-3/5 p-8 flex flex-col justify-center">
+                        <div class="text-4xl mb-4">ðŸƒ</div>
+                        <h3 class="font-display font-bold text-2xl text-text-dark mb-3">EstimulaciÃ³n Temprana & Psicomotricidad</h3>
+                        <p class="text-gray-600">Actividades fÃ­sicas y sensoriales que desarrollan la coordinaciÃ³n, equilibrio y conciencia corporal desde los primeros meses.</p>
+                    </div>
+                </div>
+
+                <!-- Programa 2 -->
+                <div class="flex flex-col lg:flex-row gap-6 bg-bg-soft rounded-3xl overflow-hidden card-hover border border-gray-100">
+                    <div class="lg:w-2/5">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=400&fit=crop" 
+                             alt="BilingÃ¼ismo y lectura" 
+                             class="w-full h-64 lg:h-full object-cover">
+                    </div>
+                    <div class="lg:w-3/5 p-8 flex flex-col justify-center">
+                        <div class="text-4xl mb-4">ðŸ“š</div>
+                        <h3 class="font-display font-bold text-2xl text-text-dark mb-3">Taller de Lectura & BilingÃ¼ismo Natural</h3>
+                        <p class="text-gray-600">InmersiÃ³n en inglÃ©s a travÃ©s de cuentos, canciones y juegos que hacen del aprendizaje un proceso natural, alegre y divertido.</p>
+                    </div>
+                </div>
+
+                <!-- Programa 3 -->
+                <div class="flex flex-col lg:flex-row gap-6 bg-bg-soft rounded-3xl overflow-hidden card-hover border border-gray-100">
+                    <div class="lg:w-2/5">
+                        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=400&fit=crop" 
+                             alt="MÃºsica y expresiÃ³n" 
+                             class="w-full h-64 lg:h-full object-cover">
+                    </div>
+                    <div class="lg:w-3/5 p-8 flex flex-col justify-center">
+                        <div class="text-4xl mb-4">ðŸŽµ</div>
+                        <h3 class="font-display font-bold text-2xl text-text-dark mb-3">MÃºsica, Movimiento & ExpresiÃ³n Corporal</h3>
+                        <p class="text-gray-600">Desarrollo de la creatividad, ritmo y expresiÃ³n emocional a travÃ©s de la mÃºsica, danza y pequeÃ±as artes escÃ©nicas.</p>
+                    </div>
+                </div>
+
+                <!-- Programa 4 -->
+                <div class="flex flex-col lg:flex-row gap-6 bg-bg-soft rounded-3xl overflow-hidden card-hover border border-gray-100">
+                    <div class="lg:w-2/5">
+                        <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=400&h=400&fit=crop" 
+                             alt="Mini huerta ecolÃ³gica" 
+                             class="w-full h-64 lg:h-full object-cover">
+                    </div>
+                    <div class="lg:w-3/5 p-8 flex flex-col justify-center">
+                        <div class="text-4xl mb-4">ðŸŒ±</div>
+                        <h3 class="font-display font-bold text-2xl text-text-dark mb-3">Mini Huerta & Conciencia EcolÃ³gica</h3>
+                        <p class="text-gray-600">Aprendizaje sobre naturaleza, siembra, sostenibilidad y cuidado amoroso del medio ambiente en nuestro entorno campestre.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ESTADÃSTICAS -->
+    <section class="py-20 bg-brand-yellow relative overflow-hidden">
+        <div class="absolute top-0 left-0 text-6xl opacity-20 transform -rotate-12 select-none">âœï¸</div>
+        <div class="absolute top-0 right-0 text-6xl opacity-20 transform rotate-12 select-none">ðŸ“</div>
+        <div class="absolute bottom-0 left-1/4 text-6xl opacity-20 transform -rotate-12 select-none">ðŸŽ¨</div>
+        <div class="absolute bottom-0 right-1/4 text-6xl opacity-20 transform rotate-12 select-none">ðŸ§¸</div>
+        
+        <div class="relative container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center text-text-dark">
+                <div class="counter-item">
+                    <div class="counter font-display font-extrabold text-4xl lg:text-6xl mb-2" data-target="10">0</div>
+                    <div class="font-bold text-lg">AÃ±os de Experiencia</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter font-display font-extrabold text-4xl lg:text-6xl mb-2" data-target="350">0</div>
+                    <div class="font-bold text-lg">Familias Felices</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter font-display font-extrabold text-4xl lg:text-6xl mb-2" data-target="100">0</div>
+                    <div class="font-bold text-lg">% Docentes BilingÃ¼es</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter font-display font-extrabold text-4xl lg:text-6xl mb-2" data-target="12">0</div>
+                    <div class="font-bold text-lg">NiÃ±os MÃ¡ximo por Aula</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. EQUIPO DOCENTE -->
+    <section id="docentes" class="py-20 lg:py-28 bg-bg-soft">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-2 block">Nuestro Talento</span>
+                <h2 class="font-display font-extrabold text-4xl lg:text-5xl text-text-dark mb-4">
+                    Docentes <span class="text-brand-yellow">Certificadas</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Licenciadas en pedagogÃ­a infantil con formaciÃ³n en primera infancia y primeros auxilios.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Docente 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover">
+                    <div class="img-zoom">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&h=500&fit=crop" 
+                             alt="Docente Caminadores" 
+                             class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl text-text-dark mb-1">MarÃ­a Fernanda LÃ³pez</h3>
+                        <p class="text-brand-blue font-semibold text-sm mb-3">Nivel: Caminadores</p>
+                        <p class="text-gray-600 text-sm">Especialista en estimulaciÃ³n temprana y desarrollo motor infantil.</p>
+                    </div>
+                </div>
+
+                <!-- Docente 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover">
+                    <div class="img-zoom">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=500&fit=crop" 
+                             alt="Docente PÃ¡rvulos" 
+                             class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl text-text-dark mb-1">Laura MartÃ­nez</h3>
+                        <p class="text-brand-blue font-semibold text-sm mb-3">Nivel: PÃ¡rvulos</p>
+                        <p class="text-gray-600 text-sm">Experta en bilingÃ¼ismo temprano y desarrollo del lenguaje.</p>
+                    </div>
+                </div>
+
+                <!-- Docente 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover">
+                    <div class="img-zoom">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=500&fit=crop" 
+                             alt="Docente Pre-JardÃ­n" 
+                             class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl text-text-dark mb-1">Andrea RodrÃ­guez</h3>
+                        <p class="text-brand-blue font-semibold text-sm mb-3">Nivel: Pre-JardÃ­n</p>
+                        <p class="text-gray-600 text-sm">Licenciada en educaciÃ³n preescolar con Ã©nfasis en arte y creatividad.</p>
+                    </div>
+                </div>
+
+                <!-- Docente 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-soft card-hover">
+                    <div class="img-zoom">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop" 
+                             alt="Docente JardÃ­n" 
+                             class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display font-bold text-xl text-text-dark mb-1">Carolina GÃ³mez</h3>
+                        <p class="text-brand-blue font-semibold text-sm mb-3">Nivel: JardÃ­n</p>
+                        <p class="text-gray-600 text-sm">Especialista en preparaciÃ³n integral para la transiciÃ³n escolar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. TESTIMONIOS -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-2 block">Testimonios Reales</span>
+                <h2 class="font-display font-extrabold text-4xl lg:text-5xl text-text-dark mb-4">
+                    Lo Que Dicen <span class="text-brand-yellow">Los Padres</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-bg-soft p-8 rounded-2xl shadow-soft border border-gray-100">
+                    <div class="flex text-brand-yellow text-lg mb-4">
+                        <span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Santa Barbara ha sido fundamental en el desarrollo de mi hija. El ambiente es cÃ¡lido, seguro y el bilingÃ¼ismo es real y natural. Â¡Totalmente recomendado!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-brand-blue rounded-full flex items-center justify-center text-white font-bold">MP</div>
+                        <div>
+                            <div class="font-bold text-text-dark">MarÃ­a Paula SÃ¡nchez</div>
+                            <div class="text-sm text-gray-500">Madre de SofÃ­a - JardÃ­n</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-bg-soft p-8 rounded-2xl shadow-soft border border-gray-100">
+                    <div class="flex text-brand-yellow text-lg mb-4">
+                        <span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Las instalaciones son hermosas, campestres y el personal es excepcional. Mi hijo llegÃ³ sin inglÃ©s y ahora habla con naturalidad. Excelente proyecto."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center text-white font-bold">CR</div>
+                        <div>
+                            <div class="font-bold text-text-dark">Carlos RodrÃ­guez</div>
+                            <div class="text-sm text-gray-500">Padre de Mateo - Pre-JardÃ­n</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-bg-soft p-8 rounded-2xl shadow-soft border border-gray-100">
+                    <div class="flex text-brand-yellow text-lg mb-4">
+                        <span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span><span>â˜…</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"La ubicaciÃ³n entre ChÃ­a y CajicÃ¡ es perfecta. El transporte es seguro y puntual. Mis twins adoran ir al preescolar. Â¡Gracias por tanto cariÃ±o y cuidado!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-brand-purple rounded-full flex items-center justify-center text-white font-bold">LM</div>
+                        <div>
+                            <div class="font-bold text-text-dark">Laura MartÃ­nez</div>
+                            <div class="text-sm text-gray-500">Madre de Emma y Lucas - PÃ¡rvulos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. ADMISIONES & FORMULARIO -->
+    <section id="admisiones" class="py-20 lg:py-28 bg-bg-soft">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Imagen -->
+                <div class="img-zoom rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=900&fit=crop" 
+                         alt="Coordinadora de admisiones" 
+                         class="w-full h-full object-cover">
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-brand-blue rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
+                    <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3 inline-block">Proceso 2024 - 2025</span>
+                    <h3 class="font-display font-extrabold text-3xl mb-2">Solicita InformaciÃ³n de MatrÃ­cula</h3>
+                    <p class="text-blue-100 mb-8">Completa el formulario y nos contactaremos contigo en menos de 24 horas.</p>
+                    
+                    <form class="space-y-5" id="admisionForm">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Nombre del Acudiente</label>
+                            <input type="text" id="nombreAcudiente" required 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/15 border border-white/30 text-white placeholder-blue-100 focus:outline-none focus:border-white focus:bg-white/25 transition-colors"
+                                   placeholder="Tu nombre completo">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Correo ElectrÃ³nico</label>
+                            <input type="email" id="correoAcudiente" required 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/15 border border-white/30 text-white placeholder-blue-100 focus:outline-none focus:border-white focus:bg-white/25 transition-colors"
+                                   placeholder="tu@email.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">TelÃ©fono / WhatsApp</label>
+                            <div class="flex items-center rounded-xl bg-white/15 border border-white/30 focus-within:border-white focus-within:bg-white/25 transition-colors overflow-hidden">
+                                <span class="inline-flex items-center gap-1.5 px-3.5 py-3 text-white font-bold text-sm bg-white/10 border-r border-white/25 select-none shrink-0">
+                                    ðŸ‡¨ðŸ‡´ +57
+                                </span>
+                                <input type="tel" id="telAcudiente" required 
+                                       class="w-full px-3.5 py-3 bg-transparent text-white placeholder-blue-100/70 focus:outline-none"
+                                       placeholder="300 000 0000">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2">Edad del NiÃ±o(a)</label>
+                            <select id="edadNino" required 
+                                    class="w-full px-4 py-3 rounded-xl bg-white/15 border border-white/30 text-white focus:outline-none focus:border-white focus:bg-white/25 transition-colors [&>option]:text-text-dark">
+                                <option value="" class="text-text-dark">Selecciona un nivel</option>
+                                <option value="1-2 aÃ±os (Caminadores)" class="text-text-dark">1-2 aÃ±os (Caminadores)</option>
+                                <option value="2-3 aÃ±os (PÃ¡rvulos)" class="text-text-dark">2-3 aÃ±os (PÃ¡rvulos)</option>
+                                <option value="3-4 aÃ±os (Pre-JardÃ­n)" class="text-text-dark">3-4 aÃ±os (Pre-JardÃ­n)</option>
+                                <option value="4-5 aÃ±os (JardÃ­n)" class="text-text-dark">4-5 aÃ±os (JardÃ­n)</option>
+                            </select>
+                        </div>
+                        <button type="submit" 
+                                class="w-full btn-primary bg-brand-yellow text-text-dark py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl mt-4">
+                            ENVIAR SOLICITUD AHORA
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. MAPA & UBICACIÃ“N LOCAL -->
+    <section id="ubicacion" class="py-20 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-blue font-bold text-sm tracking-wider uppercase mb-2 block">UbicaciÃ³n EstratÃ©gica</span>
+                <h2 class="font-display font-extrabold text-4xl lg:text-5xl text-text-dark mb-4">
+                    Nuestro <span class="text-brand-yellow">Campus</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    FÃ¡cil acceso entre ChÃ­a y CajicÃ¡, Cundinamarca, en un entorno campestre, seguro y libre de ruido.
+                </p>
+            </div>
+
+            <div class="bg-bg-soft rounded-3xl overflow-hidden shadow-soft border border-gray-100 grid lg:grid-cols-12 items-stretch">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-bold text-2xl text-text-dark mb-6">Santa Barbara Preschool</h3>
+                        <div class="space-y-4 text-gray-600 text-sm">
+                            <div class="flex items-start gap-3">
+                                <span class="text-brand-blue text-xl mt-0.5">ðŸ“</span>
+                                <div>
+                                    <strong class="block text-text-dark">DirecciÃ³n:</strong>
+                                    Sector ChÃ­a - CajicÃ¡, Cundinamarca, Colombia
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-brand-green text-xl mt-0.5">â°</span>
+                                <div>
+                                    <strong class="block text-text-dark">Horario de Clases:</strong>
+                                    Lunes a Viernes: 7:30 AM â€“ 4:30 PM<br>
+                                    SÃ¡bados: 8:00 AM â€“ 12:00 PM (Visitas guiadas)
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span class="text-brand-purple text-xl mt-0.5">ðŸ“ž</span>
+                                <div>
+                                    <strong class="block text-text-dark">LÃ­nea de AtenciÃ³n:</strong>
+                                    (+57) 300 000 0000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row gap-3">
+                        <a href="https://maps.google.com/maps?q=Santa+Barbara+Preschool+Chia-Cajica,+Cundinamarca,+Colombia" target="_blank" class="btn-primary text-center bg-brand-blue text-white px-5 py-3 rounded-xl font-bold text-sm">
+                            Abrir en Google Maps
+                        </a>
+                        <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20quisiera%20saber%20c%C3%B3mo%20llegar%20al%20campus." target="_blank" class="btn-primary text-center bg-brand-green text-white px-5 py-3 rounded-xl font-bold text-sm">
+                            Pedir UbicaciÃ³n por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Map Frame -->
+                <div class="lg:col-span-7 min-h-[380px] w-full">
+                    <iframe 
+                        title="Mapa de ubicaciÃ³n Santa Barbara Preschool ChÃ­a-CajicÃ¡"
+                        src="https://maps.google.com/maps?q=Santa+Barbara+Preschool+Chia-Cajica,+Cundinamarca,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        class="w-full h-full min-h-[380px] border-0"
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FOOTER -->
+    <footer id="contacto" class="bg-text-dark text-gray-300 py-16">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Columna 1 -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-brand-yellow rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="font-display font-bold text-xl text-white leading-tight">SANTA BARBARA</div>
+                            <div class="text-xs text-brand-blue font-semibold">PRESCHOOL Â· ChÃ­a - CajicÃ¡</div>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">"Formando niÃ±os felices, seguros y preparados para el futuro con valores y excelencia educativa."</p>
+                    <div class="text-xs text-gray-400">
+                        Preescolar bilingÃ¼e acreditado en la Sabana Norte de BogotÃ¡
+                    </div>
+                </div>
+
+                <!-- Columna 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Horarios de AtenciÃ³n</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex justify-between">
+                            <span>Lunes a Viernes:</span>
+                            <span class="text-white">7:30 AM - 4:30 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>SÃ¡bados:</span>
+                            <span class="text-white">8:00 AM - 12:00 PM</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <div class="text-brand-yellow font-bold mb-2">Admisiones Abiertas 2024 - 2025</div>
+                        <p class="text-sm text-gray-400">Cupos limitados por aula para atenciÃ³n personalizada.</p>
+                    </div>
+                </div>
+
+                <!-- Columna 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Enlaces RÃ¡pidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-brand-yellow transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-brand-yellow transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#niveles" class="hover:text-brand-yellow transition-colors">Niveles Educativos</a></li>
+                        <li><a href="#programas" class="hover:text-brand-yellow transition-colors">Talleres Formativos</a></li>
+                        <li><a href="#docentes" class="hover:text-brand-yellow transition-colors">Docentes</a></li>
+                        <li><a href="#admisiones" class="hover:text-brand-yellow transition-colors">Proceso de AdmisiÃ³n</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">UbicaciÃ³n y Contacto</h4>
+                    <p class="text-sm mb-4">Sector ChÃ­a - CajicÃ¡, Cundinamarca, Colombia</p>
+                    <a href="https://maps.google.com/maps?q=Santa+Barbara+Preschool+Chia-Cajica,+Cundinamarca,+Colombia" target="_blank" 
+                       class="inline-flex items-center gap-2 text-brand-blue hover:text-brand-yellow transition-colors mb-4">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Ver en Google Maps
+                    </a>
+                    <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20quisiera%20solicitar%20informaci%C3%B3n%20general." target="_blank" 
+                       class="btn-primary inline-flex items-center justify-center gap-2 bg-brand-green text-white px-6 py-3 rounded-full font-bold w-full">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        EscrÃ­benos por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <div>Â© 2024 Santa Barbara Preschool ChÃ­a-CajicÃ¡. Todos los derechos reservados.</div>
+                <div class="flex gap-6">
+                    <a href="#inicio" class="hover:text-brand-yellow transition-colors">Volver arriba â†‘</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%2C%20quisiera%20informaci%C3%B3n%20sobre%20admisiones." target="_blank" 
+       class="fixed whatsapp-float-btn z-50 bg-brand-green text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform"
+       aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <!-- JavaScript Interactivo -->
+    <script>
+        // Mobile Menu Toggle (si existe el botÃ³n)
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 120;
+        let animated = false;
+
+        const animateCounters = () => {
+            if (animated) return;
+            animated = true;
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const inc = target / speed;
+
+                const updateCount = () => {
+                    count += inc;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target + (target === 100 ? '%' : target === 12 ? '' : '+');
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Observer for counter section
+        const counterItem = document.querySelector('.counter-item');
+        if (counterItem) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(counterItem.parentElement);
+        }
+
+        // Form Submission with WhatsApp direct message dispatch
+        const admisionForm = document.getElementById('admisionForm');
+        if (admisionForm) {
+            admisionForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nombreEl = document.getElementById('nombreAcudiente');
+                const telEl = document.getElementById('telAcudiente');
+                const edadEl = document.getElementById('edadNino');
+                const nombre = nombreEl ? nombreEl.value.trim() : '';
+                let rawTel = telEl ? telEl.value.trim() : '';
+                const cleanNumber = rawTel.replace(/^\+?57\s*/, '').trim();
+                const tel = '+57 ' + cleanNumber;
+                const edad = edadEl ? edadEl.value : '';
+                
+                const msg = encodeURIComponent(`Hola Santa Barbara Preschool, mi nombre es ${nombre}. Quisiera informaciÃ³n de matrÃ­cula para el nivel ${edad}. Mi telÃ©fono de contacto es ${tel}.`);
+                window.open(`https://wa.me/573000000000?text=${msg}`, '_blank');
+                alert('Â¡Gracias por tu interÃ©s! Te estamos redirigiendo a WhatsApp para brindarte atenciÃ³n inmediata.');
+                this.reset();
+            });
+        }
+
+        // Hero Background Crossfade Rotation (Alternancia AutomÃ¡tica de Fotos cada 5.5s)
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        let currentHeroSlide = 0;
+        let heroSlideInterval = null;
+
+        function showHeroSlide(index) {
+            if (!heroSlides.length) return;
+            heroSlides.forEach((slide, idx) => {
+                if (idx === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            heroDots.forEach((dot, idx) => {
+                if (idx === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+            currentHeroSlide = index;
+        }
+
+        function nextHeroSlide() {
+            if (!heroSlides.length) return;
+            const nextIndex = (currentHeroSlide + 1) % heroSlides.length;
+            showHeroSlide(nextIndex);
+        }
+
+        window.switchHeroSlide = function(index) {
+            showHeroSlide(index);
+            if (heroSlideInterval) {
+                clearInterval(heroSlideInterval);
+            }
+            heroSlideInterval = setInterval(nextHeroSlide, 5000);
+        };
+
+        if (heroSlides.length > 1) {
+            heroSlideInterval = setInterval(nextHeroSlide, 5000);
+        }
+
+        // Smart Header Auto-Hide on Scroll Down & Show on Scroll Up
+        (function() {
+            let lastScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+            const headerWrapper = document.querySelector('.header-sticky-wrapper') || document.getElementById('mainStickyNavbar');
+            if (!headerWrapper) return;
+
+            window.addEventListener('scroll', () => {
+                const currentScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+                
+                // Ocultar suavemente al hacer scroll hacia abajo pasados los 60px
+                if (currentScrollY > 60 && currentScrollY > lastScrollY) {
+                    headerWrapper.classList.add('header-hidden');
+                } 
+                // Reaparecer instantÃ¡neamente al hacer scroll hacia arriba
+                else if (currentScrollY < lastScrollY) {
+                    headerWrapper.classList.remove('header-hidden');
+                }
+                
+                // Siempre visible al llegar a la parte superior
+                if (currentScrollY <= 20) {
+                    headerWrapper.classList.remove('header-hidden');
+                }
+                
+                lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+            }, { passive: true });
+        })();
+    </script>
+</body>
+</html>
+

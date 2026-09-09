@@ -25,14 +25,16 @@
 
 * **Componentes Visuales de Marca**:
   * Barra de Garantías con doble marco circular y glifos lineales en cobre cálido.
-  * Tarjetas de Servicios en fondo crema/blanco con fotografía 1:1, badge circular de ícono flotante, y 2 píldoras esenciales de duración y precio.
+  * Tarjetas de Servicios Full-Bleed Minimalistas: Fotografía protagonista en 100% del contenedor (aspect-ratio 3:4), línea de acento cobre, titular blanco y barra inferior con precio y enlace minimalista «Agendar ➔» directo a WhatsApp.
+  * Tarjetas de Equipo Full-Bleed (Retrato Editorial): Fotografía vertical en plano medio (aspect-ratio 3:4.2), línea de acento cobre, nombre en serifa blanca, rol en tono arena/cobre, calificación 5★ y enlace minimalista «Agendar ➔» directo a WhatsApp con la especialista.
   * Módulo de Experiencia con fotografía zen de cabina de spa, badge flotante de vidrio (*glassmorphism*) y 4 tarjetas métricas de autoridad.
   * Botones con radio suave de 50px (estilo píldora prémium).
 
 ## 📸 Fotografías & Assets
 * **Hero Principal**: `../assets/heroes/spa/Woman_relaxing_at_wellness_spa_202609021629.webp` (WebP ~28 KB, modelo relajándose en spa con toalla blanca y atmósfera zen)
 * **Ambiente Sobre Nosotros**: `https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80` (Cabina de relajación zen, camillas con toallas y ambientación aromática)
-* **Servicios (1:1)**: Grid de 6 servicios especializados en spa, masajes y faciales con fotografías cuadradas en alta definición y píldoras esenciales de duración y precio.
+* **Servicios (Full-Bleed 3:4)**: Grid de 3 columnas en escritorio (2 filas de 3 tarjetas) con fotografías protagonistas en alta definición (2 columnas en móvil).
+* **Equipo (Retrato Editorial 3:4.2)**: Grid de 4 columnas en escritorio con retratos de alta definición de las terapeutas y especialistas (2 columnas en móvil).
 
 ## 📱 Especificaciones Móviles (< 768px)
 * Hero con `min-height: 720px !important;`

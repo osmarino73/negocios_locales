@@ -13,16 +13,16 @@ Aunque se tome como referencia visual una imagen para clonar su paleta de colore
 2. **Barra de Pilares / Garantías**:
    - Franja de 4 a 5 sellos de confianza (*Estilistas Expertos, Productos Prémium, Experiencia de Lujo, Satisfacción Total, Higiene & Seguridad*).
    - **En Móvil (< 768px)**: Carrusel horizontal deslizable (*Scroll Snap*) fluido en una sola fila compacta, evitando el scroll vertical y permitiendo deslizar los sellos con el dedo de forma fluida.
-3. **`#servicios` (Catálogo de Servicios — Grid 6 Columnas)**:
-   - Grid de **6 columnas en escritorio (`repeat(6, 1fr)`)** para mostrar los 6 servicios populares en una sola fila horizontal compacta con fotos 1:1, badges de valor, precios claros y botón de agendamiento directo a WhatsApp (obligatorio en **2 columnas** en móvil).
-4. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales — Estándar Crismar)**:
+3. **`#servicios` (Catálogo de Servicios — Grid 3 Columnas en Escritorio)**:
+   - Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** para mostrar los 6 servicios en 2 filas amplias, aireadas y elegantes con diseño **Full-Bleed Minimalista** (fotografía protagonista al 100%, relación 3:4, degradado inferior, precio claro y enlace minimalista `AGENDAR ➔`; obligatorio en **2 columnas** en móvil).
+4. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales — Estándar Editorial)**:
    - **Bloque Editorial Sobre Nosotros (`.experience-layout`)**: Grid a 2 columnas con fotografía del salón/ambiente (`.salon-image-showcase`) con badge flotante VIP (`.experience-floating-badge`), titular editorial de impacto, descripción cálida y fila de 4 métricas de autoridad (`.metrics-row`: años exp, clientes atendidos, técnica/filosofía, calificación 5★; en 2 columnas en móvil) y botón de contacto.
      - **Regla Mandatoria de Imagen de Ambiente Coherente con el Nicho**: Queda terminantemente prohibido reutilizar imágenes genéricas de sillas de peluquería para todos los rubros. Cada categoría debe utilizar una fotografía de ambiente representativa:
        - *Uñas / Manicura / Pedicura*: Fotografía de salón de uñas con mesas de manicura, esmaltes y lámparas UV (`photo-1527799820374-dcf8d9d4a388` o `photo-1519014816548-bf5fe059798b`).
        - *Spa / Masajes / Faciales*: Cabina de relajación zen, camillas con toallas y ambientación aromática (`photo-1600334129128-685c5582fd35` o `photo-1596178065887-1198b6148b2b`).
        - *Peluquería / Rizos / Color*: Tocadores y estaciones de peinado (`photo-1560066984-138dadb4c035`).
        - *Barbería*: Estaciones de corte clásicas con cuero y madera (`photo-1585747860715-2ba37e788b70`).
-   - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con especialistas del negocio (hasta **4 a 6 profesionales**, fotos circulares 50% con marco de marca, badges de nivel/autoridad, nombre, rol de altura uniforme, calificación 5★ y botón individual de agendamiento directo a WhatsApp; obligatorio en **2 columnas** en móvil).
+   - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas / Retrato Editorial Full-Bleed)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Full-Bleed (3:4.2)** con fotografías en plano medio de las terapeutas/estilistas, degradado inferior aterciopelado, línea de acento cobre, nombre en tipografía display blanca, rol en tono cálido, calificación 5★ y enlace minimalista `AGENDAR ➔` directo a WhatsApp (obligatorio en **2 columnas** en móvil).
 5. **`#ubicacion` (Mapa & Contacto)**:
    - Panel informativo con dirección física, horarios, teléfono y Google Maps interactivo embebido con fórmula georreferenciada (`z=16`).
 6. **Footer Principal**:
@@ -60,25 +60,25 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
    - Al crear un proyecto individual, se puede vincular directamente la ruta relativa `../assets/heroes/{nicho}/{imagen}.webp` o copiar la imagen seleccionada a la carpeta del negocio.
 
 1. **Hero Header Inmersivo Full-Width Bleed**:
-   - Capa posterior `.hero-bg-cover` con imagen a la derecha (`width: 65%`).
+   - Capa posterior `.hero-bg-cover` con imagen a la derecha (`width: 70% - 72%`).
    - **Vista de Escritorio (> 768px)**:
      - `.hero-fullwidth-section`: `min-height: 640px; display: flex; align-items: center;`
      - **Prohibición de `mask-image` sobre el contenedor de imagen**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
-     - **Curva de Degradado Orgánica y Aterciopelada (Curva Eased de 8 Paradas en `.hero-bg-overlay`)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo multi-parada:
+     - **Curva de Degradado Orgánica y Aterciopelada Calibrada (Curva Eased de 8 Paradas en `.hero-bg-overlay`)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo multi-parada con luminosidad optimizada (reducción del 10% en sombras extensas):
        ```css
        background: linear-gradient(
          90deg, 
          #colorBase 0%, 
-         #colorBase 35%, 
-         rgba(..., 0.96) 42%, 
-         rgba(..., 0.8) 50%, 
-         rgba(..., 0.5) 60%, 
-         rgba(..., 0.2) 72%, 
-         rgba(..., 0.05) 84%, 
-         transparent 94%
+         #colorBase 25%, 
+         rgba(..., 0.96) 32%, 
+         rgba(..., 0.8) 40%, 
+         rgba(..., 0.5) 50%, 
+         rgba(..., 0.2) 62%, 
+         rgba(..., 0.05) 74%, 
+         transparent 84%
        );
        ```
-       Garantiza 100% de contraste y legibilidad para el texto a la izquierda (0% a 35%) y una fusión como seda hacia la derecha, dejando la fotografía nítida y brillante a partir del 90%.
+       Garantiza 100% de contraste y legibilidad para el texto a la izquierda (0% a 25%) y una revelación sedosa y luminosa hacia la derecha, dejando la fotografía nítida, radiante y sin veladuras negras excesivas a partir del 84%.
      - `padding-top: 75px - 85px` en el contenedor para evitar que el navbar tape los titulares.
    - **Móvil Calibrado Obligatorio (< 768px)**:
      - **Regla Mandatoria**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
@@ -104,24 +104,35 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
        - Descripción (`.hero-desc`): `0.85rem - 0.86rem; line-height: 1.5; margin-bottom: 18px - 20px;` (terminantemente prohibido dejarla >1rem en móvil para no empujar el texto sobre la modelo).
        - Botones apilados al centro: `.hero-actions { display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin: 0 auto; }` con botones de `max-width: 275px; padding: 12px 20px; font-size: 0.84rem; justify-content: center;`.
 
-2. **Arquitectura Estándar Crismar para Servicios & Profesionales**:
-   - **Tarjetas de Servicios (`.service-card`)**:
-     - Estructura limpia y centrada con foto en alta fidelidad (`height: 200px` / `aspect-ratio: 1/1`).
-     - Título del servicio destacado.
-     - **Píldoras de Detalles Exclusivas (`.service-badge-pill`)**: Estrictamente **2 píldoras esenciales**:
-       1. **Duración** (`⏱️ XX Mins`)
-       2. **Precio** (`💰 $XX.000 COP`)
-       - **Prohibición de Píldoras Intermedias / Descriptivas**: Queda prohibido añadir una tercera píldora con textos largos de técnica o beneficios (ej. *"Caída Natural"*, *"Vapor & Mantecas"*) para evitar desbordamientos y mantener las tarjetas limpias y simétricas.
-     - Botón **«Agendar Cita»** ancho completo al 100% abajo de la tarjeta (`.btn-card-book`).
-   - **Tarjetas de Profesionales (`.team-card`)**:
-     - Avatar circular 50% con marco de color de marca (`.team-avatar`, `border-radius: 50%`).
-     - Badge flotante en la esquina (`Master`, `Pro`, `Senior`) visible en escritorio.
-     - **En Móvil (< 768px)**: Se **oculta obligatoriamente el badge flotante** (`.team-badge { display: none !important; }`) para que el rostro del profesional se aprecie 100% nítido, limpio y sin obstrucciones.
-     - Nombre y Rol con altura uniforme fija (`min-height: 38px`) para alineación perfecta.
-     - Calificación de 5 estrellas (`⭐⭐⭐⭐⭐ (5.0)`).
-     - Botón individual **«Agendar Cita»** directo a WhatsApp.
+2. **Arquitectura Estándar Crismar para Servicios & Profesionales (Full-Bleed Minimalista)**:
+   - **Tarjetas de Servicios Full-Bleed Minimalistas (`.service-card`)**:
+     - Grid en Escritorio: **3 columnas (`repeat(3, 1fr); gap: 24px;`)** para mostrar los servicios en filas amplias, aireadas y elegantes.
+     - Formato Inmersivo: Fotografía en alta fidelidad como protagonista al 100% en la capa base (`aspect-ratio: 3/4; min-height: 440px; border-radius: 22px; overflow: hidden; position: relative;`).
+     - **Degradado Aterciopelado Inferior**: Transición vertical que mantiene el 38% superior 100% transparente para que el procedimiento/modelo luzca impecable:
+       ```css
+       background: linear-gradient(
+         180deg, 
+         rgba(..., 0) 0%, 
+         rgba(..., 0) 38%, 
+         rgba(..., 0.72) 65%, 
+         rgba(..., 0.96) 92%, 
+         #colorBase 100%
+       );
+       ```
+     - **Prohibición de Píldoras Superiores**: Queda terminantemente prohibido colocar píldoras flotantes de duración o badges en la parte superior de la tarjeta, manteniendo la fotografía 100% despejada.
+     - **Tercio Inferior Tipográfico & Minimalista**:
+       - Línea de acento sutil (`.service-card-accent-line`).
+       - Título del servicio en tipografía display blanca y legible (`1.25rem - 1.35rem`).
+       - Precio visible y destacado en tono de marca (`.service-card-price`, ej. `$90.000 COP`).
+       - Enlace de agendamiento minimalista **`AGENDAR ➔`** (`.btn-card-book-minimal`): tipografía limpia, sin fondos de pastilla pesados (`background: transparent; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;`), con micro-interacción hover donde la flecha se desplaza suavemente (`translateX(5px)`).
+   - **Tarjetas de Profesionales en Formato Retrato Editorial (`.team-card`)**:
+     - Grid en Escritorio: **4 columnas (`repeat(4, 1fr); gap: 20px;`)** con las especialistas del negocio.
+     - Formato Retrato Editorial Vertical: Fotografías en plano medio/busto de alta gama (`aspect-ratio: 3/4.2; min-height: 410px; border-radius: 20px; overflow: hidden; position: relative;`). Sustituye a los avatares circulares tradicionales por una estética visual de revista de moda/belleza.
+     - Degradado vertical suave que protege el rostro en la mitad superior y da contraste a los textos en la base.
+     - Tercio inferior: Línea de acento, Nombre de la profesional en tipografía display blanca, Rol de altura uniforme con tono cálido, Calificación de 5 estrellas (`⭐⭐⭐⭐⭐ (5.0)`) y enlace minimalista **`AGENDAR ➔`** directo a WhatsApp.
    - **Cuadrícula Doble Columna (2 Columnas) en Móvil (< 768px)**:
-     - Tanto Servicios como Profesionales se renderizan obligatoriamente en **2 columnas balanceadas** (`grid-template-columns: repeat(2, 1fr); gap: 12px;`) en pantallas móviles, reduciendo el scroll en un 50%.
+     - Tanto Servicios como Profesionales se renderizan obligatoriamente en **2 columnas balanceadas** (`grid-template-columns: repeat(2, 1fr); gap: 12px;`) en pantallas móviles, reduciendo el scroll en un 50% y ajustando las alturas (`min-height: 300px - 320px; padding: 16px 14px;`).
+
 
 3. **Botón Flotante de WhatsApp Anti-Corte Móvil (`.whatsapp-float`)**:
    - **Despeje Inferior Obligatorio**: `bottom: calc(28px + env(safe-area-inset-bottom, 0px));` y `right: max(20px, env(safe-area-inset-right, 20px));` para que nunca quede tapado por las barras de herramientas o gestos inferiores de Chrome/Safari en celulares.
@@ -131,7 +142,9 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
 4. **Smart Header / Navbar Inteligente & Botones Concisos «Agendar»**:
    - **Prohibición Estricta de Barra Informativa Superior (Top Bar)**: **Ningún archivo HTML debe incluir la mini-barra superior promocional o informativa** (`.promo-topbar` / announcement bar). El sitio web debe iniciar directamente con el Navbar / Smart Header para máxima limpieza visual.
    - **Logotipo Tipográfico Puro (Prohibición de Íconos junto al Nombre)**: En el encabezado y pie de página (`.brand-logo`), **queda terminantemente prohibido colocar íconos decorativos de FontAwesome o emojis junto al nombre del negocio** (ej. coronas, gemas, varitas mágicas, tijeras o destellos). El logotipo debe ser puramente tipográfico, limpio y elegante, compuesto únicamente por el nombre del negocio con estilos tipográficos de marca y su subtítulo de ubicación/categoría.
-   - Contenedor `.header-sticky-wrapper` que se oculta suavemente al hacer scroll hacia abajo y reaparece instantáneamente al hacer scroll hacia arriba.
+    - Contenedor `.header-sticky-wrapper` con regla de visibilidad inteligente:
+      - **Permanencia en el Header / Hero**: Mientras el usuario se encuentra dentro del recorrido de scroll del Hero (ej. interactive canvas video scrubbing o cabecera inmersiva), la barra de navegación **permanece siempre visible y no se oculta**.
+      - **Auto-Hide en el Resto de la Página**: Únicamente al descender hacia las secciones inferiores de la página web (pilares, servicios, sobre nosotros, mapa) se oculta suavemente al hacer scroll hacia abajo y reaparece instantáneamente al hacer scroll hacia arriba.
    - **Soporte Obligatorio de Safe-Area en Móviles**: `.header-sticky-wrapper` debe incluir siempre `padding-top: env(safe-area-inset-top, 0px);` para evitar que el notch, dynamic island o barra de estado del celular empujen o recorten el contenido del encabezado.
    - **Vista Móvil (<768px) Ultra Limpia y Sin Cortes en el Logotipo**:
      - Se **elimina por completo el botón de menú hamburguesa** (`display: none;`). El header móvil muestra exclusivamente el **Nombre / Logotipo del Negocio a la izquierda** y el botón **«Agendar» a la derecha** (`.btn-header-cta`).
@@ -159,3 +172,29 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
      - *Hero de Rizos*: «Cuida y define la belleza natural de tus rizos en Apartadó. Cortes especializados, hidratación profunda y peinados con atención personalizada.»
      - *Hero de Spa / Salón*: «Tu salón de belleza y spa de confianza en Turbo. Especialistas en color, alisados, limpiezas faciales y masajes relajantes.»
      - *Hero de Estética / Makeup*: «Maquillaje profesional, cuidado facial y diseño de cejas y pestañas para resaltar tu mejor versión en Turbo.»
+
+---
+
+## 🎒 Estándar Mandatorio: Nicho Educación Infantil, Guarderías & Preescolares
+
+Para cualquier proyecto de **jardines infantiles, guarderías (daycare), preescolares o colegios campestres**, se aplican obligatoriamente las siguientes reglas:
+
+1. **Calibración Móvil del Hero (Texto Estrictamente de la Mitad hacia Abajo)**:
+   - **Regla Mandatoria**: En celulares (< 768px), el Hero debe tener **`min-height: 740px !important;`** y alineación `display: flex; align-items: flex-end; justify-content: center;`.
+   - **Gradiente Vertical 40% Transparente**: Los primeros 36% a 40% superiores de `.hero-bg-overlay` deben ser **100% transparentes** (`rgba(..., 0)`), garantizando que las caras, sonrisas y actividades de los niños se aprecien nítidas y sin veladuras oscuras.
+   - **Disposición Inferior**: El titular (`1.85rem`), la descripción reducida (`0.82rem`, max 320px) y los botones apilados (`max-width: 265px`) se ubican **estrictamente de la mitad hacia abajo**.
+
+2. **Prohibición Estricta: Franja de Pilares Dentro del Hero**:
+   - **Queda terminantemente prohibido colocar las tarjetas de pilares dentro del contenedor del Hero**, ya que en móvil empujan el texto hacia arriba sobre las cabezas de los niños.
+   - La **Barra de Pilares (`#pilares`)** debe ser una **sección independiente** ubicada justo después del Hero.
+   - **En Móvil (< 768px)**: Debe ser obligatoriamente un **carrusel horizontal deslizable (*Scroll Snap*)** en una sola fila continua y compacta, permitiendo a los padres deslizar los sellos con el dedo fluidamente sin saturar la pantalla.
+
+3. **Sistema de Hero Slider con Alternancia de Fotos 2K (Crossfade & Ken Burns)**:
+   - Alternancia automática entre 2 y 3 fotografías 2K de alta gama (música, aula, bloques, lectura) cada **5.5 segundos** con transición suave de opacidad (1.2 s) y micro-zoom sutil (`scale(1.05)`).
+   - Indicadores de puntos (*dots*) interactivos y accesibles para alternar manualmente.
+   - **Composición Segura para Móvil (Safe Zone)**: Los rostros y la acción principal deben estar en el 50% central-superior del encuadre, dejando el tercio inferior (suelo, césped) despejado para los textos.
+
+4. **Smart Header Móvil y Admisiones Directas**:
+   - Encabezado móvil minimalista: Logotipo a la izquierda y botón conciso **«POSTULAR»** a la derecha. Cero menú hamburguesa innecesario.
+   - Formulario de admisiones con envío directo a WhatsApp precargando el nombre del acudiente, teléfono y nivel escolar consultado.
+

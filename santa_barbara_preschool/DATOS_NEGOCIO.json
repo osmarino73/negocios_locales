@@ -1,0 +1,133 @@
+{
+  "negocio": {
+    "nombre": "Santa Barbara Preschool Chia-Cajica",
+    "rubro": "Educación Preescolar Bilingüe & Jardín Infantil",
+    "categoria": "educacion_infantil",
+    "eslogan": "Los Niños Son Los Mejores Exploradores Del Mundo — Preescolar Bilingüe en Chía y Cajicá",
+    "calificacion": "5.0",
+    "resenas": "350+",
+    "contacto": {
+      "telefono_principal": "+573000000000",
+      "whatsapp": {
+        "numero": "+573000000000",
+        "link": "https://wa.me/573000000000?text=Hola%20Santa%20Barbara%20Preschool%20Chia-Cajica%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20admisiones."
+      },
+      "email": "admisiones@santabarbarapreschool.edu.co"
+    },
+    "ubicacion": {
+      "direccion": "Sector Chía - Cajicá, Cundinamarca",
+      "ciudad": "Chía - Cajicá",
+      "departamento_pais": "Cundinamarca, Colombia",
+      "coordenadas": {
+        "latitud": 4.8959161,
+        "longitud": -74.0348085
+      },
+      "google_maps_url": "https://www.google.com/maps/place/Santa+Barbara+Preschool+Chia-Cajica/@4.8958314,-74.0348378,3a,75y,90t/data=!3m8!1e2!3m6!1sCIABIhCr7c7LBpaHnA1F72lLk3lr!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAHRPTWl4LAAjm393nNy1xVvNoijqg29HI7cCpGmYgXu8Oj-Ev2eZWnbZDbPHJ9fxSZ8Staq5ce-TrwD32hObqY-sd1wmUnO_cp2gT5O_J268wdTvtCDKuZH8IjGXigoCYWLp_zJtdQZE_DkOU5xE%3Dw114-h86-k-no!7i1600!8i1200!4m10!1m2!2m1!1sjardin+infantil+bogota!3m6!1s0x8e40797a62a5d445:0x7280718aabc12ed5!8m2!3d4.8959161!4d-74.0348085!10e5!16s%2Fg%2F11gj0w71lk",
+      "google_maps_embed": "https://maps.google.com/maps?q=Santa+Barbara+Preschool+Chia-Cajica,+Cundinamarca,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_viernes": "7:30 AM – 4:30 PM",
+      "sabados": "8:00 AM – 12:00 PM (Atención con Cita Previa)",
+      "domingos": "Cerrado"
+    },
+    "sitio_web": "https://santabarbarapreschool.edu.co",
+    "recursos_visuales": {
+      "hero_slider": {
+        "tipo": "Crossfade Ken Burns Carousel",
+        "intervalo_segundos": 5.5,
+        "imagenes": [
+          {
+            "archivo": "hero.webp",
+            "archivo_original": "Toddlers_playing_instruments_in_…_2K_202609061748.webp",
+            "resolucion": "2K Ultra HD",
+            "peso_kb": "212 KB",
+            "descripcion": "Cuatro niños pequeños sonrientes en un taller de música sentados en el suelo tocando tamborcitos y xilófono frente a su maestra con luz natural dorada."
+          },
+          {
+            "archivo": "hero-2.webp",
+            "archivo_original": "Five_children_playing_in_daycare_2K_202609061736.webp",
+            "resolucion": "2K Ultra HD",
+            "peso_kb": "633 KB",
+            "descripcion": "Cinco niños jugando en la guardería con bloques de madera, caballete de pintura, disfraces y mesa de tren."
+          }
+        ]
+      }
+    },
+    "programas_educativos": [
+      {
+        "nombre": "Caminadores",
+        "edad": "1 a 2 años",
+        "descripcion": "Estimulación temprana, desarrollo motriz y primeros pasos en un ambiente seguro y amoroso.",
+        "jornada": "Media o Completa",
+        "incluye_alimentacion": true
+      },
+      {
+        "nombre": "Párvulos",
+        "edad": "2 a 3 años",
+        "descripcion": "Inicio bilingüe, desarrollo del lenguaje oral y habilidades de socialización activa.",
+        "jornada": "Media o Completa",
+        "incluye_alimentacion": true
+      },
+      {
+        "nombre": "Pre-Jardín",
+        "edad": "3 a 4 años",
+        "descripcion": "Inmersión natural en inglés, expresión artística y pensamiento lógico-creativo.",
+        "jornada": "Media o Completa",
+        "incluye_alimentacion": true
+      },
+      {
+        "nombre": "Jardín",
+        "edad": "4 a 5 años",
+        "descripcion": "Preparación sólida para la transición escolar, autonomía y desarrollo socioemocional.",
+        "jornada": "Media o Completa",
+        "incluye_alimentacion": true
+      }
+    ],
+    "talleres_y_actividades": [
+      {
+        "nombre": "Estimulación Temprana & Psicomotricidad",
+        "descripcion": "Actividades físicas y sensoriales para coordinación, equilibrio y propiocepción."
+      },
+      {
+        "nombre": "Taller de Lectura & Bilingüismo Natural",
+        "descripcion": "Inmersión en inglés a través de cuentos, rimas y canciones interactivas."
+      },
+      {
+        "nombre": "Música, Movimiento & Expresión Corporal",
+        "descripcion": "Desarrollo del ritmo, creatividad y expresión de emociones."
+      },
+      {
+        "nombre": "Mini Huerta & Conciencia Ecológica",
+        "descripcion": "Contacto directo con la naturaleza y cuidado responsable del medio ambiente."
+      }
+    ],
+    "equipo_docente": [
+      {
+        "nombre": "María Fernanda López",
+        "rol": "Caminadores",
+        "especialidad": "Especialista en estimulación temprana y desarrollo motor."
+      },
+      {
+        "nombre": "Laura Martínez",
+        "rol": "Párvulos",
+        "especialidad": "Experta en bilingüismo y desarrollo del lenguaje infantil."
+      },
+      {
+        "nombre": "Andrea Rodríguez",
+        "rol": "Pre-Jardín",
+        "especialidad": "Licenciada en educación preescolar con énfasis en arte."
+      },
+      {
+        "nombre": "Carolina Gómez",
+        "rol": "Jardín",
+        "especialidad": "Especialista en preparación para la transición al colegio grande."
+      }
+    ],
+    "estadisticas_logros": {
+      "anios_experiencia": "10+",
+      "familias_felices": "350+",
+      "porcentaje_docentes_bilingues": "100%",
+      "ninos_maximo_aula": "12"
+    }
+  }
+}
