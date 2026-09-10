@@ -11,7 +11,7 @@ Para mantener los sitios limpios, ultra-rápidos y de alta conversión, cada pá
 1. **`#inicio` (Hero Full-Width Bleed)**: Portada inmersiva con fotografía en alta fidelidad a la derecha (`.hero-bg-cover`), titular de impacto editorial, frase script de autor, descripción y botón principal de agendamiento.
 2. **Barra de Pilares / Garantías**: Franja de 4 a 5 sellos de confianza (*Estilistas Expertos, Productos Prémium, Experiencia de Lujo, Satisfacción Total, Higiene & Seguridad*).
 3. **`#servicios` (Catálogo de Servicios — Grid 3 Columnas)**: Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** y **2 columnas en móvil** con diseño **Full-Bleed Minimalista** (fotografía protagonista al 100%, relación 3:4, degradado inferior aterciopelado, precio claro y enlace minimalista `AGENDAR ➔`).
-4. **`#nosotros` (Sobre Nosotros & Retrato Editorial — Grid 4 Columnas)**: Bloque de experiencia editorial a 2 columnas con foto de ambiente representativa y bloque de especialistas en formato **Retrato Editorial Full-Bleed (3:4.2)** en **4 columnas en escritorio (`repeat(4, 1fr)`)** y **2 columnas en móvil**.
+4. **`#nosotros` (Sobre Nosotros & Retrato Editorial — Grid 4 Columnas)**: Bloque de experiencia editorial a 2 columnas con foto de ambiente representativa y bloque de especialistas en formato **Retrato Editorial Full-Bleed (3:4.2)** en **4 columnas en escritorio (`repeat(4, 1fr)`)** y **carrusel horizontal deslizable (*Scroll Snap*) en móvil**.
 5. **`#ubicacion` (Mapa & Contacto)**: Panel con dirección física, horarios, teléfono y Google Maps embebido (`z=16`).
 6. **Footer Principal**: Enlaces, redes sociales, horarios y módulo de reserva con botón conciso **«Agendar»**.
 
@@ -120,7 +120,7 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
 
 - **Distribución de Columnas**:
   - **Escritorio (> 768px)**: Grid de **4 columnas (`repeat(4, 1fr); gap: 20px;`)**.
-  - **Móvil (≤ 768px)**: Grid de **2 columnas (`grid-template-columns: repeat(2, 1fr); gap: 12px;`)**.
+  - **Móvil (≤ 768px)**: **Carrusel Horizontal Deslizable (*Scroll Snap*) obligatorio** en una sola fila (`display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; scrollbar-width: none;`). Tarjetas fijas de `flex: 0 0 255px; aspect-ratio: 3/4.2;` con efecto «Peek» (asoman 70-100px del siguiente profesional a la derecha).
 - **Formato Retrato Editorial Vertical (3:4.2)**:
   - Sustituye los avatares circulares tradicionales por retratos verticales en plano medio/busto de alta fidelidad (`aspect-ratio: 3 / 4.2; min-height: 410px; border-radius: 20px; overflow: hidden; position: relative; display: flex; flex-direction: column; justify-content: flex-end;`). En móvil: `min-height: 310px; border-radius: 18px;`.
   - Fotografía al 100% en la capa base con degradado vertical envolvente que protege el rostro en la mitad superior.

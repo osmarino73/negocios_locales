@@ -2180,10 +2180,12 @@
       }
       window.addEventListener('resize', resizeCanvas, { passive: true });
 
+      let initialFrameDrawn = false;
+
       // Renderizador con escala reducida 10% para encuadre holgado de la modelo
       function renderFrame(index) {
         const img = images[index];
-        if (!img || !img.complete) return;
+        if (!img || !img.complete || img.naturalWidth === 0) return false;
 
         const cw = canvas.width;
         const ch = canvas.height;
@@ -2194,19 +2196,26 @@
         ctx.fillStyle = '#0e0f13';
         ctx.fillRect(0, 0, cw, ch);
 
-        // Reducción del 10% de la escala para que la modelo no quede apretada en los bordes
-        const baseScale = Math.max(cw / iw, ch / ih);
-        const scale = baseScale * 0.90; // 10% de reducción solicitado
+        // Escala 100% Full-Cover Edge-to-Edge sin bordes negros
+        const scale = Math.max(cw / iw, ch / ih);
         const nw = iw * scale;
         const nh = ih * scale;
 
-        const isMob = window.innerWidth < 768;
-        // En desktop sutil desplazamiento a la derecha para dar aire al texto de la izquierda
-        const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.05);
-        // Leve margen superior para que no roce la barra de navegación
-        const ny = isMob ? ((ch - nh) / 2) - 10 : ((ch - nh) / 2) + 20;
+        // Centrado perfecto de la imagen
+        const nx = (cw - nw) / 2;
+        const ny = (ch - nh) / 2;
 
         ctx.drawImage(img, nx, ny, nw, nh);
+
+        // Ocultar poster de reserva solo cuando el frame ya se pintó físicamente en el canvas
+        if (!initialFrameDrawn) {
+          initialFrameDrawn = true;
+          if (posterImg) {
+            posterImg.classList.add('loaded');
+            posterImg.style.display = 'none';
+          }
+        }
+        return true;
       }
 
       function preloadImages() {
@@ -2216,16 +2225,16 @@
           const p = new Promise((resolve) => {
             const img = new Image();
             img.src = getFrameUrl(i);
+            const frameIdx = i - 1;
+
             img.onload = () => {
               loadedCount++;
-              if (loadedCount === 1) {
-                currentFrameIndex = 0;
-                renderFrame(0);
-              }
-              if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
-                if (posterImg) {
-                  posterImg.classList.add('loaded');
-                  posterImg.style.display = 'none'; // Cero capas opacas sobre el video
+              // Si aún no se ha pintado el frame inicial y cargó el frame actual (o el frame 0)
+              if (!initialFrameDrawn) {
+                if (frameIdx === currentFrameIndex) {
+                  renderFrame(currentFrameIndex);
+                } else if (images[currentFrameIndex] && images[currentFrameIndex].complete) {
+                  renderFrame(currentFrameIndex);
                 }
               }
               resolve();
@@ -2239,9 +2248,8 @@
         }
 
         Promise.all(loadPromises).then(() => {
-          if (posterImg) {
-            posterImg.classList.add('loaded');
-            posterImg.style.display = 'none';
+          if (!initialFrameDrawn) {
+            renderFrame(currentFrameIndex);
           }
         });
       }

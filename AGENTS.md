@@ -22,7 +22,7 @@ Aunque se tome como referencia visual una imagen para clonar su paleta de colore
        - *Spa / Masajes / Faciales*: Cabina de relajación zen, camillas con toallas y ambientación aromática (`photo-1600334129128-685c5582fd35` o `photo-1596178065887-1198b6148b2b`).
        - *Peluquería / Rizos / Color*: Tocadores y estaciones de peinado (`photo-1560066984-138dadb4c035`).
        - *Barbería*: Estaciones de corte clásicas con cuero y madera (`photo-1585747860715-2ba37e788b70`).
-   - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas / Retrato Editorial Full-Bleed)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Full-Bleed (3:4.2)** con fotografías en plano medio de las terapeutas/estilistas, degradado inferior aterciopelado, línea de acento cobre, nombre en tipografía display blanca, rol en tono cálido, calificación 5★ y enlace minimalista `AGENDAR ➔` directo a WhatsApp (obligatorio en **2 columnas** en móvil).
+    - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas / Retrato Editorial Full-Bleed)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Full-Bleed (3:4.2)** con fotografías en plano medio de las terapeutas/estilistas, degradado inferior aterciopelado, línea de acento cobre, nombre en tipografía display blanca, rol en tono cálido, calificación 5★ y enlace minimalista `AGENDAR ➔` directo a WhatsApp. **En móvil (< 768px): Obligatoriamente Carrusel Horizontal Deslizable (*Scroll Snap*) en una sola fila fluida** (`display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; gap: 16px;`) con tarjetas editoriales grandes (`flex: 0 0 255px; aspect-ratio: 3/4.2;`) y efecto «Peek» (asoman 70-100px del siguiente profesional), eliminando el scroll vertical excesivo y maximizando el impacto fotográfico.
 5. **`#ubicacion` (Mapa & Contacto)**:
    - Panel informativo con dirección física, horarios, teléfono y Google Maps interactivo embebido con fórmula georreferenciada (`z=16`).
 6. **Footer Principal**:
@@ -130,8 +130,9 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
      - Formato Retrato Editorial Vertical: Fotografías en plano medio/busto de alta gama (`aspect-ratio: 3/4.2; min-height: 410px; border-radius: 20px; overflow: hidden; position: relative;`). Sustituye a los avatares circulares tradicionales por una estética visual de revista de moda/belleza.
      - Degradado vertical suave que protege el rostro en la mitad superior y da contraste a los textos en la base.
      - Tercio inferior: Línea de acento, Nombre de la profesional en tipografía display blanca, Rol de altura uniforme con tono cálido, Calificación de 5 estrellas (`⭐⭐⭐⭐⭐ (5.0)`) y enlace minimalista **`AGENDAR ➔`** directo a WhatsApp.
-   - **Cuadrícula Doble Columna (2 Columnas) en Móvil (< 768px)**:
-     - Tanto Servicios como Profesionales se renderizan obligatoriamente en **2 columnas balanceadas** (`grid-template-columns: repeat(2, 1fr); gap: 12px;`) en pantallas móviles, reduciendo el scroll en un 50% y ajustando las alturas (`min-height: 300px - 320px; padding: 16px 14px;`).
+   - **Disposición Móvil Calibrada (< 768px)**:
+     - **Servicios (`.services-grid`)**: Se renderizan obligatoriamente en **2 columnas balanceadas** (`grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 20px;`) con `min-height: 0; min-width: 0;` y `aspect-ratio: 3/4.4;`, reduciendo el scroll vertical en un 50% con lectura ágil.
+     - **Profesionales / Equipo (`.team-grid`)**: Se renderiza obligatoriamente en **Carrusel Horizontal Deslizable (*Scroll Snap*)** de una sola fila (`display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; margin: 0 -16px; width: calc(100% + 32px); padding: 8px 16px 20px; scrollbar-width: none;`). Cada tarjeta (`.team-card`) tiene tamaño fijo `flex: 0 0 255px; aspect-ratio: 3/4.2; scroll-snap-align: start;`, permitiendo apreciar los retratos en alta fidelidad y dejando asomar entre 70px y 100px del siguiente profesional a la derecha (efecto «Peek»).
 
 
 3. **Botón Flotante de WhatsApp Anti-Corte Móvil (`.whatsapp-float`)**:
@@ -148,7 +149,7 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
    - **Soporte Obligatorio de Safe-Area en Móviles**: `.header-sticky-wrapper` debe incluir siempre `padding-top: env(safe-area-inset-top, 0px);` para evitar que el notch, dynamic island o barra de estado del celular empujen o recorten el contenido del encabezado.
    - **Vista Móvil (<768px) Ultra Limpia y Sin Cortes en el Logotipo**:
      - Se **elimina por completo el botón de menú hamburguesa** (`display: none;`). El header móvil muestra exclusivamente el **Nombre / Logotipo del Negocio a la izquierda** y el botón **«Agendar» a la derecha** (`.btn-header-cta`).
-     - `.header-nav`: `height: auto; min-height: 64px; padding: 10px 0;` con centrado vertical, evitando alturas fijas rígidas que causen que el subtítulo del negocio roce o se corte contra el borde inferior.
+     - `.header-nav`: `height: auto; min-height: 64px; padding: 12px 20px; padding-left: max(20px, env(safe-area-inset-left, 20px)); padding-right: max(20px, env(safe-area-inset-right, 20px));` con centrado vertical, garantizando un margen lateral holgado (20px) para que la letra inicial del logotipo nunca se corte contra el borde de la pantalla.
      - **Proporciones Móviles del Logotipo (`.brand-logo`)**:
        - Nombre principal (`.brand-name`): `font-size: 1.22rem - 1.25rem; line-height: 1.1; letter-spacing: 0.08em;`
        - Subtítulo de categoría/ubicación (`.brand-subtitle`): `font-size: 0.58rem; line-height: 1.2; letter-spacing: 0.16em; margin-top: 2px; white-space: nowrap;` (evita desbordes y garantiza un margen inferior holgado para que la parte de abajo nunca se corte).

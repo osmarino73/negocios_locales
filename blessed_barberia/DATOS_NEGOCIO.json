@@ -1,0 +1,132 @@
+{
+  "negocio": {
+    "nombre": "Blessed barbería",
+    "rubro": "Barbería",
+    "categoria": "barberia",
+    "eslogan": "Más que un corte, un estilo de vida en Apartadó",
+    "descripcion": "Barbería exclusiva en Apartadó especializada en cortes clásicos, fades de alta precisión, perfilado de barba con toalla caliente, hair designs y cuidado capilar masculino de primera categoría.",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 304 217 3338",
+      "telefono_raw": "+573042173338",
+      "whatsapp": {
+        "numero": "+573042173338",
+        "link": "https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      },
+      "instagram": "https://instagram.com",
+      "email": "contacto@blessedbarberia.com"
+    },
+    "ubicacion": {
+      "direccion": "Cl. 104 #107-34, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "coordenadas": {
+        "lat": 7.8899103,
+        "lng": -76.6368569
+      },
+      "google_maps_url": "https://www.google.com/maps/place/Blessed+barber%C3%ADa/@7.883229,-76.6712599,14z/data=!4m10!1m2!2m1!1sbarber+apartad%C3%B3+antioquia!3m6!1s0x8e500d32b2a8e327:0xb84ed69d58e12e54!8m2!3d7.8899103!4d-76.6368569!15sChpiYXJiZXIgYXBhcnRhZMOzIGFudGlvcXVpYVocIhpiYXJiZXIgYXBhcnRhZMOzIGFudGlvcXVpYZIBC2JhcmJlcl9zaG9wmgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDJ4d1IyUXpjRVZaYWtKd1ZGVlNhVll5U210TlZ6Vk9Xak5zUmxSWVl4QULgAQD6AQQIABA8!16s%2Fg%2F11z495lk5m",
+      "google_maps_iframe": "https://maps.google.com/maps?q=Blessed+barber%C3%ADa,+Cl.+104+%23107-34,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "semana": "Lunes a Sábado: 8:00 AM – 8:00 PM",
+      "domingo": "Domingos y Festivos: 9:00 AM – 4:00 PM"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Agendamiento directo y ágil por WhatsApp con confirmación instantánea"
+    },
+    "servicios": [
+      {
+        "id": "corte-fade",
+        "nombre": "Corte Clásico & Fade Urbano",
+        "descripcion": "Degradados de alta precisión (Low, Mid, High Fade, Taper Fade) adaptados a tu facción y estilo con acabado a navaja.",
+        "precio": "25.000 COP",
+        "precio_num": 25000,
+        "duracion": "40 min",
+        "imagen": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "perfilado-barba",
+        "nombre": "Perfilado de Barba & Hot Towel",
+        "descripcion": "Ritual de afeitado y perfilado con toalla caliente aromatizada, aceites hidratantes y bálsamo calmante para la piel.",
+        "precio": "20.000 COP",
+        "precio_num": 20000,
+        "duracion": "30 min",
+        "imagen": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "combo-blessed",
+        "nombre": "Combo Blessed: Corte + Barba VIP",
+        "descripcion": "La experiencia completa de cuidado masculino: corte a elección, perfilado milimétrico de barba, toalla caliente y peinado final.",
+        "precio": "40.000 COP",
+        "precio_num": 40000,
+        "duracion": "60 min",
+        "imagen": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte-infantil",
+        "nombre": "Corte Infantil / Kids Blessed",
+        "descripcion": "Atención paciente, divertida y cuidadosa para niños y adolescentes con las últimas tendencias de peinado.",
+        "precio": "22.000 COP",
+        "precio_num": 22000,
+        "duracion": "35 min",
+        "imagen": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "hair-design",
+        "nombre": "Hair Design & Líneas Navaja",
+        "descripcion": "Diseños personalizados, líneas geométricas, grecas y sombreados artísticos trazados a pulso con navaja profesional.",
+        "precio": "15.000 COP",
+        "precio_num": 15000,
+        "duracion": "25 min",
+        "imagen": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "lavado-exfoliacion",
+        "nombre": "Lavado Capilar & Exfoliación",
+        "descripcion": "Higiene profunda con champú refrescante mentolado, masaje capilar revitalizante y tónico acondicionador.",
+        "precio": "15.000 COP",
+        "precio_num": 15000,
+        "duracion": "20 min",
+        "imagen": "https://images.unsplash.com/photo-1593702295094-ada7554100c3?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": "mateo-gomez",
+        "nombre": "Mateo Gómez",
+        "rol": "Master Barber & Fades",
+        "calificacion": "5.0",
+        "resenas_count": 48,
+        "imagen": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        "id": "carlos-rivas",
+        "nombre": "Carlos Rivas",
+        "rol": "Especialista en Barbas & Afeitado",
+        "calificacion": "5.0",
+        "resenas_count": 52,
+        "imagen": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        "id": "daniel-herrera",
+        "nombre": "Daniel Herrera",
+        "rol": "Estilista Urbano & Hair Design",
+        "calificacion": "5.0",
+        "resenas_count": 39,
+        "imagen": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=700&q=80"
+      },
+      {
+        "id": "samuel-morales",
+        "nombre": "Samuel Morales",
+        "rol": "Barbero Integral & Cuidado Capilar",
+        "calificacion": "5.0",
+        "resenas_count": 44,
+        "imagen": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=700&q=80"
+      }
+    ]
+  }
+}

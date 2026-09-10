@@ -25,60 +25,69 @@
       "lunes_a_sabado": "8:00 AM - 7:00 PM",
       "domingos_y_festivos": "Previa cita y disponibilidad"
     },
+    "video_scroll": {
+      "habilitado": true,
+      "total_frames": 72,
+      "fps": 12,
+      "ruta_desktop": "public/frames/desktop",
+      "ruta_mobile": "public/frames/mobile",
+      "poster_desktop": "public/frames/desktop/poster.webp",
+      "poster_mobile": "public/frames/mobile/poster.webp"
+    },
     "servicios": [
       {
-        "id": "manicura-clasica",
-        "nombre": "Manicura Clásica & Spa",
-        "precio": "$25.000 COP",
-        "duracion": "45 min",
-        "tecnica": "Esmaltado Tradicional",
+        "id": "manicura-rusa-semipermanente",
+        "nombre": "Manicura Rusa & Semipermanente",
+        "precio": "$45.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Limpieza Profunda & Brillo 21 Días",
         "icono": "fa-hand-sparkles",
         "imagen": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
       },
       {
-        "id": "esmaltado-semipermanente",
-        "nombre": "Esmaltado Semipermanente",
-        "precio": "$45.000 COP",
-        "duracion": "60 min",
-        "tecnica": "Brillo Intacto 21 Días",
+        "id": "extensiones-acrilicas",
+        "nombre": "Extensiones Acrílicas Esculpidas",
+        "precio": "Desde $85.000 COP",
+        "duracion": "90 min",
+        "tecnica": "Estructura Perfecta & Resistencia",
         "icono": "fa-gem",
         "imagen": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
       },
       {
-        "id": "unas-acrilicas",
-        "nombre": "Extensiones Acrílicas",
-        "precio": "Desde $85.000 COP",
-        "duracion": "90 min",
-        "tecnica": "Esculpido & Estructura",
+        "id": "nail-art-hoja-oro",
+        "nombre": "Nail Art & Detalles en Pan de Oro",
+        "precio": "Desde $35.000 COP",
+        "duracion": "45 min",
+        "tecnica": "Mano Alzada, Foil & Pedrería",
         "icono": "fa-wand-magic-sparkles",
         "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
       },
       {
-        "id": "nail-art-diseno",
-        "nombre": "Nail Art & Diseños",
-        "precio": "Desde $20.000 COP",
-        "duracion": "30 min",
-        "tecnica": "Mano Alzada & Efectos",
-        "icono": "fa-paint-brush",
-        "imagen": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80"
+        "id": "kapping-gel-nivelador",
+        "nombre": "Kapping & Gel Nivelador",
+        "precio": "$55.000 COP",
+        "duracion": "60 min",
+        "tecnica": "Protección & Fortaleza Uña Natural",
+        "icono": "fa-shield-halved",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
       },
       {
-        "id": "pedicura-spa",
-        "nombre": "Pedicura Spa & Relax",
+        "id": "pedicura-spa-relax",
+        "nombre": "Pedicura Spa & Exfoliación Relajante",
         "precio": "$40.000 COP",
         "duracion": "60 min",
-        "tecnica": "Exfoliación & Hidratación",
+        "tecnica": "Sales Minerales & Masaje Hidratante",
         "icono": "fa-spa",
         "imagen": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80"
       },
       {
-        "id": "kapping-nivelacion",
-        "nombre": "Kapping & Gel Nivelador",
-        "precio": "$55.000 COP",
-        "duracion": "60 min",
-        "tecnica": "Protección & Crecimiento",
-        "icono": "fa-shield-halved",
-        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+        "id": "retiro-tratamiento-nutritivo",
+        "nombre": "Retiro Seguro & Spa Nutritivo",
+        "precio": "$25.000 COP",
+        "duracion": "40 min",
+        "tecnica": "Cuidado Intensivo con Keratina",
+        "icono": "fa-heart",
+        "imagen": "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80"
       }
     ],
     "especialistas": [
@@ -89,7 +98,7 @@
         "experiencia": "+8 años exp.",
         "badge": "Master",
         "calificacion": "5.0",
-        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "camila-morales",
@@ -98,7 +107,7 @@
         "experiencia": "+5 años exp.",
         "badge": "Pro",
         "calificacion": "5.0",
-        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "valeria-ospina",
@@ -107,7 +116,7 @@
         "experiencia": "+4 años exp.",
         "badge": "Senior",
         "calificacion": "5.0",
-        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "mariana-rua",
@@ -116,7 +125,7 @@
         "experiencia": "+6 años exp.",
         "badge": "Pro",
         "calificacion": "5.0",
-        "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
+        "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80"
       }
     ]
   }

@@ -18,6 +18,10 @@ Esta habilidad se activa cuando el usuario proporciona un **video de alta fideli
    - **Mobile (9:16)**: Resolución `720x1280`, centrada y recortada al sujeto o acción principal.
 4. **Cero Pantallas Negras (Poster Fallback)**: Un `poster.webp` estático que se dibuja en el Canvas en el primer ciclo de render, garantizando fidelidad visual instantánea antes de que el resto de frames se precarguen.
 5. **Regla de Oro CSS**: Uso estricto de `overflow-x: clip;` en `html, body`. **Terminantemente prohibido usar `overflow-x: hidden;`** en el contenedor padre, ya que destruye `position: sticky` en los navegadores modernos e inhabilita el scroll scrubbing.
+6. **Cobertura 100% Full Cover (Edge-to-Edge)**: El video debe llenar la pantalla al 100% usando `scale = Math.max(cw / iw, ch / ih);`. Prohibido aplicar multiplicadores de reducción artificial (como `* 0.90`) porque generan bandas, barras o recuadros negros alrededor del Canvas.
+7. **Narrativa Editorial en 2 Pasos (50% / 50%)**: Para evitar saturación visual y fatiga de lectura durante el scroll:
+   - **Paso 1 (0% a 50%)**: Gran titular principal de bienvenida de máximo impacto sin párrafo descriptivo, botones CTA principales y badge de reputación/Google Reviews.
+   - **Paso 2 (50% a 100%)**: Mensaje de valor de servicios/técnica con la descripción completa y llamadas a la acción secundarias.
 
 ---
 
@@ -211,40 +215,33 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
 
     <!-- Cero capas opacas sobre el video para 100% nitidez óptica -->
 
-    <!-- Contenido editorial asimétrico con 3 textos secuenciales -->
+    <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
     <div class="container hero-container-align">
       <div class="hero-scroll-content">
-        <!-- Paso 1 (0% a 32%) -->
+        <!-- Paso 1 (0% a 50%): Gran Titular Principal sin descripción para despejar el video -->
         <div class="hero-scroll-step step-1 active">
           <span class="hero-script-tag">Título de Autor</span>
           <span class="hero-eyebrow">CATEGORÍA · CIUDAD</span>
-          <h1 class="hero-title">Titular Principal &amp;<br><em>Enfoque de Valor</em></h1>
-          <p class="hero-desc">Descripción clara y cálida del servicio...</p>
+          <h1 class="hero-title">MÁS QUE UN SERVICIO.<br><em>UN ESTILO DE VIDA.</em></h1>
           <div class="hero-actions">
             <a href="https://wa.me/..." class="btn btn-primary">Agendar Cita</a>
             <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
           </div>
-        </div>
-
-        <!-- Paso 2 (33% a 66%) -->
-        <div class="hero-scroll-step step-2">
-          <span class="hero-script-tag">Segunda Frase</span>
-          <span class="hero-eyebrow">ESPECIALIDADES</span>
-          <h2 class="hero-title">Segundo Mensaje<br><em>De Transformación</em></h2>
-          <p class="hero-desc">Detalle de tratamientos y experiencia...</p>
-          <div class="hero-actions">
-            <a href="#servicios" class="btn btn-primary">Conocer Más</a>
+          <div class="hero-proof-badge">
+            <span class="hero-proof-stars">★★★★★</span>
+            <span class="hero-proof-text">5.0 en Google Reviews · Ubicación</span>
           </div>
         </div>
 
-        <!-- Paso 3 (67% a 100%) -->
-        <div class="hero-scroll-step step-3">
-          <span class="hero-script-tag">Cierre de Confianza</span>
-          <span class="hero-eyebrow">EXPERIENCIA VIP</span>
-          <h2 class="hero-title">Llamado a la Acción<br><em>Final</em></h2>
-          <p class="hero-desc">Instalaciones, trato humano y reserva...</p>
+        <!-- Paso 2 (50% a 100%): Técnica, Servicios & Detalle con descripción completa -->
+        <div class="hero-scroll-step step-2">
+          <span class="hero-script-tag">Maestría en Cada Detalle</span>
+          <span class="hero-eyebrow">PRECISIÓN &amp; TÉCNICA</span>
+          <h2 class="hero-title">ARTE CLÁSICO &amp;<br><em>TENDENCIA MODERNA</em></h2>
+          <p class="hero-desc">Descripción detallada, clara y persuasiva de los procedimientos, atención personalizada e higiene de primer nivel para el cliente.</p>
           <div class="hero-actions">
-            <a href="https://wa.me/..." class="btn btn-primary">Reservar Ahora</a>
+            <a href="#servicios" class="btn btn-primary">Conocer Servicios</a>
+            <a href="https://wa.me/..." class="btn btn-outline">Consultar Horarios</a>
           </div>
         </div>
       </div>
@@ -353,10 +350,15 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
 .hero-scroll-step .hero-eyebrow {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 4px 25px rgba(0, 0, 0, 0.9);
 }
-  text-align: center;
-  max-width: 680px;
-  padding: 0 20px;
-  color: #ffffff;
+
+.step-1 .hero-title {
+  margin-bottom: 26px; /* Espaciado equilibrado hacia los botones al no tener párrafo */
+}
+
+@media (max-width: 768px) {
+  .step-1 .hero-title {
+    margin-bottom: 18px;
+  }
 }
 ```
 
@@ -405,7 +407,7 @@ Este motor gestiona la precarga asíncrona, detecta si el usuario está en móvi
   }
   window.addEventListener('resize', resizeCanvas, { passive: true });
 
-  // 4. Renderizador con reducción del 10% para encuadre holgado (sin cortes)
+  // 4. Renderizador con Cobertura 100% Full Cover Edge-to-Edge (Sin franjas negras)
   function renderFrame(index) {
     const img = images[index];
     if (!img || !img.complete) return;
@@ -419,15 +421,15 @@ Este motor gestiona la precarga asíncrona, detecta si el usuario está en móvi
     ctx.fillStyle = '#0d0e12';
     ctx.fillRect(0, 0, cw, ch);
 
-    // Reducción del 10% en la escala para que el sujeto no quede recortado
-    const baseScale = Math.max(cw / iw, ch / ih);
-    const scale = baseScale * 0.90;
+    // Escala Full Cover al 100% (cero reducciones artificiales)
+    const scale = Math.max(cw / iw, ch / ih);
     const nw = iw * scale;
     const nh = ih * scale;
 
     const isMob = window.innerWidth < 768;
+    // Centrado inteligente: en escritorio se sujeta ligeramente a la derecha para dejar aire al texto
     const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.05);
-    const ny = isMob ? ((ch - nh) / 2) - 10 : ((ch - nh) / 2) + 20;
+    const ny = (ch - nh) / 2;
 
     ctx.drawImage(img, nx, ny, nw, nh);
   }
@@ -496,17 +498,10 @@ Este motor gestiona la precarga asíncrona, detecta si el usuario está en móvi
       }
     }
 
-    // Alternancia de los 3 textos secuenciales según el progreso de scroll
+    // Alternancia de los 2 pasos editoriales según el progreso de scroll (50% / 50%)
     const steps = document.querySelectorAll('.hero-scroll-step');
-    if (steps.length >= 3) {
-      let activeIndex = 0;
-      if (progress < 0.33) {
-        activeIndex = 0;
-      } else if (progress < 0.67) {
-        activeIndex = 1;
-      } else {
-        activeIndex = 2;
-      }
+    if (steps.length >= 2) {
+      const activeIndex = progress < 0.5 ? 0 : 1;
       steps.forEach((step, idx) => {
         step.classList.toggle('active', idx === activeIndex);
       });
@@ -530,8 +525,8 @@ Al recibir un video y construir la landing page:
 - [ ] **Extracción Dual 1080p**: Se han generado los frames para Desktop (16:9 - 1920x1080 Q85) y Mobile (9:16 - 720x1280 Q76) en `public/frames/`.
 - [ ] **Posters Listos y Fallback Limpio**: Existen `public/frames/desktop/poster.webp` y `public/frames/mobile/poster.webp`, y se ocultan completamente tras el render inicial (`display: none;`).
 - [ ] **Cero Capas Opacas sobre el Video**: Sin veladuras ni overlays generales que resten nitidez a la modelo o sujeto; el texto cuenta con sombras tipográficas nítidas (`text-shadow`) y composición asimétrica a la izquierda.
-- [ ] **Encuadre Holgado (Escala -10%)**: En `renderFrame()`, la escala base cover se multiplica por `0.90` para brindar margen y evitar recortar la cabeza u hombros del sujeto.
-- [ ] **Storytelling de 3 Textos**: Implementados 3 capítulos editoriales secuenciales en `.hero-scroll-content` que transicionan suavemente a lo largo de `300vh`.
+- [ ] **Cobertura 100% Full Cover**: `renderFrame()` utiliza escala cover pura `Math.max(cw/iw, ch/ih)` sin reducciones artificiales para evitar marcos o franjas negras alrededor del Canvas.
+- [ ] **Storytelling en 2 Pasos (50% / 50%)**: Paso 1 (Gran titular de bienvenida sin descripción + botones CTA + badge Google) y Paso 2 (Mensaje de técnica/servicios con descripción completa).
 - [ ] **Regla CSS `clip`**: El `html` y `body` usan estrictamente `overflow-x: clip;` para proteger `position: sticky`.
 - [ ] **Respeto a las Secciones Oficiales (`AGENTS.md`)**:
   - `#inicio`: Hero Canvas Video Scrubbing de alta fidelidad.
