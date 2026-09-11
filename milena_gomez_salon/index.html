@@ -6,71 +6,102 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="theme-color" content="#9b4b5c">
+  <meta name="theme-color" content="#131114">
   <title>Milena Gómez salon | Centro de Estética, Faciales y Spa en Apartadó</title>
   <meta name="description" content="Milena Gómez salon en Apartadó, Antioquia. Centro de estética integral especializado en limpiezas faciales profundas, masajes relajantes, manicura, pedicura spa y skincare avanzado. ¡Agenda tu cita hoy!">
   <meta name="keywords" content="Milena Gomez salon, centro de estetica Apartado, faciales en Apartado, masajes relajantes Apartado, spa Apartado, limpieza facial Antioquia, estetica corporal Apartado">
-  
+
   <!-- OpenGraph Metadata -->
   <meta property="og:title" content="Milena Gómez salon | Centro de Estética & Spa en Apartadó">
-  <meta property="og:description" content="Relájate. Renuévate. Rejuvenece. Tratamientos exclusivos de estética facial, corporal y bienestar integral en Apartadó.">
+  <meta property="og:description" content="Descubre tratamientos faciales avanzados, masajes relajantes y cuidado estético integral para resaltar tu mejor versión en Apartadó.">
   <meta property="og:type" content="business.business">
   <meta property="og:url" content="https://milenagomezsalon.com">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:image" content="public/frames/desktop/poster.webp">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Milena Gómez salon",
+    "description": "Centro de estética integral, faciales avanzados, masajes relajantes y spa en Apartadó, Antioquia.",
+    "telephone": "+573128867937",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 101 #97/56",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8851221,
+      "longitude": -76.6293883
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "$$"
+  }
+  </script>
 
   <!-- Google Fonts: Playfair Display + Alex Brush + Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome 6 (Free CDN) -->
+  <!-- FontAwesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     /* ==========================================================================
-       VARIABLES Y PALETA DE COLOR FORENSE (Rose Mauve, Velvet Rose & Gold)
+       VARIABLES Y PALETA DE COLOR FORENSE (Rose Mauve, Velvet Rose & Dark Obsidian)
        ========================================================================== */
     :root {
       --primary: #9b4b5c;
-      --primary-hover: #7c3444;
-      --primary-dark: #5e1d2c;
-      --primary-light: #c26d7f;
-      --primary-soft: #fbf3f2;
+      --primary-hover: #b0576a;
+      --primary-dark: #632230;
+      --primary-soft: rgba(155, 75, 92, 0.12);
       
       --accent-gold: #c59b5f;
-      --accent-gold-light: #e5be83;
-      --accent-gold-dark: #9e7539;
+      --accent-gold-light: #e0b77d;
+      --accent-gold-dark: #99733a;
       
-      --bg-hero: #fbf3f2;
-      --bg-main: #fdfaf9;
-      --bg-alt: #f8ebe9;
-      --bg-white: #ffffff;
-      
-      --border-color: #f2d8df;
-      --border-gold: rgba(197, 155, 95, 0.4);
-      --border-light: #fae8ed;
+      --bg-dark: #131114;
+      --bg-dark-card: #1c181e;
+      --bg-dark-alt: #18141a;
+      --bg-light: #fcf8f8;
+      --bg-card: #ffffff;
       
       --text-main: #2b141c;
       --text-muted: #6c565e;
       --text-light: #9a838b;
+      --text-white: #ffffff;
+      --text-white-muted: rgba(255, 255, 255, 0.76);
+      
+      --border-subtle: rgba(155, 75, 92, 0.14);
+      --border-gold: rgba(197, 155, 95, 0.35);
+      --border-dark: rgba(255, 255, 255, 0.08);
       
       --font-display: 'Playfair Display', Georgia, serif;
       --font-script: 'Alex Brush', cursive;
       --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       
-      --shadow-sm: 0 4px 14px rgba(155, 75, 92, 0.06);
-      --shadow-md: 0 10px 28px rgba(155, 75, 92, 0.10);
-      --shadow-lg: 0 18px 45px rgba(155, 75, 92, 0.15);
+      --shadow-sm: 0 4px 14px rgba(19, 17, 20, 0.06);
+      --shadow-md: 0 10px 28px rgba(19, 17, 20, 0.12);
+      --shadow-lg: 0 20px 48px rgba(19, 17, 20, 0.22);
       
       --radius-sm: 8px;
       --radius-md: 16px;
       --radius-lg: 24px;
       --radius-pill: 50px;
       
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --transition: all 0.32s cubic-bezier(0.25, 0.8, 0.25, 1);
     }
 
     /* ==========================================================================
@@ -82,17 +113,16 @@
       padding: 0;
     }
 
-    html {
+    html, body {
+      overflow-x: clip;
+      width: 100%;
+      max-width: 100%;
       scroll-behavior: smooth;
       font-size: 16px;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background-color: var(--bg-main);
+      background-color: var(--bg-light);
       color: var(--text-main);
+      font-family: var(--font-body);
       line-height: 1.6;
-      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -114,134 +144,77 @@
 
     .container {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1220px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
     /* ==========================================================================
-       TOP BAR
-       ========================================================================== */
-    .topbar {
-      background-color: var(--bg-alt);
-      border-bottom: 1px solid var(--border-color);
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      padding: 8px 0;
-    }
-
-    .topbar-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .topbar-info {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .topbar-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .topbar-item i {
-      color: var(--primary);
-      font-size: 0.82rem;
-    }
-
-    .topbar-socials {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .topbar-socials a {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .topbar-socials a:hover {
-      color: var(--primary);
-      transform: translateY(-1px);
-    }
-
-    /* ==========================================================================
-       NAVBAR STICKY INTELIGENTE
+       SMART HEADER / NAVBAR INTELIGENTE
        ========================================================================== */
     .header-sticky-wrapper {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 1000;
-      transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-      will-change: transform;
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+    }
+
+    .header-sticky-wrapper.scrolled-past-hero {
+      background: rgba(19, 17, 20, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .header-sticky-wrapper.header-hidden {
       transform: translateY(-100%);
     }
 
-    .header {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-light);
-      transition: var(--transition);
-    }
-
-    .navbar {
+    .header-nav {
+      max-width: 1240px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 82px;
+      min-height: 70px;
+      padding: 10px 24px;
+      padding-left: max(24px, env(safe-area-inset-left, 24px));
+      padding-right: max(24px, env(safe-area-inset-right, 24px));
     }
 
     .brand-logo {
       display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--bg-alt) 0%, #ffffff 100%);
-      border: 1.5px solid var(--accent-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent-gold-dark);
-      font-size: 1.25rem;
-      box-shadow: 0 4px 10px rgba(197, 155, 95, 0.15);
-    }
-
-    .brand-text {
-      display: flex;
       flex-direction: column;
+      text-decoration: none;
     }
 
-    .brand-title {
+    .brand-name {
       font-family: var(--font-display);
-      font-size: 1.55rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      color: var(--primary);
-      letter-spacing: 0.5px;
-      line-height: 1.1;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      line-height: 1.15;
+    }
+
+    .brand-name span {
+      color: var(--accent-gold);
+      font-weight: 400;
+      font-style: italic;
     }
 
     .brand-subtitle {
-      font-size: 0.68rem;
-      letter-spacing: 2.5px;
+      font-size: 0.62rem;
       text-transform: uppercase;
-      color: var(--accent-gold-dark);
-      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 2px;
+      white-space: nowrap;
     }
 
     .nav-links {
@@ -251,76 +224,68 @@
     }
 
     .nav-link {
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       font-weight: 500;
-      color: var(--text-main);
-      position: relative;
-      padding: 6px 0;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: var(--primary);
+      color: rgba(255, 255, 255, 0.82);
+      letter-spacing: 0.04em;
       transition: var(--transition);
+      position: relative;
     }
 
     .nav-link:hover {
-      color: var(--primary);
+      color: var(--accent-gold-light);
     }
 
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    .btn-header {
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 11px 24px;
-      border-radius: var(--radius-sm);
-      font-size: 0.9rem;
-      font-weight: 600;
-      display: inline-flex;
+    .nav-actions {
+      display: flex;
       align-items: center;
-      gap: 8px;
-      transition: var(--transition);
-      box-shadow: 0 4px 14px rgba(155, 75, 92, 0.25);
+      gap: 16px;
     }
 
-    .btn-header:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(155, 75, 92, 0.35);
+    .btn-header-cta {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #ffffff;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 4px 16px rgba(155, 75, 92, 0.35);
+      transition: var(--transition);
+      white-space: nowrap;
     }
 
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: var(--text-main);
-      cursor: pointer;
+    .btn-header-cta:hover {
+      background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(155, 75, 92, 0.45);
+      color: #ffffff;
     }
 
     /* ==========================================================================
-       HERO HEADER INMERSIVO A ANCHO COMPLETO (FULL-WIDTH BLEED EDGE-TO-EDGE)
+       CANVAS VIDEO SCROLL SCRUBBING HERO (300vh Track)
        ========================================================================== */
-    .hero-fullwidth-section {
+    .hero-track {
       position: relative;
-      width: 100%;
-      min-height: 650px;
-      display: flex;
-      align-items: center;
-      background-color: var(--bg-hero);
-      overflow: hidden;
+      height: 300vh;
+      background-color: var(--bg-dark);
     }
 
-    .hero-bg-cover {
+    .hero-sticky-frame {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      min-height: 640px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .canvas-container {
       position: absolute;
       top: 0;
       left: 0;
@@ -329,93 +294,125 @@
       z-index: 1;
     }
 
-    .hero-bg-img {
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 65%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center right;
-      display: block;
-    }
-
-    /* Máscara Gradiente de Fusión Suave */
-    .hero-bg-overlay {
+    #heroCanvas {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        90deg, 
-        #fbf3f2 0%, 
-        #fbf3f2 38%, 
-        rgba(251, 243, 242, 0.94) 52%, 
-        rgba(251, 243, 242, 0.35) 70%, 
-        transparent 100%
-      );
+      display: block;
+    }
+
+    .canvas-poster {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       z-index: 2;
+      opacity: 1;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .canvas-poster.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Degradado calibrado limpio: contraste total a la izquierda para el texto y 100% transparente sobre la modelo */
+    .hero-overlay-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      background: linear-gradient(
+        90deg,
+        #131114 0%,
+        #131114 20%,
+        rgba(19, 17, 20, 0.88) 30%,
+        rgba(19, 17, 20, 0.50) 42%,
+        rgba(19, 17, 20, 0.12) 52%,
+        transparent 60%
+      );
+      pointer-events: none;
     }
 
     .hero-content-wrapper {
       position: relative;
-      z-index: 3;
-      padding-top: 80px;
-      padding-bottom: 80px;
+      z-index: 4;
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+      padding-top: 60px;
     }
 
-    .hero-text-block {
-      max-width: 590px;
+    .story-step {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 580px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+      pointer-events: none;
     }
 
-    .hero-tagline-script {
-      font-family: var(--font-script);
-      font-size: 2.3rem;
-      color: var(--primary);
-      line-height: 1.2;
-      display: block;
-      margin-bottom: 8px;
+    .story-step.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%);
+      pointer-events: auto;
+    }
+
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      background: rgba(197, 155, 95, 0.14);
+      border: 1px solid var(--border-gold);
+      color: var(--accent-gold-light);
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: 3.6rem;
-      line-height: 1.08;
+      font-size: 3.1rem;
       font-weight: 700;
-      color: var(--text-main);
+      line-height: 1.15;
+      color: #ffffff;
       margin-bottom: 12px;
-      letter-spacing: -0.5px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
     }
 
-    .hero-title .accent-gold {
-      color: var(--primary);
+    .hero-script {
       display: block;
-      font-style: italic;
-    }
-
-    .hero-luxury-banner {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-    }
-
-    .hero-luxury-banner span {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--accent-gold-dark);
+      font-family: var(--font-script);
+      font-size: 1.18em;
+      font-weight: 400;
+      color: var(--accent-gold-light);
+      line-height: 1;
+      margin-top: 4px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
     }
 
     .hero-desc {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      max-width: 510px;
-      margin-bottom: 34px;
-      line-height: 1.7;
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: var(--text-white-muted);
+      margin-bottom: 28px;
+      max-width: 500px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     .hero-actions {
@@ -425,1900 +422,1724 @@
       flex-wrap: wrap;
     }
 
-    .btn-primary {
-      background-color: var(--primary);
+    .btn-hero-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #ffffff;
-      padding: 14px 32px;
-      border-radius: var(--radius-sm);
-      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      font-size: 0.92rem;
       font-weight: 600;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 6px 24px rgba(155, 75, 92, 0.4);
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 6px 20px rgba(155, 75, 92, 0.28);
       transition: var(--transition);
     }
 
-    .btn-primary:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 26px rgba(155, 75, 92, 0.38);
+    .btn-hero-primary:hover {
+      background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(155, 75, 92, 0.55);
       color: #ffffff;
     }
 
-    .btn-secondary {
-      background-color: rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(8px);
-      color: var(--text-main);
-      padding: 14px 28px;
-      border-radius: var(--radius-sm);
-      font-size: 0.95rem;
-      font-weight: 600;
-      border: 1.5px solid var(--border-gold);
+    .btn-hero-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      padding: 14px 26px;
+      border-radius: var(--radius-pill);
+      font-size: 0.92rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      transition: var(--transition);
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: var(--transition);
     }
 
-    .btn-secondary:hover {
-      background-color: #ffffff;
-      border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-3px);
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.18);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #ffffff;
     }
 
-    /* BADGE FLOTANTE CIRCULAR ORO & ROSE */
-    .hero-floating-badge {
+    .scroll-indicator {
       position: absolute;
-      right: 6%;
-      top: 50%;
-      transform: translateY(-50%);
-      background: linear-gradient(135deg, #ffffff 0%, var(--bg-hero) 100%);
-      border-radius: 50%;
-      width: 130px;
-      height: 130px;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      box-shadow: var(--shadow-lg);
-      border: 3px solid var(--accent-gold);
-      text-align: center;
-      padding: 10px;
-      z-index: 4;
-      animation: floatBadge 4s ease-in-out infinite alternate;
-    }
-
-    @keyframes floatBadge {
-      0% { transform: translateY(-50%); }
-      100% { transform: translateY(calc(-50% - 10px)); }
-    }
-
-    .hero-badge-icon {
-      color: var(--accent-gold);
-      font-size: 1.1rem;
-      margin-bottom: 2px;
-    }
-
-    .hero-badge-title {
-      font-size: 0.68rem;
-      font-weight: 800;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--primary);
-      line-height: 1.2;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
     }
 
-    .hero-badge-subtitle {
-      font-size: 0.62rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-top: 2px;
+    .scroll-indicator i {
+      animation: bounceDown 1.8s infinite;
     }
 
-    .hero-badge-stars {
-      color: var(--accent-gold);
-      font-size: 0.62rem;
-      margin-top: 3px;
+    @keyframes bounceDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
     }
 
     /* ==========================================================================
-       SECTION HEADERS
+       BARRA DE PILARES / GARANTÍAS DE CONFIANZA
        ========================================================================== */
+    .section-pillars {
+      background-color: var(--bg-dark-alt);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 36px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .pillar-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+    }
+
+    .pillar-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--border-gold);
+      transform: translateY(-2px);
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(197, 155, 95, 0.12);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold-light);
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .pillar-content h4 {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 3px;
+    }
+
+    .pillar-content p {
+      font-size: 0.74rem;
+      color: var(--text-white-muted);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       CATÁLOGO DE SERVICIOS (GRID 3 COLUMNAS ESCRITORIO / 2 MÓVIL)
+       ========================================================================== */
+    .section-services {
+      padding: 100px 0 110px;
+      background-color: var(--bg-light);
+    }
+
     .section-header {
       text-align: center;
-      margin-bottom: 48px;
+      max-width: 680px;
+      margin: 0 auto 56px;
     }
 
     .section-eyebrow {
-      font-size: 0.82rem;
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      color: var(--accent-gold-dark);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      color: var(--primary);
       margin-bottom: 8px;
     }
 
     .section-title {
       font-family: var(--font-display);
-      font-size: 2.4rem;
+      font-size: 2.35rem;
       font-weight: 700;
       color: var(--text-main);
-      letter-spacing: -0.5px;
-    }
-
-    .section-divider-heart {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 10px;
-      color: var(--primary);
-      font-size: 0.95rem;
-    }
-
-    .section-divider-heart::before,
-    .section-divider-heart::after {
-      content: '';
-      width: 48px;
-      height: 1px;
-      background-color: var(--border-gold);
-    }
-
-    /* ==========================================================================
-       CATÁLOGO DE 5 SERVICIOS CIRCULARES CON MEDALLAS FLOTANTES
-       ========================================================================== */
-    .services-section {
-      padding: 85px 0 95px;
-      background-color: var(--bg-main);
-    }
-
-    .services-5-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 22px;
-      align-items: stretch;
-    }
-
-    .service-circular-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      padding: 24px 16px 20px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: var(--transition);
-      position: relative;
-    }
-
-    .service-circular-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--accent-gold);
-    }
-
-    /* Imagen Circular con Halo Dorado */
-    .service-avatar-wrap {
-      position: relative;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      margin-bottom: 24px;
-      border: 3px solid var(--accent-gold);
-      box-shadow: 0 8px 18px rgba(197, 155, 95, 0.2);
-    }
-
-    .service-avatar-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      transition: transform 0.5s ease;
-    }
-
-    .service-circular-card:hover .service-avatar-img {
-      transform: scale(1.08);
-    }
-
-    /* Medalla de Ícono Flotante en la Base del Avatar */
-    .service-icon-medal {
-      position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      border: 2px solid #ffffff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: var(--transition);
-    }
-
-    .service-circular-card:hover .service-icon-medal {
-      background: var(--accent-gold);
-      transform: translateX(-50%) scale(1.1);
-    }
-
-    .service-title-text {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 8px;
-      line-height: 1.25;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .service-desc-text {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: 16px;
-      flex-grow: 1;
-    }
-
-    .service-tag-pill {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--primary);
-      background: var(--bg-alt);
-      padding: 5px 14px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-color);
-      letter-spacing: 0.3px;
-      white-space: nowrap;
-    }
-
-    /* ==========================================================================
-       PROMO BANNER DEEP VELVET & GOLD (Allure Style)
-       ========================================================================== */
-    .promo-section {
-      padding: 20px 0 70px;
-    }
-
-    .promo-velvet-banner {
-      background: linear-gradient(135deg, #7c3444 0%, #5e1d2c 50%, #461421 100%);
-      border-radius: var(--radius-lg);
-      padding: 40px 48px;
-      color: #ffffff;
-      display: grid;
-      grid-template-columns: 1fr 1.4fr 1fr;
-      align-items: center;
-      gap: 32px;
-      box-shadow: var(--shadow-lg);
-      border: 2px solid var(--accent-gold);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .promo-velvet-banner::before {
-      content: '';
-      position: absolute;
-      top: -60%;
-      right: -20%;
-      width: 450px;
-      height: 450px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(197, 155, 95, 0.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .promo-left-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 8px;
-      border-right: 1px solid rgba(255, 255, 255, 0.15);
-      padding-right: 20px;
-    }
-
-    .promo-gift-icon {
-      font-size: 2rem;
-      color: var(--accent-gold-light);
-      margin-bottom: 4px;
-    }
-
-    .promo-selflove-title {
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
-
-    .promo-selflove-sub {
-      font-size: 0.8rem;
-      color: #f7d6de;
-      letter-spacing: 0.5px;
-    }
-
-    .promo-center-col {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .promo-script-eyebrow {
-      font-family: var(--font-script);
-      font-size: 2.2rem;
-      color: var(--accent-gold-light);
-      margin-bottom: 4px;
-      line-height: 1;
-    }
-
-    .promo-main-heading {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
       line-height: 1.2;
+      margin-bottom: 14px;
     }
 
-    .btn-promo-gold {
-      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
-      color: #ffffff;
-      padding: 12px 28px;
-      border-radius: var(--radius-sm);
-      font-weight: 700;
-      font-size: 0.88rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      transition: var(--transition);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-promo-gold:hover {
-      background: linear-gradient(135deg, #d8ac6e 0%, var(--accent-gold) 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(197, 155, 95, 0.4);
-      color: #ffffff;
-    }
-
-    .promo-right-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 6px;
-      border-left: 1px solid rgba(255, 255, 255, 0.15);
-      padding-left: 20px;
-    }
-
-    .promo-silhouette-icon {
-      font-size: 2rem;
-      color: var(--accent-gold-light);
-      margin-bottom: 4px;
-    }
-
-    .promo-triad-text {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #f7d6de;
-      line-height: 1.4;
-    }
-
-    /* ==========================================================================
-       WHY CHOOSE US (¿POR QUÉ ELEGIRNOS?)
-       ========================================================================== */
-    .why-us-section {
-      padding: 80px 0 90px;
-      background-color: var(--bg-alt);
-    }
-
-    .why-us-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .why-us-media {
-      position: relative;
-    }
-
-    .why-us-img-box {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      border: 4px solid #ffffff;
-      height: 440px;
-    }
-
-    .why-us-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .why-us-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .why-card {
-      background: #ffffff;
-      padding: 24px 20px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      text-align: center;
-      transition: var(--transition);
-    }
-
-    .why-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--accent-gold);
-    }
-
-    .why-card-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--bg-alt);
-      border: 1px solid var(--border-gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--primary);
-      font-size: 1.2rem;
-      margin: 0 auto 14px;
-      transition: var(--transition);
-    }
-
-    .why-card:hover .why-card-icon {
-      background: var(--primary);
-      color: #ffffff;
-    }
-
-    .why-card-title {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 6px;
-    }
-
-    .why-card-desc {
-      font-size: 0.8rem;
+    .section-desc {
+      font-size: 0.95rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    /* ==========================================================================
-       GALERÍA RESULTADOS REALES (6 FOTOS)
-       ========================================================================== */
-    .gallery-section {
-      padding: 85px 0;
-      background-color: var(--bg-main);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-item {
-      position: relative;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      aspect-ratio: 1 / 1.15;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(124, 52, 68, 0.88) 0%, transparent 65%);
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 14px;
-      color: #ffffff;
-      transition: var(--transition);
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-
-    .gallery-overlay-tag {
-      font-size: 0.68rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent-gold-light);
-    }
-
-    .gallery-overlay-title {
-      font-family: var(--font-display);
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    /* ==========================================================================
-       TESTIMONIOS
-       ========================================================================== */
-    .testimonials-section {
-      padding: 80px 0 90px;
-      background-color: var(--bg-alt);
-    }
-
-    .testimonials-grid {
+    .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 28px;
     }
 
-    .testimonial-card {
-      background: #ffffff;
-      border-radius: var(--radius-md);
-      padding: 32px 24px;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-sm);
-      text-align: center;
+    .service-card {
+      position: relative;
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      background-color: #000000;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .service-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.05);
+    }
+
+    /* Degradado aterciopelado: 38% superior 100% transparente para ver el procedimiento */
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(19, 17, 20, 0) 0%,
+        rgba(19, 17, 20, 0) 38%,
+        rgba(19, 17, 20, 0.72) 65%,
+        rgba(19, 17, 20, 0.96) 92%,
+        #131114 100%
+      );
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      z-index: 2;
+    }
+
+    .service-card-accent-line {
+      width: 36px;
+      height: 2px;
+      background-color: var(--accent-gold);
+      margin-bottom: 10px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.45;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-card-bottom {
+      display: flex;
       align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 12px;
+    }
+
+    .service-card-price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--accent-gold-light);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-card-book-minimal {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 0;
       transition: var(--transition);
     }
 
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--accent-gold);
-    }
-
-    .testimonial-avatar {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid var(--accent-gold);
-      box-shadow: 0 4px 12px rgba(197, 155, 95, 0.2);
-      margin-bottom: 14px;
-    }
-
-    .testimonial-stars {
+    .btn-card-book-minimal span.arrow {
       color: var(--accent-gold);
-      font-size: 0.85rem;
-      margin-bottom: 12px;
-      display: flex;
-      gap: 4px;
+      transition: transform 0.25s ease;
+      font-size: 0.95rem;
     }
 
-    .testimonial-quote {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      font-style: italic;
-      margin-bottom: 16px;
-      flex-grow: 1;
+    .service-card:hover .btn-card-book-minimal {
+      color: var(--accent-gold-light);
     }
 
-    .testimonial-author {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.98rem;
-      color: var(--text-main);
-    }
-
-    .testimonial-location {
-      font-size: 0.75rem;
-      color: var(--text-light);
+    .service-card:hover .btn-card-book-minimal span.arrow {
+      transform: translateX(5px);
     }
 
     /* ==========================================================================
-       UBICACIÓN Y GOOGLE MAPS GEORREFERENCIADO
+       SECCIÓN SOBRE NOSOTROS & PROFESIONALES (ESTÁNDAR EDITORIAL)
        ========================================================================== */
-    .location-section {
-      padding: 85px 0;
-      background-color: var(--bg-main);
+    .section-about {
+      padding: 100px 0 110px;
+      background-color: #ffffff;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .map-showcase-card {
-      background: #ffffff;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-color);
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
+    .experience-layout {
       display: grid;
-      grid-template-columns: 1fr 1.35fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 90px;
     }
 
-    .map-info-panel {
-      padding: 48px 40px;
+    .salon-image-showcase {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      aspect-ratio: 4/3;
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(19, 17, 20, 0.88);
+      backdrop-filter: blur(12px);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-gold);
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
 
-    .map-info-header {
+    .badge-icon {
+      color: var(--accent-gold);
+      font-size: 1.5rem;
+    }
+
+    .badge-text-primary {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .badge-text-secondary {
+      font-size: 0.7rem;
+      color: var(--accent-gold-light);
+    }
+
+    .experience-content h3 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.22;
+      margin-bottom: 18px;
+    }
+
+    .experience-content p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
       margin-bottom: 24px;
     }
 
-    .map-info-header h3 {
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .metric-item {
+      text-align: left;
+    }
+
+    .metric-number {
       font-family: var(--font-display);
       font-size: 1.85rem;
       font-weight: 700;
-      color: var(--text-main);
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    /* Grid 4 Columnas Profesionales */
+    .team-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 46px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .team-card {
+      position: relative;
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background-color: #000000;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .team-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.04);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(19, 17, 20, 0) 0%,
+        rgba(19, 17, 20, 0) 40%,
+        rgba(19, 17, 20, 0.74) 68%,
+        rgba(19, 17, 20, 0.98) 94%,
+        #131114 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px;
+      z-index: 2;
+    }
+
+    .team-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background-color: var(--accent-gold);
       margin-bottom: 8px;
     }
 
-    .map-info-header p {
-      font-size: 0.92rem;
-      color: var(--text-muted);
+    .team-card-name {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 4px;
     }
 
-    .contact-details {
+    .team-card-role {
+      font-size: 0.76rem;
+      color: var(--accent-gold-light);
+      font-weight: 500;
+      margin-bottom: 8px;
+      min-height: 18px;
+    }
+
+    .team-card-stars {
+      color: #ffc107;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .team-card-stars span {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.72rem;
+      margin-left: 2px;
+    }
+
+    /* ==========================================================================
+       UBICACIÓN & CONTACTO (FÓRMULA GEORREFERENCIADA Z=16)
+       ========================================================================== */
+    .section-location {
+      padding: 100px 0 110px;
+      background-color: var(--bg-light);
+    }
+
+    .location-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 36px;
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .location-info {
+      padding: 44px 36px;
       display: flex;
       flex-direction: column;
-      gap: 18px;
-      margin-bottom: 30px;
+      justify-content: center;
+    }
+
+    .location-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .location-info p.lead-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
     }
 
     .contact-item {
       display: flex;
       align-items: flex-start;
-      gap: 14px;
+      gap: 16px;
+      margin-bottom: 20px;
     }
 
     .contact-icon {
-      width: 44px;
-      height: 44px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      background: var(--bg-alt);
-      border: 1px solid var(--border-gold);
+      background: var(--primary-soft);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--primary);
-      font-size: 1.05rem;
+      font-size: 1rem;
       flex-shrink: 0;
     }
 
-    .contact-text h4 {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .contact-details h5 {
+      font-size: 0.86rem;
+      font-weight: 600;
       color: var(--text-main);
       margin-bottom: 2px;
     }
 
-    .contact-text p, .contact-text a {
-      font-size: 0.88rem;
+    .contact-details p {
+      font-size: 0.82rem;
       color: var(--text-muted);
-    }
-
-    .contact-text a:hover {
-      color: var(--primary);
-    }
-
-    .map-actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn-map-action {
-      flex: 1;
-      padding: 12px 18px;
-      border-radius: var(--radius-sm);
-      font-size: 0.88rem;
-      font-weight: 600;
-      text-align: center;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: var(--transition);
-    }
-
-    .btn-map-primary {
-      background: var(--primary);
-      color: #ffffff;
-    }
-
-    .btn-map-primary:hover {
-      background: var(--primary-hover);
-      color: #ffffff;
-    }
-
-    .btn-map-secondary {
-      background: var(--bg-alt);
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-    }
-
-    .btn-map-secondary:hover {
-      background: #ffffff;
-      border-color: var(--primary);
-      color: var(--primary);
+      line-height: 1.4;
     }
 
     .map-frame-wrapper {
       position: relative;
-      min-height: 430px;
+      min-height: 420px;
       width: 100%;
-      height: 100%;
     }
 
     .map-frame-wrapper iframe {
       width: 100%;
       height: 100%;
-      border: none;
-      min-height: 430px;
+      min-height: 420px;
+      border: 0;
       display: block;
     }
 
     /* ==========================================================================
-       FOOTER EDITORIAL
+       FOOTER PRINCIPAL
        ========================================================================== */
-    .footer {
-      background-color: #ffffff;
-      border-top: 1px solid var(--border-color);
-      padding: 65px 0 26px;
-      font-size: 0.9rem;
+    .site-footer {
+      background-color: var(--bg-dark);
+      color: #ffffff;
+      padding: 70px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.4fr 0.9fr 1fr 1.2fr;
-      gap: 40px;
-      margin-bottom: 48px;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 36px;
+      margin-bottom: 50px;
     }
 
-    .footer-brand .brand-logo {
-      margin-bottom: 16px;
-    }
-
-    .footer-brand p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
+    .footer-col-brand p {
+      font-size: 0.84rem;
+      color: var(--text-white-muted);
       line-height: 1.6;
+      margin-top: 12px;
       margin-bottom: 20px;
+      max-width: 320px;
     }
 
-    .footer-socials {
+    .social-links {
       display: flex;
       gap: 12px;
     }
 
-    .footer-social-btn {
+    .social-link {
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      background: var(--bg-alt);
-      border: 1px solid var(--border-gold);
+      background: rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--primary);
-      font-size: 0.9rem;
+      color: #ffffff;
+      font-size: 0.95rem;
       transition: var(--transition);
     }
 
-    .footer-social-btn:hover {
+    .social-link:hover {
       background: var(--primary);
-      color: #ffffff;
       transform: translateY(-2px);
     }
 
-    .footer-col-title {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-main);
+    .footer-col h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
       margin-bottom: 18px;
       position: relative;
       padding-bottom: 8px;
     }
 
-    .footer-col-title::after {
+    .footer-col h4::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 28px;
+      width: 24px;
       height: 2px;
-      background: var(--primary);
+      background-color: var(--accent-gold);
     }
 
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .footer-links li {
+      margin-bottom: 10px;
     }
 
     .footer-links a {
-      color: var(--text-muted);
-      font-size: 0.86rem;
+      font-size: 0.82rem;
+      color: var(--text-white-muted);
       transition: var(--transition);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
     }
 
     .footer-links a:hover {
-      color: var(--primary);
-      transform: translateX(4px);
+      color: var(--accent-gold-light);
+      padding-left: 4px;
     }
 
-    .newsletter-desc {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-bottom: 16px;
+    .footer-booking-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 20px;
     }
 
-    .newsletter-form {
-      display: flex;
-      gap: 8px;
+    .footer-booking-box p {
+      font-size: 0.8rem;
+      color: var(--text-white-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
     }
 
-    .newsletter-input {
-      flex: 1;
-      padding: 10px 14px;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-color);
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      background: var(--bg-main);
-      outline: none;
-    }
-
-    .newsletter-input:focus {
-      border-color: var(--primary);
-    }
-
-    .btn-newsletter {
-      background: var(--primary);
+    .btn-footer-cta {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: #ffffff;
-      border: none;
-      padding: 10px 18px;
-      border-radius: var(--radius-sm);
+      padding: 11px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.84rem;
       font-weight: 600;
-      font-size: 0.82rem;
-      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.16);
       transition: var(--transition);
     }
 
-    .btn-newsletter:hover {
-      background: var(--primary-hover);
+    .btn-footer-cta:hover {
+      background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
+      color: #ffffff;
     }
 
     .footer-bottom {
-      border-top: 1px solid var(--border-light);
+      text-align: center;
       padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.8rem;
-      color: var(--text-light);
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-bottom-links a {
-      color: var(--text-light);
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--primary);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.74rem;
+      color: rgba(255, 255, 255, 0.5);
     }
 
     /* ==========================================================================
-       WHATSAPP FLOATING WIDGET
+       WHATSAPP FLOTANTE ANTI-CORTE MÓVIL
        ========================================================================== */
     .whatsapp-float {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .whatsapp-tooltip {
-      background: #ffffff;
-      color: var(--text-main);
-      padding: 8px 14px;
-      border-radius: var(--radius-pill);
-      font-size: 0.8rem;
-      font-weight: 600;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border-color);
-      pointer-events: none;
-      white-space: nowrap;
-    }
-
-    .whatsapp-btn {
-      width: 58px;
-      height: 58px;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background: #25d366;
       color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.8rem;
-      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-      transition: var(--transition);
-      position: relative;
+      font-size: 32px;
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .whatsapp-btn::after {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border-radius: 50%;
-      border: 2px solid #25d366;
-      animation: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    }
-
-    @keyframes pulseRing {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1.2); opacity: 0; }
-      100% { transform: scale(0.95); opacity: 0; }
-    }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.08) rotate(6deg);
-      background: #20ba59;
+    .whatsapp-float:hover {
+      transform: scale(1.1);
       color: #ffffff;
     }
 
     /* ==========================================================================
-       RESPONSIVE ADAPTATIONS (MOBILE & TABLETS)
+       RESPONSIVE DESIGN (MÓVIL < 768px)
        ========================================================================== */
-    @media (max-width: 1024px) {
-      .services-5-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .hero-title {
-        font-size: 3rem;
-      }
-      .hero-floating-badge {
-        display: none;
-      }
-    }
-
     @media (max-width: 768px) {
-      .topbar {
-        display: none;
-      }
-
-      .menu-toggle {
-        display: block;
+      /* Header Ultra Limpio sin hamburguesa */
+      .header-nav {
+        min-height: 64px;
+        padding: 12px 20px;
+        padding-left: max(20px, env(safe-area-inset-left, 20px));
+        padding-right: max(20px, env(safe-area-inset-right, 20px));
       }
 
       .nav-links {
-        position: fixed;
-        top: 82px;
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        flex-direction: column;
-        padding: 24px;
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: var(--shadow-md);
-        transform: translateY(-150%);
-        transition: transform 0.3s ease;
-        gap: 18px;
+        display: none !important;
       }
 
-      .nav-links.active {
-        transform: translateY(0);
+      .brand-name {
+        font-size: 1.24rem;
+        line-height: 1.1;
+        letter-spacing: 0.06em;
       }
 
-      .navbar .btn-header {
-        display: none;
+      .brand-subtitle {
+        font-size: 0.58rem;
+        letter-spacing: 0.16em;
+        margin-top: 2px;
       }
 
-      /* Hero Full-Width Mobile Calibrado */
-      .hero-fullwidth-section {
-        min-height: 500px;
-        padding: 60px 0 40px;
-        position: relative;
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.78rem;
       }
 
-      .hero-bg-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        opacity: 0.72;
+      /* Hero Calibrado Móvil (min-height: 720px !important) */
+      .hero-track {
+        height: 280vh;
       }
 
-      .hero-bg-overlay {
+      .hero-sticky-frame {
+        min-height: 720px !important;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: calc(30px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero-overlay-gradient {
         background: linear-gradient(
           180deg,
-          rgba(251, 243, 242, 0.88) 0%,
-          rgba(251, 243, 242, 0.65) 45%,
-          rgba(251, 243, 242, 0.95) 100%
+          rgba(19, 17, 20, 0) 0%,
+          rgba(19, 17, 20, 0) 46%,
+          rgba(19, 17, 20, 0.35) 58%,
+          rgba(19, 17, 20, 0.78) 72%,
+          #131114 94%
         );
       }
 
-      .hero-text-block {
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+      .hero-content-wrapper {
+        padding: 0 16px;
       }
 
-      .hero-content-wrapper {
-        padding-top: 20px;
-        padding-bottom: 20px;
+      .story-step {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+
+      .story-step.active {
+        transform: translateY(0);
+      }
+
+      .eyebrow-pill {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 8px;
+        padding: 4px 12px;
       }
 
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
+        line-height: 1.12;
+        margin-bottom: 8px;
       }
 
-      .services-5-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .hero-script {
+        font-size: 1.25em;
       }
 
-      .promo-velvet-banner {
-        grid-template-columns: 1fr;
-        padding: 32px 24px;
-        text-align: center;
-        gap: 24px;
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.48;
+        margin-bottom: 20px;
       }
 
-      .promo-left-col {
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-        padding-right: 0;
-        padding-bottom: 18px;
-      }
-
-      .promo-right-col {
-        border-left: none;
-        border-top: 1px solid rgba(255, 255, 255, 0.15);
-        padding-left: 0;
-        padding-top: 18px;
-      }
-
-      .why-us-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .why-us-img-box {
-        height: 280px;
-      }
-
-      .why-us-cards {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .testimonials-grid {
-        grid-template-columns: 1fr;
-      }
-
-      /* Estándar obligatorio de mapa en móvil */
-      .map-showcase-card {
-        grid-template-columns: 1fr;
-      }
-
-      .map-info-panel {
-        padding: 30px 20px;
-      }
-
-      .map-actions {
+      .hero-actions {
         flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
       }
 
-      .map-actions .btn-map-action {
+      .btn-hero-primary,
+      .btn-hero-secondary {
         width: 100%;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+        justify-content: center;
+      }
+
+      .scroll-indicator {
+        display: none;
+      }
+
+      /* Pilares en Móvil: Carrusel Horizontal Scroll-Snap */
+      .section-pillars {
+        padding: 20px 0;
+      }
+
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 12px;
+        padding: 0 16px;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-card {
+        flex: 0 0 240px;
+        scroll-snap-align: start;
+        padding: 10px 12px;
+      }
+
+      /* Servicios en 2 Columnas Balanceadas Móvil */
+      .section-services {
+        padding: 60px 0 70px;
+      }
+
+      .section-header {
+        margin-bottom: 36px;
+      }
+
+      .section-title {
+        font-size: 1.85rem;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 14px;
+        row-gap: 18px;
+      }
+
+      .service-card {
+        aspect-ratio: 3/4.4;
+        min-height: 0;
+        min-width: 0;
+        border-radius: 16px;
+      }
+
+      .service-card-overlay {
+        padding: 14px 12px;
+      }
+
+      .service-card-accent-line {
+        width: 24px;
+        height: 2px;
+        margin-bottom: 6px;
+      }
+
+      .service-card-title {
+        font-size: 0.98rem;
+        margin-bottom: 4px;
+      }
+
+      .service-card-desc {
+        display: none;
+      }
+
+      .service-card-bottom {
+        padding-top: 8px;
+      }
+
+      .service-card-price {
+        font-size: 0.88rem;
+      }
+
+      .btn-card-book-minimal {
+        font-size: 0.72rem;
+      }
+
+      /* Sobre Nosotros & Profesionales */
+      .section-about {
+        padding: 60px 0 70px;
+      }
+
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 60px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 12px;
+      }
+
+      .metric-number {
+        font-size: 1.6rem;
+      }
+
+      /* Carrusel Horizontal Scroll-Snap Equipo con Peek Effect */
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+        padding: 8px 16px 20px;
+        scrollbar-width: none;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .team-card {
+        flex: 0 0 255px;
+        aspect-ratio: 3/4.2;
+        min-height: 0;
+        scroll-snap-align: start;
+        border-radius: 18px;
+      }
+
+      .team-card-overlay {
+        padding: 16px;
+      }
+
+      /* Ubicación */
+      .section-location {
+        padding: 60px 0 70px;
+      }
+
+      .location-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .location-info {
+        padding: 32px 20px;
+      }
+
+      .location-info h3 {
+        font-size: 1.65rem;
       }
 
       .map-frame-wrapper {
         min-height: 320px;
-        height: 320px;
-        border-top: 1px solid var(--border-color);
       }
 
+      .map-frame-wrapper iframe {
+        min-height: 320px;
+      }
+
+      /* Footer */
       .footer-grid {
         grid-template-columns: 1fr;
-      }
-
-      .whatsapp-float {
-        display: none;
-      }
-
-      body {
-        padding-bottom: 70px;
-      }
-
-      /* Barra de Acciones Flotante Inferior (Mobile Action Dock) */
-      .mobile-action-dock {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 64px;
-        background: rgba(30, 15, 18, 0.97);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1.35fr;
-        align-items: center;
-        z-index: 9999;
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.35);
-      }
-
-      .dock-btn {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        color: #cccccc;
-        font-size: 0.68rem;
-        font-weight: 600;
-        gap: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        touch-action: manipulation;
-        transition: var(--transition);
-      }
-
-      .dock-btn i {
-        font-size: 1.15rem;
-      }
-
-      .dock-btn:active, .dock-btn:hover {
-        color: #ffffff;
-      }
-
-      .dock-btn-call i {
-        color: #60a5fa;
-      }
-
-      .dock-btn-map i {
-        color: #f87171;
-      }
-
-      .dock-btn-wa i {
-        color: #25d366;
-        font-size: 1.3rem;
-      }
-
-      .dock-btn-book {
-        background: var(--primary);
-        color: #ffffff !important;
-        border-radius: var(--radius-sm);
-        margin: 6px 8px;
-        height: calc(100% - 12px);
-        font-weight: 700;
-      }
-
-      .dock-btn-book i {
-        color: #ffffff;
-      }
-
-      .dock-btn-book:active {
-        background: var(--primary-hover);
-        transform: scale(0.96);
-      }
-    }
-
-    .mobile-action-dock {
-      display: none;
-    }
-
-    @media (max-width: 480px) {
-      .services-5-grid {
-        grid-template-columns: 1fr;
-      }
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
       }
     }
   </style>
-
-  <!-- Schema.org JSON-LD para SEO Local -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BeautySalon",
-    "name": "Milena Gómez salon",
-    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-    "description": "Centro de estética integral, limpiezas faciales, masajes relajantes, manicura, pedicura spa y bienestar en Apartadó, Antioquia.",
-    "telephone": "+573128867937",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Cl. 101 #97/56",
-      "addressLocality": "Apartadó",
-      "addressRegion": "Antioquia",
-      "addressCountry": "CO"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 7.8851221,
-      "longitude": -76.6293883
-    },
-    "url": "https://milenagomezsalon.com",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:00",
-        "closes": "19:00"
-      }
-    ],
-    "priceRange": "$$",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "1"
-    }
-  }
-  </script>
 </head>
 <body>
 
-  <!-- ENCABEZADO STICKY INTELIGENTE (Auto-hide al scrollear hacia abajo, reaparece hacia arriba) -->
-  <div class="header-sticky-wrapper">
-    <!-- 1. TOP BAR -->
-    <aside class="topbar" aria-label="Información rápida de contacto">
-      <div class="container topbar-content">
-        <div class="topbar-info">
-          <div class="topbar-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Cl. 101 #97/56, Apartadó, Antioquia</span>
-          </div>
-          <div class="topbar-item">
-            <i class="fa-solid fa-phone"></i>
-            <a href="tel:+573128867937">(+57) 312 886 7937</a>
-          </div>
-          <div class="topbar-item">
-            <i class="fa-regular fa-clock"></i>
-            <span>Lun - Sáb: 8:00 AM - 7:00 PM</span>
-          </div>
-        </div>
-        <div class="topbar-socials">
-          <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#contacto" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#contacto" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#contacto" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-      </div>
-    </aside>
+  <!-- SMART HEADER / NAVBAR INTELIGENTE -->
+  <header class="header-sticky-wrapper" id="smartHeader">
+    <nav class="header-nav">
+      <a href="#inicio" class="brand-logo" aria-label="Milena Gómez Salon">
+        <span class="brand-name">Milena Gómez <span>salon</span></span>
+        <span class="brand-subtitle">Estética & Bienestar • Apartadó</span>
+      </a>
 
-    <!-- 2. NAVBAR GLASSMORPHISM -->
-    <header class="header">
-      <div class="container navbar">
-        <a href="#inicio" class="brand-logo">
-          <div class="brand-icon">
-            <i class="fa-solid fa-spa"></i>
-          </div>
-          <div class="brand-text">
-            <span class="brand-title">Milena Gómez</span>
-            <span class="brand-subtitle">Centro de Estética & Spa</span>
-          </div>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita%20para%20tratamientos%20de%20est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+          Agendar
         </a>
-
-        <nav class="nav-links" id="navLinks">
-          <a href="#inicio" class="nav-link">Inicio</a>
-          <a href="#servicios" class="nav-link">Servicios</a>
-          <a href="#por-que-elegirnos" class="nav-link">Nosotros</a>
-          <a href="#galeria" class="nav-link">Galería</a>
-          <a href="#testimonios" class="nav-link">Testimonios</a>
-          <a href="#ubicacion" class="nav-link">Ubicación</a>
-        </nav>
-
-        <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header">
-          <i class="fa-regular fa-calendar-check"></i> Agendar Cita
-        </a>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menú">
-          <i class="fa-solid fa-bars"></i>
-        </button>
       </div>
-    </header>
-  </div>
+    </nav>
+  </header>
 
-  <!-- 3. HERO SECTION FULL-WIDTH BLEED INMERSIVO (#inicio) -->
-  <main>
-    <section class="hero-fullwidth-section" id="inicio">
-      
-      <!-- IMAGEN DE FONDO EDGE-TO-EDGE & MÁSCARA GRADIENTE -->
-      <div class="hero-bg-cover">
-        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1920&q=85" alt="Tratamiento Facial y Spa en Milena Gómez salon Apartadó" class="hero-bg-img" />
-        <div class="hero-bg-overlay"></div>
+  <!-- SECCIÓN #INICIO: CANVAS VIDEO SCROLL SCRUBBING HERO (300vh) -->
+  <section class="hero-track" id="inicio">
+    <div class="hero-sticky-frame">
+      <div class="canvas-container">
+        <canvas id="heroCanvas"></canvas>
+        <picture>
+          <source media="(max-width: 768px)" srcset="public/frames/mobile/poster.webp">
+          <img src="public/frames/desktop/poster.webp" alt="Milena Gómez Salon Poster" class="canvas-poster" id="canvasPoster">
+        </picture>
+        <div class="hero-overlay-gradient"></div>
       </div>
 
-      <!-- BADGE FLOTANTE CIRCULAR ORO & VELVET 5.0 ESTRELLAS -->
-      <div class="hero-floating-badge">
-        <i class="fa-solid fa-calendar-star hero-badge-icon"></i>
-        <span class="hero-badge-title">5.0 ★ Calidad VIP</span>
-        <span class="hero-badge-subtitle">Agenda Este Mes</span>
-        <div class="hero-badge-stars">★★★★★</div>
-      </div>
-
-      <!-- CONTENIDO PRINCIPAL SOBRE MÁSCARA GRADIENTE -->
-      <div class="container hero-content-wrapper">
-        <div class="hero-text-block">
-          <span class="hero-tagline-script">Relájate • Renuévate • Rejuvenece</span>
+      <div class="hero-content-wrapper">
+        <!-- Paso 1 (0% a 48% Scroll) -->
+        <div class="story-step active" id="step1">
+          <span class="eyebrow-pill">
+            <i class="fa-solid fa-sparkles"></i> Centro de Estética & Spa • Apartadó
+          </span>
           <h1 class="hero-title">
-            Mereces Lucir Radiante 
-            <span class="accent-gold">y Sentirte Increíble ♡</span>
+            Transforma y Renueva la Belleza de tu Piel
+            <span class="hero-script">Cuidado experto & bienestar</span>
           </h1>
-          <div class="hero-luxury-banner">
-            <i class="fa-solid fa-gem" style="color: var(--accent-gold);"></i>
-            <span>Lujo & Bienestar Exclusivo</span>
-          </div>
           <p class="hero-desc">
-            Disfruta de una experiencia transformadora en Apartadó. Tratamientos faciales avanzados, masajes corporales relajantes y cuidado estético de autor en un ambiente sereno pensado para tu bienestar.
+            Descubre tratamientos faciales avanzados, masajes relajantes y cuidado estético integral para resaltar tu mejor versión en un ambiente de total tranquilidad.
           </p>
           <div class="hero-actions">
-            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita%20para%20un%20tratamiento." target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <i class="fa-solid fa-calendar-check"></i> Agendar Cita
+            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita%20para%20tratamientos%20de%20est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
             </a>
-            <a href="#servicios" class="btn-secondary">
-              <i class="fa-solid fa-sparkles"></i> Ver Tratamientos
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- 4. SERVICIOS DESTACADOS (5 TARJETAS CIRCULARES CON MEDALLAS FLOTANTES SIN PRECIOS) -->
-    <section class="services-section" id="servicios">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow"><i class="fa-solid fa-sparkles"></i> Nuestro Catálogo</span>
-          <h2 class="section-title">Nuestros Servicios</h2>
-          <div class="section-divider-heart">♡</div>
-        </div>
-
-        <div class="services-5-grid">
-          <!-- Servicio 1: Faciales -->
-          <article class="service-circular-card">
-            <div class="service-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Limpieza Facial Profunda en Apartadó" class="service-avatar-img" loading="lazy">
-              <div class="service-icon-medal">
-                <i class="fa-solid fa-spa"></i>
-              </div>
-            </div>
-            <h3 class="service-title-text">Faciales Glow</h3>
-            <p class="service-desc-text">Limpieza profunda, exfoliación, hidratación intensa y luminosidad radiante.</p>
-            <span class="service-tag-pill">Técnica Glow Spa</span>
-          </article>
-
-          <!-- Servicio 2: Masaje Corporal -->
-          <article class="service-circular-card">
-            <div class="service-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Masajes Relajantes Corporales" class="service-avatar-img" loading="lazy">
-              <div class="service-icon-medal">
-                <i class="fa-solid fa-hands"></i>
-              </div>
-            </div>
-            <h3 class="service-title-text">Masaje Corporal</h3>
-            <p class="service-desc-text">Relaja tu cuerpo, alivia el estrés y restaura el equilibrio con aceites tibios.</p>
-            <span class="service-tag-pill">Ritual Anti-Estrés</span>
-          </article>
-
-          <!-- Servicio 3: Manicura -->
-          <article class="service-circular-card">
-            <div class="service-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=600&q=80" alt="Manicura Spa y Rusa" class="service-avatar-img" loading="lazy">
-              <div class="service-icon-medal">
-                <i class="fa-solid fa-hand-sparkles"></i>
-              </div>
-            </div>
-            <h3 class="service-title-text">Manicura Spa</h3>
-            <p class="service-desc-text">Manos hermosas, acabado impecable y elegancia duradera con esmaltes premium.</p>
-            <span class="service-tag-pill">Cuidado de Autor</span>
-          </article>
-
-          <!-- Servicio 4: Pedicura -->
-          <article class="service-circular-card">
-            <div class="service-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&q=80" alt="Pedicura Spa y Masaje Podal" class="service-avatar-img" loading="lazy">
-              <div class="service-icon-medal">
-                <i class="fa-solid fa-shoe-prints"></i>
-              </div>
-            </div>
-            <h3 class="service-title-text">Pedicura Spa</h3>
-            <p class="service-desc-text">Pies renovados, exfoliación profunda, esmalte perfecto y descanso total.</p>
-            <span class="service-tag-pill">Spa Podal Relax</span>
-          </article>
-
-          <!-- Servicio 5: Skincare -->
-          <article class="service-circular-card">
-            <div class="service-avatar-wrap">
-              <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" alt="Tratamientos Skincare y Anti-Edad" class="service-avatar-img" loading="lazy">
-              <div class="service-icon-medal">
-                <i class="fa-solid fa-bottle-droplet"></i>
-              </div>
-            </div>
-            <h3 class="service-title-text">Skincare Avanzado</h3>
-            <p class="service-desc-text">Nutrición, protección celular y rejuvenecimiento con activos dermatológicos.</p>
-            <span class="service-tag-pill">Dermo-Nutrición</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. PROMO BANNER DEEP VELVET & GOLD (Allure Style) -->
-    <section class="promo-section">
-      <div class="container">
-        <div class="promo-velvet-banner">
-          
-          <div class="promo-left-col">
-            <i class="fa-solid fa-gift promo-gift-icon"></i>
-            <h4 class="promo-selflove-title">El Cuidado es Amor Propio</h4>
-            <p class="promo-selflove-sub">Dedícate tiempo para ti hoy.</p>
-          </div>
-
-          <div class="promo-center-col">
-            <span class="promo-script-eyebrow">¡Tu Brillo Comienza Aquí! ♡</span>
-            <h3 class="promo-main-heading">¡AGENDA TU CITA HOY MISMO!</h3>
-            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20consultar%20disponibilidad%20para%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-promo-gold">
-              <i class="fa-brands fa-whatsapp"></i> Cupos Disponibles — Reservar Ahora
+            <a href="#servicios" class="btn-hero-secondary">
+              Ver Servicios <i class="fa-solid fa-arrow-down"></i>
             </a>
           </div>
-
-          <div class="promo-right-col">
-            <i class="fa-solid fa-feather-pointed promo-silhouette-icon"></i>
-            <p class="promo-triad-text">
-              RELÁJATE.<br>
-              RENUÉVATE.<br>
-              REJUVENECE.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. WHY CHOOSE US (¿POR QUÉ ELEGIRNOS?) -->
-    <section class="why-us-section" id="por-que-elegirnos">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow"><i class="fa-solid fa-heart"></i> Excelencia & Cuidado</span>
-          <h2 class="section-title">¿Por Qué Confiar en Milena Gómez?</h2>
-          <div class="section-divider-heart">♡</div>
         </div>
 
-        <div class="why-us-grid">
-          <div class="why-us-media">
-            <div class="why-us-img-box">
-              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="Espacio de Spa y Estética Milena Gómez salon" loading="lazy">
-            </div>
-          </div>
-
-          <div class="why-us-cards">
-            <div class="why-card">
-              <div class="why-card-icon">
-                <i class="fa-solid fa-spa"></i>
-              </div>
-              <h3 class="why-card-title">Ambiente Sereno</h3>
-              <p class="why-card-desc">Un santuario de tranquilidad con aromaterapia y música relajante para desconectar.</p>
-            </div>
-
-            <div class="why-card">
-              <div class="why-card-icon">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-              </div>
-              <h3 class="why-card-title">Cosmética de Autor</h3>
-              <p class="why-card-desc">Productos dermatológicos y botánicos de alta gama que respetan tu salud dérmica.</p>
-            </div>
-
-            <div class="why-card">
-              <div class="why-card-icon">
-                <i class="fa-solid fa-shield-halved"></i>
-              </div>
-              <h3 class="why-card-title">Bioseguridad Total</h3>
-              <p class="why-card-desc">Protocolos estrictos de esterilización e higiene en cada cabina y procedimiento.</p>
-            </div>
-
-            <div class="why-card">
-              <div class="why-card-icon">
-                <i class="fa-solid fa-user-doctor"></i>
-              </div>
-              <h3 class="why-card-title">Diagnóstico Personalizado</h3>
-              <p class="why-card-desc">Evaluamos tu tipo de piel y necesidades para diseñar un protocolo a tu medida.</p>
-            </div>
+        <!-- Paso 2 (52% a 100% Scroll) -->
+        <div class="story-step" id="step2">
+          <span class="eyebrow-pill">
+            <i class="fa-solid fa-gem"></i> Alta Estética & Resultados Visibles
+          </span>
+          <h2 class="hero-title">
+            Luce una Piel Radiante y Llena de Vida
+            <span class="hero-script">Armonía, luminosidad y frescura</span>
+          </h2>
+          <p class="hero-desc">
+            Protocolos personalizados con aparatología higiénica, sueros botánicos de alta gama y la calidez humana de especialistas dedicadas a tu bienestar.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20deseo%20reservar%20una%20sesi%C3%B3n%20personalizada%20de%20est%C3%A9tica." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+              <i class="fa-brands fa-whatsapp"></i> Reservar Ahora
+            </a>
+            <a href="#nosotros" class="btn-hero-secondary">
+              Conocer Equipo <i class="fa-solid fa-arrow-down"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- 7. GALERÍA / RESULTADOS REALES (6 FOTOS) -->
-    <section class="gallery-section" id="galeria">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow"><i class="fa-solid fa-camera"></i> Galería de Experiencias</span>
-          <h2 class="section-title">Resultados Reales</h2>
-          <div class="section-divider-heart">♡</div>
+      <div class="scroll-indicator" id="scrollIndicator">
+        <span>Desliza</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE PILARES / GARANTÍAS DE CONFIANZA -->
+  <section class="section-pillars" id="pilares">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <div class="pillar-content">
+            <h4>Especialistas Certificadas</h4>
+            <p>Cosmetólogas con formación profesional</p>
+          </div>
         </div>
 
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Facial Luminosidad Glow" loading="lazy">
-            <div class="gallery-overlay">
-              <span class="gallery-overlay-tag">Glow Facial</span>
-              <span class="gallery-overlay-title">Piel Luminosa & Hidratada</span>
-            </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-pump-soap"></i>
           </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Masaje con Aceites Esenciales" loading="lazy">
-            <div class="gallery-overlay">
-              <span class="gallery-overlay-tag">Relax Spa</span>
-              <span class="gallery-overlay-title">Masaje Anti-Estrés</span>
-            </div>
+          <div class="pillar-content">
+            <h4>Cosmética Prémium</h4>
+            <p>Principios activos de grado dermatológico</p>
           </div>
+        </div>
 
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=600&q=80" alt="Manicura y Nail Art Elegante" loading="lazy">
-            <div class="gallery-overlay">
-              <span class="gallery-overlay-tag">Manos Bellas</span>
-              <span class="gallery-overlay-title">Esmaltado Semipermanente</span>
-            </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-shield-heart"></i>
           </div>
-
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=600&q=80" alt="Pedicura Spa Hidratante" loading="lazy">
-            <div class="gallery-overlay">
-              <span class="gallery-overlay-tag">Pies Suaves</span>
-              <span class="gallery-overlay-title">Ritual Podal Spa</span>
-            </div>
+          <div class="pillar-content">
+            <h4>Higiene & Seguridad</h4>
+            <p>Protocolos de esterilización y bioseguridad</p>
           </div>
+        </div>
 
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80" alt="Cosmética y Sueros Botánicos" loading="lazy">
-            <div class="gallery-overlay">
-              <span class="gallery-overlay-tag">Dermo Care</span>
-              <span class="gallery-overlay-title">Sueros de Alta Nutrición</span>
-            </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-hand-holding-heart"></i>
           </div>
+          <div class="pillar-content">
+            <h4>Atención Personalizada</h4>
+            <p>Diagnóstico facial y seguimiento continuo</p>
+          </div>
+        </div>
 
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1512290900672-1f5bebb18029?auto=format&fit=crop&w=600&q=80" alt="Cabina de Spa y Bienestar" loading="lazy">
-            <div class="gallery-overlay">
-              <span class="gallery-overlay-tag">Atmósfera VIP</span>
-              <span class="gallery-overlay-title">Confort & Serenidad</span>
-            </div>
+        <div class="pillar-card">
+          <div class="pillar-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="pillar-content">
+            <h4>Satisfacción 5.0★</h4>
+            <p>Resultados reales y clientas felices</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 8. TESTIMONIOS -->
-    <section class="testimonials-section" id="testimonios">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow"><i class="fa-solid fa-star"></i> Experiencias VIP</span>
-          <h2 class="section-title">Lo Que Dicen Nuestras Clientas</h2>
-          <div class="section-divider-heart">♡</div>
-        </div>
-
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Clienta Carolina V." class="testimonial-avatar" loading="lazy">
-            <div class="testimonial-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonial-quote">
-              "¡Una experiencia maravillosa! La atención de Milena y su equipo es impecable, el facial me dejó la piel súper suave, fresca y luminosa."
-            </p>
-            <span class="testimonial-author">Carolina V.</span>
-            <span class="testimonial-location">Apartadó, Antioquia</span>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Clienta Valentina M." class="testimonial-avatar" loading="lazy">
-            <div class="testimonial-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonial-quote">
-              "El masaje relajante es de otro mundo. Salí renovada por completo. El lugar es hermoso, huele delicioso y la higiene es del 100%."
-            </p>
-            <span class="testimonial-author">Valentina M.</span>
-            <span class="testimonial-location">Apartadó, Antioquia</span>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Clienta Luciana R." class="testimonial-avatar" loading="lazy">
-            <div class="testimonial-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="testimonial-quote">
-              "Excelente salón de estética en Apartadó. Los tratamientos de manicure y pedicure duran muchísimo y cuidan de verdad la salud de las uñas."
-            </p>
-            <span class="testimonial-author">Luciana R.</span>
-            <span class="testimonial-location">Apartadó, Antioquia</span>
-          </div>
-        </div>
+  <!-- SECCIÓN #SERVICIOS: GRID 3 COLUMNAS ESCRITORIO / 2 COLUMNAS MÓVIL -->
+  <section class="section-services" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Tratamientos Exclusivos</span>
+        <h2 class="section-title">Catálogo de Servicios & Spa</h2>
+        <p class="section-desc">
+          Procedimientos estéticos integrales diseñados para cuidar tu rostro, relajar tu cuerpo y consentir tus manos y pies.
+        </p>
       </div>
-    </section>
 
-    <!-- 9. UBICACIÓN Y GOOGLE MAPS GEORREFERENCIADO (#ubicacion) -->
-    <section class="location-section" id="ubicacion">
-      <div class="container">
-        <div class="map-showcase-card">
-          <div class="map-info-panel">
+      <div class="services-grid">
+        <!-- Servicio 1: Limpieza Facial Profunda -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Limpieza Facial Profunda en Apartadó" class="service-card-img" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-card-accent-line"></div>
+            <h3 class="service-card-title">Limpieza Facial Profunda</h3>
+            <p class="service-card-desc">Exfoliación enzimática, extracción higiénica, hidratación y luminosidad inmediata para tu rostro.</p>
+            <div class="service-card-bottom">
+              <span class="service-card-price">$70.000 COP</span>
+              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20Limpieza%20Facial%20Profunda." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                Agendar <span class="arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 2: Masajes Relajantes & Corporales -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masajes Relajantes & Corporales en Apartadó" class="service-card-img" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-card-accent-line"></div>
+            <h3 class="service-card-title">Masajes Relajantes & Spa</h3>
+            <p class="service-card-desc">Alivia la tensión muscular y restaura el equilibrio holístico con aceites botánicos tibios.</p>
+            <div class="service-card-bottom">
+              <span class="service-card-price">$90.000 COP</span>
+              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20un%20Masaje%20Relajante." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                Agendar <span class="arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 3: Manicura Spa & Rusa -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Manicura Spa & Rusa en Apartadó" class="service-card-img" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-card-accent-line"></div>
+            <h3 class="service-card-title">Manicura Spa & Rusa</h3>
+            <p class="service-card-desc">Tratamiento de cutículas milimétrico, limado anatómico y esmaltado de alta gama de larga duración.</p>
+            <div class="service-card-bottom">
+              <span class="service-card-price">$45.000 COP</span>
+              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20Manicura%20Spa%20%26%20Rusa." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                Agendar <span class="arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 4: Pedicura Spa & Relax -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa & Relax en Apartadó" class="service-card-img" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-card-accent-line"></div>
+            <h3 class="service-card-title">Pedicura Spa & Relax</h3>
+            <p class="service-card-desc">Baño con sales minerales aromáticas, exfoliación intensiva, mascarilla emoliente y masaje podal.</p>
+            <div class="service-card-bottom">
+              <span class="service-card-price">$50.000 COP</span>
+              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20Pedicura%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                Agendar <span class="arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 5: Tratamientos Skincare & Anti-Edad -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80" alt="Tratamientos Skincare & Anti-Edad en Apartadó" class="service-card-img" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-card-accent-line"></div>
+            <h3 class="service-card-title">Skincare & Anti-Edad</h3>
+            <p class="service-card-desc">Nutrición celular intensiva, sueros antioxidantes y protocolos de rejuvenecimiento facial no invasivo.</p>
+            <div class="service-card-bottom">
+              <span class="service-card-price">$85.000 COP</span>
+              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20un%20Tratamiento%20Skincare." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                Agendar <span class="arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 6: Diseño de Mirada & Cejas HD -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Diseño de Mirada & Cejas HD en Apartadó" class="service-card-img" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-card-accent-line"></div>
+            <h3 class="service-card-title">Diseño de Mirada & Cejas</h3>
+            <p class="service-card-desc">Visagismo de cejas con henna botánica, laminado orgánico y lifting de pestañas con keratina.</p>
+            <div class="service-card-bottom">
+              <span class="service-card-price">$55.000 COP</span>
+              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20Dise%C3%B1o%20de%20Cejas%20y%20Pesta%C3%B1as." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                Agendar <span class="arrow">➔</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN #NOSOTROS: BLOQUE EDITORIAL AMBIENTE + GRID 4 COLUMNAS PROFESIONALES -->
+  <section class="section-about" id="nosotros">
+    <div class="container">
+      <!-- Bloque Editorial Sobre Nosotros (Ambiente Spa Oficial) -->
+      <div class="experience-layout">
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80" alt="Cabina de Spa y Estética Milena Gómez en Apartadó" loading="lazy">
+          <div class="experience-floating-badge">
+            <i class="fa-solid fa-spa badge-icon"></i>
             <div>
-              <div class="map-info-header">
-                <span class="section-eyebrow"><i class="fa-solid fa-location-dot"></i> Visítanos</span>
-                <h3>Milena Gómez salon</h3>
-                <p>Tu centro de estética, bienestar y cuidado personal en Apartadó.</p>
-              </div>
-
-              <div class="contact-details">
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fa-solid fa-map-pin"></i>
-                  </div>
-                  <div class="contact-text">
-                    <h4>Dirección</h4>
-                    <p>Cl. 101 #97/56, Apartadó, Antioquia, Colombia</p>
-                  </div>
-                </div>
-
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fa-solid fa-phone"></i>
-                  </div>
-                  <div class="contact-text">
-                    <h4>Teléfono</h4>
-                    <a href="tel:+573128867937">(+57) 312 886 7937</a>
-                  </div>
-                </div>
-
-                <div class="contact-item">
-                  <div class="contact-icon">
-                    <i class="fa-regular fa-clock"></i>
-                  </div>
-                  <div class="contact-text">
-                    <h4>Horario de Atención</h4>
-                    <p>Lunes a Sábado: 8:00 AM – 7:00 PM</p>
-                    <p>Domingos y Festivos: Con cita previa</p>
-                  </div>
-                </div>
-              </div>
+              <div class="badge-text-primary">Cabinas de Relax Zen</div>
+              <div class="badge-text-secondary">Atmósfera de confort & paz</div>
             </div>
-
-            <div class="map-actions">
-              <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-map-action btn-map-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
-              </a>
-              <a href="https://www.google.com/maps/place/Milena+G%C3%B3mez+salon/@7.8816604,-76.6480189,15z/data=!4m10!1m2!2m1!1ssalones+de+belleza+en+apartado!3m6!1s0x8e500d5adeb6cedf:0x37a8bf1d21c854bb!8m2!3d7.8851221!4d-76.6293883!15sCh5zYWxvbmVzIGRlIGJlbGxlemEgZW4gYXBhcnRhZG9aICIec2Fsb25lcyBkZSBiZWxsZXphIGVuIGFwYXJ0YWRvkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11hds1r6_9" target="_blank" rel="noopener noreferrer" class="btn-map-action btn-map-secondary">
-                <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar
-              </a>
-            </div>
-          </div>
-
-          <div class="map-frame-wrapper">
-            <iframe 
-              src="https://maps.google.com/maps?q=Milena+G%C3%B3mez+salon,+Cl.+101+%2397%2F56,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación de Milena Gómez salon en Google Maps">
-            </iframe>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- 10. FOOTER EDITORIAL -->
-  <footer class="footer" id="contacto">
+        <div class="experience-content">
+          <span class="section-eyebrow">Sobre Nosotros</span>
+          <h3>Dedicadas al cuidado y resplandor de tu piel en Apartadó</h3>
+          <p>
+            En <strong>Milena Gómez salon</strong> creemos que el cuidado personal es un acto de amor propio y salud. Diseñamos un espacio cálido y relajante en Apartadó donde cada procedimiento facial, masaje y servicio estético se realiza con calma, higiene absoluta y productos de calidad comprobada.
+          </p>
+          <p>
+            Nuestro propósito es que salgas renovada, con una piel luminosa y la tranquilidad de haber recibido atención sincera de profesionales que aman lo que hacen.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-item">
+              <div class="metric-number">+8</div>
+              <div class="metric-label">Años de Trayectoria</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">+3.5K</div>
+              <div class="metric-label">Clientas Satisfechas</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Protocolos Seguros</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">5.0 ★</div>
+              <div class="metric-label">Calificación Impecable</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20tratamientos." target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="display: inline-flex;">
+            <i class="fa-brands fa-whatsapp"></i> Hablar con una Asesora
+          </a>
+        </div>
+      </div>
+
+      <!-- Bloque Nuestros Profesionales (Grid 4 Columnas / Carrusel Móvil) -->
+      <div class="team-header">
+        <span class="section-eyebrow">Equipo Profesional</span>
+        <h3 class="section-title">Especialistas en Estética & Bienestar</h3>
+        <p class="section-desc">
+          Manos expertas dedicadas a resaltar tu belleza con técnicas seguras y trato cercano.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Profesional 1: Milena Gómez -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Milena Gómez - Cosmiatra Máster" class="team-card-img" loading="lazy">
+          <div class="team-card-overlay">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Milena Gómez</h4>
+            <div class="team-card-role">Directora & Cosmiatra Máster</div>
+            <div class="team-card-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%2C%20quisiera%20agendar%20mi%20cita%20de%20est%C3%A9tica%20contigo." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              Agendar <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Profesional 2: Camila Morales -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Camila Morales - Masajes & Drenaje" class="team-card-img" loading="lazy">
+          <div class="team-card-overlay">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Camila Morales</h4>
+            <div class="team-card-role">Terapeuta Spa & Drenajes</div>
+            <div class="team-card-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573128867937?text=Hola%2C%20quisiera%20agendar%20un%20masaje%20relajante%20con%20Camila%20Morales." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              Agendar <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Profesional 3: Valeria Ospina -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=600&q=80" alt="Valeria Ospina - Especialista en Skincare" class="team-card-img" loading="lazy">
+          <div class="team-card-overlay">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Valeria Ospina</h4>
+            <div class="team-card-role">Especialista Skincare Facial</div>
+            <div class="team-card-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573128867937?text=Hola%2C%20quisiera%20agendar%20mi%20tratamiento%20facial%20con%20Valeria%20Ospina." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              Agendar <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Profesional 4: Daniela Restrepo -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80" alt="Daniela Restrepo - Diseñadora de Mirada & Nails" class="team-card-img" loading="lazy">
+          <div class="team-card-overlay">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Daniela Restrepo</h4>
+            <div class="team-card-role">Diseñadora de Mirada & Nails</div>
+            <div class="team-card-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573128867937?text=Hola%2C%20quisiera%20agendar%20manicura%20o%20dise%C3%B1o%20de%20cejas%20con%20Daniela%20Restrepo." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              Agendar <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN #UBICACION: CONTACTO & MAPA GEORREFERENCIADO (Z=16) -->
+  <section class="section-location" id="ubicacion">
+    <div class="container">
+      <div class="location-layout">
+        <div class="location-info">
+          <span class="section-eyebrow">Encuéntranos en Apartadó</span>
+          <h3>Visítanos en Nuestro Salón & Spa</h3>
+          <p class="lead-desc">
+            Estamos ubicados en una zona central y segura de Apartadó, con instalaciones pensadas para que disfrutes de tu momento de descanso.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Dirección Física</h5>
+              <p>Cl. 101 #97/56, Apartadó, Antioquia, Colombia</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Horario de Atención</h5>
+              <p>Lunes a Sábado: 8:00 AM - 7:00 PM<br>Domingos y Festivos: Previa reserva</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-details">
+              <h5>Teléfono & WhatsApp</h5>
+              <p>(+57) 312 886 7937</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px;">
+            <a href="https://maps.google.com/maps?q=Milena+G%C3%B3mez+salon,+Cl.+101+%2397%2F56,+Apartad%C3%B3,+Antioquia,+Colombia" target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="display: inline-flex; width: auto; font-size: 0.86rem; padding: 12px 24px;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar con Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Milena+G%C3%B3mez+salon,+Cl.+101+%2397%2F56,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            title="Ubicación de Milena Gómez salon en Apartadó" 
+            loading="lazy" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER PRINCIPAL -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="brand-logo">
-            <div class="brand-icon">
-              <i class="fa-solid fa-spa"></i>
-            </div>
-            <div class="brand-text">
-              <span class="brand-title">Milena Gómez</span>
-              <span class="brand-subtitle">Centro de Estética & Spa</span>
-            </div>
-          </div>
+        <div class="footer-col-brand">
+          <a href="#inicio" class="brand-logo">
+            <span class="brand-name">Milena Gómez <span>salon</span></span>
+            <span class="brand-subtitle">Estética & Bienestar • Apartadó</span>
+          </a>
           <p>
-            Tu espacio dedicado a la belleza, relajación y armonía corporal en Apartadó. Tratamientos personalizados con el más alto estándar de bioseguridad.
+            Tu centro de estética y relajación de confianza en Apartadó. Cuidado profesional de la piel, masajes y manicura con altos estándares de higiene.
           </p>
-          <div class="footer-socials">
-            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#contacto" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#contacto" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#contacto" class="footer-social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/573128867937" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
           </div>
         </div>
 
-        <div>
-          <h4 class="footer-col-title">Navegación</h4>
+        <div class="footer-col">
+          <h4>Navegación</h4>
           <ul class="footer-links">
-            <li><a href="#inicio"><i class="fa-solid fa-angle-right"></i> Inicio</a></li>
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Servicios</a></li>
-            <li><a href="#por-que-elegirnos"><i class="fa-solid fa-angle-right"></i> Nosotros</a></li>
-            <li><a href="#galeria"><i class="fa-solid fa-angle-right"></i> Galería</a></li>
-            <li><a href="#testimonios"><i class="fa-solid fa-angle-right"></i> Testimonios</a></li>
-            <li><a href="#ubicacion"><i class="fa-solid fa-angle-right"></i> Ubicación</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#pilares">Garantías</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 class="footer-col-title">Tratamientos</h4>
+        <div class="footer-col">
+          <h4>Servicios</h4>
           <ul class="footer-links">
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Faciales Glow</a></li>
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Masaje Corporal</a></li>
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Manicura Spa</a></li>
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Pedicura Relax</a></li>
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Skincare Avanzado</a></li>
-            <li><a href="#servicios"><i class="fa-solid fa-angle-right"></i> Protocolo Anti-Edad</a></li>
+            <li><a href="#servicios">Limpieza Facial</a></li>
+            <li><a href="#servicios">Masajes Relajantes</a></li>
+            <li><a href="#servicios">Manicura Spa</a></li>
+            <li><a href="#servicios">Pedicura Relax</a></li>
+            <li><a href="#servicios">Tratamientos Skincare</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 class="footer-col-title">Promociones VIP</h4>
-          <p class="newsletter-desc">
-            Suscríbete para recibir invitaciones exclusivas, bonos de descuento y consejos de cuidado dérmico por WhatsApp.
-          </p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); window.open('https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20suscribirme%20a%20las%20promociones%20VIP.', '_blank');">
-            <input type="text" class="newsletter-input" placeholder="Tu número de WhatsApp" required>
-            <button type="submit" class="btn-newsletter">Unirme</button>
-          </form>
+        <div class="footer-col">
+          <h4>Reserva tu Cita</h4>
+          <div class="footer-booking-box">
+            <p>Atención personalizada con cita previa. Escríbenos directamente a nuestro WhatsApp oficial.</p>
+            <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-cta">
+              Agendar
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© <span id="currentYear">2026</span> Milena Gómez salon — Cl. 101 #97/56, Apartadó, Antioquia. Todos los derechos reservados.</p>
-        <div class="footer-bottom-links">
-          <a href="#inicio">Términos del Servicio</a>
-          <span>•</span>
-          <a href="#inicio">Política de Privacidad</a>
-        </div>
+        <p>&copy; 2026 Milena Gómez salon. Todos los derechos reservados. Cl. 101 #97/56, Apartadó, Antioquia.</p>
       </div>
     </div>
   </footer>
 
-  <!-- 11. WHATSAPP FLOTANTE INTERACTIVO (Desktop) -->
-  <div class="whatsapp-float">
-    <div class="whatsapp-tooltip">¡Agenda tu cita por WhatsApp!</div>
-    <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20agendar%20una%20cita%20para%20est%C3%A9tica%20o%20spa." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-  </div>
+  <!-- BOTÓN FLOTANTE WHATSAPP ANTI-CORTE MÓVIL -->
+  <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20y%20agendar%20una%20cita." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-  <!-- 12. BARRA DE ACCIONES RÁPIDAS MÓVIL (Sticky Bottom Action Dock) -->
-  <nav class="mobile-action-dock" aria-label="Acciones rápidas en móvil">
-    <a href="tel:+573128867937" class="dock-btn dock-btn-call" aria-label="Llamar al salón">
-      <i class="fa-solid fa-phone"></i>
-      <span>Llamar</span>
-    </a>
-    <a href="#ubicacion" class="dock-btn dock-btn-map" aria-label="Ver mapa y cómo llegar">
-      <i class="fa-solid fa-location-dot"></i>
-      <span>Ubicación</span>
-    </a>
-    <a href="https://wa.me/573128867937?text=Hola%20Milena%20G%C3%B3mez%20salon%2C%20quisiera%20consultar%20por%20un%20servicio." target="_blank" rel="noopener noreferrer" class="dock-btn dock-btn-wa" aria-label="Chat por WhatsApp">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
-    <a href="#servicios" class="dock-btn dock-btn-book" aria-label="Ver tratamientos y agendar">
-      <i class="fa-solid fa-calendar-check"></i>
-      <span>Agendar</span>
-    </a>
-  </nav>
-
-  <!-- JavaScript interactivo y ligero -->
+  <!-- MOTOR DE ANIMACIÓN CANVAS SYNCED TO SCROLL -->
   <script>
-    // Año dinámico en footer
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    (function () {
+      'use strict';
 
-    // Toggle de menú móvil
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+      const TOTAL_FRAMES = 74;
+      const canvas = document.getElementById('heroCanvas');
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const poster = document.getElementById('canvasPoster');
+      const heroTrack = document.querySelector('.hero-track');
+      const step1 = document.getElementById('step1');
+      const step2 = document.getElementById('step2');
+      const scrollIndicator = document.getElementById('scrollIndicator');
+      const smartHeader = document.getElementById('smartHeader');
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      const icon = menuToggle.querySelector('i');
-      if (navLinks.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-      } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+      let images = [];
+      let isMobile = window.innerWidth <= 768;
+      let currentFrameIndex = -1;
+      let targetFrameIndex = 0;
+      let isRendering = false;
+      let imagesLoaded = 0;
+      let lastScrollY = window.scrollY;
+
+      function getFrameUrl(idx) {
+        const padded = String(idx + 1).padStart(4, '0');
+        const folder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+        return `${folder}/frame-${padded}.webp`;
       }
-    });
 
-    // Cerrar menú al hacer clic en un enlace
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const icon = menuToggle.querySelector('i');
-        if (icon) {
-          icon.classList.remove('fa-xmark');
-          icon.classList.add('fa-bars');
+      function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const rect = canvas.parentElement.getBoundingClientRect();
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+
+        if (currentFrameIndex >= 0 && images[currentFrameIndex] && images[currentFrameIndex].complete) {
+          drawFrame(currentFrameIndex);
         }
+      }
+
+      function drawFrame(idx) {
+        const img = images[idx];
+        if (!img || !img.complete || img.naturalWidth === 0) return;
+
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth;
+        const ih = img.naturalHeight;
+
+        const scale = Math.max(cw / iw, ch / ih);
+        const nw = iw * scale;
+        const nh = ih * scale;
+        const ox = (cw - nw) / 2;
+        const oy = (ch - nh) / 2;
+
+        ctx.drawImage(img, ox, oy, nw, nh);
+      }
+
+      function renderLoop() {
+        if (targetFrameIndex !== currentFrameIndex) {
+          if (images[targetFrameIndex] && images[targetFrameIndex].complete) {
+            currentFrameIndex = targetFrameIndex;
+            drawFrame(currentFrameIndex);
+          }
+        }
+        requestAnimationFrame(renderLoop);
+      }
+
+      function updateScroll() {
+        const rect = heroTrack.getBoundingClientRect();
+        const scrollDistance = -rect.top;
+        const totalScroll = heroTrack.offsetHeight - window.innerHeight;
+        const progress = Math.max(0, Math.min(1, scrollDistance / totalScroll));
+
+        targetFrameIndex = Math.min(TOTAL_FRAMES - 1, Math.floor(progress * TOTAL_FRAMES));
+
+        // Transición de Pasos Editoriales
+        if (progress < 0.48) {
+          step1.classList.add('active');
+          step2.classList.remove('active');
+        } else {
+          step1.classList.remove('active');
+          step2.classList.add('active');
+        }
+
+        // Indicador de Scroll
+        if (scrollIndicator) {
+          scrollIndicator.style.opacity = progress > 0.08 ? '0' : '1';
+        }
+
+        // Auto-Hide del Smart Header en secciones inferiores
+        const currentY = window.scrollY;
+        const heroBottom = heroTrack.offsetTop + heroTrack.offsetHeight - 150;
+
+        if (currentY > heroBottom) {
+          smartHeader.classList.add('scrolled-past-hero');
+          if (currentY > lastScrollY && currentY > 200) {
+            smartHeader.classList.add('header-hidden');
+          } else {
+            smartHeader.classList.remove('header-hidden');
+          }
+        } else {
+          smartHeader.classList.remove('scrolled-past-hero');
+          smartHeader.classList.remove('header-hidden');
+        }
+
+        lastScrollY = currentY;
+      }
+
+      function preloadImages() {
+        images = [];
+        imagesLoaded = 0;
+        isMobile = window.innerWidth <= 768;
+
+        for (let i = 0; i < TOTAL_FRAMES; i++) {
+          const img = new Image();
+          img.src = getFrameUrl(i);
+          img.onload = () => {
+            imagesLoaded++;
+            if (imagesLoaded === 1) {
+              resizeCanvas();
+              drawFrame(0);
+              if (poster) {
+                poster.classList.add('hidden');
+                setTimeout(() => { poster.style.display = 'none'; }, 400);
+              }
+            }
+          };
+          images.push(img);
+        }
+      }
+
+      // Inicialización
+      preloadImages();
+      resizeCanvas();
+      window.addEventListener('resize', () => {
+        const newMobile = window.innerWidth <= 768;
+        if (newMobile !== isMobile) {
+          isMobile = newMobile;
+          preloadImages();
+        }
+        resizeCanvas();
       });
-    });
 
-    // Smart Header: Auto-hide al scrollear hacia abajo, mostrar al subir
-    (function() {
-      let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
-      const headerWrapper = document.querySelector('.header-sticky-wrapper');
-      
-      if (!headerWrapper) return;
-
-      window.addEventListener('scroll', () => {
-        const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (currentScrollY > 70 && currentScrollY > lastScrollY) {
-          headerWrapper.classList.add('header-hidden');
-        } else if (currentScrollY < lastScrollY) {
-          headerWrapper.classList.remove('header-hidden');
-        }
-        
-        if (currentScrollY <= 10) {
-          headerWrapper.classList.remove('header-hidden');
-        }
-        
-        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
-      }, { passive: true });
+      window.addEventListener('scroll', updateScroll, { passive: true });
+      requestAnimationFrame(renderLoop);
+      updateScroll();
     })();
   </script>
 </body>

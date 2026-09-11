@@ -16,9 +16,11 @@ Esta carpeta contiene el proyecto web de producción autónomo (*standalone*) pa
 ## 💅 Reglas Obligatorias de Maquetación
 
 - **Paleta de Colores**: Mantener estrictamente el fondo obsidian `#0c0b0e`, el acento cálido camel rose `#d1a88b`, fondos claros crema `#fcf9f5` y bordes sutiles `rgba(209, 168, 139, 0.25)`.
-- **Hero Header Inmersivo**: 
-  - Escritorio (>768px): Overlay gradiente horizontal al 50% de ancho con la modelo morena **100% nítida y brillante** a la derecha.
-  - Móvil (<768px): Altura 720px, centrado inferior, botones apilados (ancho máx. 280px).
+- **Hero Header Inmersivo (Canvas Video Scroll Scrubbing)**: 
+  - **Video Fuente Oficial**: `.agents/document/morena_salonbelleza.mp4` (4.0s, 74 frames WebP por vista).
+  - **Regla Mandatoria de Encuadre (Modelo en el Centro de la Segunda Mitad)**: Todos los videos sitúan a la modelo en el centro de la mitad derecha ($x \approx 1440$ en 1920x1080), dejando el 50% izquierdo limpio para textos en escritorio.
+  - **Escritorio (>768px)**: Overlay gradiente horizontal suave al 56% con la modelo 100% nítida a la derecha.
+  - **Móvil (<768px)**: Altura `min-height: 720px !important`, extracción vertical calibrada con `crop=ih*9/16:ih:1140:0,scale=720:1280` para centrar perfectamente a la modelo en la pantalla vertical, tercio superior despejado con gradiente 44% transparente y textos en la mitad inferior con botones apilados (ancho máx. 275px).
 - **Tarjetas de Servicios y Equipo**: Obligatoriamente en **2 columnas (`repeat(2, 1fr)`)** en pantallas móviles (≤768px) con fotos 1:1.
 - **Botones**: Botón del Header, Footer y tarjetas debe decir concisamente **«Agendar»**.
-- **Versión Móvil**: Menú inferior fijo (*action dock*) eliminado por preferencia de diseño.
+- **Versión Móvil**: Menú inferior fijo (*action dock*) eliminado por preferencia de diseño. Navegación limpia con botón flotante circular de WhatsApp.

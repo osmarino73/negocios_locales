@@ -1,58 +1,82 @@
-# Ficha de Diseño: Ébano & Marfil - Beauty Center (Clonación Forense "LUXEHAIR Hair Salon")
+# Ficha de Diseño: Ébano & Marfil - Beauty Center (Canvas Video Scroll Scrubbing & Estándar Editorial)
 
-Manual de diseño visual, sistema de componentes y tokens extraídos con **precisión forense de la referencia visual "LUXEHAIR Hair Salon"** (Paleta Deep Obsidian Black, Warm Rose Nude / Camel Gold & Soft Marfil Cream), aplicando la tríada tipográfica (**Alex Brush / Signature Script** + **DM Serif Display / Cormorant Garamond** + **Tenor Sans / Plus Jakarta Sans**) y la arquitectura de **Hero Header Inmersivo Full-Width con Modelo Morena Voluminosa**, **Barra Flotante de 5 Pilares de Excelencia**, **Catálogo de 6 Servicios con Íconos y Fotos 1:1**, **Banner Promocional 20% OFF con Interior del Salón**, **Galería de 6 Trabajos de Autor**, **Módulo de Paquetes & Precios (Packages & Pricing)**, **Testimonios con Calificación 5.0 ★** y **Footer de Lujo 5 Columnas**, adaptado al 100% para **Ébano & Marfil - Beauty Center** en **Turbo, Antioquia, Colombia**.
+Manual de diseño visual, sistema de componentes y tokens de producción para **Ébano & Marfil - Beauty Center** en **Turbo, Antioquia, Colombia**, con motor interactivo de **Video Scroll Scrubbing en Canvas HTML5** a partir de video nativo 1080p con modelo morena en rotación de moda capilar (encuadre centro-derecha 0.62 en móvil), tríada tipográfica editorial (**Alex Brush / Signature Script** + **DM Serif Display / Cormorant Garamond** + **Tenor Sans / Plus Jakarta Sans**) y arquitectura 100% autónoma conforme a las directrices de `AGENTS.md`.
 
 ---
 
-## 🎨 Paleta de Colores Forense (Deep Obsidian, Warm Camel Rose & Soft Cream)
+## 🎨 Paleta de Colores Forense (Deep Obsidian, Warm Camel Rose & Soft Ivory Marfil)
 
 | Rol del Color | HEX | HSL / RGBA | Aplicación Visual |
 | :--- | :--- | :--- | :--- |
-| **Warm Camel Rose (Color Primario de Acento)** | `#d1a88b` / `#c59b7b` | `hsl(25, 45%, 68%)` | Botones principales `BOOK APPOINTMENT`, frase cursiva script (*"Meets Confidence"*, *"Good Mood"*), divisores y badges |
+| **Warm Camel Rose (Color Primario de Acento)** | `#d1a88b` / `#c59b7b` | `hsl(25, 45%, 68%)` | Botones principales `Agendar Cita`, frase cursiva script (*"Refleja tu mejor versión"*, *"Belleza Auténtica"*), divisores y badges |
 | **Warm Rose Hover** | `#e0ba9e` | `hsl(25, 52%, 75%)` | Efectos hover interactivos en botones y enlaces |
-| **Deep Obsidian Black (Superficies Dark)** | `#0c0b0e` / `#080709` | `hsl(270, 12%, 5%)` | Fondo del Hero full-width, header sticky, topbar, banner promo y footer |
-| **Dark Charcoal Surface (Tarjetas Dark & Pilares)** | `#141317` / `#1c1a20` | `hsl(260, 10%, 10%)` | Barra de 5 pilares, tarjeta "Good Hair Good Mood" y acentos oscuros |
-| **Soft Marfil Cream (Superficies Claras)** | `#fcf9f5` / `#f6f1ea` | `hsl(36, 40%, 97%)` | Fondo general de la página, tarjetas de servicios y paquetes de precios |
-| **Pure White** | `#ffffff` | `hsl(0, 0%, 100%)` | Tarjetas claras de paquetes, testimonios y panel de mapa |
+| **Deep Obsidian Black (Superficies Dark)** | `#080709` / `#0c0b0e` | `hsl(270, 12%, 5%)` | Fondo del Hero full-width, header sticky, footer y superficies de máximo contraste |
+| **Dark Charcoal Surface (Tarjetas Dark & Pilares)** | `#141317` / `#1c1a20` | `hsl(260, 10%, 10%)` | Barra de 5 pilares de excelencia y tarjetas de contraste |
+| **Soft Marfil Cream (Superficies Claras)** | `#ede5da` / `#fbf8f4` | `hsl(36, 40%, 97%)` | Fondo de degradado desktop del Hero, tarjetas de servicios y paneles luminosos |
+| **Pure White** | `#ffffff` | `hsl(0, 0%, 100%)` | Tarjetas claras, textos sobre fondos oscuros y panel de mapa |
 | **Deep Velvet Title Text** | `#121014` | `hsl(270, 9%, 7%)` | Titulares principales H1, H2, H3 y nombres de servicios en zonas claras |
 | **Warm Sand Gray (Textos Secundarios)** | `#78716c` / `#a8a29e` | `hsl(30, 8%, 45%)` | Descripciones, subtítulos, duraciones y metadatos |
-| **Borde Cálido Translúcido** | `rgba(209, 168, 139, 0.25)` | `rgba(209, 168, 139, 0.25)` | Delimitadores de tarjetas, píldoras y divisores ornamentales |
+| **Borde Cálido Translúcido** | `rgba(209, 168, 139, 0.22)` | `rgba(209, 168, 139, 0.22)` | Delimitadores de tarjetas, píldoras y divisores ornamentales |
 | **Star Rating Gold** | `#f59e0b` / `#d1a88b` | `hsl(38, 92%, 50%)` | Estrellas de calificación 5.0 ★ |
 
 ---
 
-## 🔤 Tríada Tipográfica Forense Extraída de la Referencia ("LUXEHAIR")
+## 🔤 Tríada Tipográfica Forense Extraída
 
 * **1. Tipografía Cursiva / Signature Script de Acento**: `'Alex Brush', 'Great Vibes', cursive;` (Google Fonts, Peso `400`).
-  * Caligrafía manuscrita de autor con lazos fluidos idéntica a la referencia:
-  * *"Meets Confidence."*, *"Good Mood"*, *"Tu Confianza"*.
+  * Caligrafía manuscrita fluida de alta costura:
+  * *"Refleja tu mejor versión"*, *"Donde el Estilo Encuentra tu Confianza"*.
 * **2. Tipografía Display & Titulares Principales (H1, H2, H3)**: `'DM Serif Display', 'Cormorant Garamond', Georgia, serif;` (Google Fonts, Pesos `400`, `500`, `600`).
-  * Serif de gran refinamiento editorial con trazos esbeltos:
-  * **"Where Style"**, **"Our Services"**, **"Packages & Pricing"**, **"What Our Clients Say"**.
-* **3. Tipografía de Marca / Logotipo**: `'Tenor Sans', 'Montserrat', sans-serif;` con `letter-spacing: 4px; text-transform: uppercase; font-weight: 700;`.
+  * Serif de refinamiento editorial esbelto:
+  * **"Donde el Estilo"**, **"Nuestros Servicios"**, **"Nuestro Equipo"**, **"Visítanos en Turbo"**.
+* **3. Tipografía de Marca / Logotipo**: `'Tenor Sans', 'Montserrat', sans-serif;` con `letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;`. Logotipo tipográfico puro sin íconos ornamentales (cero emojis).
 * **4. Tipografía de Lectura & UI (Body, Menús, Botones, Eyebrows)**: `'Plus Jakarta Sans', 'Montserrat', sans-serif;` (Google Fonts, Pesos `400`, `500`, `600`, `700`).
 
 ---
 
-## 🧩 Componentes Clave Replicados con Precisión Forense
+## 🎬 Motor de Animación Canvas Video Scroll Scrubbing
 
-1. **Top Bar Dark Obsidian**:
-   * Franja superior `#080709` con dirección de Turbo, teléfono, horario 9am - 8pm y redes sociales.
-2. **Smart Header con Logotipo LUXEHAIR / ÉBANO & MARFIL**:
-   * Logo con serifa refinada, espaciado premium y botón cálido camel rose **«Agendar»** (`.btn-header-cta`).
-3. **Hero Header Inmersivo Full-Width Bleed**:
-   * Fondo Ébano Oscuro `#0c0b0e` con fotografía de modelo morena de cabello ondulado a la derecha.
-   * Desktop (>768px): Overlay degradado al 50% de ancho con foto 100% nítida a la derecha.
-   * Móvil (<768px): Altura 720px (+20%), texto centrado en la mitad inferior, botones apilados (ancho máx. 280px).
-   * Titular display: *"Donde el Estilo"* + cursiva en oro rosa *`Encuentra la Confianza.`*
-   * Botón primario `#d1a88b` (`📅 Agendar Cita`) + Botón secundario con borde traslúcido (`Explorar Servicios →`).
-4. **Barra de 5 Pilares de Excelencia (Dark Badges Card)**:
-   * Contenedor carbón `#141317` con 5 items de línea delgada: *Estilistas Expertos*, *Productos Prémium*, *Experiencia de Lujo*, *Satisfacción del Cliente*, *Higiene & Seguridad*.
-5. **Catálogo de 6 Servicios («Nuestros Servicios»)**:
-   * Tarjetas crema `#fcf9f5` con foto superior (1:1), ícono circular de servicio, titular en mayúsculas, descripción y botón compacto `Agendar →`. En móvil (<768px): **2 columnas balanceadas (`repeat(2, 1fr)`)**.
-6. **Galería de 6 Trabajos de Autor («Nuestros Trabajos» / Propuesta de Valor)**:
-   * Grid de 6 fotos de transformaciones capilares en alta resolución con hover zoom sutil.
-7. **Mapa Interactivo de Google Maps Georreferenciado en Turbo (`z=16`)**:
-   * Iframe de Google Maps exacto para `Cra. 14 #99-26, Turbo, Antioquia`.
-8. **Footer de Lujo 4 Columnas**:
-   * Footer oscuro con enlaces de navegación, datos de contacto, mini-galería de Instagram y módulo de reserva rápida con botón conciso **«Agendar»**.
+1. **Extracción Dual Calibrada (Desktop & Mobile)**:
+   - **Video Fuente Oficial**: `.agents/document/morena_salonbelleza.mp4` (4.0s, 24 fps nativo).
+   - **Regla Mandatoria de Encuadre**: La modelo se sitúa en el centro de la segunda mitad del video (mitad derecha $x \approx 1440$ en 1920x1080), dejando el 50% izquierdo disponible para el texto en escritorio.
+   - **Desktop (16:9)**: 74 fotogramas WebP (`1920x1080`, calidad 85, nivel de compresión 6) a `fps=18.5`.
+   - **Mobile (9:16 Calibrado)**: 74 fotogramas WebP (`720x1280`, calidad 76) con recorte centrado en el sujeto de la segunda mitad (`crop=ih*9/16:ih:1140:0,scale=720:1280`), manteniendo a la modelo morena, su rostro y sus rizos perfectamente encuadrados tanto de frente como al girar 360°.
+2. **Arquitectura del Canvas (300vh)**:
+   - Contenedor `#inicio.hero-scroll-track` con `height: 300vh; position: relative;`.
+   - `.hero-sticky-stage`: `position: sticky; top: 0; height: 100vh; height: 100dvh; overflow: hidden;`.
+   - `canvas#hero-canvas`: Renderizado con soporte Retina DPR (`window.devicePixelRatio`), sin distorsiones por `object-fit: cover` CSS.
+   - Poster de respaldo inicial y loader progresivo con precarga paralela de los 74 fotogramas.
+3. **Narrativa Editorial en 2 Fases Sincronizadas**:
+   - **Fase 1 (0% - 48% Scroll)**: Apertura de marca con titular editorial *"Donde el Estilo"* + script *"Refleja tu mejor versión"*, descripción y botón principal **«Agendar Cita»**.
+   - **Fase 2 (52% - 100% Scroll)**: Revelación de excelencia *"Experiencia & Cuidado Exclusivo"* con píldora de autoridad, descripción de atención personalizada y llamada a la acción hacia los servicios.
+4. **Gradiente de Integración**:
+   - En Desktop: Gradiente horizontal marfil cálido (`#ede5da`) a la izquierda para garantizar legibilidad del texto editorial oscuro sin ocultar a la modelo radiante a la derecha.
+   - En Mobile: Gradiente vertical con zona superior 38% translúcida y transición inferior aterciopelada sobre el vestido ébano de la modelo para contraste óptimo de textos y botones.
+
+---
+
+## 🧩 Componentes y Secciones Oficiales (Estándar AGENTS.md)
+
+1. **Smart Header / Navbar Inteligente**:
+   - Sin barra de avisos superior (`.topbar` eliminada por regla mandatoria).
+   - Logotipo puramente tipográfico: `Ébano & Marfil salon` + `Beauty Center • Turbo`.
+   - Botón conciso **«Agendar»** (`.btn-header-cta`).
+   - Visibilidad inteligente: permanece visible durante el hero y se auto-oculta/reaparece suavemente en las secciones inferiores.
+   - Soporte de `env(safe-area-inset-top)`. En móvil se oculta el menú hamburguesa innecesario.
+2. **Barra de 5 Pilares de Excelencia (`#pilares`)**:
+   - Sección independiente fuera del Hero con 5 sellos de confianza (*Estilistas Expertas*, *Productos Prémium*, *Técnica Personalizada*, *Satisfacción Total*, *Higiene & Seguridad*).
+   - En móvil (<768px): carrusel horizontal fluido con *Scroll Snap* en una sola fila compacta.
+3. **Catálogo de Servicios (`#servicios` — Full-Bleed Minimalista)**:
+   - Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** y **2 columnas en móvil (`repeat(2, minmax(0, 1fr))`)**.
+   - Fotografía protagonista al 100% en relación 3:4 con degradado inferior aterciopelado.
+   - Cero píldoras superiores de duración.
+   - Título display blanco, precio visible en pesos colombianos (`$ COP`) y enlace minimalista **`AGENDAR ➔`** directo a WhatsApp.
+4. **Sobre Nosotros & Nuestro Equipo (`#nosotros`)**:
+   - **Bloque Editorial**: Grid a 2 columnas con fotografía del salón capilar (`photo-1560066984-138dadb4c035`), badge flotante VIP, descripción cálida y 4 métricas de autoridad (10+ Años de Experiencia, 4.500+ Clientas Felices, 100% Cuidado Capilar, 5.0★ Calificación).
+   - **Bloque Nuestro Equipo**: Grid de **4 columnas en escritorio** con formato **Retrato Editorial Full-Bleed (3:4.2)** con degradado aterciopelado, rol cálido, 5★ y enlace minimalista `AGENDAR ➔`. En móvil (<768px): **Carrusel Horizontal Deslizable con Scroll Snap** y efecto «Peek» (asoman 70-100px de la siguiente profesional).
+5. **Ubicación & Contacto (`#ubicacion`)**:
+   - Panel de datos físicos (Cra. 14 #99-26, Turbo, Antioquia), horarios de atención, teléfonos y mapa embebido de Google Maps con fórmula georreferenciada oficial (`z=16`).
+6. **Footer de Lujo**:
+   - Logotipo tipográfico puro, datos de contacto, enlaces de navegación, redes sociales y módulo de reserva con botón conciso **«Agendar»**.
+7. **Botón Flotante de WhatsApp (`.whatsapp-float`)**:
+   - Botón circular con badge de estado activo, soporte de `bottom: calc(28px + env(safe-area-inset-bottom, 0px))` y sin `overflow: hidden`.

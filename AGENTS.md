@@ -59,8 +59,9 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
      - **Spa & Bienestar**: `assets/heroes/spa/` (cuidado facial glow, relajación y atmósfera zen).
    - Al crear un proyecto individual, se puede vincular directamente la ruta relativa `../assets/heroes/{nicho}/{imagen}.webp` o copiar la imagen seleccionada a la carpeta del negocio.
 
-1. **Hero Header Inmersivo Full-Width Bleed**:
-   - Capa posterior `.hero-bg-cover` con imagen a la derecha (`width: 70% - 72%`).
+1. **Hero Header Inmersivo Full-Width Bleed / Canvas Video Scroll Scrubbing**:
+   - **Estándar Mandatorio de Videos Hero (Canvas Scrubbing)**: Todos los videos sitúan al modelo en el **centro de la segunda mitad** (mitad derecha, $x \approx 1440$ en video 1920x1080), dejando la primera mitad (izquierda) despejada para la tipografía editorial en escritorio. En **móvil (9:16)**, la extracción FFmpeg debe calibrarse obligatoriamente con `crop=ih*9/16:ih:1140:0,scale=720:1280` para centrar simétricamente a la modelo en la pantalla vertical del celular.
+   - Capa posterior `.hero-bg-cover` o Canvas con imagen/video a la derecha (`width: 70% - 72%` en estático, 100% full-bleed en Canvas).
    - **Vista de Escritorio (> 768px)**:
      - `.hero-fullwidth-section`: `min-height: 640px; display: flex; align-items: center;`
      - **Prohibición de `mask-image` sobre el contenedor de imagen**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.

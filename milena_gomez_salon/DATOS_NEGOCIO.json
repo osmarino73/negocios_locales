@@ -37,6 +37,7 @@
         "nombre": "Limpieza Facial Profunda",
         "descripcion": "Limpieza exhaustiva, exfoliación enzimática, extracción higiénica, hidratación y luminosidad inmediata para tu rostro.",
         "duracion": "60 min",
+        "precio": "$70.000 COP",
         "badge": "Técnica Glow Spa",
         "icono": "fa-spa",
         "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
@@ -46,6 +47,7 @@
         "nombre": "Masajes Relajantes & Corporales",
         "descripcion": "Alivia la tensión muscular, reduce el estrés diario y restaura el equilibrio holístico con aceites botánicos tibios.",
         "duracion": "60 min",
+        "precio": "$90.000 COP",
         "badge": "Ritual Anti-Estrés",
         "icono": "fa-hands",
         "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
@@ -55,6 +57,7 @@
         "nombre": "Manicura Spa & Rusa",
         "descripcion": "Tratamiento de cutículas milimétrico, limado anatómico y esmaltado de alta gama con acabado tipo espejo.",
         "duracion": "45 min",
+        "precio": "$45.000 COP",
         "badge": "Cuidado de Autor",
         "icono": "fa-hand-sparkles",
         "imagen": "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80"
@@ -64,6 +67,7 @@
         "nombre": "Pedicura Spa & Relax",
         "descripcion": "Baño con sales minerales aromáticas, exfoliación intensiva de durezas, mascarilla emoliente y masaje podal.",
         "duracion": "60 min",
+        "precio": "$50.000 COP",
         "badge": "Spa Podal Relax",
         "icono": "fa-shoe-prints",
         "imagen": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80"
@@ -73,9 +77,20 @@
         "nombre": "Tratamientos Skincare & Anti-Edad",
         "descripcion": "Nutrición celular intensiva, sueros antioxidantes y protocolos de rejuvenecimiento facial no invasivo.",
         "duracion": "75 min",
+        "precio": "$85.000 COP",
         "badge": "Dermo-Nutrición",
         "icono": "fa-bottle-droplet",
         "imagen": "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "cejas-pestanas",
+        "nombre": "Diseño de Mirada & Cejas HD",
+        "descripcion": "Visagismo de cejas con henna botánica, laminado orgánico y lifting de pestañas con keratina.",
+        "duracion": "50 min",
+        "precio": "$55.000 COP",
+        "badge": "Mirada Perfecta",
+        "icono": "fa-eye",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
       }
     ],
     "testimonios": [

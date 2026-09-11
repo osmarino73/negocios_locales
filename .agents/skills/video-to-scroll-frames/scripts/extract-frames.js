@@ -50,11 +50,11 @@ spawnSync(ffmpegCmd, [
   path.join(desktopDir, 'frame-%04d.webp')
 ], { stdio: 'inherit' });
 
-// 4. Extraer Mobile (9:16, calidad 76)
+// 4. Extraer Mobile (9:16, calidad 76, centrado en el sujeto de la segunda mitad x=1140)
 console.log('📱 Generando frames para Mobile (720x1280)...');
 spawnSync(ffmpegCmd, [
   '-y', '-i', videoInput,
-  '-vf', 'fps=18,scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280',
+  '-vf', 'fps=18.5,crop=ih*9/16:ih:1140:0,scale=720:1280',
   '-c:v', 'libwebp',
   '-quality', '76',
   '-compression_level', '6',

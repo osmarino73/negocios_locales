@@ -1,6 +1,6 @@
 # Ficha de Diseño Forense: My Spacio Nails (Clonación LUXÉ NAIL STUDIO)
 
-Documentación técnica y tokens de diseño para **My Spacio Nails** en Apartadó, basada en la referencia visual de lujo sobrio y estética editorial **LUXÉ NAIL STUDIO**.
+Documentación técnica y tokens de diseño para **My Spacio Nails** en Apartadó, basada en la referencia visual de lujo sobrio y estética editorial **LUXÉ NAIL STUDIO** combinada con Video Scroll Scrubbing de alta fidelidad.
 
 ---
 
@@ -8,32 +8,40 @@ Documentación técnica y tokens de diseño para **My Spacio Nails** en Apartad�
 
 | Rol | Nombre | HEX | Uso |
 |---|---|---|---|
-| Fondo Base Oscuro | Deep Espresso Onyx | `#0d0b0a` | Fondo principal en Hero, Sobre Nosotros, Footer |
-| Superficie Oscura | Cocoa Noir Surface | `#161311` | Tarjetas de equipo, contenedores oscuros |
-| Fondo Claro | Warm Nude Champagne Cream | `#ebe4dc` | Fondo contrastante de Servicios y Ubicación |
-| Tarjeta Clara | Pure Cream Linen Card | `#fbf8f5` | Tarjetas de catálogo de servicios |
-| Acento Primario | Nude Camel Sand | `#cbb39c` | Botones principales, acentos destacados |
-| Acento Degradado | Camel Gold Shimmer | `linear-gradient(135deg, #e4d3c3 0%, #cbb39c 50%, #ad947d 100%)` | Botones CTA, insignias VIP |
-| Texto Oscuro | Champagne Linen White | `#fcfaf7` | Títulos y textos principales sobre fondo oscuro |
-| Texto Claro | Espresso Charcoal | `#1a1614` | Títulos sobre fondo claro en servicios |
-| Bordes | Warm Sand Glass Border | `rgba(203, 179, 156, 0.22)` | Separadores y divisores |
+| Fondo Base Oscuro | Deep Espresso Onyx | `#0d0b0a` | Fondo principal en Hero, Servicios, Sobre Nosotros, Ubicación, Footer |
+| Superficie Oscura | Cocoa Noir Surface | `#161311` | Tarjetas de catálogo, especialistas y contenedores |
+| Superficie Elevada | Velvet Coffee Charcoal | `#1f1a17` | Paneles de mapa, iconos y badges |
+| Acento Primario | Nude Camel Sand | `#cbb39c` | Acentos tipográficos, líneas de corte y detalles |
+| Acento Luminoso | Warm Champagne Gold | `#e4d3c3` | Subtítulos script, reflejos y estados hover |
+| Acento Degradado | Camel Gold Shimmer | `linear-gradient(135deg, #e4d3c3 0%, #cbb39c 50%, #ad947d 100%)` | Botones CTA principales e insignias VIP |
+| Texto Claro Principal | Champagne Linen White | `#fcfaf7` | Títulos display y textos de alto contraste |
+| Texto Secundario | Muted Sandstone | `#c9c0b8` | Párrafos y descripciones editoriales |
+| Bordes | Warm Sand Glass Border | `rgba(203, 179, 156, 0.2)` | Separadores y divisores finos |
 
 ---
 
 ## ✍️ Tríada Tipográfica
 
-1. **Titulares Display**: `Playfair Display` / `Cormorant Garamond` (Serif editorial esbelta y de alta costura).
-2. **Subtítulos & Firma**: `Alex Brush` / `Pinyon Script` (Elegancia manuscrita sutil).
-3. **Cuerpo y UI**: `Plus Jakarta Sans` (Sans-serif limpia y legible para badges y botones).
+1. **Titulares Display**: `Playfair Display` (Serif editorial esbelta, elegante y de alta costura).
+2. **Subtítulos & Firma**: `Alex Brush` (Firma caligráfica fluida para frases script *«Nail Spa & Esthetic»*).
+3. **Cuerpo y UI**: `Plus Jakarta Sans` (Sans-serif limpia y geométrica para badges, botones y descripciones).
 
 ---
 
 ## 📐 Estructura Oficial de Secciones
-1. **Smart Header**: Logotipo Tipográfico Puro (Sin iconos junto al nombre) + Menú + Botón «Agendar» (en móvil: solo Logo y Botón «Agendar»).
-2. **`#inicio` (Hero Full-Width Bleed)**: `640px` escritorio, `720px !important;` móvil.
-3. **Barra de Pilares / Garantías**: 5 sellos con auto-scroll (3s) y pausa táctil en móvil.
-4. **`#servicios`**: Grid 6 Columnas en Escritorio (`repeat(6, 1fr)`), 2 Columnas en Móvil.
-5. **`#nosotros`**: Sobre Nosotros con foto VIP y 4 métricas de autoridad + Bloque Especialistas (4 Columnas en Escritorio, 2 Columnas en Móvil con badges ocultos en móvil).
-6. **`#ubicacion`**: Apartadó, Antioquia + Mapa `z=16`.
-7. **Footer**: Módulo de reserva con botón «Agendar».
-8. **WhatsApp Float**: GPU acelerado, `overflow: hidden`, `z-index: 999999`.
+
+1. **Smart Header**: Logotipo tipográfico puro a la izquierda (`.brand-logo`) + Menú desktop + Botón conciso «Agendar» a la derecha. En móvil (< 768px): eliminación de menú hamburguesa, soporte de safe-area top (`padding-top: env(safe-area-inset-top, 0px)`) y proporciones calibradas para evitar recortes. Auto-hide inteligente activo únicamente fuera del Hero.
+2. **`#inicio` (Hero Canvas Video Scroll Scrubbing — 300vh)**:
+   - Secuencia cinematográfica de 74 frames WebP sincronizada con scroll táctil/mouse (`requestAnimationFrame`).
+   - Soporte High-DPI Retina con `devicePixelRatio`.
+   - Poster fallback instantáneo anti-flashes negros (`poster.webp`).
+   - Paneo dinámico interpolado en móvil: $(1920-608) \times (0.60 - 0.12 \times \frac{t}{4.0})$, enfocando el macro de las uñas con flores al inicio y centrando simétricamente el rostro y ambas manos al final.
+   - Narrativa editorial en 2 capítulos secuenciales (50% / 50%). En móvil calibrado a `min-height: 720px !important;` con textos en la mitad inferior.
+3. **Barra de Pilares / Garantías**: 5 sellos de confianza con carrusel horizontal deslizable (*Scroll Snap*), auto-scroll fluido cada 3s y pausa táctil en móvil.
+4. **`#servicios` (Catálogo de Servicios)**: Grid 3 Columnas en Escritorio (`repeat(3, 1fr)`), 2 Columnas balanceadas en Móvil (`repeat(2, 1fr)`). Tarjetas Full-Bleed Minimalistas 3:4 con degradado aterciopelado (38% superior 100% transparente), sin píldoras superiores de duración, precio en COP destacado y enlace minimalista `AGENDAR ➔`.
+5. **`#nosotros` (Sobre Nosotros & Especialistas — Estándar Editorial)**:
+   - Bloque Editorial con fotografía representativa de salón de manicura (`photo-1527799820374-dcf8d9d4a388`), badge flotante VIP, descripción cálida y fila de 4 métricas de autoridad (en 2 columnas en móvil).
+   - Bloque Especialistas en Retrato Editorial Vertical (3:4.2): Grid de 4 Columnas en Escritorio y Carrusel Horizontal Deslizable (*Scroll Snap*) de una sola fila en Móvil con efecto Peek.
+6. **`#ubicacion` (Mapa & Contacto)**: Panel de lujo oscuro obsidian y camel sand con dirección en Apartadó, horarios y mapa embebido georreferenciado con fórmula oficial `z=16`.
+7. **Footer**: Enlaces de navegación, redes sociales, marca tipográfica pura y módulo de reserva con botón conciso «Agendar».
+8. **WhatsApp Float**: Botón circular flotante con despeje inferior seguro (`bottom: calc(28px + env(safe-area-inset-bottom, 0px))`), sin `overflow: hidden` y z-index prioritario (999999).

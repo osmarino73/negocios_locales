@@ -36,7 +36,7 @@ Esta ficha técnica documenta la clonación visual, tipográfica y cromática ad
    - Botón conciso **«Agendar»** (`.btn-header-cta`) con fondo dorado ámbar y hover reactivo.
    - En móvil: Solo logo a la izquierda y botón «Agendar» a la derecha. Cero hamburguesa.
 2. **Hero Canvas Video Scrubbing (300vh)**:
-   - Sincronizado con los 72 frames extraídos de `0909(2).mp4`.
+   - Sincronizado con los 72 frames extraídos de `Model_zooms_and_turns_around_202609101020.mp4`.
    - **2 capítulos editoriales optimizados que rotan con el scroll (50% / 50%)**:
      - **Paso 1 (0% a 50%)**: Gran titular principal de bienvenida (*"MÁS QUE UN CORTE. UN ESTILO DE VIDA."*) sin párrafo de descripción, botones directos y badge de Google 5.0★.
      - **Paso 2 (50% a 100%)**: Mensaje de valor de técnica/servicios (*"ARTE CLÁSICO & TENDENCIA URBANA"*) con la descripción completa (*"Cortes de precisión, fades limpios y afeitado tradicional con toalla caliente..."*) y botones secundarios.

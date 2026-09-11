@@ -76,11 +76,20 @@ Copy-Item "public/frames/desktop/frame-0001.webp" -Destination "public/frames/de
 ```
 
 ### 2. Extracción para Mobile (9:16 — 720x1280)
-Aplica recorte centrado inteligente para mantener el sujeto enfocado en pantallas verticales:
+Aplica recorte centrado inteligente para mantener el sujeto enfocado en pantallas verticales.
+
+> [!IMPORTANT]
+> **Regla de Posicionamiento de Video (Modelo en el Centro de la Segunda Mitad)**:
+> Por estándar de producción, los videos 16:9 (1920x1080) sitúan a la modelo en el **centro de la segunda mitad** (mitad derecha, $x \approx 1440$), dejando la primera mitad (izquierda) limpia para los textos editoriales en escritorio.
+> Al extraer para **Móvil (9:16)**, el cuadro de recorte ($ow = 1080 \times 9/16 = 608\text{px}$) debe centrarse sobre la modelo desplazando el eje horizontal a $x = 1140$ ($1440 - 608/2 \approx 1136 \to 1140$):
+> ```powershell
+> # Extracción Móvil Calibrada (Modelo en el centro de la segunda mitad):
+> ffmpeg -i input.mp4 -vf "fps=18.5,crop=ih*9/16:ih:1140:0,scale=720:1280" -c:v libwebp -quality 76 -compression_level 6 public/frames/mobile/frame-%04d.webp
+> ```
 
 ```powershell
-# Extracción Mobile (9:16 a 720x1280, WebP Q76, 12-18 fps)
-ffmpeg -i input.mp4 -vf "fps=12,scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280" -c:v libwebp -quality 76 -compression_level 6 public/frames/mobile/frame-%04d.webp
+# Extracción Mobile Estándar (cuando el video está centrado globalmente a x=(iw-ow)/2):
+ffmpeg -i input.mp4 -vf "fps=18,crop=ih*9/16:ih:(iw-ow)/2:0,scale=720:1280" -c:v libwebp -quality 76 -compression_level 6 public/frames/mobile/frame-%04d.webp
 
 # Generación automática de poster Mobile
 Copy-Item "public/frames/mobile/frame-0001.webp" -Destination "public/frames/mobile/poster.webp"

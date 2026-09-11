@@ -1,6 +1,6 @@
-# Ficha de Diseño Forense: Nail Art Sede Apartado (Clonación ATÚRA STUDIO)
+# Ficha de Diseño Forense: Nail Art Sede Apartado (Video Scroll Scrubbing & ATÚRA Studio)
 
-Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en Apartadó, basada en la referencia visual de lujo vanguardista **ATÚRA STUDIO / ART MANICURE**.
+Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en Apartadó, optimizado con motor de **Canvas Video Scroll Scrubbing (300vh)**, catálogo de servicios **Full-Bleed Minimalista (3 columnas escritorio / 2 columnas móvil)** y especialistas en formato **Retrato Editorial Vertical (4 columnas escritorio / Carrusel Scroll Snap con Peek en móvil)**.
 
 ---
 
@@ -8,32 +8,64 @@ Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en A
 
 | Rol | Nombre | HEX | Uso |
 |---|---|---|---|
-| Fondo Base Oscuro | Matte Noir Espresso | `#0e0d0d` | Fondo principal en Hero, Sobre Nosotros, Footer |
-| Superficie Oscura | Velvet Obsidian Surface | `#161414` | Tarjetas de equipo, contenedores oscuros |
-| Fondo Claro | Alabaster Pearl Cream | `#faf8f6` | Fondo contrastante de Servicios y Ubicación |
-| Tarjeta Clara | Pure Linen Card | `#ffffff` | Tarjetas de catálogo de servicios |
-| Acento Primario | Metallic Gold Foil | `#c5a059` | Botones principales, detalles dorados |
-| Acento Degradado | Gold Foil Shimmer | `linear-gradient(135deg, #e5c378 0%, #c5a059 50%, #9e7b35 100%)` | Botones CTA, insignias VIP |
-| Texto Oscuro | Alabaster Silk White | `#faf8f6` | Títulos y textos principales sobre fondo oscuro |
-| Texto Claro | Matte Charcoal | `#161414` | Títulos sobre fondo claro en servicios |
-| Bordes | Gold Glass Border | `rgba(197, 160, 89, 0.22)` | Separadores y divisores finos |
+| Fondo Base Oscuro | Matte Noir Espresso | `#0e0d0d` | Fondo principal continuo en Hero, Pilares, Servicios, Nosotros, Ubicación, Footer |
+| Superficie Oscura | Velvet Obsidian Surface | `#161414` | Tarjetas de servicios, equipo, panel de ubicación |
+| Elevación / Cards | Roasted Charcoal Card | `#1f1b1b` | Hover states, contenedores de métricas |
+| Acento Primario | Metallic Gold Foil | `#c5a059` | Líneas de acento, precios, estrellas y bordes activos |
+| Acento Luminoso | Warm Gold Light | `#e5c378` | Eyebrows, subtítulos de autor y detalles secundarios |
+| Acento Degradado | Gold Foil Shimmer | `linear-gradient(135deg, #e5c378 0%, #c5a059 50%, #9e7b35 100%)` | Botones CTA principales, badges |
+| Texto Principal | Alabaster Silk White | `#faf8f6` | Títulos display, nombres de equipo y textos primarios |
+| Texto Secundario | Sandstone Silk | `#c9c2bc` | Descripciones de servicios y párrafos editoriales |
+| Bordes | Gold Glass Border | `rgba(197, 160, 89, 0.20)` | Separadores y divisores sutiles |
 
 ---
 
 ## ✍️ Tríada Tipográfica
 
-1. **Titulares Display**: `Cinzel` / `Playfair Display` (Serifa mayúscula de impacto editorial de moda).
-2. **Firma Caligráfica**: `Alex Brush` / `Pinyon Script` (Frase manuscrita estilizada *«Nail Fashion & Beauty»*).
-3. **Cuerpo y UI**: `Plus Jakarta Sans` (Sans-serif geométrica para badges, botones y descripciones).
+1. **Titulares Display**: `Cinzel` & `Playfair Display` (500, 600, 700 — Serifa mayúscula de impacto editorial de alta moda).
+2. **Subtítulos de Autor & Signature Script**: `Alex Brush` (Caligrafía manuscrita estilizada para frases de marca).
+3. **Cuerpo y UI**: `Plus Jakarta Sans` (300, 400, 500, 600, 700, 800 — Máxima legibilidad en alta densidad).
+
+---
+
+## 🎬 Sistema de Video Scroll Scrubbing en Canvas HTML5 (`#inicio`)
+
+- **Fuente Original**: `Model_showing_fingernails_1080p_202609101237.mp4` (1920x1080, 24 fps, 4.0s).
+- **Extracción de Secuencia**:
+  - **Desktop (16:9)**: 74 fotogramas WebP en `public/frames/desktop/` (1920x1080 px, Q85, 4.75 MB en total, ~64.2 KB/frame).
+  - **Mobile (9:16)**: 74 fotogramas WebP en `public/frames/mobile/` (720x1280 px, Q76, 1.90 MB en total, ~25.7 KB/frame) con encuadre simétrico en $x=656$: `crop=608:1080:656:0,scale=720:1280`. Mantiene las uñas esculpidas centradas en la Toma 1 (0-1.1s) y el rostro radiante de la modelo con sus manos junto a las mejillas en la Toma 2 (1.1-4.0s).
+- **Arquitectura de Render**:
+  - Sección contenedora de `300vh` con wrapper `position: sticky; top: 0; height: 100vh; overflow: hidden;`.
+  - Soporte de alta resolución **High-DPI Retina** (`window.devicePixelRatio` hasta 2x).
+  - Preloader asíncrono con fallback inmediato `poster.webp` para 0% flashes negros.
+  - Alternancia editorial de 2 pasos (`step-1` 0% a 50%, `step-2` 50% a 100%) con copy cercano y directo (*prohibido "de autor"*).
 
 ---
 
 ## 📐 Estructura Oficial de Secciones
-1. **Smart Header**: Logotipo + Menú + Botón «Agendar» (en móvil: solo Logo y Botón «Agendar»).
-2. **`#inicio` (Hero Full-Width Bleed)**: `640px` escritorio, `720px !important;` móvil.
-3. **Barra de Pilares / Garantías**: 5 sellos con auto-scroll (3s) y pausa táctil en móvil.
-4. **`#servicios`**: Grid 6 Columnas en Escritorio (`repeat(6, 1fr)`), 2 Columnas en Móvil.
-5. **`#nosotros`**: Sobre Nosotros con foto VIP y 4 métricas de autoridad + Bloque Especialistas (4 Columnas en Escritorio, 2 Columnas en Móvil con badges ocultos en móvil).
-6. **`#ubicacion`**: La Martina, Cra 95 #N° 96 - 60, Apartadó + Mapa `z=16`.
-7. **Footer**: Módulo de reserva con botón «Agendar».
-8. **WhatsApp Float**: GPU acelerado, `overflow: hidden`, `z-index: 999999`.
+
+1. **Smart Header / Navbar Inteligente**:
+   - Logotipo tipográfico puro (sin emojis ni íconos decorativos).
+   - Permanente y visible durante todo el recorrido del Hero Canvas; auto-hide suave al descender en secciones inferiores.
+   - En móvil (< 768px): Logotipo a la izquierda y botón conciso **«Agendar»** a la derecha. Menú hamburguesa deshabilitado.
+   - Soporte de `padding-top: env(safe-area-inset-top, 0px)`.
+2. **`#inicio` (Canvas Video Scrubbing)**:
+   - 300vh de scroll interactivo sincronizado con el cursor o el dedo.
+   - En móvil: Disposición inferior (`align-items: flex-end`), `min-height: 720px !important;`, texto compacto para mantener el video despejado.
+3. **Barra de Pilares / Garantías**:
+   - 5 sellos de confianza (*Esmaltes Prémium, Esterilización Clínica, Manicuristas Máster, Nail Art en Tendencia, Satisfacción Total*).
+   - En móvil: Carrusel horizontal deslizable (*Scroll Snap*) con auto-scroll inteligente (3s) y pausa táctil.
+4. **`#servicios` (Catálogo Full-Bleed Minimalista)**:
+   - Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** y **2 columnas balanceadas en móvil**.
+   - Fotografía inmersiva al 100% (`aspect-ratio: 3/4`), degradado inferior aterciopelado (38% superior transparente), precio claro y botón minimalista `AGENDAR ➔`.
+5. **`#nosotros` (Sobre Nosotros & Especialistas)**:
+   - Bloque Editorial con foto de salón de manicura real (`photo-1527799820374-dcf8d9d4a388`), badge flotante VIP, titular de impacto y 4 métricas de autoridad (años de trayectoria, clientas atendidas, bioseguridad clínica y calificación 5.0★).
+   - Bloque de Especialistas: **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Vertical (3:4.2)**; en **móvil (< 768px)** carrusel horizontal deslizable (*Scroll Snap*) con tarjetas de 255px y efecto «Peek» (asoman 70-100px del siguiente perfil).
+6. **`#ubicacion` (Mapa Georreferenciado & Contacto)**:
+   - Tarjeta de lujo continuo con dirección (La Martina, Cra 95 #N° 96 - 60, Apartadó), horarios, teléfono y Google Maps embebido oficial (`z=16`).
+7. **Footer Principal**:
+   - Navegación rápida, datos de contacto y módulo de reserva con botón conciso **«Agendar»**.
+8. **WhatsApp Flotante Anti-Corte**:
+   - `bottom: calc(28px + env(safe-area-inset-bottom, 0px)); right: max(20px, env(safe-area-inset-right, 20px));`
+   - Cero `overflow: hidden` para sombras perfectas, aceleración por hardware (`translate3d`), z-index 999999.
+   - `html, body { overflow-x: clip; }`.

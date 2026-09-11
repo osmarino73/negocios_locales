@@ -6,7 +6,7 @@ const { execSync, spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const videoInput = process.argv[2] || path.join(__dirname, '..', '..', '.agents', 'document', '0909(2).mp4');
+const videoInput = process.argv[2] || path.join(__dirname, '..', '..', '.agents', 'document', 'Model_zooms_and_turns_around_202609101020.mp4');
 if (!fs.existsSync(videoInput)) {
   console.error(`❌ Error: El video "${videoInput}" no existe.`);
   process.exit(1);
@@ -41,18 +41,18 @@ console.log(`🎬 Procesando "${videoInput}" con: ${ffmpegCmd}`);
 console.log('🖥️ Generando frames para Desktop (1920x1080)...');
 spawnSync(ffmpegCmd, [
   '-y', '-i', videoInput,
-  '-vf', 'fps=12,scale=1920:1080',
+  '-vf', 'fps=18,scale=1920:1080',
   '-c:v', 'libwebp',
   '-quality', '85',
   '-compression_level', '6',
   path.join(desktopDir, 'frame-%04d.webp')
 ], { stdio: 'inherit' });
 
-// 4. Extraer Mobile (9:16, ~72 frames, calidad 76)
-console.log('📱 Generando frames para Mobile (720x1280)...');
+// 4. Extraer Mobile (9:16, ~72 frames, calidad 76, elevación vertical y=200 y paneo dinámico de 0.60 a 0.50)
+console.log('📱 Generando frames para Mobile (720x1280) con paneo dinámico y elevación facial...');
 spawnSync(ffmpegCmd, [
   '-y', '-i', videoInput,
-  '-vf', 'fps=12,scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280',
+  '-vf', 'fps=18,scale=-1:1520,crop=720:1280:(in_w-out_w)*(0.60-0.10*(t/4.0)):200',
   '-c:v', 'libwebp',
   '-quality', '76',
   '-compression_level', '6',

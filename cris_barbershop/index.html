@@ -2,716 +2,2369 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cris Barbershop | Barbería Premium & Grooming Masculino</title>
-  <meta name="description" content="Cris Barbershop. Barbería premium para caballeros modernos. Cortes de cabello de alta precisión, diseño de barba, afeitado tradicional a navaja y tratamiento capilar.">
-  <meta name="keywords" content="cris barbershop, barberia premium, corte de cabello hombres, barba y bigote, afeitado tradicional navaja, fade, barberia colombia, grooming masculino">
-  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cris Barbershop | Barbería Prémium & Grooming Masculino</title>
+  <meta name="description" content="Barbería prémium y grooming masculino en Apartadó, Colombia. Cortes fade de precisión, afeitado tradicional a navaja, diseño de barba y rituales VIP.">
+  <meta name="theme-color" content="#0f0f11">
 
-  <!-- Mobile WebApp PWA Meta Tags -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Cris Barber">
-  <meta name="theme-color" content="#18181b">
-
-  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <!-- OpenGraph / Redes Sociales -->
+  <meta property="og:title" content="Cris Barbershop | Barbería Prémium & Grooming Masculino">
+  <meta property="og:description" content="Más que un corte, una experiencia de distinción masculina. Agenda tu cita en Apartadó.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Cris Barbershop | Barbería Premium">
-  <meta property="og:description" content="Más que un corte de cabello, es una experiencia para caballeros modernos. Agenda tu cita por WhatsApp.">
-  <meta property="og:url" content="https://share.google/viX5ybxJGwEqL1fCr">
+  <meta property="og:image" content="public/frames/desktop/poster.webp">
 
-  <!-- Local SEO Structured Data (Schema.org JSON-LD) -->
+  <!-- Schema.org JSON-LD para SEO Local -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BarberShop",
     "name": "Cris Barbershop",
-    "description": "Barbería y grooming masculino de alta gama. Cortes de precisión, barba, afeitado tradicional y productos exclusivos.",
-    "url": "https://share.google/viX5ybxJGwEqL1fCr",
+    "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=85",
     "telephone": "+573004567890",
-    "hasMap": "https://share.google/viX5ybxJGwEqL1fCr",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "20:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Sunday"],
-        "opens": "10:00",
-        "closes": "16:00"
-      }
-    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zona Comercial Principal",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.88089,
+      "longitude": -76.6295
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "reviewCount": "2400"
+      "reviewCount": "128"
     }
   }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ==========================================================================
+       VARIABLES Y DESIGN TOKENS (ESTÁNDAR BARBERÍA PRÉMIUM: CARBON & BRONZE)
+       ========================================================================== */
+    :root {
+      /* Paleta Oscura Continuada */
+      --bg-dark-base: #0f0f11;
+      --bg-dark-surface: #18181b;
+      --bg-dark-elevated: #222226;
+      --bg-dark-trans: rgba(15, 15, 17, 0.92);
+
+      /* Acentos Bronze / Amber Gold */
+      --color-bronze: #c5a059;
+      --color-bronze-light: #e5c378;
+      --color-bronze-dark: #9e7b35;
+      --color-bronze-hover: #edd18f;
+
+      /* Bordes y Líneas */
+      --border-dark: rgba(197, 160, 89, 0.2);
+      --border-dark-strong: rgba(197, 160, 89, 0.45);
+
+      /* Textos */
+      --text-dark-primary: #faf8f5;
+      --text-dark-secondary: #c9c2bc;
+      --text-dark-muted: #8e8780;
+      --text-dark-title: #0f0f11;
+
+      /* Degradados */
+      --bronze-gradient: linear-gradient(135deg, #e5c378 0%, #c5a059 50%, #9e7b35 100%);
+      --bronze-gradient-hover: linear-gradient(135deg, #ffffff 0%, #e5c378 50%, #c5a059 100%);
+
+      /* Tipografía */
+      --font-display: 'Outfit', sans-serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+      /* Sombras y Radios */
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.12);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --shadow-dark-md: 0 12px 36px rgba(0, 0, 0, 0.75);
+      --shadow-bronze: 0 6px 20px rgba(197, 160, 89, 0.28);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 50px;
+
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset y Estilos Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip; /* Previene scroll horizontal SIN romper position: sticky */
+      overflow-y: visible;
+      background-color: var(--bg-dark-base);
+      color: var(--text-dark-primary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE (Logotipo Tipográfico Puro)
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+      background: linear-gradient(180deg, rgba(15, 15, 17, 0.95) 0%, rgba(15, 15, 17, 0.75) 80%, transparent 100%);
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background: rgba(15, 15, 17, 0.96);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-dark);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    }
+
+    .header-sticky-wrapper.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .site-header {
+      padding: 16px 0;
+      transition: padding 0.3s ease;
+    }
+
+    .header-sticky-wrapper.scrolled .site-header {
+      padding: 12px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 56px;
+    }
+
+    /* Logotipo Tipográfico Puro: CERO ICONOS O EMOJIS */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+    }
+
+    .brand-title {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .brand-title span {
+      color: var(--color-bronze);
+    }
+
+    .brand-tagline {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-bronze-light);
+      margin-top: 3px;
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-dark-secondary);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-bronze);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-bronze-light);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .btn-header-cta {
+      background: var(--bronze-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-bronze);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-header-cta:hover {
+      background: var(--bronze-gradient-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.45);
+    }
+
+    /* ==========================================================================
+       HERO SECTION: CANVAS VIDEO SCROLL SCRUBBING (300VH)
+       ========================================================================== */
+    .hero-scroll-section {
+      position: relative;
+      width: 100%;
+      height: 300vh;
+      background-color: var(--bg-dark-base);
+    }
+
+    .canvas-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      z-index: 10;
+    }
+
+    #scroll-video-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    .canvas-poster-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      opacity: 1;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .canvas-poster-img.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* Degradado horizontal calibrado: contraste a la izquierda (0-26%) y 100% transparente a la derecha (68-100%) */
+    .canvas-sticky-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg, 
+        rgba(15, 15, 17, 0.95) 0%, 
+        rgba(15, 15, 17, 0.88) 26%, 
+        rgba(15, 15, 17, 0.5) 45%, 
+        rgba(15, 15, 17, 0.15) 58%, 
+        transparent 70%, 
+        transparent 100%
+      );
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding-top: 20px;
+    }
+
+    .hero-scroll-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      max-width: 580px;
+      min-height: 420px;
+    }
+
+    .hero-scroll-step {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      transform: translateY(-50%) translateY(16px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scroll-step.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(-50%) translateY(0);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      color: var(--color-bronze);
+      margin-bottom: 4px;
+      display: inline-block;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--color-bronze-light);
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      color: var(--text-dark-primary);
+      margin-bottom: 14px;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9);
+      text-transform: uppercase;
+    }
+
+    .hero-title em {
+      color: var(--color-bronze);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .step-1 .hero-title {
+      margin-bottom: 24px;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 520px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .btn-primary {
+      background: var(--bronze-gradient);
+      color: var(--text-dark-title);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 30px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-bronze);
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-primary:hover {
+      background: var(--bronze-gradient-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(197, 160, 89, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--text-dark-primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 14px 28px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(197, 160, 89, 0.15);
+      border-color: var(--color-bronze);
+      color: var(--color-bronze);
+      transform: translateY(-3px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 15, 17, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid var(--border-dark);
+    }
+
+    .hero-proof-stars {
+      color: var(--color-bronze);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-proof-text {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-dark-secondary);
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS (5 Sellos de Confianza)
+       ========================================================================== */
+    .pillars-section {
+      background: #09090b;
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 24px 0;
+      position: relative;
+      z-index: 12;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      background: rgba(24, 24, 27, 0.5);
+      border: 1px solid rgba(197, 160, 89, 0.15);
+      transition: var(--transition);
+    }
+
+    .pillar-item:hover {
+      border-color: var(--color-bronze);
+      transform: translateY(-2px);
+      background: rgba(24, 24, 27, 0.85);
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.12);
+      color: var(--color-bronze);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
+
+    .pillar-text h4 {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .pillar-text p {
+      font-size: 0.74rem;
+      color: var(--text-dark-muted);
+      line-height: 1.3;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: SERVICIOS (#servicios — Grid 3 Columnas Full-Bleed Minimalista)
+       ========================================================================== */
+    .services-section {
+      background-color: var(--bg-dark-base);
+      padding: 95px 0;
+      position: relative;
+      z-index: 11;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 55px;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.5rem;
+      color: var(--color-bronze);
+      display: block;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.6vw, 2.9rem);
+      font-weight: 800;
+      color: var(--text-dark-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 0.94rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      min-height: 440px;
+      border-radius: 22px;
+      overflow: hidden;
+      background-color: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-dark-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 26px 22px;
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-bronze);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(197, 160, 89, 0.22);
+    }
+
+    .service-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.05);
+    }
+
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(15, 15, 17, 0) 0%, 
+        rgba(15, 15, 17, 0.38) 38%, 
+        rgba(15, 15, 17, 0.72) 65%, 
+        rgba(15, 15, 17, 0.96) 92%, 
+        #0f0f11 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .service-card-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .service-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background: var(--color-bronze);
+      margin-bottom: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .service-card:hover .service-card-accent-line {
+      width: 52px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 6px;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+
+    .service-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .service-card-price {
+      font-family: var(--font-display);
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: var(--color-bronze-light);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-card-book-minimal {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+      touch-action: manipulation;
+      padding: 4px 0;
+    }
+
+    .btn-card-book-minimal i {
+      transition: transform 0.25s ease;
+      color: var(--color-bronze);
+    }
+
+    .btn-card-book-minimal:hover {
+      color: var(--color-bronze-light);
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(5px);
+    }
+
+    /* ==========================================================================
+       SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Editorial)
+       ========================================================================== */
+    .about-team-section {
+      background-color: #0b0b0d;
+      padding: 95px 0;
+      position: relative;
+      z-index: 11;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+      margin-bottom: 85px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-dark-md);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .salon-image-showcase:hover img {
+      transform: scale(1.03);
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(15, 15, 17, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--border-dark-strong);
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-bronze);
+    }
+
+    .experience-floating-badge strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--color-bronze);
+      line-height: 1;
+    }
+
+    .experience-floating-badge span {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+    }
+
+    .experience-text-content .experience-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.4rem;
+      color: var(--color-bronze);
+      display: block;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .experience-text-content .experience-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.4vw, 2.7rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-dark-primary);
+      margin-bottom: 18px;
+      line-height: 1.15;
+    }
+
+    .experience-text-content p {
+      font-size: 0.94rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .metric-item {
+      padding: 14px 12px;
+      background: var(--bg-dark-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      text-align: center;
+    }
+
+    .metric-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--color-bronze);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .metric-item span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-dark-secondary);
+      line-height: 1.2;
+      display: block;
+    }
+
+    /* EQUIPO: RETRATO EDITORIAL (4 COLUMNAS DESKTOP — 3:4.2) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      position: relative;
+      aspect-ratio: 3 / 4.2;
+      min-height: 410px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-dark-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px 18px;
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-bronze);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px rgba(197, 160, 89, 0.22);
+    }
+
+    .team-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.05);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(15, 15, 17, 0) 0%, 
+        rgba(15, 15, 17, 0.42) 42%, 
+        rgba(15, 15, 17, 0.78) 70%, 
+        rgba(15, 15, 17, 0.98) 94%, 
+        #0f0f11 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .team-card-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .team-card-accent-line {
+      width: 28px;
+      height: 2px;
+      background: var(--color-bronze);
+      margin-bottom: 8px;
+      transition: width 0.3s ease;
+    }
+
+    .team-card:hover .team-card-accent-line {
+      width: 48px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .team-role {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-bronze-light);
+      display: block;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .team-stars {
+      color: var(--color-bronze);
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .team-stars span {
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-dark-secondary);
+      margin-left: 4px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: UBICACIÓN & CONTACTO (#ubicacion)
+       ========================================================================== */
+    .location-section {
+      background-color: var(--bg-dark-base);
+      padding: 95px 0;
+      position: relative;
+      z-index: 11;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-dark-md);
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .map-info-panel {
+      padding: 45px 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.3rem;
+      color: var(--color-bronze);
+      display: block;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .map-info-title {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-dark-primary);
+      margin-bottom: 22px;
+      line-height: 1.2;
+    }
+
+    .contact-item-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .contact-icon-box {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+      border-radius: 50%;
+      background: rgba(197, 160, 89, 0.12);
+      color: var(--color-bronze);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
+
+    .contact-item-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .contact-item-text p {
+      font-size: 0.82rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.4;
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      min-height: 440px;
+      border-left: 1px solid var(--border-dark);
+    }
+
+    .map-frame-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+      -webkit-filter: invert(90%) hue-rotate(180deg) brightness(95%) contrast(90%);
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background-color: #08080a;
+      padding: 70px 0 30px;
+      position: relative;
+      z-index: 11;
+      border-top: 1px solid rgba(197, 160, 89, 0.25);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p {
+      font-size: 0.84rem;
+      color: var(--text-dark-muted);
+      line-height: 1.6;
+      margin: 14px 0 20px;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      color: var(--color-bronze);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .footer-social-btn:hover {
+      background: var(--bronze-gradient);
+      color: var(--text-dark-title);
+      transform: translateY(-3px);
+      border-color: var(--color-bronze);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dark-primary);
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background: var(--color-bronze);
+    }
+
+    .footer-links-list {
+      list-style: none;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links-list a {
+      font-size: 0.82rem;
+      color: var(--text-dark-secondary);
+      transition: var(--transition);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--color-bronze);
+      padding-left: 5px;
+    }
+
+    .footer-reserve-card {
+      background: var(--bg-dark-surface);
+      padding: 22px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-dark);
+      text-align: center;
+    }
+
+    .footer-reserve-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-reserve-card p {
+      font-size: 0.8rem;
+      color: var(--text-dark-secondary);
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .footer-bottom-bar {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-dark-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      line-height: 1;
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45);
+      z-index: 999999;
+      transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      touch-action: manipulation;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) translateY(-3px) translate3d(0, 0, 0);
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    .whatsapp-float i {
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (< 768px - MÓVIL OPTIMIZADO)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .header-sticky-wrapper {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+
+      .site-header {
+        padding: 12px 0;
+      }
+
+      .nav-container {
+        min-height: 52px;
+        padding-left: max(16px, env(safe-area-inset-left, 16px));
+        padding-right: max(16px, env(safe-area-inset-right, 16px));
+      }
+
+      .brand-title {
+        font-size: 1.24rem;
+        line-height: 1.1;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-tagline {
+        font-size: 0.58rem;
+        line-height: 1.2;
+        letter-spacing: 0.16em;
+        margin-top: 2px;
+        white-space: nowrap;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .btn-header-cta {
+        padding: 8px 16px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      .canvas-sticky-wrapper {
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .canvas-sticky-wrapper::after {
+        background: linear-gradient(
+          180deg, 
+          rgba(15, 15, 17, 0) 0%, 
+          rgba(15, 15, 17, 0) 38%, 
+          rgba(15, 15, 17, 0.6) 54%, 
+          rgba(15, 15, 17, 0.92) 74%, 
+          #0f0f11 96%
+        );
+      }
+
+      .hero-container-align {
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 36px;
+      }
+
+      .hero-scroll-content {
+        max-width: 360px;
+        min-height: 360px;
+        text-align: center;
+      }
+
+      .hero-scroll-step {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-script-tag {
+        font-size: 2.2rem;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
+      }
+
+      .hero-title {
+        font-size: 1.85rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .step-1 .hero-title {
+        margin-bottom: 18px;
+      }
+
+      .hero-desc {
+        font-size: 0.84rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        max-width: 275px;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.82rem;
+      }
+
+      .hero-proof-badge {
+        padding: 6px 14px;
+      }
+
+      .hero-proof-stars {
+        font-size: 0.75rem;
+      }
+
+      .hero-proof-text {
+        font-size: 0.7rem;
+      }
+
+      /* Barra de Pilares: Carrusel Horizontal Deslizable en Móvil */
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 12px;
+        padding: 4px 16px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 225px;
+        scroll-snap-align: start;
+        padding: 10px 12px;
+      }
+
+      /* Servicios en Móvil: Obligatoriamente 2 Columnas Balanceadas */
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 14px;
+        row-gap: 18px;
+      }
+
+      .service-card {
+        min-height: 0;
+        aspect-ratio: 3 / 4.4;
+        padding: 16px 12px;
+        border-radius: 16px;
+      }
+
+      .service-card-title {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+
+      .service-card-desc {
+        display: none;
+      }
+
+      .service-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .service-card-price {
+        font-size: 1rem;
+      }
+
+      .btn-card-book-minimal {
+        font-size: 0.72rem;
+      }
+
+      /* Equipo: Carrusel Horizontal Deslizable (Scroll Snap) en Móvil con Efecto Peek */
+      .team-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 16px !important;
+        margin: 0 -16px !important;
+        width: calc(100% + 32px) !important;
+        padding: 8px 16px 20px !important;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .team-card {
+        flex: 0 0 255px !important;
+        aspect-ratio: 3 / 4.2 !important;
+        min-height: 0 !important;
+        scroll-snap-align: start;
+        padding: 18px 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(197, 160, 89, 0.35);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8);
+      }
+
+      .team-name {
+        font-size: 1.12rem;
+      }
+
+      .team-role {
+        font-size: 0.72rem;
+      }
+
+      /* Sobre Nosotros en Móvil */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .salon-image-showcase img {
+        height: 280px;
+      }
+
+      .experience-floating-badge {
+        bottom: 16px;
+        left: 16px;
+        padding: 10px 16px;
+      }
+
+      .experience-floating-badge strong {
+        font-size: 1.8rem;
+      }
+
+      .experience-text-content {
+        text-align: center;
+      }
+
+      .experience-text-content .experience-title {
+        font-size: 2.2rem;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .metric-item strong {
+        font-size: 1.7rem;
+      }
+
+      /* Mapa Responsive en Móvil */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-dark);
+        border-left: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      /* WhatsApp Móvil Anti-Corte y Safe Area */
+      .whatsapp-float {
+        bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+        right: max(20px, env(safe-area-inset-right, 20px)) !important;
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 1.9rem !important;
+        z-index: 999999 !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="nav-container">
-      <a href="#" class="logo-box">
-        <div class="logo-icon">
-          <i class="fa-solid fa-scissors"></i>
-        </div>
-        <div class="logo-text">
-          <h1>Cris Barbershop</h1>
-          <span>Barbería & Cuidado Masculino Premium</span>
-        </div>
-      </a>
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE (Logotipo Tipográfico Puro)
+       ========================================================================== -->
+  <header class="header-sticky-wrapper" id="stickyHeader">
+    <div class="site-header">
+      <div class="container nav-container">
+        <a href="#inicio" class="brand-logo" aria-label="Inicio Cris Barbershop">
+          <span class="brand-title">CRIS <span>BARBERSHOP</span></span>
+          <span class="brand-tagline">Barbería Prémium &amp; Grooming • Apartadó</span>
+        </a>
 
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#barberos">Barberos</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#precios">Precios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+        <nav class="main-nav" aria-label="Navegación principal">
+          <a href="#inicio" class="nav-link active">Inicio</a>
+          <a href="#servicios" class="nav-link">Servicios</a>
+          <a href="#nosotros" class="nav-link">Nosotros</a>
+          <a href="#ubicacion" class="nav-link">Ubicación</a>
+        </nav>
 
-      <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop,%20quisiera%20agendar%20un%20turno" target="_blank" class="btn btn-bronze">
-        Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-      </a>
+        <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20un%20turno." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="inicio">
-    <div class="hero-container">
-      <div class="hero-content">
-        <span class="hero-tag">ESTILO IMPECABLE. MÁXIMA CONFIANZA.</span>
-        <h1 class="hero-title">
-          Más Que Un Corte De Cabello, Una Experiencia.
-        </h1>
-        <p class="hero-subtitle">
-          Servicios de cuidado masculino diseñados exclusivamente para caballeros modernos. Luce impecable y proyecta seguridad todos los días.
-        </p>
-        <div class="hero-actions">
-          <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop,%20deseo%20agendar%20mi%20corte" target="_blank" class="btn btn-bronze">
-            Agendar Cita <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#servicios" class="btn btn-outline-dark">
-            Nuestros Servicios
-          </a>
-        </div>
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: CANVAS VIDEO SCROLL SCRUBBING (300VH)
+         ========================================================================== -->
+    <section class="hero-scroll-section" id="inicio">
+      <div class="canvas-sticky-wrapper">
+        <!-- Canvas que reproduce la secuencia de fotogramas sincronizados -->
+        <canvas id="scroll-video-canvas"></canvas>
 
-        <div class="hero-social-proof">
-          <div class="hero-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <div>
-            Recomendado por <strong>+10.000 clientes</strong> • 4.9/5 (2.4K Reseñas)
-          </div>
-        </div>
-      </div>
+        <!-- Poster estático de reserva contra flashes negros -->
+        <img 
+          id="canvas-poster-fallback" 
+          src="public/frames/desktop/poster.webp" 
+          alt="Corte fade y arreglo de barba en Cris Barbershop" 
+          class="canvas-poster-img"
+        />
 
-      <div class="hero-image-wrapper">
-        <div class="hero-image-card">
-          <img src="assets/images/hero_man.png" alt="Caballero elegante con corte fade y barba perfilada en Cris Barbershop">
-        </div>
-      </div>
-    </div>
-
-    <!-- Floating Dark Widget (4 Feature Pillars) -->
-    <div class="hero-floating-widget">
-      <div class="widget-item">
-        <i class="fa-solid fa-scissors"></i>
-        <span>Barberos Expertos</span>
-      </div>
-      <div class="widget-item">
-        <i class="fa-solid fa-pump-soap"></i>
-        <span>Productos de Alta Gama</span>
-      </div>
-      <div class="widget-item">
-        <i class="fa-solid fa-shield-halved"></i>
-        <span>Higiene & Seguridad</span>
-      </div>
-      <div class="widget-item">
-        <i class="fa-solid fa-award"></i>
-        <span>Garantía de Satisfacción</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Catálogo Completo de Servicios -->
-  <section class="section" id="servicios">
-    <div class="section-header-flex">
-      <div>
-        <span class="section-tag">Catálogo de Servicios & Precios</span>
-        <h2 class="section-title">Servicios Diseñados a Tu Medida</h2>
-      </div>
-      <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop,%20quisiera%20consultar%20todos%20los%20servicios" target="_blank" class="link-all">
-        Agendar por WhatsApp <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
-    <div class="services-grid-10">
-      <!-- Card 1 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-scissors"></i>
+        <!-- Contenido editorial con 2 pasos secuenciales (50% / 50%) -->
+        <div class="container hero-container-align">
+          <div class="hero-scroll-content">
+            <!-- Paso 1 (0% a 50%): Gran Titular Principal de bienvenida sin párrafo extenso -->
+            <div class="hero-scroll-step step-1 active">
+              <span class="hero-script-tag">Grooming &amp; Style</span>
+              <span class="hero-eyebrow">BARBERÍA PRÉMIUM &amp; ESTILO MASCULINO · APARTADÓ</span>
+              <h1 class="hero-title">CORTE IMPECABLE.<br><em>ESTILO QUE IMPONE.</em></h1>
+              <div class="hero-actions">
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20un%20turno." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Turno
+                </a>
+                <a href="#servicios" class="btn-secondary">
+                  <i class="fa-solid fa-scissors"></i> Ver Servicios
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">4.9 en Google Reviews · Apartadó, Colombia</span>
+              </div>
             </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 45 min</span>
+
+            <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con descripción completa -->
+            <div class="hero-scroll-step step-2">
+              <span class="hero-script-tag">Precisión a Navaja</span>
+              <span class="hero-eyebrow">FADES, BARBA &amp; RITUALES VIP</span>
+              <h2 class="hero-title">PRECISIÓN &amp; MAESTRÍA.<br><em>CORTES MODERNOS.</em></h2>
+              <p class="hero-desc">Más que un corte de cabello, una experiencia para caballeros modernos. Fades a medida, perfilado de barba con toallas calientes y productos de barbería de alta gama en un ambiente clásico y exclusivo.</p>
+              <div class="hero-actions">
+                <a href="#servicios" class="btn-primary">
+                  <i class="fa-solid fa-crown"></i> Conocer Servicios
+                </a>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fa-brands fa-whatsapp"></i> Consultar Horarios
+                </a>
+              </div>
+            </div>
           </div>
-          <h3>Corte de Cabello (Fade / Clásico)</h3>
-          <p>Cortes de precisión (Low, Mid, High Fade o Clásico) adaptados a tu estilo y rostro. Incluye lavado y peinado final.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$30.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Corte%20de%20Cabello%20($30.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BARRA DE PILARES / GARANTÍAS (5 Sellos de Barbería Prémium)
+         ========================================================================== -->
+    <section class="pillars-section" aria-label="Garantías y Pilares de la Barbería">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-scissors"></i></div>
+            <div class="pillar-text">
+              <h4>Barberos Expertos</h4>
+              <p>Maestros certificados en fades</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-bottle-droplet"></i></div>
+            <div class="pillar-text">
+              <h4>Productos Prémium</h4>
+              <p>Ceras, aceites &amp; tónicos</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-crown"></i></div>
+            <div class="pillar-text">
+              <h4>Experiencia de Lujo</h4>
+              <p>Toallas al vapor &amp; confort</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="pillar-text">
+              <h4>Higiene &amp; Seguridad</h4>
+              <p>Navajas 100% descartables</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="pillar-text">
+              <h4>Satisfacción Total</h4>
+              <p>Calificación 4.9 ★ en Apartadó</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: SERVICIOS (#servicios — Grid 3 Columnas Full-Bleed Minimalista)
+         ========================================================================== -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="section-script-eyebrow">Nuestra Carta de Servicios</span>
+          <h2 class="section-title">Servicios Exclusivos</h2>
+          <p class="section-desc">Cortes de precisión milimétrica, diseño de barba y rituales de cuidado masculino con los más altos estándares de higiene.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Corte de Cabello Fade o Clásico en Cris Barbershop" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Corte de Cabello (Fade / Clásico)</h3>
+              <p class="service-card-desc">Cortes de precisión (Low, Mid, High Fade o Clásico). Incluye lavado, marcado a navaja y peinado final.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$30.000 COP</span>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20Corte%20de%20Cabello." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 2 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Diseño y Arreglo de Barba en Cris Barbershop" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Diseño &amp; Arreglo de Barba</h3>
+              <p class="service-card-desc">Perfilado con navaja libre, alineación de pómulos y cuello, toallas calientes al vapor y aceites esenciales.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$20.000 COP</span>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20Arreglo%20de%20Barba." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 3 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Combo VIP Corte y Barba en Cris Barbershop" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Combo VIP: Corte + Barba</h3>
+              <p class="service-card-desc">El paquete preferido. Corte de precisión completo, diseño de barba a navaja y lavado refrescante con masaje capilar.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$45.000 COP</span>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20Combo%20VIP." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 4 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1517832606589-7629c33971a6?auto=format&fit=crop&w=800&q=80" alt="Afeitado Tradicional a Navaja en Cris Barbershop" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Afeitado Tradicional a Navaja</h3>
+              <p class="service-card-desc">Afeitado clásico al estilo antiguo con espuma caliente al vapor, toallas herbales y bálsamo reconstituyente.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$25.000 COP</span>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20Afeitado%20Tradicional." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 5 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1512290900672-1f55b6eb01dd?auto=format&fit=crop&w=800&q=80" alt="Limpieza Facial y Black Mask en Cris Barbershop" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Limpieza Facial + Black Mask</h3>
+              <p class="service-card-desc">Exfoliación facial para eliminar impurezas, aplicación de mascarilla negra purificante y crema hidratante.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$25.000 COP</span>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20Limpieza%20Facial." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 6 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Experiencia Full VIP Cris Barber" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Experiencia Full VIP Cris Barber</h3>
+              <p class="service-card-desc">Servicio de lujo completo: Corte Prémium + Ritual de Barba + Mascarilla Negra + Lavado Especial + Bebida.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$65.000 COP</span>
+                <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20Experiencia%20Full%20VIP." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Editorial)
+         ========================================================================== -->
+    <section class="about-team-section" id="nosotros">
+      <div class="container">
+        <!-- Bloque 1: Experiencia y Autoridad -->
+        <div class="experience-layout">
+          <div class="salon-image-showcase">
+            <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80" alt="Estaciones clásicas de corte con cuero y madera en Cris Barbershop" loading="lazy">
+            <div class="experience-floating-badge">
+              <strong>+8</strong>
+              <span>Años de Experiencia</span>
+            </div>
+          </div>
+
+          <div class="experience-text-content">
+            <span class="experience-eyebrow">Tradición &amp; Maestría</span>
+            <h2 class="experience-title">La Barbería para el Caballero Moderno</h2>
+            <p>En <strong>Cris Barbershop</strong> rescatamos el ritual clásico de la barbería tradicional combinándolo con las técnicas más avanzadas de corte y perfilado. Nuestro espacio está pensado para brindarte un momento de desconexión, comodidad y atención de primer nivel con insumos prémium y bioseguridad total.</p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <strong>+8</strong>
+                <span>Años de Trayectoria</span>
+              </div>
+              <div class="metric-item">
+                <strong>+10k</strong>
+                <span>Clientes Atendidos</span>
+              </div>
+              <div class="metric-item">
+                <strong>100%</strong>
+                <span>Bioseguridad Clínica</span>
+              </div>
+              <div class="metric-item">
+                <strong>4.9 ★</strong>
+                <span>Calificación Google</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-brands fa-whatsapp"></i> Hablar con un Barbero
             </a>
           </div>
         </div>
-        <img src="assets/images/haircut.png" alt="Corte de cabello masculino de alta precisión" class="service-card-img">
-      </article>
 
-      <!-- Card 2 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-user-ninja"></i>
+        <!-- Bloque 2: Equipo Editorial en 4 Columnas -->
+        <div class="section-header-center" style="margin-bottom: 45px;">
+          <span class="section-script-eyebrow">Nuestro Equipo</span>
+          <h2 class="section-title">Barberos Expertos</h2>
+          <p class="section-desc">Profesionales certificados con amplia trayectoria, especializados en visagismo masculino y acabados de precisión.</p>
+        </div>
+
+        <div class="team-grid">
+          <!-- Barbero 1 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Cris - Master Barber y Founder" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h3 class="team-name">Cris</h3>
+              <span class="team-role">Master Barber &amp; Founder</span>
+              <div class="team-stars">
+                ★★★★★ <span>(4.9)</span>
+              </div>
+              <a href="https://wa.me/573004567890?text=Hola%2C%20quisiera%20agendar%20mi%20turno%20con%20Cris." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 30 min</span>
+          </article>
+
+          <!-- Barbero 2 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Alex - Fade y Color Specialist" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h3 class="team-name">Alex</h3>
+              <span class="team-role">Fade &amp; Color Specialist</span>
+              <div class="team-stars">
+                ★★★★★ <span>(4.9)</span>
+              </div>
+              <a href="https://wa.me/573004567890?text=Hola%2C%20quisiera%20agendar%20mi%20turno%20con%20Alex." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Barbero 3 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="David - Beard y Shave Specialist" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h3 class="team-name">David</h3>
+              <span class="team-role">Beard &amp; Shave Specialist</span>
+              <div class="team-stars">
+                ★★★★★ <span>(4.9)</span>
+              </div>
+              <a href="https://wa.me/573004567890?text=Hola%2C%20quisiera%20agendar%20mi%20turno%20con%20David." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Barbero 4 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Daniel - Hair y Styling Expert" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h3 class="team-name">Daniel</h3>
+              <span class="team-role">Hair &amp; Styling Expert</span>
+              <div class="team-stars">
+                ★★★★★ <span>(4.9)</span>
+              </div>
+              <a href="https://wa.me/573004567890?text=Hola%2C%20quisiera%20agendar%20mi%20turno%20con%20Daniel." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN: UBICACIÓN & CONTACTO (#ubicacion)
+         ========================================================================== -->
+    <section class="location-section" id="ubicacion">
+      <div class="container">
+        <div class="map-showcase-card">
+          <div class="map-info-panel">
+            <span class="map-info-eyebrow">Encuéntranos en Apartadó</span>
+            <h2 class="map-info-title">Visita Nuestra Sede</h2>
+
+            <div class="contact-item-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-item-text">
+                <strong>Dirección Física</strong>
+                <p>Zona Comercial Principal, Apartadó, Antioquia, Colombia</p>
+              </div>
+            </div>
+
+            <div class="contact-item-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-clock"></i></div>
+              <div class="contact-item-text">
+                <strong>Horario de Atención</strong>
+                <p>Lunes a Sábado: 9:00 AM - 8:00 PM<br>Domingos: 10:00 AM - 4:00 PM</p>
+              </div>
+            </div>
+
+            <div class="contact-item-row">
+              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-item-text">
+                <strong>Teléfono &amp; WhatsApp</strong>
+                <p>(+57) 300 456 7890</p>
+              </div>
+            </div>
+
+            <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20solicitar%20indicaciones%20para%20llegar." target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 10px;">
+              <i class="fa-brands fa-whatsapp"></i> ¿Cómo Llegar?
+            </a>
           </div>
-          <h3>Diseño & Arreglo de Barba</h3>
-          <p>Perfilado a navaja libre, alineación de cuello y pómulos, toallas calientes al vapor y aceites hidratantes.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$20.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Dise%C3%B1o%20de%20Barba%20($20.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
+
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Cris+Barbershop,+Zona+Comercial+Principal,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de ubicación Cris Barbershop">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-title">CRIS <span>BARBERSHOP</span></span>
+          <p>Tu barbería de confianza en Apartadó para cortes fade de alta precisión, diseño de barba a navaja y grooming masculino de lujo.</p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/573004567890" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación &amp; Mapa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Servicios</h4>
+          <ul class="footer-links-list">
+            <li><a href="#servicios">Corte Fade / Clásico</a></li>
+            <li><a href="#servicios">Diseño de Barba</a></li>
+            <li><a href="#servicios">Combo VIP Cris</a></li>
+            <li><a href="#servicios">Afeitado Tradicional</a></li>
+            <li><a href="#servicios">Limpieza Facial</a></li>
+            <li><a href="#servicios">Experiencia Full VIP</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-reserve-card">
+            <h4>Reserva tu Turno</h4>
+            <p>Atención sin esperas y agendamiento ágil vía WhatsApp en Apartadó.</p>
+            <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20un%20turno." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fa-brands fa-whatsapp"></i> Agendar
             </a>
           </div>
         </div>
-        <img src="assets/images/beard.png" alt="Perfilado y cuidado de barba masculino" class="service-card-img">
-      </article>
-
-      <!-- Card 3 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-crown"></i>
-            </div>
-            <span class="badge-duration" style="background-color: var(--color-bronze-light); color: var(--color-bronze);"><i class="fa-solid fa-star"></i> MÁS PEDIDO (60 min)</span>
-          </div>
-          <h3>Combo VIP: Corte + Barba + Lavado</h3>
-          <p>El paquete preferido. Corte de cabello completo + perfilado de barba + lavado refrescante con masaje capilar.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$45.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Combo%20VIP%20Corte%20%2B%20Barba%20($45.000)" target="_blank" class="service-book-btn" style="color: var(--color-bronze);">
-              Agendar VIP <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <img src="assets/images/hero_man.png" alt="Combo VIP Corte y Barba en Cris Barbershop" class="service-card-img">
-      </article>
-
-      <!-- Card 4 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-wind"></i>
-            </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 35 min</span>
-          </div>
-          <h3>Afeitado Tradicional a Navaja</h3>
-          <p>Afeitado clásico al estilo tradicional con espuma al vapor, toallas herbales calientes y bálsamo reconstituyente.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$25.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Afeitado%20Tradicional%20($25.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <img src="assets/images/shave.png" alt="Afeitado tradicional a navaja al vapor" class="service-card-img">
-      </article>
-
-      <!-- Card 5 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-mask-face"></i>
-            </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 30 min</span>
-          </div>
-          <h3>Limpieza Facial + Mascarilla Negra</h3>
-          <p>Exfoliación facial profunda para remover impurezas y puntos negros, aplicación de Black Mask y tónico hidratante.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$25.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Limpieza%20Facial%20Black%20Mask%20($25.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-        <img src="assets/images/interior.png" alt="Limpieza facial masculina en Cris Barbershop" class="service-card-img">
-      </article>
-
-      <!-- Card 6 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-eye"></i>
-            </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 15 min</span>
-          </div>
-          <h3>Perfilado & Diseño de Cejas</h3>
-          <p>Limpieza y marcado de cejas masculinas respetando la expresión natural del rostro sin quitar masculinidad.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$10.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Perfilado%20de%20Cejas%20($10.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 7 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-child"></i>
-            </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 35 min</span>
-          </div>
-          <h3>Corte Infantil (Niños)</h3>
-          <p>Atención paciente y divertida para niños. Cortes modernos, degradados limpios y peinados atractivos.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$25.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Corte%20Infantil%20($25.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 8 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-spray-can"></i>
-            </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 40 min</span>
-          </div>
-          <h3>Pigmentación & Camuflaje de Canas</h3>
-          <p>Tinte sutil para barba o cabello. Devuelve el tono uniforme de forma natural sin verse artificial.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$35.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Pigmentaci%C3%B3n%20de%20Canas%20($35.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 9 -->
-      <article class="service-card-item">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon">
-              <i class="fa-solid fa-pump-soap"></i>
-            </div>
-            <span class="badge-duration"><i class="fa-solid fa-clock"></i> 30 min</span>
-          </div>
-          <h3>Tratamiento Capilar Anticaída</h3>
-          <p>Exfoliación profunda de cuero cabelludo, ampolleta fortalecedora anti-caída y masaje de estimulación.</p>
-          <div class="service-card-footer">
-            <div class="service-price">$35.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Tratamiento%20Capilar%20($35.000)" target="_blank" class="service-book-btn">
-              Agendar <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 10 -->
-      <article class="service-card-item" style="grid-column: span 1; border: 2px solid var(--color-bronze);">
-        <div class="service-card-header">
-          <div class="service-badge-row">
-            <div class="service-card-icon" style="background-color: var(--color-bronze); color: white;">
-              <i class="fa-solid fa-gem"></i>
-            </div>
-            <span class="badge-duration" style="background-color: var(--color-bronze); color: white;"><i class="fa-solid fa-crown"></i> EXPERIENCIA PREMIUM (75 min)</span>
-          </div>
-          <h3>Experiencia Full VIP Cris Barber</h3>
-          <p>Corte Premium + Ritual de Barba al vapor + Mascarilla Negra Facial + Lavado Masaje + Bebida de cortesía.</p>
-          <div class="service-card-footer">
-            <div class="service-price" style="font-size: 1.5rem;">$65.000 COP</div>
-            <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20Experiencia%20Full%20VIP%20Cris%20Barber%20($65.000)" target="_blank" class="btn btn-bronze" style="padding: 8px 16px; font-size: 13px;">
-              Agendar VIP <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- Dark Leather Barbershop Stats Banner (Reference Section) -->
-  <section class="section" style="padding-top: 0;">
-    <div class="dark-stats-banner">
-      <img src="assets/images/interior.png" alt="Interior de barbería de lujo Cris Barbershop" class="dark-stats-img">
-
-      <div>
-        <div class="stats-grid-4">
-          <div class="stat-item">
-            <h3>10K+</h3>
-            <p>Clientes Felices</p>
-          </div>
-          <div class="stat-item">
-            <h3>15+</h3>
-            <p>Barberos Expertos</p>
-          </div>
-          <div class="stat-item">
-            <h3>5+</h3>
-            <p>Años de Experiencia</p>
-          </div>
-          <div class="stat-item">
-            <h3>4.9/5</h3>
-            <p>Calificación</p>
-          </div>
-        </div>
-
-        <div class="dark-stats-info">
-          <span><i class="fa-solid fa-door-open"></i> Sin cita previa bienvenidos (Walk-Ins)</span>
-          <span><i class="fa-solid fa-phone"></i> Línea directa: +57 (300) 456-7890</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Barberos Section -->
-  <section class="section" id="barberos" style="background-color: white;">
-    <div class="section-header-flex">
-      <div>
-        <span class="section-tag">Nuestro Equipo</span>
-        <h2 class="section-title">Conoce a Nuestros Barberos Expertos</h2>
-      </div>
-      <a href="https://wa.me/573004567890?text=Quisiera%20agendar%20cita%20con%20un%20barbero%20espec%C3%ADfico" target="_blank" class="link-all">
-        Ver todos los barberos <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
-    <div class="barbers-grid">
-      <div class="barber-card">
-        <div class="barber-avatar">
-          <i class="fa-solid fa-user-tie"></i>
-        </div>
-        <h3>Cris</h3>
-        <span>Barbero Maestro & Fundador</span>
-        <div class="barber-socials">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
       </div>
 
-      <div class="barber-card">
-        <div class="barber-avatar">
-          <i class="fa-solid fa-scissors"></i>
-        </div>
-        <h3>Alex</h3>
-        <span>Especialista en Fades & Color</span>
-        <div class="barber-socials">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Cris Barbershop. Todos los derechos reservados.</span>
+        <span>Zona Comercial Principal, Apartadó, Antioquia, Colombia</span>
       </div>
-
-      <div class="barber-card">
-        <div class="barber-avatar">
-          <i class="fa-solid fa-user-ninja"></i>
-        </div>
-        <h3>David</h3>
-        <span>Especialista en Barba & Afeitado</span>
-        <div class="barber-socials">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-
-      <div class="barber-card">
-        <div class="barber-avatar">
-          <i class="fa-solid fa-spray-can"></i>
-        </div>
-        <h3>Daniel</h3>
-        <span>Experto en Peinado & Estilo</span>
-        <div class="barber-socials">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section class="section" id="productos">
-    <div class="section-header-flex">
-      <div>
-        <span class="section-tag">Nuestra Línea de Productos</span>
-        <h2 class="section-title">Productos Premium para el Cuidado Diario</h2>
-      </div>
-      <a href="https://wa.me/573004567890?text=Quisiera%20comprar%20productos%20para%20barba%20o%20cabello" target="_blank" class="link-all">
-        Ver catálogo de productos <i class="fa-solid fa-arrow-right"></i>
-      </a>
-    </div>
-
-    <div class="products-grid">
-      <div class="product-card">
-        <div class="product-icon">
-          <i class="fa-solid fa-jar"></i>
-        </div>
-        <h4>Cera Mate (Matte Clay)</h4>
-        <p>Fijación fuerte y acabado mate natural sin brillo</p>
-        <div class="product-price-row">
-          <span>$45.000 COP</span>
-          <span class="product-rating"><i class="fa-solid fa-star"></i> 4.8 (220)</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">
-          <i class="fa-solid fa-bottle-droplet"></i>
-        </div>
-        <h4>Aceite para Barba (Beard Oil)</h4>
-        <p>Nutrición orgánica y suavidad extrema</p>
-        <div class="product-price-row">
-          <span>$38.000 COP</span>
-          <span class="product-rating"><i class="fa-solid fa-star"></i> 4.9 (160)</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">
-          <i class="fa-solid fa-pump-soap"></i>
-        </div>
-        <h4>Champú Diario (Daily Shampoo)</h4>
-        <p>Champú diario fortalecedor con menta fresca</p>
-        <div class="product-price-row">
-          <span>$35.000 COP</span>
-          <span class="product-rating"><i class="fa-solid fa-star"></i> 4.7 (150)</span>
-        </div>
-      </div>
-
-      <div class="product-card">
-        <div class="product-icon">
-          <i class="fa-solid fa-shield-cat"></i>
-        </div>
-        <h4>Bálsamo Aftershave</h4>
-        <p>Bálsamo refrescante sin alcohol post-afeitado</p>
-        <div class="product-price-row">
-          <span>$36.000 COP</span>
-          <span class="product-rating"><i class="fa-solid fa-star"></i> 4.8 (130)</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing List Section -->
-  <section class="section" id="precios" style="background-color: white;">
-    <div class="pricing-section-container">
-      <div>
-        <span class="section-tag">Precios Transparentes</span>
-        <h2 class="section-title" style="margin-bottom: 24px;">Precios Claros y Transparentes</h2>
-        <div class="pricing-list">
-          <div class="pricing-item">
-            <div>
-              <h4>Corte de Cabello (Fade / Clásico)</h4>
-              <p>Corte de precisión a tijera o máquina, marcado a navaja y peinado (45 min).</p>
-            </div>
-            <div class="pricing-val">$30.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Diseño & Arreglo de Barba</h4>
-              <p>Perfilado, al vapor, toallas calientes y aceite fortalecedor (30 min).</p>
-            </div>
-            <div class="pricing-val">$20.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Combo VIP: Corte + Barba + Lavado</h4>
-              <p>Corte completo + barba + lavado especial con masaje capilar (60 min).</p>
-            </div>
-            <div class="pricing-val" style="color: var(--color-bronze);">$45.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Afeitado Tradicional a Navaja (Hot Towel)</h4>
-              <p>Afeitado clásico al vapor, navaja libre y bálsamo calmante (35 min).</p>
-            </div>
-            <div class="pricing-val">$25.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Limpieza Facial + Mascarilla Negra</h4>
-              <p>Exfoliación profunda para impurezas y puntos negros + Black Mask (30 min).</p>
-            </div>
-            <div class="pricing-val">$25.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Perfilado & Diseño de Cejas</h4>
-              <p>Limpieza y marcado de cejas masculinas a navaja (15 min).</p>
-            </div>
-            <div class="pricing-val">$10.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Corte Infantil (Niños)</h4>
-              <p>Corte moderno para niños en ambiente paciente y cómodo (35 min).</p>
-            </div>
-            <div class="pricing-val">$25.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Pigmentación & Camuflaje de Canas</h4>
-              <p>Tinte o pigmentación sutil para barba o cabello (40 min).</p>
-            </div>
-            <div class="pricing-val">$35.000</div>
-          </div>
-
-          <div class="pricing-item">
-            <div>
-              <h4>Tratamiento Capilar Anticaída</h4>
-              <p>Exfoliación capilar y ampolleta fortalecedora anti-caída (30 min).</p>
-            </div>
-            <div class="pricing-val">$35.000</div>
-          </div>
-
-          <div class="pricing-item" style="border-bottom: 2px solid var(--color-bronze); padding-bottom: 20px;">
-            <div>
-              <h4>Experiencia Full VIP Cris Barber <i class="fa-solid fa-crown" style="color: var(--color-bronze);"></i></h4>
-              <p>Corte + Barba + Mascarilla Negra + Lavado + Bebida cortesía (75 min).</p>
-            </div>
-            <div class="pricing-val" style="font-size: 1.4rem; color: var(--color-bronze);">$65.000</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="pricing-dark-card">
-        <img src="assets/images/haircut.png" alt="Tu confianza empieza aquí - Cris Barbershop">
-        <div class="pricing-dark-overlay">
-          <h3>Tu Confianza Empieza Aquí.</h3>
-          <p style="color: #d4d4d8; margin-top: 8px;">Agenda tu experiencia de cuidado personal en Cris Barbershop.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="section">
-    <div class="section-header-flex">
-      <div>
-        <span class="section-tag">Testimonios</span>
-        <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-      </div>
-    </div>
-
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <div class="testimonial-quote">“</div>
-        <p class="testimonial-text">
-          "La mejor experiencia de barbería que he tenido. La atención al detalle de Cris y el afeitado con toallas calientes son insuperables."
-        </p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">AP</div>
-          <div>
-            <strong>Alejandro Parra</strong>
-            <div style="color: #f59e0b; font-size: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-quote">“</div>
-        <p class="testimonial-text">"Servicio profesional, ambiente de primera y los cortes siempre quedan exactamente como los pides. 100% recomendado."</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">RM</div>
-          <div>
-            <strong>Ricardo Mendoza</strong>
-            <div style="color: #f59e0b; font-size: 12px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Banner Section -->
-  <div class="footer-banner">
-    <h2>¿Listo Para Tu Próximo Cambio de Look?</h2>
-    <p>Agenda tu cita hoy mismo y vive la experiencia Cris Barbershop.</p>
-    <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop,%20quiero%20agendar%20mi%20cita%20ahora" target="_blank" class="btn btn-bronze">
-      Agendar Cita por WhatsApp <i class="fa-solid fa-arrow-right"></i>
-    </a>
-  </div>
-
-  <!-- Footer Section -->
-  <footer class="footer" id="contacto">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <h2>Cris Barbershop</h2>
-        <p>Premium gentleman grooming. Artesanía en cortes de cabello, barba y estilo masculino.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#barberos">Nuestros Barberos</a></li>
-          <li><a href="#precios">Lista de Precios</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contacto Directo</h4>
-        <ul>
-          <li><a href="https://wa.me/573004567890" target="_blank"><i class="fa-brands fa-whatsapp"></i> +57 (300) 456-7890</a></li>
-          <li><a href="https://share.google/viX5ybxJGwEqL1fCr" target="_blank"><i class="fa-solid fa-location-dot"></i> Ver en Google Maps</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      &copy; 2026 Cris Barbershop. Todos los derechos reservados. | Prototipo WebApp Autónomo.
     </div>
   </footer>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop,%20quisiera%20agendar%20mi%20cita" target="_blank" class="whatsapp-float" title="Agendar por WhatsApp">
+  <!-- ==========================================================================
+       WHATSAPP FLOTANTE INTERACTIVO
+       ========================================================================== -->
+  <a href="https://wa.me/573004567890?text=Hola%20Cris%20Barbershop%2C%20quisiera%20agendar%20un%20turno." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
+  <!-- ==========================================================================
+       JAVASCRIPT AUTÓNOMO (Canvas Video Scrubbing, Smart Header & Auto-Scroll)
+       ========================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Motor de Video Scroll Scrubbing en Canvas HTML5
+      (function initCanvasScroll() {
+        const canvas = document.getElementById('scroll-video-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d', { alpha: false });
+        const posterImg = document.getElementById('canvas-poster-fallback');
+        const scrollSection = document.querySelector('.hero-scroll-section');
+
+        const TOTAL_FRAMES = 74; // Secuencia extraída a 18.5 fps (4.0s)
+        let isMobile = window.innerWidth < 768;
+        let framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+
+        if (posterImg) {
+          posterImg.src = `${framesFolder}/poster.webp`;
+        }
+
+        const getFrameUrl = (index) => {
+          const pad = String(index).padStart(4, '0');
+          return `${framesFolder}/frame-${pad}.webp`;
+        };
+
+        const images = [];
+        let loadedCount = 0;
+        let currentFrameIndex = 0;
+        let targetFrameIndex = 0;
+        let rafId = null;
+
+        function resizeCanvas() {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          canvas.width = window.innerWidth * dpr;
+          canvas.height = window.innerHeight * dpr;
+          renderFrame(currentFrameIndex);
+        }
+
+        function renderFrame(index) {
+          const img = images[index];
+          if (!img || !img.complete) return;
+
+          const cw = canvas.width;
+          const ch = canvas.height;
+          const iw = img.naturalWidth || img.width;
+          const ih = img.naturalHeight || img.height;
+
+          // Habilitar interpolación de alta fidelidad
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = 'high';
+
+          // Limpiar canvas con el color base oscuro
+          ctx.fillStyle = '#0f0f11';
+          ctx.fillRect(0, 0, cw, ch);
+
+          // Escala cover pura
+          const scale = Math.max(cw / iw, ch / ih);
+          const nw = iw * scale;
+          const nh = ih * scale;
+
+          const isMob = window.innerWidth < 768;
+          // Centrado inteligente: en escritorio se desplaza ligeramente para despejar el texto a la izquierda
+          let nx = (cw - nw) / 2;
+          if (!isMob && nw > cw) {
+            nx = Math.min(0, Math.max(cw - nw, nx + (cw * 0.04)));
+          }
+          const ny = (ch - nh) / 2;
+
+          ctx.drawImage(img, nx, ny, nw, nh);
+        }
+
+        function preloadImages() {
+          const loadPromises = [];
+
+          for (let i = 1; i <= TOTAL_FRAMES; i++) {
+            const p = new Promise((resolve) => {
+              const img = new Image();
+              img.src = getFrameUrl(i);
+              img.onload = () => {
+                loadedCount++;
+                if (loadedCount === 1) {
+                  currentFrameIndex = 0;
+                  renderFrame(0);
+                }
+                // Ocultar poster estático al cargar los primeros fotogramas
+                if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
+                  if (posterImg) {
+                    posterImg.classList.add('loaded');
+                    posterImg.style.display = 'none';
+                  }
+                }
+                resolve();
+              };
+              img.onerror = () => {
+                resolve();
+              };
+              images.push(img);
+            });
+            loadPromises.push(p);
+          }
+
+          Promise.all(loadPromises).then(() => {
+            if (posterImg) {
+              posterImg.classList.add('loaded');
+              posterImg.style.display = 'none';
+            }
+          });
+        }
+
+        function updateScrollProgress() {
+          if (!scrollSection) return;
+          const rect = scrollSection.getBoundingClientRect();
+          const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+          
+          if (scrollDistance <= 0) return;
+
+          // Progreso normalizado de 0 a 1
+          const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+          
+          targetFrameIndex = Math.min(
+            TOTAL_FRAMES - 1,
+            Math.floor(progress * TOTAL_FRAMES)
+          );
+
+          if (targetFrameIndex !== currentFrameIndex) {
+            currentFrameIndex = targetFrameIndex;
+            if (!rafId) {
+              rafId = requestAnimationFrame(() => {
+                renderFrame(currentFrameIndex);
+                rafId = null;
+              });
+            }
+          }
+
+          // Alternancia de los 2 pasos editoriales (50% / 50%)
+          const steps = document.querySelectorAll('.hero-scroll-step');
+          if (steps.length >= 2) {
+            const activeIndex = progress < 0.5 ? 0 : 1;
+            steps.forEach((step, idx) => {
+              step.classList.toggle('active', idx === activeIndex);
+            });
+          }
+        }
+
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+        window.addEventListener('resize', () => {
+          const mobCheck = window.innerWidth < 768;
+          if (mobCheck !== isMobile) {
+            isMobile = mobCheck;
+            framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+            images.forEach((img, idx) => {
+              img.src = getFrameUrl(idx + 1);
+            });
+          }
+          resizeCanvas();
+        }, { passive: true });
+
+        resizeCanvas();
+        preloadImages();
+      })();
+
+      // 2. Smart Header: Siempre visible en Hero; auto-hide en secciones inferiores al descender
+      let lastScrollY = window.pageYOffset;
+      const header = document.getElementById('stickyHeader');
+      const scrollSection = document.querySelector('.hero-scroll-section');
+
+      window.addEventListener('scroll', () => {
+        if (!header) return;
+        const currentScrollY = window.pageYOffset;
+        const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight) : 700;
+
+        // Dentro del Hero: permanece siempre visible
+        if (currentScrollY < heroBottom - 100) {
+          header.classList.remove('header-hidden');
+          header.classList.toggle('scrolled', currentScrollY > 40);
+        } else {
+          // Fuera del Hero: auto-hide al descender, reaparece al subir
+          header.classList.add('scrolled');
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 120) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        }
+        
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // 3. Smooth scroll para todos los enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId && targetId !== '#') {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              targetElement.scrollIntoView({
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+
+      // 4. Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
+      const pillarsGrid = document.querySelector('.pillars-grid');
+      if (pillarsGrid) {
+        let scrollInterval = null;
+        let isUserInteracting = false;
+        let resumeTimeout = null;
+
+        const getScrollStep = () => {
+          const firstCard = pillarsGrid.querySelector('.pillar-item');
+          return firstCard ? firstCard.offsetWidth + 12 : 220;
+        };
+
+        const autoScroll = () => {
+          if (window.innerWidth <= 768 && !isUserInteracting) {
+            const maxScrollLeft = pillarsGrid.scrollWidth - pillarsGrid.clientWidth;
+            const step = getScrollStep();
+            
+            if (pillarsGrid.scrollLeft >= maxScrollLeft - 10) {
+              pillarsGrid.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              pillarsGrid.scrollBy({ left: step, behavior: 'smooth' });
+            }
+          }
+        };
+
+        const startAutoScroll = () => {
+          if (!scrollInterval) {
+            scrollInterval = setInterval(autoScroll, 3000);
+          }
+        };
+
+        const stopAutoScroll = () => {
+          if (scrollInterval) {
+            clearInterval(scrollInterval);
+            scrollInterval = null;
+          }
+        };
+
+        const handleInteraction = () => {
+          isUserInteracting = true;
+          stopAutoScroll();
+          clearTimeout(resumeTimeout);
+          resumeTimeout = setTimeout(() => {
+            isUserInteracting = false;
+            startAutoScroll();
+          }, 4000);
+        };
+
+        pillarsGrid.addEventListener('touchstart', handleInteraction, { passive: true });
+        pillarsGrid.addEventListener('touchmove', handleInteraction, { passive: true });
+        pillarsGrid.addEventListener('scroll', () => {
+          if (!isUserInteracting) {
+            clearTimeout(resumeTimeout);
+            resumeTimeout = setTimeout(() => {
+              isUserInteracting = false;
+            }, 1000);
+          }
+        }, { passive: true });
+
+        startAutoScroll();
+      }
+    });
+  </script>
 </body>
 </html>

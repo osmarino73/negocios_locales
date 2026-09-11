@@ -11,7 +11,7 @@
   <meta property="og:title" content="Luciana Nails | Centro de Estética en Apartadó">
   <meta property="og:description" content="Arte, elegancia y cuidado en tus uñas. Agenda tu cita en Apartadó.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:image" content="public/frames/desktop/poster.webp">
 
   <!-- Schema.org JSON-LD para SEO Local -->
   <script type="application/ld+json">
@@ -126,19 +126,19 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      background-color: var(--bg-dark-base);
-    }
-
-    body {
-      font-family: var(--font-body);
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip; /* Previene scroll horizontal SIN romper position: sticky */
+      overflow-y: visible;
       background-color: var(--bg-dark-base);
       color: var(--text-dark-primary);
+      font-family: var(--font-body);
       line-height: 1.6;
-      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     a {
@@ -173,6 +173,7 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-dark);
+      padding-top: env(safe-area-inset-top, 0px);
       transition: transform 0.35s ease, background-color 0.35s ease;
     }
 
@@ -194,11 +195,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .brand-icon {
-      color: var(--color-gold);
-      font-size: 1.35rem;
     }
 
     .brand-title {
@@ -282,99 +278,145 @@
     }
 
     /* ==========================================================================
-       HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+       HERO SECTION: CANVAS VIDEO SCROLL SCRUBBING (300VH)
        ========================================================================== */
-    .hero-section {
+    .hero-scroll-section {
       position: relative;
+      height: 300vh; /* Duración óptima para los 2 capítulos editoriales */
+      width: 100%;
       background-color: var(--bg-dark-base);
-      overflow: hidden;
     }
 
-    .hero-fullwidth-section {
-      position: relative;
-      min-height: 640px;
+    .canvas-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
-    .hero-bg-cover {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 65%;
-      height: 100%;
-      z-index: 1;
-      overflow: hidden;
-    }
-
-    .hero-bg-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 18%, rgba(0,0,0,1) 45%);
-      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 18%, rgba(0,0,0,1) 45%);
-    }
-
-    .hero-bg-overlay {
+    #scroll-video-canvas {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 2;
-      background: linear-gradient(90deg, #0e0d0d 0%, #0e0d0d 36%, rgba(14, 13, 13, 0.75) 55%, rgba(14, 13, 13, 0) 100%);
-      pointer-events: none;
+      object-fit: cover;
+      z-index: 1;
+      image-rendering: -webkit-optimize-contrast;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 3;
+    .canvas-poster-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      padding: 85px 0 65px;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      transition: opacity 0.35s ease;
     }
 
-    .hero-text-block {
+    .canvas-poster-img.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Cero filtros opacos globales para 100% nitidez óptica del video */
+
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Asimétrico a la izquierda para despejar las manos */
+      padding-top: 50px;
+    }
+
+    .hero-scroll-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
       max-width: 580px;
+      min-height: 420px;
     }
 
-    .hero-tag {
+    .hero-scroll-step {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) translateY(16px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scroll-step.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(-50%) translateY(0);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      color: var(--color-gold);
+      margin-bottom: 4px;
       display: inline-block;
-      font-size: 0.75rem;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
       font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 2.5px;
       color: var(--color-gold-light);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
       font-weight: 700;
       line-height: 1.08;
       letter-spacing: 1px;
       color: var(--text-dark-primary);
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9);
     }
 
-    .hero-title-script {
-      font-family: var(--font-script);
-      font-size: clamp(3.2rem, 6vw, 4.8rem);
+    .hero-title em {
       color: var(--color-gold);
-      display: block;
+      font-style: italic;
       font-weight: 400;
-      line-height: 0.9;
-      margin: 4px 0 12px;
-      text-transform: none;
-      letter-spacing: 0;
     }
 
-    .hero-description {
-      font-size: 1rem;
+    .step-1 .hero-title {
+      margin-bottom: 26px; /* Espaciado equilibrado sin párrafo */
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
       color: var(--text-dark-secondary);
       line-height: 1.6;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-actions {
@@ -382,6 +424,7 @@
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 22px;
     }
 
     .btn-primary {
@@ -431,6 +474,31 @@
       border-color: var(--color-gold);
       color: var(--color-gold);
       transform: translateY(-3px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(22, 20, 20, 0.75);
+      border: 1px solid var(--border-dark);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .hero-proof-stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    .hero-proof-text {
+      font-size: 0.76rem;
+      color: var(--text-dark-secondary);
+      font-weight: 600;
+      letter-spacing: 0.4px;
     }
 
     /* ==========================================================================
@@ -492,11 +560,13 @@
     }
 
     /* ==========================================================================
-       SECCIÓN: NUESTROS SERVICIOS (#servicios - Fondo Claro Contrastante)
+       SECCIÓN: NUESTROS SERVICIOS (#servicios — Grid 3 Columnas Full-Bleed)
        ========================================================================== */
     .services-section {
-      padding: 90px 0;
-      background-color: var(--bg-light-base);
+      padding: 95px 0;
+      background-color: var(--bg-dark-surface);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
     }
 
     .section-header-center {
@@ -511,7 +581,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--color-gold-dark);
+      color: var(--color-gold-light);
       margin-bottom: 8px;
     }
 
@@ -525,7 +595,7 @@
     }
 
     .section-title-light {
-      color: var(--text-light-primary);
+      color: var(--text-dark-primary);
     }
 
     .section-title-dark {
@@ -538,7 +608,7 @@
     }
 
     .section-desc-light {
-      color: var(--text-light-secondary);
+      color: var(--text-dark-secondary);
     }
 
     .section-desc-dark {
@@ -547,127 +617,160 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
     }
 
     .service-card {
-      background: var(--bg-light-surface);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius-md);
+      position: relative;
+      aspect-ratio: 3 / 4;
+      min-height: 440px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
+      background-color: var(--bg-dark-base);
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-dark-md);
       display: flex;
       flex-direction: column;
-      box-shadow: var(--shadow-sm);
+      justify-content: flex-end;
+      padding: 24px 22px;
       transition: var(--transition);
     }
 
     .service-card:hover {
       transform: translateY(-6px);
-      box-shadow: var(--shadow-md);
       border-color: var(--color-gold);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(197, 160, 89, 0.2);
     }
 
-    .service-img-wrapper {
-      position: relative;
-      width: 100%;
-      height: 155px;
-      overflow: hidden;
-      background: #eee8e0;
-    }
-
-    .service-img-wrapper img {
+    .service-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s ease;
+      object-position: center center;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
     }
 
-    .service-card:hover .service-img-wrapper img {
-      transform: scale(1.08);
+    .service-card:hover .service-card-img {
+      transform: scale(1.06);
     }
 
-    .service-body {
-      padding: 16px 10px 14px;
+    /* Degradado aterciopelado: 38% superior 100% transparente para lucir la manicura */
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(14, 13, 13, 0) 0%, 
+        rgba(14, 13, 13, 0) 38%, 
+        rgba(14, 13, 13, 0.75) 66%, 
+        rgba(14, 13, 13, 0.98) 94%, 
+        #0e0d0d 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .service-card-content {
+      position: relative;
+      z-index: 3;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-      text-align: center;
-      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
     }
 
-    .service-title {
-      font-family: var(--font-serif);
-      font-size: 0.96rem;
-      font-weight: 700;
-      color: var(--text-light-primary);
+    .service-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background: var(--color-gold);
+      margin-bottom: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .service-card:hover .service-card-accent-line {
+      width: 54px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-dark-primary);
       margin-bottom: 6px;
-      line-height: 1.25;
-      min-height: 2.5em;
+      line-height: 1.15;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.45;
+      margin-bottom: 14px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-    .service-desc {
-      display: none;
-    }
-
-    .service-badges-wrap {
+    .service-card-footer {
       display: flex;
-      flex-direction: column;
-      gap: 5px;
       align-items: center;
-      margin-bottom: 12px;
-    }
-
-    .service-badge-pill {
-      background: #eee8e0;
-      border: 1px solid rgba(22, 20, 20, 0.06);
-      color: var(--text-light-primary);
-      font-size: 0.68rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      white-space: nowrap;
-    }
-
-    .service-badge-pill i {
-      color: var(--color-gold-dark);
-      font-size: 0.65rem;
-    }
-
-    .btn-card-book {
-      margin-top: auto;
-      background: #161414;
-      color: #ffffff;
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      padding: 8px 10px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      justify-content: space-between;
       width: 100%;
-      transition: var(--transition);
-      touch-action: manipulation;
-      white-space: nowrap;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .btn-card-book:hover {
-      background: var(--color-gold-dark);
-      color: #ffffff;
+    .service-card-price {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--color-gold);
+    }
+
+    /* Enlace minimalista AGENDAR ➔ */
+    .btn-card-book-minimal {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      border: none;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      cursor: pointer;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-card-book-minimal i {
+      font-size: 0.74rem;
+      color: var(--color-gold);
+      transition: transform 0.25s ease;
+    }
+
+    .btn-card-book-minimal:hover {
+      color: var(--color-gold);
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(4px);
     }
 
     /* ==========================================================================
-       SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Crismar)
+       SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Editorial)
        ========================================================================== */
     .about-team-section {
       padding: 95px 0;
@@ -684,7 +787,7 @@
 
     .salon-image-showcase {
       position: relative;
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-dark-md);
       border: 1px solid var(--border-dark);
@@ -772,66 +875,100 @@
       letter-spacing: 0.5px;
     }
 
+    /* EQUIPO: RETRATO EDITORIAL (4 COLUMNAS DESKTOP — 3:4.2) */
     .team-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      max-width: 1100px;
+      gap: 24px;
+      max-width: 1180px;
       margin: 0 auto;
     }
 
     .team-card {
-      background: var(--bg-dark-surface);
+      position: relative;
+      aspect-ratio: 3 / 4.2;
+      min-height: 410px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--bg-dark-surface);
       border: 1px solid var(--border-dark);
-      border-radius: var(--radius-md);
-      padding: 26px 14px 20px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-dark-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 22px 18px;
       transition: var(--transition);
     }
 
     .team-card:hover {
       transform: translateY(-6px);
       border-color: var(--color-gold);
-      box-shadow: var(--shadow-gold);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 25px rgba(197, 160, 89, 0.2);
     }
 
-    .team-photo-box {
-      position: relative;
-      width: 105px;
-      height: 105px;
-      margin: 0 auto 14px;
-    }
-
-    .team-avatar {
+    .team-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
-      border: 3px solid var(--color-gold);
-      box-shadow: 0 6px 18px rgba(197, 160, 89, 0.25);
+      object-position: center 20%;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
     }
 
-    .team-badge {
+    .team-card:hover .team-card-img {
+      transform: scale(1.05);
+    }
+
+    .team-card-overlay {
       position: absolute;
-      bottom: 0;
-      right: 0;
-      background: var(--gold-gradient);
-      color: var(--text-dark-title);
-      font-size: 9px;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: var(--radius-pill);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(14, 13, 13, 0) 0%, 
+        rgba(14, 13, 13, 0) 42%, 
+        rgba(14, 13, 13, 0.76) 70%, 
+        rgba(14, 13, 13, 0.98) 94%, 
+        #0e0d0d 100%
+      );
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .team-card-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .team-card-accent-line {
+      width: 28px;
+      height: 2px;
+      background: var(--color-gold);
+      margin-bottom: 8px;
+      transition: width 0.3s ease;
+    }
+
+    .team-card:hover .team-card-accent-line {
+      width: 48px;
     }
 
     .team-name {
-      font-family: var(--font-serif);
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      font-weight: 600;
       color: var(--text-dark-primary);
       margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .team-role {
@@ -839,65 +976,44 @@
       font-weight: 600;
       color: var(--color-gold-light);
       display: block;
-      margin-bottom: 8px;
-      min-height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1.2;
+      margin-bottom: 6px;
+      min-height: 2.2em;
+      line-height: 1.25;
     }
 
     .team-rating {
-      font-size: 0.76rem;
+      font-size: 0.78rem;
       color: #f7ba2a;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 4px;
     }
 
-    .btn-team-book {
-      background: rgba(197, 160, 89, 0.12);
-      border: 1px solid var(--border-dark);
-      color: var(--text-dark-primary);
-      font-size: 0.74rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      padding: 9px 12px;
-      border-radius: var(--radius-pill);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+    .team-card-footer {
       width: 100%;
-      transition: var(--transition);
-      touch-action: manipulation;
-    }
-
-    .btn-team-book:hover {
-      background: var(--gold-gradient);
-      color: var(--text-dark-title);
-      border-color: transparent;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     /* ==========================================================================
        SECCIÓN: UBICACIÓN & CONTACTO (#ubicacion)
        ========================================================================== */
     .location-section {
-      padding: 90px 0;
-      background-color: var(--bg-light-base);
+      padding: 95px 0;
+      background-color: var(--bg-dark-base);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
     }
 
     .map-showcase-card {
-      background: var(--bg-light-surface);
+      background: var(--bg-dark-surface);
       border-radius: var(--radius-lg);
-      border: 1px solid var(--border-light);
+      border: 1px solid var(--border-dark);
       overflow: hidden;
       display: grid;
       grid-template-columns: 1fr 1.3fr;
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-dark-md);
     }
 
     .map-info-panel {
@@ -910,13 +1026,13 @@
     .location-header h3 {
       font-family: var(--font-display);
       font-size: 1.85rem;
-      color: var(--text-light-primary);
+      color: var(--text-dark-primary);
       margin-bottom: 6px;
     }
 
     .location-header p {
       font-size: 0.88rem;
-      color: var(--text-light-secondary);
+      color: var(--color-gold-light);
       margin-bottom: 24px;
     }
 
@@ -937,12 +1053,12 @@
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      background: #eee8e0;
-      border: 1px solid rgba(22, 20, 20, 0.06);
+      background: var(--bg-dark-elevated);
+      border: 1px solid var(--border-dark);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--color-gold-dark);
+      color: var(--color-gold);
       font-size: 0.95rem;
       flex-shrink: 0;
     }
@@ -950,19 +1066,20 @@
     .info-text strong {
       display: block;
       font-size: 0.86rem;
-      color: var(--text-light-primary);
+      color: var(--text-dark-primary);
       margin-bottom: 2px;
     }
 
     .info-text span {
       font-size: 0.82rem;
-      color: var(--text-light-secondary);
+      color: var(--text-dark-secondary);
     }
 
     .map-frame-wrapper {
       position: relative;
       width: 100%;
       min-height: 400px;
+      border-left: 1px solid var(--border-dark);
     }
 
     .map-frame-wrapper iframe {
@@ -1116,8 +1233,8 @@
        ========================================================================== */
     .whatsapp-float {
       position: fixed;
-      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
-      right: 20px;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
       width: 56px;
       height: 56px;
       background: #25d366;
@@ -1132,7 +1249,6 @@
       z-index: 999999;
       transform: translate3d(0, 0, 0);
       -webkit-transform: translate3d(0, 0, 0);
-      overflow: hidden;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       touch-action: manipulation;
     }
@@ -1154,74 +1270,117 @@
        RESPONSIVE DESIGN (< 768px - MÓVIL OPTIMIZADO)
        ========================================================================== */
     @media (max-width: 768px) {
+      .header-sticky-wrapper {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+
+      .site-header {
+        padding: 12px 0;
+      }
+
+      .nav-container {
+        min-height: 52px;
+        padding-left: max(16px, env(safe-area-inset-left, 16px));
+        padding-right: max(16px, env(safe-area-inset-right, 16px));
+      }
+
+      .brand-title {
+        font-size: 1.24rem;
+        line-height: 1.1;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-tagline {
+        font-size: 0.58rem;
+        line-height: 1.2;
+        letter-spacing: 0.16em;
+        margin-top: 2px;
+        white-space: nowrap;
+      }
+
       .main-nav {
         display: none;
       }
 
       .btn-header-cta {
-        padding: 7px 15px;
-        font-size: 0.74rem;
+        padding: 8px 16px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+        flex-shrink: 0;
       }
 
-      /* Hero Móvil Calibrado a 720px !important */
-      .hero-fullwidth-section {
-        min-height: 720px !important;
-        display: flex;
+      /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      .canvas-sticky-wrapper {
         align-items: flex-end;
         justify-content: center;
-        padding: 130px 16px 36px;
       }
 
-      .hero-bg-cover {
-        width: 100%;
+      .hero-container-align {
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 36px;
       }
 
-      .hero-bg-img {
-        opacity: 0.92;
-        -webkit-mask-image: none;
-        mask-image: none;
-      }
-
-      .hero-bg-overlay {
-        background: linear-gradient(180deg, rgba(14, 13, 13, 0.05) 0%, rgba(14, 13, 13, 0.15) 30%, rgba(14, 13, 13, 0.88) 65%, #0e0d0d 100%);
-      }
-
-      .hero-content {
-        padding: 0;
-      }
-
-      .hero-text-block {
+      .hero-scroll-content {
+        max-width: 360px;
+        min-height: 360px;
         text-align: center;
-        margin: 0 auto;
-        max-width: 380px;
+      }
+
+      .hero-scroll-step {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-script-tag {
+        font-size: 2.2rem;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
       }
 
       .hero-title {
-        font-size: 2.1rem;
+        font-size: 1.85rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
       }
 
-      .hero-title-script {
-        font-size: 3rem;
+      .step-1 .hero-title {
+        margin-bottom: 18px;
       }
 
-      .hero-description {
-        font-size: 0.88rem;
-        margin-bottom: 22px;
+      .hero-desc {
+        font-size: 0.84rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        text-align: center;
       }
 
       .hero-actions {
         flex-direction: column;
         align-items: center;
+        width: 100%;
         gap: 10px;
+        margin-bottom: 14px;
       }
 
       .btn-primary,
       .btn-secondary {
         width: 100%;
-        max-width: 280px;
+        max-width: 275px;
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.82rem;
+      }
+
+      .hero-proof-badge {
+        padding: 5px 12px;
+      }
+
+      .hero-proof-text {
+        font-size: 0.7rem;
       }
 
       /* Barra de Pilares Carrusel Horizontal Deslizable en Móvil */
@@ -1270,73 +1429,101 @@
         white-space: nowrap;
       }
 
-      /* Servicios y Equipo en 2 Columnas en Móvil (<768px) */
-      .services-grid,
-      .team-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
+      /* Servicios en 2 Columnas Balanceadas en Móvil (<768px) */
+      .services-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        column-gap: 16px !important;
+        row-gap: 20px !important;
+        width: 100% !important;
       }
 
-      .service-body,
-      .team-card {
-        padding: 14px 10px 12px;
+      .service-card {
+        aspect-ratio: 3 / 4.4;
+        min-height: 0 !important;
+        height: auto !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 10px;
+        border-radius: 16px;
+        border: 1px solid rgba(197, 160, 89, 0.35);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8), 0 0 12px rgba(197, 160, 89, 0.1);
       }
 
-      .service-img-wrapper {
-        height: 120px;
+      .service-card-content {
+        min-width: 0;
+        width: 100%;
       }
 
-      .service-title,
-      .team-name {
-        font-size: 0.95rem;
-        line-height: 1.2;
+      .service-card-accent-line {
+        width: 22px;
+        margin-bottom: 6px;
       }
 
-      .service-desc {
+      .service-card-title {
+        font-size: 0.93rem;
+        line-height: 1.15;
+        margin-bottom: 6px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .service-card-desc {
         display: none;
       }
 
-      .service-badge-pill {
-        font-size: 0.65rem;
-        padding: 2px 7px;
+      .service-card-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
       }
 
-      .btn-card-book,
-      .btn-team-book {
-        width: 100%;
-        justify-content: center;
+      .service-card-price {
+        font-size: 1rem;
+      }
+
+      .btn-card-book-minimal {
         font-size: 0.72rem;
-        padding: 7px 8px;
-        white-space: nowrap;
       }
 
-      .team-photo-box {
-        width: 100%;
-        max-width: 84px;
-        aspect-ratio: 1 / 1;
-        height: auto;
-        margin: 0 auto 8px;
+      /* Equipo: Carrusel Horizontal Deslizable (Scroll Snap) en Móvil con Efecto Peek */
+      .team-grid {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 16px !important;
+        margin: 0 -16px !important;
+        width: calc(100% + 32px) !important;
+        padding: 8px 16px 20px !important;
       }
 
-      .team-avatar {
-        width: 100%;
-        height: 100%;
+      .team-grid::-webkit-scrollbar {
+        display: none;
       }
 
-      .team-badge {
-        display: none !important;
+      .team-card {
+        flex: 0 0 255px !important;
+        aspect-ratio: 3 / 4.2 !important;
+        min-height: 0 !important;
+        scroll-snap-align: start;
+        padding: 18px 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(197, 160, 89, 0.35);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8);
+      }
+
+      .team-name {
+        font-size: 1.12rem;
       }
 
       .team-role {
-        font-size: 0.7rem;
-        min-height: 2.4em;
-        line-height: 1.2;
-        margin-bottom: 4px;
-      }
-
-      .team-rating {
         font-size: 0.72rem;
-        margin-bottom: 8px;
       }
 
       /* Sobre Nosotros en Móvil */
@@ -1389,7 +1576,8 @@
       .map-frame-wrapper {
         min-height: 320px;
         height: 320px;
-        border-top: 1px solid var(--border-light);
+        border-top: 1px solid var(--border-dark);
+        border-left: none;
       }
 
       .footer-grid {
@@ -1397,14 +1585,14 @@
         gap: 30px;
       }
 
+      /* WhatsApp Móvil Anti-Corte y Safe Area */
       .whatsapp-float {
-        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
-        right: 18px !important;
-        width: 54px !important;
-        height: 54px !important;
-        font-size: 1.8rem !important;
+        bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+        right: max(20px, env(safe-area-inset-right, 20px)) !important;
+        width: 56px !important;
+        height: 56px !important;
+        font-size: 1.9rem !important;
         z-index: 999999 !important;
-        overflow: hidden !important;
       }
     }
   </style>
@@ -1440,32 +1628,55 @@
 
   <main>
     <!-- ==========================================================================
-         HERO FULL-WIDTH BLEED INMERSIVO (#inicio)
+         HERO SECTION: CANVAS VIDEO SCROLL SCRUBBING (300VH)
          ========================================================================== -->
-    <section class="hero-section" id="inicio">
-      <div class="hero-fullwidth-section">
-        <div class="hero-bg-cover">
-          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1920&q=85" alt="Uñas de arte y manicura en Luciana Nails Apartadó" class="hero-bg-img" loading="eager">
-        </div>
-        <div class="hero-bg-overlay"></div>
+    <section class="hero-scroll-section" id="inicio">
+      <div class="canvas-sticky-wrapper">
+        <!-- Canvas que reproduce la secuencia de fotogramas sincronizados -->
+        <canvas id="scroll-video-canvas"></canvas>
 
-        <div class="container">
-          <div class="hero-content">
-            <div class="hero-text-block">
-              <span class="hero-tag">✦ Centro de Estética & Manicura en Apartadó</span>
-              <h1 class="hero-title">
-                Art Manicure
-                <span class="hero-title-script">Nail Fashion & Beauty</span>
-              </h1>
-              <p class="hero-description">
-                Luce unas uñas impecables, resistentes y con acabados de alta definición en Apartadó. Especialistas en esmaltado semipermanente, extensiones acrílicas, pedicura spa y nail art exclusivo.
-              </p>
+        <!-- Poster estático de reserva contra flashes negros -->
+        <img 
+          id="canvas-poster-fallback" 
+          src="public/frames/desktop/poster.webp" 
+          alt="Manicura y Nail Art exclusivo en Luciana Nails Apartadó" 
+          class="canvas-poster-img"
+        />
+
+        <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
+        <div class="container hero-container-align">
+          <div class="hero-scroll-content">
+            <!-- Paso 1 (0% a 50%): Gran Titular Principal sin párrafo para despejar el video -->
+            <div class="hero-scroll-step step-1 active">
+              <span class="hero-script-tag">Nail Fashion &amp; Beauty</span>
+              <span class="hero-eyebrow">CENTRO DE ESTÉTICA &amp; MANICURA · APARTADÓ</span>
+              <h1 class="hero-title">UÑAS DE IMPACTO.<br><em>ELEGANCIA QUE PERDURA.</em></h1>
               <div class="hero-actions">
                 <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20manicura." target="_blank" rel="noopener noreferrer" class="btn-primary">
                   <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
                 <a href="#servicios" class="btn-secondary">
                   <i class="fa-solid fa-sparkles"></i> Ver Servicios
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó, Antioquia</span>
+              </div>
+            </div>
+
+            <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con descripción completa -->
+            <div class="hero-scroll-step step-2">
+              <span class="hero-script-tag">Brillo Intacto por Semanas</span>
+              <span class="hero-eyebrow">TÉCNICA &amp; PERFECCIÓN</span>
+              <h2 class="hero-title">MANOS RADIANTES.<br><em>DISEÑOS MODERNOS.</em></h2>
+              <p class="hero-desc">Luce uñas impecables, resistentes y con acabados de alta definición en Apartadó. Especialistas en esmaltado semipermanente, extensiones acrílicas, pedicura spa y nail art de lujo con bioseguridad clínica.</p>
+              <div class="hero-actions">
+                <a href="#servicios" class="btn-primary">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> Conocer Servicios
+                </a>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fa-brands fa-whatsapp"></i> Consultar Horarios
                 </a>
               </div>
             </div>
@@ -1520,116 +1731,116 @@
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN: SERVICIOS (#servicios — Grid 6 Columnas)
+         SECCIÓN: SERVICIOS (#servicios — Grid 3 Columnas Full-Bleed Minimalista)
          ========================================================================== -->
     <section class="services-section" id="servicios">
       <div class="container">
         <div class="section-header-center">
           <span class="section-script-eyebrow">Nuestra Carta de Servicios</span>
-          <h2 class="section-title section-title-light">Servicios Populares</h2>
-          <p class="section-desc section-desc-light">Procedimientos exclusivos con técnicas avanzadas de esculpido, cuidado y esmaltado de alta duración.</p>
+          <h2 class="section-title section-title-light">Servicios Exclusivos</h2>
+          <p class="section-desc section-desc-light">Procedimientos prémium con técnicas avanzadas de esculpido, cuidado y esmaltado de alta duración.</p>
         </div>
 
         <div class="services-grid">
           <!-- Servicio 1 -->
           <article class="service-card">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Art Manicure & Foil Dorado en Apartadó" loading="lazy">
-            </div>
-            <div class="service-body">
-              <h3 class="service-title">Art Manicure</h3>
-              <div class="service-badges-wrap">
-                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
-                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $50.000 COP</span>
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Art Manicure & Foil Dorado en Luciana Nails Apartadó" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Art Manicure &amp; Foil</h3>
+              <p class="service-card-desc">Técnica exclusiva de esmaltado con acabado foil dorado y sellado de alta resistencia.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$50.000 COP</span>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20Art%20Manicure%20%26%20Foil." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-              <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20Art%20Manicure." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                <i class="fa-brands fa-whatsapp"></i> Agendar
-              </a>
             </div>
           </article>
 
           <!-- Servicio 2 -->
           <article class="service-card">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Semipermanente Glow en Apartadó" loading="lazy">
-            </div>
-            <div class="service-body">
-              <h3 class="service-title">Semipermanente</h3>
-              <div class="service-badges-wrap">
-                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
-                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $45.000 COP</span>
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Semipermanente Glow en Luciana Nails Apartadó" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Semipermanente Glow</h3>
+              <p class="service-card-desc">Brillo impecable e intacto durante 21 días con esmaltes de marcas líderes internacionales.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$45.000 COP</span>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20Semipermanente%20Glow." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-              <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20Semipermanente." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                <i class="fa-brands fa-whatsapp"></i> Agendar
-              </a>
             </div>
           </article>
 
           <!-- Servicio 3 -->
           <article class="service-card">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas en Apartadó" loading="lazy">
-            </div>
-            <div class="service-body">
-              <h3 class="service-title">Uñas Acrílicas</h3>
-              <div class="service-badges-wrap">
-                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 90 Mins</span>
-                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> Desde $85K</span>
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas en Luciana Nails Apartadó" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Uñas Acrílicas</h3>
+              <p class="service-card-desc">Esculpido profesional con estructura resistente, longitud personalizada y acabado natural.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$85.000 COP</span>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20U%C3%B1as%20Acr%C3%ADlicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-              <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20U%C3%B1as%20Acr%C3%ADlicas." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                <i class="fa-brands fa-whatsapp"></i> Agendar
-              </a>
             </div>
           </article>
 
           <!-- Servicio 4 -->
           <article class="service-card">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art y Diseños en Apartadó" loading="lazy">
-            </div>
-            <div class="service-body">
-              <h3 class="service-title">Nail Art HD</h3>
-              <div class="service-badges-wrap">
-                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 45 Mins</span>
-                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> Desde $25K</span>
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art y Diseños en Luciana Nails Apartadó" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Nail Art &amp; Diseños</h3>
+              <p class="service-card-desc">Diseños a mano alzada, pedrería fina, efectos encapsulados y las últimas tendencias globales.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$25.000 COP</span>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20Nail%20Art." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-              <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20Nail%20Art." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                <i class="fa-brands fa-whatsapp"></i> Agendar
-              </a>
             </div>
           </article>
 
           <!-- Servicio 5 -->
           <article class="service-card">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa y Relax en Apartadó" loading="lazy">
-            </div>
-            <div class="service-body">
-              <h3 class="service-title">Pedicura Spa</h3>
-              <div class="service-badges-wrap">
-                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
-                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $40.000 COP</span>
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa y Relax en Luciana Nails Apartadó" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Pedicura Spa</h3>
+              <p class="service-card-desc">Ritual de exfoliación botánica, masaje relajante, hidratación intensiva y esmaltado impecable.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$40.000 COP</span>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20Pedicura%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-              <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20Pedicura%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                <i class="fa-brands fa-whatsapp"></i> Agendar
-              </a>
             </div>
           </article>
 
           <!-- Servicio 6 -->
           <article class="service-card">
-            <div class="service-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping & Nivelación Gel en Apartadó" loading="lazy">
-            </div>
-            <div class="service-body">
-              <h3 class="service-title">Kapping Gel</h3>
-              <div class="service-badges-wrap">
-                <span class="service-badge-pill"><i class="fa-regular fa-clock"></i> 60 Mins</span>
-                <span class="service-badge-pill"><i class="fa-solid fa-tag"></i> $55.000 COP</span>
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping y Gel Nivelador en Luciana Nails Apartadó" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <div class="service-card-accent-line"></div>
+              <h3 class="service-card-title">Kapping &amp; Gel Nivelador</h3>
+              <p class="service-card-desc">Capa protectora que refuerza la uña natural, previene roturas y estimula su crecimiento fuerte.</p>
+              <div class="service-card-footer">
+                <span class="service-card-price">$55.000 COP</span>
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20Kapping%20Gel." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
               </div>
-              <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20Kapping%20Gel." target="_blank" rel="noopener noreferrer" class="btn-card-book">
-                <i class="fa-brands fa-whatsapp"></i> Agendar
-              </a>
             </div>
           </article>
         </div>
@@ -1637,14 +1848,14 @@
     </section>
 
     <!-- ==========================================================================
-         SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Crismar)
+         SECCIÓN: SOBRE NOSOTROS & ESPECIALISTAS (#nosotros — Estándar Editorial)
          ========================================================================== -->
     <section class="about-team-section" id="nosotros">
       <div class="container">
         <!-- Bloque 1: Experiencia y Autoridad -->
         <div class="experience-layout">
           <div class="salon-image-showcase">
-            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Instalaciones y Manicura Luciana Nails Apartadó" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80" alt="Ambiente y mesas de manicura en Luciana Nails Apartadó" loading="lazy">
             <div class="experience-floating-badge">
               <strong>VIP</strong>
               <span>Salón Studio</span>
@@ -1657,7 +1868,7 @@
               Precisión. Estilo. <span>Confianza Total.</span>
             </h2>
             <p>
-              En Luciana Nails transformamos el cuidado de tus manos en un arte. Nuestro centro de estética en Apartadó combina esmaltes de alta gama, esterilización rigurosa y profesionales certificadas para brindarte un servicio personalizado, puntual y de máxima calidad.
+              En Luciana Nails transformamos el cuidado de tus manos en un arte. Nuestro centro de estética en Apartadó combina esmaltes de alta gama, esterilización clínica rigurosa y profesionales certificadas para brindarte una atención cercana, puntual y de máxima calidad.
             </p>
 
             <div class="metrics-row">
@@ -1667,7 +1878,7 @@
               </div>
               <div class="metric-item">
                 <strong>+15K</strong>
-                <span>Uñas Listas</span>
+                <span>Manicuras</span>
               </div>
               <div class="metric-item">
                 <strong>100%</strong>
@@ -1685,96 +1896,108 @@
           </div>
         </div>
 
-        <!-- Bloque 2: Nuestro Equipo (Grid 4 Columnas) -->
+        <!-- Bloque 2: Nuestro Equipo (Grid 4 Columnas Retrato Editorial 3:4.2) -->
         <div class="section-header-center" style="margin-bottom: 36px;">
           <span class="section-script-eyebrow" style="color: var(--color-gold-light);">Nuestro Equipo</span>
           <h3 class="section-title section-title-dark">Manicuristas Certificadas</h3>
-          <p class="section-desc section-desc-dark">Artistas apasionadas por el detalle, la simetría y la salud de tus uñas naturales.</p>
+          <p class="section-desc section-desc-dark">Especialistas apasionadas por el detalle, la simetría y la salud de tus uñas naturales.</p>
         </div>
 
         <div class="team-grid">
           <!-- Especialista 1 -->
           <article class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Luciana Restrepo Master Nail Artist" class="team-avatar" loading="lazy">
-              <span class="team-badge">Master</span>
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Luciana Restrepo Master Nail Artist" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Luciana Restrepo</h4>
+              <span class="team-role">Directora &amp; Master Nail Artist</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%2C%20quisiera%20agendar%20cita%20contigo%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h4 class="team-name">Luciana Restrepo</h4>
-            <span class="team-role">Directora & Master Nail Artist</span>
-            <div class="team-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span>(5.0)</span>
-            </div>
-            <a href="https://wa.me/573003943451?text=Hola%20Luciana%2C%20quisiera%20agendar%20cita%20contigo%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
-              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-            </a>
           </article>
 
           <!-- Especialista 2 -->
           <article class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Carolina Blandón Especialista Acrílicas" class="team-avatar" loading="lazy">
-              <span class="team-badge">Pro</span>
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Carolina Blandón Especialista Acrílicas" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Carolina Blandón</h4>
+              <span class="team-role">Especialista en Uñas Acrílicas</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573003943451?text=Hola%20Carolina%2C%20quisiera%20agendar%20cita%20para%20Acr%C3%ADlicas%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h4 class="team-name">Carolina Blandón</h4>
-            <span class="team-role">Especialista en Uñas Acrílicas</span>
-            <div class="team-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span>(5.0)</span>
-            </div>
-            <a href="https://wa.me/573003943451?text=Hola%20Carolina%2C%20quisiera%20agendar%20cita%20para%20Acr%C3%ADlicas%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
-              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-            </a>
           </article>
 
           <!-- Especialista 3 -->
           <article class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Estefanía Higuita Artista Nail Art" class="team-avatar" loading="lazy">
-              <span class="team-badge">Senior</span>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Estefanía Higuita Artista Nail Art" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Estefanía Higuita</h4>
+              <span class="team-role">Artista de Nail Art &amp; Diseños</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573003943451?text=Hola%20Estefan%C3%ADa%2C%20quisiera%20agendar%20cita%20de%20Nail%20Art%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h4 class="team-name">Estefanía Higuita</h4>
-            <span class="team-role">Artista de Nail Art & Diseños</span>
-            <div class="team-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span>(5.0)</span>
-            </div>
-            <a href="https://wa.me/573003943451?text=Hola%20Estefan%C3%ADa%2C%20quisiera%20agendar%20cita%20de%20Nail%20Art%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
-              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-            </a>
           </article>
 
           <!-- Especialista 4 -->
           <article class="team-card">
-            <div class="team-photo-box">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Kelly Moreno Terapeuta Pedicura" class="team-avatar" loading="lazy">
-              <span class="team-badge">Pro</span>
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Kelly Moreno Terapeuta Pedicura" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Kelly Moreno</h4>
+              <span class="team-role">Terapeuta de Pedicura &amp; Spa</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573003943451?text=Hola%20Kelly%2C%20quisiera%20agendar%20cita%20de%20Pedicura%20Spa%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <h4 class="team-name">Kelly Moreno</h4>
-            <span class="team-role">Terapeuta de Pedicura & Spa</span>
-            <div class="team-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <span>(5.0)</span>
-            </div>
-            <a href="https://wa.me/573003943451?text=Hola%20Kelly%2C%20quisiera%20agendar%20cita%20de%20Pedicura%20Spa%20en%20Luciana%20Nails." target="_blank" rel="noopener noreferrer" class="btn-team-book">
-              <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-            </a>
           </article>
         </div>
       </div>
@@ -1787,8 +2010,8 @@
       <div class="container">
         <div class="section-header-center">
           <span class="section-script-eyebrow">Visítanos en Apartadó</span>
-          <h2 class="section-title section-title-light">Ubicación & Horarios</h2>
-          <p class="section-desc section-desc-light">Encuéntranos en una ubicación privilegiada en Av. Alfonso López con atención personalizada.</p>
+          <h2 class="section-title section-title-dark">Ubicación &amp; Horarios</h2>
+          <p class="section-desc section-desc-dark">Encuéntranos en una ubicación privilegiada en Av. Alfonso López con atención personalizada.</p>
         </div>
 
         <div class="map-showcase-card">
@@ -1900,31 +2123,192 @@
   </a>
 
   <!-- ==========================================================================
-       JAVASCRIPT AUTÓNOMO (Smart Header, Smooth Scroll & Auto-Scroll Pilares)
+       JAVASCRIPT AUTÓNOMO (Canvas Video Scrubbing, Smart Header & Auto-Scroll)
        ========================================================================== -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Smart Header con Auto-hide al scrollear
+      // 1. Motor de Video Scroll Scrubbing en Canvas HTML5
+      (function initCanvasScroll() {
+        const canvas = document.getElementById('scroll-video-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d', { alpha: false });
+        const posterImg = document.getElementById('canvas-poster-fallback');
+        const scrollSection = document.querySelector('.hero-scroll-section');
+
+        const TOTAL_FRAMES = 72; // Secuencia extraída a 18 fps (4.0s)
+        let isMobile = window.innerWidth < 768;
+        let framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+
+        if (posterImg) {
+          posterImg.src = `${framesFolder}/poster.webp`;
+        }
+
+        const getFrameUrl = (index) => {
+          const pad = String(index).padStart(4, '0');
+          return `${framesFolder}/frame-${pad}.webp`;
+        };
+
+        const images = [];
+        let loadedCount = 0;
+        let currentFrameIndex = 0;
+        let targetFrameIndex = 0;
+        let rafId = null;
+
+        function resizeCanvas() {
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+          canvas.width = window.innerWidth * dpr;
+          canvas.height = window.innerHeight * dpr;
+          renderFrame(currentFrameIndex);
+        }
+
+        function renderFrame(index) {
+          const img = images[index];
+          if (!img || !img.complete) return;
+
+          const cw = canvas.width;
+          const ch = canvas.height;
+          const iw = img.naturalWidth || img.width;
+          const ih = img.naturalHeight || img.height;
+
+          // Limpiar canvas con el color base de fondo
+          ctx.fillStyle = '#0e0d0d';
+          ctx.fillRect(0, 0, cw, ch);
+
+          // Escala cover pura al 100% para cubrir el canvas de borde a borde
+          const scale = Math.max(cw / iw, ch / ih);
+          const nw = iw * scale;
+          const nh = ih * scale;
+
+          const isMob = window.innerWidth < 768;
+          // Centrado inteligente: en escritorio se desplaza ligeramente para despejar el texto a la izquierda
+          let nx = (cw - nw) / 2;
+          if (!isMob && nw > cw) {
+            nx = Math.min(0, Math.max(cw - nw, nx + (cw * 0.06)));
+          }
+          const ny = (ch - nh) / 2;
+
+          ctx.drawImage(img, nx, ny, nw, nh);
+        }
+
+        function preloadImages() {
+          const loadPromises = [];
+
+          for (let i = 1; i <= TOTAL_FRAMES; i++) {
+            const p = new Promise((resolve) => {
+              const img = new Image();
+              img.src = getFrameUrl(i);
+              img.onload = () => {
+                loadedCount++;
+                if (loadedCount === 1) {
+                  currentFrameIndex = 0;
+                  renderFrame(0);
+                }
+                // Ocultar poster estático al tener los primeros frames
+                if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
+                  if (posterImg) {
+                    posterImg.classList.add('loaded');
+                    posterImg.style.display = 'none';
+                  }
+                }
+                resolve();
+              };
+              img.onerror = () => {
+                resolve();
+              };
+              images.push(img);
+            });
+            loadPromises.push(p);
+          }
+
+          Promise.all(loadPromises).then(() => {
+            if (posterImg) {
+              posterImg.classList.add('loaded');
+              posterImg.style.display = 'none';
+            }
+          });
+        }
+
+        function updateScrollProgress() {
+          if (!scrollSection) return;
+          const rect = scrollSection.getBoundingClientRect();
+          const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+          
+          if (scrollDistance <= 0) return;
+
+          // Progreso normalizado de 0 a 1
+          const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+          
+          targetFrameIndex = Math.min(
+            TOTAL_FRAMES - 1,
+            Math.floor(progress * TOTAL_FRAMES)
+          );
+
+          if (targetFrameIndex !== currentFrameIndex) {
+            currentFrameIndex = targetFrameIndex;
+            if (!rafId) {
+              rafId = requestAnimationFrame(() => {
+                renderFrame(currentFrameIndex);
+                rafId = null;
+              });
+            }
+          }
+
+          // Alternancia de los 2 pasos editoriales (50% / 50%)
+          const steps = document.querySelectorAll('.hero-scroll-step');
+          if (steps.length >= 2) {
+            const activeIndex = progress < 0.5 ? 0 : 1;
+            steps.forEach((step, idx) => {
+              step.classList.toggle('active', idx === activeIndex);
+            });
+          }
+        }
+
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+        window.addEventListener('resize', () => {
+          const mobCheck = window.innerWidth < 768;
+          if (mobCheck !== isMobile) {
+            isMobile = mobCheck;
+            framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+            images.forEach((img, idx) => {
+              img.src = getFrameUrl(idx + 1);
+            });
+          }
+          resizeCanvas();
+        }, { passive: true });
+
+        resizeCanvas();
+        preloadImages();
+      })();
+
+      // 2. Smart Header: Siempre visible en Hero; auto-hide en secciones inferiores al bajar
       let lastScrollY = window.pageYOffset;
       const header = document.getElementById('stickyHeader');
+      const scrollSection = document.querySelector('.hero-scroll-section');
 
       window.addEventListener('scroll', () => {
+        if (!header) return;
         const currentScrollY = window.pageYOffset;
-        
-        if (currentScrollY > 120) {
-          if (currentScrollY > lastScrollY) {
+        const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight) : 700;
+
+        // Dentro del Hero: permanece siempre visible
+        if (currentScrollY < heroBottom - 100) {
+          header.classList.remove('header-hidden');
+          header.classList.toggle('scrolled', currentScrollY > 40);
+        } else {
+          // Fuera del Hero: auto-hide al descender, reaparece al subir
+          header.classList.add('scrolled');
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 120) {
             header.classList.add('header-hidden');
           } else {
             header.classList.remove('header-hidden');
           }
-        } else {
-          header.classList.remove('header-hidden');
         }
         
         lastScrollY = currentScrollY;
       }, { passive: true });
 
-      // Smooth scroll para todos los enlaces internos
+      // 3. Smooth scroll para todos los enlaces internos
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const targetId = this.getAttribute('href');
@@ -1940,7 +2324,7 @@
         });
       });
 
-      // Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
+      // 4. Auto-scroll Inteligente para Carrusel de Pilares en Móvil (< 768px)
       const pillarsGrid = document.querySelector('.pillars-grid');
       if (pillarsGrid) {
         let scrollInterval = null;
