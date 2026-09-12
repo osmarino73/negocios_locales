@@ -30,13 +30,15 @@ Documentación técnica y tokens de diseño para **My Spacio Nails** en Apartad�
 
 ## 📐 Estructura Oficial de Secciones
 
-1. **Smart Header**: Logotipo tipográfico puro a la izquierda (`.brand-logo`) + Menú desktop + Botón conciso «Agendar» a la derecha. En móvil (< 768px): eliminación de menú hamburguesa, soporte de safe-area top (`padding-top: env(safe-area-inset-top, 0px)`) y proporciones calibradas para evitar recortes. Auto-hide inteligente activo únicamente fuera del Hero.
+1. **Smart Header**: Logotipo tipográfico puro a la izquierda (`.brand-logo`) + Menú desktop + Botón conciso «Agendar» a la derecha. Navbar 100% transparente en el Hero sin fondos opacos ni bordes. En móvil (< 768px): eliminación de menú hamburguesa, soporte de safe-area top (`padding-top: env(safe-area-inset-top, 0px)`) y proporciones calibradas para evitar recortes. Auto-hide inteligente activo únicamente fuera del Hero.
 2. **`#inicio` (Hero Canvas Video Scroll Scrubbing — 300vh)**:
-   - Secuencia cinematográfica de 74 frames WebP sincronizada con scroll táctil/mouse (`requestAnimationFrame`).
+   - Fuentes de entrada: Desktop `morena-web copy.mp4` (1920x1080) y Móvil `morena -movil.mp4` (1080x1920 nativo).
+   - Secuencia cinematográfica de 74 frames WebP por vista sincronizada con scroll táctil/mouse (`requestAnimationFrame`).
    - Soporte High-DPI Retina con `devicePixelRatio`.
    - Poster fallback instantáneo anti-flashes negros (`poster.webp`).
-   - Paneo dinámico interpolado en móvil: $(1920-608) \times (0.60 - 0.12 \times \frac{t}{4.0})$, enfocando el macro de las uñas con flores al inicio y centrando simétricamente el rostro y ambas manos al final.
-   - Narrativa editorial en 2 capítulos secuenciales (50% / 50%). En móvil calibrado a `min-height: 720px !important;` con textos en la mitad inferior.
+   - Cobertura 100% full-cover edge-to-edge sin encogimiento artificial.
+   - Capa de degradado aterciopelado `.canvas-gradient-overlay` (horizontal en desktop, vertical en móvil).
+   - Narrativa editorial en 2 capítulos secuenciales (50% / 50%). En móvil calibrado a `min-height: 720px !important;` con textos anclados en la base (`top: auto; bottom: 0;`), dejando el 44% superior completamente despejado.
 3. **Barra de Pilares / Garantías**: 5 sellos de confianza con carrusel horizontal deslizable (*Scroll Snap*), auto-scroll fluido cada 3s y pausa táctil en móvil.
 4. **`#servicios` (Catálogo de Servicios)**: Grid 3 Columnas en Escritorio (`repeat(3, 1fr)`), 2 Columnas balanceadas en Móvil (`repeat(2, 1fr)`). Tarjetas Full-Bleed Minimalistas 3:4 con degradado aterciopelado (38% superior 100% transparente), sin píldoras superiores de duración, precio en COP destacado y enlace minimalista `AGENDAR ➔`.
 5. **`#nosotros` (Sobre Nosotros & Especialistas — Estándar Editorial)**:

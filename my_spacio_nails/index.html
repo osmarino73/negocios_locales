@@ -153,17 +153,25 @@
        SMART HEADER / NAVBAR INTELIGENTE (Logotipo Tipográfico Puro)
        ========================================================================== */
     .header-sticky-wrapper {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: var(--bg-dark-trans);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-dark);
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: 1px solid transparent;
       padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.35s ease, background-color 0.35s ease;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background: rgba(13, 11, 10, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-dark);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .header-hidden {
@@ -191,6 +199,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       color: var(--text-dark-primary);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
     }
 
     .brand-title span {
@@ -206,6 +215,7 @@
       letter-spacing: 1.5px;
       color: var(--color-camel-light);
       margin-top: -2px;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
     }
 
     .main-nav {
@@ -314,7 +324,25 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      display: none;
+    }
+
+    /* Capa de degradado aterciopelado para máxima legibilidad sin opacar el video */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        #0d0b0a 0%,
+        rgba(13, 11, 10, 0.90) 22%,
+        rgba(13, 11, 10, 0.65) 38%,
+        rgba(13, 11, 10, 0.20) 54%,
+        transparent 70%
+      );
     }
 
     .hero-container-align {
@@ -1281,53 +1309,91 @@
         flex-shrink: 0;
       }
 
-      /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      /* Hero Móvil: Estrictamente min-height 720px y contenido anclado en la mitad inferior */
       .canvas-sticky-wrapper {
-        align-items: flex-end;
-        justify-content: center;
+        min-height: 720px !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+      }
+
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(13, 11, 10, 0) 0%,
+          rgba(13, 11, 10, 0) 44%,
+          rgba(13, 11, 10, 0.40) 58%,
+          rgba(13, 11, 10, 0.85) 75%,
+          #0d0b0a 96%
+        );
       }
 
       .hero-container-align {
         justify-content: center;
+        align-items: flex-end;
+        padding: 0 16px;
         padding-top: 0;
-        padding-bottom: 36px;
+        padding-bottom: 0;
+        width: 100%;
       }
 
       .hero-scroll-content {
         max-width: 360px;
-        min-height: 360px;
+        width: 100%;
+        min-height: 330px;
+        position: relative;
+        margin: 0 auto;
         text-align: center;
       }
 
       .hero-scroll-step {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
         align-items: center;
         text-align: center;
+        left: 0;
+        right: 0;
+      }
+
+      .hero-scroll-step.active {
+        transform: translateY(0);
       }
 
       .hero-script-tag {
-        font-size: 2.2rem;
+        font-size: 1.85rem;
+        line-height: 1.1;
+        margin-bottom: 4px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-eyebrow {
         font-size: 0.65rem;
         letter-spacing: 1.5px;
+        margin-bottom: 6px;
       }
 
       .hero-title {
         font-size: 1.85rem;
         line-height: 1.12;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
       .step-1 .hero-title {
-        margin-bottom: 18px;
+        margin-bottom: 8px;
       }
 
       .hero-desc {
         font-size: 0.84rem;
-        line-height: 1.5;
-        margin-bottom: 18px;
+        line-height: 1.46;
+        margin-bottom: 16px;
+        max-width: 330px;
         text-align: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-actions {
@@ -1353,6 +1419,10 @@
 
       .hero-proof-text {
         font-size: 0.7rem;
+      }
+
+      .hero-scroll-indicator {
+        display: none;
       }
 
       /* Barra de Pilares Carrusel Horizontal Deslizable en Móvil */
@@ -1614,6 +1684,9 @@
           alt="Manicura y Nail Art exclusivo en My Spacio Nails Apartadó" 
           class="canvas-poster-img"
         />
+
+        <!-- Capa de degradado aterciopelado para máxima legibilidad sin opacar el video -->
+        <div class="canvas-gradient-overlay"></div>
 
         <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
         <div class="container hero-container-align">
@@ -2261,16 +2334,16 @@
       window.addEventListener('scroll', () => {
         if (!header) return;
         const currentScrollY = window.pageYOffset;
-        const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight) : 700;
+        const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight - 120) : 700;
 
-        // Dentro del Hero: permanece siempre visible
-        if (currentScrollY < heroBottom - 100) {
+        // Dentro del Hero: permanece siempre visible y 100% transparente
+        if (currentScrollY < heroBottom) {
           header.classList.remove('header-hidden');
-          header.classList.toggle('scrolled', currentScrollY > 40);
+          header.classList.remove('scrolled');
         } else {
           // Fuera del Hero: auto-hide al descender, reaparece al subir
           header.classList.add('scrolled');
-          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 120) {
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 80) {
             header.classList.add('header-hidden');
           } else {
             header.classList.remove('header-hidden');
