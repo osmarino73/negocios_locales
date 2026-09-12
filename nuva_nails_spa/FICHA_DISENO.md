@@ -29,9 +29,12 @@ Documentación técnica y tokens de diseño para **NÜVA NAILS SPA** en Apartad�
 ## 🎬 Sistema Hero Video Scroll Scrubbing (300vh Canvas Engine)
 
 - **Canvas Viewport Fijo**: 100vh con interpolación fluida mediante `requestAnimationFrame`.
+- **Fuentes Originales Específicas**:
+  - Desktop: `nuva_web.mp4` (1920x1080, 24 fps, 4.0s).
+  - Mobile: `nuva_movil.mp4` (1080x1920 vertical nativo 9:16, 24 fps, 4.0s).
 - **Doble Banco de Cuadros Calibrados**:
-  - `desktop/`: 74 fotogramas WebP (1920x1080 nativo, Q85) con `object-fit: cover` y degradado lateral suave (0% a 24% oscuro, 100% transparente desde el 72%).
-  - `mobile/`: 74 fotogramas WebP (720x1280 9:16 centrado, Q76) con encuadre vertical que mantiene el rostro de la modelo y las uñas impecables en el tercio superior.
+  - `desktop/`: 74 fotogramas WebP (1920x1080 nativo, Q85) con `object-fit: cover`, degradado lateral suave (0% a 24% oscuro, 100% transparente desde el 72%) + `poster.webp`.
+  - `mobile/`: 74 fotogramas WebP (720x1280 9:16 vertical nativo, Q76) que mantiene las uñas y la modelo despejadas + `poster.webp`.
 - **Narrativa Editorial en 2 Pasos (50% / 50%)**:
   - *Paso 1 (0% a 50%)*: "Belleza & Detalle en Cada Uña" con botón directo a WhatsApp.
   - *Paso 2 (50% a 100%)*: "Arte & Perfección que Perdura" enfocado en esculpido y bioseguridad.
@@ -41,7 +44,7 @@ Documentación técnica y tokens de diseño para **NÜVA NAILS SPA** en Apartad�
 
 ## 🏛️ Estructura Oficial de Secciones (AGENTS.md)
 
-1. **Smart Header**: Logotipo tipográfico puro sin íconos decorativos («NÜVA NAILS SPA»), auto-hide inteligente que no se oculta dentro del Hero y botón conciso **«Agendar»**.
+1. **Smart Header**: Logotipo tipográfico puro sin íconos decorativos («NÜVA NAILS SPA»), **Navbar 100% transparente en el Hero** con `text-shadow` en branding y enlaces, activa fondo oscuro mocca (`rgba(15, 14, 14, 0.96)`) con `backdrop-filter: blur(14px)` al salir del Hero (`currentScrollY > heroBottom - 120`), auto-hide inteligente en secciones inferiores y botón conciso **«Agendar»**.
 2. **`#inicio`**: Hero Canvas 300vh con scroll scrubbing interactivo y poster fallback instantáneo.
 3. **Barra de Pilares**: 5 sellos de confianza (*Esmaltes Prémium, Esterilización Clínica, Manicuristas Máster, Nail Art Exclusivo, Satisfacción Total*); en móvil deslizable por carrusel horizontal *Scroll Snap*.
 4. **`#servicios`**: Grid de 3 columnas en escritorio / 2 columnas en móvil. Tarjetas *Full-Bleed Minimalistas* (3:4) con fotografía protagonista, degradado aterciopelado inferior, precio en `$ COP` y botón minimalista `AGENDAR ➔`.

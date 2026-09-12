@@ -161,20 +161,28 @@
        SMART HEADER / NAVBAR INTELIGENTE
        ========================================================================== */
     .header-sticky-wrapper {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: var(--bg-dark-trans);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background: rgba(15, 14, 14, 0.96);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-dark);
-      padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.35s ease, background-color 0.35s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
 
-    .header-hidden {
+    .header-sticky-wrapper.header-hidden {
       transform: translateY(-100%);
     }
 
@@ -200,6 +208,7 @@
       letter-spacing: 0.08em;
       color: var(--text-dark-primary);
       line-height: 1.1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .brand-name span {
@@ -214,6 +223,7 @@
       color: var(--color-mocca-light);
       margin-top: 2px;
       white-space: nowrap;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .main-nav {
@@ -230,6 +240,7 @@
       color: var(--text-dark-secondary);
       position: relative;
       padding: 4px 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .nav-link:hover,
@@ -1196,7 +1207,8 @@
       .hero-sticky-viewport {
         align-items: flex-end;
         justify-content: center;
-        padding-bottom: 28px;
+        min-height: 720px !important;
+        padding-bottom: 0;
       }
 
       .hero-vignette-overlay {
@@ -1204,16 +1216,18 @@
           180deg, 
           rgba(15, 14, 14, 0) 0%, 
           rgba(15, 14, 14, 0) 38%, 
-          rgba(15, 14, 14, 0.65) 55%, 
-          rgba(15, 14, 14, 0.94) 76%, 
-          #0f0e0e 98%
+          rgba(15, 14, 14, 0.6) 54%, 
+          rgba(15, 14, 14, 0.92) 74%, 
+          #0f0e0e 96%
         );
       }
 
       .hero-scroll-content {
         margin: 0 auto;
         max-width: 360px;
-        min-height: 380px;
+        width: 100%;
+        min-height: 330px;
+        position: relative;
         padding: 0 16px;
         text-align: center;
       }
@@ -1222,31 +1236,40 @@
         left: 0;
         right: 0;
         top: auto;
-        bottom: 20px;
-        transform: none;
+        bottom: 0;
+        transform: translateY(0);
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
         align-items: center;
         text-align: center;
-        margin: 0 auto;
       }
 
       .hero-scroll-step.active {
-        transform: none;
+        transform: translateY(0);
       }
 
       .hero-title {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
         line-height: 1.12;
+        margin-bottom: 6px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
       .hero-script {
-        font-size: 2.6rem;
-        margin: 2px 0 10px;
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin: 2px 0 8px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-desc {
-        font-size: 0.86rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size: 0.84rem;
+        line-height: 1.46;
+        margin-bottom: 16px;
+        max-width: 330px;
+        text-align: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-actions {
@@ -2073,7 +2096,19 @@
         setCanvasDimensions();
         preloadImages();
 
+        let isMobile = window.innerWidth < 768;
         window.addEventListener('resize', () => {
+          const mobCheck = window.innerWidth < 768;
+          if (mobCheck !== isMobile) {
+            isMobile = mobCheck;
+            images.forEach((img, idx) => {
+              img.src = getFrameUrl(idx + 1);
+            });
+            if (posterImg) {
+              const folder = isMobile ? 'mobile' : 'desktop';
+              posterImg.src = `public/frames/${folder}/poster.webp`;
+            }
+          }
           setCanvasDimensions();
         }, { passive: true });
 
@@ -2081,19 +2116,23 @@
         updateScrollProgress();
       }
 
-      // 2. Smart Header con Auto-hide inteligente
+      // 2. Smart Header: Transparente y visible en Hero; fondo oscuro y auto-hide al salir del Hero
       let lastScrollY = window.pageYOffset;
       const header = document.getElementById('stickyHeader');
 
       window.addEventListener('scroll', () => {
+        if (!header) return;
         const currentScrollY = window.pageYOffset;
-        const heroHeight = scrollSection ? scrollSection.offsetHeight : 600;
+        const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight) : 700;
 
-        // Si estamos dentro del Hero, la barra de navegación permanece visible siempre
-        if (currentScrollY <= heroHeight) {
+        // Dentro del Hero: permanece siempre visible y 100% transparente
+        if (currentScrollY < heroBottom - 120) {
           header.classList.remove('header-hidden');
+          header.classList.remove('scrolled');
         } else {
-          if (currentScrollY > lastScrollY) {
+          // Fuera del Hero: adquiere fondo oscuro con blur; auto-hide al descender, reaparece al subir
+          header.classList.add('scrolled');
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 100) {
             header.classList.add('header-hidden');
           } else {
             header.classList.remove('header-hidden');
