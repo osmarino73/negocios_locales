@@ -10,7 +10,11 @@ Este archivo mantiene la memoria y las reglas de diseño para la landing page de
 - **Inspiración Visual Forense**: LUXEHAIR (Deep Obsidian / Espresso + Camel Rose Warm Nude + Crema Marfil)
 
 ## 📐 Reglas Estructurales Obligatorias
-1. **Hero Full-Width Bleed**: Titular editorial con script caligráfico (*Alex Brush*), imagen inmersiva a la derecha en desktop con degradado orgánico de 8 paradas sin `mask-image` abrasivo en el contenedor, y calibrada en móvil con `min-height: 720px !important`, 38% superior transparente y texto compacto ubicado estrictamente en la mitad inferior sin tapar a la modelo.
+1. **Hero Header Inmersivo (Canvas Video Scroll Scrubbing - 300vh Track)**:
+   - **Video Fuente Oficial**: `.agents/document/morena_salon-color.mp4` (4.0s, 74 frames WebP por vista).
+   - **Regla Mandatoria de Encuadre (Modelo en el Centro de la Segunda Mitad)**: La modelo se sitúa en el centro de la mitad derecha ($x \approx 1440$ en 1920x1080), dejando el 50% izquierdo limpio para la tipografía editorial en escritorio.
+   - **Escritorio (>768px)**: Overlay gradiente horizontal suave al 52% con la modelo 100% nítida y visible con su transformación balayage.
+   - **Móvil (<768px)**: `min-height: 720px !important`, extracción vertical calibrada con `crop=ih*9/16:ih:1130:0,scale=720:1280` para centrar perfectamente a la modelo en la pantalla vertical del celular. Zona superior (46%) 100% transparente sin veladuras sobre el rostro, y textos compactos ubicados estrictamente en la mitad inferior con botones apilados (ancho máx. 275px).
 2. **5 Pilares / Garantías**: Íconos de línea minimalistas con carrusel horizontal con scroll snap en móvil.
 3. **Catálogo de Servicios**: Grid de **6 columnas en desktop** y **2 columnas en móvil**, con foto 1:1, 2 píldoras esenciales (`⏱️ Duración` y `💰 Precio`) y botón de agendamiento 100% de ancho directo a WhatsApp.
 4. **Sobre Nosotros & Profesionales**:

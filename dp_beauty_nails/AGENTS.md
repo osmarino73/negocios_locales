@@ -19,16 +19,19 @@ Bienvenido a la carpeta de **Dp Beauty Nails** (Apartadó, Antioquia). Este docu
 
 Este proyecto implementa reproducción de video sincronizada con el scroll del usuario mediante Canvas HTML5:
 
-1. **Ubicación de Fotogramas**:
-   - Desktop (1920x1080 Q85): `public/frames/desktop/frame-%04d.webp` (72 frames) + `poster.webp`
-   - Mobile (720x1280 Q76): `public/frames/mobile/frame-%04d.webp` (72 frames) + `poster.webp`
-2. **Script de Regeneración**:
+1. **Videos de Entrada**:
+   - Desktop: `uñas_morena.mp4` (16:9, 1920x1080, 4.0s).
+   - Mobile: `uñas_morena-movil.mp4` (9:16 vertical nativo, 1080x1920, 4.0s).
+2. **Ubicación de Fotogramas**:
+   - Desktop (1920x1080 Q85): `public/frames/desktop/frame-%04d.webp` (74 frames) + `poster.webp`
+   - Mobile (720x1280 Q76 vertical nativo): `public/frames/mobile/frame-%04d.webp` (74 frames) + `poster.webp`
+3. **Script de Regeneración**:
    - Si se cambia el video base, ejecutar `node scripts/extract-frames.js [nuevo_video.mp4]`.
-3. **Regla Crítica de CSS**:
+4. **Regla Crítica de CSS**:
    - `html, body` debe mantener siempre `overflow-x: clip;` y **NUNCA** `overflow-x: hidden;`, ya que este último anula la fijación `position: sticky` en navegadores móviles.
-4. **Encuadre y Nitidez Óptica**:
-   - En el bucle de renderizado del Canvas, la escala cover se multiplica por `0.90` para asegurar que las manos y la mirada de la modelo no queden recortadas.
-   - Cero filtros pesados o veladuras opacas completas sobre el Canvas; el contraste del texto se obtiene mediante `text-shadow`.
+5. **Encuadre y Cobertura Edge-to-Edge**:
+   - En el bucle de renderizado del Canvas, se aplica escala 100% full-cover (`Math.max(cw / iw, ch / ih)`) sin barras negras ni encogimientos artificiales.
+   - Capa de degradado aterciopelado `.canvas-gradient-overlay` progresivo (horizontal en escritorio, vertical en móvil) que garantiza 100% contraste tipográfico manteniendo la modelo y sus uñas radiantes y nítidas.
 
 ---
 

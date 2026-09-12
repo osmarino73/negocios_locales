@@ -5,3 +5,9 @@ thumbs.db
 *.log
 .gemini/
 .env
+
+# Video source files (production uses extracted webp frames)
+*.mp4
+*.mov
+*.avi
+.agents/document/

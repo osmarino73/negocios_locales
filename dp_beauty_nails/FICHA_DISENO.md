@@ -32,12 +32,16 @@ Documentación técnica y tokens de diseño para **Dp Beauty Nails** en Apartad�
 
 ## 🎬 Especificaciones del Motor de Scroll Video Canvas
 
-- **Fuente de Entrada**: `0909.mp4` (1920x1080 nativo, 6 segundos, modelo con uñas de autor y detalles en oro).
-- **Secuencia Extraída**: 72 cuadros WebP (`frame-0001.webp` ... `frame-0072.webp`) a 12 fps.
-- **Peso Promedio por Frame**: ~40 KB (Desktop 1080p) y ~16 KB (Mobile 720x1280). Total secuencia móvil: 1.19 MB.
+- **Fuentes de Entrada**:
+  - Desktop: `uñas_morena.mp4` (1920x1080 nativo, 4.0s).
+  - Mobile: `uñas_morena-movil.mp4` (1080x1920 vertical nativo, 4.0s).
+- **Secuencia Extraída**: 74 cuadros WebP (`frame-0001.webp` ... `frame-0074.webp`) a 18.5 fps por vista.
+- **Calibración Móvil**: Generación directa 9:16 nativa a 720x1280 Q76, con centrado óptico perfecto de la modelo y sus uñas doradas.
+- **Peso Promedio por Frame**: ~40 KB (Desktop 1080p) y ~16 KB (Mobile 720x1280).
 - **Estructura de Scroll**: `height: 300vh;` con contenedor fijado `position: sticky; top: 0; height: 100dvh;`.
 - **Regla Mandatoria CSS**: `overflow-x: clip;` en `html, body` para preservar el contexto de fijación sticky en navegadores móviles.
-- **Encuadre Óptico Holgado**: En el bucle de Canvas, escala base con factor `0.90` para asegurar que las manos y la mirada de la modelo tengan holgura estética sin recortes en bordes.
+- **Cobertura 100% Edge-to-Edge**: En el bucle de Canvas, escala base `Math.max(cw / iw, ch / ih)` sin encogimientos artificiales ni bandas negras.
+- **Degradado Aterciopelado**: `.canvas-gradient-overlay` progresivo para contraste óptimo del texto y máxima nitidez de la modelo.
 - **Storytelling Editorial**: 3 pasos secuenciales sincronizados con el porcentaje de scroll (0-33%, 33-66%, 66-100%).
 
 ---

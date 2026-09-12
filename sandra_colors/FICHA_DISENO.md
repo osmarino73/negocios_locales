@@ -37,10 +37,13 @@ Manual forense de identidad visual, tipografía, paleta cromática y arquitectur
    - Sticky transparente dentro del Hero; se activa `.scrolled-past-hero` con fondo obsidian y blur al bajar hacia las secciones inferiores.
    - Móvil: Menú hamburguesa eliminado, logo a la izquierda y botón conciso **«Agendar»** a la derecha.
 2. **Hero Header Inmersivo con Canvas Video Scroll Scrubbing (300vh Track)**:
-   - Motor Canvas 2D con 74 fotogramas WebP duales (Desktop 1920x1080 1080p / Móvil 608x1080 1080p nativo con encuadre centro-derecha `x = (iw-ow)*0.58`).
+   - **Video Fuente Oficial**: `.agents/document/morena_salon-color.mp4` (4.0s, 24 fps nativo).
+   - **Regla Mandatoria de Encuadre**: La modelo se sitúa en el centro de la segunda mitad del video (mitad derecha $x \approx 1440$ en 1920x1080), dejando el 50% izquierdo disponible para el texto editorial en escritorio.
+   - **Desktop (16:9)**: 74 fotogramas WebP (`1920x1080`, calidad 85, nivel de compresión 6) a `fps=18.5`.
+   - **Mobile (9:16 Calibrado)**: 74 fotogramas WebP (`720x1280`, calidad 76) con recorte centrado en la segunda mitad (`crop=ih*9/16:ih:1130:0,scale=720:1280`), manteniendo a la modelo y su transformación capilar balayage en ondas simétricamente centradas tanto de frente como al rotar 360°.
    - Degradado limpio calibrado que mantiene 100% visible a la modelo con su rotación de cabello y ondas sin veladuras oscuras.
    - Dos pasos narrativos editoriales sincronizados con el scroll.
-   - En móvil: `min-height: 720px !important;` con textos centrados en la mitad inferior.
+   - En móvil: `min-height: 720px !important;` con textos centrados en la mitad inferior y anclaje superior en canvas (`oy = 0`).
 3. **Barra de Pilares / Garantías**:
    - 5 sellos de confianza (*Estilistas Expertas, Productos Prémium, Experiencia de Lujo, Satisfacción Total, Higiene & Seguridad*).
    - Móvil: Carrusel horizontal deslizable (*Scroll Snap*) en una sola fila.

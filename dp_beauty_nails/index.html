@@ -230,11 +230,11 @@
       width: 100%;
       z-index: 1000;
       padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease;
-      background: rgba(13, 11, 13, 0.82);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: 1px solid transparent;
     }
 
     .header-sticky-wrapper.header-hidden {
@@ -245,6 +245,8 @@
       background: rgba(253, 248, 247, 0.92);
       border-bottom: 1px solid var(--border-light);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .header-nav {
@@ -271,11 +273,13 @@
       text-transform: uppercase;
       color: #ffffff;
       line-height: 1.1;
-      transition: color 0.3s ease;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     .scrolled-light .brand-name {
       color: var(--text-primary);
+      text-shadow: none;
     }
 
     .brand-subtitle {
@@ -286,6 +290,12 @@
       font-weight: 600;
       margin-top: 2px;
       white-space: nowrap;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+      transition: text-shadow 0.3s ease;
+    }
+
+    .scrolled-light .brand-subtitle {
+      text-shadow: none;
     }
 
     .nav-links {
@@ -299,12 +309,15 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--text-muted-light);
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
       position: relative;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     .scrolled-light .nav-link {
       color: var(--text-secondary);
+      text-shadow: none;
     }
 
     .nav-link::after {
@@ -407,10 +420,26 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      display: none;
     }
 
-    /* Cero filtros opacos globales para 100% nitidez óptica del video */
+    /* Capa de degradado aterciopelado calibrada para máxima legibilidad tipográfica y nitidez óptica */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        #0d0b0d 0%,
+        rgba(13, 11, 13, 0.90) 22%,
+        rgba(13, 11, 13, 0.65) 38%,
+        rgba(13, 11, 13, 0.20) 54%,
+        transparent 70%
+      );
+    }
 
     .hero-container-align {
       position: relative;
@@ -1490,42 +1519,93 @@
         font-size: 0.76rem;
       }
 
-      /* Hero Móvil: Texto centrado en la mitad inferior */
+      /* Hero Móvil: Calibrado estricto en la mitad inferior para despejar rostro y uñas */
+      .canvas-sticky-wrapper {
+        min-height: 720px !important;
+        align-items: flex-end !important;
+        justify-content: center !important;
+        padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px)) !important;
+      }
+
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(13, 11, 13, 0) 0%,
+          rgba(13, 11, 13, 0) 44%,
+          rgba(13, 11, 13, 0.40) 58%,
+          rgba(13, 11, 13, 0.85) 75%,
+          #0d0b0d 96%
+        );
+      }
+
       .hero-container-align {
         justify-content: center;
-        padding-top: 100px;
+        align-items: flex-end;
+        padding: 0 16px;
+        padding-top: 0;
+        width: 100%;
       }
 
       .hero-scroll-content {
         max-width: 360px;
-        min-height: 380px;
+        width: 100%;
+        min-height: 330px;
+        position: relative;
+        margin: 0 auto;
       }
 
       .hero-scroll-step {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
         align-items: center;
         text-align: center;
+        left: 0;
+        right: 0;
+      }
+
+      .hero-scroll-step.active {
+        transform: translateY(0);
+      }
+
+      .hero-pill-badge {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 6px;
+        padding: 4px 12px;
+      }
+
+      .hero-script-tag {
+        font-size: 1.85rem;
+        line-height: 1.1;
+        margin-bottom: 4px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.95);
       }
 
       .hero-title {
         font-size: 1.85rem;
-        line-height: 1.15;
-        margin-bottom: 12px;
-      }
-
-      .hero-script-tag {
-        font-size: 2.2rem;
+        line-height: 1.12;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.95);
       }
 
       .hero-desc {
-        font-size: 0.85rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size: 0.84rem;
+        line-height: 1.46;
+        margin-bottom: 16px;
+        max-width: 330px;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.95);
       }
 
       .hero-actions {
         flex-direction: column;
+        align-items: center;
         width: 100%;
         gap: 10px;
+        margin: 0 auto;
       }
 
       .btn-hero-primary,
@@ -1538,7 +1618,7 @@
       }
 
       .hero-scroll-indicator {
-        bottom: 14px;
+        display: none;
       }
 
       /* Barra de Pilares: Carrusel Horizontal (Scroll Snap en 1 sola fila) */
@@ -1760,6 +1840,9 @@
           alt="Dp Beauty Nails Apartadó"
           class="canvas-poster-img"
         >
+
+        <!-- Capa de degradado aterciopelado para máxima legibilidad sin opacar el video -->
+        <div class="canvas-gradient-overlay"></div>
 
         <!-- Contenido Editorial con Storytelling en 3 Pasos -->
         <div class="container hero-container-align">
@@ -2283,17 +2366,17 @@
 
       function handleHeaderVisibility() {
         const currentScrollY = window.scrollY;
-        const heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 600;
+        const heroBottom = heroSection ? (heroSection.offsetTop + heroSection.offsetHeight - 120) : 1200;
 
-        // Cambiar apariencia a fondo claro al salir del Hero Canvas oscuro
-        if (currentScrollY > 120) {
+        // Cambiar apariencia a fondo claro solo al salir por completo del Hero Canvas oscuro
+        if (currentScrollY > heroBottom) {
           header.classList.add('scrolled-light');
         } else {
           header.classList.remove('scrolled-light');
         }
 
-        // Regla: En el Hero permanece visible; en secciones inferiores aplica auto-hide al bajar
-        if (currentScrollY < heroBottom - 150) {
+        // Regla: En el Hero permanece siempre visible; en secciones inferiores aplica auto-hide al bajar
+        if (currentScrollY < heroBottom) {
           header.classList.remove('header-hidden');
         } else {
           if (currentScrollY > lastScrollY && currentScrollY > 200) {
@@ -2315,105 +2398,80 @@
       const posterImg = document.getElementById('canvas-poster-fallback');
       const scrollSection = document.querySelector('.hero-scroll-section');
 
-      const TOTAL_FRAMES = 72;
-      const isMobile = window.innerWidth < 768;
-      const framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+      const TOTAL_FRAMES = 74;
+      let isMobile = window.innerWidth < 768;
 
-      if (posterImg) {
-        posterImg.src = `${framesFolder}/poster.webp`;
+      let images = [];
+      let loadedCount = 0;
+      let currentFrameIndex = -1;
+      let targetFrameIndex = 0;
+      let initialFrameDrawn = false;
+
+      function getFrameFolder() {
+        return isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
       }
 
-      const getFrameUrl = (index) => {
+      function getFrameUrl(index) {
         const pad = String(index).padStart(4, '0');
-        return `${framesFolder}/frame-${pad}.webp`;
-      };
-
-      const images = [];
-      let loadedCount = 0;
-      let currentFrameIndex = 0;
-      let targetFrameIndex = 0;
-      let rafId = null;
-      let initialFrameDrawn = false;
+        return `${getFrameFolder()}/frame-${pad}.webp`;
+      }
 
       function resizeCanvas() {
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = window.innerWidth * dpr;
-        canvas.height = window.innerHeight * dpr;
-        if (images[currentFrameIndex] && images[currentFrameIndex].complete) {
+        const rect = canvas.parentElement ? canvas.parentElement.getBoundingClientRect() : { width: window.innerWidth, height: window.innerHeight };
+        canvas.width = (rect.width || window.innerWidth) * dpr;
+        canvas.height = (rect.height || window.innerHeight) * dpr;
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
+
+        if (currentFrameIndex >= 0 && images[currentFrameIndex] && images[currentFrameIndex].complete) {
           renderFrame(currentFrameIndex);
+        } else if (images[0] && images[0].complete) {
+          renderFrame(0);
         }
       }
-      window.addEventListener('resize', resizeCanvas, { passive: true });
 
-      // Renderizado con escala 0.90 para encuadre holgado (sin cortes en bordes)
+      // Renderizado 100% full-cover edge-to-edge (sin barras negras ni encogimiento artificial)
       function renderFrame(index) {
         const img = images[index];
-        if (!img || !img.complete) return false;
+        if (!img || !img.complete || img.naturalWidth === 0) return false;
 
         const cw = canvas.width;
         const ch = canvas.height;
         const iw = img.naturalWidth || img.width;
         const ih = img.naturalHeight || img.height;
 
-        // Fondo base noir
+        // Base noir profunda
         ctx.fillStyle = '#0d0b0d';
         ctx.fillRect(0, 0, cw, ch);
 
-        const baseScale = Math.max(cw / iw, ch / ih);
-        const scale = baseScale * 0.90; // Holgura estética 10%
+        const scale = Math.max(cw / iw, ch / ih);
         const nw = iw * scale;
         const nh = ih * scale;
-
-        const isMob = window.innerWidth < 768;
-        const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.04);
-        const ny = isMob ? ((ch - nh) / 2) - 10 : ((ch - nh) / 2) + 15;
+        const nx = (cw - nw) / 2;
+        const ny = (ch - nh) / 2;
 
         ctx.drawImage(img, nx, ny, nw, nh);
 
-        // Ocultar poster solo cuando el primer cuadro ya se dibujó físicamente
+        // Ocultar poster suavemente solo cuando el primer cuadro ya se dibujó físicamente
         if (!initialFrameDrawn) {
           initialFrameDrawn = true;
           if (posterImg) {
             posterImg.classList.add('loaded');
-            posterImg.style.display = 'none';
+            setTimeout(() => { posterImg.style.display = 'none'; }, 350);
           }
         }
         return true;
       }
 
-      function preloadImages() {
-        const loadPromises = [];
-
-        for (let i = 1; i <= TOTAL_FRAMES; i++) {
-          const p = new Promise((resolve) => {
-            const img = new Image();
-            img.src = getFrameUrl(i);
-            const frameIdx = i - 1;
-
-            img.onload = () => {
-              loadedCount++;
-              if (!initialFrameDrawn) {
-                if (frameIdx === currentFrameIndex) {
-                  renderFrame(currentFrameIndex);
-                } else if (images[currentFrameIndex] && images[currentFrameIndex].complete) {
-                  renderFrame(currentFrameIndex);
-                }
-              }
-              resolve();
-            };
-            img.onerror = () => {
-              resolve();
-            };
-            images.push(img);
-          });
-          loadPromises.push(p);
-        }
-
-        Promise.all(loadPromises).then(() => {
-          if (!initialFrameDrawn) {
+      function renderLoop() {
+        if (targetFrameIndex !== currentFrameIndex) {
+          if (images[targetFrameIndex] && images[targetFrameIndex].complete) {
+            currentFrameIndex = targetFrameIndex;
             renderFrame(currentFrameIndex);
           }
-        });
+        }
+        requestAnimationFrame(renderLoop);
       }
 
       function updateScrollProgress() {
@@ -2429,16 +2487,6 @@
           TOTAL_FRAMES - 1,
           Math.floor(progress * TOTAL_FRAMES)
         );
-
-        if (targetFrameIndex !== currentFrameIndex) {
-          currentFrameIndex = targetFrameIndex;
-          if (!rafId) {
-            rafId = requestAnimationFrame(() => {
-              renderFrame(currentFrameIndex);
-              rafId = null;
-            });
-          }
-        }
 
         // Alternancia de los 3 pasos editoriales según el scroll
         const steps = document.querySelectorAll('.hero-scroll-step');
@@ -2458,10 +2506,48 @@
         }
       }
 
+      function preloadImages() {
+        images = [];
+        loadedCount = 0;
+        initialFrameDrawn = false;
+        isMobile = window.innerWidth < 768;
+
+        if (posterImg) {
+          posterImg.src = `${getFrameFolder()}/poster.webp`;
+          posterImg.style.display = 'block';
+          posterImg.classList.remove('loaded');
+        }
+
+        for (let i = 1; i <= TOTAL_FRAMES; i++) {
+          const img = new Image();
+          img.src = getFrameUrl(i);
+          const frameIdx = i - 1;
+
+          img.onload = () => {
+            loadedCount++;
+            if (!initialFrameDrawn && frameIdx === 0) {
+              currentFrameIndex = 0;
+              renderFrame(0);
+            }
+          };
+          images.push(img);
+        }
+      }
+
       window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      window.addEventListener('resize', () => {
+        const newMobile = window.innerWidth < 768;
+        if (newMobile !== isMobile) {
+          isMobile = newMobile;
+          preloadImages();
+        }
+        resizeCanvas();
+      }, { passive: true });
 
       resizeCanvas();
       preloadImages();
+      requestAnimationFrame(renderLoop);
+      updateScrollProgress();
 
       // 3. AUTO-SCROLL SUAVE PARA PILARES EN MÓVIL
       const pillarsCarousel = document.getElementById('pillars-carousel');
