@@ -159,8 +159,11 @@
       width: 100%;
       z-index: 1000;
       padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
-      background: linear-gradient(180deg, rgba(14, 13, 13, 0.92) 0%, rgba(14, 13, 13, 0.72) 80%, transparent 100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, border-color 0.3s ease;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .header-sticky-wrapper.scrolled {
@@ -209,6 +212,7 @@
       color: var(--text-dark-primary);
       line-height: 1.1;
       white-space: nowrap;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .brand-title span {
@@ -224,6 +228,7 @@
       color: var(--color-gold-light);
       margin-top: 3px;
       white-space: nowrap;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .main-nav {
@@ -240,6 +245,7 @@
       color: var(--text-dark-secondary);
       position: relative;
       padding: 6px 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .nav-link::after {
@@ -1355,6 +1361,7 @@
       .canvas-sticky-wrapper {
         align-items: flex-end;
         justify-content: center;
+        min-height: 720px !important;
       }
 
       .canvas-sticky-wrapper::after {
@@ -1370,45 +1377,70 @@
 
       .hero-container-align {
         justify-content: center;
+        align-items: flex-end;
+        padding: 0 16px;
         padding-top: 0;
-        padding-bottom: 36px;
+        padding-bottom: 0;
+        width: 100%;
       }
 
       .hero-scroll-content {
         max-width: 360px;
-        min-height: 360px;
+        width: 100%;
+        min-height: 330px;
+        position: relative;
+        margin: 0 auto;
         text-align: center;
       }
 
       .hero-scroll-step {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
         align-items: center;
         text-align: center;
+        left: 0;
+        right: 0;
+      }
+
+      .hero-scroll-step.active {
+        transform: translateY(0);
       }
 
       .hero-script-tag {
-        font-size: 2.2rem;
+        font-size: 1.85rem;
+        line-height: 1.1;
+        margin-bottom: 4px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-eyebrow {
         font-size: 0.65rem;
         letter-spacing: 1.5px;
+        margin-bottom: 6px;
       }
 
       .hero-title {
         font-size: 1.85rem;
         line-height: 1.12;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
       .step-1 .hero-title {
-        margin-bottom: 18px;
+        margin-bottom: 8px;
       }
 
       .hero-desc {
         font-size: 0.84rem;
-        line-height: 1.5;
-        margin-bottom: 18px;
+        line-height: 1.46;
+        margin-bottom: 16px;
+        max-width: 330px;
         text-align: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-actions {
@@ -2261,7 +2293,7 @@
         preloadImages();
       })();
 
-      // 2. Smart Header: Siempre visible en Hero; auto-hide en secciones inferiores al descender
+      // 2. Smart Header: Transparente y visible en Hero; fondo oscuro y auto-hide al salir del Hero
       let lastScrollY = window.pageYOffset;
       const header = document.getElementById('stickyHeader');
       const scrollSection = document.querySelector('.hero-scroll-section');
@@ -2271,14 +2303,14 @@
         const currentScrollY = window.pageYOffset;
         const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight) : 700;
 
-        // Dentro del Hero: permanece siempre visible
-        if (currentScrollY < heroBottom - 100) {
+        // Dentro del Hero: permanece siempre visible y 100% transparente
+        if (currentScrollY < heroBottom - 120) {
           header.classList.remove('header-hidden');
-          header.classList.toggle('scrolled', currentScrollY > 40);
+          header.classList.remove('scrolled');
         } else {
-          // Fuera del Hero: auto-hide al descender, reaparece al subir
+          // Fuera del Hero: adquiere fondo oscuro con blur; auto-hide al descender, reaparece al subir
           header.classList.add('scrolled');
-          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 120) {
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 100) {
             header.classList.add('header-hidden');
           } else {
             header.classList.remove('header-hidden');

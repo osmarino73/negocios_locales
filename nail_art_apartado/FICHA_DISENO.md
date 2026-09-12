@@ -30,10 +30,12 @@ Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en A
 
 ## 🎬 Sistema de Video Scroll Scrubbing en Canvas HTML5 (`#inicio`)
 
-- **Fuente Original**: `Model_showing_fingernails_1080p_202609101237.mp4` (1920x1080, 24 fps, 4.0s).
+- **Fuentes Originales Específicas**: 
+  - Desktop: `nail_art_web.mp4` (1920x1080, 24 fps, 4.0s).
+  - Mobile: `nail_art_movil.mp4` (1080x1920 vertical nativo 9:16, 24 fps, 4.0s).
 - **Extracción de Secuencia**:
-  - **Desktop (16:9)**: 74 fotogramas WebP en `public/frames/desktop/` (1920x1080 px, Q85, 4.75 MB en total, ~64.2 KB/frame).
-  - **Mobile (9:16)**: 74 fotogramas WebP en `public/frames/mobile/` (720x1280 px, Q76, 1.90 MB en total, ~25.7 KB/frame) con encuadre simétrico en $x=656$: `crop=608:1080:656:0,scale=720:1280`. Mantiene las uñas esculpidas centradas en la Toma 1 (0-1.1s) y el rostro radiante de la modelo con sus manos junto a las mejillas en la Toma 2 (1.1-4.0s).
+  - **Desktop (16:9)**: 74 fotogramas WebP en `public/frames/desktop/` (1920x1080 px, Q85) + `poster.webp`.
+  - **Mobile (9:16 Vertical Nativo)**: 74 fotogramas WebP en `public/frames/mobile/` (720x1280 px, Q76) + `poster.webp` nativo sin recortes artificiales.
 - **Arquitectura de Render**:
   - Sección contenedora de `300vh` con wrapper `position: sticky; top: 0; height: 100vh; overflow: hidden;`.
   - Soporte de alta resolución **High-DPI Retina** (`window.devicePixelRatio` hasta 2x).
@@ -46,6 +48,8 @@ Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en A
 
 1. **Smart Header / Navbar Inteligente**:
    - Logotipo tipográfico puro (sin emojis ni íconos decorativos).
+   - **Navbar 100% transparente en el Hero**: `background: transparent; border-bottom: 1px solid transparent; backdrop-filter: none;` con `text-shadow` de alto contraste en branding y enlaces.
+   - Activa fondo oscuro obsidian con `backdrop-filter: blur(14px)` únicamente al descender más allá del Hero (`currentScrollY > heroBottom - 120`).
    - Permanente y visible durante todo el recorrido del Hero Canvas; auto-hide suave al descender en secciones inferiores.
    - En móvil (< 768px): Logotipo a la izquierda y botón conciso **«Agendar»** a la derecha. Menú hamburguesa deshabilitado.
    - Soporte de `padding-top: env(safe-area-inset-top, 0px)`.
