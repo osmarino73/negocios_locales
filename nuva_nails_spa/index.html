@@ -1960,44 +1960,48 @@
       if (canvas && scrollSection) {
         const ctx = canvas.getContext('2d', { alpha: false });
         const TOTAL_FRAMES = 74;
-        const images = [];
+        let isMobile = window.innerWidth < 768;
+        let images = [];
         let loadedCount = 0;
-        let currentFrameIndex = 0;
+        let currentFrameIndex = -1;
         let targetFrameIndex = 0;
-        let isTicking = false;
+        let initialFrameDrawn = false;
+
+        function getFrameFolder() {
+          return isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+        }
 
         const getFrameUrl = (index) => {
-          const isMobile = window.innerWidth < 768;
-          const folder = isMobile ? 'mobile' : 'desktop';
           const numStr = String(index).padStart(4, '0');
-          return `public/frames/${folder}/frame-${numStr}.webp`;
+          return `${getFrameFolder()}/frame-${numStr}.webp`;
         };
 
         function setCanvasDimensions() {
-          const dpr = window.devicePixelRatio || 1;
+          const dpr = Math.min(window.devicePixelRatio || 1, 2);
           const w = window.innerWidth;
           const h = window.innerHeight;
           canvas.width = Math.round(w * dpr);
           canvas.height = Math.round(h * dpr);
           canvas.style.width = w + 'px';
           canvas.style.height = h + 'px';
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = 'high';
 
-          if (images[currentFrameIndex] && images[currentFrameIndex].complete) {
+          if (currentFrameIndex >= 0 && images[currentFrameIndex] && images[currentFrameIndex].complete) {
             renderFrame(currentFrameIndex);
+          } else if (images[0] && images[0].complete) {
+            renderFrame(0);
           }
         }
 
         function renderFrame(index) {
           const img = images[index];
-          if (!img || !img.complete) return;
+          if (!img || !img.complete || img.naturalWidth === 0) return false;
 
           const cw = canvas.width;
           const ch = canvas.height;
           const iw = img.naturalWidth || img.width;
           const ih = img.naturalHeight || img.height;
-
-          ctx.imageSmoothingEnabled = true;
-          ctx.imageSmoothingQuality = 'high';
 
           ctx.fillStyle = '#0f0e0e';
           ctx.fillRect(0, 0, cw, ch);
@@ -2006,52 +2010,34 @@
           const nw = iw * scale;
           const nh = ih * scale;
 
-          const isMob = window.innerWidth < 768;
           let nx = (cw - nw) / 2;
-          if (!isMob && nw > cw) {
-            // En desktop se desplaza ligeramente para balancear con el bloque de texto izquierdo
+          if (!isMobile && nw > cw) {
             nx = Math.min(0, Math.max(cw - nw, nx + (cw * 0.04)));
           }
           const ny = (ch - nh) / 2;
 
           ctx.drawImage(img, nx, ny, nw, nh);
-        }
 
-        function preloadImages() {
-          const loadPromises = [];
-
-          for (let i = 1; i <= TOTAL_FRAMES; i++) {
-            const p = new Promise((resolve) => {
-              const img = new Image();
-              img.src = getFrameUrl(i);
-              img.onload = () => {
-                loadedCount++;
-                if (loadedCount === 1) {
-                  currentFrameIndex = 0;
-                  renderFrame(0);
-                }
-                if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
-                  if (posterImg) {
-                    posterImg.classList.add('loaded');
-                    posterImg.style.display = 'none';
-                  }
-                }
-                resolve();
-              };
-              img.onerror = () => {
-                resolve();
-              };
-              images.push(img);
-            });
-            loadPromises.push(p);
-          }
-
-          Promise.all(loadPromises).then(() => {
+          // Ocultar poster de reserva suavemente SOLO cuando el frame se haya pintado físicamente en el canvas
+          if (!initialFrameDrawn) {
+            initialFrameDrawn = true;
             if (posterImg) {
               posterImg.classList.add('loaded');
-              posterImg.style.display = 'none';
+              setTimeout(() => { posterImg.style.display = 'none'; }, 350);
             }
-          });
+          }
+          return true;
+        }
+
+        function renderLoop() {
+          if (targetFrameIndex !== currentFrameIndex || !initialFrameDrawn) {
+            const checkIndex = (!initialFrameDrawn && images[0]?.complete) ? 0 : targetFrameIndex;
+            if (images[checkIndex] && images[checkIndex].complete) {
+              currentFrameIndex = checkIndex;
+              renderFrame(currentFrameIndex);
+            }
+          }
+          requestAnimationFrame(renderLoop);
         }
 
         function updateScrollProgress() {
@@ -2076,43 +2062,52 @@
               heroStep1.classList.remove('active');
             }
           }
-
-          requestTick();
         }
 
-        function requestTick() {
-          if (!isTicking) {
-            requestAnimationFrame(() => {
-              if (currentFrameIndex !== targetFrameIndex) {
-                currentFrameIndex = targetFrameIndex;
-                renderFrame(currentFrameIndex);
+        function preloadImages() {
+          images = [];
+          loadedCount = 0;
+          initialFrameDrawn = false;
+          isMobile = window.innerWidth < 768;
+
+          if (posterImg) {
+            posterImg.src = `${getFrameFolder()}/poster.webp`;
+            posterImg.style.display = 'block';
+            posterImg.classList.remove('loaded');
+          }
+
+          for (let i = 1; i <= TOTAL_FRAMES; i++) {
+            const img = new Image();
+            img.src = getFrameUrl(i);
+            const frameIdx = i - 1;
+
+            img.onload = () => {
+              loadedCount++;
+              if (!initialFrameDrawn && frameIdx === 0) {
+                currentFrameIndex = 0;
+                renderFrame(0);
               }
-              isTicking = false;
-            });
-            isTicking = true;
+            };
+            img.onerror = () => {
+              // fallback silencioso
+            };
+            images.push(img);
           }
         }
 
-        setCanvasDimensions();
-        preloadImages();
-
-        let isMobile = window.innerWidth < 768;
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
         window.addEventListener('resize', () => {
-          const mobCheck = window.innerWidth < 768;
-          if (mobCheck !== isMobile) {
-            isMobile = mobCheck;
-            images.forEach((img, idx) => {
-              img.src = getFrameUrl(idx + 1);
-            });
-            if (posterImg) {
-              const folder = isMobile ? 'mobile' : 'desktop';
-              posterImg.src = `public/frames/${folder}/poster.webp`;
-            }
+          const newMobile = window.innerWidth < 768;
+          if (newMobile !== isMobile) {
+            isMobile = newMobile;
+            preloadImages();
           }
           setCanvasDimensions();
         }, { passive: true });
 
-        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+        setCanvasDimensions();
+        preloadImages();
+        requestAnimationFrame(renderLoop);
         updateScrollProgress();
       }
 
