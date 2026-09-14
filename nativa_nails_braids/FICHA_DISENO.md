@@ -64,7 +64,7 @@ Documentación técnica y tokens de diseño para **Nativa Nails & Braids** en Ap
    - Fotografía inmersiva al 100% (`aspect-ratio: 3/4`), degradado inferior aterciopelado (38% superior transparente), precio claro y botón minimalista `AGENDAR ➔`.
    - Incluye **Trenzas & Braids Studio** ($90.000 COP) destacando la especialidad afro/braids del salón.
 5. **`#nosotros` (Sobre Nosotros & Especialistas)**:
-   - Bloque Editorial con foto de salón de manicura real (`photo-1527799820374-dcf8d9d4a388`), badge flotante VIP, titular de impacto y 4 métricas de autoridad (años de exp, clientas felices, técnica y calificación 5.0★).
+   - Bloque Editorial con foto de salón de manicura real (`photo-1519014816548-bf5fe059798b`), badge flotante VIP, titular de impacto y 4 métricas de autoridad (años de exp, clientas felices, técnica y calificación 5.0★).
    - Bloque de Especialistas: **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Vertical (3:4.2)**; en **móvil (< 768px)** carrusel horizontal deslizable (*Scroll Snap*) con tarjetas de 255px y efecto «Peek» (asoman 70-100px del siguiente perfil).
 6. **`#ubicacion` (Mapa Georreferenciado & Contacto)**:
    - Tarjeta de lujo continuo con dirección (Cra. 97 #97 - 21, Apartadó), horarios, teléfono y Google Maps embebido oficial (`z=16`).

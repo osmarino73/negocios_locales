@@ -18,9 +18,9 @@ Aunque se tome como referencia visual una imagen para clonar su paleta de colore
 4. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales — Estándar Editorial)**:
    - **Bloque Editorial Sobre Nosotros (`.experience-layout`)**: Grid a 2 columnas con fotografía del salón/ambiente (`.salon-image-showcase`) con badge flotante VIP (`.experience-floating-badge`), titular editorial de impacto, descripción cálida y fila de 4 métricas de autoridad (`.metrics-row`: años exp, clientes atendidos, técnica/filosofía, calificación 5★; en 2 columnas en móvil) y botón de contacto.
      - **Regla Mandatoria de Imagen de Ambiente Coherente con el Nicho**: Queda terminantemente prohibido reutilizar imágenes genéricas de sillas de peluquería para todos los rubros. Cada categoría debe utilizar una fotografía de ambiente representativa:
-       - *Uñas / Manicura / Pedicura*: Fotografía de salón de uñas con mesas de manicura, esmaltes y lámparas UV (`photo-1527799820374-dcf8d9d4a388` o `photo-1519014816548-bf5fe059798b`).
+       - *Uñas / Manicura / Pedicura*: Fotografía real de salón de uñas con mesas de manicura, manicurista en atención, esmaltes y lámparas UV (`https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg`, `photo-1604654894610-df63bc536371` o `photo-1519014816548-bf5fe059798b`). **Queda terminantemente prohibido usar `photo-1527799820374-dcf8d9d4a388` en uñas**, ya que es una fotografía de planchas y secadores de cabello (exclusivo para peluquerías).
        - *Spa / Masajes / Faciales*: Cabina de relajación zen, camillas con toallas y ambientación aromática (`photo-1600334129128-685c5582fd35` o `photo-1596178065887-1198b6148b2b`).
-       - *Peluquería / Rizos / Color*: Tocadores y estaciones de peinado (`photo-1560066984-138dadb4c035`).
+       - *Peluquería / Rizos / Color*: Tocadores, estaciones de peinado, secadores y planchas (`photo-1560066984-138dadb4c035` o `photo-1527799820374-dcf8d9d4a388`).
        - *Barbería*: Estaciones de corte clásicas con cuero y madera (`photo-1585747860715-2ba37e788b70`).
     - **Bloque Nuestros Profesionales (`.team-grid` — Grid 4 Columnas / Retrato Editorial Full-Bleed)**: Grid de **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Full-Bleed (3:4.2)** con fotografías en plano medio de las terapeutas/estilistas, degradado inferior aterciopelado, línea de acento cobre, nombre en tipografía display blanca, rol en tono cálido, calificación 5★ y enlace minimalista `AGENDAR ➔` directo a WhatsApp. **En móvil (< 768px): Obligatoriamente Carrusel Horizontal Deslizable (*Scroll Snap*) en una sola fila fluida** (`display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; gap: 16px;`) con tarjetas editoriales grandes (`flex: 0 0 255px; aspect-ratio: 3/4.2;`) y efecto «Peek» (asoman 70-100px del siguiente profesional), eliminando el scroll vertical excesivo y maximizando el impacto fotográfico.
 5. **`#ubicacion` (Mapa & Contacto)**:
@@ -42,6 +42,17 @@ En todo proyecto adaptado a partir de una **imagen de referencia**, se debe clon
    - Replicar el estilo de botones, acentos tonales, sombras suaves, divisores con diamantes o líneas finas, adaptados a la estructura oficial de secciones.
 3. **Paleta de Colores Forense**:
    - Extraer con exactitud los códigos HEX/HSL reales de la referencia (fondos oscuros obsidian/ébano, cremas marfil, acentos oro cálido/camel rose) y prohibir la invención de colores discordantes.
+4. **Unicidad Estricta del Color Principal & Prohibición de Colores Hardcoded**:
+   - **Consumo Obligatorio de Tokens CSS**: Todos los elementos que expresen el acento de marca o tono cromático del negocio **deben consumir estrictamente la variable CSS oficial del proyecto** (ej. `var(--color-accent)` o `var(--color-camel)`).
+   - **Queda terminantemente prohibido quemar valores HEX/RGB (*hardcoded*)** en elementos que representen la identidad o acentos del negocio, en especial:
+     - Firma caligráfica manuscrita (`.hero-script-tag`, `.section-script-eyebrow`, `.hero-script`).
+     - Énfasis itálico de titulares display (`.hero-title em`, `.section-title em`, `.experience-title em`).
+     - Subtítulo del logotipo de marca (`.brand-subtitle`).
+     - Líneas decorativas o de acento en tarjetas (`.service-card-accent-line`, `.team-card-accent-line`, y sus estados `:hover`).
+     - Precios destacados en tarjetas de servicios (`.service-card-price`).
+     - Rol de las especialistas/profesionales (`.team-role`).
+     - Enlaces minimalistas de agendamiento y micro-interacciones hover (`.btn-card-book-minimal`, `.btn-hero-minimal-link:hover`).
+   - **Propagación Dinámica Instantánea**: Esta regla garantiza que si el usuario o cliente cambia el valor del color primario en `:root` (ej. `--color-accent: #...;`), **el 100% de los botones, firmas script, subtítulos, roles y textos destacados se transformen al unísono de forma automática e impecable**, sin dejar textos o acentos desfasados con colores heredados de plantillas o valores fijos.
 
 ---
 
@@ -63,24 +74,29 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
    - **Estándar Mandatorio de Videos Hero (Canvas Scrubbing)**: Todos los videos sitúan al modelo en el **centro de la segunda mitad** (mitad derecha, $x \approx 1440$ en video 1920x1080), dejando la primera mitad (izquierda) despejada para la tipografía editorial en escritorio. En **móvil (9:16)**, la extracción FFmpeg debe calibrarse obligatoriamente con `crop=ih*9/16:ih:1140:0,scale=720:1280` para centrar simétricamente a la modelo en la pantalla vertical del celular.
    - Capa posterior `.hero-bg-cover` o Canvas con imagen/video a la derecha (`width: 70% - 72%` en estático, 100% full-bleed en Canvas).
    - **Vista de Escritorio (> 768px)**:
-     - `.hero-fullwidth-section`: `min-height: 640px; display: flex; align-items: center;`
-     - **Prohibición de `mask-image` sobre el contenedor de imagen**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
-     - **Curva de Degradado Orgánica y Aterciopelada Calibrada (Curva Eased de 8 Paradas en `.hero-bg-overlay`)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo multi-parada con luminosidad optimizada (reducción del 10% en sombras extensas):
-       ```css
-       background: linear-gradient(
-         90deg, 
-         #colorBase 0%, 
-         #colorBase 25%, 
-         rgba(..., 0.96) 32%, 
-         rgba(..., 0.8) 40%, 
-         rgba(..., 0.5) 50%, 
-         rgba(..., 0.2) 62%, 
-         rgba(..., 0.05) 74%, 
-         transparent 84%
-       );
-       ```
-       Garantiza 100% de contraste y legibilidad para el texto a la izquierda (0% a 25%) y una revelación sedosa y luminosa hacia la derecha, dejando la fotografía nítida, radiante y sin veladuras negras excesivas a partir del 84%.
-     - `padding-top: 75px - 85px` en el contenedor para evitar que el navbar tape los titulares.
+      - **Anclaje Inferior Mandatorio (`align-items: flex-end`)**: `.hero-fullwidth-section` o `.hero-container-align`: `min-height: 640px; height: 100%; display: flex; align-items: flex-end; justify-content: flex-start; padding-bottom: clamp(48px, 9vh, 85px);`.
+      - **Prohibición Estricta del Centrado Vertical Rígido**: Queda terminantemente prohibido centrar el texto al medio (`top: 50%; transform: translateY(-50%)`) ya que sitúa los textos frente a los ojos, frente y peinado del modelo. Las capas de texto (`.hero-scroll-step` o `.hero-text-block`) deben anclarse a la base (`bottom: 0; left: 0;`).
+      - **Regla del 60% Superior Despejado**: Al menos el **60% superior de la pantalla debe permanecer 100% limpio y libre de textos**, dejando que el rostro, cabello, mirada o producto luzcan con total nitidez e impacto editorial.
+      - **Prohibición de `mask-image` sobre el contenedor de imagen**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
+      - **Doble Degradado Orgánico Aterciopelado con Protección Inferior (`.hero-bg-overlay` o `.canvas-gradient-overlay`)**:
+        Se combina una capa suave vertical de base (180deg) con la curva eased horizontal (90deg) de 8 paradas:
+        ```css
+        background: 
+          linear-gradient(180deg, transparent 65%, rgba(..., 0.55) 100%),
+          linear-gradient(
+            90deg, 
+            #colorBase 0%, 
+            #colorBase 25%, 
+            rgba(..., 0.96) 32%, 
+            rgba(..., 0.8) 40%, 
+            rgba(..., 0.5) 50%, 
+            rgba(..., 0.2) 62%, 
+            rgba(..., 0.05) 74%, 
+            transparent 84%
+          );
+        ```
+        Garantiza 100% de contraste y legibilidad para los textos en el tercio inferior sin oscurecer en lo más mínimo el rostro de la modelo arriba.
+      - `padding-top: 75px - 85px` en el contenedor para evitar que el navbar tape los titulares en vistas intermedias.
    - **Móvil Calibrado Obligatorio (< 768px)**:
      - **Regla Mandatoria**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
      - `.hero-bg-img`: `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` dejando despejado el tercio superior para la modelo con nitidez total.
@@ -168,7 +184,22 @@ Para cualquier proyecto de salones de belleza, uñas, spas, barberías o estéti
 6. **Triángulo de Contexto IA**:
    - Cada carpeta debe incluir `DATOS_NEGOCIO.json`, `FICHA_DISENO.md`, `AGENTS.md` e `index.html`.
 
-7. **Copywriting Cercano, Natural y Directo (Cero Tecnicismos Pretenciosos)**:
+7. **Copywriting Cercano, Natural y Directo & Jerarquía Minimalista del Hero**:
+   - **Jerarquía Tipográfica Editorial Oficial del Hero**:
+     - **Estructura Oficial en el Tercio Inferior (Máxima Sofisticación & Rostro Despejado)**:
+       1. **Firma Caligráfica de Marca (`.hero-script-tag`)**: Fuente manuscrita (*Alex Brush*, *Great Vibes* o similar según referencia), en tamaño compacto (`clamp(2rem, 3.4vw, 2.75rem); line-height: 1.05; margin-bottom: 2px;`) y tono cálido camel, aportando la identidad de firma o sello de autor (ej. *«Nail Spa & Esthetic»*, *«Belleza que Perdura»*).
+       2. **Eyebrow Técnico (`.hero-eyebrow`)**: En sans-serif limpia con espaciado amplio (`letter-spacing: 2px - 2.5px; font-size: 0.68rem - 0.70rem; margin-bottom: 10px;`), indicando con sobriedad la `CATEGORÍA · CIUDAD` (ej. `ESTUDIO DE UÑAS · APARTADÓ`, `BARBERÍA & CORTE · TURBO`, `SALÓN DE BELLEZA · APARTADÓ`).
+       3. **Titular Editorial Display (`.hero-title`)**: Tipografía display (Playfair / Cormorant) en *Title Case* o *Sentence Case* fluido (`clamp(2.1rem, 3.6vw, 3.2rem); font-weight: 600; line-height: 1.12; margin-bottom: 18px;`), con la segunda frase en cursiva cálida (`em`). Prohibido titular en mayúsculas sostenidas agresivas con puntos en medio.
+       4. **Acciones Asimétricas y Minimalistas**:
+          - Un botón principal llamativo (`.btn-primary`, ej. `Agendar Cita`).
+          - Un enlace minimalista limpio (`.btn-hero-minimal-link` con micro-desplazamiento de flecha `Ver Servicios ➔`), sustituyendo al segundo botón grueso tipo pastilla.
+       5. **Insignia de Confianza Compacta**: Badge translúcido (`.hero-proof-badge`), sin saturar el tercio inferior.
+     - **En Paso 2 de Scroll Scrubbing**:
+       - Firma script complementaria (ej. *«Belleza que Perdura»*).
+       - Eyebrow técnico refinado (ej. `TÉCNICA & CUIDADO PRÉMIUM`).
+       - Titular corto y sugerente (ej. `Detalles que marcan la diferencia.`).
+       - Párrafo descriptivo sintético (máximo 1-2 líneas directas a los servicios estrella, sin tecnicismos pesados).
+       - Botón `Agendar Cita` + enlace limpio `Conocer Servicios ➔`.
    - **Prohibición de Lenguaje Abstracto o Pomposo**: Queda **prohibido** el uso de frases sobrecargadas o tecnicismos como *«de autor»*, *«experiencia sensorial»*, *«protocolos visagistas»*, *«alta costura capilar»*, etc.
    - **Tono Claro, Cálido y Enfocado en el Negocio Local**: El copy debe ser directo, natural y persuasivo, explicando con sencillez lo que la clienta va a recibir:
      - *Hero de Rizos*: «Cuida y define la belleza natural de tus rizos en Apartadó. Cortes especializados, hidratación profunda y peinados con atención personalizada.»

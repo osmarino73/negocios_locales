@@ -120,5 +120,20 @@
         "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
       }
     ]
+  },
+  "about_image_url": "https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg",
+  "video_scroll": {
+    "origen": ".agents/document/nail-negra-blanca",
+    "video_desktop": "Woman_posing_for_beauty_campaign_20260913145627.mp4",
+    "video_mobile": "Create_promotional_nail_design_v…_20260913150408.mp4",
+    "frames_desktop_total": 74,
+    "frames_mobile_total": 74,
+    "fps": 18,
+    "duracion_segundos": 4.0,
+    "formato": "image/webp",
+    "calidad_desktop": "Q85 (1920x1080)",
+    "calidad_mobile": "Q76 (720x1280)",
+    "overlay": "canvas-gradient-overlay (doble degradado aterciopelado)",
+    "narrativa": "2 pasos editoriales secuenciales (50% / 50%) con anclaje inferior y 60% superior despejado"
   }
 }

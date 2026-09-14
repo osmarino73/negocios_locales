@@ -55,8 +55,9 @@ Documentación técnica y tokens de diseño para **Dp Beauty Nails** en Apartad�
    - En móvil (< 768px): Exclusivamente Logotipo a la izquierda y Botón «Agendar» a la derecha. Cero menú hamburguesa innecesario.
    - Comportamiento sticky inteligente: Visible en el Hero; auto-hide al bajar en secciones inferiores y reaparición al subir.
 2. **`#inicio` (Hero Canvas Video Scrubbing)**:
-   - Contenedor interactivo 300vh con Canvas 100dvh.
-   - 3 capítulos editoriales con sombras tipográficas legibles (`text-shadow`) y CTA directo a WhatsApp.
+   - Contenedor interactivo 300vh con Canvas 100dvh y anclaje inferior (`align-items: flex-end`) con regla del 60% superior despejado.
+   - Jerarquía tipográfica oficial: Firma caligráfica manuscrita (`.hero-script-tag`), eyebrow técnico (`.hero-eyebrow`), titular editorial display (`.hero-title`), acciones asimétricas (`.btn-hero-primary` + enlace minimalista `.btn-hero-minimal-link`) e insignia de confianza compacta (`.hero-proof-badge`).
+   - 2 pasos editoriales secuenciales (50% / 50%) con copywriting cercano y persuasivo.
    - Poster fallback instantáneo para carga sin parpadeos.
 3. **Barra de Pilares / Garantías**:
    - 4 sellos de confianza con tratamiento visual tipo pill glass: *Manicura Rusa & Semipermanente, Extensiones Acrílicas Esculpidas, Spa Pedicura Relajante, Bioseguridad 100% Esterilizada*.
@@ -65,7 +66,7 @@ Documentación técnica y tokens de diseño para **Dp Beauty Nails** en Apartad�
    - Grid de **3 columnas en escritorio** y **2 columnas en móvil**.
    - Tarjetas 3:4 con fotografía al 100%, degradado inferior aterciopelado, precio en COP visible y enlace minimalista `AGENDAR ➔` con micro-animación de flecha.
 5. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales)**:
-   - Bloque experiencia a 2 columnas con fotografía del salón con mesas de manicura y lámparas (`photo-1527799820374-dcf8d9d4a388`), badge VIP flotante y 4 métricas de autoridad (+8 años, +4.500 clientas, 100% higiene, 5.0★).
+   - Bloque experiencia a 2 columnas con fotografía del salón con mesas de manicura y manicurista en atención (`about-nuva-nails-manicurista.jpg`), badge VIP flotante y 4 métricas de autoridad (+8 años, +4.500 clientas, 100% higiene, 5.0★).
    - Bloque de 4 especialistas en formato Retrato Editorial (3:4.2) en grid de 4 columnas (2 en móvil) con WhatsApp directo.
 6. **`#ubicacion` (Mapa Interactivo & Datos de Contacto)**:
    - Dirección física en Cra. 97 #98-20, Apartadó, horarios y teléfonos.

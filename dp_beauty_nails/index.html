@@ -255,6 +255,7 @@
       justify-content: space-between;
       min-height: 72px;
       padding: 8px 0;
+      gap: 16px;
     }
 
     /* Logotipo Tipográfico Puro (Sin Íconos Decorativos) */
@@ -263,11 +264,12 @@
       flex-direction: column;
       align-items: flex-start;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
     .brand-name {
       font-family: var(--font-display);
-      font-size: 1.42rem;
+      font-size: clamp(1.15rem, 1.6vw, 1.42rem);
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -301,17 +303,19 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: clamp(14px, 1.8vw, 28px);
+      flex-shrink: 1;
     }
 
     .nav-link {
-      font-size: 0.84rem;
+      font-size: clamp(0.74rem, 0.9vw, 0.84rem);
       font-weight: 500;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.9);
       text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
       position: relative;
+      white-space: nowrap;
       transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
@@ -342,7 +346,8 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 12px;
+      flex-shrink: 0;
     }
 
     .btn-header-cta {
@@ -350,7 +355,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 9px 22px;
+      padding: 9px 20px;
       font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.08em;
@@ -369,6 +374,32 @@
       background: linear-gradient(135deg, #f0a8a8 0%, #c56868 100%);
       box-shadow: 0 6px 20px rgba(216, 125, 125, 0.5);
       transform: translateY(-1px);
+    }
+
+    /* Adaptación Intermedia para Laptops y Tablets (769px - 1100px) */
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .header-nav {
+        gap: 10px;
+      }
+      .brand-name {
+        font-size: 1.15rem;
+      }
+      .brand-subtitle {
+        font-size: 0.50rem;
+        letter-spacing: 0.16em;
+      }
+      .nav-links {
+        gap: 12px;
+      }
+      .nav-link {
+        font-size: 0.70rem;
+        letter-spacing: 0.04em;
+      }
+      .btn-header-cta {
+        padding: 8px 14px;
+        font-size: 0.74rem;
+        gap: 6px;
+      }
     }
 
     /* ========================================================
@@ -445,25 +476,27 @@
       position: relative;
       z-index: 4;
       width: 100%;
+      height: 100%;
       display: flex;
-      align-items: center;
-      justify-content: flex-start; /* Asimétrico a la izquierda para despejar modelo */
-      padding-top: 60px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 0;
+      padding-bottom: clamp(40px, 7.5vh, 75px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 420px;
+      max-width: 560px;
+      min-height: 330px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 0;
-      transform: translateY(-50%) translateY(16px);
+      transform: translateY(16px);
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -477,65 +510,61 @@
     .hero-scroll-step.active {
       opacity: 1;
       pointer-events: auto;
-      transform: translateY(-50%) translateY(0);
-    }
-
-    .hero-pill-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      background: rgba(216, 125, 125, 0.22);
-      border: 1px solid rgba(216, 125, 125, 0.45);
-      border-radius: var(--radius-pill);
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin-bottom: 12px;
-      backdrop-filter: blur(8px);
-      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+      transform: translateY(0);
     }
 
     .hero-script-tag {
       font-family: var(--font-script);
-      font-size: clamp(2.4rem, 4.4vw, 3.4rem);
-      color: #f7b7b7;
-      line-height: 1.1;
-      margin-bottom: 6px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.95), 0 4px 25px rgba(0,0,0,0.9);
+      font-size: clamp(2rem, 3.4vw, 2.75rem);
+      color: var(--color-accent);
+      margin-bottom: 2px;
+      display: inline-block;
+      line-height: 1.05;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: #ffd8d8;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.3rem, 4.8vw, 3.8rem);
+      font-size: clamp(2.1rem, 3.6vw, 3.2rem);
       font-weight: 600;
-      color: #ffffff;
       line-height: 1.12;
-      margin-bottom: 16px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.95), 0 6px 30px rgba(0,0,0,0.9);
+      letter-spacing: -0.01em;
+      color: #ffffff;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9);
     }
 
     .hero-title em {
+      color: var(--color-accent);
       font-style: italic;
-      color: #ffd8d8;
+      font-weight: 400;
     }
 
     .hero-desc {
-      font-size: 1rem;
+      font-size: 0.92rem;
       color: #eedbdd;
-      line-height: 1.65;
-      margin-bottom: 26px;
+      line-height: 1.55;
+      margin-bottom: 20px;
       max-width: 480px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.95);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 16px;
     }
 
     .btn-hero-primary {
@@ -545,13 +574,14 @@
       padding: 13px 28px;
       background: var(--gradient-accent);
       color: #ffffff;
-      font-weight: 600;
-      font-size: 0.88rem;
+      font-weight: 700;
+      font-size: 0.86rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       border-radius: var(--radius-pill);
       box-shadow: 0 6px 20px rgba(216, 125, 125, 0.45);
       transition: var(--transition);
+      touch-action: manipulation;
     }
 
     .btn-hero-primary:hover {
@@ -560,28 +590,56 @@
       transform: translateY(-2px);
     }
 
-    .btn-hero-secondary {
+    .btn-hero-minimal-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 13px 26px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      color: #ffffff;
-      font-weight: 600;
+      color: #eedbdd;
       font-size: 0.88rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border-radius: var(--radius-pill);
-      backdrop-filter: blur(10px);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
       transition: var(--transition);
-      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+      touch-action: manipulation;
     }
 
-    .btn-hero-secondary:hover {
-      background: rgba(255, 255, 255, 0.22);
-      border-color: #ffffff;
-      transform: translateY(-2px);
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(22, 19, 17, 0.55);
+      border: 1px solid var(--border-soft);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .hero-proof-stars {
+      color: var(--color-gold);
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+
+    .hero-proof-text {
+      font-size: 0.76rem;
+      color: #eedbdd;
+      font-weight: 600;
+      letter-spacing: 0.4px;
     }
 
     /* Scroll Indicator Minimalista */
@@ -825,16 +883,14 @@
 
     .service-card:hover .service-card-accent-line {
       width: 60px;
-      background: #f7b7b7;
+      background: var(--color-accent);
     }
 
-    .service-card-tag {
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #f7b7b7;
-      margin-bottom: 4px;
-      font-weight: 600;
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.4;
+      margin-bottom: 6px;
     }
 
     .service-card-title {
@@ -859,7 +915,7 @@
     .service-card-price {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #fce2e2;
+      color: var(--color-accent);
     }
 
     .btn-card-book-minimal {
@@ -891,7 +947,7 @@
     /* ========================================================
        SECCIÓN SOBRE NOSOTROS & ESPECIALISTAS (ESTÁNDAR EDITORIAL)
     ======================================================== */
-    .about-section {
+    .about-team-section {
       padding: 96px 0;
       background-color: #ffffff;
       border-top: 1px solid var(--border-light);
@@ -899,87 +955,76 @@
 
     .experience-layout {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 52px;
       align-items: center;
       margin-bottom: 80px;
     }
 
     /* Fotografía Coherente con Salón de Uñas */
-    .salon-image-wrapper {
+    .salon-image-showcase {
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-md);
-      aspect-ratio: 4 / 3.4;
+      border: 1px solid var(--border-light);
     }
 
-    .salon-image-showcase {
+    .salon-image-showcase img {
       width: 100%;
-      height: 100%;
+      height: 420px;
       object-fit: cover;
       transition: transform 0.5s ease;
+      display: block;
     }
 
-    .salon-image-wrapper:hover .salon-image-showcase {
+    .salon-image-showcase:hover img {
       transform: scale(1.04);
     }
 
     .experience-floating-badge {
       position: absolute;
       bottom: 22px;
-      right: 22px;
-      background: rgba(13, 11, 13, 0.88);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(216, 125, 125, 0.4);
-      padding: 14px 20px;
-      border-radius: var(--radius-md);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .badge-icon {
-      width: 38px;
-      height: 38px;
+      left: 22px;
       background: var(--gradient-accent);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
       color: #ffffff;
-      font-size: 1rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .badge-text-title {
-      font-size: 0.88rem;
+    .experience-floating-badge strong {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      line-height: 1;
+      display: block;
       font-weight: 700;
-      line-height: 1.2;
     }
 
-    .badge-text-sub {
+    .experience-floating-badge span {
       font-size: 0.72rem;
-      color: #ffd8d8;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 800;
     }
 
-    .experience-content {
+    .experience-text-content {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
 
-    .about-eyebrow {
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 3.4vw, 2.6rem);
       color: var(--color-accent);
-      margin-bottom: 8px;
+      line-height: 1.1;
+      margin-bottom: 4px;
+      display: inline-block;
     }
 
-    .about-title {
+    .experience-title {
       font-family: var(--font-display);
       font-size: clamp(2rem, 3.2vw, 2.6rem);
       font-weight: 600;
@@ -988,12 +1033,13 @@
       margin-bottom: 18px;
     }
 
-    .about-title em {
+    .experience-title span,
+    .experience-title em {
       font-style: italic;
       color: var(--color-accent-hover);
     }
 
-    .about-desc {
+    .experience-text-content p {
       font-size: 0.95rem;
       color: var(--text-secondary);
       line-height: 1.68;
@@ -1011,36 +1057,41 @@
       border-top: 1px solid var(--border-light);
     }
 
-    .metric-box {
-      display: flex;
-      flex-direction: column;
+    .metric-item {
+      text-align: center;
     }
 
-    .metric-number {
+    .metric-item strong {
       font-family: var(--font-display);
-      font-size: 1.65rem;
+      font-size: 1.85rem;
       font-weight: 700;
       color: var(--color-accent);
       line-height: 1.1;
+      display: block;
     }
 
-    .metric-label {
-      font-size: 0.74rem;
+    .metric-item span {
+      font-size: 0.72rem;
       color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       margin-top: 4px;
-      line-height: 1.3;
+      display: block;
     }
 
     /* Bloque Especialistas: 4 Columnas / Retrato Editorial (3:4.2) */
-    .team-block-header {
+    .section-header-center {
       text-align: center;
-      margin-bottom: 40px;
+      max-width: 680px;
+      margin: 0 auto 40px;
     }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 22px;
+      max-width: 1180px;
+      margin: 0 auto;
     }
 
     .team-card {
@@ -1054,6 +1105,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+      padding: 20px 18px;
       border: 1px solid var(--border-light);
     }
 
@@ -1095,20 +1147,20 @@
     .team-card-content {
       position: relative;
       z-index: 3;
-      padding: 20px 18px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
     }
 
-    .team-accent-line {
+    .team-card-accent-line {
       width: 28px;
       height: 2px;
       background: var(--color-accent);
       margin-bottom: 8px;
     }
 
-    .team-card-name {
+    .team-name {
       font-family: var(--font-display);
       font-size: 1.15rem;
       font-weight: 700;
@@ -1117,39 +1169,29 @@
       margin-bottom: 4px;
     }
 
-    .team-card-role {
+    .team-role {
       font-size: 0.75rem;
-      color: #f7b7b7;
+      color: var(--color-accent);
       font-weight: 500;
       margin-bottom: 6px;
     }
 
-    .team-card-rating {
+    .team-rating {
       font-size: 0.75rem;
       color: #ffd700;
       margin-bottom: 10px;
     }
 
-    .btn-team-book {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #ffffff;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--transition);
+    .team-rating span {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.7rem;
+      margin-left: 4px;
     }
 
-    .btn-team-book i {
-      color: var(--color-accent);
-      transition: transform 0.3s ease;
-    }
-
-    .team-card:hover .btn-team-book i {
-      transform: translateX(4px);
-      color: #ffffff;
+    .team-card-footer {
+      width: 100%;
+      padding-top: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     /* ========================================================
@@ -1571,31 +1613,30 @@
         transform: translateY(0);
       }
 
-      .hero-pill-badge {
-        font-size: 0.68rem;
-        letter-spacing: 0.16em;
-        margin-bottom: 6px;
-        padding: 4px 12px;
-      }
-
       .hero-script-tag {
         font-size: 1.85rem;
         line-height: 1.1;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
         text-shadow: 0 2px 10px rgba(0,0,0,0.95);
+      }
+
+      .hero-eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.18em;
+        margin-bottom: 6px;
       }
 
       .hero-title {
         font-size: 1.85rem;
         line-height: 1.12;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         text-shadow: 0 2px 12px rgba(0,0,0,0.95);
       }
 
       .hero-desc {
-        font-size: 0.84rem;
-        line-height: 1.46;
-        margin-bottom: 16px;
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
         max-width: 330px;
         text-shadow: 0 2px 10px rgba(0,0,0,0.95);
       }
@@ -1605,16 +1646,20 @@
         align-items: center;
         width: 100%;
         gap: 10px;
-        margin: 0 auto;
+        margin: 0 auto 14px;
       }
 
-      .btn-hero-primary,
-      .btn-hero-secondary {
+      .btn-hero-primary {
         width: 100%;
         max-width: 275px;
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.84rem;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.82rem;
+        padding: 4px 0;
       }
 
       .hero-scroll-indicator {
@@ -1642,112 +1687,138 @@
         padding: 14px 16px;
       }
 
-      /* Catálogo de Servicios: 2 Columnas Obligatorio en Móvil */
+      /* Catálogo de Servicios: 2 Columnas Balanceadas en Móvil (<768px) */
       .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        column-gap: 16px !important;
+        row-gap: 20px !important;
+        width: 100% !important;
       }
 
       .service-card {
-        min-height: 290px;
-        border-radius: var(--radius-md);
+        aspect-ratio: 3 / 4.4;
+        min-height: 0 !important;
+        height: auto !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 14px 10px;
+        border-radius: 16px;
+        border: 1px solid rgba(216, 125, 125, 0.35);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8), 0 0 12px rgba(216, 125, 125, 0.1);
       }
 
       .service-card-content {
-        padding: 14px 12px;
+        min-width: 0;
+        width: 100%;
       }
 
       .service-card-accent-line {
-        width: 24px;
+        width: 22px;
         margin-bottom: 6px;
       }
 
-      .service-card-tag {
-        font-size: 0.62rem;
+      .service-card-title {
+        font-size: 0.93rem;
+        line-height: 1.15;
+        margin-bottom: 6px;
+        word-break: break-word;
+        overflow-wrap: break-word;
       }
 
-      .service-card-title {
-        font-size: 0.96rem;
-        line-height: 1.2;
-        margin-bottom: 4px;
+      .service-card-desc {
+        display: none;
       }
 
       .service-card-footer {
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 6px;
-        padding-top: 6px;
+        gap: 5px;
+        padding-top: 8px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
       }
 
       .service-card-price {
-        font-size: 0.88rem;
+        font-size: 0.92rem;
       }
 
       .btn-card-book-minimal {
         font-size: 0.72rem;
       }
 
-      /* Sobre Nosotros Móvil */
+      /* Sobre Nosotros en Móvil */
       .experience-layout {
         grid-template-columns: 1fr;
-        gap: 36px;
-        margin-bottom: 50px;
+        gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .salon-image-showcase img {
+        height: 280px;
+      }
+
+      .experience-floating-badge {
+        bottom: 16px;
+        left: 16px;
+        padding: 10px 16px;
+      }
+
+      .experience-floating-badge strong {
+        font-size: 1.8rem;
+      }
+
+      .experience-text-content {
+        text-align: center;
+      }
+
+      .experience-text-content .experience-title {
+        font-size: 2.2rem;
       }
 
       .metrics-row {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 14px;
       }
 
-      .experience-floating-badge {
-        bottom: 14px;
-        right: 14px;
-        padding: 10px 14px;
+      .metric-item strong {
+        font-size: 1.7rem;
       }
 
-      .badge-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 0.85rem;
-      }
-
-      .badge-text-title {
-        font-size: 0.78rem;
-      }
-
-      .badge-text-sub {
-        font-size: 0.65rem;
-      }
-
-      /* Especialistas: 2 Columnas Obligatorio en Móvil */
+      /* Equipo: Carrusel Horizontal Deslizable (Scroll Snap) en Móvil con Efecto Peek */
       .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 16px !important;
+        margin: 0 -16px !important;
+        width: calc(100% + 32px) !important;
+        padding: 8px 16px 20px !important;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
       }
 
       .team-card {
-        min-height: 280px;
-        border-radius: var(--radius-md);
+        flex: 0 0 255px !important;
+        aspect-ratio: 3 / 4.2 !important;
+        min-height: 0 !important;
+        scroll-snap-align: start;
+        padding: 18px 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(216, 125, 125, 0.35);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8);
       }
 
-      .team-card-content {
-        padding: 14px 12px;
+      .team-name {
+        font-size: 1.12rem;
       }
 
-      .team-card-name {
-        font-size: 0.95rem;
-      }
-
-      .team-card-role {
-        font-size: 0.68rem;
-      }
-
-      .team-card-rating {
-        font-size: 0.68rem;
-        margin-bottom: 6px;
-      }
-
-      .btn-team-book {
+      .team-role {
         font-size: 0.72rem;
       }
 
@@ -1844,54 +1915,42 @@
         <!-- Capa de degradado aterciopelado para máxima legibilidad sin opacar el video -->
         <div class="canvas-gradient-overlay"></div>
 
-        <!-- Contenido Editorial con Storytelling en 3 Pasos -->
+        <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
         <div class="container hero-container-align">
           <div class="hero-scroll-content">
             
-            <!-- Paso 1 (0% a 33%): Impacto Inicial -->
+            <!-- Paso 1 (0% a 50%): Titular Minimalista Editorial con Firma Script -->
             <div class="hero-scroll-step step-1 active">
-              <span class="hero-pill-badge">
-                <i class="fa-solid fa-gem"></i> Salón de Uñas en Apartadó
-              </span>
-              <span class="hero-script-tag">El arte de resaltar tu elegancia</span>
-              <h1 class="hero-title">Perfección en<br><em>Cada Detalle</em></h1>
-              <p class="hero-desc">Descubre el estándar de manicura y pedicura que transforma tus manos. Diseños exclusivos, técnicas rusas y bioseguridad absoluta.</p>
+              <span class="hero-script-tag">Nail Spa &amp; Esthetic</span>
+              <span class="hero-eyebrow">ESTUDIO DE UÑAS · APARTADÓ</span>
+              <h1 class="hero-title">Uñas que inspiran<br><em>elegancia &amp; distinción.</em></h1>
+              <p class="hero-desc">Descubre el estándar de manicura y pedicura que transforma tus manos. Diseños exclusivos, técnicas rusas y bioseguridad absoluta en Apartadó.</p>
               <div class="hero-actions">
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20quisiera%20agendar%20una%20cita." class="btn-hero-primary">
-                  Agendar Cita <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="#servicios" class="btn-hero-secondary">
-                  Ver Servicios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó</span>
               </div>
             </div>
 
-            <!-- Paso 2 (33% a 66%): Especialidades y Alta Durabilidad -->
+            <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con Firma Script -->
             <div class="hero-scroll-step step-2">
-              <span class="hero-pill-badge">
-                <i class="fa-solid fa-wand-magic-sparkles"></i> Técnicas de Vanguardia
-              </span>
-              <span class="hero-script-tag">Estructura & Nail Art</span>
-              <h2 class="hero-title">Acrílicas &amp;<br><em>Foil Dorado</em></h2>
-              <p class="hero-desc">Extensiones esculpidas impecables, kapping nivelador y acabados en pan de oro con productos prémium que protegen tu uña natural.</p>
+              <span class="hero-script-tag">Belleza que Perdura</span>
+              <span class="hero-eyebrow">TÉCNICA &amp; CUIDADO PRÉMIUM</span>
+              <h2 class="hero-title">Detalles que marcan<br><em>la diferencia.</em></h2>
+              <p class="hero-desc">Manicura rusa, extensiones acrílicas, kapping nivelador y spa de pedicura con acabados impecables en Apartadó.</p>
               <div class="hero-actions">
-                <a href="#servicios" class="btn-hero-primary">
-                  Explorar Catálogo <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-              </div>
-            </div>
-
-            <!-- Paso 3 (66% a 100%): Experiencia VIP y Reserva Inmediata -->
-            <div class="hero-scroll-step step-3">
-              <span class="hero-pill-badge">
-                <i class="fa-solid fa-star"></i> Calificación 5.0 ★
-              </span>
-              <span class="hero-script-tag">Tu Momento de Consentirte</span>
-              <h2 class="hero-title">Agenda Tu Cita<br><em>Hoy Mismo</em></h2>
-              <p class="hero-desc">Cra. 97 #98-20, Apartadó. Vive una experiencia de spa cálida y personalizada pensada exclusivamente para ti.</p>
-              <div class="hero-actions">
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20reservar%20mi%20cita." class="btn-hero-primary">
-                  Reservar por WhatsApp <i class="fa-brands fa-whatsapp"></i>
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -1975,16 +2034,16 @@
           
           <!-- Servicio 1 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Manicura Rusa & Semipermanente" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Manicura Rusa & Semipermanente Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
-              <span class="service-card-tag">Limpieza Profunda · 60 min</span>
-              <h3 class="service-card-title">Manicura Rusa & Semipermanente</h3>
+              <h3 class="service-card-title">Manicura Rusa &amp; Semipermanente</h3>
+              <p class="service-card-desc">Técnica de limpieza milimétrica de cutícula y esmaltado de alta precisión con duración de hasta 21 días.</p>
               <div class="service-card-footer">
                 <span class="service-card-price">$45.000 COP</span>
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Manicura%20Rusa%20y%20Semipermanente." class="btn-card-book-minimal">
-                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Manicura%20Rusa%20y%20Semipermanente." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -1992,16 +2051,16 @@
 
           <!-- Servicio 2 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas Esculpidas" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas Esculpidas Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
-              <span class="service-card-tag">Estructura & Curvatura · 90 min</span>
               <h3 class="service-card-title">Extensiones Acrílicas Esculpidas</h3>
+              <p class="service-card-desc">Construcción arquitectónica sobre molde con curvatura natural, máxima resistencia y estilizado impecable.</p>
               <div class="service-card-footer">
                 <span class="service-card-price">Desde $85.000 COP</span>
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Extensiones%20Acr%C3%ADlicas%20Esculpidas." class="btn-card-book-minimal">
-                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Extensiones%20Acr%C3%ADlicas%20Esculpidas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -2009,16 +2068,16 @@
 
           <!-- Servicio 3 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Nail Art & Pan de Oro" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Nail Art & Detalles en Pan de Oro Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
-              <span class="service-card-tag">Mano Alzada & Foil · 45 min</span>
-              <h3 class="service-card-title">Nail Art & Detalles en Pan de Oro</h3>
+              <h3 class="service-card-title">Nail Art &amp; Detalles en Pan de Oro</h3>
+              <p class="service-card-desc">Creaciones a mano alzada, incrustaciones foil, pedrería fina y encapsulados con acabados de pasarela.</p>
               <div class="service-card-footer">
                 <span class="service-card-price">Desde $35.000 COP</span>
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Nail%20Art%20y%20Detalles%20en%20Pan%20de%20Oro." class="btn-card-book-minimal">
-                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Nail%20Art%20y%20Detalles%20en%20Pan%20de%20Oro." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -2026,16 +2085,16 @@
 
           <!-- Servicio 4 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping & Gel Nivelador" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping & Gel Nivelador Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
-              <span class="service-card-tag">Blindaje & Protección · 60 min</span>
-              <h3 class="service-card-title">Kapping & Gel Nivelador</h3>
+              <h3 class="service-card-title">Kapping &amp; Gel Nivelador</h3>
+              <p class="service-card-desc">Blindaje protector de gel que refuerza la uña débil o quebradiza, promoviendo su crecimiento sano y firme.</p>
               <div class="service-card-footer">
                 <span class="service-card-price">$55.000 COP</span>
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Kapping%20y%20Gel%20Nivelador." class="btn-card-book-minimal">
-                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Kapping%20y%20Gel%20Nivelador." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -2043,16 +2102,16 @@
 
           <!-- Servicio 5 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa & Exfoliación Relajante" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa & Exfoliación Relajante Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
-              <span class="service-card-tag">Descanso & Belleza Podal · 60 min</span>
-              <h3 class="service-card-title">Pedicura Spa & Exfoliación Relajante</h3>
+              <h3 class="service-card-title">Pedicura Spa &amp; Exfoliación Relajante</h3>
+              <p class="service-card-desc">Tratamiento podal integral con sales minerales, hidratación botánica profunda y masaje descontracturante.</p>
               <div class="service-card-footer">
                 <span class="service-card-price">$40.000 COP</span>
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Pedicura%20Spa%20y%20Exfoliaci%C3%B3n." class="btn-card-book-minimal">
-                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Pedicura%20Spa%20y%20Exfoliaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -2060,16 +2119,16 @@
 
           <!-- Servicio 6 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Retiro Seguro & Spa Nutritivo" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Retiro Seguro & Spa Nutritivo Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
-              <span class="service-card-tag">Restauración & Keratina · 40 min</span>
-              <h3 class="service-card-title">Retiro Seguro & Spa Nutritivo</h3>
+              <h3 class="service-card-title">Retiro Seguro &amp; Spa Nutritivo</h3>
+              <p class="service-card-desc">Remoción profesional libre de abrasión mecánica con baño nutritivo de aceites esenciales y keratina pura.</p>
               <div class="service-card-footer">
                 <span class="service-card-price">$25.000 COP</span>
-                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Retiro%20Seguro%20y%20Spa%20Nutritivo." class="btn-card-book-minimal">
-                  Agendar <i class="fa-solid fa-arrow-right"></i>
+                <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Retiro%20Seguro%20y%20Spa%20Nutritivo." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -2080,126 +2139,160 @@
     </section>
 
     <!-- ========================================================
-         SECCIÓN SOBRE NOSOTROS & EQUIPO EDITORIAL
+         SECCIÓN SOBRE NOSOTROS & ESPECIALISTAS (ESTÁNDAR EDITORIAL)
     ======================================================== -->
-    <section class="about-section" id="nosotros">
+    <section class="about-team-section" id="nosotros">
       <div class="container">
         
-        <!-- Bloque Editorial del Salón -->
+        <!-- Bloque 1: Experiencia y Autoridad -->
         <div class="experience-layout">
-          <div class="salon-image-wrapper">
-            <!-- Imagen coherente con nicho: mesas de manicura y esmaltes -->
-            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1000&q=80" alt="Salón Dp Beauty Nails Apartadó" class="salon-image-showcase" loading="lazy">
+          <div class="salon-image-showcase">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg" alt="Instalaciones Dp Beauty Nails Apartadó" loading="lazy">
             <div class="experience-floating-badge">
-              <div class="badge-icon">
-                <i class="fa-solid fa-crown"></i>
-              </div>
-              <div>
-                <div class="badge-text-title">Experiencia Prémium</div>
-                <div class="badge-text-sub">Atención 100% Personalizada</div>
-              </div>
+              <strong>VIP</strong>
+              <span>Nail Studio</span>
             </div>
           </div>
 
-          <div class="experience-content">
-            <span class="about-eyebrow">Sobre Nosotros</span>
-            <h2 class="about-title">El Salón Donde Tus Manos Son las <em>Protagonistas</em></h2>
-            <p class="about-desc">En <strong>Dp Beauty Nails</strong> concebimos el cuidado de manos y pies como un ritual de bienestar y distinción. Nuestras artistas combinan técnicas internacionales de manicura rusa con materiales hipoalergénicos de alta gama para brindarte acabados deslumbrantes y una durabilidad insuperable en Apartadó.</p>
+          <div class="experience-text-content">
+            <span class="section-script-eyebrow">Sobre Nosotros</span>
+            <h2 class="experience-title">
+              Precisión. Estilo. <span>Confianza Total.</span>
+            </h2>
+            <p>
+              En <strong>Dp Beauty Nails</strong> concebimos el cuidado de manos y pies como un ritual de bienestar y distinción. Nuestras artistas combinan técnicas internacionales de manicura rusa con materiales hipoalergénicos de alta gama para brindarte acabados deslumbrantes y una durabilidad insuperable en Apartadó.
+            </p>
 
             <!-- 4 Métricas de Autoridad -->
             <div class="metrics-row">
-              <div class="metric-box">
-                <span class="metric-number">+8</span>
-                <span class="metric-label">Años de Trayectoria</span>
+              <div class="metric-item">
+                <strong>+8</strong>
+                <span>Años Exp.</span>
               </div>
-              <div class="metric-box">
-                <span class="metric-number">+4.5k</span>
-                <span class="metric-label">Clientas Satisfechas</span>
+              <div class="metric-item">
+                <strong>+4.5k</strong>
+                <span>Clientas</span>
               </div>
-              <div class="metric-box">
-                <span class="metric-number">100%</span>
-                <span class="metric-label">Bioseguridad Clínica</span>
+              <div class="metric-item">
+                <strong>100%</strong>
+                <span>Esterilizado</span>
               </div>
-              <div class="metric-box">
-                <span class="metric-number">5.0 ★</span>
-                <span class="metric-label">Calificación Google</span>
+              <div class="metric-item">
+                <strong>5.0 ★</strong>
+                <span>Calificación</span>
               </div>
             </div>
 
-            <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." class="btn-hero-primary">
-              Hablar con una Especialista <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20quiero%20conocer%20m%C3%A1s%20y%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fa-solid fa-calendar-check"></i> Conoce Nuestro Salón
             </a>
           </div>
         </div>
 
-        <!-- Bloque Especialistas: Retrato Editorial (4 Columnas) -->
-        <div class="team-block-header">
-          <span class="section-eyebrow">Talento Certificado</span>
-          <h3 class="section-title">Nuestras <em>Master Nail Artists</em></h3>
-          <p class="section-desc">Especialistas apasionadas por el detalle, la precisión y la armonía estética.</p>
+        <!-- Bloque 2: Nuestro Equipo (Grid 4 Columnas Retrato Editorial 3:4.2) -->
+        <div class="section-header-center" style="margin-bottom: 36px;">
+          <span class="section-script-eyebrow">Nuestro Equipo</span>
+          <h3 class="section-title">Manicuristas Certificadas</h3>
+          <p class="section-desc">Artistas apasionadas por el detalle, la simetría y el cuidado integral de tus uñas naturales.</p>
         </div>
 
         <div class="team-grid">
           
           <!-- Profesional 1 -->
-          <div class="team-card">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Diana Pérez" class="team-card-img" loading="lazy">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Diana Pérez Directora & Master Nail Artist" class="team-card-img" loading="lazy">
             <div class="team-card-overlay"></div>
             <div class="team-card-content">
-              <div class="team-accent-line"></div>
-              <h4 class="team-card-name">Diana Pérez</h4>
-              <span class="team-card-role">Directora & Master Nail Artist</span>
-              <div class="team-card-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-              <a href="https://wa.me/573005078357?text=Hola%20Diana,%20quisiera%20agendar%20mi%20cita%20contigo%20en%20Dp%20Beauty%20Nails." class="btn-team-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Diana Pérez</h4>
+              <span class="team-role">Directora &amp; Master Nail Artist</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573005078357?text=Hola%20Diana%2C%20quisiera%20agendar%20cita%20contigo%20en%20Dp%20Beauty%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Profesional 2 -->
-          <div class="team-card">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80" alt="Camila Morales" class="team-card-img" loading="lazy">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Camila Morales Especialista Acrílicas" class="team-card-img" loading="lazy">
             <div class="team-card-overlay"></div>
             <div class="team-card-content">
-              <div class="team-accent-line"></div>
-              <h4 class="team-card-name">Camila Morales</h4>
-              <span class="team-card-role">Especialista en Estructuras Acrílicas</span>
-              <div class="team-card-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-              <a href="https://wa.me/573005078357?text=Hola%20Camila,%20quisiera%20agendar%20mi%20cita%20contigo%20en%20Dp%20Beauty%20Nails." class="btn-team-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Camila Morales</h4>
+              <span class="team-role">Especialista en Estructuras Acrílicas</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573005078357?text=Hola%20Camila%2C%20quisiera%20agendar%20cita%20contigo%20en%20Dp%20Beauty%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Profesional 3 -->
-          <div class="team-card">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Valeria Ospina" class="team-card-img" loading="lazy">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Valeria Ospina Artista Nail Art" class="team-card-img" loading="lazy">
             <div class="team-card-overlay"></div>
             <div class="team-card-content">
-              <div class="team-accent-line"></div>
-              <h4 class="team-card-name">Valeria Ospina</h4>
-              <span class="team-card-role">Artista de Nail Art & Diseños HD</span>
-              <div class="team-card-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-              <a href="https://wa.me/573005078357?text=Hola%20Valeria,%20quisiera%20agendar%20mi%20cita%20contigo%20en%20Dp%20Beauty%20Nails." class="btn-team-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Valeria Ospina</h4>
+              <span class="team-role">Artista de Nail Art &amp; Diseños HD</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573005078357?text=Hola%20Valeria%2C%20quisiera%20agendar%20cita%20contigo%20en%20Dp%20Beauty%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Profesional 4 -->
-          <div class="team-card">
-            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Mariana Rúa" class="team-card-img" loading="lazy">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80" alt="Mariana Rúa Terapeuta Pedicura" class="team-card-img" loading="lazy">
             <div class="team-card-overlay"></div>
             <div class="team-card-content">
-              <div class="team-accent-line"></div>
-              <h4 class="team-card-name">Mariana Rúa</h4>
-              <span class="team-card-role">Terapeuta de Pedicura & Spa</span>
-              <div class="team-card-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-              <a href="https://wa.me/573005078357?text=Hola%20Mariana,%20quisiera%20agendar%20mi%20cita%20contigo%20en%20Dp%20Beauty%20Nails." class="btn-team-book">
-                Agendar <i class="fa-solid fa-arrow-right"></i>
-              </a>
+              <div class="team-card-accent-line"></div>
+              <h4 class="team-name">Mariana Rúa</h4>
+              <span class="team-role">Terapeuta de Pedicura &amp; Spa</span>
+              <div class="team-rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>(5.0)</span>
+              </div>
+              <div class="team-card-footer">
+                <a href="https://wa.me/573005078357?text=Hola%20Mariana%2C%20quisiera%20agendar%20cita%20contigo%20en%20Dp%20Beauty%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div>
+          </article>
 
         </div>
 
@@ -2488,18 +2581,11 @@
           Math.floor(progress * TOTAL_FRAMES)
         );
 
-        // Alternancia de los 3 pasos editoriales según el scroll
+        // Alternancia de pasos editoriales según el scroll (2 pasos secuenciales 50% / 50%)
         const steps = document.querySelectorAll('.hero-scroll-step');
-        if (steps.length >= 3) {
-          let activeIndex = 0;
-          if (progress < 0.33) {
-            activeIndex = 0;
-          } else if (progress < 0.67) {
-            activeIndex = 1;
-          } else {
-            activeIndex = 2;
-          }
-
+        if (steps.length > 0) {
+          const stepCount = steps.length;
+          const activeIndex = Math.min(Math.floor(progress * stepCount), stepCount - 1);
           steps.forEach((step, idx) => {
             step.classList.toggle('active', idx === activeIndex);
           });

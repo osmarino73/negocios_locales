@@ -335,39 +335,43 @@
       height: 100%;
       z-index: 3;
       pointer-events: none;
-      background: linear-gradient(
-        90deg,
-        #0d0b0a 0%,
-        rgba(13, 11, 10, 0.90) 22%,
-        rgba(13, 11, 10, 0.65) 38%,
-        rgba(13, 11, 10, 0.20) 54%,
-        transparent 70%
-      );
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(13, 11, 10, 0.55) 100%),
+        linear-gradient(
+          90deg,
+          #0d0b0a 0%,
+          rgba(13, 11, 10, 0.88) 24%,
+          rgba(13, 11, 10, 0.60) 38%,
+          rgba(13, 11, 10, 0.15) 54%,
+          transparent 70%
+        );
     }
 
     .hero-container-align {
       position: relative;
       z-index: 4;
       width: 100%;
+      height: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: flex-start;
-      padding-top: 50px;
+      padding-top: 0;
+      padding-bottom: clamp(40px, 7.5vh, 75px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 420px;
+      max-width: 560px;
+      min-height: 330px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 0;
-      transform: translateY(-50%) translateY(16px);
+      transform: translateY(16px);
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -381,23 +385,23 @@
     .hero-scroll-step.active {
       opacity: 1;
       pointer-events: auto;
-      transform: translateY(-50%) translateY(0);
+      transform: translateY(0);
     }
 
     .hero-script-tag {
       font-family: var(--font-script);
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      font-size: clamp(2rem, 3.4vw, 2.75rem);
       color: var(--color-camel);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
       display: inline-block;
-      line-height: 1;
+      line-height: 1.05;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 2px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2.2px;
       text-transform: uppercase;
       color: var(--color-camel-light);
       margin-bottom: 10px;
@@ -406,12 +410,12 @@
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
-      font-weight: 700;
-      line-height: 1.08;
-      letter-spacing: 0.5px;
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.01em;
       color: var(--text-dark-primary);
-      margin-bottom: 14px;
+      margin-bottom: 18px;
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9);
     }
 
@@ -422,33 +426,33 @@
     }
 
     .step-1 .hero-title {
-      margin-bottom: 26px;
+      margin-bottom: 22px;
     }
 
     .hero-desc {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: var(--text-dark-secondary);
-      line-height: 1.6;
-      margin-bottom: 24px;
+      line-height: 1.55;
+      margin-bottom: 20px;
       text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
     }
 
     .btn-primary {
       background: var(--camel-gradient);
       color: var(--text-dark-title);
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
-      padding: 14px 30px;
+      padding: 13px 28px;
       border-radius: var(--radius-pill);
       display: inline-flex;
       align-items: center;
@@ -490,12 +494,39 @@
       transform: translateY(-3px);
     }
 
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-camel);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
     .hero-proof-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(22, 19, 17, 0.75);
-      border: 1px solid var(--border-dark);
+      background: rgba(22, 19, 17, 0.55);
+      border: 1px solid rgba(203, 179, 156, 0.2);
       padding: 6px 14px;
       border-radius: var(--radius-pill);
       backdrop-filter: blur(10px);
@@ -1340,7 +1371,7 @@
       .hero-scroll-content {
         max-width: 360px;
         width: 100%;
-        min-height: 330px;
+        min-height: 320px;
         position: relative;
         margin: 0 auto;
         text-align: center;
@@ -1364,27 +1395,27 @@
       }
 
       .hero-script-tag {
-        font-size: 1.85rem;
-        line-height: 1.1;
-        margin-bottom: 4px;
+        font-size: 1.7rem;
+        line-height: 1.05;
+        margin-bottom: 2px;
         text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-eyebrow {
-        font-size: 0.65rem;
-        letter-spacing: 1.5px;
+        font-size: 0.62rem;
+        letter-spacing: 1.8px;
         margin-bottom: 6px;
       }
 
       .hero-title {
-        font-size: 1.85rem;
-        line-height: 1.12;
-        margin-bottom: 8px;
+        font-size: 1.82rem;
+        line-height: 1.1;
+        margin-bottom: 10px;
         text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
       .step-1 .hero-title {
-        margin-bottom: 8px;
+        margin-bottom: 10px;
       }
 
       .hero-desc {
@@ -1400,8 +1431,8 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        gap: 10px;
-        margin-bottom: 14px;
+        gap: 8px;
+        margin-bottom: 12px;
       }
 
       .btn-primary,
@@ -1411,6 +1442,15 @@
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.82rem;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.82rem;
+        padding: 4px 0;
+        color: var(--text-dark-secondary);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
       }
 
       .hero-proof-badge {
@@ -1691,37 +1731,37 @@
         <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
         <div class="container hero-container-align">
           <div class="hero-scroll-content">
-            <!-- Paso 1 (0% a 50%): Gran Titular Principal sin párrafo para despejar el video -->
+            <!-- Paso 1 (0% a 50%): Titular Minimalista Editorial con Firma Script Alex Brush -->
             <div class="hero-scroll-step step-1 active">
               <span class="hero-script-tag">Nail Spa &amp; Esthetic</span>
-              <span class="hero-eyebrow">CENTRO DE ESTÉTICA &amp; SPA DE UÑAS · APARTADÓ</span>
-              <h1 class="hero-title">UÑAS QUE INSPIRAN.<br><em>ELEGANCIA &amp; DISTINCIÓN.</em></h1>
+              <span class="hero-eyebrow">ESTUDIO DE UÑAS · APARTADÓ</span>
+              <h1 class="hero-title">Uñas que inspiran<br><em>elegancia &amp; distinción.</em></h1>
               <div class="hero-actions">
                 <a href="https://wa.me/573145321720?text=Hola%20My%20Spacio%20Nails%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
                   <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="#servicios" class="btn-secondary">
-                  <i class="fa-solid fa-sparkles"></i> Ver Servicios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
               <div class="hero-proof-badge">
                 <span class="hero-proof-stars">★★★★★</span>
-                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó, Antioquia</span>
+                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó</span>
               </div>
             </div>
 
-            <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con descripción completa -->
+            <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con Firma Script Alex Brush -->
             <div class="hero-scroll-step step-2">
               <span class="hero-script-tag">Belleza que Perdura</span>
-              <span class="hero-eyebrow">TÉCNICA &amp; ACABADOS PRÉMIUM</span>
-              <h2 class="hero-title">MANOS RADIANTES.<br><em>DISEÑOS MODERNOS.</em></h2>
-              <p class="hero-desc">Tu espacio exclusivo en Apartadó para consentir tus manos y pies. Especialistas en manicura semipermanente, extensiones acrílicas, pedicura spa y kapping gel con bioseguridad certificada.</p>
+              <span class="hero-eyebrow">TÉCNICA &amp; CUIDADO PRÉMIUM</span>
+              <h2 class="hero-title">Detalles que marcan<br><em>la diferencia.</em></h2>
+              <p class="hero-desc">Semipermanente, uñas acrílicas, kapping y spa de pedicura con acabados impecables en Apartadó.</p>
               <div class="hero-actions">
-                <a href="#servicios" class="btn-primary">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Conocer Servicios
+                <a href="https://wa.me/573145321720?text=Hola%20My%20Spacio%20Nails%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="https://wa.me/573145321720?text=Hola%20My%20Spacio%20Nails%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                  <i class="fa-brands fa-whatsapp"></i> Consultar Horarios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -1900,7 +1940,7 @@
         <!-- Bloque 1: Experiencia y Autoridad -->
         <div class="experience-layout">
           <div class="salon-image-showcase">
-            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80" alt="Ambiente y mesas de manicura en My Spacio Nails Apartadó" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg" alt="Ambiente y mesas de manicura en My Spacio Nails Apartadó" loading="lazy">
             <div class="experience-floating-badge">
               <strong>VIP</strong>
               <span>Spa Studio</span>

@@ -19,7 +19,7 @@
     "@context": "https://schema.org",
     "@type": "NailSalon",
     "name": "NÜVA NAILS SPA",
-    "image": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=85",
+    "image": "https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg",
     "telephone": "+573137463374",
     "address": {
       "@type": "PostalAddress",
@@ -73,11 +73,16 @@
       --bg-light-surface: #fbf8f5;
       --bg-light-card: #ffffff;
 
-      /* Acentos Caramel Mocca & Warm Copper */
-      --color-mocca: #9c6d53;
-      --color-mocca-light: #b8866a;
-      --color-mocca-dark: #7d543e;
-      --color-mocca-hover: #c49277;
+      /* Acentos Oficiales Caramel Mocca & Warm Copper (Unicidad Estricta del Color Principal) */
+      --color-accent: #9c6d53;
+      --color-accent-light: #b8866a;
+      --color-accent-dark: #7d543e;
+      --color-accent-hover: #c49277;
+
+      --color-mocca: var(--color-accent);
+      --color-mocca-light: var(--color-accent-light);
+      --color-mocca-dark: var(--color-accent-dark);
+      --color-mocca-hover: var(--color-accent-hover);
 
       /* Bordes y Líneas */
       --border-dark: rgba(156, 109, 83, 0.22);
@@ -95,8 +100,8 @@
       --text-light-muted: #7c726a;
 
       /* Degradados */
-      --mocca-gradient: linear-gradient(135deg, #b8866a 0%, #9c6d53 50%, #7d543e 100%);
-      --mocca-gradient-hover: linear-gradient(135deg, #ffffff 0%, #b8866a 50%, #9c6d53 100%);
+      --mocca-gradient: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 50%, var(--color-accent-dark) 100%);
+      --mocca-gradient-hover: linear-gradient(135deg, #ffffff 0%, var(--color-accent-light) 50%, var(--color-accent) 100%);
 
       /* Tipografía */
       --font-display: 'Playfair Display', Georgia, serif;
@@ -302,9 +307,7 @@
       height: 100vh;
       height: 100dvh;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      background-color: #0f0e0e;
+      background-color: var(--bg-dark-base);
     }
 
     .hero-canvas-wrap {
@@ -333,7 +336,7 @@
       object-fit: cover;
       z-index: 2;
       opacity: 1;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.4s ease;
       pointer-events: none;
     }
 
@@ -342,8 +345,8 @@
       visibility: hidden;
     }
 
-    /* Degradado calibrado: protege texto a la izquierda en desktop sin opacar el centro/derecha */
-    .hero-vignette-overlay {
+    /* Doble degradado orgánico aterciopelado para máxima legibilidad sin opacar el video */
+    .canvas-gradient-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -351,96 +354,143 @@
       height: 100%;
       z-index: 3;
       pointer-events: none;
-      background: linear-gradient(
-        90deg, 
-        #0f0e0e 0%, 
-        #0f0e0e 24%, 
-        rgba(15, 14, 14, 0.85) 38%, 
-        rgba(15, 14, 14, 0.35) 54%, 
-        transparent 72%
-      );
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(15, 14, 14, 0.65) 100%),
+        linear-gradient(
+          90deg, 
+          #0f0e0e 0%, 
+          #0f0e0e 24%, 
+          rgba(15, 14, 14, 0.96) 34%, 
+          rgba(15, 14, 14, 0.78) 44%, 
+          rgba(15, 14, 14, 0.45) 55%, 
+          rgba(15, 14, 14, 0.15) 66%, 
+          transparent 78%
+        );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end; /* Anclaje inferior mandatorio para respetar el 60% superior despejado */
+      justify-content: flex-start; /* Asimétrico a la izquierda para despejar a la modelo y manicura */
+      padding-top: 0;
+      padding-bottom: clamp(40px, 7.5vh, 75px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 400px;
-      padding: 0 20px;
-      margin-left: max(20px, calc((100vw - 1200px) / 2));
-      pointer-events: none;
+      max-width: 560px;
+      min-height: 330px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
+      bottom: 0;
+      left: 0;
+      transform: translateY(16px);
       width: 100%;
-      max-width: 560px;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.45s ease, transform 0.45s ease;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
+      opacity: 0;
       pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .hero-scroll-step.active {
       opacity: 1;
-      visibility: visible;
-      transform: translateY(-50%);
       pointer-events: auto;
+      transform: translateY(0);
     }
 
-    .hero-tag {
+    .btn-hero-minimal-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent-light);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      color: var(--color-accent-light);
+      margin-bottom: 4px;
+      display: inline-block;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-eyebrow {
       font-size: 0.72rem;
       font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--color-mocca-light);
-      margin-bottom: 12px;
+      color: var(--color-accent-light);
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
-      font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: 1px;
       color: var(--text-dark-primary);
-      margin-bottom: 8px;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9);
     }
 
-    .hero-script {
-      font-family: var(--font-script);
-      font-size: clamp(3rem, 5.8vw, 4.4rem);
-      color: var(--color-mocca-light);
-      display: block;
+    .hero-title em {
+      color: var(--color-accent-light);
+      font-style: italic;
       font-weight: 400;
-      line-height: 0.95;
-      margin: 4px 0 14px;
+    }
+
+    .step-1 .hero-title {
+      margin-bottom: 26px; /* Espaciado equilibrado sin párrafo */
     }
 
     .hero-desc {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: var(--text-dark-secondary);
       line-height: 1.6;
-      margin-bottom: 26px;
-      max-width: 520px;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     .btn-primary {
@@ -466,30 +516,22 @@
       box-shadow: 0 10px 28px rgba(156, 109, 83, 0.45);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: var(--text-dark-primary);
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 14px 26px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-dark);
+    .hero-proof-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: var(--transition);
-      touch-action: manipulation;
+      font-size: 0.8rem;
+      color: var(--text-dark-secondary);
     }
 
-    .btn-secondary:hover {
-      background: rgba(156, 109, 83, 0.18);
-      border-color: var(--color-mocca);
-      color: var(--color-mocca-light);
-      transform: translateY(-3px);
+    .hero-proof-stars {
+      color: #f7ba2a;
+      letter-spacing: 1px;
+    }
+
+    .hero-proof-text {
+      color: var(--text-dark-muted);
+      font-weight: 500;
     }
 
     /* ==========================================================================
@@ -1203,64 +1245,69 @@
         font-size: 0.58rem;
       }
 
-      /* Hero Móvil: Scroll Container y Canvas 720px min-height */
-      .hero-sticky-viewport {
-        align-items: flex-end;
-        justify-content: center;
+      /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      .hero-scroll-container {
         min-height: 720px !important;
-        padding-bottom: 0;
       }
 
-      .hero-vignette-overlay {
+      .hero-sticky-viewport {
+        min-height: 720px !important;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .canvas-gradient-overlay {
         background: linear-gradient(
           180deg, 
           rgba(15, 14, 14, 0) 0%, 
-          rgba(15, 14, 14, 0) 38%, 
-          rgba(15, 14, 14, 0.6) 54%, 
-          rgba(15, 14, 14, 0.92) 74%, 
+          rgba(15, 14, 14, 0) 36%, 
+          rgba(15, 14, 14, 0.65) 54%, 
+          rgba(15, 14, 14, 0.94) 74%, 
           #0f0e0e 96%
         );
+      }
+
+      .hero-container-align {
+        min-height: 720px !important;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 28px;
       }
 
       .hero-scroll-content {
         margin: 0 auto;
         max-width: 360px;
-        width: 100%;
-        min-height: 330px;
-        position: relative;
-        padding: 0 16px;
+        min-height: 290px;
         text-align: center;
       }
 
       .hero-scroll-step {
-        left: 0;
-        right: 0;
-        top: auto;
-        bottom: 0;
-        transform: translateY(0);
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
         align-items: center;
         text-align: center;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
 
-      .hero-scroll-step.active {
-        transform: translateY(0);
+      .hero-script-tag {
+        font-size: 2.2rem;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
       }
 
       .hero-title {
         font-size: 1.85rem;
         line-height: 1.12;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
-      .hero-script {
-        font-size: 2.2rem;
-        line-height: 1.1;
-        margin: 2px 0 8px;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      .step-1 .hero-title {
+        margin-bottom: 18px;
       }
 
       .hero-desc {
@@ -1277,15 +1324,20 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+        margin-bottom: 12px;
       }
 
-      .btn-primary,
-      .btn-secondary {
+      .btn-primary {
         width: 100%;
         max-width: 275px;
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.84rem;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.84rem;
+        padding: 4px 0;
       }
 
       /* Barra de Pilares Carrusel Horizontal Deslizable en Móvil */
@@ -1485,48 +1537,49 @@
           <img src="public/frames/desktop/poster.webp" id="heroPosterFallback" class="hero-poster-fallback" alt="NÜVA NAILS SPA Manicura Prémium en Apartadó">
         </div>
 
-        <!-- Capa de Degradado Suave para Contraste -->
-        <div class="hero-vignette-overlay"></div>
+        <!-- Capa de Degradado Aterciopelado para Contraste Orgánico -->
+        <div class="canvas-gradient-overlay"></div>
 
-        <!-- Contenedor Tipográfico Editorial en 2 Pasos -->
-        <div class="hero-scroll-content">
-          <!-- Paso 1 (0% a 50% de scroll) -->
-          <div class="hero-scroll-step active" id="heroStep1">
-            <span class="hero-tag">✦ Manicura Prémium en Apartadó</span>
-            <h1 class="hero-title">
-              Belleza & Detalle
-              <span class="hero-script">en Cada Uña</span>
-            </h1>
-            <p class="hero-desc">
-              Luce una manicura impecable, duradera y con acabado de revista. Cuidado especializado con esmaltes de alta gama en un ambiente de calma total.
-            </p>
-            <div class="hero-actions">
-              <a href="https://wa.me/573137463374?text=Hola%20N%C3%9CVA%20NAILS%20SPA%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-              </a>
-              <a href="#servicios" class="btn-secondary">
-                <i class="fa-solid fa-sparkles"></i> Ver Servicios
-              </a>
+        <!-- Contenedor Tipográfico Editorial en 2 Pasos (50% / 50%) -->
+        <div class="container hero-container-align">
+          <div class="hero-scroll-content">
+            <!-- Paso 1 (0% a 50% de scroll) -->
+            <div class="hero-scroll-step step-1 active" id="heroStep1">
+              <span class="hero-script-tag">Nail Spa &amp; Esthetic</span>
+              <span class="hero-eyebrow">SALÓN DE MANICURA &amp; SPA · APARTADÓ</span>
+              <h1 class="hero-title">Belleza &amp; Detalle<br><em>en Cada Uña.</em></h1>
+              <div class="hero-actions">
+                <a href="https://wa.me/573137463374?text=Hola%20N%C3%9CVA%20NAILS%20SPA%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+                </a>
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Paso 2 (50% a 100% de scroll) -->
-          <div class="hero-scroll-step" id="heroStep2">
-            <span class="hero-tag">✦ Técnicas Avanzadas & Bioseguridad</span>
-            <h2 class="hero-title">
-              Arte & Perfección
-              <span class="hero-script">que Perdura</span>
-            </h2>
-            <p class="hero-desc">
-              Desde esculpido acrílico y kapping gel hasta diseños en tendencia. Protocolos con instrumental 100% esterilizado para la salud de tus uñas.
-            </p>
-            <div class="hero-actions">
-              <a href="https://wa.me/573137463374?text=Hola%20N%C3%9CVA%20NAILS%20SPA%2C%20quisiera%20consultar%20disponibilidad%20para%20u%C3%B1as." target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar Turno
-              </a>
-              <a href="#nosotros" class="btn-secondary">
-                <i class="fa-solid fa-heart"></i> Conócenos
-              </a>
+            <!-- Paso 2 (50% a 100% de scroll) -->
+            <div class="hero-scroll-step step-2" id="heroStep2">
+              <span class="hero-script-tag">Elegancia &amp; Distinción</span>
+              <span class="hero-eyebrow">TÉCNICAS AVANZADAS &amp; BIOSEGURIDAD</span>
+              <h2 class="hero-title">Arte &amp; Perfección<br><em>que Perdura.</em></h2>
+              <p class="hero-desc">Desde esculpido acrílico, soft gel y kapping hasta diseños de autor en tendencia. Cuidado especializado con esmaltes prémium y bioseguridad clínica para la salud de tus uñas.</p>
+              <div class="hero-actions">
+                <a href="https://wa.me/573137463374?text=Hola%20N%C3%9CVA%20NAILS%20SPA%2C%20quisiera%20consultar%20disponibilidad%20para%20u%C3%B1as." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Turno
+                </a>
+                <a href="#nosotros" class="btn-hero-minimal-link">
+                  Conoce el Spa <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">Atención personalizada con cita previa</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1592,7 +1645,7 @@
         <div class="services-grid">
           <!-- Servicio 1: Semipermanente -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Semipermanente Mocca en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/semipermanente-mocca.jpg" alt="Semipermanente Mocca en Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
@@ -1606,7 +1659,7 @@
 
           <!-- Servicio 2: Uñas Acrílicas -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/extensiones-acrilicas-esculpidas.jpg" alt="Extensiones Acrílicas en Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
@@ -1620,7 +1673,7 @@
 
           <!-- Servicio 3: Nail Art HD -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art Minimalista en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/nail-art-luxury-designs.jpg" alt="Nail Art Minimalista en Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
@@ -1634,7 +1687,7 @@
 
           <!-- Servicio 4: Kapping Gel -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping y Gel Nivelador en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/kapping-gel-nivelador.jpg" alt="Kapping y Gel Nivelador en Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
@@ -1648,7 +1701,7 @@
 
           <!-- Servicio 5: Pedicura Spa -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa y Relax en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/pedicura-spa-relax.jpg" alt="Pedicura Spa y Relax en Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
@@ -1662,7 +1715,7 @@
 
           <!-- Servicio 6: Retiro & Calcio -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Retiro Seguro y Baño de Calcio en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/retiro-bano-calcio.jpg" alt="Retiro Seguro y Baño de Calcio en Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
@@ -1685,7 +1738,7 @@
         <!-- Bloque 1: Experiencia y Ambiente Coherente de Salón de Uñas -->
         <div class="experience-layout">
           <div class="salon-image-showcase">
-            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=85" alt="Salón de uñas y manicura NÜVA NAILS SPA Apartadó" loading="lazy">
+            <img src="https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg" alt="Salón de uñas y manicura NÜVA NAILS SPA Apartadó" loading="lazy">
             <div class="experience-floating-badge">
               <strong>VIP</strong>
               <span>Spa Studio</span>

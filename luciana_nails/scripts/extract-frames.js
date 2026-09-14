@@ -6,9 +6,11 @@ const { execSync, spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-const videoInput = process.argv[2] || path.join(__dirname, '..', '..', '.agents', 'document', 'Model_showing_nails_covering_face_202609101133.mp4');
-if (!fs.existsSync(videoInput)) {
-  console.error(`❌ Error: El video "${videoInput}" no existe.`);
+const deskVideoInput = process.argv[2] || path.join(__dirname, '..', '..', '.agents', 'document', 'nail-canela-rojo', 'Beauty_advertisement_video_creation_1080p_20260913132328.mp4');
+const mobVideoInput = process.argv[3] || path.join(__dirname, '..', '..', '.agents', 'document', 'nail-canela-rojo', 'Crear_video_promocional_diseño_uñas_20260913133154.mp4');
+
+if (!fs.existsSync(deskVideoInput)) {
+  console.error(`❌ Error: El video Desktop "${deskVideoInput}" no existe.`);
   process.exit(1);
 }
 
@@ -35,12 +37,12 @@ const mobileDir = path.join(__dirname, '..', 'public', 'frames', 'mobile');
 fs.mkdirSync(desktopDir, { recursive: true });
 fs.mkdirSync(mobileDir, { recursive: true });
 
-console.log(`🎬 Procesando "${videoInput}" con: ${ffmpegCmd}`);
+console.log(`🎬 Procesando Desktop "${deskVideoInput}" con: ${ffmpegCmd}`);
 
 // 3. Extraer Desktop (16:9, ~72 frames, calidad 85)
 console.log('🖥️ Generando frames para Desktop (1920x1080)...');
 spawnSync(ffmpegCmd, [
-  '-y', '-i', videoInput,
+  '-y', '-i', deskVideoInput,
   '-vf', 'fps=18,scale=1920:1080',
   '-c:v', 'libwebp',
   '-quality', '85',
@@ -48,11 +50,16 @@ spawnSync(ffmpegCmd, [
   path.join(desktopDir, 'frame-%04d.webp')
 ], { stdio: 'inherit' });
 
-// 4. Extraer Mobile (9:16, ~72 frames, calidad 76, elevación vertical y=80 y paneo dinámico de 0.62 a 0.50)
-console.log('📱 Generando frames para Mobile (720x1280) con paneo cinemático y elevación...');
+// 4. Extraer Mobile (9:16 nativo 1080x1920 -> 720x1280, 72 frames, calidad 76)
+const mobSrc = fs.existsSync(mobVideoInput) ? mobVideoInput : deskVideoInput;
+console.log(`📱 Generando frames para Mobile (720x1280) desde "${mobSrc}"...`);
+const mobFilter = mobSrc === mobVideoInput 
+  ? 'fps=18,scale=720:1280'
+  : 'fps=18,crop=ih*9/16:ih:1140:0,scale=720:1280';
+
 spawnSync(ffmpegCmd, [
-  '-y', '-i', videoInput,
-  '-vf', 'fps=18,scale=-1:1440,crop=720:1280:(in_w-out_w)*(0.62-0.12*(t/4.0)):80',
+  '-y', '-i', mobSrc,
+  '-vf', mobFilter,
   '-c:v', 'libwebp',
   '-quality', '76',
   '-compression_level', '6',

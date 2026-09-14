@@ -63,7 +63,7 @@ Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en A
    - Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** y **2 columnas balanceadas en móvil**.
    - Fotografía inmersiva al 100% (`aspect-ratio: 3/4`), degradado inferior aterciopelado (38% superior transparente), precio claro y botón minimalista `AGENDAR ➔`.
 5. **`#nosotros` (Sobre Nosotros & Especialistas)**:
-   - Bloque Editorial con foto de salón de manicura real (`photo-1527799820374-dcf8d9d4a388`), badge flotante VIP, titular de impacto y 4 métricas de autoridad (años de trayectoria, clientas atendidas, bioseguridad clínica y calificación 5.0★).
+   - Bloque Editorial con foto de salón de manicura real (`photo-1604654894610-df63bc536371`), badge flotante VIP, titular de impacto y 4 métricas de autoridad (años de trayectoria, clientas atendidas, bioseguridad clínica y calificación 5.0★).
    - Bloque de Especialistas: **4 columnas en escritorio (`repeat(4, 1fr)`)** con formato **Retrato Editorial Vertical (3:4.2)**; en **móvil (< 768px)** carrusel horizontal deslizable (*Scroll Snap*) con tarjetas de 255px y efecto «Peek» (asoman 70-100px del siguiente perfil).
 6. **`#ubicacion` (Mapa Georreferenciado & Contacto)**:
    - Tarjeta de lujo continuo con dirección (La Martina, Cra 95 #N° 96 - 60, Apartadó), horarios, teléfono y Google Maps embebido oficial (`z=16`).

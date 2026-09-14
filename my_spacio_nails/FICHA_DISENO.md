@@ -38,11 +38,11 @@ Documentación técnica y tokens de diseño para **My Spacio Nails** en Apartad�
    - Poster fallback instantáneo anti-flashes negros (`poster.webp`).
    - Cobertura 100% full-cover edge-to-edge sin encogimiento artificial.
    - Capa de degradado aterciopelado `.canvas-gradient-overlay` (horizontal en desktop, vertical en móvil).
-   - Narrativa editorial en 2 capítulos secuenciales (50% / 50%). En móvil calibrado a `min-height: 720px !important;` con textos anclados en la base (`top: auto; bottom: 0;`), dejando el 44% superior completamente despejado.
+   - Narrativa editorial en 2 capítulos secuenciales (50% / 50%). En escritorio anclado en el tercio inferior (`align-items: flex-end; padding-bottom: clamp(48px, 9vh, 85px);`) con textos minimalistas y enlace limpio `Ver Servicios ➔`, despejando el rostro y mirada de la modelo. En móvil calibrado a `min-height: 720px !important;` con textos anclados en la base (`top: auto; bottom: 0;`), dejando la mitad superior completamente despejada.
 3. **Barra de Pilares / Garantías**: 5 sellos de confianza con carrusel horizontal deslizable (*Scroll Snap*), auto-scroll fluido cada 3s y pausa táctil en móvil.
 4. **`#servicios` (Catálogo de Servicios)**: Grid 3 Columnas en Escritorio (`repeat(3, 1fr)`), 2 Columnas balanceadas en Móvil (`repeat(2, 1fr)`). Tarjetas Full-Bleed Minimalistas 3:4 con degradado aterciopelado (38% superior 100% transparente), sin píldoras superiores de duración, precio en COP destacado y enlace minimalista `AGENDAR ➔`.
 5. **`#nosotros` (Sobre Nosotros & Especialistas — Estándar Editorial)**:
-   - Bloque Editorial con fotografía representativa de salón de manicura (`photo-1527799820374-dcf8d9d4a388`), badge flotante VIP, descripción cálida y fila de 4 métricas de autoridad (en 2 columnas en móvil).
+   - Bloque Editorial con fotografía representativa de salón de manicura real (`about-nuva-nails-manicurista.jpg`), badge flotante VIP, descripción cálida y fila de 4 métricas de autoridad (en 2 columnas en móvil).
    - Bloque Especialistas en Retrato Editorial Vertical (3:4.2): Grid de 4 Columnas en Escritorio y Carrusel Horizontal Deslizable (*Scroll Snap*) de una sola fila en Móvil con efecto Peek.
 6. **`#ubicacion` (Mapa & Contacto)**: Panel de lujo oscuro obsidian y camel sand con dirección en Apartadó, horarios y mapa embebido georreferenciado con fórmula oficial `z=16`.
 7. **Footer**: Enlaces de navegación, redes sociales, marca tipográfica pura y módulo de reserva con botón conciso «Agendar».

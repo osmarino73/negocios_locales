@@ -222,35 +222,38 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
       class="canvas-poster-img"
     />
 
-    <!-- Cero capas opacas sobre el video para 100% nitidez óptica -->
+    <!-- Capa de degradado aterciopelado con protección inferior -->
+    <div class="canvas-gradient-overlay"></div>
 
-    <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
+    <!-- Contenido editorial asimétrico con 2 pasos secuenciales anclados al tercio inferior -->
     <div class="container hero-container-align">
       <div class="hero-scroll-content">
-        <!-- Paso 1 (0% a 50%): Gran Titular Principal sin descripción para despejar el video -->
+        <!-- Paso 1 (0% a 50%): Titular Minimalista Editorial anclado en la parte inferior -->
         <div class="hero-scroll-step step-1 active">
-          <span class="hero-script-tag">Título de Autor</span>
           <span class="hero-eyebrow">CATEGORÍA · CIUDAD</span>
-          <h1 class="hero-title">MÁS QUE UN SERVICIO.<br><em>UN ESTILO DE VIDA.</em></h1>
+          <h1 class="hero-title">El arte de cuidar tu estilo<br><em>con máxima distinción.</em></h1>
           <div class="hero-actions">
-            <a href="https://wa.me/..." class="btn btn-primary">Agendar Cita</a>
-            <a href="#servicios" class="btn btn-outline">Ver Servicios</a>
+            <a href="https://wa.me/..." class="btn-primary">Agendar Cita</a>
+            <a href="#servicios" class="btn-hero-minimal-link">
+              Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
           <div class="hero-proof-badge">
             <span class="hero-proof-stars">★★★★★</span>
-            <span class="hero-proof-text">5.0 en Google Reviews · Ubicación</span>
+            <span class="hero-proof-text">5.0 en Google Reviews · Ciudad</span>
           </div>
         </div>
 
-        <!-- Paso 2 (50% a 100%): Técnica, Servicios & Detalle con descripción completa -->
+        <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con copy conciso -->
         <div class="hero-scroll-step step-2">
-          <span class="hero-script-tag">Maestría en Cada Detalle</span>
-          <span class="hero-eyebrow">PRECISIÓN &amp; TÉCNICA</span>
-          <h2 class="hero-title">ARTE CLÁSICO &amp;<br><em>TENDENCIA MODERNA</em></h2>
-          <p class="hero-desc">Descripción detallada, clara y persuasiva de los procedimientos, atención personalizada e higiene de primer nivel para el cliente.</p>
+          <span class="hero-eyebrow">TÉCNICA &amp; ACABADOS PRÉMIUM</span>
+          <h2 class="hero-title">Detalles que marcan<br><em>la diferencia.</em></h2>
+          <p class="hero-desc">Atención especializada, protocolos de bioseguridad y acabados de alta definición para resaltar lo mejor de ti.</p>
           <div class="hero-actions">
-            <a href="#servicios" class="btn btn-primary">Conocer Servicios</a>
-            <a href="https://wa.me/..." class="btn btn-outline">Consultar Horarios</a>
+            <a href="https://wa.me/..." class="btn-primary">Agendar Cita</a>
+            <a href="#servicios" class="btn-hero-minimal-link">
+              Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -259,15 +262,15 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
 </section>
 ```
 
-### 3. Estilos CSS Esenciales
+### 3. Estilos CSS Esenciales (Anclaje Inferior & 60% Superior Despejado)
 
 ```css
-/* Contenedor de scroll: 300vh proporciona el ritmo perfecto para los 3 textos */
+/* Contenedor de scroll: 300vh proporciona el ritmo perfecto para los 2 pasos editoriales */
 .hero-scroll-section {
   position: relative;
   height: 300vh;
   width: 100%;
-  background-color: #0d0e12;
+  background-color: #0d0b0a;
 }
 
 .canvas-sticky-wrapper {
@@ -309,34 +312,56 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  display: none; /* Cero capas residuales sobre el video */
+  display: none;
 }
 
-/* Regla Crítica: CERO capas opacas o veladuras completas sobre el video */
+/* Capa de degradado aterciopelado: horizontal + protección inferior para máxima legibilidad */
+.canvas-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  background: 
+    linear-gradient(180deg, transparent 65%, rgba(13, 11, 10, 0.55) 100%),
+    linear-gradient(
+      90deg,
+      #0d0b0a 0%,
+      rgba(13, 11, 10, 0.88) 24%,
+      rgba(13, 11, 10, 0.60) 38%,
+      rgba(13, 11, 10, 0.15) 54%,
+      transparent 70%
+    );
+}
 
+/* Contenedor editorial anclado al tercio inferior (despeje del 60% superior de la pantalla) */
 .hero-container-align {
   position: relative;
   z-index: 4;
   width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-start;
-  padding-top: 40px;
+  padding-top: 0;
+  padding-bottom: clamp(48px, 9vh, 85px);
 }
 
 .hero-scroll-content {
   position: relative;
   z-index: 4;
   width: 100%;
-  max-width: 580px;
-  min-height: 400px;
+  max-width: 550px;
+  min-height: 290px;
 }
 
 .hero-scroll-step {
   position: absolute;
-  top: 50%;
+  bottom: 0;
   left: 0;
-  transform: translateY(-50%) translateY(14px);
+  transform: translateY(16px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -350,23 +375,68 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
 .hero-scroll-step.active {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 .hero-scroll-step .hero-title,
 .hero-scroll-step .hero-desc,
-.hero-scroll-step .hero-script-tag,
 .hero-scroll-step .hero-eyebrow {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 4px 25px rgba(0, 0, 0, 0.9);
 }
 
+/* Enlace minimalista con micro-desplazamiento */
+.btn-hero-minimal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-dark-secondary, #c9c0b8);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 8px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-minimal-link i {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-hero-minimal-link:hover {
+  color: var(--color-camel, #cbb39c);
+}
+
+.btn-hero-minimal-link:hover i {
+  transform: translateX(5px);
+}
+
 .step-1 .hero-title {
-  margin-bottom: 26px; /* Espaciado equilibrado hacia los botones al no tener párrafo */
+  margin-bottom: 22px;
 }
 
 @media (max-width: 768px) {
+  .hero-container-align {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 16px;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .hero-scroll-content {
+    max-width: 360px;
+    min-height: 290px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-scroll-step {
+    align-items: center;
+    text-align: center;
+  }
+
   .step-1 .hero-title {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
   }
 }
 ```

@@ -62,11 +62,11 @@
        VARIABLES Y DESIGN TOKENS (CLONACIÓN FORENSE ATÚRA STUDIO)
        ========================================================================== */
     :root {
-      /* Paleta Oscura (Hero, Sobre Nosotros, Footer) */
-      --bg-dark-base: #0e0d0d;
-      --bg-dark-surface: #161414;
-      --bg-dark-elevated: #1f1b1b;
-      --bg-dark-trans: rgba(14, 13, 13, 0.88);
+      /* Paleta Oscura Espresso Mocha (Hero, Sobre Nosotros, Footer) */
+      --bg-dark-base: #120e0d;
+      --bg-dark-surface: #181413;
+      --bg-dark-elevated: #221c1a;
+      --bg-dark-trans: rgba(18, 14, 13, 0.88);
 
       /* Paleta Clara Contrastante (Servicios, Ubicación) */
       --bg-light-base: #faf8f6;
@@ -74,6 +74,7 @@
       --bg-light-card: #ffffff;
 
       /* Acentos Metallic Gold Foil & Matte Gold */
+      --color-accent: #c5a059;
       --color-gold: #c5a059;
       --color-gold-light: #e5c378;
       --color-gold-dark: #9e7b35;
@@ -329,31 +330,54 @@
       display: none;
     }
 
-    /* Cero filtros opacos globales para 100% nitidez óptica del video */
+    /* Doble degradado orgánico aterciopelado para máxima legibilidad sin opacar el video */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(18, 14, 13, 0.65) 100%),
+        linear-gradient(
+          90deg, 
+          #120e0d 0%, 
+          #120e0d 22%, 
+          rgba(18, 14, 13, 0.94) 32%, 
+          rgba(18, 14, 13, 0.75) 42%, 
+          rgba(18, 14, 13, 0.40) 52%, 
+          rgba(18, 14, 13, 0.15) 62%, 
+          transparent 75%
+        );
+    }
 
     .hero-container-align {
       position: relative;
       z-index: 4;
       width: 100%;
+      height: 100%;
       display: flex;
-      align-items: center;
-      justify-content: flex-start; /* Asimétrico a la izquierda para despejar las manos */
-      padding-top: 50px;
+      align-items: flex-end; /* Anclaje inferior mandatorio para respetar el 60% superior despejado */
+      justify-content: flex-start; /* Asimétrico a la izquierda para despejar las manos y modelo */
+      padding-top: 0;
+      padding-bottom: clamp(40px, 7.5vh, 75px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 420px;
+      max-width: 560px;
+      min-height: 330px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 0;
-      transform: translateY(-50%) translateY(16px);
+      transform: translateY(16px);
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -367,7 +391,34 @@
     .hero-scroll-step.active {
       opacity: 1;
       pointer-events: auto;
-      transform: translateY(-50%) translateY(0);
+      transform: translateY(0);
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-gold);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
     }
 
     .hero-script-tag {
@@ -1310,26 +1361,44 @@
       }
 
       /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      .hero-scroll-section {
+        min-height: 720px !important;
+      }
+
       .canvas-sticky-wrapper {
+        min-height: 720px !important;
         align-items: flex-end;
         justify-content: center;
       }
 
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg, 
+          rgba(18, 14, 13, 0) 0%, 
+          rgba(18, 14, 13, 0) 36%, 
+          rgba(18, 14, 13, 0.65) 54%, 
+          rgba(18, 14, 13, 0.94) 74%, 
+          #120e0d 96%
+        );
+      }
+
       .hero-container-align {
+        min-height: 720px !important;
         justify-content: center;
         padding-top: 0;
-        padding-bottom: 36px;
+        padding-bottom: 28px;
       }
 
       .hero-scroll-content {
         max-width: 360px;
-        min-height: 360px;
+        min-height: 290px;
         text-align: center;
       }
 
       .hero-scroll-step {
         align-items: center;
         text-align: center;
+        width: 100%;
       }
 
       .hero-script-tag {
@@ -1643,6 +1712,9 @@
           class="canvas-poster-img"
         />
 
+        <!-- Capa de degradado aterciopelado para máxima legibilidad sin opacar el video -->
+        <div class="canvas-gradient-overlay"></div>
+
         <!-- Contenido editorial asimétrico con 2 pasos secuenciales (50% / 50%) -->
         <div class="container hero-container-align">
           <div class="hero-scroll-content">
@@ -1650,33 +1722,33 @@
             <div class="hero-scroll-step step-1 active">
               <span class="hero-script-tag">Nail Fashion &amp; Beauty</span>
               <span class="hero-eyebrow">CENTRO DE ESTÉTICA &amp; MANICURA · APARTADÓ</span>
-              <h1 class="hero-title">UÑAS DE IMPACTO.<br><em>ELEGANCIA QUE PERDURA.</em></h1>
+              <h1 class="hero-title">Uñas que inspiran<br><em>elegancia &amp; distinción.</em></h1>
               <div class="hero-actions">
                 <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20manicura." target="_blank" rel="noopener noreferrer" class="btn-primary">
                   <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="#servicios" class="btn-secondary">
-                  <i class="fa-solid fa-sparkles"></i> Ver Servicios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
               <div class="hero-proof-badge">
                 <span class="hero-proof-stars">★★★★★</span>
-                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó, Antioquia</span>
+                <span class="hero-proof-text">5.0 en Google Reviews · Apartadó</span>
               </div>
             </div>
 
             <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con descripción completa -->
             <div class="hero-scroll-step step-2">
-              <span class="hero-script-tag">Brillo Intacto por Semanas</span>
+              <span class="hero-script-tag">Brillo &amp; Estilo de Autor</span>
               <span class="hero-eyebrow">TÉCNICA &amp; PERFECCIÓN</span>
-              <h2 class="hero-title">MANOS RADIANTES.<br><em>DISEÑOS MODERNOS.</em></h2>
-              <p class="hero-desc">Luce uñas impecables, resistentes y con acabados de alta definición en Apartadó. Especialistas en esmaltado semipermanente, extensiones acrílicas, pedicura spa y nail art de lujo con bioseguridad clínica.</p>
+              <h2 class="hero-title">Manos radiantes<br><em>diseños que cautivan.</em></h2>
+              <p class="hero-desc">Luce uñas impecables, resistentes y con acabados de alta definición en Apartadó. Especialistas en esmaltado semipermanente, extensiones acrílicas, pedicura spa y nail art en foil dorado con bioseguridad clínica.</p>
               <div class="hero-actions">
-                <a href="#servicios" class="btn-primary">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Conocer Servicios
+                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20agendar%20una%20cita%20de%20manicura." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="https://wa.me/573003943451?text=Hola%20Luciana%20Nails%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                  <i class="fa-brands fa-whatsapp"></i> Consultar Horarios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
             </div>
@@ -1855,7 +1927,7 @@
         <!-- Bloque 1: Experiencia y Autoridad -->
         <div class="experience-layout">
           <div class="salon-image-showcase">
-            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80" alt="Ambiente y mesas de manicura en Luciana Nails Apartadó" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80" alt="Ambiente y mesas de manicura en Luciana Nails Apartadó" loading="lazy">
             <div class="experience-floating-badge">
               <strong>VIP</strong>
               <span>Salón Studio</span>
@@ -2171,7 +2243,7 @@
           const ih = img.naturalHeight || img.height;
 
           // Limpiar canvas con el color base de fondo
-          ctx.fillStyle = '#0e0d0d';
+          ctx.fillStyle = '#120e0d';
           ctx.fillRect(0, 0, cw, ch);
 
           // Escala cover pura al 100% para cubrir el canvas de borde a borde

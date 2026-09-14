@@ -26,6 +26,17 @@
       "lunes_a_sabado": "8:00 AM - 7:00 PM",
       "domingos_y_festivos": "Previa cita y disponibilidad"
     },
+    "video_scroll": {
+      "habilitado": true,
+      "total_frames": 72,
+      "fps": 18,
+      "ruta_desktop": "public/frames/desktop",
+      "ruta_mobile": "public/frames/mobile",
+      "poster_desktop": "public/frames/desktop/poster.webp",
+      "poster_mobile": "public/frames/mobile/poster.webp",
+      "video_desktop_origen": ".agents/document/nail-canela-rojo/Beauty_advertisement_video_creation_1080p_20260913132328.mp4",
+      "video_mobile_origen": ".agents/document/nail-canela-rojo/Crear_video_promocional_diseño_uñas_20260913133154.mp4"
+    },
     "servicios": [
       {
         "id": "art-manicure-foil",

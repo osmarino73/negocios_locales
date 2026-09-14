@@ -36,32 +36,49 @@ Toda página web o landing page generada, independientemente de la imagen de ref
 - **Reglas Complementarias Obligatorias**:
   - **Smart Header Limpio**: Sin barra promocional superior (`.promo-topbar`). En móvil: Solo Logotipo (izquierda) y botón conciso **«Agendar»** (derecha) sin menú hamburguesa.
   - **Logotipo Tipográfico Puro**: Prohibido insertar íconos de FontAwesome o emojis decorativos junto al nombre del negocio en el header o footer (`.brand-logo`). La identidad de marca debe ser 100% tipográfica, limpia y profesional.
-  - **Imagen de Ambiente en Sobre Nosotros Coherente con el Nicho**: La fotografía de `.salon-image-showcase` debe reflejar fielmente el tipo de negocio (para uñas: mesas de manicura y esmaltes; para spa: cabina de masajes/zen; para peluquería: tocadores y lavado; para barbería: sillones de cuero). Prohibido poner sillas de peluquería en salones de manicura o spas.
+  - **Imagen de Ambiente en Sobre Nosotros Estrictamente Coherente con el Nicho**: La fotografía de `.salon-image-showcase` debe reflejar fielmente el rubro exacto:
+    - *Uñas / Nails*: Mesas de manicura con clientas, lámparas LED y esmaltes (ej. `about-nuva-nails-manicurista.jpg` o `photo-1604654894610-df63bc536371`). **Prohibido colocar secadores o planchas de pelo (`photo-1527799820374-dcf8d9d4a388`) en salones de uñas**.
+    - *Spa / Bienestar*: Cabina de masajes, toallas, velas y ambiente zen (`photo-1600334129128-685c5582fd35`).
+    - *Peluquería*: Tocadores, lavado capilar y peinado (`photo-1560066984-138dadb4c035`).
+    - *Barbería*: Sillones clásicos de barbero con cuero y madera (`photo-1585747860715-2ba37e788b70`).
   - **Botón Flotante WhatsApp**: Posición fija con `env(safe-area-inset-bottom)`, tooltip oculto en móvil y `z-index: 99999`.
   - **Copywriting Cercano**: Prohibición de términos abstractos o pomposos (*«de autor»*, *«visagismo»*); uso de un tono cercano, natural y persuasivo.
+  - **Unicidad Estricta del Color Principal (Prohibición de Colores Hardcoded)**: Todo elemento de acento (firmas script `.hero-script-tag` / `.section-script-eyebrow`, énfasis display `.hero-title em`, subtítulo de marca `.brand-subtitle`, roles `.team-role`, precios `.service-card-price`, enlaces `.btn-card-book-minimal` y líneas de acento) debe consumir **exclusivamente la variable CSS oficial (`var(--color-accent)`)**. Queda terminantemente prohibido quemar valores HEX/RGB en estos elementos para garantizar que al cambiar la paleta en `:root`, el 100% de la interfaz responda dinámicamente y con total coherencia cromática.
 
 ---
 
-### 3. Hero Header Inmersivo a Ancho Completo (Full-Width Bleed)
+### 3. Hero Header Inmersivo a Ancho Completo (Full-Width Bleed) & Anclaje Inferior
 - **Impacto Visual Edge-to-Edge**: Cuando el diseño de referencia presente una modelo, producto o composición de fondo continua, se debe implementar el Hero a pantalla completa (`width: 100%`, `min-height: 640px`) eliminando marcos o cajas pequeñas aisladas.
-- **Técnica de Fusión Aterciopelada en Escritorio (`.hero-bg-overlay`) — Curva Eased de 8 Paradas**:
+- **Anclaje Inferior Mandatorio en Escritorio (`align-items: flex-end`)**:
+  - `.hero-fullwidth-section` o `.hero-container-align`: `min-height: 640px; height: 100%; display: flex; align-items: flex-end; justify-content: flex-start; padding-bottom: clamp(48px, 9vh, 85px);`.
+  - **Prohibición del Centrado Vertical Rígido**: Queda prohibido usar `top: 50%; transform: translateY(-50%)` porque el texto invade la mirada y rostro de la modelo. Las capas deben anclarse en `bottom: 0; left: 0;`.
+  - **Regla Mandatoria del 60% Superior Despejado**: Al menos el 60% superior de la pantalla debe permanecer 100% libre de textos para lucir la modelo, su peinado, maquillaje o el producto con máxima elegancia.
+- **Técnica de Doble Fusión Aterciopelada en Escritorio (`.hero-bg-overlay`)**:
   - Se sitúa la imagen en alta resolución en la capa posterior `.hero-bg-cover` posicionada a la derecha (`width: 70% - 72%`, `object-fit: cover; object-position: center top; opacity: 0.96;`).
   - **Prohibición Estricta de `mask-image` en el Contenedor**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
-  - **Degradado Orgánico Aterciopelado Calibrado (Curva Eased Multi-Parada con Luminosidad Optimizada)**: La transición debe realizarse puramente mediante `.hero-bg-overlay` con un degradado progresivo:
+  - **Doble Degradado Orgánico Aterciopelado (Curva Eased + Protección Inferior)**:
     ```css
-    background: linear-gradient(
-      90deg, 
-      #colorBase 0%, 
-      #colorBase 25%, 
-      rgba(..., 0.96) 32%, 
-      rgba(..., 0.8) 40%, 
-      rgba(..., 0.5) 50%, 
-      rgba(..., 0.2) 62%, 
-      rgba(..., 0.05) 74%, 
-      transparent 84%
-    );
+    background: 
+      linear-gradient(180deg, transparent 65%, rgba(..., 0.55) 100%),
+      linear-gradient(
+        90deg, 
+        #colorBase 0%, 
+        #colorBase 25%, 
+        rgba(..., 0.96) 32%, 
+        rgba(..., 0.8) 40%, 
+        rgba(..., 0.5) 50%, 
+        rgba(..., 0.2) 62%, 
+        rgba(..., 0.05) 74%, 
+        transparent 84%
+      );
     ```
-  - Garantiza **100% de legibilidad y contraste para el texto** a la izquierda (0% a 25%), mientras el resto luce la modelo o el producto **nítido, brillante y sin sombras negras excesivamente extensas** a partir del 84%.
+    Garantiza **100% de legibilidad y contraste para el texto** en el tercio inferior sin oscurecer el rostro ni la mirada en la parte superior.
+- **Jerarquía Tipográfica Editorial Oficial del Hero (Tercio Inferior Despejado)**:
+  - **Firma Caligráfica de Marca (`.hero-script-tag`)**: Fuente de firma manuscrita (*Alex Brush*, *Great Vibes*), tamaño compacto (`clamp(2rem, 3.4vw, 2.75rem); line-height: 1.05; margin-bottom: 2px;`) y color cálido camel, aportando la distinción de autor (ej. *«Nail Spa & Esthetic»*, *«Belleza que Perdura»*).
+  - **Eyebrow Técnico (`.hero-eyebrow`)**: En sans-serif limpia con espaciado amplio (`letter-spacing: 2px - 2.5px; font-size: 0.68rem - 0.70rem; margin-bottom: 10px;`), indicando exclusivamente `CATEGORÍA · CIUDAD` (ej. `ESTUDIO DE UÑAS · APARTADÓ`).
+  - **Titular Editorial Display (`.hero-title`)**: En tipografía display serif en *Title Case* fluido (`clamp(2.1rem, 3.6vw, 3.2rem); font-weight: 600; line-height: 1.12; margin-bottom: 18px;`), con la segunda frase en cursiva cálida (`em`).
+  - **Acciones Asimétricas**: Botón principal de agendamiento (`.btn-primary`, ej. `Agendar Cita`) + Enlace minimalista limpio (`.btn-hero-minimal-link` con micro-flecha `Ver Servicios ➔`).
+  - **Insignia Compacta**: Badge translúcido (`.hero-proof-badge`), sin recargar el tercio inferior.
 - **Responsividad Móvil Calibrada (< 768px)**:
   - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
   - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` garantizando nitidez total, sin filtros pesados que laven la imagen.
