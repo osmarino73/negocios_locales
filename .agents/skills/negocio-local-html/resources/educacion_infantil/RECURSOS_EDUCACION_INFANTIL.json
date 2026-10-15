@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "nicho": "educacion_infantil",
+  "nombre_nicho": "Educación Infantil, Jardines Infantiles, Guarderías & Preescolares",
+  "descripcion": "Banco oficial de recursos gráficos, fotografías 2K optimizadas, catálogo de íconos alternativos por áreas de desarrollo, servicios pedagógicos, paletas de colores y plantillas Schema.org para desarrollo de landing pages de preescolares.",
+  "heroes": {
+    "desktop": [
+      {
+        "id": "hero_desktop_1",
+        "url": "assets/heroes/educacion_infantil/hero_desktop_1.webp",
+        "aspect_ratio": "16:9",
+        "resolucion": "1920x1080",
+        "descripcion": "Niños felices explorando juguetes educativos en aula de jardín infantil con iluminación natural cálida",
+        "safe_zone": "50% superior despejado para rostro y sonrisas; tercio inferior apto para overlay degradado y texto"
+      }
+    ],
+    "mobile": [
+      {
+        "id": "hero_mobile_1",
+        "url": "assets/heroes/educacion_infantil/hero_mobile_1.webp",
+        "aspect_ratio": "9:16",
+        "resolucion": "720x1280",
+        "descripcion": "Niña en primer plano jugando con cámara interactiva lúdica en jardín infantil",
+        "safe_zone": "Mitad superior (0%-48%) 100% transparente para rostro; mitad inferior con gradiente de contraste"
+      }
+    ]
+  },
+  "catalogo_iconos_pilares_actividades": {
+    "arte_pintura": {
+      "titulo_defecto": "Arte & Pintura",
+      "desc_defecto": "Expresión libre y desarrollo de motricidad fina.",
+      "icono_principal": "fa-solid fa-palette",
+      "icono_alternativo_1": "fa-solid fa-paintbrush",
+      "icono_alternativo_2": "fa-solid fa-scissors",
+      "icono_alternativo_3": "fa-solid fa-pen-ruler",
+      "svg_inline": "<svg viewBox='0 0 512 512' fill='currentColor'><path d='M512 256c0 141.4-114.6 256-256 256s-256-114.6-256-256S114.6 0 256 0s256 114.6 256 256zM208 352c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm-96-96c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm64-96c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32zm128 0c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z'/></svg>"
+    },
+    "musica_canto": {
+      "titulo_defecto": "Música & Canto",
+      "desc_defecto": "Ritmo, audición activa y sensibilidad musical.",
+      "icono_principal": "fa-solid fa-music",
+      "icono_alternativo_1": "fa-solid fa-drum",
+      "icono_alternativo_2": "fa-solid fa-headphones",
+      "icono_alternativo_3": "fa-solid fa-guitar",
+      "svg_inline": "<svg viewBox='0 0 512 512' fill='currentColor'><path d='M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7V352c0 44.2-43 80-96 80s-96-35.8-96-80 43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 209.6V416c0 44.2-43 80-96 80s-96-35.8-96-80 43-80 96-80c11.2 0 22 1.6 32 4.6V128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-.1 27.3 5Self-correction: closing SVG properly'/></svg>"
+    },
+    "logica_juegos": {
+      "titulo_defecto": "Lógica & Juegos",
+      "desc_defecto": "Rompecabezas y razonamiento temprano.",
+      "icono_principal": "fa-solid fa-shapes",
+      "icono_alternativo_1": "fa-solid fa-puzzle-piece",
+      "icono_alternativo_2": "fa-solid fa-cubes-stacked",
+      "icono_alternativo_3": "fa-solid fa-cubes",
+      "svg_inline": "<svg viewBox='0 0 512 512' fill='currentColor'><path d='M256 32L32 480h448L256 32z'/></svg>"
+    },
+    "naturaleza_ambiente": {
+      "titulo_defecto": "Naturaleza",
+      "desc_defecto": "Conciencia ambiental y amor por los seres vivos.",
+      "icono_principal": "fa-solid fa-seedling",
+      "icono_alternativo_1": "fa-solid fa-leaf",
+      "icono_alternativo_2": "fa-solid fa-earth-americas",
+      "icono_alternativo_3": "fa-solid fa-sun",
+      "svg_inline": "<svg viewBox='0 0 512 512' fill='currentColor'><path d='M512 64c0 113.6-84.6 207.5-194.2 222C305.2 305.9 288 337 288 372.3V448h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H160c-13.3 0-24-10.7-24-24s10.7-24 24-24h64v-75.7c0-35.3-17.2-66.4-29.8-86.3C84.6 271.5 0 177.6 0 64V32C0 14.3 14.3 0 32 0h192 64 192c17.7 0 32 14.3 32 32v32z'/></svg>"
+    },
+    "bilinguismo_lenguaje": {
+      "titulo_defecto": "Bilingüismo & Lectura",
+      "desc_defecto": "Inmersión lúdica en inglés y cuentacuentos.",
+      "icono_principal": "fa-solid fa-language",
+      "icono_alternativo_1": "fa-solid fa-book-open-reader",
+      "icono_alternativo_2": "fa-solid fa-comments",
+      "icono_alternativo_3": "fa-solid fa-spell-check"
+    },
+    "motricidad_deporte": {
+      "titulo_defecto": "Motricidad & Deporte",
+      "desc_defecto": "Desarrollo corporal, equilibrio y coordinación.",
+      "icono_principal": "fa-solid fa-child-reaching",
+      "icono_alternativo_1": "fa-solid fa-person-running",
+      "icono_alternativo_2": "fa-solid fa-basketball",
+      "icono_alternativo_3": "fa-solid fa-child"
+    },
+    "nutricion_salud": {
+      "titulo_defecto": "Nutrición & Salud",
+      "desc_defecto": "Minuta saludable y hábitos de alimentación.",
+      "icono_principal": "fa-solid fa-apple-whole",
+      "icono_alternativo_1": "fa-solid fa-shield-heart",
+      "icono_alternativo_2": "fa-solid fa-hands-holding-child",
+      "icono_alternativo_3": "fa-solid fa-user-nurse"
+    }
+  },
+  "servicios_pedagogicos": [
+    {
+      "id": "caminadores_sala_cuna",
+      "nombre": "Caminadores & Sala Cuna",
+      "rango_edad": "1 a 2 Años",
+      "badge_color": "#F59E0B",
+      "badge_class": "badge-yellow",
+      "descripcion": "Estimulación temprana sensorial, desarrollo psicomotor y cuidado afectivo personalizado para los primeros pasos del bebé.",
+      "imagen": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80",
+      "whatsapp_msg": "Hola, deseo solicitar información y reservar un cupo para el nivel de Caminadores y Sala Cuna."
+    },
+    {
+      "id": "parvulos_descubrimiento",
+      "nombre": "Párvulos & Descubrimiento",
+      "rango_edad": "2 a 3 Años",
+      "badge_color": "#F43F5E",
+      "badge_class": "badge-rose",
+      "descripcion": "Desarrollo del lenguaje verbal, juego simbólico en grupo, socialización afectiva y autonomía en hábitos cotidianos.",
+      "imagen": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80",
+      "whatsapp_msg": "Hola, deseo solicitar información y reservar un cupo para el nivel de Párvulos."
+    },
+    {
+      "id": "prejardin_exploradores",
+      "nombre": "Prejardín Exploradores",
+      "rango_edad": "3 a 4 Años",
+      "badge_color": "#8B5CF6",
+      "badge_class": "badge-purple",
+      "descripcion": "Iniciación al pensamiento lógico-matemático, expresiones artísticas, desarrollo de motricidad fina y exploración ambiental.",
+      "imagen": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80",
+      "whatsapp_msg": "Hola, deseo solicitar información y reservar un cupo para el nivel de Prejardín."
+    },
+    {
+      "id": "jardin_kindergarten",
+      "nombre": "Jardín / Kindergarten",
+      "rango_edad": "4 a 5 Años",
+      "badge_color": "#06B6D4",
+      "badge_class": "badge-cyan",
+      "descripcion": "Prelectura, fonética práctica, proyectos lúdicos de ciencia, formación en valores ciudadanos y autoconfianza emocional.",
+      "imagen": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80",
+      "whatsapp_msg": "Hola, deseo solicitar información y reservar un cupo para el nivel de Jardín."
+    },
+    {
+      "id": "transicion_prek",
+      "nombre": "Transición / Pre-K",
+      "rango_edad": "5 a 6 Años",
+      "badge_color": "#10B981",
+      "badge_class": "badge-green",
+      "descripcion": "Preparación integral para la educación primaria con lectoescritura avanzada, resolución de problemas y nociones de bilingüismo.",
+      "imagen": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+      "whatsapp_msg": "Hola, deseo solicitar información y reservar un cupo para el nivel de Transición."
+    },
+    {
+      "id": "talleres_estimulacion",
+      "nombre": "Talleres de Estimulación & Apoyo",
+      "rango_edad": "Todas las Edades",
+      "badge_color": "#6366F1",
+      "badge_class": "badge-indigo",
+      "descripcion": "Actividades extracurriculares de música, pintura, psicomotricidad y refuerzo escolar adaptado a necesidades individuales.",
+      "imagen": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80",
+      "whatsapp_msg": "Hola, quisiera solicitar información sobre los Talleres de Estimulación y Refuerzo."
+    }
+  ],
+  "fotografias_ambiente": [
+    {
+      "id": "aula_ludica_1",
+      "url": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80",
+      "categoria": "ambiente_salon",
+      "descripcion": "Aula escolar luminosa con mesas infantiles y materiales didácticos de desarrollo"
+    },
+    {
+      "id": "parque_juegos_1",
+      "url": "https://images.unsplash.com/photo-1566085101039-563da6e44381?auto=format&fit=crop&w=1200&q=80",
+      "categoria": "zona_recreo",
+      "descripcion": "Área de juegos al aire libre biosegura y colorida para preescolares"
+    }
+  ],
+  "paletas_color_recomendadas": {
+    "ludica_calida": {
+      "primary": "#4A6BAF",
+      "accent": "#FF6B35",
+      "yellow": "#F59E0B",
+      "green": "#10B981",
+      "purple": "#8B5CF6",
+      "bg_light": "#FFFDF8",
+      "text_main": "#1E2A38"
+    },
+    "pastel_calida": {
+      "primary": "#5B8FB9",
+      "accent": "#E67E22",
+      "yellow": "#F39C12",
+      "green": "#2ECC71",
+      "purple": "#9B59B6",
+      "bg_light": "#FAFAF5",
+      "text_main": "#2C3E50"
+    }
+  },
+  "sellos_pilares_confianza": [
+    {
+      "titulo": "Ambiente Bioseguro",
+      "desc": "Espacios cardioprotegidos e higienizados diariamente.",
+      "icono": "fa-solid fa-shield-heart"
+    },
+    {
+      "titulo": "Nutrición Balanceada",
+      "desc": "Minuta diaria elaborada por nutricionistas infantiles.",
+      "icono": "fa-solid fa-apple-whole"
+    },
+    {
+      "titulo": "Bilingüismo Temprano",
+      "desc": "Inmersión lúdica y fonética práctica en idioma inglés.",
+      "icono": "fa-solid fa-language"
+    },
+    {
+      "titulo": "Docentes Certificadas",
+      "desc": "Educadoras licenciadas en pedagogía infantil con vocación de amor.",
+      "icono": "fa-solid fa-user-nurse"
+    }
+  ]
+}

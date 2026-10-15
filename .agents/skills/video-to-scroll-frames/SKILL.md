@@ -1,22 +1,29 @@
 ---
 name: video-to-scroll-frames
-description: Experto en convertir videos en secuencias de fotogramas WebP ultra ligeros calibrados para Desktop (16:9) y Mobile (9:16), con scripts de extracción FFmpeg/Node.js y motor de animación Canvas HTML5 sincronizado con scroll (preloading, poster fallback y overflow-x clip). Se activa cuando el usuario entrega video además del JSON de negocio e imagen de referencia.
+description: Experto en convertir carpetas con dos videos dedicados (escritorio 16:9 y móvil 9:16) en secuencias de fotogramas WebP ultra ligeros calibrados para Desktop y Mobile, con scripts de extracción FFmpeg/Node.js y motor de animación Canvas HTML5 sincronizado con scroll (preloading, poster fallback y overflow-x clip). Se activa cuando el usuario entrega la carpeta de videos junto con el JSON de negocio e imagen de referencia visual.
 ---
 
 # Extracción de Fotogramas y Animación de Scroll en Canvas HTML5 (Video-to-Scroll-Frames)
 
-Esta habilidad se activa cuando el usuario proporciona un **video de alta fidelidad** (o clip de referencia publicitaria) junto con los `DATOS_NEGOCIO.json` y la imagen de referencia visual, para crear una experiencia web premium donde **el usuario controla la reproducción del video mediante el scroll** usando un Canvas HTML5.
+Esta habilidad se activa cuando el usuario proporciona:
+1. **Imagen de Referencia Visual**: Captura o diseño base para clonación de paleta, tipografía y estilo gráfico.
+2. **DATOS_NEGOCIO.json**: JSON estructurado con la información oficial del negocio local.
+3. **Carpeta con Dos Videos Dedicados**:
+   - **Video de Escritorio (16:9)**: Video horizontal para la vista Desktop.
+   - **Video de Móvil (9:16)**: Video vertical calibrado para la vista Celular/Mobile.
+
+El objetivo es crear una experiencia web premium donde **el usuario controla la reproducción del video mediante el scroll del header** usando un Canvas HTML5 a 300vh.
 
 ---
 
 ## 🎯 Objetivos de Rendimiento y Estándares Técnicos
 
-1. **Secuencia Ligera**: Entre **60 y 90 fotogramas WebP** en total (suficiente para un scroll suave de 1 a 2 pantallas de desplazamiento, típicamente a **18-20 fps**).
+1. **Secuencia Ligera**: Entre **60 y 90 fotogramas WebP** por vista (suficiente para un scroll suave de 1 a 2 pantallas de desplazamiento, típicamente a **18-20 fps**).
 2. **Peso Pluma por Frame**: Entre **25 y 45 KB** por imagen WebP (secuencia completa entre **1.8 MB y 3.5 MB**, mucho más eficiente que un video `.mp4` pesado con problemas de decodificación en scroll táctil).
-3. **Doble Calibración Nativa**:
-   - **Desktop (16:9)**: Resolución `1280x720` (o `1920x1080` si la nitidez en monitores 4K es prioritaria).
-   - **Mobile (9:16)**: Resolución `720x1280`, centrada y recortada al sujeto o acción principal.
-4. **Cero Pantallas Negras (Poster Fallback)**: Un `poster.webp` estático que se dibuja en el Canvas en el primer ciclo de render, garantizando fidelidad visual instantánea antes de que el resto de frames se precarguen.
+3. **Doble Calibración Nativa desde Videos Dedicados**:
+   - **Desktop (16:9)**: Extraído directamente del video de escritorio a resolución `1920x1080` (WebP Q85, nivel de compresión 6).
+   - **Mobile (9:16)**: Extraído directamente del video de celular/móvil a resolución `720x1280` (WebP Q76, nivel de compresión 6).
+4. **Cero Pantallas Negras (Poster Fallback)**: Un `poster.webp` estático que se dibuja en el Canvas en el primer ciclo de render en ambas vistas, garantizando fidelidad visual instantánea antes de que el resto de frames se precarguen.
 5. **Regla de Oro CSS**: Uso estricto de `overflow-x: clip;` en `html, body`. **Terminantemente prohibido usar `overflow-x: hidden;`** en el contenedor padre, ya que destruye `position: sticky` en los navegadores modernos e inhabilita el scroll scrubbing.
 6. **Cobertura 100% Full Cover (Edge-to-Edge)**: El video debe llenar la pantalla al 100% usando `scale = Math.max(cw / iw, ch / ih);`. Prohibido aplicar multiplicadores de reducción artificial (como `* 0.90`) porque generan bandas, barras o recuadros negros alrededor del Canvas.
 7. **Narrativa Editorial en 2 Pasos (50% / 50%)**: Para evitar saturación visual y fatiga de lectura durante el scroll:
@@ -27,22 +34,22 @@ Esta habilidad se activa cuando el usuario proporciona un **video de alta fideli
 
 ## 📁 Estructura de Directorios Estándar
 
-Al procesar el video de un negocio, los archivos deben generarse y ubicarse dentro de la carpeta del proyecto de acuerdo con la siguiente estructura:
+Al procesar los dos videos de un negocio, los archivos deben generarse y ubicarse dentro de la carpeta del proyecto de acuerdo con la siguiente estructura:
 
 ```text
 negocio_local/
 ├── public/
 │   └── frames/
 │       ├── desktop/
-│       │   ├── poster.webp               # Cuadro inicial o más representativo
+│       │   ├── poster.webp               # Cuadro inicial o más representativo Desktop
 │       │   ├── frame-0001.webp
 │       │   ├── frame-0002.webp
-│       │   └── ... frame-0075.webp
+│       │   └── ... frame-0074.webp
 │       └── mobile/
-│           ├── poster.webp               # Poster vertical 9:16
+│           ├── poster.webp               # Poster vertical 9:16 Mobile
 │           ├── frame-0001.webp
 │           ├── frame-0002.webp
-│           └── ... frame-0075.webp
+│           └── ... frame-0074.webp
 ├── scripts/
 │   └── extract-frames.js                 # Script Node.js de respaldo
 ├── index.html                            # Landing page completa con Canvas
@@ -53,7 +60,7 @@ negocio_local/
 
 ---
 
-## ⚙️ Detección y Comandos de Extracción FFmpeg
+## ⚙️ Detección y Comandos de Extracción FFmpeg para Carpetas Duales
 
 Antes de procesar, verificar si FFmpeg está disponible en la terminal:
 
@@ -61,42 +68,35 @@ Antes de procesar, verificar si FFmpeg está disponible en la terminal:
 ffmpeg -version
 ```
 
-### 1. Extracción para Desktop (16:9 — 1920x1080 Nativo)
-Extrae a resolución completa 1080p con WebP Q85 y compresión nivel 6 para garantizar nitidez cristalina en monitores Retina y 4K:
+### 1. Extracción para Desktop (16:9 — desde Video de Escritorio)
+Extrae el video horizontal (`video_desktop.mp4`) a resolución completa 1080p con WebP Q85 y compresión nivel 6:
 
 ```powershell
 # Crear directorios de destino
 New-Item -ItemType Directory -Force -Path "public/frames/desktop", "public/frames/mobile"
 
-# Extracción Desktop (16:9 a 1920x1080 nativo, WebP Q85, 12-18 fps según duración)
-ffmpeg -i input.mp4 -vf "fps=12,scale=1920:1080" -c:v libwebp -quality 85 -compression_level 6 public/frames/desktop/frame-%04d.webp
+# Extracción Desktop (16:9 a 1920x1080 nativo, WebP Q85, 18.5 fps)
+ffmpeg -i "carpeta_videos/video_escritorio.mp4" -vf "fps=18.5,scale=1920:1080" -c:v libwebp -quality 85 -compression_level 6 public/frames/desktop/frame-%04d.webp
 
 # Generación automática de poster Desktop
 Copy-Item "public/frames/desktop/frame-0001.webp" -Destination "public/frames/desktop/poster.webp"
 ```
 
-### 2. Extracción para Mobile (9:16 — 720x1280)
-Aplica recorte centrado inteligente para mantener el sujeto enfocado en pantallas verticales.
-
-> [!IMPORTANT]
-> **Regla de Posicionamiento de Video (Modelo en el Centro de la Segunda Mitad)**:
-> Por estándar de producción, los videos 16:9 (1920x1080) sitúan a la modelo en el **centro de la segunda mitad** (mitad derecha, $x \approx 1440$), dejando la primera mitad (izquierda) limpia para los textos editoriales en escritorio.
-> Al extraer para **Móvil (9:16)**, el cuadro de recorte ($ow = 1080 \times 9/16 = 608\text{px}$) debe centrarse sobre la modelo desplazando el eje horizontal a $x = 1140$ ($1440 - 608/2 \approx 1136 \to 1140$):
-> ```powershell
-> # Extracción Móvil Calibrada (Modelo en el centro de la segunda mitad):
-> ffmpeg -i input.mp4 -vf "fps=18.5,crop=ih*9/16:ih:1140:0,scale=720:1280" -c:v libwebp -quality 76 -compression_level 6 public/frames/mobile/frame-%04d.webp
-> ```
+### 2. Extracción para Mobile (9:16 — desde Video Móvil Dedicado)
+Extrae el video vertical dedicado (`video_mobile.mp4`) a resolución `720x1280` con WebP Q76:
 
 ```powershell
-# Extracción Mobile Estándar (cuando el video está centrado globalmente a x=(iw-ow)/2):
-ffmpeg -i input.mp4 -vf "fps=18,crop=ih*9/16:ih:(iw-ow)/2:0,scale=720:1280" -c:v libwebp -quality 76 -compression_level 6 public/frames/mobile/frame-%04d.webp
+# Extracción Móvil (9:16 a 720x1280 nativo desde el video vertical dedicado):
+ffmpeg -i "carpeta_videos/video_movil.mp4" -vf "fps=18.5,scale=720:1280" -c:v libwebp -quality 76 -compression_level 6 public/frames/mobile/frame-%04d.webp
 
 # Generación automática de poster Mobile
 Copy-Item "public/frames/mobile/frame-0001.webp" -Destination "public/frames/mobile/poster.webp"
 ```
 
 ### 💡 Ajuste Fino para Clips de Longitud Variable (Objetivo 60-90 Frames)
-Calcula el `fps` en base al número de frames deseado (ej. 72 frames para 6 segundos: $72 / 6 = 12$ fps):
+Calcula el `fps` en base al número de frames deseado (ej. 74 frames para 4 segundos: $74 / 4 = 18.5$ fps):
+
+$$\text{FPS} = \frac{\text{Frames Meta (ej. 74)}}{\text{duración en segundos}}$$
 
 $$\text{FPS} = \frac{\text{Frames Meta (ej. 72)}}{\text{duración en segundos}}$$
 
@@ -315,7 +315,24 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
   display: none;
 }
 
-/* Capa de degradado aterciopelado: horizontal + protección inferior para máxima legibilidad */
+/* Navbar 100% Transparente (Sin fondos oscuros ni desdibujado) */
+.header-sticky-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: transparent;
+  border-bottom: none;
+}
+
+.brand-name, .brand-subtitle, .nav-links a {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+/* Capa de degradado aterciopelado: horizontal + protección inferior en Desktop */
 .canvas-gradient-overlay {
   position: absolute;
   top: 0;
@@ -416,6 +433,17 @@ El contenedor exterior determina la "duración física" del scroll (ej. `300vh`)
 }
 
 @media (max-width: 768px) {
+  /* Degradado Móvil: Restringido estrictamente al 20% inferior (80% superior 100% transparente) */
+  .canvas-gradient-overlay {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 80%,
+      rgba(13, 11, 10, 0.75) 90%,
+      var(--bg-dark, #0d0b0a) 100%
+    ) !important;
+  }
+
   .hero-container-align {
     justify-content: center;
     align-items: flex-end;

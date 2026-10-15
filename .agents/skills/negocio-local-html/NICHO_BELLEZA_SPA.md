@@ -64,10 +64,10 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
     ```
     Garantiza **100% de contraste a la izquierda (0% a 25%)** y una revelación luminosa y sedosa hacia la derecha, dejando la fotografía completamente limpia y radiante a partir del 84%, eliminando sombras oscuras excesivas sobre la modelo.
 - **Adaptabilidad Móvil Calibrada (< 768px)**:
-  - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
-  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` dejando despejado el tercio superior para la modelo con nitidez total.
+  - **Regla Mandatoria de Altura Hero**: En móvil debe tener **estrictamente `min-height: 840px !important;`** (rango `840px - 860px`) con `padding: 140px 16px 40px;` para otorgar máxima presencia visual y espacio holgado a la modelo. Jamás por debajo de 840px.
+  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top !important; opacity: 0.95;` dejando despejada y protagónica la mitad superior para la modelo con nitidez total.
   - **Texto Centralizado Estrictamente en la Mitad Inferior (Sin tapar a la modelo)**:
-    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 720px !important; padding: 140px 16px 28px;` (contenido posicionado exclusivamente desde el 50% de la altura hacia abajo).
+    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 840px !important; padding: 140px 16px 40px;` (contenido posicionado exclusivamente desde el 50% de la altura hacia abajo).
     - `.hero-bg-overlay`: Gradiente vertical translúcido:
       ```css
       background: linear-gradient(
@@ -90,7 +90,7 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
     - `.hero-actions`: `display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin: 0 auto;`.
     - Botones (`.btn-primary`, `.btn-secondary`): `width: 100%; max-width: 275px; padding: 12px 20px; font-size: 0.84rem; font-weight: 700; border-radius: 50px; text-align: center; justify-content: center; touch-action: manipulation;`.
     - Botón primario de reserva destacado con sombra ambiental y botón secundario con acabado translúcido tipo píldora (`backdrop-filter: blur(8px); border: 1px solid rgba(..., 0.35);`).
-  - **Smart Header / Navbar Inteligente**: Barra superior en `.header-sticky-wrapper` con auto-hide al bajar y aparición al subir. Botón superior compacto **«Agendar»** con `.btn-header-cta`.
+  - **Smart Header / Navbar Inteligente**: Barra superior en `.header-sticky-wrapper` 100% transparente (`background: transparent; border-bottom: none;`) sin gradientes oscuros ni desenfoque, utilizando sombra tipográfica (`text-shadow`) para máxima legibilidad del logotipo sobre el video/canvas. Auto-hide al bajar y reaparición al subir. En escritorio: Botón superior compacto «Agendar» con `.btn-header-cta`. En móvil (< 768px): **Queda prohibido el botón «Agendar» en el navbar móvil** (`.btn-header-cta { display: none !important; }`), garantizando que el logotipo tipográfico disponga del 100% del ancho sin cortes ni colisiones. Además, en móvil el degradado del hero (`.canvas-gradient-overlay`) se restringe al 20% inferior (`transparent 0%` a `80%`) dejando el 80% superior completamente transparente.
   - **Botón de Reserva del Footer**: El botón de la tarjeta de reserva del footer (`.btn-footer-reserve`) debe decir exclusivamente **«Agendar»** (no usar «Agendar por WhatsApp»).
 
 ---
@@ -104,15 +104,19 @@ En el nicho de belleza, estética y spas, el Hero **siempre debe implementarse a
   - `.service-card`: `position: relative; aspect-ratio: 3 / 4; min-height: 440px; border-radius: 22px; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;`. En móvil: `min-height: 300px; border-radius: 18px;`.
   - La imagen ocupa el 100% de la tarjeta (`position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;`).
 - **Degradado Aterciopelado Inferior**:
-  - `linear-gradient(180deg, rgba(..., 0) 0%, rgba(..., 0) 38%, rgba(..., 0.72) 65%, rgba(..., 0.96) 92%, #colorFondo 100%)`.
-  - El tercio superior (primeros 38%) es 100% transparente para mostrar la modelo o procedimiento con máxima nitidez.
+  - `linear-gradient(180deg, rgba(..., 0) 0%, rgba(..., 0) 45%, rgba(..., 0.72) 72%, rgba(..., 0.95) 92%, #colorFondo 100%)`.
+  - El 40%–45% superior es 100% transparente para mostrar la modelo, cutículas o procedimiento con máxima nitidez.
 - **Prohibición Estricta de Badges o Píldoras Superiores**:
   - Cero etiquetas de duración o badges flotantes en la parte superior para evitar ensuciar la fotografía.
-- **Tercio Inferior Tipográfico & Minimalista**:
-  - Línea de acento sutil (`.service-card-accent-line`).
-  - Nombre del servicio en tipografía display blanca y legible (`1.25rem - 1.35rem` en desktop, `0.95rem - 1.05rem` en móvil).
-  - Precio monetario claro y visible en tono de marca (`.service-card-price`, ej. `$90.000 COP`).
-  - Enlace de agendamiento minimalista **`AGENDAR ➔`** (`.btn-card-book-minimal`): sin fondo de pastilla pesado (`background: transparent; border: none; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em;`), con micro-interacción hover con flecha que se desplaza (`translateX(5px)`).
+- **Anclaje Inferior Estricto (Regla del 70%–75% Superior Despejado)**:
+  - En móvil: `.service-card` con `padding: 0 !important;` y `.service-card-content` con `padding: 8px 10px 10px !important;`.
+  - `.service-card-desc` con `display: none !important;` en móvil (en desktop oculta o minimalista). La altura total del bloque inferior no supera ~65px, dejando despejado más del 70% superior de la foto.
+- **Footer de Dos Filas Verticales Independientes (`.service-card-footer`)**:
+  - Organizado obligatoriamente en **dos filas (`display: flex; flex-direction: column; align-items: flex-start; gap: 4px; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 4px;`)**:
+    1. **Fila 1 — Precio con Ancho 100% (`.service-card-price`)**: Dispone de todo el ancho horizontal para acomodar holgadamente valores superiores a $99.000 (ej. `$120.000`, `$150.000`, `$250.000`), sin riesgo de cortes ni doble salto de línea.
+       - **Prohibición del sufijo `COP`**: Se prohíbe el uso de `COP` (ej. usar estrictamente `$85.000`, jamás `$85.000 COP`).
+       - **Formato sutil para «Desde»**: En servicios variables se utiliza `<small>Desde</small> $XX.XXX` (`font-size: 0.72em; font-weight: 500; opacity: 0.85; align-items: baseline;`).
+    2. **Fila 2 — Enlace Minimalista `AGENDAR ➔` (`.btn-card-book-minimal`)**: En su propio renglón independiente con `width: 100%; display: inline-flex; align-items: center; gap: 5px;`, garantizando una zona táctil cómoda y ergonómica en móviles y micro-desplazamiento en hover (`translateX(5px)`).
 
 ---
 
@@ -147,7 +151,7 @@ En todos los proyectos de salones, spas y belleza:
 1. **Prohibición Estricta de Menús o Barras Inferiores Fijas (Action Dock)**:
    - **Queda terminantemente prohibido implementar barras de navegación inferiores fijas** (`.mobile-bottom-nav`, `.mobile-action-dock` o menús tipo pestaña). Estas barras saturan la pantalla del celular, roban área de lectura vertical, chocan con las barras de navegación de iOS/Android y compiten visualmente con WhatsApp.
 2. **Navegación Móvil Ultra Limpia y Sin Fricción**:
-   - Arriba: Smart Header minimalista con Logotipo tipográfico puro a la izquierda y botón conciso **«Agendar»** a la derecha (`.btn-header-cta`).
+   - Arriba: Smart Header minimalista con Logotipo tipográfico puro con el 100% del ancho (sin botón de agendar en móvil para evitar recortes ni menú hamburguesa).
    - Abajo: Únicamente el botón flotante circular oficial de WhatsApp (`.whatsapp-float`).
 3. **Botón Flotante WhatsApp Anti-Corte**:
    - `bottom: calc(28px + env(safe-area-inset-bottom, 0px));`

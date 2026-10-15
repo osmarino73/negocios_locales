@@ -10,4 +10,4 @@ thumbs.db
 *.mp4
 *.mov
 *.avi
-.agents/document/
+.agents/document*/

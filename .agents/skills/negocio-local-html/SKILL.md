@@ -16,15 +16,13 @@ Este skill guía la transformación de **imágenes de referencia visual** en pá
 
 ### 1. Entregable Autónomo & Optimizado
 - **CSS Embebido**: Todo el diseño debe ir en `<style>` dentro del `<head>`.
-- **Fotografías Hero de Alta Gama Optimizadas (`assets/heroes/`)**: Priorizar el banco local de imágenes curadas WebP (`assets/heroes/{barberias,maquillaje,nails,peinados,salon_belleza,spa}/`) para velocidad de carga instantánea (< 70 KB) y fondos oscuros con degradado perfecto. Para servicios y ambiente se puede usar [BANCO_IMAGENES.json](file:///c:/Users/Rio%20Belen/negocios_locales/BANCO_IMAGENES.json) o fotografías propias del cliente.
-- **Logotipos e Íconos**: SVGs limpios o FontAwesome para micro-gráficos.
 - **Cero archivos secundarios locales obligatorios**: El `.html` carga instantáneamente y funciona de manera autónoma en cualquier navegador.
 
 ---
 
 ### 2. Estructura Oficial de Secciones & Clonación de Tríada Visual
 Toda página web o landing page generada, independientemente de la imagen de referencia utilizada, debe estructurarse obligatoriamente bajo las siguientes **secciones oficiales**:
-1. **`#inicio` (Hero Full-Width Bleed)**: Portada inmersiva con fotografía en alta fidelidad a la derecha (`.hero-bg-cover`), titular de impacto editorial, copy cercano y cálido (cero tecnicismos como "de autor"), descripción y botón principal de agendamiento. Altura desktop `640px` y móvil estrictamente `720px !important`.
+1. **`#inicio` (Hero Full-Width Bleed)**: Portada inmersiva con fotografía en alta fidelidad a la derecha (`.hero-bg-cover`), titular de impacto editorial, copy cercano y cálido (cero tecnicismos como "de autor"), descripción y botón principal de agendamiento. Altura desktop `640px` y móvil estrictamente `840px !important` (rango `840px - 860px`).
 2. **Barra de Pilares / Garantías**: Franja de 4 a 5 sellos de confianza con íconos de marca. En móvil (< 768px): **Carrusel horizontal deslizable (*Scroll Snap*) con auto-scroll inteligente (3s) y pausa táctil** en 1 sola fila compacta.
 3. **`#servicios` (Catálogo de Servicios — Grid 3 Columnas en Escritorio)**: Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** para mostrar los 6 servicios en 2 filas amplias, aireadas y elegantes con diseño **Full-Bleed Minimalista** (fotografía protagonista al 100%, relación 3:4, degradado inferior, precio claro y enlace minimalista `AGENDAR ➔`; obligatorio en **2 columnas** en móvil).
 4. **`#nosotros` (Sobre Nosotros & Nuestros Profesionales — Estándar Editorial)**:
@@ -34,16 +32,16 @@ Toda página web o landing page generada, independientemente de la imagen de ref
 6. **Footer Principal**: Enlaces de navegación, datos de contacto, redes sociales, horarios y módulo de reserva con botón conciso **«Agendar»**.
 
 - **Reglas Complementarias Obligatorias**:
-  - **Smart Header Limpio**: Sin barra promocional superior (`.promo-topbar`). En móvil: Solo Logotipo (izquierda) y botón conciso **«Agendar»** (derecha) sin menú hamburguesa.
-  - **Logotipo Tipográfico Puro**: Prohibido insertar íconos de FontAwesome o emojis decorativos junto al nombre del negocio en el header o footer (`.brand-logo`). La identidad de marca debe ser 100% tipográfica, limpia y profesional.
-  - **Imagen de Ambiente en Sobre Nosotros Estrictamente Coherente con el Nicho**: La fotografía de `.salon-image-showcase` debe reflejar fielmente el rubro exacto:
-    - *Uñas / Nails*: Mesas de manicura con clientas, lámparas LED y esmaltes (ej. `about-nuva-nails-manicurista.jpg` o `photo-1604654894610-df63bc536371`). **Prohibido colocar secadores o planchas de pelo (`photo-1527799820374-dcf8d9d4a388`) en salones de uñas**.
-    - *Spa / Bienestar*: Cabina de masajes, toallas, velas y ambiente zen (`photo-1600334129128-685c5582fd35`).
-    - *Peluquería*: Tocadores, lavado capilar y peinado (`photo-1560066984-138dadb4c035`).
-    - *Barbería*: Sillones clásicos de barbero con cuero y madera (`photo-1585747860715-2ba37e788b70`).
-  - **Botón Flotante WhatsApp**: Posición fija con `env(safe-area-inset-bottom)`, tooltip oculto en móvil y `z-index: 99999`.
-  - **Copywriting Cercano**: Prohibición de términos abstractos o pomposos (*«de autor»*, *«visagismo»*); uso de un tono cercano, natural y persuasivo.
-  - **Unicidad Estricta del Color Principal (Prohibición de Colores Hardcoded)**: Todo elemento de acento (firmas script `.hero-script-tag` / `.section-script-eyebrow`, énfasis display `.hero-title em`, subtítulo de marca `.brand-subtitle`, roles `.team-role`, precios `.service-card-price`, enlaces `.btn-card-book-minimal` y líneas de acento) debe consumir **exclusivamente la variable CSS oficial (`var(--color-accent)`)**. Queda terminantemente prohibido quemar valores HEX/RGB en estos elementos para garantizar que al cambiar la paleta en `:root`, el 100% de la interfaz responda dinámicamente y con total coherencia cromática.
+   - **Smart Header Limpio**: Sin barra promocional superior (`.promo-topbar`). En móvil: Logotipo nítido a la izquierda + Botón minimalista de menú hamburguesa (`.btn-mobile-menu`) a la derecha con drawer lateral deslizante (`.mobile-menu-drawer`). **Queda prohibido el botón largo de agendar en el navbar móvil** (`.btn-header-cta { display: none !important; }`) para evitar colisiones y cortes.
+   - **Logotipo Tipográfico Puro**: Prohibido insertar íconos de FontAwesome o emojis decorativos junto al nombre del negocio en el header o footer (`.brand-logo`). La identidad de marca debe ser 100% tipográfica, limpia y profesional.
+   - **Imagen de Ambiente en Sobre Nosotros Estrictamente Coherente con el Nicho**: La fotografía de `.salon-image-showcase` debe reflejar fielmente el rubro exacto:
+     - *Uñas / Nails*: Mesas de manicura con clientas, lámparas LED y esmaltes (ej. `about-nuva-nails-manicurista.jpg` o `photo-1604654894610-df63bc536371`). **Prohibido colocar secadores o planchas de pelo (`photo-1527799820374-dcf8d9d4a388`) en salones de uñas**.
+     - *Spa / Bienestar*: Cabina de masajes, toallas, velas y ambiente zen (`photo-1600334129128-685c5582fd35`).
+     - *Peluquería*: Tocadores, lavado capilar y peinado (`photo-1560066984-138dadb4c035`).
+     - *Barbería*: Sillones clásicos de barbero con cuero y madera (`photo-1585747860715-2ba37e788b70`).
+   - **Botón Flotante WhatsApp**: Posición fija con `env(safe-area-inset-bottom)`, tooltip oculto en móvil y `z-index: 99999`.
+   - **Copywriting Cercano**: Prohibición de términos abstractos o pomposos (*«de autor»*, *«visagismo»*); uso de un tono cercano, natural y persuasivo.
+   - **Unicidad Estricta del Color Principal (Prohibición de Colores Hardcoded)**: Todo elemento de acento (firmas script `.hero-script-tag` / `.section-script-eyebrow`, énfasis display `.hero-title em`, subtítulo de marca `.brand-subtitle`, roles `.team-role`, precios `.service-card-price`, enlaces `.btn-card-book-minimal` y líneas de acento) debe consumir **exclusivamente la variable CSS oficial (`var(--color-accent)`)**. Queda terminantemente prohibido quemar valores HEX/RGB en estos elementos para garantizar que al cambiar la paleta en `:root`, el 100% de la interfaz responda dinámicamente y con total coherencia cromática.
 
 ---
 
@@ -56,23 +54,20 @@ Toda página web o landing page generada, independientemente de la imagen de ref
 - **Técnica de Doble Fusión Aterciopelada en Escritorio (`.hero-bg-overlay`)**:
   - Se sitúa la imagen en alta resolución en la capa posterior `.hero-bg-cover` posicionada a la derecha (`width: 70% - 72%`, `object-fit: cover; object-position: center top; opacity: 0.96;`).
   - **Prohibición Estricta de `mask-image` en el Contenedor**: Queda terminantemente prohibido aplicar `-webkit-mask-image` sobre `.hero-bg-cover` porque genera cortes grisáceos y bandas sucias (*Mach bands*) cuando las fotografías tienen fondos claros contra fondos oscuros.
-  - **Doble Degradado Orgánico Aterciopelado (Curva Eased + Protección Inferior)**:
-    ```css
-    background: 
-      linear-gradient(180deg, transparent 65%, rgba(..., 0.55) 100%),
-      linear-gradient(
+  - **Calibración de Degradados — Regla Mandatoria Universal del Degradado Mínimo Ultraligero (`.hero-bg-overlay`)**:
+    - **Prohibición Estricta de Bloques Sólidos o Veladuras Oscuras**: Queda terminantemente prohibido colocar bloques negros artificiales o gradientes continuos (`180deg` o `90deg`) que sobrepasen el 35% horizontal o laven el color, apetitosidad y brillo natural de la fotografía.
+    - **Escritorio (> 768px) — Desvanecimiento Rápido al 30%–35%**:
+      ```css
+      background: linear-gradient(
         90deg, 
-        #colorBase 0%, 
-        #colorBase 25%, 
-        rgba(..., 0.96) 32%, 
-        rgba(..., 0.8) 40%, 
-        rgba(..., 0.5) 50%, 
-        rgba(..., 0.2) 62%, 
-        rgba(..., 0.05) 74%, 
-        transparent 84%
+        rgba(var(--bg-rgb), 0.65) 0%, 
+        rgba(var(--bg-rgb), 0.32) 15%, 
+        rgba(var(--bg-rgb), 0.08) 25%, 
+        transparent 32%
       );
-    ```
-    Garantiza **100% de legibilidad y contraste para el texto** en el tercio inferior sin oscurecer el rostro ni la mirada en la parte superior.
+      ```
+      El 70% central y derecho permanece 100% nítido, con iluminación y color fotográfico puro.
+    - **Legibilidad Garantizada con Sombras de Texto**: La legibilidad de titulares y textos se asegura con `text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 4px 20px rgba(0, 0, 0, 0.85);` (en fondos oscuros) o `text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);` (en fondos claros), sin depender de veladuras oscuras.
 - **Jerarquía Tipográfica Editorial Oficial del Hero (Tercio Inferior Despejado)**:
   - **Firma Caligráfica de Marca (`.hero-script-tag`)**: Fuente de firma manuscrita (*Alex Brush*, *Great Vibes*), tamaño compacto (`clamp(2rem, 3.4vw, 2.75rem); line-height: 1.05; margin-bottom: 2px;`) y color cálido camel, aportando la distinción de autor (ej. *«Nail Spa & Esthetic»*, *«Belleza que Perdura»*).
   - **Eyebrow Técnico (`.hero-eyebrow`)**: En sans-serif limpia con espaciado amplio (`letter-spacing: 2px - 2.5px; font-size: 0.68rem - 0.70rem; margin-bottom: 10px;`), indicando exclusivamente `CATEGORÍA · CIUDAD` (ej. `ESTUDIO DE UÑAS · APARTADÓ`).
@@ -80,22 +75,21 @@ Toda página web o landing page generada, independientemente de la imagen de ref
   - **Acciones Asimétricas**: Botón principal de agendamiento (`.btn-primary`, ej. `Agendar Cita`) + Enlace minimalista limpio (`.btn-hero-minimal-link` con micro-flecha `Ver Servicios ➔`).
   - **Insignia Compacta**: Badge translúcido (`.hero-proof-badge`), sin recargar el tercio inferior.
 - **Responsividad Móvil Calibrada (< 768px)**:
-  - **Regla Mandatoria de Altura**: En móvil debe tener **estrictamente `min-height: 720px !important;`**. Jamás por debajo de 720px.
-  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.95;` garantizando nitidez total, sin filtros pesados que laven la imagen.
-  - **Texto Centralizado Estrictamente en la Mitad Inferior (Sin tapar a la modelo)**:
-    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 720px !important; padding: 140px 16px 28px;` (bloque de contenido posicionado estrictamente desde el 50% de la altura hacia abajo).
-    - `.hero-bg-overlay`: Gradiente vertical translúcido:
+  - **Regla Mandatoria de Altura Hero**: En móvil debe tener **estrictamente `min-height: 840px !important;`** (rango `840px - 860px`) con `padding: 140px 16px 40px;` para otorgar máxima presencia visual y espacio holgado al sujeto/plato/modelo. Jamás por debajo de 840px.
+  - **Fotografía Nítida en Alta Fidelidad**: `.hero-bg-img` con `width: 100%; height: 100%; object-fit: cover; object-position: center top !important; opacity: 1;` garantizando nitidez total, sin filtros pesados que laven la imagen.
+  - **Texto Centralizado Estrictamente en la Mitad Inferior (Sin tapar a la modelo/producto)**:
+    - `.hero-fullwidth-section`: `display: flex; align-items: flex-end; justify-content: center; min-height: 840px !important; padding: 140px 16px 40px;` (bloque de contenido posicionado estrictamente desde el 50% de la altura hacia abajo).
+    - `.hero-bg-overlay`: Gradiente vertical translúcido reservado estrictamente al 20% inferior:
       ```css
       background: linear-gradient(
         180deg, 
-        rgba(..., 0) 0%, 
-        rgba(..., 0) 38%, 
-        rgba(..., 0.6) 54%, 
-        rgba(..., 0.92) 74%, 
-        #colorFondo 96%
-      );
+        transparent 0%, 
+        transparent 75%, 
+        rgba(var(--bg-rgb), 0.65) 90%, 
+        #colorFondo 100%
+      ) !important;
       ```
-      El 38% superior es 100% transparente, dejando la fotografía limpia y sin veladuras oscuras sobre la modelo.
+      El 75%–80% superior es 100% transparente, dejando la fotografía limpia y sin veladuras oscuras sobre la modelo o plato.
     - `.hero-text-block`: Centrado simétrico total (`text-align: center; margin: 0 auto; max-width: 360px; width: 100%; text-shadow: 0 2px 8px rgba(0,0,0,0.9);`).
     - **Escala Tipográfica Display Compacta en Móvil**:
       - Eyebrow: `0.72rem; letter-spacing: 0.18em; margin-bottom: 6px;`
@@ -105,8 +99,7 @@ Toda página web o landing page generada, independientemente de la imagen de ref
   - **Botones Optimizados Ergonómicos en Móvil**:
     - `.hero-actions`: Disposición vertical centrada (`display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; margin: 0 auto;`).
     - Botones (`.btn-primary`, `.btn-secondary`): `width: 100%; max-width: 275px; padding: 12px 20px; font-size: 0.84rem; font-weight: 700; border-radius: 50px; text-align: center; justify-content: center; touch-action: manipulation;`.
-    - Botón primario con color de acento y sombra ambiental suave; botón secundario con acabado *glassmorphism* translúcido de borde suave (`backdrop-filter: blur(8px); border: 1px solid rgba(..., 0.35);`).
-  - **Smart Header / Navbar Inteligente**: Barra superior envuelta en `.header-sticky-wrapper` con auto-hide al scrollear hacia abajo y reaparición instantánea al subir. Botón de cabecera reducido a **«Agendar»** con clase `.btn-header-cta` (`padding: 8px 15px; font-size: 0.78rem; white-space: nowrap;`).
+  - **Smart Header / Navbar Inteligente**: Barra superior envuelta en `.header-sticky-wrapper` con auto-hide al scrollear hacia abajo y reaparición instantánea al subir. En escritorio: Enlaces limpios + Botón «Agendar» (`.btn-header-cta`). En móvil (< 768px): Logotipo a la izquierda + Botón hamburguesa (`.btn-mobile-menu`) con drawer lateral, mientras `.btn-header-cta { display: none !important; }` evita saturación y garantiza que el encabezado respire con total amplitud sin colisiones ni cortes.
 
 ---
 
@@ -126,9 +119,17 @@ Toda página web o landing page generada, independientemente de la imagen de ref
   - **Escritorio (> 768px)**: Grid de **3 columnas (`repeat(3, 1fr); gap: 24px;`)** para 6 servicios en 2 filas equilibradas y elegantes.
   - **Móvil (≤ 768px)**: Grid de **2 columnas (`repeat(2, 1fr); gap: 12px;`)**, reduciendo el scroll vertical en un **50%**.
   - **Fotografía Protagonista Full-Bleed (3:4)**: La imagen abarca el 100% de la tarjeta (`aspect-ratio: 3/4; min-height: 440px; border-radius: 22px; overflow: hidden; position: relative;`).
-  - **Degradado Aterciopelado Inferior**: Protege la nitidez del procedimiento en el tercio superior (38% superior transparente) y proporciona contraste oscuro aterciopelado en la base.
+  - **Degradado Aterciopelado Inferior**: Transición que mantiene el **40%–45% superior 100% transparente** para mostrar las manos, el procedimiento o la modelo con máxima nitidez.
   - **Prohibición Estricta de Badges Superiores**: Cero píldoras flotantes arriba (sin etiquetas de duración o técnica) para preservar la fotografía limpia.
-  - **Tercio Inferior Tipográfico**: Línea de acento sutil, título del servicio en display blanca, precio destacado (`.service-card-price`) y botón de acción minimalista **`AGENDAR ➔`** (`.btn-card-book-minimal`): tipografía limpia y ligera, sin fondos de pastilla pesados, con micro-desplazamiento en hover.
+  - **Anclaje Inferior Estricto (Regla del 70%–75% Superior Despejado)**:
+    - En móvil: `.service-card` con `padding: 0 !important;` y `.service-card-content` con `padding: 8px 10px 10px !important;`.
+    - `.service-card-desc` con `display: none !important;` en móvil (en desktop oculta o minimalista). La altura total del bloque tipográfico no debe superar ~65px, garantizando que el **70%–75% superior de la foto permanezca 100% despejado y libre de textos**.
+  - **Footer de Dos Filas Independientes (Amplitud Total para Precios & Agendamiento Ergonomico)**:
+    - `.service-card-footer`: Organizado obligatoriamente en **dos filas verticales independientes (`display: flex; flex-direction: column; align-items: flex-start; gap: 4px; border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 4px;`)**:
+      1. **Fila 1 — Precio con Ancho 100% (`.service-card-price`)**: Dispone del 100% del ancho horizontal disponible para acomodar con holgura cifras de más de $99.000 (ej. `$120.000`, `$150.000`, `$250.000`), evitando cortes o saltos de línea forzados.
+         - **Prohibición del sufijo `COP`**: Queda prohibido añadir el código ISO `COP` (ej. usar estrictamente `$85.000`, nunca `$85.000 COP`).
+         - **Formato sutil para «Desde»**: En tarifas variables se utiliza la etiqueta `<small>Desde</small> $XX.XXX` (`font-size: 0.72em; font-weight: 500; opacity: 0.85; align-items: baseline;`), comunicando la variación comercial sin restar protagonismo visual a la cifra.
+      2. **Fila 2 — Enlace Minimalista `AGENDAR ➔` (`.btn-card-book-minimal`)**: Ubicado en su propio renglón independiente con `width: 100%; display: inline-flex; align-items: center; gap: 5px;`, ofreciendo un área táctil ergonómica y cómoda para el dedo en celulares, con micro-interacción hover donde la flecha avanza (`translateX(5px)`).
 - **Equipo / Especialistas en Retrato Editorial Full-Bleed (`.team-card`)**:
   - **Escritorio (> 768px)**: Grid de **4 columnas (`repeat(4, 1fr); gap: 20px;`)**.
   - **Móvil (≤ 768px)**: **Carrusel Horizontal Deslizable (*Scroll Snap*) obligatorio** en una sola fila (`display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 16px; scrollbar-width: none;`). Tarjetas fijas de `flex: 0 0 255px; aspect-ratio: 3/4.2;` con efecto «Peek» (asoman 70-100px del siguiente profesional a la derecha).
@@ -219,6 +220,6 @@ Dado que >85% de los usuarios de negocios locales acceden desde dispositivos mó
 1. **Análisis Visual & Tipográfico**: Identificar paleta de colores, estructura de secciones y la familia tipográfica precisa de la imagen de referencia.
 2. **Extracción y Configuración de Fuentes**: Seleccionar en Google Fonts la tipografía idéntica a la referencia e insertarla en el `<head>` y en `FICHA_DISENO.md`.
 3. **Selección Fotográfica**: Utilizar fotografías temáticas de alta gama desde `BANCO_IMAGENES.json` en formato CDN WebP optimizado.
-4. **Adaptación de Datos Locales & Estándar de Nicho**: Vincular WhatsApp directo (`wa.me`), llamada directa (`tel:`), Google Maps real y verificar lineamientos específicos del sector (ej. [NICHO_BELLEZA_SPA.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_BELLEZA_SPA.md) para salones/spas o [NICHO_EDUCACION_INFANTIL.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_EDUCACION_INFANTIL.md) para jardines/preescolares).
+4. **Adaptación de Datos Locales & Estándar de Nicho**: Vincular WhatsApp directo (`wa.me`), llamada directa (`tel:`), Google Maps real y verificar lineamientos específicos del sector (ej. [NICHO_BELLEZA_SPA.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_BELLEZA_SPA.md) para salones/spas, [NICHO_RESTAURANTES_COMIDAS_RAPIDAS.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_RESTAURANTES_COMIDAS_RAPIDAS.md) para restaurantes/comidas rápidas, [NICHO_ODONTOLOGIA_SALUD.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_ODONTOLOGIA_SALUD.md) para clínicas odontológicas/médicas, o [NICHO_EDUCACION_INFANTIL.md](file:///c:/Users/Rio%20Belen/negocios_locales/.agents/skills/negocio-local-html/NICHO_EDUCACION_INFANTIL.md) para jardines/preescolares).
 5. **Compilación Standalone + SEO**: Embeber estilos CSS en `<style>` + insertar metadatos Schema.org JSON-LD y OpenGraph.
 6. **Creación del Triángulo de Contexto**: Guardar `DATOS_NEGOCIO.json`, `FICHA_DISENO.md` y `AGENTS.md` en la carpeta del negocio.
