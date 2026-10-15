@@ -1,0 +1,137 @@
+{
+  "id": "lead-1790885308658-1",
+  "status": "nuevo",
+  "notes": "Hamburguesería artesanal líder en Apartadó, Antioquia. 100% carne de res seleccionada, pan brioche horneado diario, tocineta crujiente, quesos fundidos, papas rústicas y servicio de domicilios VIP en Urabá.",
+  "negocio": {
+    "nombre": "Las hamburguesas del pueblo",
+    "nombre_comercial": "Las Hamburguesas del Pueblo",
+    "rubro": "Hamburguesería Artesanal",
+    "categoria": "hamburgueser_a",
+    "eslogan": "Las hamburguesas del pueblo — Sabor Artesanal en Apartadó",
+    "calificacion": "4.8",
+    "resenas": "500+",
+    "contacto": {
+      "telefono_principal": "(+57) 320 691 2456",
+      "telefono": "(+57) 320 691 2456",
+      "whatsapp": {
+        "numero": "+573206912456",
+        "link": "https://wa.me/573206912456?text=Hola%20Las%20hamburguesas%20del%20pueblo%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 100 #98-45 (Zona Comercial)",
+      "ciudad": "Apartadó",
+      "departamento": "Antioquia",
+      "departamento_pais": "Antioquia, Colombia",
+      "pais": "Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Las+hamburguesas+del+pueblo/@7.8817338,-76.633698,16z/data=!4m10!1m2!2m1!1shamburguesas+en+apartado!3m6!1s0x8e500d11fedbcba5:0x2cffe1a9bc8370ca!8m2!3d7.8817338!4d-76.6246858!15sChhoYW1idXJndWVzYXMgZW4gYXBhcnRhZG9aGiIYaGFtYnVyZ3Vlc2FzIGVuIGFwYXJ0YWRvkgEUaGFtYnVyZ2VyX3Jlc3RhdXJhbnSaASRDaGREU1VoTk1HOW5TMFZKUTBGblRVTlJiVnBYY2w5M1JSQULgAQD6AQQIABBA!16s%2Fg%2F11kw8ydjfc"
+    },
+    "horarios": {
+      "martes_a_domingo": "5:00 PM - 11:30 PM",
+      "lunes": "Cerrado por descanso semanal"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin sitio web (Oportunidad alta)."
+    },
+    "colores": {
+      "accent": "#F5A623",
+      "primary": "#E89C1F",
+      "secondary": "#FFB11B",
+      "bg_dark": "#0E0F12",
+      "bg_card": "#181A1E"
+    },
+    "servicios": [
+      {
+        "id": "clasica-del-pueblo",
+        "categoria": "hamburguesas",
+        "nombre": "La Clásica del Pueblo",
+        "descripcion": "150g de carne de res fresca a la plancha, queso cheddar americano fundido, lechuga fresca, tomate en rodajas, cebolla caramelizada y salsa especial.",
+        "precio": "$18.000",
+        "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "bbq-bacon-burger",
+        "categoria": "hamburguesas",
+        "nombre": "BBQ Bacon Burger",
+        "descripcion": "Carne de res premium 180g, abundante tocineta crujiente, queso cheddar madurado, aros de cebolla crocantes y reducción de salsa BBQ artesanal.",
+        "precio": "$24.000",
+        "imagen": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "criolla-campesina",
+        "categoria": "hamburguesas",
+        "nombre": "La Criolla Campesina",
+        "descripcion": "Carne de res 160g, huevo criollo frito a la perfección, plátano maduro en almíbar, queso costeño asado a la plancha y ripio de papa crujiente.",
+        "precio": "$22.000",
+        "imagen": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "pollo-crispy-crunch",
+        "categoria": "pollo",
+        "nombre": "Pollo Crispy Crunch",
+        "descripcion": "Suprema de pechuga de pollo marinada y apanada extra crujiente, ensalada coleslaw fresca de la casa, pepinillos dulces y mayonesa de ajo asado.",
+        "precio": "$20.000",
+        "imagen": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "doble-smash-especial",
+        "categoria": "hamburguesas",
+        "nombre": "Doble Smash del Pueblo",
+        "descripcion": "Dos medallones de res de 90g con costra caramelizada en plancha de hierro fundido, cuatro lonchas de queso cheddar, cebolla picada y salsa secreta.",
+        "precio": "$26.000",
+        "imagen": "https://images.unsplash.com/photo-1583032015879-c55042494553?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "la-monstruosa-300g",
+        "categoria": "hamburguesas",
+        "nombre": "La Monstruosa 300g",
+        "descripcion": "Triple carne de res de 100g, doble tocineta ahumada, queso mozzarella fundido, jamón de pierna, huevo frito, guacamole rústico y pan brioche.",
+        "precio": "$32.000",
+        "imagen": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      }
+    ],
+    "especialidades": [
+      {
+        "id": "combo-pareja-del-pueblo",
+        "nombre": "Combo Pareja del Pueblo",
+        "rol": "2 Burgers Clásicas + Papas + 2 Bebidas",
+        "descripcion": "2 Hamburguesas Clásicas de 150g con queso cheddar, porción gigante de papas rústicas con salsa de ajo y 2 gaseosas 400ml heladas.",
+        "precio": "$44.000",
+        "imagen": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "combo-familiar-4x4",
+        "nombre": "Combo Familiar 4x4",
+        "rol": "4 Hamburguesas + 2 Papas Grandes + Gaseosa 1.5L",
+        "descripcion": "Para toda la familia: 4 Hamburguesas del Pueblo a elección, doble canastilla de papas sazonadas y gaseosa familiar 1.5L.",
+        "precio": "$78.000",
+        "imagen": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "picada-mixta-del-pueblo",
+        "nombre": "Gran Picada del Pueblo",
+        "rol": "Costilla BBQ + Trocitos de Burger + Salchicha + Papas",
+        "descripcion": "Trocitos de carne de hamburguesa a la plancha, costilla desmechada en salsa BBQ, papas rústicas, aros de cebolla y queso costeño frito.",
+        "precio": "$38.000",
+        "imagen": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "combo-smash-malteada",
+        "nombre": "Combo Smash & Shake",
+        "rol": "Doble Smash + Papas + Malteada Artesanal",
+        "descripcion": "Doble Smash Burger con cheddar fundido, papas crujientes y una malteada cremosa de vainilla, chocolate o fresa con crema batida.",
+        "precio": "$34.000",
+        "imagen": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}

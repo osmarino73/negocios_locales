@@ -1,0 +1,139 @@
+{
+  "id": "lead-1790886375467-1",
+  "status": "nuevo",
+  "notes": "Restaurante de hamburguesas y comidas rápidas emblemático en Apartadó, Antioquia. Famoso por su sazón generosa, combos familiares, pollo crispy, pizzas y servicio a domicilio de alta velocidad.",
+  "negocio": {
+    "nombre": "Matanga Burger Ortiz",
+    "nombre_comercial": "Matanga Burger",
+    "rubro": "Restaurante de Comidas Rápidas",
+    "categoria": "hamburguesas_comidas_rapidas",
+    "eslogan": "Matanga Burger Ortiz — Sabor Incomparable en Apartadó",
+    "calificacion": "4.6",
+    "resenas": "320+",
+    "contacto": {
+      "telefono_principal": "(604) 829 8050",
+      "telefono": "(604) 829 8050",
+      "whatsapp": {
+        "numero": "+573108298050",
+        "link": "https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 100F #108-133 a 108-1",
+      "barrio": "Barrio Ortiz",
+      "ciudad": "Apartadó",
+      "departamento": "Antioquia",
+      "departamento_pais": "Antioquia, Colombia",
+      "pais": "Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Matanga+Burger+Ortiz/@7.8857024,-76.6448172,16z/data=!4m10!1m2!2m1!1shamburguesas+en+apartado!3m6!1s0x8e500d78103e80f3:0x8f40a945109e2140!8m2!3d7.8857024!4d-76.635805!15sChhoYW1idXJndWVzYXMgZW4gYXBhcnRhZG9aGiIYaGFtYnVyZ3Vlc2FzIGVuIGFwYXJ0YWRvkgEKcmVzdGF1cmFudJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSU2FEZFRRbU4zRUFF4AEA-gEECAAQMQ!16s%2Fg%2F11fkq9wlkv"
+    },
+    "horarios": {
+      "lunes_a_domingo": "11:30 AM - 11:00 PM"
+    },
+    "sitio_web": "http://www.matangaburger.com/",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sitio web analizado."
+    },
+    "colores": {
+      "primary": "#C9182B",
+      "accent": "#F5A623",
+      "secondary": "#EAA221",
+      "bg_light": "#FFFFFF",
+      "bg_card": "#FFFFFF",
+      "bg_alt": "#FAF9F6",
+      "bg_dark": "#111215"
+    },
+    "servicios": [
+      {
+        "id": "crispy-chicken-burger",
+        "categoria": "pollo",
+        "nombre": "Crispy Chicken Burger",
+        "descripcion": "Pechuga apanada extra crocante con sazón secreta, queso fundido, ensalada fresca, pepinillos y salsa de la casa en pan brioche.",
+        "precio": "$20.000",
+        "imagen": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "classic-beef-burger",
+        "categoria": "hamburguesas",
+        "nombre": "Classic Beef Burger",
+        "descripcion": "160g de carne de res fresca a la plancha, queso cheddar americano, tomate en rodajas, lechuga fresca y cebolla tierna.",
+        "precio": "$18.000",
+        "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "cheesy-pizza-personal",
+        "categoria": "pizzas",
+        "nombre": "Cheesy Pizza Matanga",
+        "descripcion": "Masa delgada crocante al horno, salsa napolitana casera, doble queso mozzarella gratinado y toques de orégano fresco.",
+        "precio": "$22.000",
+        "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "chicken-nuggets-8pcs",
+        "categoria": "pollo",
+        "nombre": "Nuggets Crocantes (8 pcs)",
+        "descripcion": "Trocitos de pechuga de pollo marinados y dorados al punto perfecto, acompañados de salsa miel-mostaza y tártara artesanal.",
+        "precio": "$16.000",
+        "imagen": "https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "papas-rusticas-matanga",
+        "categoria": "acompanamientos",
+        "nombre": "Papas Rústicas de la Casa",
+        "descripcion": "Canastilla abundante de papas rústicas con piel, crocantes por fuera y suaves por dentro, sazonadas con especias y sal marina.",
+        "precio": "$10.000",
+        "imagen": "https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      },
+      {
+        "id": "gaseosa-soda-helada",
+        "categoria": "bebidas",
+        "nombre": "Gaseosa & Sodas Heladas",
+        "descripcion": "Refrescos de 400ml en lata o vaso helado con hielo y rodaja de limón, sodas saborizadas o limonadas naturales de la casa.",
+        "precio": "$6.000",
+        "imagen": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80",
+        "destacado": true
+      }
+    ],
+    "especialidades": [
+      {
+        "id": "mega-deal-matanga",
+        "nombre": "Mega Deal Matanga",
+        "rol": "Burger Especial + Papas + Bebida Helada",
+        "descripcion": "La promo favorita: 1 Hamburguesa Clásica Especial de 160g + Canastilla de papas rústicas + Gaseosa fría 400ml.",
+        "precio": "$26.000",
+        "imagen": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "combo-pareja-matanga",
+        "nombre": "Combo Pareja Ortiz",
+        "rol": "2 Burgers + Papas Grandes + 2 Bebidas",
+        "descripcion": "Para compartir en pareja: 2 Hamburguesas con queso cheddar, doble porción de papas doradas y 2 refrescos bien fríos.",
+        "precio": "$42.000",
+        "imagen": "https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "super-combo-familiar",
+        "nombre": "Super Combo Familiar",
+        "rol": "4 Burgers + 2 Papas Gigantes + Gaseosa 1.5L",
+        "descripcion": "El festín del fin de semana: 4 Hamburguesas artesanales completas, canastas gigantes de papas y gaseosa 1.5L.",
+        "precio": "$68.000",
+        "imagen": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "gran-picada-matanga",
+        "nombre": "Gran Picada Mixta",
+        "rol": "Nuggets + Carne + Salchicha + Papas",
+        "descripcion": "Picada abundante con carne de res a la plancha, nuggets crujientes, aros de cebolla, papas sazonadas y salsas especiales.",
+        "precio": "$36.000",
+        "imagen": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}

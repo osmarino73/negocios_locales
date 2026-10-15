@@ -1,0 +1,2552 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Matanga Burger Ortiz | Hamburguesas & Comidas RÃ¡pidas en ApartadÃ³</title>
+  <meta name="description" content="Las mejores hamburguesas y comidas rÃ¡pidas en ApartadÃ³, Barrio Ortiz. Hamburguesas artesanales, pollo crispy, pizzas, nuggets y papas rÃºsticas con entrega a domicilio rÃ¡pida. Â¡Pide ahora!">
+  <meta name="keywords" content="matanga burger, hamburguesas apartado, comidas rapidas apartado, matanga burger ortiz, domicilios apartado, hamburguesas uraba">
+  <meta name="author" content="Matanga Burger Ortiz">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Matanga Burger Ortiz | Sabor en Grande en ApartadÃ³">
+  <meta property="og:description" content="Hamburguesas artesanales irresistibles, pollo crispy, pizzas y combos con entrega a domicilio rÃ¡pida en Barrio Ortiz, ApartadÃ³.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="http://www.matangaburger.com/">
+  <meta property="og:image" content="matanga_burger_ortiz/hero_matanga.webp">
+  <meta property="og:locale" content="es_CO">
+
+  <!-- Google Fonts: Bebas Neue, Caveat, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Schema.org JSON-LD para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FastFoodRestaurant",
+    "name": "Matanga Burger Ortiz",
+    "image": "matanga_burger_ortiz/hero_matanga.webp",
+    "telephone": "+576048298050",
+    "servesCuisine": ["Fast Food", "Hamburguesas", "Pollo Crispy", "Pizzas", "Papas RÃºsticas"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 100F #108-133 a 108-1",
+      "addressLocality": "ApartadÃ³",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8857024,
+      "longitude": -76.635805
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:30",
+        "closes": "23:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "320"
+    }
+  }
+  </script>
+
+  <style>
+    /* ========================================================
+       VARIABLES & TOKENS DE DISEÃ‘O (QUICKBITE VISUAL CLONE)
+       ======================================================== */
+    :root {
+      --color-primary: #C9182B;          /* Rojo CarmesÃ­ Vibrante */
+      --color-primary-hover: #A81323;
+      --color-accent: #F5A623;           /* Amarillo Ãmbar / Mostaza */
+      --color-accent-hover: #D98200;
+      --color-secondary: #EAA221;
+      
+      --bg-page: #FFFFFF;
+      --bg-alt: #FAF9F6;                 /* Crema muy sutil para tarjetas */
+      --bg-card: #FFFFFF;
+      --bg-promo-red: #C9182B;
+      --bg-dark-footer: #111215;
+      
+      --text-main: #18191B;
+      --text-muted: #64748B;
+      --text-light: #FFFFFF;
+      
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 50px;
+      
+      --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-glow-red: 0 8px 25px rgba(201, 24, 43, 0.35);
+      --shadow-glow-yellow: 0 8px 25px rgba(245, 166, 35, 0.4);
+      
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset Global */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    button, input {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .text-primary {
+      color: var(--color-primary) !important;
+    }
+
+    .text-accent {
+      color: var(--color-accent) !important;
+    }
+
+    /* Squiggle Decorativo Amarillo */
+    .squiggle-accent {
+      display: block;
+      width: 48px;
+      height: 8px;
+      margin: 8px auto 0;
+      background-image: radial-gradient(circle at 10px 4px, var(--color-accent) 3px, transparent 4px), radial-gradient(circle at 20px 4px, var(--color-accent) 3px, transparent 4px);
+      background-size: 20px 8px;
+      background-repeat: repeat-x;
+    }
+
+    /* ========================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ======================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .header-sticky-wrapper.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .header-sticky-wrapper.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    /* Logotipo TipogrÃ¡fico Puro */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: #18191B;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-title span {
+      color: var(--color-primary);
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #334155;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-primary);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #18191B;
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(245, 166, 35, 0.35);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow-yellow);
+    }
+
+    /* ========================================================
+       SECCIÃ“N 1: #INICIO (HERO FULL-WIDTH BLEED)
+       ======================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background-color: #F8F7F4;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .hero-bg-picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      transition: transform 0.6s ease;
+    }
+
+    /* Degradado Blanco MÃ­nimo: MÃ¡xima Nitidez, Color y Contraste de la Hamburguesa */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 0.88) 0%, 
+        rgba(255, 255, 255, 0.72) 18%, 
+        rgba(255, 255, 255, 0.32) 28%, 
+        rgba(255, 255, 255, 0.06) 36%, 
+        transparent 42%
+      );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding-bottom: clamp(55px, 9vh, 95px);
+      padding-top: 140px;
+    }
+
+    .hero-text-block {
+      max-width: 620px;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 8px;
+      display: inline-block;
+      text-shadow: 0 1px 6px rgba(255, 255, 255, 0.9);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.6rem, 6.8vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #18191B;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 12px rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-title span {
+      color: var(--color-primary);
+      display: block;
+    }
+
+    .hero-desc {
+      font-size: clamp(0.96rem, 1.35vw, 1.12rem);
+      color: #1E293B;
+      font-weight: 600;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 500px;
+      text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.05em;
+      padding: 13px 32px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      box-shadow: var(--shadow-glow-red);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(201, 24, 43, 0.45);
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFFFF;
+      color: #18191B;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 12px 28px;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Franja de 4 sellos en el Hero */
+    .hero-features-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-feature-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(201, 24, 43, 0.08);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .hero-feature-text strong {
+      display: block;
+      font-size: 0.8rem;
+      color: #18191B;
+      line-height: 1.1;
+    }
+
+    .hero-feature-text small {
+      font-size: 0.68rem;
+      color: #64748B;
+    }
+
+    /* Sello Circular Flotante */
+    .hero-floating-seal {
+      position: absolute;
+      top: 130px;
+      right: clamp(40px, 8vw, 120px);
+      width: 125px;
+      height: 125px;
+      background: #FFFFFF;
+      border: 2px dashed var(--color-primary);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      animation: sealPulse 4s infinite ease-in-out;
+      z-index: 3;
+    }
+
+    @keyframes sealPulse {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.04) rotate(3deg); }
+    }
+
+    .hero-floating-seal .seal-top {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      line-height: 0.95;
+      color: var(--color-primary);
+      letter-spacing: 0.04em;
+    }
+
+    .hero-floating-seal .seal-icon {
+      color: var(--color-accent);
+      font-size: 1.2rem;
+      margin: 3px 0;
+    }
+
+    .hero-floating-seal .seal-bottom {
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: #334155;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ========================================================
+       SECCIÃ“N 2: #SERVICIOS (CATÃLOGO "LOS MÃS PEDIDOS")
+       ======================================================== */
+    .menu-section {
+      background: var(--bg-alt);
+      padding: 90px 0 80px;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .menu-header-center {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-eyebrow-red {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+
+    .section-title-display {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      letter-spacing: 0.03em;
+      color: #18191B;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    /* Buscador estilo Pill */
+    .menu-search-wrapper {
+      max-width: 580px;
+      margin: 0 auto 28px;
+    }
+
+    .menu-search-box {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: var(--radius-pill);
+      padding: 8px 12px 8px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .menu-search-box:focus-within {
+      border-color: var(--color-primary);
+      box-shadow: 0 4px 18px rgba(201, 24, 43, 0.2);
+    }
+
+    .menu-search-box i {
+      color: #94A3B8;
+      font-size: 1.1rem;
+      margin-right: 12px;
+    }
+
+    .menu-search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 0.95rem;
+      color: #18191B;
+      background: transparent;
+    }
+
+    /* CategorÃ­as con REGLA ANTI-CORTE */
+    .menu-categories-wrapper {
+      position: relative !important;
+      max-width: 1080px !important;
+      margin: 0 auto 38px !important;
+    }
+
+    .menu-categories-scroll {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: flex-start !important;
+      overflow-x: auto !important;
+      scroll-behavior: smooth !important;
+      -webkit-overflow-scrolling: touch !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+      gap: 12px !important;
+      padding: 6px 6px 14px !important;
+    }
+
+    .menu-categories-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-btn {
+      flex: 0 0 auto !important;
+      scroll-snap-align: start !important;
+      white-space: nowrap !important;
+      min-width: 90px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #FFFFFF;
+      color: #334155;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .category-btn.active,
+    .category-btn:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(201, 24, 43, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Grid de MenÃº en CatÃ¡logo (3 columnas Desktop) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(201, 24, 43, 0.2);
+    }
+
+    .service-card-image-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #F8F7F4;
+    }
+
+    .service-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.08);
+    }
+
+    .service-card-body {
+      padding: 20px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 0.04em;
+      color: #18191B;
+      line-height: 1.05;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .service-card-desc {
+      font-size: 0.84rem;
+      color: #64748B;
+      line-height: 1.45;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .service-card-price {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 14px;
+    }
+
+    .btn-add-cart {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #18191B;
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-add-cart:hover {
+      background: var(--color-accent-hover);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(245, 166, 35, 0.4);
+    }
+
+    /* BotÃ³n Ver Carta Completa */
+    .menu-footer-cta {
+      text-align: center;
+    }
+
+    .btn-view-full-menu-red {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 13px 34px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      box-shadow: var(--shadow-glow-red);
+    }
+
+    .btn-view-full-menu-red:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(201, 24, 43, 0.5);
+    }
+
+    /* ========================================================
+       SECCIÃ“N 3: #NOSOTROS (SPLIT PROMO MEGA DEAL + SOBRE NOSOTROS)
+       ======================================================== */
+    .split-section {
+      background: #FFFFFF;
+      overflow: hidden;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+    }
+
+    /* Lado Izquierdo: Mega Deal Rojo */
+    .split-left-deal {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      padding: 60px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      position: relative;
+    }
+
+    .deal-content {
+      max-width: 280px;
+    }
+
+    .deal-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #FED7AA;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .deal-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5.2vw, 4.4rem);
+      line-height: 0.94;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .deal-badge-yellow {
+      display: inline-block;
+      background: var(--color-accent);
+      color: #18191B;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      padding: 4px 16px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .deal-subtitle {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #FFEDD5;
+      margin-bottom: 22px;
+    }
+
+    .btn-deal-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--color-primary);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-deal-order:hover {
+      background: #FFF7ED;
+      transform: translateX(4px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .deal-image-wrap {
+      max-width: 320px;
+    }
+
+    .deal-image-wrap img {
+      border-radius: var(--radius-md);
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.35));
+    }
+
+    /* Lado Derecho: Â¿Por QuÃ© Elegirnos? */
+    .split-right-why {
+      background: #FFFFFF;
+      padding: 60px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .why-eyebrow {
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .why-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      color: #18191B;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .why-desc {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 480px;
+    }
+
+    /* MÃ©tricas 2x2 */
+    .authority-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .metric-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .metric-icon {
+      font-size: 1.35rem;
+      color: var(--color-primary);
+    }
+
+    .metric-content strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      line-height: 1;
+      color: #18191B;
+    }
+
+    .metric-content span {
+      font-size: 0.72rem;
+      color: #64748B;
+      font-weight: 600;
+    }
+
+    /* ========================================================
+       SECCIÃ“N 4: TESTIMONIOS (CUSTOMER FAVORITES)
+       ======================================================== */
+    .testimonials-section {
+      background: #FAF9F6;
+      padding: 80px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      transition: var(--transition);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testimonial-avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 14px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #F8F7F4;
+    }
+
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-content .stars {
+      color: var(--color-accent);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 4px;
+    }
+
+    .testimonial-quote {
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 6px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #18191B;
+    }
+
+    /* ========================================================
+       SECCIÃ“N 5: BANNER AMARILLO DE URGENCIA
+       ======================================================== */
+    .urgency-banner-section {
+      padding: 20px 0;
+      background: #FFFFFF;
+    }
+
+    .urgency-banner {
+      background: var(--color-accent);
+      border-radius: var(--radius-md);
+      padding: 24px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: var(--shadow-glow-yellow);
+    }
+
+    .urgency-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .urgency-icon {
+      font-size: 2.2rem;
+      color: #18191B;
+    }
+
+    .urgency-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      line-height: 1;
+      letter-spacing: 0.04em;
+      color: #18191B;
+      margin-bottom: 3px;
+    }
+
+    .urgency-text p {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .btn-urgency-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(201, 24, 43, 0.4);
+    }
+
+    .btn-urgency-order:hover {
+      background: var(--color-primary-hover);
+      transform: scale(1.05);
+    }
+
+    /* ========================================================
+       SECCIÃ“N 6: #UBICACION (MAPA GEORREFERENCIADO & CONTACTO)
+       ======================================================== */
+    .location-section {
+      background: #FAF9F6;
+      padding: 80px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .map-card-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info-panel .section-eyebrow-red {
+      margin-bottom: 4px;
+    }
+
+    .map-info-panel .map-title {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      color: #18191B;
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(201, 24, 43, 0.08);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .info-text strong {
+      display: block;
+      color: #18191B;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .info-text p {
+      font-size: 0.85rem;
+      color: #64748B;
+      line-height: 1.35;
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-map-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm);
+      font-weight: 800;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+    }
+
+    .btn-map-action.primary {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(201, 24, 43, 0.3);
+    }
+
+    .btn-map-action.primary:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-map-action.outline {
+      background: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      color: #18191B;
+    }
+
+    .btn-map-action.outline:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: none;
+    }
+
+    /* ========================================================
+       SECCIÃ“N 7: FOOTER PRINCIPAL (QUICKBITE FOOTER CLONE)
+       ======================================================== */
+    .site-footer {
+      background: var(--bg-dark-footer);
+      color: #94A3B8;
+      padding: 70px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand .brand-title {
+      font-size: 1.9rem;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .footer-brand .brand-subtitle {
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: #94A3B8;
+      max-width: 300px;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.06em;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.86rem;
+      color: #94A3B8;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent);
+      padding-left: 4px;
+    }
+
+    .footer-hours-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.84rem;
+    }
+
+    .footer-hours-list span {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .footer-social-wrap {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1E2024;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      transform: translateY(-3px);
+    }
+
+    .footer-order-box {
+      border: 1px solid rgba(201, 24, 43, 0.4);
+      background: rgba(201, 24, 43, 0.08);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .footer-order-box:hover {
+      background: rgba(201, 24, 43, 0.15);
+      border-color: var(--color-primary);
+    }
+
+    .footer-order-text small {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #CBD5E1;
+    }
+
+    .footer-order-text strong {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+    }
+
+    .btn-footer-reserve {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-primary-hover);
+      transform: scale(1.05);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #64748B;
+    }
+
+    /* ========================================================
+       BOTÃ“N FLOTANTE WHATSAPP (ANTI-CORTE MÃ“VIL)
+       ======================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 99999;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(6deg);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #FFFFFF;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.6);
+      animation: waPulse 2s infinite ease-out;
+      z-index: -1;
+    }
+
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* ========================================================
+       BOTÃ“N MENÃš MÃ“VIL & DRAWER DE NAVEGACIÃ“N
+       ======================================================== */
+    .btn-mobile-menu {
+      display: none;
+      background: rgba(201, 24, 43, 0.08);
+      color: var(--color-primary);
+      border: 1px solid rgba(201, 24, 43, 0.22);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .btn-mobile-menu:active {
+      transform: scale(0.92);
+      background: rgba(201, 24, 43, 0.16);
+    }
+
+    .mobile-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 99990;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      max-width: 86%;
+      height: 100%;
+      background: #FFFFFF;
+      z-index: 99995;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
+      transition: right 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      padding: calc(20px + env(safe-area-inset-top, 0px)) 24px calc(24px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      margin-bottom: 22px;
+    }
+
+    .drawer-brand {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 0.04em;
+      color: #18191B;
+      line-height: 1;
+    }
+
+    .drawer-brand span {
+      color: var(--color-primary);
+    }
+
+    .btn-drawer-close {
+      background: rgba(0, 0, 0, 0.05);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: #334155;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-drawer-close:hover {
+      background: rgba(201, 24, 43, 0.12);
+      color: var(--color-primary);
+    }
+
+    .drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1E293B;
+      transition: var(--transition);
+    }
+
+    .drawer-link i {
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      width: 24px;
+      text-align: center;
+    }
+
+    .drawer-link:hover, .drawer-link.active {
+      background: rgba(201, 24, 43, 0.08);
+      color: var(--color-primary);
+    }
+
+    .drawer-footer-cta {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding-top: 20px;
+    }
+
+    .btn-drawer-order {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: var(--shadow-glow-red);
+    }
+
+    .drawer-contact-info p {
+      font-size: 0.78rem;
+      color: #64748B;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    /* ========================================================
+       RESPONSIVE DESIGN (< 768px MÃ“VIL CALIBRADO)
+       ======================================================== */
+    @media (max-width: 768px) {
+      /* Header MÃ³vil con BotÃ³n de MenÃº */
+      .nav-links, .btn-header-cta {
+        display: none !important;
+      }
+
+      .btn-mobile-menu {
+        display: flex !important;
+      }
+
+      .header-nav {
+        height: 64px;
+        justify-content: space-between !important;
+        align-items: center;
+        padding-left: max(16px, env(safe-area-inset-left, 16px));
+        padding-right: max(16px, env(safe-area-inset-right, 16px));
+      }
+
+      .brand-title {
+        font-size: 1.38rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.58rem;
+      }
+
+      /* Hero MÃ³vil Calibrado: Mayor Altura y Degradado Inferior Minimizado */
+      .hero-fullwidth-section {
+        min-height: clamp(840px, 96vh, 910px) !important;
+        padding: 0 12px 20px !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .hero-bg-cover, .hero-bg-picture {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      .hero-bg-img {
+        object-position: center top !important;
+        opacity: 0.98;
+      }
+
+      /* Degradado Inferior Minimizado: 68% Superior 100% Transparente */
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          transparent 0%, 
+          transparent 68%, 
+          rgba(255, 255, 255, 0.35) 80%, 
+          rgba(248, 247, 244, 0.82) 92%, 
+          #FAF9F6 100%
+        ) !important;
+      }
+
+      .hero-container-align {
+        padding-top: 0 !important;
+        padding-bottom: 12px !important;
+        width: 100%;
+      }
+
+      .hero-text-block {
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 4px;
+      }
+
+      .hero-title {
+        font-size: 2.15rem;
+        line-height: 1.02;
+        margin-bottom: 8px;
+        text-shadow: 0 1px 8px rgba(255, 255, 255, 0.95);
+      }
+
+      .hero-desc {
+        font-size: 0.84rem;
+        line-height: 1.45;
+        margin: 0 auto 14px;
+        max-width: 320px;
+        color: #1E293B;
+        font-weight: 600;
+        text-shadow: 0 1px 6px rgba(255, 255, 255, 0.95);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .btn-hero-primary, .btn-hero-secondary {
+        width: 100%;
+        max-width: 270px;
+        justify-content: center;
+        padding: 10px 18px;
+        font-size: 1.05rem;
+      }
+
+      .hero-features-row {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 10px;
+        padding: 4px 4px 4px;
+        margin: 0 auto;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hero-feature-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        background: rgba(255, 255, 255, 0.94);
+        padding: 5px 12px;
+        border-radius: var(--radius-pill);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+      }
+
+      .hero-floating-seal {
+        width: 82px;
+        height: 82px;
+        top: 72px;
+        bottom: auto;
+        right: 14px;
+      }
+
+      .hero-floating-seal .seal-top {
+        font-size: 0.74rem;
+      }
+
+      .hero-floating-seal .seal-icon {
+        font-size: 0.95rem;
+        margin: 1px 0;
+      }
+
+      .hero-floating-seal .seal-bottom {
+        font-size: 0.42rem;
+      }
+
+      /* MenÃº en MÃ³vil: 2 Columnas Balanceadas */
+      .menu-section {
+        padding: 60px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px;
+      }
+
+      .service-card-image-wrap {
+        height: 140px;
+      }
+
+      .service-card-body {
+        padding: 12px 10px 10px;
+      }
+
+      .service-card-title {
+        font-size: 1.1rem;
+        margin-bottom: 3px;
+      }
+
+      .service-card-desc {
+        display: none !important;
+      }
+
+      .service-card-price {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+      }
+
+      .btn-add-cart {
+        padding: 8px 12px;
+        font-size: 0.76rem;
+      }
+
+      /* SecciÃ³n Split MÃ³vil: Apilada */
+      .split-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .split-left-deal {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .deal-content {
+        max-width: 100%;
+      }
+
+      .deal-badge-yellow {
+        margin: 0 auto 12px;
+      }
+
+      .split-right-why {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .authority-metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .metric-box {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        background: #FBF9F6;
+        border: 1px solid rgba(201, 24, 43, 0.08);
+        border-radius: 14px;
+        text-align: left;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+      }
+
+      .metric-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        border-radius: 50%;
+        background: rgba(201, 24, 43, 0.1);
+        color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .metric-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .metric-content strong {
+        font-size: 1.35rem;
+        line-height: 1;
+        margin-bottom: 2px;
+        color: #18191B;
+      }
+
+      .metric-content span {
+        font-size: 0.74rem;
+        line-height: 1.2;
+        color: #64748B;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      /* Testimonios MÃ³vil: 1 Columna */
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Banner Urgencia MÃ³vil */
+      .urgency-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+      }
+
+      .urgency-left {
+        flex-direction: column;
+      }
+
+      /* UbicaciÃ³n MÃ³vil: 1 Columna */
+      .location-section {
+        padding: 60px 0;
+      }
+
+      .map-card-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 30px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      /* Footer MÃ³vil */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .footer-brand p {
+        margin: 0 auto;
+      }
+
+      .footer-social-wrap {
+        justify-content: center;
+      }
+
+      .footer-order-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ======================================================== -->
+  <header class="header-sticky-wrapper" id="smartHeader">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo TipogrÃ¡fico Puro -->
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio de Matanga Burger Ortiz">
+          <div class="brand-title">
+            MATANGA <span>BURGER</span>
+          </div>
+          <div class="brand-subtitle">
+            RESTAURANTE Â· APARTADÃ“
+          </div>
+        </a>
+
+        <!-- Enlaces Desktop -->
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">MenÃº</a></li>
+          <li><a href="#promos" class="nav-link">Promos</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#ubicacion" class="nav-link">Sede & Domicilios</a></li>
+        </ul>
+
+        <!-- BotÃ³n CTA Desktop -->
+        <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20hacer%20un%20pedido%20a%20domicilio." class="btn-header-cta" target="_blank" rel="noopener">
+          <i class="fa-solid fa-cart-shopping"></i> PEDIR ONLINE
+        </a>
+
+        <!-- BotÃ³n MenÃº Hamburguesa MÃ³vil -->
+        <button class="btn-mobile-menu" id="mobileMenuToggle" aria-label="Abrir menÃº de navegaciÃ³n">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       DRAWER DE NAVEGACIÃ“N MÃ“VIL
+       ======================================================== -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="MenÃº de navegaciÃ³n mÃ³vil">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        MATANGA <span>BURGER</span>
+      </div>
+      <button class="btn-drawer-close" id="drawerCloseBtn" aria-label="Cerrar menÃº">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#inicio" class="drawer-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+      <li><a href="#menu" class="drawer-link"><i class="fa-solid fa-burger"></i> Nuestro MenÃº</a></li>
+      <li><a href="#promos" class="drawer-link"><i class="fa-solid fa-fire"></i> Mega Promos</a></li>
+      <li><a href="#nosotros" class="drawer-link"><i class="fa-solid fa-medal"></i> Sobre Nosotros</a></li>
+      <li><a href="#ubicacion" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Sede & Domicilios</a></li>
+    </ul>
+    <div class="drawer-footer-cta">
+      <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20hacer%20un%20pedido%20a%20domicilio." class="btn-drawer-order" target="_blank" rel="noopener">
+        <i class="fa-solid fa-cart-shopping"></i> PEDIR A DOMICILIO
+      </a>
+      <div class="drawer-contact-info">
+        <p><i class="fa-solid fa-phone"></i> (604) 829 8050</p>
+        <p><i class="fa-solid fa-location-dot"></i> Barrio Ortiz, ApartadÃ³</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       SECCIÃ“N 1: #INICIO (HERO FULL-WIDTH BLEED - QUICKBITE CLONE)
+       ======================================================== -->
+  <section class="hero-fullwidth-section" id="inicio">
+    <!-- Capa Posterior Inmersiva Edge-to-Edge (Desktop 16:9 + MÃ³vil 9:16) -->
+    <div class="hero-bg-cover">
+      <picture class="hero-bg-picture">
+        <source media="(max-width: 768px)" srcset="matanga_burger_ortiz/hero_matanga_mobile.webp" width="768" height="1376">
+        <img src="matanga_burger_ortiz/hero_matanga.webp" alt="Combo hamburguesa doble con queso cheddar, papas doradas y bebida helada en Matanga Burger ApartadÃ³" class="hero-bg-img" loading="eager" width="1376" height="768">
+      </picture>
+    </div>
+
+    <!-- Doble Degradado Aterciopelado -->
+    <div class="hero-bg-overlay"></div>
+
+
+    <!-- Contenedor Alineado Abajo -->
+    <div class="hero-container-align">
+      <div class="container">
+        <div class="hero-text-block">
+          <div class="hero-eyebrow">COMIDAS RÃPIDAS Â· GRAN SABOR</div>
+          <h1 class="hero-title">
+            ANTOJO TOTAL.
+            <span>PASIÃ“N REAL.</span>
+          </h1>
+          <p class="hero-desc">
+            Hamburguesas artesanales irresistibles, papas crocantes doradas y bebidas heladas preparadas al instante con ingredientes 100% frescos en ApartadÃ³.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20pedir%20a%20domicilio%20por%20favor." class="btn-hero-primary" target="_blank" rel="noopener">
+              <i class="fa-solid fa-bag-shopping"></i> PEDIR AHORA
+            </a>
+            <a href="#menu" class="btn-hero-secondary">
+              VER NUESTRO MENÃš <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- 4 Sellos de GarantÃ­a Integrados en el Hero -->
+          <div class="hero-features-row">
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <div class="hero-feature-text">
+                <strong>EnvÃ­o RÃ¡pido</strong>
+                <small>&lt;30 min en ApartadÃ³</small>
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-leaf"></i></div>
+              <div class="hero-feature-text">
+                <strong>Ingredientes</strong>
+                <small>100% frescos al dÃ­a</small>
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-tags"></i></div>
+              <div class="hero-feature-text">
+                <strong>Gran Precio</strong>
+                <small>Calidad insuperable</small>
+              </div>
+            </div>
+
+            <div class="hero-feature-item">
+              <div class="hero-feature-icon"><i class="fa-solid fa-heart"></i></div>
+              <div class="hero-feature-text">
+                <strong>SatisfacciÃ³n</strong>
+                <small>GarantÃ­a de sabor</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÃ“N 2: #SERVICIOS (CATÃLOGO "LOS MÃS PEDIDOS")
+       ======================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="menu-header-center">
+        <span class="section-eyebrow-red">POPULAR PICKS</span>
+        <h2 class="section-title-display">LOS MÃS PEDIDOS DE MATANGA</h2>
+        <span class="squiggle-accent"></span>
+      </div>
+
+      <!-- Buscador estilo Pill en Tiempo Real -->
+      <div class="menu-search-wrapper">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menuSearchInput" placeholder="Busca tu plato favorito (ej. Crispy, ClÃ¡sica, Pizza, Papas)..." aria-label="Buscar en el menÃº">
+        </div>
+      </div>
+
+      <!-- Barra de CategorÃ­as con REGLA ANTI-CORTE -->
+      <div class="menu-categories-wrapper">
+        <div class="menu-categories-scroll">
+          <button class="category-btn active" data-category="todos">
+            <i class="fa-solid fa-utensils"></i> Todos
+          </button>
+          <button class="category-btn" data-category="hamburguesas">
+            <i class="fa-solid fa-burger"></i> Hamburguesas
+          </button>
+          <button class="category-btn" data-category="pollo">
+            <i class="fa-solid fa-drumstick-bite"></i> Pollo &amp; Nuggets
+          </button>
+          <button class="category-btn" data-category="pizzas">
+            <i class="fa-solid fa-pizza-slice"></i> Pizzas
+          </button>
+          <button class="category-btn" data-category="acompanamientos">
+            <i class="fa-solid fa-bowl-food"></i> AcompaÃ±amientos
+          </button>
+          <button class="category-btn" data-category="bebidas">
+            <i class="fa-solid fa-wine-glass"></i> Bebidas
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid de MenÃº en 3 Columnas Desktop / 2 Columnas MÃ³vil -->
+      <div class="services-grid" id="servicesGrid">
+        
+        <!-- Plato 1: Crispy Chicken Burger -->
+        <article class="service-card" data-category="pollo">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80" alt="Crispy Chicken Burger crujiente en Matanga Burger" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">CRISPY CHICKEN BURGER</h3>
+            <p class="service-card-desc">Pechuga apanada extra crocante, queso fundido, ensalada fresca y salsa secreta en pan brioche.</p>
+            <div class="service-card-price">$20.000</div>
+            <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20la%20Crispy%20Chicken%20Burger%20por%20$20.000" class="btn-add-cart" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </article>
+
+        <!-- Plato 2: Classic Beef Burger -->
+        <article class="service-card" data-category="hamburguesas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Classic Beef Burger 160g de res a la plancha" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">CLASSIC BEEF BURGER</h3>
+            <p class="service-card-desc">160g de carne de res fresca a la plancha, queso cheddar americano, tomate, lechuga y cebolla tierna.</p>
+            <div class="service-card-price">$18.000</div>
+            <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20la%20Classic%20Beef%20Burger%20por%20$18.000" class="btn-add-cart" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </article>
+
+        <!-- Plato 3: Cheesy Pizza Matanga -->
+        <article class="service-card" data-category="pizzas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Cheesy Pizza personal con doble queso mozzarella" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">CHEESY PIZZA MATANGA</h3>
+            <p class="service-card-desc">Masa delgada crocante al horno, salsa napolitana casera, doble queso mozzarella gratinado y orÃ©gano.</p>
+            <div class="service-card-price">$22.000</div>
+            <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20la%20Cheesy%20Pizza%20Matanga%20por%20$22.000" class="btn-add-cart" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </article>
+
+        <!-- Plato 4: Chicken Nuggets -->
+        <article class="service-card" data-category="pollo">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=800&q=80" alt="Chicken Nuggets crocantes con salsas artesanales" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">NUGGETS CROCANTES (8 PCS)</h3>
+            <p class="service-card-desc">Trocitos de pechuga marinados y dorados al punto, con salsa miel-mostaza y tÃ¡rtara artesanal.</p>
+            <div class="service-card-price">$16.000</div>
+            <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20los%20Nuggets%20Crocantes%20x8%20por%20$16.000" class="btn-add-cart" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </article>
+
+        <!-- Plato 5: Papas RÃºsticas -->
+        <article class="service-card" data-category="acompanamientos">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80" alt="Canastilla de papas rÃºsticas con sazÃ³n especial" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">PAPAS RÃšSTICAS DE LA CASA</h3>
+            <p class="service-card-desc">Canastilla abundante de papas con piel sazonadas con especias y sal marina, crocantes y doradas.</p>
+            <div class="service-card-price">$10.000</div>
+            <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20las%20Papas%20R%C3%BAsticas%20por%20$10.000" class="btn-add-cart" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </article>
+
+        <!-- Plato 6: Bebida Helada -->
+        <article class="service-card" data-category="bebidas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" alt="Gaseosa y soda helada con hielo y limÃ³n" class="service-card-img" loading="lazy">
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">GASEOSA &amp; SODAS HELADAS</h3>
+            <p class="service-card-desc">Vaso helado con hielo y rodaja de limÃ³n, sodas saborizadas o limonadas naturales de la casa.</p>
+            <div class="service-card-price">$6.000</div>
+            <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20Bebidas%20Heladas%20por%20$6.000" class="btn-add-cart" target="_blank" rel="noopener">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- BotÃ³n Ver Carta Completa -->
+      <div class="menu-footer-cta">
+        <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20ver%20la%20carta%20completa%20en%20PDF%20y%20hacer%20un%20pedido." class="btn-view-full-menu-red" target="_blank" rel="noopener">
+          VER CARTA COMPLETA (15 PLATOS) <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÃ“N 3: #NOSOTROS (SPLIT PROMO MEGA DEAL + SOBRE NOSOTROS)
+       ======================================================== -->
+  <section class="split-section" id="promos">
+    <div class="split-grid">
+      <!-- Lado Izquierdo: Mega Deal Rojo -->
+      <div class="split-left-deal">
+        <div class="deal-content">
+          <span class="deal-eyebrow">OFERTA POR TIEMPO LIMITADO</span>
+          <h2 class="deal-title">MEGA DEAL MATANGA</h2>
+          <div class="deal-badge-yellow">SOLO $26.000</div>
+          <div class="deal-subtitle">Burger Especial + Papas + Bebida</div>
+          <a href="https://wa.me/573108298050?text=Hola,%20deseo%20pedir%20la%20Mega%20Deal%20Matanga%20por%20$26.000" class="btn-deal-order" target="_blank" rel="noopener">
+            PEDIR PROMO AHORA <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="deal-image-wrap">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=700&q=80" alt="Combo Mega Deal con hamburguesa, papas y refresco" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Lado Derecho: Â¿Por QuÃ© Elegirnos? -->
+      <div class="split-right-why" id="nosotros">
+        <div class="why-eyebrow">Â¿POR QUÃ‰ ELEGIRNOS?</div>
+        <h2 class="why-title">CALIDAD EN CADA BOCADO. RAPIDEZ EN CADA ENTREGA.</h2>
+        <p class="why-desc">
+          En Matanga Burger Ortiz nos apasiona ofrecerte comida rÃ¡pida con estÃ¡ndares de cocina artesanal. Desde nuestro pan brioche hasta nuestras carnes sazonadas al punto exacto, garantizamos sabor superior, porciones generosas y entregas rÃ©cord en ApartadÃ³.
+        </p>
+
+        <!-- 4 MÃ©tricas de Autoridad -->
+        <div class="authority-metrics-grid">
+          <div class="metric-box">
+            <div class="metric-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="metric-content">
+              <strong>50+</strong>
+              <span>Variedades</span>
+            </div>
+          </div>
+
+          <div class="metric-box">
+            <div class="metric-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="metric-content">
+              <strong>10+</strong>
+              <span>AÃ±os SazÃ³n</span>
+            </div>
+          </div>
+
+          <div class="metric-box">
+            <div class="metric-icon"><i class="fa-solid fa-leaf"></i></div>
+            <div class="metric-content">
+              <strong>100%</strong>
+              <span>Carne Fresca</span>
+            </div>
+          </div>
+
+          <div class="metric-box">
+            <div class="metric-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="metric-content">
+              <strong>5K+</strong>
+              <span>Clientes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       SECCIÃ“N 5: BANNER AMARILLO DE URGENCIA
+       ======================================================== -->
+  <section class="urgency-banner-section">
+    <div class="container">
+      <div class="urgency-banner">
+        <div class="urgency-left">
+          <div class="urgency-icon"><i class="fa-solid fa-bell-concierge"></i></div>
+          <div class="urgency-text">
+            <h3>Â¿CON HAMBRE? Â¡TE LO LLEVAMOS A TU PUERTA!</h3>
+            <p>Pide en lÃ­nea y disfruta de tu combo favorito en minutos en ApartadÃ³.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20hacer%20un%20pedido%20inmediato." class="btn-urgency-order" target="_blank" rel="noopener">
+          PEDIR AHORA MISMO <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÃ“N 6: #UBICACION (MAPA GEORREFERENCIADO & CONTACTO)
+       ======================================================== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="map-card-wrapper">
+        <!-- Panel Izquierdo de InformaciÃ³n -->
+        <div class="map-info-panel">
+          <span class="section-eyebrow-red">SEDE PRINCIPAL</span>
+          <h2 class="map-title">VISÃTANOS EN BARRIO ORTIZ</h2>
+          
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-text">
+                <strong>DirecciÃ³n FÃ­sica</strong>
+                <p>Cl. 100F #108-133 a 108-1 (Barrio Ortiz), ApartadÃ³, Antioquia</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-text">
+                <strong>TelÃ©fono Fijo &amp; Domicilios</strong>
+                <p>(604) 829 8050 / WhatsApp (+57) 310 829 8050</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="info-text">
+                <strong>Horario de AtenciÃ³n</strong>
+                <p>Lunes a Domingo: 11:30 AM â€“ 11:00 PM (Jornada Continua)</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="map-actions">
+            <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20solicitar%20un%20domicilio%20por%20favor." class="btn-map-action primary" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> PEDIR POR WHATSAPP
+            </a>
+            <a href="https://www.google.com/maps/place/Matanga+Burger+Ortiz/@7.8857024,-76.6448172,16z" class="btn-map-action outline" target="_blank" rel="noopener">
+              <i class="fa-solid fa-diamond-turn-right"></i> CÃ“MO LLEGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel Derecho: Google Maps Georreferenciado Oficial -->
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Matanga+Burger+Ortiz,+Cl.+100F+%23108-133,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            title="UbicaciÃ³n de Matanga Burger Ortiz en Google Maps ApartadÃ³"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÃ“N 7: FOOTER PRINCIPAL (QUICKBITE FOOTER CLONE)
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna Marca -->
+        <div class="footer-brand">
+          <div class="brand-title">
+            MATANGA <span>BURGER</span>
+          </div>
+          <div class="brand-subtitle">
+            RESTAURANTE Â· APARTADÃ“
+          </div>
+          <p>
+            Comidas rÃ¡pidas con calidad artesanal superior en ApartadÃ³. Hamburguesas jugosas, pollo crispy, pizzas y servicio de entrega a domicilio veloz.
+          </p>
+        </div>
+
+        <!-- Columna Enlaces RÃ¡pidos -->
+        <div class="footer-col">
+          <h5>ENLACES RÃPIDOS</h5>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Nuestro MenÃº</a></li>
+            <li><a href="#promos">Mega Deals</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion">UbicaciÃ³n &amp; Sede</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Horarios -->
+        <div class="footer-col">
+          <h5>HORARIOS</h5>
+          <ul class="footer-hours-list">
+            <li>Lunes a Jueves: <span>11:30 AM â€“ 10:30 PM</span></li>
+            <li>Viernes y SÃ¡bados: <span>11:30 AM â€“ 11:30 PM</span></li>
+            <li>Domingos: <span>11:30 AM â€“ 11:00 PM</span></li>
+            <li>Festivos: <span>Abierto con domicilios</span></li>
+          </ul>
+        </div>
+
+        <!-- Columna Redes & Pedido RÃ¡pido -->
+        <div class="footer-col">
+          <h5>CONTÃCTANOS</h5>
+          <div class="footer-social-wrap">
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+
+          <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20hacer%20un%20pedido%20a%20domicilio." class="footer-order-box" target="_blank" rel="noopener">
+            <div class="footer-order-text">
+              <small>LÃNEA DE DOMICILIOS</small>
+              <strong>(604) 829 8050</strong>
+            </div>
+            <span class="btn-footer-reserve">Pedir</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Matanga Burger Ortiz. Todos los derechos reservados. ApartadÃ³, Antioquia, Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       BOTÃ“N FLOTANTE WHATSAPP (ANTI-CORTE MÃ“VIL)
+       ======================================================== -->
+  <a href="https://wa.me/573108298050?text=Hola%20Matanga%20Burger%20Ortiz,%20deseo%20hacer%20un%20pedido%20a%20domicilio." 
+     class="whatsapp-float" 
+     aria-label="Contactar por WhatsApp a Matanga Burger Ortiz"
+     target="_blank" 
+     rel="noopener">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ========================================================
+       SCRIPTS INTERACTIVOS (FILTRADO REACTIVO & HEADER INTELIGENTE)
+       ======================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Smart Header Auto-hide on Scroll
+      const header = document.getElementById('smartHeader');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        if (currentScrollY <= 80) {
+          header.classList.remove('header-hidden');
+        } else if (currentScrollY > lastScrollY && currentScrollY > 160) {
+          header.classList.add('header-hidden');
+        } else if (currentScrollY < lastScrollY) {
+          header.classList.remove('header-hidden');
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // 2. Buscador Reactivo y Filtrado por CategorÃ­as
+      const searchInput = document.getElementById('menuSearchInput');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const serviceCards = document.querySelectorAll('.service-card');
+
+      let activeCategory = 'todos';
+
+      function filterMenu() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        serviceCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category') || 'todos';
+          const titleText = card.querySelector('.service-card-title')?.textContent.toLowerCase() || '';
+          const descText = card.querySelector('.service-card-desc')?.textContent.toLowerCase() || '';
+
+          const matchesCategory = (activeCategory === 'todos' || cardCategory === activeCategory);
+          const matchesSearch = query === '' || titleText.includes(query) || descText.includes(query);
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterMenu);
+      }
+
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-category') || 'todos';
+
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+          filterMenu();
+        });
+      });
+
+      // 3. Controlador del Drawer MÃ³vil
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+      const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+      const drawerLinks = document.querySelectorAll('.drawer-link');
+
+      function openMobileDrawer() {
+        if (mobileDrawer && mobileDrawerOverlay) {
+          mobileDrawer.classList.add('active');
+          mobileDrawerOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeMobileDrawer() {
+        if (mobileDrawer && mobileDrawerOverlay) {
+          mobileDrawer.classList.remove('active');
+          mobileDrawerOverlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', openMobileDrawer);
+      }
+      if (drawerCloseBtn) {
+        drawerCloseBtn.addEventListener('click', closeMobileDrawer);
+      }
+      if (mobileDrawerOverlay) {
+        mobileDrawerOverlay.addEventListener('click', closeMobileDrawer);
+      }
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', closeMobileDrawer);
+      });
+    });
+  </script>
+</body>
+</html>
+

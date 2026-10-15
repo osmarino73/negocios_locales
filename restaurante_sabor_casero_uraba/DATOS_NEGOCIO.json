@@ -1,0 +1,120 @@
+{
+  "id": "lead-1790864859364-1",
+  "status": "nuevo",
+  "notes": "Restaurante de comida casera y típica en Apartadó, Antioquia. Sazón criolla artesanal, almuerzos ejecutivos, pescados frescos de Urabá, asados y servicio a domicilio VIP.",
+  "negocio": {
+    "nombre": "Restaurante Sabor Casero Uraba",
+    "nombre_comercial": "Sabor Casero Urabá",
+    "rubro": "Restaurante",
+    "categoria": "Comida Casera & Típica Colombiana",
+    "eslogan": "El Verdadero Sabor de Hogar en Apartadó",
+    "calificacion": "4.8",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 310 650 7450",
+      "telefono": "(+57) 310 650 7450",
+      "whatsapp": {
+        "numero": "+573106507450",
+        "link": "https://wa.me/573106507450?text=Hola%20Restaurante%20Sabor%20Casero%20Uraba%2C%20quisiera%20solicitar%20el%20men%C3%BA%20del%20d%C3%ADa%20y%20hacer%20un%20pedido."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 102 #92a-20",
+      "ciudad": "Apartadó",
+      "departamento": "Antioquia",
+      "departamento_pais": "Antioquia, Colombia",
+      "pais": "Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Restaurante+Sabor+Casero+Uraba/@7.8792589,-76.6659563,14z/data=!4m10!1m2!2m1!1srestaurantes+en+apartado!3m6!1s0x8e500dec08ce6e31:0xb665a040397193d1!8m2!3d7.8791886!4d-76.634656!15sChhyZXN0YXVyYW50ZXMgZW4gYXBhcnRhZG9aGiIYcmVzdGF1cmFudGVzIGVuIGFwYXJ0YWRvkgEKcmVzdGF1cmFudJoBRENpOURRVWxSUVVOdlpFTm9kSGxqUmpsdlQydDBiMVZFVWtoU1ZXZ3lVMnBTYm1WclNuVk9SRnBNVW1zeFdFMHpZeEFC4AEA-gEECAAQOw!16s%2Fg%2F11fl9pk3zw"
+    },
+    "horarios": {
+      "lunes_a_viernes": "7:00 AM - 9:00 PM",
+      "sabados_y_domingos": "7:30 AM - 9:30 PM"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin sitio web (Oportunidad alta)."
+    },
+    "servicios": [
+      {
+        "id": "bandeja-sabor-casero",
+        "categoria": "criollos",
+        "nombre": "Bandeja Típica Sabor Casero",
+        "descripcion": "Frijoles cargamanto de la casa, chicharrón carnudo crocante, carne molida o asada, arroz blanco, tajadas de maduro, huevo frito y arepa antioqueña.",
+        "precio": "$24.000",
+        "destacado": true
+      },
+      {
+        "id": "sancocho-pescado-uraba",
+        "categoria": "sopas",
+        "nombre": "Sancocho de Pescado del Golfo",
+        "descripcion": "Pescado fresco del día en caldo criollo aromatizado con leche de coco, plátano verde, yuca suave y acompañado de patacones crocantes.",
+        "precio": "$26.000",
+        "destacado": true
+      },
+      {
+        "id": "pargo-rojo-frito",
+        "categoria": "mariscos",
+        "nombre": "Pargo Rojo Frito con Arroz de Coco",
+        "descripcion": "Pargo fresco dorado al punto perfecto, acompañado de arroz de coco tradicional con titoté, patacones de plátano verde y ensalada fresca.",
+        "precio": "$32.000",
+        "destacado": true
+      },
+      {
+        "id": "carne-asada-carbon",
+        "categoria": "asados",
+        "nombre": "Carne Asada al Carbón Criolla",
+        "descripcion": "Corte de res jugoso marinado con hierbas de la huerta, asado a las brasas de leña, con papas al vapor y chimichurri casero.",
+        "precio": "$22.000",
+        "destacado": false
+      },
+      {
+        "id": "cazuela-marinera-uraba",
+        "categoria": "mariscos",
+        "nombre": "Cazuela Marinera Especial Urabá",
+        "descripcion": "Selección de camarones, calamares y pescado fresco cocidos a fuego lento en reducción cremosa de coco y cilantro de montaña.",
+        "precio": "$35.000",
+        "destacado": true
+      },
+      {
+        "id": "sobrebarriga-salsa-criolla",
+        "categoria": "asados",
+        "nombre": "Sobrebarriga en Salsa Criolla",
+        "descripcion": "Corte tierno cocinado durante 4 horas en sofrito criollo de tomate chonto, cebolla junca y especias nativas, con yuca al vapor.",
+        "precio": "$23.000",
+        "destacado": false
+      }
+    ],
+    "especialidades": [
+      {
+        "nombre": "Bandeja Sabor Casero",
+        "subtitulo": "El Plato Insignia de la Casa",
+        "precio": "$24.000",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Cazuela Marinera del Golfo",
+        "subtitulo": "Frutos Frescos del Mar",
+        "precio": "$35.000",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Pargo Rojo al Carbón",
+        "subtitulo": "Tradición Costera de Urabá",
+        "precio": "$32.000",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Sancocho Trifásico Criollo",
+        "subtitulo": "Sabor Auténtico de Hogar",
+        "precio": "$26.000",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}

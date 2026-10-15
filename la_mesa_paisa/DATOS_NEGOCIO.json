@@ -1,0 +1,134 @@
+{
+  "id": "lead-1791041539054-1",
+  "status": "nuevo",
+  "negocio": {
+    "nombre": "La Mesa Paisa",
+    "rubro": "Restaurante",
+    "categoria": "Comida Típica Colombiana & Parrilla",
+    "eslogan": "La Mesa Paisa — Tradición Paisa & Sazón Casera en Medellín",
+    "calificacion": "4.5",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 314 661 4828",
+      "whatsapp": {
+        "numero": "+573146614828",
+        "link": "https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Bolivar #70a-85 a 70a-27, Medellín, Antioquia",
+      "ciudad": "Medellín",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/La+Mesa+Paisa/@6.2679007,-75.6755149,12z/data=!4m10!1m2!2m1!1srestaurantes+en+Cartagena+%23+68-21,+Aranjuez,+Medell%C3%ADn,+Antioquia!3m6!1s0x8e442964afc55f09:0x9a163960a3f9afd7!8m2!3d6.2666533!4d-75.562055!15sCkFyZXN0YXVyYW50ZXMgZW4gQ2FydGFnZW5hICMgNjgtMjEsIEFyYW5qdWV6LCBNZWRlbGzDrW4sIEFudGlvcXVpYVo-IjxyZXN0YXVyYW50ZXMgZW4gY2FydGFnZW5hIDY4IDIxIGFyYW5qdWV6IG1lZGVsbMOtbiBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU53Y2poSVMxTjNFQUXgAQD6AQQIABBB!16s%2Fg%2F11j7gwt8jj",
+      "latitud": 6.2666533,
+      "longitud": -75.562055
+    },
+    "horario_atencion": "Lunes a Domingo: 11:30 AM - 9:30 PM",
+    "sitio_web": "",
+    "tokens": {
+      "BUSINESS_NAME": "La Mesa Paisa",
+      "PRIMARY_COLOR": "#DC2626",
+      "HERO_BADGE": "🔥 TRADICIÓN PAISA · MEDELLÍN",
+      "HERO_SLOGAN": "EL AUTÉNTICO SABOR DE LA MESA PAISA.",
+      "HERO_SUBTITLE": "Bandejas paisas tradicionales con chicharrón crujiente, cazuelas de frijoles campesinos, sancochos en leña y carnes a la brasa preparadas al instante en Medellín.",
+      "STORY_TITLE": "SAZÓN TRADICIONAL. GENERACIONES DE AMOR POR LO NUESTRO.",
+      "STORY_P1": "En La Mesa Paisa rescatamos las recetas auténticas de la gastronomía antioqueña, preparadas con ingredientes frescos de nuestros campos.",
+      "STORY_P2": "Frijoles cocidos a fuego lento, chicharrón carnudo crocante y carnes asadas al carbón para deleitar el paladar de toda la familia.",
+      "STAT1_VALUE": "100%",
+      "STAT1_LABEL": "Sabor Paisa",
+      "STAT2_VALUE": "< 30 min",
+      "STAT2_LABEL": "Domicilios Medellín",
+      "STAT3_VALUE": "15+",
+      "STAT3_LABEL": "Años de Sazón",
+      "STAT4_VALUE": "4.5 ★",
+      "STAT4_LABEL": "Google Reviews",
+      "ADDRESS": "Bolivar #70a-85 a 70a-27",
+      "CITY": "Medellín",
+      "HORARIO": "Lunes a Domingo: 11:30 AM - 9:30 PM",
+      "WHATSAPP_LINK": "https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar.",
+      "GOOGLE_MAPS_URL": "https://www.google.com/maps/place/La+Mesa+Paisa/@6.2679007,-75.6755149,12z/data=!4m10!1m2!2m1!1srestaurantes+en+Cartagena+%23+68-21,+Aranjuez,+Medell%C3%ADn,+Antioquia!3m6!1s0x8e442964afc55f09:0x9a163960a3f9afd7!8m2!3d6.2666533!4d-75.562055!15sCkFyZXN0YXVyYW50ZXMgZW4gQ2FydGFnZW5hICMgNjgtMjEsIEFyYW5qdWV6LCBNZWRlbGzDrW4sIEFudGlvcXVpYVo-IjxyZXN0YXVyYW50ZXMgZW4gY2FydGFnZW5hIDY4IDIxIGFyYW5qdWV6IG1lZGVsbMOtbiBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU53Y2poSVMxTjNFQUXgAQD6AQQIABBB!16s%2Fg%2F11j7gwt8jj",
+      "MAP_EMBED_URL": "https://maps.google.com/maps?q=La+Mesa+Paisa,+Bolivar+%2370a-85,+Medell%C3%ADn,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "SLUG": "la-mesa-paisa"
+    },
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "canal_directo": "WhatsApp Pedidos & Domicilios",
+      "oportunidad_saas": "ALTA"
+    },
+    "categorias_menu": [
+      { "id": "todos", "nombre": "Todos", "icono": "fa-utensils" },
+      { "id": "criollos", "nombre": "Platos Típicos Paisas", "icono": "fa-bowl-rice" },
+      { "id": "carnes", "nombre": "Carnes & Parrilla", "icono": "fa-fire" },
+      { "id": "sopas", "nombre": "Sopas & Cazuelas", "icono": "fa-bowl-food" },
+      { "id": "bebidas", "nombre": "Bebidas & Jugos", "icono": "fa-glass-water" }
+    ],
+    "platos_principales": [
+      {
+        "id": "plato-1",
+        "categoria": "criollos",
+        "nombre": "Bandeja Paisa Tradicional",
+        "descripcion": "Chicharrón crujiente de 100% pierna, carne molida campesina, arroz, frijoles caseros, huevo frito, tajada de maduro, arepa y aguacate.",
+        "precio": 34000,
+        "precio_formateado": "$34.000",
+        "badge": "MÁS PEDIDO",
+        "foto_url": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-2",
+        "categoria": "sopas",
+        "nombre": "Cazuela de Frijoles Antioqueña",
+        "descripcion": "Frijoles rojos espesos con trozos de chicharrón, plátano maduro picado, carne desmechada, maíz tierno, aguacate y ripio de papa.",
+        "precio": 32000,
+        "precio_formateado": "$32.000",
+        "badge": "ESPECIALIDAD",
+        "foto_url": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-3",
+        "categoria": "carnes",
+        "nombre": "Churrasco & Punta de Anca",
+        "descripcion": "Corte jugoso asado a la brasa con chimichurri casero, patacón crocante con hogao, papa al vapor y ensalada fresca.",
+        "precio": 38000,
+        "precio_formateado": "$38.000",
+        "badge": "A LA BRASA",
+        "foto_url": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-4",
+        "categoria": "sopas",
+        "nombre": "Sancocho Trifásico Tradicional",
+        "descripcion": "Caldo campesino concentrado con res, cerdo y pollo criollo, plátano, yuca, papa, mazorca, arroz y aguacate.",
+        "precio": 28000,
+        "precio_formateado": "$28.000",
+        "badge": "TRADICIÓN",
+        "foto_url": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-5",
+        "categoria": "carnes",
+        "nombre": "Costillas en Salsa Criolla",
+        "descripcion": "Costillas de cerdo doradas y tiernas bañadas en hogao tradicional con toques de cilantro, yuca frita y ensalada.",
+        "precio": 33000,
+        "precio_formateado": "$33.000",
+        "badge": "RECOMENDADO",
+        "foto_url": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-6",
+        "categoria": "bebidas",
+        "nombre": "Limonada de Panela & Jugos Naturales",
+        "descripcion": "Agua de panela con limón bien fría, o jugos naturales en agua o leche de maracuyá, guanábana, mango o lulo.",
+        "precio": 8000,
+        "precio_formateado": "$8.000",
+        "badge": "REFRESCANTE",
+        "foto_url": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "metricas_autoridad": [
+      { "cifra": "100%", "etiqueta": "Sabor Típico Paisa" },
+      { "cifra": "15+", "etiqueta": "Años de Tradición" },
+      { "cifra": "< 30 min", "etiqueta": "Domicilios Rápidos" },
+      { "cifra": "4.5 ★", "etiqueta": "Calificación Google" }
+    ]
+  }
+}

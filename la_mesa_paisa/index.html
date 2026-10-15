@@ -1,0 +1,2007 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- SEO Local & Metadatos -->
+  <title>La Mesa Paisa | EL AUTÉNTICO SABOR DE LA MESA PAISA.</title>
+  <meta name="description" content="Bandejas paisas tradicionales con chicharrón crujiente, cazuelas de frijoles campesinos, sancochos en leña y carnes a la brasa preparadas al instante en Medellín.">
+  <meta name="keywords" content="restaurante, comida tipica, carnes al carbon, churrasco, bandeja paisa, domicilios Medellín">
+  <meta name="author" content="La Mesa Paisa">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="La Mesa Paisa — EL AUTÉNTICO SABOR DE LA MESA PAISA.">
+  <meta property="og:description" content="Bandejas paisas tradicionales con chicharrón crujiente, cazuelas de frijoles campesinos, sancochos en leña y carnes a la brasa preparadas al instante en Medellín.">
+  <meta property="og:image" content="hero_la_mesa_paisa.webp">
+  <meta property="og:locale" content="es_CO">
+  
+  <!-- Google Fonts: Bebas Neue & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "La Mesa Paisa",
+    "image": "hero_la_mesa_paisa.webp",
+    "telephone": "https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar.",
+    "priceRange": "$$",
+    "servesCuisine": ["Comida Típica", "Carnes al Carbón", "Parrilla", "Sancochos", "Cocina Criolla"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Bolivar #70a-85 a 70a-27",
+      "addressLocality": "Medellín",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "22:00"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ========================================================
+       VARIABLES & DESIGN TOKENS DINÁMICOS
+       ======================================================== */
+    :root {
+      --color-primary: #DC2626; /* Color de Acento Principal */
+      --color-primary-hover: #B91C1C;
+      --primary: #DC2626;
+      --color-accent: #F59E0B; /* Ámbar Cálido */
+      --color-accent-hover: #D97706;
+      
+      --bg-body: #F3F4F6;
+      --bg-card: #FFFFFF;
+      --bg-footer: #111827;
+      
+      --text-dark: #111827;
+      --text-muted: #6B7280;
+      --text-light: #FFFFFF;
+      
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.12);
+      --shadow-primary: 0 8px 24px rgba(220, 38, 38, 0.35);
+      --shadow-accent: 0 8px 24px rgba(245, 158, 11, 0.35);
+      
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-body);
+      color: var(--text-dark);
+      line-height: 1.5;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, picture, svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========================================================
+       HEADER / NAVBAR
+       ======================================================== */
+    .header-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(17, 24, 39, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: var(--transition);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 20px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 2.15rem;
+      letter-spacing: 0.03em;
+      line-height: 0.92;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .brand-title span {
+      color: var(--color-primary);
+    }
+
+    .brand-sub {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: #FDBA74;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: var(--font-display);
+      font-size: 1.22rem;
+      letter-spacing: 0.05em;
+      color: #D1D5DB;
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #FFFFFF;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      box-shadow: 0 0 8px var(--color-primary);
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      font-weight: 800;
+      box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+      transition: var(--transition);
+    }
+
+    .btn-header-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+    }
+
+    .btn-mobile-menu {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: var(--transition);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      cursor: pointer;
+    }
+
+    .btn-mobile-menu:hover {
+      background: var(--color-primary);
+      color: #FFFFFF;
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 290px;
+      height: 100%;
+      background: #FFFFFF;
+      z-index: 1002;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: -8px 0 30px rgba(0, 0, 0, 0.25);
+      transition: right 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-drawer-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #F3F4F6;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--text-dark);
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      text-transform: uppercase;
+    }
+
+    .drawer-link i {
+      color: var(--color-primary);
+      font-size: 1.1rem;
+      width: 22px;
+    }
+
+    .drawer-link:hover, .drawer-link.active {
+      background: #FEE2E2;
+      color: var(--color-primary);
+      padding-left: 16px;
+    }
+
+    /* ========================================================
+       SECCIÓN 1: #INICIO (HERO INMERSIVO)
+       ======================================================== */
+    .hero-section {
+      position: relative;
+      min-height: clamp(630px, 86vh, 750px);
+      display: flex;
+      align-items: center;
+      background-color: #111827;
+      overflow: hidden;
+      padding: 85px 0 65px;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .hero-bg-picture, .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg, 
+        #111827 0%, 
+        rgba(17, 24, 39, 0.98) 28%, 
+        rgba(17, 24, 39, 0.72) 42%, 
+        rgba(17, 24, 39, 0.12) 58%, 
+        transparent 72%
+      );
+      z-index: 2;
+    }
+
+    .hero-content-wrap {
+      position: relative;
+      z-index: 3;
+      max-width: 580px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5.2vw, 4.6rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-title span {
+      color: var(--color-primary);
+      display: block;
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: #E5E7EB;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-primary);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      transition: var(--transition);
+    }
+
+    .btn-hero-secondary:hover {
+      background: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    .hero-features-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #F3F4F6;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-feature-item i {
+      color: var(--color-accent);
+      font-size: 1rem;
+    }
+
+    /* ========================================================
+       SECCIÓN 2: #MENU (GRID & CLASES SEMÁNTICAS)
+       ======================================================== */
+    .menu-section {
+      padding: 60px 0 80px;
+      background: var(--bg-body);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 36px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .section-title span {
+      color: var(--color-primary);
+    }
+
+    .search-filter-wrap {
+      max-width: 520px;
+      margin: 0 auto 28px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 46px;
+      padding: 0 20px 0 46px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid #E5E7EB;
+      background: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+
+    .categories-pills-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .btn-category-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: #4B5563;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: 0.03em;
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid #E5E7EB;
+    }
+
+    .btn-category-pill i {
+      font-size: 0.95rem;
+    }
+
+    .btn-category-pill:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .btn-category-pill.active {
+      background: var(--color-primary);
+      color: #FFFFFF;
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-primary);
+    }
+
+    /* Grid de Tarjetas de Menú Estándar */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .menu-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(220, 38, 38, 0.2);
+    }
+
+    .menu-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: #E5E7EB;
+    }
+
+    .menu-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .menu-card:hover .menu-img {
+      transform: scale(1.06);
+    }
+
+    .menu-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(4px);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .menu-card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .menu-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      line-height: 1.1;
+    }
+
+    .menu-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .menu-price {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-pedir {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-accent);
+      font-weight: 700;
+      transition: var(--transition);
+      width: 100%;
+    }
+
+    .btn-pedir:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .menu-cta-center {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .btn-view-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 12px 36px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-primary);
+      transition: var(--transition);
+    }
+
+    .btn-view-all:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ========================================================
+       SECCIÓN 3: #NOSOTROS (HISTORIA & MÉTRICAS)
+       ======================================================== */
+    .promo-section {
+      padding: 60px 0;
+      background: #FFFFFF;
+    }
+
+    .promo-split-card {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .promo-left-img-wrap {
+      position: relative;
+      min-height: 380px;
+      overflow: hidden;
+    }
+
+    .promo-left-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .promo-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(17, 24, 39, 0.92);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .promo-floating-badge i {
+      color: var(--color-primary);
+      font-size: 1.6rem;
+    }
+
+    .promo-floating-badge strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.03em;
+    }
+
+    .promo-floating-badge span {
+      font-size: 0.75rem;
+      color: #D1D5DB;
+    }
+
+    .promo-right-white {
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promo-right-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.4vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 14px;
+    }
+
+    .promo-right-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .promo-metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid #F3F4F6;
+    }
+
+    .metric-stat-box {
+      background: #F9FAFB;
+      border: 1px solid #E5E7EB;
+      padding: 14px 10px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .metric-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .metric-stat-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========================================================
+       SECCIÓN 4: FRANJA DE PEDIDOS RÁPIDOS
+       ======================================================== */
+    .delivery-strip-section {
+      padding: 30px 0;
+      background: #FFFFFF;
+    }
+
+    .delivery-strip-card {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #991B1B 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 24px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: var(--shadow-primary);
+    }
+
+    .delivery-strip-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .delivery-strip-icon i {
+      font-size: 2.4rem;
+      color: var(--color-accent);
+    }
+
+    .delivery-strip-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .delivery-strip-text p {
+      font-size: 0.88rem;
+      color: #FEE2E2;
+    }
+
+    .btn-delivery-now {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-accent);
+      white-space: nowrap;
+      transition: var(--transition);
+      font-weight: 700;
+    }
+
+    .btn-delivery-now:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ========================================================
+       SECCIÓN 5: #SEDE (UBICACIÓN & GOOGLE MAPS)
+       ======================================================== */
+    .location-section {
+      padding: 60px 0 80px;
+      background: var(--bg-body);
+    }
+
+    .location-card {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .location-info-side {
+      padding: 44px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-eyebrow {
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .location-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+    }
+
+    .location-items-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .location-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .location-icon-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #FEE2E2;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .location-text-box h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 2px;
+    }
+
+    .location-text-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .btn-location-map {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-primary);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-primary);
+      transition: var(--transition);
+      font-weight: 700;
+    }
+
+    .btn-location-map:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-2px);
+    }
+
+    .location-map-side {
+      min-height: 380px;
+      background: #E5E7EB;
+    }
+
+    .location-map-side iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border: none;
+    }
+
+    /* ========================================================
+       FOOTER MODULAR DE 4 COLUMNAS
+       ======================================================== */
+    .site-footer {
+      background: #0B0F19;
+      color: #FFFFFF;
+      padding: 70px 0 28px;
+      position: relative;
+      border-top: 2px solid rgba(220, 38, 38, 0.4);
+    }
+
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-accent), transparent);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.1fr 1.2fr;
+      gap: 38px;
+      margin-bottom: 48px;
+    }
+
+    .footer-logo {
+      display: inline-block;
+      margin-bottom: 14px;
+      text-decoration: none;
+    }
+
+    .footer-logo-text {
+      font-family: var(--font-display);
+      font-size: 1.95rem;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .footer-logo-text span {
+      color: var(--color-primary);
+    }
+
+    .footer-desc {
+      font-size: 0.88rem;
+      color: #9CA3AF;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E5E7EB;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .footer-social-link:hover {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: #FFFFFF;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 26px;
+      height: 2px;
+      background: var(--color-primary);
+      border-radius: 2px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links-list a {
+      font-size: 0.9rem;
+      color: #9CA3AF;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links-list a::before {
+      content: '›';
+      font-size: 1.15rem;
+      color: var(--color-primary);
+      transition: transform 0.2s;
+    }
+
+    .footer-links-list a:hover {
+      color: #FFFFFF;
+      transform: translateX(4px);
+    }
+
+    .footer-hours-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+    }
+
+    .footer-hours-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #10B981;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .footer-hours-text {
+      font-size: 0.88rem;
+      color: #E5E7EB;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+
+    .footer-hours-sub {
+      font-size: 0.78rem;
+      color: #9CA3AF;
+      font-style: italic;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: #D1D5DB;
+      margin-bottom: 12px;
+    }
+
+    .footer-contact-item i {
+      color: var(--color-primary);
+      font-size: 1.05rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: #25D366;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.12rem;
+      letter-spacing: 0.04em;
+      padding: 12px 18px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      margin-top: 10px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .footer-whatsapp-btn:hover {
+      background: #20BA5A;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
+    }
+
+    .footer-bottom {
+      padding-top: 26px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.82rem;
+      color: #6B7280;
+    }
+
+    /* ========================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ======================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      z-index: 9999;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      background: #20BA5A;
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    /* ========================================================
+       RESPONSIVIDAD & MÓVIL (< 768px)
+       ======================================================== */
+    @media (max-width: 992px) {
+      .nav-links, .btn-header-cta {
+        display: none;
+      }
+      .btn-mobile-menu {
+        display: flex;
+      }
+      .hero-section {
+        min-height: 540px;
+      }
+      .hero-bg-cover {
+        width: 100%;
+        opacity: 0.4;
+      }
+      .hero-bg-overlay {
+        background: linear-gradient(180deg, rgba(17, 24, 39, 0.85) 0%, #111827 100%);
+      }
+      .promo-split-card {
+        grid-template-columns: 1fr;
+      }
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .brand-title {
+        font-size: 1.8rem;
+      }
+      .hero-section {
+        min-height: 840px !important;
+        padding: 120px 0 45px;
+        display: flex;
+        align-items: flex-end;
+      }
+      .hero-bg-cover {
+        opacity: 1 !important;
+      }
+      .hero-bg-img {
+        object-position: center 15% !important;
+        opacity: 1 !important;
+      }
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          transparent 0%, 
+          transparent 58%, 
+          rgba(17, 24, 39, 0.88) 82%, 
+          #111827 100%
+        ) !important;
+      }
+      .hero-content-wrap {
+        text-align: center;
+        margin: 0 auto;
+      }
+      .hero-actions {
+        justify-content: center;
+      }
+      .hero-features-row {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      /* Selector de Categorías en Móvil: Scroll-Snap */
+      .categories-pills-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        padding: 6px 20px 16px !important;
+        margin: 0 -24px 28px !important;
+        width: calc(100% + 48px) !important;
+        scrollbar-width: none !important;
+      }
+
+      .btn-category-pill {
+        flex: 0 0 auto !important;
+        scroll-snap-align: start !important;
+        white-space: nowrap !important;
+      }
+
+      /* Grid de Menú en 2 Columnas en Móvil */
+      .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .menu-img-wrap {
+        height: 140px;
+      }
+
+      .menu-card-body {
+        padding: 12px 8px 14px;
+      }
+
+      .menu-title {
+        font-size: 1.05rem;
+      }
+
+      .menu-desc {
+        display: none;
+      }
+
+      .menu-price {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+      }
+
+      .btn-pedir {
+        font-size: 0.95rem;
+        padding: 6px 10px;
+      }
+
+      .promo-metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      .delivery-strip-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .delivery-strip-left {
+        flex-direction: column;
+      }
+
+      .btn-delivery-now {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SMART HEADER / NAVBAR
+       ======================================================== -->
+  <header class="header-wrapper">
+    <div class="container">
+      <nav class="header-nav">
+        <a href="#inicio" class="brand-logo">
+          <span class="brand-title">La Mesa Paisa</span>
+          <span class="brand-sub">🔥 TRADICIÓN PAISA · MEDELLÍN</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#sede" class="nav-link">Sede & Domicilios</a></li>
+        </ul>
+
+        <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+          <i class="fa-solid fa-bag-shopping"></i> Pedir en Línea
+        </a>
+
+        <button class="btn-mobile-menu" id="mobileMenuBtn" aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Drawer de Navegación Móvil -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <span class="brand-title" style="color: var(--text-dark);">La Mesa Paisa</span>
+        <span class="brand-sub">🔥 TRADICIÓN PAISA · MEDELLÍN</span>
+      </div>
+      <button class="btn-drawer-close" id="drawerCloseBtn" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-links">
+      <li><a href="#inicio" class="drawer-link"><i class="fa-solid fa-house"></i> Inicio</a></li>
+      <li><a href="#menu" class="drawer-link"><i class="fa-solid fa-utensils"></i> Menú</a></li>
+      <li><a href="#nosotros" class="drawer-link"><i class="fa-solid fa-heart"></i> Nosotros</a></li>
+      <li><a href="#sede" class="drawer-link"><i class="fa-solid fa-location-dot"></i> Sede & Domicilios</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 20px;">
+      <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." target="_blank" rel="noopener noreferrer" class="btn-hero-primary" style="width: 100%; justify-content: center;">
+        <i class="fa-solid fa-bag-shopping"></i> Pedir a Domicilio
+      </a>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECCIÓN 1: #INICIO (HERO INMERSIVO)
+       ======================================================== -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-bg-cover">
+      <picture class="hero-bg-picture">
+        <source media="(max-width: 768px)" srcset="hero_la_mesa_paisa_mobile.webp" width="720" height="1280">
+        <img src="hero_la_mesa_paisa.webp" alt="EL AUTÉNTICO SABOR DE LA MESA PAISA." class="hero-bg-img" loading="eager" width="1920" height="1080">
+      </picture>
+    </div>
+    <div class="hero-bg-overlay"></div>
+
+    <div class="container">
+      <div class="hero-content-wrap">
+        <h1 class="hero-title">EL AUTÉNTICO SABOR DE LA MESA PAISA.</h1>
+        <p class="hero-desc">Bandejas paisas tradicionales con chicharrón crujiente, cazuelas de frijoles campesinos, sancochos en leña y carnes a la brasa preparadas al instante en Medellín.</p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
+            <i class="fa-solid fa-fire"></i> Pedir Ahora ➔
+          </a>
+          <a href="#menu" class="btn-hero-secondary">
+            <i class="fa-solid fa-utensils"></i> Ver Nuestro Menú
+          </a>
+        </div>
+
+        <div class="hero-features-row">
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-motorcycle"></i>
+            <span>Domicilios Medellín</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-certificate"></i>
+            <span>Sabor Paisa</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-fire-burner"></i>
+            <span>Sabor Tradicional</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-star"></i>
+            <span>4.5 ★ Google Reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 2: #MENU (LOS MÁS PEDIDOS)
+       ======================================================== -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-eyebrow">Los Más Pedidos</span>
+        <h2 class="section-title">NUESTROS <span>FAVORITOS</span></h2>
+      </div>
+
+      <!-- Buscador en Tiempo Real -->
+      <div class="search-filter-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="foodSearchInput" class="search-input" placeholder="Buscar plato criollo (ej. Churrasco, Bandeja, Sancocho, Costillas)...">
+      </div>
+
+      <!-- Selector de Categorías -->
+      <div class="categories-pills-row" id="categoriesPills">
+        <button class="btn-category-pill active" data-filter="todos">
+          <i class="fa-solid fa-utensils"></i> Todos
+        </button>
+        <button class="btn-category-pill" data-filter="carnes">
+          <i class="fa-solid fa-fire"></i> Carnes al Fogón
+        </button>
+        <button class="btn-category-pill" data-filter="criollos">
+          <i class="fa-solid fa-drumstick-bite"></i> Parrilla Criolla
+        </button>
+        <button class="btn-category-pill" data-filter="sopas">
+          <i class="fa-solid fa-bowl-food"></i> Sopas & Sancochos
+        </button>
+        <button class="btn-category-pill" data-filter="bebidas">
+          <i class="fa-solid fa-glass-water"></i> Bebidas & Jugos
+        </button>
+      </div>
+
+      <!-- Grid de Platos Semánticos -->
+      <div class="menu-grid" id="menuGrid">
+        
+        <!-- Plato 1 -->
+        <div class="menu-card" data-category="carnes" data-product-title="Bandeja Paisa Tradicional">
+          <div class="menu-img-wrap">
+            <span class="menu-tag">MÁS PEDIDO</span>
+            <img src="https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?auto=format&fit=crop&w=800&q=80" alt="Tomahawk & Churrasco al Fogón" class="menu-img" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-title">BANDEJA PAISA TRADICIONAL</h3>
+            <p class="menu-desc">Chicharrón crujiente de 100% pierna, carne molida campesina, arroz, frijoles caseros, huevo frito, tajada de maduro, arepa y aguacate.</p>
+            <span class="menu-price">$34.000</span>
+            <a href="/m/la-mesa-paisa" class="btn-pedir">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Plato 2 -->
+        <div class="menu-card" data-category="carnes" data-product-title="Cazuela de Frijoles Antioqueña">
+          <div class="menu-img-wrap">
+            <span class="menu-tag">ESPECIALIDAD</span>
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80" alt="Punta de Anca al Carbón" class="menu-img" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-title">PUNTA DE ANCA AL CARBÓN</h3>
+            <p class="menu-desc">Frijoles rojos espesos con trozos de chicharrón, plátano maduro picado, carne desmechada, maíz tierno, aguacate y ripio de papa.</p>
+            <span class="menu-price">$35.000</span>
+            <a href="/m/la-mesa-paisa" class="btn-pedir">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Plato 3 -->
+        <div class="menu-card" data-category="criollos" data-product-title="Churrasco & Punta de Anca">
+          <div class="menu-img-wrap">
+            <span class="menu-tag">TRADICIÓN</span>
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Bandeja Criolla El Fogón" class="menu-img" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-title">CHURRASCO & PUNTA DE ANCA</h3>
+            <p class="menu-desc">Corte jugoso asado a la brasa con chimichurri casero, patacón crocante con hogao, papa al vapor y ensalada fresca.</p>
+            <span class="menu-price">$32.000</span>
+            <a href="/m/la-mesa-paisa" class="btn-pedir">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Plato 4 -->
+        <div class="menu-card" data-category="criollos" data-product-title="Sancocho Trifásico Tradicional">
+          <div class="menu-img-wrap">
+            <span class="menu-tag">RECOMENDADO</span>
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Costillas BBQ Ahumadas" class="menu-img" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-title">SANCOCHO TRIFÁSICO TRADICIONAL</h3>
+            <p class="menu-desc">Caldo campesino concentrado con res, cerdo y pollo criollo, plátano, yuca, papa, mazorca, arroz y aguacate.</p>
+            <span class="menu-price">$34.000</span>
+            <a href="/m/la-mesa-paisa" class="btn-pedir">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Plato 5 -->
+        <div class="menu-card" data-category="sopas" data-product-title="Costillas en Salsa Criolla">
+          <div class="menu-img-wrap">
+            <span class="menu-tag">CASERO</span>
+            <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80" alt="Sancocho de Gallina Criolla" class="menu-img" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-title">COSTILLAS EN SALSA CRIOLLA</h3>
+            <p class="menu-desc">Costillas de cerdo doradas y tiernas bañadas en hogao tradicional con toques de cilantro, yuca frita y ensalada.</p>
+            <span class="menu-price">$26.000</span>
+            <a href="/m/la-mesa-paisa" class="btn-pedir">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Plato 6 -->
+        <div class="menu-card" data-category="bebidas" data-product-title="Limonada de Panela & Jugos Naturales">
+          <div class="menu-img-wrap">
+            <span class="menu-tag">REFRESCANTE</span>
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" alt="Limonada de Coco & Jugos" class="menu-img" loading="lazy">
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-title">LIMONADA DE PANELA & JUGOS NATURALES</h3>
+            <p class="menu-desc">Agua de panela con limón bien fría, o jugos naturales en agua o leche de maracuyá, guanábana, mango o lulo.</p>
+            <span class="menu-price">$9.000</span>
+            <a href="/m/la-mesa-paisa" class="btn-pedir">
+              <i class="fa-solid fa-cart-shopping"></i> AGREGAR
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu-cta-center">
+        <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." target="_blank" rel="noopener noreferrer" class="btn-view-all">
+          VER CARTA COMPLETA ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 3: #NOSOTROS (SOBRE NOSOTROS & AUTORIDAD)
+       ======================================================== -->
+  <section id="nosotros" class="promo-section">
+    <div class="container">
+      <div class="promo-split-card">
+        <div class="promo-left-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&auto=format&fit=crop&q=85" alt="Ambiente y cocina tradicional en La Mesa Paisa" class="promo-left-img" loading="lazy">
+          <div class="promo-floating-badge">
+            <i class="fa-solid fa-fire-burner"></i>
+            <div>
+              <strong>100% Sazón al Fogón</strong>
+              <span>Tradición Campesina & Parrilla</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="promo-right-white">
+          <h2 class="promo-right-title">SAZÓN TRADICIONAL. GENERACIONES DE AMOR POR LO NUESTRO.</h2>
+          <p class="promo-right-desc">En La Mesa Paisa rescatamos las recetas auténticas de la gastronomía antioqueña, preparadas con ingredientes frescos de nuestros campos.</p>
+          <p class="promo-right-desc" style="margin-top: -12px;">Frijoles cocidos a fuego lento, chicharrón carnudo crocante y carnes asadas al carbón para deleitar el paladar de toda la familia.</p>
+
+          <div class="promo-metrics-grid">
+            <div class="metric-stat-box">
+              <div class="metric-stat-num">100%</div>
+              <div class="metric-stat-label">Sabor Paisa</div>
+            </div>
+            <div class="metric-stat-box">
+              <div class="metric-stat-num">< 30 min</div>
+              <div class="metric-stat-label">Domicilios Medellín</div>
+            </div>
+            <div class="metric-stat-box">
+              <div class="metric-stat-num">15+</div>
+              <div class="metric-stat-label">Años de Sazón</div>
+            </div>
+            <div class="metric-stat-box">
+              <div class="metric-stat-num">4.5 ★</div>
+              <div class="metric-stat-label">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 4: FRANJA DE DOMICILIOS
+       ======================================================== -->
+  <section class="delivery-strip-section">
+    <div class="container">
+      <div class="delivery-strip-card">
+        <div class="delivery-strip-left">
+          <div class="delivery-strip-icon">
+            <i class="fa-solid fa-bell-concierge"></i>
+          </div>
+          <div class="delivery-strip-text">
+            <h4>¿CON HAMBRE? ¡TE LO LLEVAMOS A TU PUERTA!</h4>
+            <p>Pide directo a nuestro WhatsApp y disfruta de la mejor comida típica y carnes en Medellín.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." target="_blank" rel="noopener noreferrer" class="btn-delivery-now">
+          PEDIR AHORA MISMO ➔
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 5: #SEDE (UBICACIÓN & GOOGLE MAPS)
+       ======================================================== -->
+  <section id="sede" class="location-section">
+    <div class="container">
+      <div class="location-card">
+        <div class="location-info-side">
+          <span class="location-eyebrow">Sede Principal</span>
+          <h3 class="location-title">VISÍTANOS EN Medellín</h3>
+
+          <div class="location-items-list">
+            <div class="location-item">
+              <div class="location-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="location-text-box">
+                <h5>Dirección Física</h5>
+                <p>Bolivar #70a-85 a 70a-27, Medellín</p>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <div class="location-icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="location-text-box">
+                <h5>Línea de Pedidos & WhatsApp</h5>
+                <p>Domicilios rápidos en todo Medellín</p>
+              </div>
+            </div>
+
+            <div class="location-item">
+              <div class="location-icon-box">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="location-text-box">
+                <h5>Horario de Atención</h5>
+                <p>Lunes a Domingo: 11:30 AM - 9:30 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-actions-row">
+            <a href="https://www.google.com/maps/place/La+Mesa+Paisa/@6.2679007,-75.6755149,12z/data=!4m10!1m2!2m1!1srestaurantes+en+Cartagena+%23+68-21,+Aranjuez,+Medell%C3%ADn,+Antioquia!3m6!1s0x8e442964afc55f09:0x9a163960a3f9afd7!8m2!3d6.2666533!4d-75.562055!15sCkFyZXN0YXVyYW50ZXMgZW4gQ2FydGFnZW5hICMgNjgtMjEsIEFyYW5qdWV6LCBNZWRlbGzDrW4sIEFudGlvcXVpYVo-IjxyZXN0YXVyYW50ZXMgZW4gY2FydGFnZW5hIDY4IDIxIGFyYW5qdWV6IG1lZGVsbMOtbiBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU53Y2poSVMxTjNFQUXgAQD6AQQIABBB!16s%2Fg%2F11j7gwt8jj" target="_blank" rel="noopener noreferrer" class="btn-location-map">
+              <i class="fa-solid fa-diamond-turn-right"></i> CÓMO LLEGAR
+            </a>
+          </div>
+        </div>
+
+        <div class="location-map-side">
+          <iframe 
+            src="https://maps.google.com/maps?q=La+Mesa+Paisa,+Bolivar+%2370a-85,+Medell%C3%ADn,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de La Mesa Paisa en Google Maps">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER MODULAR DE 4 COLUMNAS
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Columna 1: Marca y Redes -->
+        <div class="footer-col footer-brand-col">
+          <a href="#inicio" class="footer-logo">
+            <span class="footer-logo-text">La Mesa Paisa</span>
+          </a>
+          <p class="footer-desc">Bandejas paisas tradicionales con chicharrón crujiente, cazuelas de frijoles campesinos, sancochos en leña y carnes a la brasa preparadas al instante en Medellín.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="footer-social-link" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="footer-col footer-links-col">
+          <h4>Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Nuestro Menú</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#sede">Sede & Domicilios</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Horarios -->
+        <div class="footer-col footer-hours-col">
+          <h4>Horarios</h4>
+          <div class="footer-hours-card">
+            <div class="footer-hours-badge">
+              <i class="fa-solid fa-circle-check"></i> Abierto Hoy
+            </div>
+            <p class="footer-hours-text"><strong>Atención Continua:</strong><br>Lunes a Domingo: 11:30 AM - 9:30 PM</p>
+            <p class="footer-hours-sub">Servicio en mesa & domicilios rápidos.</p>
+          </div>
+        </div>
+
+        <!-- Columna 4: Contáctanos -->
+        <div class="footer-col footer-contact-col">
+          <h4>Atención & Pedidos</h4>
+          <div class="footer-contact-box">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Bolivar #70a-85 a 70a-27, Medellín</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Lunes a Domingo: 11:30 AM - 9:30 PM</span>
+            </div>
+            <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="footer-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+              PEDIR
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 La Mesa Paisa. Todos los derechos reservados | Medellín, Colombia.</p>
+        <p>Gastronomía Tradicional & Parrilla al Carbón</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ======================================================== -->
+  <a href="https://wa.me/573146614828?text=Hola%20La%20Mesa%20Paisa%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Pedir por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ========================================================
+       JAVASCRIPT: BÚSQUEDA & FILTRADO EN TIEMPO REAL
+       ======================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('foodSearchInput');
+      const categoryButtons = document.querySelectorAll('.btn-category-pill');
+      const menuCards = document.querySelectorAll('.menu-card');
+
+      let currentCategory = 'todos';
+      let currentQuery = '';
+
+      function filterMenu() {
+        menuCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const title = (card.getAttribute('data-product-title') || card.querySelector('.menu-title')?.textContent || '').toLowerCase();
+          const desc = (card.querySelector('.menu-desc')?.textContent || '').toLowerCase();
+
+          const matchesCategory = (currentCategory === 'todos') || (category === currentCategory);
+          const matchesSearch = title.includes(currentQuery) || desc.includes(currentQuery);
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      // Filtro por Categoría
+      categoryButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-filter');
+          filterMenu();
+        });
+      });
+
+      // Filtro por Buscador
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.toLowerCase().trim();
+          filterMenu();
+        });
+      }
+
+      // Drawer Móvil Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+      const drawerLinks = document.querySelectorAll('.drawer-link');
+
+      function openDrawer() {
+        mobileDrawer?.classList.add('active');
+        mobileDrawerOverlay?.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        mobileDrawer?.classList.remove('active');
+        mobileDrawerOverlay?.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      mobileMenuBtn?.addEventListener('click', openDrawer);
+      drawerCloseBtn?.addEventListener('click', closeDrawer);
+      mobileDrawerOverlay?.addEventListener('click', closeDrawer);
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+
+      // Smooth scroll para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId.length > 1) {
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              const headerHeight = document.querySelector('.header-wrapper')?.offsetHeight || 70;
+              const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

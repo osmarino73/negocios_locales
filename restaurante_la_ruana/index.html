@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  
+  <!-- SEO Local & Metadatos Principales -->
+  <title>Restaurante La Ruana — AUTÉNTICA COCINA CRIOLLA & ASADOS AL CARBÓN en Medellín</title>
+  <meta name="description" content="Bandejas montañeras con chicharrón crujiente, cortes de carne jugosos a la brasa, sancochos en leña y cazuelas tradicionales en Aranjuez, Medellín.">
+  <meta name="keywords" content="restaurante, comida criolla Medellín, asados Medellín, sancocho Medellín, domicilios Medellín">
+  <meta name="author" content="Restaurante La Ruana">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Restaurante La Ruana — AUTÉNTICA COCINA CRIOLLA & ASADOS AL CARBÓN">
+  <meta property="og:description" content="Bandejas montañeras con chicharrón crujiente, cortes de carne jugosos a la brasa, sancochos en leña y cazuelas tradicionales en Aranjuez, Medellín.">
+  <meta property="og:image" content="hero_la_ruana.webp">
+  <meta property="og:locale" content="es_CO">
+  
+  <!-- Tipografías Oficiales: Bebas Neue, Caveat & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org JSON-LD para SEO Local Estructurado -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Restaurante La Ruana",
+    "image": "hero_la_ruana.webp",
+    "telephone": "https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar.",
+    "priceRange": "$$",
+    "servesCuisine": ["Cocina Criolla", "Parrilla al Carbón", "Comida Tradicional", "Pescados & Mariscos", "Sancochos"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 68 #51C-43, Aranjuez",
+      "addressLocality": "Medellín",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:30",
+        "closes": "22:30"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ========================================================
+       VARIABLES & DESIGN TOKENS (DARK SIZZLING SLATE & GOLDEN ACCENT)
+       ======================================================== */
+    :root {
+      --color-accent: #F7A81B; /* Color de acento / Golden Mustard */
+      --color-accent-hover: #E0940B;
+      --bg-dark: #0B0C0E; /* Negro carbón profundo */
+      --bg-dark-card: #121316;
+      --bg-card: #14161B;
+      --bg-card-hover: #1A1D24;
+      --bg-card-border: rgba(255, 255, 255, 0.08);
+      
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --text-dark: #0B0C0E;
+      
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 18px;
+      --radius-xl: 22px;
+      --radius-pill: 9999px;
+      
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+      --shadow-gold: 0 8px 24px rgba(247, 168, 27, 0.35);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* ========================================================
+       RESET & BASE STYLES
+       ======================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.5;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========================================================
+       SMART HEADER / NAVBAR (SLEEK DARK)
+       ======================================================== */
+    .header-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 12, 14, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: var(--transition);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 20px;
+    }
+
+    /* Logotipo Tipográfico Puro */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    .brand-title span {
+      color: var(--color-accent);
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* Enlaces Centrales */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      color: #CBD5E1;
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-accent);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-accent);
+      border-radius: 2px;
+    }
+
+    .nav-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      letter-spacing: 0.05em;
+      padding: 9px 22px;
+      border-radius: var(--radius-pill);
+      font-weight: 800;
+      box-shadow: var(--shadow-gold);
+      transition: var(--transition);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(247, 168, 27, 0.45);
+    }
+
+    .btn-mobile-menu {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      transition: var(--transition);
+    }
+
+    .btn-mobile-menu:hover {
+      background: rgba(247, 168, 27, 0.18);
+      color: var(--color-accent);
+    }
+
+    /* Drawer de Navegación Móvil */
+    .mobile-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 1001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .mobile-drawer-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 290px;
+      height: 100%;
+      background: #0E1013;
+      z-index: 1002;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: -8px 0 30px rgba(0, 0, 0, 0.8);
+      transition: right 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .drawer-brand {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    .drawer-brand span {
+      color: var(--color-accent);
+    }
+
+    .btn-drawer-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .drawer-link {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: var(--transition);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      text-transform: uppercase;
+    }
+
+    .drawer-link i {
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      width: 24px;
+    }
+
+    .drawer-link:hover, .drawer-link.active {
+      color: var(--color-accent);
+      padding-left: 6px;
+    }
+
+    .drawer-footer-cta {
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .btn-drawer-order {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 12px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+    }
+
+    /* ========================================================
+       SECCIÓN 1: #INICIO (HERO SLOU FOOD FULL-WIDTH BLEED)
+       ======================================================== */
+    .hero-burgerhub-section {
+      background-color: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      padding: 60px 0 80px;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .hero-bg-picture {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      opacity: 1 !important;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        90deg, 
+        rgba(11, 12, 14, 0.65) 0%, 
+        rgba(11, 12, 14, 0.32) 15%, 
+        rgba(11, 12, 14, 0.08) 25%, 
+        transparent 32%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content-wrap {
+      position: relative;
+      z-index: 3;
+      max-width: 580px;
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      color: var(--color-accent);
+      line-height: 1.1;
+      display: block;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.4rem, 5.8vw, 4.8rem);
+      line-height: 0.94;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95);
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      color: var(--color-accent);
+      display: block;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #CBD5E1;
+      margin-bottom: 28px;
+      max-width: 490px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 13px 30px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(247, 168, 27, 0.5);
+    }
+
+    .btn-hero-video {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-hero-video:hover {
+      color: var(--color-accent);
+    }
+
+    .video-play-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      transition: var(--transition);
+    }
+
+    .btn-hero-video:hover .video-play-circle {
+      border-color: var(--color-accent);
+      background: rgba(247, 168, 27, 0.2);
+      color: var(--color-accent);
+    }
+
+    /* Sellos de Confianza Integrados (Desktop) */
+    .hero-features-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 20px;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #CBD5E1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-feature-item i {
+      color: var(--color-accent);
+      font-size: 1.05rem;
+    }
+
+    /* ========================================================
+       SECCIÓN 2: CINTA FLOTANTE BLANCA DE CATEGORÍAS CRIOLLAS
+       ======================================================== */
+    .categories-floating-section {
+      margin-top: -38px;
+      position: relative;
+      z-index: 10;
+      padding-bottom: 40px;
+    }
+
+    .categories-card-white {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 18px 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      align-items: center;
+    }
+
+    .cat-item-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 14px 12px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      cursor: pointer;
+      user-select: none;
+      border-right: 1px solid #ECEFF2;
+      position: relative;
+    }
+
+    .cat-item-pill:last-child {
+      border-right: none;
+    }
+
+    .cat-item-pill:hover, .cat-item-pill.active {
+      background: rgba(247, 168, 27, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .cat-svg-icon {
+      width: 44px;
+      height: 44px;
+      color: #1E293B;
+      margin-bottom: 8px;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .cat-item-pill.active .cat-svg-icon,
+    .cat-item-pill:hover .cat-svg-icon {
+      color: #0F172A;
+      transform: scale(1.08);
+    }
+
+    .cat-item-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      color: #0F172A;
+      line-height: 1.1;
+      margin-bottom: 3px;
+      transition: var(--transition);
+    }
+
+    .cat-item-pill.active .cat-item-name,
+    .cat-item-pill:hover .cat-item-name {
+      color: #000000;
+    }
+
+    .cat-item-sub {
+      font-size: 0.74rem;
+      color: #64748B;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    /* ========================================================
+       SECCIÓN 3: #MENU (NUESTROS FAVORITOS - BESTSELLERS)
+       ======================================================== */
+    .bestsellers-section {
+      padding: 40px 0 70px;
+      background-color: var(--bg-dark);
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.1rem;
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .section-title-display {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 4.4vw, 3.8rem);
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .section-title-display span {
+      color: var(--color-accent);
+    }
+
+    /* Buscador en Tiempo Real */
+    .menu-search-wrapper {
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+
+    .menu-search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-pill);
+      padding: 6px 10px 6px 22px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .menu-search-box:focus-within {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(247, 168, 27, 0.2);
+    }
+
+    .menu-search-box i {
+      color: #64748B;
+      font-size: 1rem;
+      margin-right: 12px;
+    }
+
+    .menu-search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    .menu-search-box input::placeholder {
+      color: #64748B;
+    }
+
+    /* Grid de Bestsellers */
+    .bestsellers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .bestseller-card {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bestseller-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(247, 168, 27, 0.35);
+      background: var(--bg-card-hover);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #1A1C22;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .bestseller-card:hover .card-img {
+      transform: scale(1.06);
+    }
+
+    .card-badge-top {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(11, 12, 14, 0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(247, 168, 27, 0.5);
+      color: var(--color-accent);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    .card-body {
+      padding: 18px 20px 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+
+    .card-price {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .btn-card-add {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 12px rgba(247, 168, 27, 0.3);
+      transition: var(--transition);
+    }
+
+    .btn-card-add:hover {
+      background: var(--color-accent-hover);
+      transform: scale(1.12);
+      box-shadow: 0 6px 16px rgba(247, 168, 27, 0.5);
+    }
+
+    .menu-cta-center {
+      text-align: center;
+    }
+
+    .btn-view-full-menu {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      padding: 13px 36px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-view-full-menu:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(247, 168, 27, 0.5);
+    }
+
+    /* ========================================================
+       SECCIÓN 4: #NOSOTROS (SOBRE NOSOTROS & TRADICIÓN)
+       ======================================================== */
+    .experience-section {
+      padding: 80px 0;
+      background-color: #0E1013;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .experience-image-showcase {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .experience-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(11, 12, 14, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(247, 168, 27, 0.4);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge-icon-gold {
+      color: var(--color-accent);
+      font-size: 1.4rem;
+    }
+
+    .badge-text-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .badge-text-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .experience-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 4.2vw, 3.8rem);
+      letter-spacing: 0.03em;
+      line-height: 0.95;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .experience-title span {
+      color: var(--color-accent);
+    }
+
+    .experience-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #CBD5E1;
+      margin-bottom: 28px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      color: #94A3B8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-exp-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      padding: 12px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-exp-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ========================================================
+       SECCIÓN 5: #UBICACION (SEDE & DOMICILIOS)
+       ======================================================== */
+    .location-section {
+      padding: 80px 0;
+      background-color: var(--bg-dark);
+    }
+
+    .location-card-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .location-info-panel {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-title {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .location-title span {
+      color: var(--color-accent);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(247, 168, 27, 0.12);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .info-label {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .info-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .btn-maps-route {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      padding: 13px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+      align-self: flex-start;
+    }
+
+    .btn-maps-route:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .location-map-frame {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+    }
+
+    .location-map-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border: 0;
+      display: block;
+    }
+
+    /* ========================================================
+       FOOTER NOCTURNO SLOU FOOD STYLE
+       ======================================================== */
+    .site-footer {
+      background-color: #060708;
+      color: #94A3B8;
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 26px;
+    }
+
+    .footer-col-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #94A3B8;
+      margin: 14px 0 20px;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-list a {
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      transition: var(--transition);
+    }
+
+    .footer-list a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact-item i {
+      color: var(--color-accent);
+    }
+
+    .footer-social-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--color-accent);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: #64748B;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ========================================================
+       BOTÓN FLOTANTE OFICIAL DE WHATSAPP (ANTI-CORTE MÓVIL)
+       ======================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #FFFFFF;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: inherit;
+      opacity: 0.6;
+      z-index: -1;
+      animation: pulseWhatsApp 2s infinite;
+    }
+
+    @keyframes pulseWhatsApp {
+      0% { transform: scale(1); opacity: 0.6; }
+      70% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    /* ========================================================
+       RESPONSIVE DESIGN (< 768px MÓVIL CALIBRADO)
+       ======================================================== */
+    @media (max-width: 992px) {
+      .bestsellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .categories-card-white {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .experience-layout {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Header Móvil */
+      .nav-links {
+        display: none !important;
+      }
+
+      .btn-header-cta {
+        display: none !important;
+      }
+
+      .btn-mobile-menu {
+        display: flex !important;
+      }
+
+      .header-nav {
+        height: 64px;
+        justify-content: space-between;
+      }
+
+      .brand-title {
+        font-size: 1.65rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.55rem;
+      }
+
+      /* Hero Móvil Calibrado */
+      .hero-burgerhub-section {
+        min-height: 100svh !important;
+        min-height: 660px !important;
+        padding: 85px 16px 36px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+      }
+
+      .hero-bg-cover, .hero-bg-picture {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero-bg-img {
+        object-position: center 28% !important;
+        object-fit: cover !important;
+        opacity: 1 !important;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          transparent 0%, 
+          transparent 75%, 
+          rgba(11, 12, 14, 0.65) 90%, 
+          #0B0C0E 100%
+        ) !important;
+      }
+
+      .hero-content-wrap {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 350px;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+      }
+
+      .hero-script-tag {
+        font-size: 1.45rem;
+        margin-bottom: 2px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+
+      .hero-title {
+        font-size: 2.25rem;
+        line-height: 0.96;
+        margin-bottom: 8px;
+        text-shadow: 0 3px 12px rgba(0,0,0,0.95);
+      }
+
+      .hero-desc {
+        font-size: 0.82rem;
+        line-height: 1.4;
+        margin-bottom: 14px;
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 0;
+      }
+
+      .btn-hero-primary {
+        width: 100%;
+        max-width: 260px;
+        padding: 12px 20px;
+        font-size: 1.08rem;
+        justify-content: center;
+      }
+
+      .btn-hero-video {
+        font-size: 0.82rem;
+        gap: 8px;
+      }
+
+      .video-play-circle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.82rem;
+      }
+
+      .hero-features-row {
+        display: none !important;
+      }
+
+      /* Categorías Móvil - Carrusel Horizontal Ribbon */
+      .categories-floating-section {
+        margin-top: 10px !important;
+        padding: 0 16px 28px !important;
+        position: relative;
+        z-index: 10;
+      }
+
+      .categories-card-white {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 12px !important;
+        padding: 6px 4px 14px !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch !important;
+        width: 100% !important;
+      }
+
+      .categories-card-white::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .cat-item-pill {
+        flex: 0 0 115px !important;
+        scroll-snap-align: start !important;
+        border-right: none !important;
+        background: #FFFFFF !important;
+        border-radius: 14px !important;
+        padding: 12px 6px !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      }
+
+      .cat-item-pill.active {
+        background: #FFFFFF !important;
+        border: 2px solid var(--color-accent) !important;
+        box-shadow: 0 8px 24px rgba(247, 168, 27, 0.35) !important;
+        transform: translateY(-2px);
+      }
+
+      .cat-svg-icon {
+        width: 36px !important;
+        height: 36px !important;
+        margin-bottom: 5px !important;
+      }
+
+      .cat-item-name {
+        font-family: var(--font-display) !important;
+        font-size: 0.95rem !important;
+        color: #0F172A !important;
+        line-height: 1.1 !important;
+        margin-bottom: 2px !important;
+      }
+
+      .cat-item-sub {
+        display: block !important;
+        font-size: 0.62rem !important;
+        color: #64748B !important;
+        white-space: nowrap !important;
+      }
+
+      /* Grid Platos Móvil (2 Columnas) */
+      .bestsellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .card-img-wrap {
+        height: 140px;
+      }
+
+      .card-body {
+        padding: 12px;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+      }
+
+      .card-desc {
+        display: none;
+      }
+
+      .card-price {
+        font-size: 1.25rem;
+      }
+
+      .btn-card-add {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+      }
+
+      /* Ubicación Móvil */
+      .location-card-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .location-info-panel {
+        padding: 26px 20px;
+        text-align: center;
+      }
+
+      .info-item {
+        justify-content: center;
+        text-align: left;
+      }
+
+      .btn-maps-route {
+        align-self: center;
+      }
+
+      .location-map-frame {
+        min-height: 280px;
+      }
+
+      .location-map-frame iframe {
+        min-height: 280px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+        text-align: center;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom-row {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SMART HEADER (SLEEK DARK NAVBAR)
+       ======================================================== -->
+  <header class="header-wrapper" id="smartHeader">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo Tipográfico Puro -->
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio de Restaurante La Ruana">
+          <div class="brand-title">Restaurante La Ruana</div>
+          <div class="brand-subtitle">🔥 TRADICIÓN PAISA · ARANJUEZ</div>
+        </a>
+
+        <!-- Enlaces Centrales Desktop -->
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#ubicacion" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- Barra Derecha -->
+        <div class="nav-right-actions">
+          <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-header-cta" target="_blank" rel="noopener">
+            <i class="fa-solid fa-bag-shopping"></i> PEDIR EN LÍNEA
+          </a>
+
+          <button class="btn-mobile-menu" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       DRAWER DE NAVEGACIÓN MÓVIL
+       ======================================================== -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menú de navegación móvil">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        Restaurante La Ruana
+      </div>
+      <button class="btn-drawer-close" id="drawerCloseBtn" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#inicio" class="drawer-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+      <li><a href="#menu" class="drawer-link"><i class="fa-solid fa-bowl-food"></i> Nuestro Menú</a></li>
+      <li><a href="#nosotros" class="drawer-link"><i class="fa-solid fa-utensils"></i> Sobre Nosotros</a></li>
+      <li><a href="#ubicacion" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Sede & Contacto</a></li>
+    </ul>
+    <div class="drawer-footer-cta">
+      <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-drawer-order" target="_blank" rel="noopener">
+        <i class="fa-solid fa-bag-shopping"></i> PEDIR A DOMICILIO
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       SECCIÓN 1: #INICIO (HERO SLOU FOOD FULL-WIDTH BLEED)
+       ======================================================== -->
+  <section class="hero-burgerhub-section" id="inicio">
+    <!-- Doble Imagen Responsive Desktop 16:9 y Móvil 9:16 -->
+    <div class="hero-bg-cover">
+      <picture class="hero-bg-picture">
+        <source media="(max-width: 768px)" srcset="hero_la_ruana_mobile.webp" width="768" height="1376">
+        <img src="hero_la_ruana.webp" alt="AUTÉNTICA COCINA CRIOLLA & ASADOS AL CARBÓN" class="hero-bg-img" loading="eager" width="1920" height="1072">
+      </picture>
+    </div>
+
+    <!-- Degradado Mínimo al 40% (Comida 100% Despejada y Nítida) -->
+    <div class="hero-bg-overlay"></div>
+
+    <!-- Contenido Hero -->
+    <div class="container" style="position: relative; z-index: 3;">
+      <div class="hero-content-wrap">
+        <h1 class="hero-title">AUTÉNTICA COCINA CRIOLLA & ASADOS AL CARBÓN</h1>
+        <p class="hero-desc">Bandejas montañeras con chicharrón crujiente, cortes de carne jugosos a la brasa, sancochos en leña y cazuelas tradicionales en Aranjuez, Medellín.</p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-hero-primary" target="_blank" rel="noopener">
+            PEDIR AHORA <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#menu" class="btn-hero-video">
+            <span class="video-play-circle"><i class="fa-solid fa-utensils"></i></span>
+            VER NUESTRO MENÚ
+          </a>
+        </div>
+
+        <!-- Sellos de Confianza Integrados (Desktop) -->
+        <div class="hero-features-row">
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-motorcycle"></i>
+            <span>Domicilios Aranjuez (< 30 min)</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-award"></i>
+            <span>Sazón Criolla (100%)</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-fire-burner"></i>
+            <span>Años de Tradición (16+)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 2: CINTA FLOTANTE BLANCA DE CATEGORÍAS CRIOLLAS
+       ======================================================== -->
+  <div class="categories-floating-section">
+    <div class="container">
+      <div class="categories-card-white" id="categoriesRibbon">
+        <!-- 1. Platos Criollos -->
+        <div class="cat-item-pill active" data-category="todos">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 26C8 34.8366 15.1634 42 24 42C32.8366 42 40 34.8366 40 26H8Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M6 26H42" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+            <path d="M16 18C16 14 18 12 18 8" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M24 19C24 15 26 13 26 9" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M32 18C32 14 34 12 34 8" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">CRIOLLOS</span>
+          <span class="cat-item-sub">Bandejas & Tradición</span>
+        </div>
+
+        <!-- 2. Parrilla & Asados -->
+        <div class="cat-item-pill" data-category="parrilla">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 26C12 18 19 12 28 13C35 14 39 20 37 28C35.5 34 29 36 24 35L17 41" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 40L12 44C10.5 45.5 8 44.5 8 42.5C8 41.5 9 40.5 10 40C9 39 9 37.5 10.5 37C12 36.5 13.5 37.5 14.5 38.5L16 40Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M24 20C26 21 28 20 29 21" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M21 27C23 28 26 27 28 29" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">PARRILLA</span>
+          <span class="cat-item-sub">Cortes al Carbón</span>
+        </div>
+
+        <!-- 3. Pescados & Mariscos -->
+        <div class="cat-item-pill" data-category="pescados">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 24C16 14 32 14 41 24C32 34 16 34 9 24Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M9 24L5 18V30L9 24Z" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+            <circle cx="34" cy="22" r="2" fill="var(--color-accent)"/>
+            <path d="M26 19C24 22 24 26 26 29" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M20 20C18 22 18 26 20 28" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">PESCADOS</span>
+          <span class="cat-item-sub">Fresco del Caribe</span>
+        </div>
+
+        <!-- 4. Sopas & Sancochos -->
+        <div class="cat-item-pill" data-category="sopas">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 24C10 32.8366 16.268 40 24 40C31.732 40 38 32.8366 38 24H10Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <ellipse cx="24" cy="24" rx="14" ry="3" stroke="currentColor" stroke-width="2.4"/>
+            <path d="M18 16C18 13 20 11 20 8" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M28 16C28 13 30 11 30 8" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M6 38H42" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">SANCOCHOS</span>
+          <span class="cat-item-sub">Sabor Casero</span>
+        </div>
+
+        <!-- 5. Bebidas Típicas -->
+        <div class="cat-item-pill" data-category="bebidas">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 6L24.5 14H21.5" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="24" cy="15" rx="12.5" ry="2.5" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M13 16L16.5 40.5C16.8 42 17.8 42.5 19.5 42.5H28.5C30.2 42.5 31.2 42 31.5 40.5L35 16" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M14.5 26C18 28 30 24 33.5 26" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">BEBIDAS</span>
+          <span class="cat-item-sub">Jugos Naturales</span>
+        </div>
+
+        <!-- 6. Postres Caseros -->
+        <div class="cat-item-pill" data-category="postres">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="9.5" r="2.8" fill="var(--color-accent)" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M25 7C27 4.5 29.5 4.5 30.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14 23.5C11 21.5 13 16 18 16C19 13 23 12 26 14C29 12 33 14 33 17C37 17 38 21.5 34 23.5Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M14 23.5L17 39.5C17.2 40.5 18.2 41.5 19.5 41.5H28.5C29.8 41.5 30.8 40.5 31 39.5L34 23.5H14Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M20 24.5L21.5 40.5M24 24.5V40.5M28 24.5L26.5 40.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">POSTRES</span>
+          <span class="cat-item-sub">Dulce Casero</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECCIÓN 3: #MENU (NUESTROS FAVORITOS - BESTSELLERS)
+       ======================================================== -->
+  <section class="bestsellers-section" id="menu">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="script-eyebrow">Los Más Pedidos</span>
+        <h2 class="section-title-display">NUESTROS <span>FAVORITOS</span></h2>
+      </div>
+
+      <!-- Buscador en tiempo real -->
+      <div class="menu-search-wrapper">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menuSearchInput" placeholder="Buscar platos, carnes, pescados, sancochos..." aria-label="Buscar en el menú">
+        </div>
+      </div>
+
+      <!-- Grid de Bestsellers Criollos (8 Platos) -->
+      <div class="bestsellers-grid" id="bestsellersGrid">
+        <!-- Plato 1: Criollo -->
+        <article class="bestseller-card" data-category="criolla" data-product-title="Bandeja La Ruana Tradicional">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" alt="Bandeja Criolla Especial" class="card-img" loading="lazy">
+            <span class="card-badge-top">MÁS PEDIDO</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">BANDEJA LA RUANA TRADICIONAL</h3>
+            <p class="card-desc">Chicharrón crujiente de pierna, carne molida campesina, huevo frito, frijoles caseros, arroz, tajadas de maduro, arepa paisa y aguacate.</p>
+            <div class="card-footer">
+              <div class="card-price">$33.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 2: Parrilla -->
+        <article class="bestseller-card" data-category="parrilla" data-product-title="Churrasco & Punta de Anca a la Brasa">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80" alt="Punta de Anca al Carbón" class="card-img" loading="lazy">
+            <span class="card-badge-top">CORTE PREMIUM</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">CHURRASCO & PUNTA DE ANCA A LA BRASA</h3>
+            <p class="card-desc">Corte de res madurado asado al carbón de leña con papas rústicas, ensalada fresca de la huerta y chimichurri artesanal.</p>
+            <div class="card-footer">
+              <div class="card-price">$37.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 3: Pescados -->
+        <article class="bestseller-card" data-category="pescados" data-product-title="Mojarra Dorada con Patacones">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&auto=format&fit=crop&q=80" alt="Pargo Rojo Frito con Patacón" class="card-img" loading="lazy">
+            <span class="card-badge-top">ESPECIALIDAD</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">MOJARRA DORADA CON PATACONES</h3>
+            <p class="card-desc">Mojarra entera frita crocante, servida con patacones pisados con hogao, arroz con coco y ensalada.</p>
+            <div class="card-footer">
+              <div class="card-price">$35.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 4: Sancochos -->
+        <article class="bestseller-card" data-category="sopas" data-product-title="Sancocho de Gallina Criolla">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop&q=80" alt="Sancocho de Gallina Criolla" class="card-img" loading="lazy">
+            <span class="card-badge-top">TRADICIONAL</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">SANCOCHO DE GALLINA CRIOLLA</h3>
+            <p class="card-desc">Caldo campesino espeso con plátano, yuca, papa, mazorca y porción de gallina dorada con arroz y aguacate.</p>
+            <div class="card-footer">
+              <div class="card-price">$27.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 5: Parrilla -->
+        <article class="bestseller-card" data-category="parrilla" data-product-title="Costillas BBQ Campesinas">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&auto=format&fit=crop&q=80" alt="Costillas Ahumadas a la Brasa" class="card-img" loading="lazy">
+            <span class="card-badge-top">RECOMENDADO</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">COSTILLAS BBQ CAMPESINAS</h3>
+            <p class="card-desc">Costillar de cerdo tierno ahumado a fuego lento con salsa BBQ de panela, papas al vapor y ensalada.</p>
+            <div class="card-footer">
+              <div class="card-price">$35.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 6: Pescados -->
+        <article class="bestseller-card" data-category="pescados" data-product-title="Cazuela de Mariscos Tradicional">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=80" alt="Cazuela de Mariscos Caribeña" class="card-img" loading="lazy">
+            <span class="card-badge-top">FAVORITO</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">CAZUELA DE MARISCOS TRADICIONAL</h3>
+            <p class="card-desc">Camarones, calamares y filete de pescado en reducción cremosa de coco con patacón crocante.</p>
+            <div class="card-footer">
+              <div class="card-price">$39.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 7: Bebidas -->
+        <article class="bestseller-card" data-category="bebidas" data-product-title="Jugos Naturales & Limonada">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=80" alt="Jugo Natural de Maracuyá" class="card-img" loading="lazy">
+            <span class="card-badge-top">REFRESCANTE</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">JUGOS NATURALES & LIMONADA</h3>
+            <p class="card-desc">Limonada de coco, limonada de panela o jugos naturales en agua o leche de maracuyá, lulo, mango y guanábana.</p>
+            <div class="card-footer">
+              <div class="card-price">$8.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Plato 8: Postres -->
+        <article class="bestseller-card" data-category="postres" data-product-title="Postre Tres Leches Casero">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=80" alt="Postre Tres Leches Casero" class="card-img" loading="lazy">
+            <span class="card-badge-top">DULCE CASERO</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">POSTRE TRES LECHES CASERO</h3>
+            <p class="card-desc">Bizcocho húmedo bañado en infusión de tres leches con merengue dorado y canela.</p>
+            <div class="card-footer">
+              <div class="card-price">$9.000</div>
+              <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-card-add" aria-label="Pedir por WhatsApp" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Botón Ver Carta Completa -->
+      <div class="menu-cta-center">
+        <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-view-full-menu" target="_blank" rel="noopener">
+          VER CARTA COMPLETA <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 4: #NOSOTROS (SOBRE NOSOTROS & AMBIENTE GOURMET)
+       ======================================================== -->
+  <section class="experience-section" id="nosotros">
+    <div class="container">
+      <div class="experience-layout">
+        <!-- Showcase Foto Salón / Ambiente -->
+        <div class="experience-image-showcase">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80" alt="Ambiente y salón de Restaurante La Ruana" loading="lazy">
+          <div class="experience-floating-badge">
+            <i class="fa-solid fa-award badge-icon-gold"></i>
+            <div>
+              <div class="badge-text-title">⭐ 4.6 ★ / 5.0</div>
+              <div class="badge-text-sub">Google Reviews en Medellín</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de Texto Editorial -->
+        <div>
+          <span class="script-eyebrow">Nuestra Pasión Culinaria</span>
+          <h2 class="experience-title">HERENCIA PAISA Y SAZÓN HECHA CON AMOR</h2>
+          <p class="experience-desc">En Restaurante La Ruana rendimos homenaje a la cocina campesina antioqueña con ingredientes 100% frescos. Cada plato se sirve generoso y recién preparado con el calor de hogar que caracteriza nuestra tradición.</p>
+
+          <!-- 4 Métricas de Autoridad -->
+          <div class="metrics-row">
+            <div>
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Sazón Criolla</div>
+            </div>
+            <div>
+              <div class="metric-number">< 30 min</div>
+              <div class="metric-label">Domicilios Aranjuez</div>
+            </div>
+            <div>
+              <div class="metric-number">16+</div>
+              <div class="metric-label">Años de Tradición</div>
+            </div>
+            <div>
+              <div class="metric-number">4.6 ★</div>
+              <div class="metric-label">Google Reviews</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-exp-cta" target="_blank" rel="noopener">
+            CONOCER NUESTRA CARTA <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 5: #UBICACION (SEDE & GOOGLE MAPS)
+       ======================================================== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="script-eyebrow">Visítanos o Pide a Casa</span>
+        <h2 class="section-title-display">SEDE & <span>DOMICILIOS</span></h2>
+      </div>
+
+      <div class="location-card-wrapper">
+        <div class="location-info-panel">
+          <h3 class="location-title">ATENCIÓN EN SEDE <span>& REPARTO</span></h3>
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="info-label">Dirección Física</div>
+                <div class="info-val">Cl. 68 #51C-43, Aranjuez, Medellín</div>
+              </div>
+            </li>
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="info-label">Línea de Pedidos WhatsApp</div>
+                <div class="info-val">Domicilios en Medellín</div>
+              </div>
+            </li>
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="info-label">Horario de Atención</div>
+                <div class="info-val">Lunes a Domingo: 11:30 AM – 9:30 PM</div>
+              </div>
+            </li>
+          </ul>
+          <a href="https://www.google.com/maps/place/Restaurante+La+Ruana/@6.2679007,-75.6755149,12z/data=!4m10!1m2!2m1!1srestaurantes+en+Cartagena+%23+68-21,+Aranjuez,+Medell%C3%ADn,+Antioquia!3m6!1s0x8e44292b0573a207:0x7fb59c1c2990c085!8m2!3d6.2659651!4d-75.5647469!15sCkFyZXN0YXVyYW50ZXMgZW4gQ2FydGFnZW5hICMgNjgtMjEsIEFyYW5qdWV6LCBNZWRlbGzDrW4sIEFudGlvcXVpYVo-IjxyZXN0YXVyYW50ZXMgZW4gY2FydGFnZW5hIDY4IDIxIGFyYW5qdWV6IG1lZGVsbMOtbiBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxNFYwOUVUblZVUjFwWVdteFNTRmxXU25aamJXeElZakU1U2xOdFl4QULgAQD6AQQIABBF!16s%2Fg%2F11rvgstqrd" class="btn-maps-route" target="_blank" rel="noopener">
+            <i class="fa-solid fa-route"></i> CÓMO LLEGAR A LA SEDE
+          </a>
+        </div>
+        <div class="location-map-frame">
+          <iframe 
+            src="https://maps.google.com/maps?q=Restaurante+La+Ruana,+Cl.+68+%2351C-43,+Aranjuez,+Medell%C3%ADn,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            loading="lazy" 
+            title="Ubicación oficial en Google Maps de Restaurante La Ruana"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER NOCTURNO
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-col">
+          <div class="brand-title">Restaurante La Ruana</div>
+          <div class="brand-subtitle">🔥 TRADICIÓN PAISA · ARANJUEZ</div>
+          <p class="footer-col-desc">Bandejas montañeras con chicharrón crujiente, cortes de carne jugosos a la brasa, sancochos en leña y cazuelas tradicionales en Aranjuez, Medellín.</p>
+          <div class="footer-social-wrap">
+            <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Enlaces Rápidos -->
+        <div class="footer-col">
+          <h3 class="footer-heading">ENLACES RÁPIDOS</h3>
+          <ul class="footer-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Nuestro Menú</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion">Sede & Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Horarios & Atención -->
+        <div class="footer-col">
+          <h3 class="footer-heading">HORARIOS & REPARTO</h3>
+          <ul class="footer-list">
+            <li>Lunes a Domingo: 11:30 AM – 9:30 PM</li>
+            <li>Servicio en mesa</li>
+            <li>Domicilios rápidos</li>
+            <li>Medellín, Colombia</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contáctanos -->
+        <div class="footer-col">
+          <h3 class="footer-heading">ATENCIÓN & PEDIDOS</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Cl. 68 #51C-43, Aranjuez, Medellín</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Lunes a Domingo: 11:30 AM – 9:30 PM</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." class="btn-header-cta" target="_blank" rel="noopener" style="width: 100%; justify-content: center;">
+              PEDIR
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>© 2026 Restaurante La Ruana. Todos los derechos reservados. Cl. 68 #51C-43, Aranjuez, Medellín, Colombia.</div>
+        <div>Diseño optimizado para SEO Local & Conversión Directa.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       BOTÓN FLOTANTE OFICIAL DE WHATSAPP (ANTI-CORTE MÓVIL)
+       ======================================================== -->
+  <a href="https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Contactar por WhatsApp a Restaurante La Ruana">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ========================================================
+       INTERACTIVIDAD VANILLA JAVASCRIPT
+       ======================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Drawer Móvil
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+      const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+
+      const openDrawer = () => {
+        mobileDrawer.classList.add('active');
+        mobileDrawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeDrawer = () => {
+        mobileDrawer.classList.remove('active');
+        mobileDrawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', openDrawer);
+      if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+      if (mobileDrawerOverlay) mobileDrawerOverlay.addEventListener('click', closeDrawer);
+
+      document.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+
+      // 2. Filtro de Categorías en la Cinta Blanca
+      const catPills = document.querySelectorAll('.cat-item-pill');
+      const menuCards = document.querySelectorAll('.bestseller-card');
+
+      catPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          catPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const category = pill.getAttribute('data-category');
+
+          menuCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (category === 'todos' || cardCat === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 3. Buscador en tiempo real
+      const searchInput = document.getElementById('menuSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          menuCards.forEach(card => {
+            const title = (card.getAttribute('data-product-title') || card.querySelector('.card-title')?.textContent || '').toLowerCase();
+            const desc = (card.querySelector('.card-desc')?.textContent || '').toLowerCase();
+            if (query === '' || title.includes(query) || desc.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

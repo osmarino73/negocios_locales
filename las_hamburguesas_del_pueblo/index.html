@@ -1,0 +1,2722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Las Hamburguesas del Pueblo | Hamburguesería Artesanal en Apartadó, Antioquia</title>
+  <meta name="description" content="Las mejores hamburguesas artesanales en Apartadó, Antioquia. 100% carne de res fresca, pan brioche horneado diario, tocineta crujiente, papas rústicas y servicio de domicilio rápido. ¡Pide ahora por WhatsApp!">
+  <meta name="keywords" content="hamburguesas en apartado, hamburguesería en apartado, comidas rapidas apartado, domicilios apartado, hamburguesas artesanales uraba, burger factory">
+  <meta name="author" content="Las Hamburguesas del Pueblo">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="Las Hamburguesas del Pueblo | Sabor Artesanal en Apartadó">
+  <meta property="og:description" content="100% carne de res seleccionada, pan brioche horneado a diario, vegetales frescos y las salsas de la casa. Domicilios en Apartadó.">
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://lashamburguesasdelpueblo.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=85">
+  <meta property="og:locale" content="es_CO">
+
+  <!-- Google Fonts: Bebas Neue, Caveat, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Schema.org JSON-LD para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FastFoodRestaurant",
+    "name": "Las Hamburguesas del Pueblo",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=85",
+    "telephone": "+573206912456",
+    "servesCuisine": ["Hamburguesas Artesanales", "Comidas Rápidas", "Papas Rústicas", "Malteadas"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 100 #98-45",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8817338,
+      "longitude": -76.6246858
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "17:00",
+        "closes": "23:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "520"
+    }
+  }
+  </script>
+
+  <style>
+    /* ========================================================
+       VARIABLES & TOKENS DE DISEÑO (ARQUETIPO BURGER FACTORY)
+       ======================================================== */
+    :root {
+      --color-accent: #E89C1F;          /* Oro Mostaza Cheddar de la referencia */
+      --color-accent-hover: #D48A15;
+      --color-secondary: #FFB11B;       /* Acento Dorado Brillante */
+      --color-danger: #E63946;
+      
+      --bg-dark: #0E0F12;               /* Ébano Carbón Profundo */
+      --bg-dark-card: #181A1E;          /* Obsidiana Grafito */
+      --bg-dark-alt: #121316;
+      --bg-cream: #F7F5F0;              /* Crema Marfil Sección Catálogo */
+      --bg-card-white: #FFFFFF;
+      
+      --text-light: #FFFFFF;
+      --text-dark: #1A1D20;
+      --text-muted: #9CA3AF;
+      --text-muted-dark: #5A626A;
+      
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 50px;
+      
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --shadow-glow: 0 8px 30px rgba(232, 156, 31, 0.35);
+      
+      --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset Global */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    button, input {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Utilidades Tipográficas */
+    .text-accent {
+      color: var(--color-accent) !important;
+    }
+
+    /* ========================================================
+       SMART HEADER & NAVBAR INTELIGENTE
+       ======================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background: rgba(14, 15, 18, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .header-sticky-wrapper.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    /* Logotipo Tipográfico Puro */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-title span {
+      color: var(--color-accent);
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #E2E8F0;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-accent);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #0E0F12;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(232, 156, 31, 0.3);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(232, 156, 31, 0.45);
+    }
+
+    /* Botón Menú Móvil */
+    .btn-mobile-menu {
+      display: none;
+      background: rgba(232, 156, 31, 0.12);
+      color: var(--color-accent);
+      border: 1px solid rgba(232, 156, 31, 0.25);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 10;
+    }
+
+    .btn-mobile-menu:active {
+      transform: scale(0.92);
+      background: rgba(232, 156, 31, 0.2);
+    }
+
+    /* Drawer de Navegación Móvil */
+    .mobile-drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(5px);
+      z-index: 99990;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      max-width: 86%;
+      height: 100%;
+      background: #141619;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 99995;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.5);
+      transition: right 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      padding: calc(20px + env(safe-area-inset-top, 0px)) 24px calc(24px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .mobile-drawer.active {
+      right: 0;
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 22px;
+    }
+
+    .drawer-brand {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .drawer-brand span {
+      color: var(--color-accent);
+    }
+
+    .btn-drawer-close {
+      background: rgba(255, 255, 255, 0.06);
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      color: #E2E8F0;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-drawer-close:hover {
+      background: rgba(232, 156, 31, 0.15);
+      color: var(--color-accent);
+    }
+
+    .drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #CBD5E1;
+      transition: var(--transition);
+    }
+
+    .drawer-link i {
+      font-size: 1.15rem;
+      color: var(--color-accent);
+      width: 24px;
+      text-align: center;
+    }
+
+    .drawer-link:hover, .drawer-link.active {
+      background: rgba(232, 156, 31, 0.1);
+      color: var(--color-accent);
+    }
+
+    .drawer-footer-cta {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+    }
+
+    .btn-drawer-order {
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-drawer-order:hover {
+      background: var(--color-accent-hover);
+    }
+
+    .drawer-contact-info p {
+      font-size: 0.78rem;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    /* ========================================================
+       SECCIÓN 1: #INICIO (HERO FULL-WIDTH BLEED - FULL ALTO Y FULL ANCHO)
+       ======================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .hero-bg-picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      transition: transform 0.6s ease;
+    }
+
+    /* Doble Degradado Orgánico Aterciopelado (Curva Eased + Protección Inferior) */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, rgba(14, 15, 18, 0.45) 0%, transparent 35%, rgba(14, 15, 18, 0.75) 80%, #0E0F12 100%),
+        linear-gradient(
+          90deg, 
+          #0E0F12 0%, 
+          #0E0F12 25%, 
+          rgba(14, 15, 18, 0.95) 36%, 
+          rgba(14, 15, 18, 0.75) 46%, 
+          rgba(14, 15, 18, 0.3) 58%, 
+          rgba(14, 15, 18, 0.05) 70%, 
+          transparent 80%
+        );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      padding-bottom: clamp(55px, 9vh, 95px);
+      padding-top: 140px;
+    }
+
+    .hero-text-block {
+      max-width: 640px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      color: var(--color-accent);
+      line-height: 1.1;
+      margin-bottom: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 6.2vw, 5.4rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-title span {
+      color: var(--color-accent);
+      display: inline-block;
+    }
+
+    .hero-desc {
+      font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+      color: #E2E8F0;
+      line-height: 1.6;
+      margin-bottom: 28px;
+      max-width: 540px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: #0E0F12;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.05em;
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      box-shadow: 0 6px 22px rgba(232, 156, 31, 0.4);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(232, 156, 31, 0.55);
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(14, 15, 18, 0.6);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 13px 28px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background: rgba(232, 156, 31, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #CBD5E1;
+      font-size: 0.88rem;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-social-proof .stars {
+      color: var(--color-secondary);
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-social-proof strong {
+      color: #FFFFFF;
+    }
+
+    /* Sello Circular Flotante (Never Frozen) */
+    .hero-floating-seal {
+      position: absolute;
+      bottom: clamp(60px, 12vh, 120px);
+      right: clamp(40px, 8vw, 120px);
+      width: 140px;
+      height: 140px;
+      background: rgba(14, 15, 18, 0.88);
+      backdrop-filter: blur(10px);
+      border: 2px dashed var(--color-accent);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      animation: sealPulse 4s infinite ease-in-out;
+      z-index: 3;
+    }
+
+    @keyframes sealPulse {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.04) rotate(3deg); }
+    }
+
+    .hero-floating-seal .seal-top {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      line-height: 0.95;
+      color: var(--color-accent);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-floating-seal .seal-icon {
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      margin: 4px 0;
+    }
+
+    .hero-floating-seal .seal-bottom {
+      font-size: 0.6rem;
+      font-weight: 800;
+      color: #E2E8F0;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ========================================================
+       SECCIÓN 2: BARRA DE PILARES / GARANTÍAS DE SABOR
+       ======================================================== */
+    .pillars-section {
+      background: #141619;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 30px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .pillar-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .pillar-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(232, 156, 31, 0.1);
+      border: 1px solid rgba(232, 156, 31, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .pillar-card:hover .pillar-icon-box {
+      background: var(--color-accent);
+      color: #0E0F12;
+      transform: scale(1.08) rotate(5deg);
+    }
+
+    .pillar-text h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 2px;
+    }
+
+    .pillar-text p {
+      font-size: 0.78rem;
+      color: #94A3B8;
+      line-height: 1.35;
+    }
+
+    /* ========================================================
+       SECCIÓN 3: #SERVICIOS (CATÁLOGO DE MENÚ - LOS FAVORITOS)
+       ======================================================== */
+    .menu-section {
+      background: var(--bg-cream);
+      color: var(--text-dark);
+      padding: 90px 0 80px;
+    }
+
+    .menu-header-bar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .menu-heading-block .section-script {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .menu-heading-block .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      letter-spacing: 0.03em;
+      color: #0E0F12;
+      line-height: 0.95;
+      text-transform: uppercase;
+    }
+
+    .btn-view-all-menu {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border: 1px solid var(--color-accent);
+      border-radius: var(--radius-sm);
+      color: #0E0F12;
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    .btn-view-all-menu:hover {
+      background: var(--color-accent);
+      color: #FFFFFF;
+      transform: translateX(4px);
+    }
+
+    /* Buscador estilo Pill */
+    .menu-search-wrapper {
+      max-width: 580px;
+      margin: 0 auto 30px;
+    }
+
+    .menu-search-box {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: var(--radius-pill);
+      padding: 8px 12px 8px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .menu-search-box:focus-within {
+      border-color: var(--color-accent);
+      box-shadow: 0 4px 18px rgba(232, 156, 31, 0.25);
+    }
+
+    .menu-search-box i {
+      color: #94A3B8;
+      font-size: 1.1rem;
+      margin-right: 12px;
+    }
+
+    .menu-search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 0.95rem;
+      color: #0E0F12;
+      background: transparent;
+    }
+
+    /* Categorías con REGLA ANTI-CORTE */
+    .menu-categories-wrapper {
+      position: relative !important;
+      max-width: 1080px !important;
+      margin: 0 auto 40px !important;
+      padding: 0 !important;
+    }
+
+    .menu-categories-scroll {
+      display: flex !important;
+      flex-wrap: nowrap !important;
+      justify-content: flex-start !important;
+      overflow-x: auto !important;
+      scroll-behavior: smooth !important;
+      -webkit-overflow-scrolling: touch !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+      gap: 12px !important;
+      padding: 6px 6px 14px !important;
+    }
+
+    .menu-categories-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-btn {
+      flex: 0 0 auto !important;
+      scroll-snap-align: start !important;
+      white-space: nowrap !important;
+      min-width: 90px;
+      padding: 10px 20px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #FFFFFF;
+      color: #334155;
+      font-weight: 700;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .category-btn.active,
+    .category-btn:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: #0E0F12;
+      box-shadow: 0 4px 14px rgba(232, 156, 31, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Grid de Menú en Catálogo (3 columnas Desktop) */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      background: var(--bg-card-white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-card-image-wrap {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      background: #0E0F12;
+    }
+
+    .service-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.06);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--color-accent);
+      color: #0E0F12;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .service-card-body {
+      padding: 22px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      color: #0E0F12;
+      line-height: 1.05;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .service-card-desc {
+      font-size: 0.86rem;
+      color: #64748B;
+      line-height: 1.45;
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .service-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding-top: 14px;
+    }
+
+    .service-card-price {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #B45309;
+      display: flex;
+      align-items: baseline;
+      gap: 3px;
+    }
+
+    .btn-card-order-circle {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #0E0F12;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+
+    .service-card:hover .btn-card-order-circle {
+      background: var(--color-accent);
+      color: #0E0F12;
+      transform: scale(1.1);
+      box-shadow: 0 4px 14px rgba(232, 156, 31, 0.4);
+    }
+
+    /* Botón de Carta Completa al pie */
+    .menu-footer-cta {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .btn-full-catalog {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0E0F12;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      padding: 14px 34px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-full-catalog:hover {
+      background: var(--color-accent);
+      color: #0E0F12;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* ========================================================
+       SECCIÓN 4: #NOSOTROS (SPLIT BANNER EDITORIAL DE LA REFERENCIA)
+       ======================================================== */
+    .split-promo-section {
+      background: var(--bg-dark);
+      overflow: hidden;
+    }
+
+    .split-promo-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      min-height: 460px;
+    }
+
+    /* Columna Izquierda: Hazlo Combo */
+    .split-left-combo {
+      background: #121316;
+      padding: 60px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      position: relative;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .split-left-content {
+      max-width: 280px;
+      z-index: 2;
+    }
+
+    .combo-script {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .combo-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5vw, 4.2rem);
+      color: #FFFFFF;
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .combo-desc {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      margin-bottom: 18px;
+      line-height: 1.4;
+    }
+
+    .combo-price-tag {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      color: var(--color-accent);
+      line-height: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .combo-price-tag small {
+      font-size: 1.1rem;
+      color: #94A3B8;
+      font-family: var(--font-body);
+      font-weight: 600;
+    }
+
+    .split-left-img {
+      position: relative;
+      max-width: 320px;
+    }
+
+    .split-left-img img {
+      border-radius: var(--radius-md);
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.7));
+    }
+
+    /* Columna Derecha: Sobre Nosotros (Gold Banner) */
+    .split-right-about {
+      background: var(--color-accent);
+      color: #0E0F12;
+      padding: 60px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .about-script {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: #0E0F12;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .about-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.2vw, 3.4rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #0E0F12;
+      margin-bottom: 16px;
+    }
+
+    .about-desc {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #1F2421;
+      font-weight: 500;
+      margin-bottom: 24px;
+      max-width: 460px;
+    }
+
+    .btn-about-story {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0E0F12;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.06em;
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    .btn-about-story:hover {
+      background: #1E232A;
+      transform: translateX(4px);
+    }
+
+    /* Sello circular con espátulas */
+    .about-seal-badge {
+      position: absolute;
+      top: 36px;
+      right: 36px;
+      width: 110px;
+      height: 110px;
+      border: 2px dashed #0E0F12;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px;
+      color: #0E0F12;
+    }
+
+    .about-seal-badge i {
+      font-size: 1.4rem;
+      margin: 3px 0;
+    }
+
+    .about-seal-badge span {
+      font-size: 0.55rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    /* ========================================================
+       SECCIÓN ESPECIALIDADES / COMBOS DE LA CASA
+       ======================================================== */
+    .combos-section {
+      background: #0E0F12;
+      padding: 90px 0 80px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .combos-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .combos-header .section-script {
+      font-family: var(--font-script);
+      font-size: 2.3rem;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .combos-header .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .team-card {
+      background: var(--bg-dark-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(232, 156, 31, 0.5);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .team-card-image-wrap {
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .team-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.08);
+    }
+
+    .team-card-body {
+      padding: 20px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .team-card-accent-line {
+      width: 36px;
+      height: 3px;
+      background: var(--color-accent);
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #FFFFFF;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
+    }
+
+    .team-desc {
+      font-size: 0.82rem;
+      color: #94A3B8;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .team-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 12px;
+    }
+
+    .team-price {
+      font-family: var(--font-body);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-secondary);
+    }
+
+    .btn-card-book-minimal {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-card-book-minimal:hover {
+      color: #FFFFFF;
+      transform: translateX(4px);
+    }
+
+    /* ========================================================
+       SECCIÓN 5: #UBICACION (MAPA GEORREFERENCIADO & CONTACTO)
+       ======================================================== */
+    .location-section {
+      background: #141619;
+      padding: 90px 0;
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--bg-dark-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info-panel .section-script {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .map-info-panel .section-title {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      color: #FFFFFF;
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(232, 156, 31, 0.12);
+      border: 1px solid rgba(232, 156, 31, 0.3);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .info-text strong {
+      display: block;
+      color: #FFFFFF;
+      font-size: 0.92rem;
+      margin-bottom: 2px;
+    }
+
+    .info-text p {
+      font-size: 0.85rem;
+      color: #94A3B8;
+      line-height: 1.35;
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-map-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.86rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+    }
+
+    .btn-map-action.primary {
+      background: var(--color-accent);
+      color: #0E0F12;
+    }
+
+    .btn-map-action.primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-map-action.outline {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+    }
+
+    .btn-map-action.outline:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      position: relative;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: none;
+      filter: contrast(1.05) brightness(0.9);
+    }
+
+    /* ========================================================
+       SECCIÓN 6: FOOTER PRINCIPAL (CLON FORENSE)
+       ======================================================== */
+    .site-footer {
+      background: #0A0B0D;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 70px 0 30px;
+      color: #94A3B8;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand .brand-title {
+      font-size: 1.9rem;
+      margin-bottom: 4px;
+    }
+
+    .footer-brand .brand-subtitle {
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: #64748B;
+      max-width: 300px;
+    }
+
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.06em;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.86rem;
+      color: #94A3B8;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent);
+      padding-left: 4px;
+    }
+
+    .footer-hours-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.84rem;
+    }
+
+    .footer-hours-list span {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .footer-social-wrap {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #181A1E;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--color-accent);
+      color: #0E0F12;
+      transform: translateY(-3px);
+    }
+
+    .footer-order-box {
+      border: 1px solid rgba(232, 156, 31, 0.4);
+      background: rgba(232, 156, 31, 0.05);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: var(--transition);
+    }
+
+    .footer-order-box:hover {
+      background: rgba(232, 156, 31, 0.12);
+      border-color: var(--color-accent);
+    }
+
+    .footer-order-text small {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #CBD5E1;
+    }
+
+    .footer-order-text strong {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+    }
+
+    .btn-footer-reserve {
+      background: var(--color-accent);
+      color: #0E0F12;
+      font-weight: 800;
+      font-size: 0.82rem;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-accent-hover);
+      transform: scale(1.05);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #64748B;
+    }
+
+    /* ========================================================
+       BOTÓN FLOTANTE WHATSAPP (ANTI-CORTE MÓVIL)
+       ======================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 99999;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(6deg);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #FFFFFF;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(37, 211, 102, 0.6);
+      animation: waPulse 2s infinite ease-out;
+      z-index: -1;
+    }
+
+    @keyframes waPulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* ========================================================
+       RESPONSIVE DESIGN (< 768px MÓVIL CALIBRADO)
+       ======================================================== */
+    @media (max-width: 768px) {
+      /* Header Móvil con Botón de Menú */
+      .nav-links, .btn-header-cta {
+        display: none !important;
+      }
+
+      .btn-mobile-menu {
+        display: flex !important;
+      }
+
+      .header-nav {
+        height: 64px;
+        justify-content: space-between !important;
+        align-items: center;
+        padding-left: max(16px, env(safe-area-inset-left, 16px));
+        padding-right: max(16px, env(safe-area-inset-right, 16px));
+      }
+
+      .brand-title {
+        font-size: 1.45rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.58rem;
+      }
+
+      /* Hero Móvil Calibrado (Mayor Altura para Despejar la Hamburguesa) */
+      .hero-fullwidth-section {
+        min-height: clamp(860px, 96vh, 920px) !important;
+        padding: 0 12px 24px !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .hero-bg-cover, .hero-bg-picture {
+        width: 100% !important;
+        height: 100% !important;
+        right: 0 !important;
+      }
+
+      .hero-bg-img {
+        object-position: center top !important;
+        opacity: 0.98;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          transparent 0%, 
+          transparent 68%, 
+          rgba(14, 15, 18, 0.5) 80%, 
+          rgba(14, 15, 18, 0.92) 92%, 
+          #0E0F12 100%
+        ) !important;
+      }
+
+      .hero-container-align {
+        padding-top: 0 !important;
+        padding-bottom: 12px !important;
+        width: 100%;
+      }
+
+      .hero-text-block {
+        max-width: 360px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-script-tag {
+        font-size: 1.4rem;
+        margin-bottom: 2px;
+        justify-content: center;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+        line-height: 0.98;
+        margin-bottom: 8px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+      }
+
+      .hero-desc {
+        font-size: 0.82rem;
+        line-height: 1.45;
+        margin: 0 auto 16px;
+        max-width: 320px;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.95);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .btn-hero-primary, .btn-hero-secondary {
+        width: 100%;
+        max-width: 270px;
+        justify-content: center;
+        padding: 11px 20px;
+        font-size: 0.88rem;
+      }
+
+      .hero-social-proof {
+        justify-content: center;
+        font-size: 0.76rem;
+      }
+
+      .hero-floating-seal {
+        width: 95px;
+        height: 95px;
+        top: 85px;
+        bottom: auto;
+        right: 18px;
+      }
+
+      .hero-floating-seal .seal-top {
+        font-size: 0.82rem;
+      }
+
+      .hero-floating-seal .seal-bottom {
+        font-size: 0.46rem;
+      }
+
+      /* Barra de Pilares Móvil (Carrusel Horizontal Scroll Snap) */
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 14px;
+        padding: 0 16px;
+        margin: 0 -16px;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-card {
+        flex: 0 0 250px;
+        scroll-snap-align: start;
+        background: #1A1D22;
+      }
+
+      /* Menú en Móvil: 2 Columnas Balanceadas */
+      .menu-section {
+        padding: 60px 0;
+      }
+
+      .menu-header-bar {
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 24px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px;
+      }
+
+      .service-card-image-wrap {
+        height: 150px;
+      }
+
+      .service-card-body {
+        padding: 12px 10px 10px;
+      }
+
+      .service-card-title {
+        font-size: 1.15rem;
+        margin-bottom: 4px;
+      }
+
+      .service-card-desc {
+        display: none !important; /* Regla de despeje visual móvil */
+      }
+
+      .service-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-top: 8px;
+      }
+
+      .service-card-price {
+        font-size: 1.05rem;
+        width: 100%;
+      }
+
+      .btn-card-order-circle {
+        width: 100%;
+        height: 32px;
+        border-radius: var(--radius-sm);
+        font-size: 0.78rem;
+        font-weight: 700;
+        gap: 5px;
+      }
+
+      .btn-card-order-circle::after {
+        content: ' PEDIR';
+        font-family: var(--font-body);
+      }
+
+      /* Sección Split Móvil: Apilada */
+      .split-promo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .split-left-combo {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .split-left-content {
+        max-width: 100%;
+      }
+
+      .combo-price-tag {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .split-right-about {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .about-desc {
+        margin: 0 auto 20px;
+      }
+
+      .btn-about-story {
+        align-self: center;
+      }
+
+      .about-seal-badge {
+        position: static;
+        margin: 20px auto 0;
+      }
+
+      /* Combos en Móvil: Carrusel Horizontal */
+      .combos-section {
+        padding: 60px 0;
+      }
+
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px;
+        padding: 6px 16px 20px;
+        margin: 0 -16px;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .team-card {
+        flex: 0 0 250px;
+        scroll-snap-align: start;
+      }
+
+      /* Ubicación Móvil: 1 Columna */
+      .location-section {
+        padding: 60px 0;
+      }
+
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 30px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 300px;
+        height: 300px;
+      }
+
+      /* Footer Móvil */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .footer-brand p {
+        margin: 0 auto;
+      }
+
+      .footer-social-wrap {
+        justify-content: center;
+      }
+
+      .footer-order-box {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ======================================================== -->
+  <header class="header-sticky-wrapper" id="smartHeader">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo Tipográfico Puro -->
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio de Las Hamburguesas del Pueblo">
+          <div class="brand-title">
+            BURGER <span>PUEBLO</span>
+          </div>
+          <div class="brand-subtitle">
+            SABOR ARTESANAL · APARTADÓ
+          </div>
+        </a>
+
+        <!-- Enlaces Desktop -->
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#combos" class="nav-link">Especialidades</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        </ul>
+
+        <!-- Botón CTA Desktop -->
+        <a href="https://wa.me/573206912456?text=Hola%20Las%20Hamburguesas%20del%20Pueblo,%20deseo%20hacer%20un%20pedido%20a%20domicilio." class="btn-header-cta" target="_blank" rel="noopener">
+          <i class="fa-solid fa-calendar-check"></i> PEDIR ONLINE
+        </a>
+
+        <!-- Botón Menú Hamburguesa Móvil -->
+        <button class="btn-mobile-menu" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       DRAWER DE NAVEGACIÓN MÓVIL
+       ======================================================== -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menú de navegación móvil">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        BURGER <span>PUEBLO</span>
+      </div>
+      <button class="btn-drawer-close" id="drawerCloseBtn" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#inicio" class="drawer-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+      <li><a href="#menu" class="drawer-link"><i class="fa-solid fa-burger"></i> Nuestro Menú</a></li>
+      <li><a href="#nosotros" class="drawer-link"><i class="fa-solid fa-medal"></i> Sobre Nosotros</a></li>
+      <li><a href="#combos" class="drawer-link"><i class="fa-solid fa-fire"></i> Especialidades</a></li>
+      <li><a href="#ubicacion" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Ubicación</a></li>
+    </ul>
+    <div class="drawer-footer-cta">
+      <a href="https://wa.me/573206912456?text=Hola%20Las%20Hamburguesas%20del%20Pueblo,%20deseo%20hacer%20un%20pedido%20a%20domicilio." class="btn-drawer-order" target="_blank" rel="noopener">
+        <i class="fa-solid fa-bag-shopping"></i> PEDIR A DOMICILIO
+      </a>
+      <div class="drawer-contact-info">
+        <p><i class="fa-solid fa-phone"></i> (+57) 320 691 2456</p>
+        <p><i class="fa-solid fa-location-dot"></i> Apartadó, Antioquia</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       SECCIÓN 1: #INICIO (HERO FULL-WIDTH BLEED - FULL ALTO Y FULL ANCHO)
+       ======================================================== -->
+  <section class="hero-fullwidth-section" id="inicio">
+    <!-- Capa Posterior Inmersiva Edge-to-Edge (Desktop 16:9 + Móvil 9:16) -->
+    <div class="hero-bg-cover">
+      <picture class="hero-bg-picture">
+        <source media="(max-width: 768px)" srcset="hero_burger_mobile.webp" width="768" height="1376">
+        <img src="hero_burger.webp" alt="Hamburguesa artesanal jugosa con queso cheddar derretido, tocineta y papas rústicas en Las Hamburguesas del Pueblo Apartadó" class="hero-bg-img" loading="eager" width="1376" height="768">
+      </picture>
+    </div>
+
+    <!-- Doble Degradado Aterciopelado (Curva Eased 90deg + 180deg) -->
+    <div class="hero-bg-overlay"></div>
+
+
+    <!-- Contenedor Alineado Abajo (align-items: flex-end) -->
+    <div class="hero-container-align">
+      <div class="container">
+        <div class="hero-text-block">
+          <div class="hero-script-tag">
+            Sabor de Pueblo. Hechas con Pasión. ⚡
+          </div>
+          <h1 class="hero-title">
+            HAMBURGUESAS<br>
+            HECHAS <span class="text-accent">A LO GRANDE</span>
+          </h1>
+          <p class="hero-desc">
+            100% carne de res fresca seleccionada, pan brioche horneado diario, tocineta crujiente, vegetales frescos y salsas secretas que conquistan tu apetito en Apartadó.
+          </p>
+          <div class="hero-actions">
+            <a href="https://wa.me/573206912456?text=Hola%20Las%20Hamburguesas%20del%20Pueblo,%20deseo%20pedir%20a%20domicilio%20por%20favor." class="btn-hero-primary" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> PEDIR A DOMICILIO
+            </a>
+            <a href="#menu" class="btn-hero-secondary">
+              VER NUESTRA CARTA <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-social-proof">
+            <div class="stars">★★★★★</div>
+            <div><strong>4.8</strong> (Más de 500+ clientes felices en Urabá)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 2: BARRA DE PILARES / GARANTÍAS DE SABOR
+       ======================================================== */
+       -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <!-- Pilar 1 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <i class="fa-solid fa-burger"></i>
+          </div>
+          <div class="pillar-text">
+            <h4>CALIDAD PRÉMIUM</h4>
+            <p>100% carne fresca de res, sin rellenos ni conservantes.</p>
+          </div>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <i class="fa-solid fa-bowl-food"></i>
+          </div>
+          <div class="pillar-text">
+            <h4>PAPAS RÚSTICAS</h4>
+            <p>Crujientes, doradas y sazonadas con especias de la casa.</p>
+          </div>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <i class="fa-solid fa-wine-glass"></i>
+          </div>
+          <div class="pillar-text">
+            <h4>MALTEADAS & SODAS</h4>
+            <p>Espesas, cremosas y sodas frutales bien heladas.</p>
+          </div>
+        </div>
+
+        <!-- Pilar 4 -->
+        <div class="pillar-card">
+          <div class="pillar-icon-box">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div class="pillar-text">
+            <h4>INGREDIENTES DEL DÍA</h4>
+            <p>Pan brioche recién horneado y vegetales de cosecha fresca.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 3: #SERVICIOS (CATÁLOGO DE MENÚ - LOS FAVORITOS)
+       ======================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <!-- Encabezado con Botón a la Derecha -->
+      <div class="menu-header-bar">
+        <div class="menu-heading-block">
+          <div class="section-script">Nuestra Carta</div>
+          <h2 class="section-title">LOS FAVORITOS DEL PUEBLO</h2>
+        </div>
+        <a href="https://wa.me/573206912456?text=Hola,%20deseo%20ver%20la%20carta%20completa%20en%20PDF%20o%20hacer%20un%20pedido." class="btn-view-all-menu" target="_blank" rel="noopener">
+          VER CARTA COMPLETA <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Buscador estilo Pill en Tiempo Real -->
+      <div class="menu-search-wrapper">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menuSearchInput" placeholder="Busca tu hamburguesa favorita (ej. Clásica, BBQ, Pollo, Smash)..." aria-label="Buscar hamburguesa">
+        </div>
+      </div>
+
+      <!-- Barra de Categorías Horizontal con Regla Anti-Corte -->
+      <div class="menu-categories-wrapper">
+        <div class="menu-categories-scroll">
+          <button class="category-btn active" data-category="todos">
+            <i class="fa-solid fa-utensils"></i> Todos
+          </button>
+          <button class="category-btn" data-category="hamburguesas">
+            <i class="fa-solid fa-burger"></i> Hamburguesas
+          </button>
+          <button class="category-btn" data-category="pollo">
+            <i class="fa-solid fa-drumstick-bite"></i> Pollo Crispy
+          </button>
+          <button class="category-btn" data-category="combos">
+            <i class="fa-solid fa-box-open"></i> Combos
+          </button>
+          <button class="category-btn" data-category="bebidas">
+            <i class="fa-solid fa-wine-glass"></i> Bebidas
+          </button>
+        </div>
+      </div>
+
+      <!-- Grid de Menú: 3 Columnas Desktop / 2 Columnas Móvil -->
+      <div class="services-grid" id="servicesGrid">
+        
+        <!-- Tarjeta 1: La Clásica -->
+        <article class="service-card" data-category="hamburguesas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Hamburguesa La Clásica del Pueblo con queso cheddar y vegetales" class="service-card-img" loading="lazy">
+            <span class="service-badge">FAVORITA</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">LA CLÁSICA DEL PUEBLO</h3>
+            <p class="service-card-desc">150g de carne de res fresca a la plancha, queso cheddar americano fundido, lechuga fresca, tomate, cebolla caramelizada y salsa tártara de la casa.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$18.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20la%20hamburguesa%20La%20Cl%C3%A1sica%20del%20Pueblo%20por%20$18.000" class="btn-card-order-circle" aria-label="Pedir La Clásica del Pueblo" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: BBQ Bacon -->
+        <article class="service-card" data-category="hamburguesas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=800&q=80" alt="Hamburguesa BBQ Bacon Burger con tocineta crujiente y aros de cebolla" class="service-card-img" loading="lazy">
+            <span class="service-badge">TOP SELLER</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">BBQ BACON BURGER</h3>
+            <p class="service-card-desc">Carne de res prémium 180g, abundante tocineta crujiente, queso cheddar madurado, aros de cebolla crocantes y reducción de salsa BBQ artesanal.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$24.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20la%20hamburguesa%20BBQ%20Bacon%20Burger%20por%20$24.000" class="btn-card-order-circle" aria-label="Pedir BBQ Bacon Burger" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3: Criolla Campesina -->
+        <article class="service-card" data-category="hamburguesas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=800&q=80" alt="Hamburguesa La Criolla Campesina con plátano maduro y queso costeño" class="service-card-img" loading="lazy">
+            <span class="service-badge">TRADICIÓN</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">LA CRIOLLA CAMPESINA</h3>
+            <p class="service-card-desc">Carne de res 160g, huevo criollo frito, plátano maduro caramelizado, queso costeño asado a la plancha y ripio de papa crocante.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$22.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20la%20hamburguesa%20La%20Criolla%20Campesina%20por%20$22.000" class="btn-card-order-circle" aria-label="Pedir La Criolla Campesina" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 4: Pollo Crispy Crunch -->
+        <article class="service-card" data-category="pollo">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=800&q=80" alt="Hamburguesa de Pollo Crispy Crunch apanada" class="service-card-img" loading="lazy">
+            <span class="service-badge">CRISPY</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">POLLO CRISPY CRUNCH</h3>
+            <p class="service-card-desc">Suprema de pechuga apanada extra crocante, ensalada coleslaw fresca, pepinillos dulces encurtidos y mayonesa de ajo asado en pan brioche.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$20.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20la%20hamburguesa%20Pollo%20Crispy%20Crunch%20por%20$20.000" class="btn-card-order-circle" aria-label="Pedir Pollo Crispy Crunch" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 5: Doble Smash -->
+        <article class="service-card" data-category="hamburguesas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=800&q=80" alt="Doble Smash Burger con cuádruple queso cheddar" class="service-card-img" loading="lazy">
+            <span class="service-badge">SMASH</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">DOBLE SMASH DEL PUEBLO</h3>
+            <p class="service-card-desc">Dos medallones de res de 90g con costra caramelizada en hierro fundido, cuatro lonchas de queso cheddar derretido, cebolla picada y salsa especial.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$26.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20la%20Doble%20Smash%20del%20Pueblo%20por%20$26.000" class="btn-card-order-circle" aria-label="Pedir Doble Smash del Pueblo" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta 6: La Monstruosa 300g -->
+        <article class="service-card" data-category="hamburguesas">
+          <div class="service-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=800&q=80" alt="Hamburguesa La Monstruosa 300g triple carne" class="service-card-img" loading="lazy">
+            <span class="service-badge">300 GRAMOS</span>
+          </div>
+          <div class="service-card-body">
+            <h3 class="service-card-title">LA MONSTRUOSA 300G</h3>
+            <p class="service-card-desc">Triple carne de res de 100g, doble tocineta ahumada, queso mozzarella fundido, jamón de pierna, huevo frito, guacamole rústico y pan brioche.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$32.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20La%20Monstruosa%20300g%20por%20$32.000" class="btn-card-order-circle" aria-label="Pedir La Monstruosa 300g" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Botón Minimalista al Pie -->
+      <div class="menu-footer-cta">
+        <a href="https://wa.me/573206912456?text=Hola%20Las%20Hamburguesas%20del%20Pueblo,%20deseo%20ver%20la%20carta%20completa%20y%20hacer%20un%20pedido." class="btn-full-catalog" target="_blank" rel="noopener">
+          🍽️ VER CARTA COMPLETA (12 PLATOS)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 4: #NOSOTROS (SPLIT PROMO BANNER DE LA REFERENCIA)
+       ======================================================== -->
+  <section class="split-promo-section" id="nosotros">
+    <div class="split-promo-grid">
+      <!-- Lado Izquierdo: Hazlo Combo! -->
+      <div class="split-left-combo">
+        <div class="split-left-content">
+          <div class="combo-script">¡Hazlo un</div>
+          <h2 class="combo-title">COMBO!</h2>
+          <p class="combo-desc">Agrega papas rústicas crujientes + gaseosa fría de 400ml por solo:</p>
+          <div class="combo-price-tag">
+            +$6.000 <small>adicional</small>
+          </div>
+        </div>
+        <div class="split-left-img">
+          <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=700&q=80" alt="Combo hamburguesa con papas fritas rústicas y gaseosa fría" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Lado Derecho: Sobre Nosotros (Gold Banner) -->
+      <div class="split-right-about">
+        <!-- Sello con espátulas cruzadas -->
+        <div class="about-seal-badge">
+          <i class="fa-solid fa-utensils"></i>
+          <span>INGREDIENTES REALES · HAMBURGUESAS DE VERDAD</span>
+        </div>
+
+        <div class="about-script">Sobre Nosotros</div>
+        <h2 class="about-title">HAMBURGUESAS CON AUTÉNTICA PASIÓN</h2>
+        <p class="about-desc">
+          Nacimos en Apartadó con una idea simple y honesta: crear las hamburguesas más jugosas y sabrosas usando ingredientes reales y recetas caseras preparadas con orgullo. Cada hamburguesa que servimos se cocina fresca en el momento porque te mereces una experiencia gastronómica inolvidable.
+        </p>
+        <a href="#ubicacion" class="btn-about-story">
+          NUESTRA SEDE <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN ESPECIALIDADES / COMBOS DE LA CASA (#COMBOS)
+       ======================================================== -->
+  <section class="combos-section" id="combos">
+    <div class="container">
+      <div class="combos-header">
+        <div class="section-script">Para Compartir</div>
+        <h2 class="section-title">COMBOS Y ESPECIALIDADES DEL PUEBLO</h2>
+      </div>
+
+      <div class="team-grid">
+        <!-- Combo 1 -->
+        <div class="team-card">
+          <div class="team-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1610057099443-fde8c4d50f91?auto=format&fit=crop&w=800&q=80" alt="Combo Pareja del Pueblo con dos hamburguesas y papas rústicas" class="team-card-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">COMBO PAREJA</h3>
+            <div class="team-role">2 Burgers + Papas + 2 Bebidas</div>
+            <p class="team-desc">2 Hamburguesas Clásicas de 150g, canasta gigante de papas rústicas y 2 gaseosas 400ml heladas.</p>
+            <div class="team-card-footer">
+              <div class="team-price">$44.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20el%20Combo%20Pareja%20por%20$44.000" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                PEDIR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="team-card">
+          <div class="team-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Combo Familiar 4x4 con cuatro hamburguesas" class="team-card-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">COMBO FAMILIAR 4X4</h3>
+            <div class="team-role">4 Burgers + 2 Papas + Gaseosa 1.5L</div>
+            <p class="team-desc">Para toda la familia: 4 Hamburguesas del Pueblo a elección, doble porción de papas y gaseosa familiar 1.5L.</p>
+            <div class="team-card-footer">
+              <div class="team-price">$78.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20el%20Combo%20Familiar%204x4%20por%20$78.000" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                PEDIR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="team-card">
+          <div class="team-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Gran Picada del Pueblo con costilla BBQ y trozos de carne" class="team-card-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">GRAN PICADA DEL PUEBLO</h3>
+            <div class="team-role">Costilla + Burger + Salchicha + Papas</div>
+            <p class="team-desc">Trocitos de hamburguesa a la plancha, costilla BBQ desmechada, papas rústicas, aros de cebolla y queso frito.</p>
+            <div class="team-card-footer">
+              <div class="team-price">$38.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20la%20Gran%20Picada%20del%20Pueblo%20por%20$38.000" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                PEDIR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Combo 4 -->
+        <div class="team-card">
+          <div class="team-card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=80" alt="Combo Smash y Malteada Artesanal cremosa" class="team-card-img" loading="lazy">
+          </div>
+          <div class="team-card-body">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">SMASH & SHAKE</h3>
+            <div class="team-role">Doble Smash + Papas + Malteada</div>
+            <p class="team-desc">Doble Smash con cheddar fundido, papas crujientes y malteada cremosa de chocolate, vainilla o fresa.</p>
+            <div class="team-card-footer">
+              <div class="team-price">$34.000</div>
+              <a href="https://wa.me/573206912456?text=Hola,%20deseo%20pedir%20el%20Combo%20Smash%20y%20Shake%20por%20$34.000" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                PEDIR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 5: #UBICACION (MAPA GEORREFERENCIADO & CONTACTO)
+       ======================================================== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="map-showcase-card">
+        <!-- Panel Izquierdo: Información y Horarios -->
+        <div class="map-info-panel">
+          <div class="section-script">Encuéntranos</div>
+          <h2 class="section-title">VISÍTANOS O PIDE A TU CASA</h2>
+          
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-text">
+                <strong>Dirección Física</strong>
+                <p>Cra. 100 #98-45 (Zona Comercial), Apartadó, Antioquia</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-text">
+                <strong>Línea de Pedidos & WhatsApp</strong>
+                <p>(+57) 320 691 2456 / Domicilios en todo Apartadó</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="info-text">
+                <strong>Horario de Atención</strong>
+                <p>Martes a Domingo: 5:00 PM – 11:30 PM (Lunes descanso)</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="map-actions">
+            <a href="https://wa.me/573206912456?text=Hola%20Las%20Hamburguesas%20del%20Pueblo,%20deseo%20solicitar%20un%20domicilio%20por%20favor." class="btn-map-action primary" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> PEDIR POR WHATSAPP
+            </a>
+            <a href="https://www.google.com/maps/place/Las+hamburguesas+del+pueblo/@7.8817338,-76.633698,16z" class="btn-map-action outline" target="_blank" rel="noopener">
+              <i class="fa-solid fa-diamond-turn-right"></i> CÓMO LLEGAR
+            </a>
+          </div>
+        </div>
+
+        <!-- Panel Derecho: Google Maps Georreferenciado Oficial -->
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Las+hamburguesas+del+pueblo,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            title="Ubicación de Las Hamburguesas del Pueblo en Google Maps Apartadó"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 6: FOOTER PRINCIPAL
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna Marca -->
+        <div class="footer-brand">
+          <div class="brand-title">
+            BURGER <span>PUEBLO</span>
+          </div>
+          <div class="brand-subtitle">
+            SABOR ARTESANAL · APARTADÓ
+          </div>
+          <p>
+            Hamburguesas artesanales de alta calidad con carne 100% de res seleccionada, pan brioche recién horneado y servicio de domicilio rápido en Urabá.
+          </p>
+        </div>
+
+        <!-- Columna Enlaces Rápidos -->
+        <div class="footer-col">
+          <h5>ENLACES RÁPIDOS</h5>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Nuestra Carta</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#combos">Combos Familiares</a></li>
+            <li><a href="#ubicacion">Sede & Domicilios</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Horarios -->
+        <div class="footer-col">
+          <h5>HORARIOS</h5>
+          <ul class="footer-hours-list">
+            <li>Martes a Jueves: <span>5:00 PM – 11:00 PM</span></li>
+            <li>Viernes y Sábados: <span>5:00 PM – 11:30 PM</span></li>
+            <li>Domingos: <span>5:00 PM – 11:00 PM</span></li>
+            <li>Lunes: <span>Cerrado (Descanso)</span></li>
+          </ul>
+        </div>
+
+        <!-- Columna Redes & Pedido Rápido -->
+        <div class="footer-col">
+          <h5>SÍGUENOS</h5>
+          <div class="footer-social-wrap">
+            <a href="https://facebook.com" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+
+          <a href="https://wa.me/573206912456?text=Hola,%20deseo%20hacer%20un%20pedido%20a%20domicilio%20desde%20la%20web." class="footer-order-box" target="_blank" rel="noopener">
+            <div class="footer-order-text">
+              <small>LÍNEA DIRECTA DE PEDIDOS</small>
+              <strong>(+57) 320 691 2456</strong>
+            </div>
+            <span class="btn-footer-reserve">Pedir</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Las Hamburguesas del Pueblo. Todos los derechos reservados. Apartadó, Antioquia, Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       BOTÓN FLOTANTE WHATSAPP (ANTI-CORTE MÓVIL)
+       ======================================================== -->
+  <a href="https://wa.me/573206912456?text=Hola%20Las%20Hamburguesas%20del%20Pueblo,%20deseo%20hacer%20un%20pedido%20a%20domicilio." 
+     class="whatsapp-float" 
+     aria-label="Contactar por WhatsApp a Las Hamburguesas del Pueblo"
+     target="_blank" 
+     rel="noopener">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ========================================================
+       SCRIPTS INTERACTIVOS (FILTRADO REACTIVO & HEADER INTELIGENTE)
+       ======================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Smart Header Auto-hide on Scroll
+      const header = document.getElementById('smartHeader');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        
+        // Agregar fondo blur solo al hacer scroll
+        if (currentScrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+
+        // Auto-hide al bajar y reaparición al subir
+        if (currentScrollY <= 80) {
+          header.classList.remove('header-hidden');
+        } else if (currentScrollY > lastScrollY && currentScrollY > 180) {
+          header.classList.add('header-hidden');
+        } else if (currentScrollY < lastScrollY) {
+          header.classList.remove('header-hidden');
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // 2. Buscador Reactivo y Filtrado por Categorías
+      const searchInput = document.getElementById('menuSearchInput');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const serviceCards = document.querySelectorAll('.service-card');
+
+      let activeCategory = 'todos';
+
+      function filterMenu() {
+        const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        serviceCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category') || 'todos';
+          const titleText = card.querySelector('.service-card-title')?.textContent.toLowerCase() || '';
+          const descText = card.querySelector('.service-card-desc')?.textContent.toLowerCase() || '';
+
+          const matchesCategory = (activeCategory === 'todos' || cardCategory === activeCategory);
+          const matchesSearch = query === '' || titleText.includes(query) || descText.includes(query);
+
+          if (matchesCategory && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterMenu);
+      }
+
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-category') || 'todos';
+
+          // Auto-centrado de pestaña activa
+          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+          filterMenu();
+        });
+      });
+
+      // 3. Menú Móvil Lateral (Slide Drawer)
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+      const drawerLinks = document.querySelectorAll('.drawer-link');
+
+      function openDrawer() {
+        if (mobileDrawer) mobileDrawer.classList.add('active');
+        if (mobileDrawerOverlay) mobileDrawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        if (mobileDrawer) mobileDrawer.classList.remove('active');
+        if (mobileDrawerOverlay) mobileDrawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', openDrawer);
+      if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+      if (mobileDrawerOverlay) mobileDrawerOverlay.addEventListener('click', closeDrawer);
+
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          closeDrawer();
+          drawerLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

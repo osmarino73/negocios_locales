@@ -1,0 +1,135 @@
+{
+  "id": "lead-1790949814802-1",
+  "status": "nuevo",
+  "negocio": {
+    "nombre": "Restaurante El Parque - Cocina criolla",
+    "nombre_corto": "El Parque",
+    "rubro": "Restaurante",
+    "categoria": "restaurante",
+    "eslogan": "Restaurante El Parque — Auténtica Cocina Criolla & Parrilla en Apartadó",
+    "calificacion": "4.4",
+    "resenas": "36",
+    "contacto": {
+      "telefono_principal": "(+57) 310 822 3276",
+      "whatsapp": {
+        "numero": "+573108223276",
+        "link": "https://wa.me/573108223276?text=Hola%20Restaurante%20El%20Parque%20-%20Cocina%20criolla%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20hacer%20un%20pedido."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 95 #95-59, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Restaurante+El+Parque+-+Cocina+criolla/@7.8792589,-76.6389196,16z/data=!4m11!1m3!2m2!1srestaurantes+en+Apartad%C3%B3,+Antioquia!6e5!3m6!1s0x8e500d709e2089b5:0xa3ebd93eae56d765!8m2!3d7.8792589!4d-76.6299074!15sCiRyZXN0YXVyYW50ZXMgZW4gQXBhcnRhZMOzLCBBbnRpb3F1aWFaJSIjcmVzdGF1cmFudGVzIGVuIGFwYXJ0YWTDsyBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU01TlU0M1EwTm5FQUXgAQD6AQQIABAk!16s%2Fg%2F11gf8gnbgx",
+      "coordenadas": {
+        "lat": "7.8792589",
+        "lng": "-76.6299074"
+      }
+    },
+    "horario_atencion": "Lunes a Domingo: 11:30 AM – 10:30 PM",
+    "sitio_web": "https://es.restaurantguru.com/Restaurante-El-Parque-Apartado",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sitio web analizado."
+    },
+    "servicios": [
+      {
+        "id": "srv-1",
+        "nombre": "Bandeja Criolla El Parque",
+        "categoria": "criolla",
+        "descripcion": "Carne asada al carbón, chicharrón crocante, huevo frito, arroz blanco, frijoles caseros, tajadas de plátano maduro, arepa y aguacate.",
+        "precio": 32000,
+        "precio_formateado": "$32.000",
+        "badge": "MÁS PEDIDO",
+        "imagen": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-2",
+        "nombre": "Punta de Anca al Carbón (350g)",
+        "categoria": "parrilla",
+        "descripcion": "Corte jugoso asado a las brasas en su punto, acompañado de papa criolla al vapor, ensalada fresca de la casa y chimichurri criollo.",
+        "precio": 36000,
+        "precio_formateado": "$36.000",
+        "badge": "CORTE PREMIUM",
+        "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-3",
+        "nombre": "Pargo Rojo Frito con Patacón",
+        "categoria": "pescados",
+        "descripcion": "Pargo entero dorado y crujiente servido con patacones pisados con hogao, arroz con coco y ensalada de aguacate.",
+        "precio": 38000,
+        "precio_formateado": "$38.000",
+        "badge": "ESPECIALIDAD",
+        "imagen": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-4",
+        "nombre": "Sancocho de Gallina Criolla",
+        "categoria": "sopas",
+        "descripcion": "Caldo sustancioso cocido a fuego lento con yuca, plátano, mazorca y verduras de la huerta, acompañado de arroz y presa dorada.",
+        "precio": 26000,
+        "precio_formateado": "$26.000",
+        "badge": "TRADICIONAL",
+        "imagen": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-5",
+        "nombre": "Costillas Ahumadas a la Brasa",
+        "categoria": "parrilla",
+        "descripcion": "Costillar de cerdo tierno marinado en especias criollas, sellado al carbón con salsa BBQ artesanal de panela y papas rústicas.",
+        "precio": 34000,
+        "precio_formateado": "$34.000",
+        "badge": "RECOMENDADO",
+        "imagen": "https://images.unsplash.com/photo-1558030006-450675393462?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-6",
+        "nombre": "Cazuela de Mariscos Caribeña",
+        "categoria": "pescados",
+        "descripcion": "Mixtura selecta de camarones, calamares y pescado en reducción cremosa de leche de coco, servida bien caliente con patacones.",
+        "precio": 39000,
+        "precio_formateado": "$39.000",
+        "badge": "FAVORITO",
+        "imagen": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-7",
+        "nombre": "Jugo Natural de Maracuyá",
+        "categoria": "bebidas",
+        "descripcion": "Preparado con fruta 100% natural de Urabá, espeso, espumoso y bien helado para acompañar tus mejores platos.",
+        "precio": 8000,
+        "precio_formateado": "$8.000",
+        "badge": "REFRESCANTE",
+        "imagen": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "srv-8",
+        "nombre": "Postre Tres Leches Casero",
+        "categoria": "postres",
+        "descripcion": "Bizcochuelo húmedo bañado en infusión de tres leches, coronado con merengue flameado y canela espolvoreada.",
+        "precio": 10000,
+        "precio_formateado": "$10.000",
+        "badge": "DULCE CASERO",
+        "imagen": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": "esp-1",
+        "nombre": "Chef Maestro Parrillero",
+        "rol": "Especialista en Cortes & Asados al Carbón",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "esp-2",
+        "nombre": "Maestra de Sazón Criolla",
+        "rol": "Especialista en Tradición & Sancochos",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&auto=format&fit=crop&q=80"
+      }
+    ]
+  }
+}

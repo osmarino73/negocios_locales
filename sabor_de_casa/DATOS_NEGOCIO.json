@@ -1,0 +1,35 @@
+{
+  "id": "lead-1789828957811-2",
+  "status": "nuevo",
+  "notes": "Restaurante gourmet y cocina criolla en Apartadó con sazón artesanal y entrega a domicilio VIP.",
+  "negocio": {
+    "nombre": "Sabor de Casa",
+    "rubro": "Restaurante",
+    "categoria": "Cocina Criolla & Gourmet",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 314 789 4561",
+      "telefono": "(+57) 314 789 4561",
+      "whatsapp": {
+        "numero": "(+57) 314 789 4561",
+        "link": "https://wa.me/573147894561?text=Hola%20Sabor%20de%20Casa%2C%20quisiera%20solicitar%20el%20men%C3%BA%20y%20hacer%20un%20pedido."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 95 #95-59",
+      "ciudad": "Apartadó",
+      "departamento": "Antioquia",
+      "pais": "Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Sabor+de+casa/@7.8814168,-76.6402053,15z/data=!4m11!1m3!2m2!1scomida+a+domicilio+en+apartado!6e5!3m6!1s0x8e500de11d08fef1:0xe747673cfcff8e64!8m2!3d7.8769892!4d-76.6311542"
+    },
+    "horarios": {
+      "lunes_a_viernes": "11:00 AM - 9:00 PM",
+      "sabados_y_domingos": "11:00 AM - 10:00 PM"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "oportunidad_saas": "ALTA (Lead Calificado)"
+    }
+  }
+}

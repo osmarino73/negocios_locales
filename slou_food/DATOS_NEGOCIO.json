@@ -1,0 +1,156 @@
+{
+  "id": "lead-1790887903140-1",
+  "status": "activo",
+  "negocio": {
+    "nombre": "Slou Food",
+    "nombre_comercial": "Slou Food | Fast & Fresh Gourmet",
+    "rubro": "Restaurante",
+    "categoria": "restaurante",
+    "subcategorias": [
+      "Hamburguesas Artesanales",
+      "Pizzas Masa Madre",
+      "Alitas Buffalo & Pollo Crispy",
+      "Papas Trufadas & Entradas"
+    ],
+    "eslogan": "Sabor Extraordinario, Rápido y Fresco en Apartadó",
+    "descripcion_corta": "Hamburguesas gourmet smash, pizzas al horno, alitas crocantes y papas trufadas preparadas al instante con ingredientes 100% frescos en Diagonal 100, Apartadó.",
+    "calificacion": "4.7",
+    "resenas_count": "184",
+    "ticket_promedio": "$22.000 - $35.000",
+    "contacto": {
+      "telefono_principal": "(+57) 324 490 7848",
+      "whatsapp": {
+        "numero": "+573244907848",
+        "link": "https://wa.me/573244907848?text=Hola%20Slou%20Food,%20deseo%20hacer%20un%20pedido%20a%20domicilio%20por%20favor."
+      },
+      "email": "pedidos@sloufood.com"
+    },
+    "ubicacion": {
+      "direccion": "Diagonal 100 Nro 105e-62",
+      "barrio_referencia": "Sector Diagonal 100",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "codigo_postal": "057840",
+      "coordenadas": {
+        "lat": 7.8865882,
+        "lng": -76.6361399
+      },
+      "google_maps_url": "https://www.google.com/maps/place/Slou+Food/@7.8857024,-76.6448172,16z/data=!4m10!1m2!2m1!1shamburguesas+en+apartado!3m6!1s0x8e500d1f42bacac5:0xf7a7da524510c9f2!8m2!3d7.8865882!4d-76.6361399!15sChhoYW1idXJndWVzYXMgZW4gYXBhcnRhZG9aGiIYaGFtYnVyZ3Vlc2FzIGVuIGFwYXJ0YWRvkgEKcmVzdGF1cmFudJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSMWNVbDFXVmRCRUFF4AEA-gEFCIABED0!16s%2Fg%2F11pvwh_qk7",
+      "google_maps_embed": "https://maps.google.com/maps?q=Slou+Food,+Diagonal+100+Nro+105e-62,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_jueves": "12:00 PM - 10:30 PM",
+      "viernes_a_domingo": "12:00 PM - 11:30 PM",
+      "dias_festivos": "12:00 PM - 11:30 PM"
+    },
+    "sitio_web_original": "https://slou.amauzgroup.com/",
+    "servicios": [
+      {
+        "id": "prod-1",
+        "nombre": "The Truffle Beef Burger",
+        "categoria": "burgers",
+        "precio": "$24.000",
+        "precio_numero": 24000,
+        "descripcion": "Doble carne Angus madurada a la plancha, queso cheddar fundido, cebollas caramelizadas, rúcula y alioli de trufa en pan brioche.",
+        "badge": "BESTSELLER",
+        "tiempo_preparacion": "15-20 min"
+      },
+      {
+        "id": "prod-2",
+        "nombre": "Mediterranean Veggie Pizza",
+        "categoria": "pizza",
+        "precio": "$28.000",
+        "precio_numero": 28000,
+        "descripcion": "Masa madre crujiente, pomodoro artesanal, aceitunas negras, tomates secos, queso mozzarella premium y hierbas italianas.",
+        "badge": "CHEF CHOICE",
+        "tiempo_preparacion": "18-22 min"
+      },
+      {
+        "id": "prod-3",
+        "nombre": "Spicy Buffalo Wings (8 pcs)",
+        "categoria": "chicken",
+        "precio": "$22.000",
+        "precio_numero": 22000,
+        "descripcion": "Alitas de pollo extra crocantes bañadas en salsa buffalo picante casera, con bastones de apio y salsa ranch.",
+        "badge": "POPULAR",
+        "tiempo_preparacion": "15 min"
+      },
+      {
+        "id": "prod-4",
+        "nombre": "Parmesan Truffle Fries",
+        "categoria": "fries",
+        "precio": "$14.000",
+        "precio_numero": 14000,
+        "descripcion": "Papas rústicas doradas con aceite de trufa blanca, lluvia de queso parmesano curado y romero fresco.",
+        "badge": "FAVORITO",
+        "tiempo_preparacion": "10-12 min"
+      },
+      {
+        "id": "prod-5",
+        "nombre": "Crispy Golden Chicken Burger",
+        "categoria": "burgers",
+        "precio": "$22.000",
+        "precio_numero": 22000,
+        "descripcion": "Pechuga marinada ultra crujiente, queso suizo fundido, ensalada coleslaw fresca y mayo especiada.",
+        "badge": "CRISPY",
+        "tiempo_preparacion": "15-18 min"
+      },
+      {
+        "id": "prod-6",
+        "nombre": "Pepperoni Artisan Pizza",
+        "categoria": "pizza",
+        "precio": "$29.000",
+        "precio_numero": 29000,
+        "descripcion": "Doble pepperoni madurado, queso mozzarella hilado y reducción balsámica de albahaca fresca.",
+        "badge": "CLÁSICA",
+        "tiempo_preparacion": "18-20 min"
+      },
+      {
+        "id": "prod-7",
+        "nombre": "Chicken Strips & Honey Mustard",
+        "categoria": "chicken",
+        "precio": "$18.000",
+        "precio_numero": 18000,
+        "descripcion": "6 tiras de pechuga marinadas en suero de mantequilla con dip de mostaza miel y papas fritas.",
+        "badge": "CRUNCHY",
+        "tiempo_preparacion": "12-15 min"
+      },
+      {
+        "id": "prod-8",
+        "nombre": "Craft Soda & Bebidas Heladas",
+        "categoria": "drinks",
+        "precio": "$7.000",
+        "precio_numero": 7000,
+        "descripcion": "Bebidas heladas de autor, sodas saborizadas de frutos rojos y botellas clásicas de cola bien frías.",
+        "badge": "REFRESHING",
+        "tiempo_preparacion": "5 min"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Carlos Morales",
+        "rol": "Master Grill & Smash Chef",
+        "experiencia": "9 años de experiencia",
+        "calificacion": "5.0 ★★★★★"
+      },
+      {
+        "nombre": "Laura Restrepo",
+        "rol": "Head Pizzaiola & Masa Madre",
+        "experiencia": "7 años de experiencia",
+        "calificacion": "5.0 ★★★★★"
+      },
+      {
+        "nombre": "Andrés Gómez",
+        "rol": "Especialista en Alitas & Frituras",
+        "experiencia": "6 años de experiencia",
+        "calificacion": "5.0 ★★★★★"
+      },
+      {
+        "nombre": "Valentina Ríos",
+        "rol": "Líder de Calidad & Despachos",
+        "experiencia": "5 años de experiencia",
+        "calificacion": "5.0 ★★★★★"
+      }
+    ]
+  }
+}

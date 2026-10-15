@@ -1,0 +1,155 @@
+{
+  "id": "lead-1791042192903-1",
+  "status": "nuevo",
+  "negocio": {
+    "nombre": "Restaurante La Ruana",
+    "rubro": "Restaurante",
+    "categoria": "Comida Criolla & Tradición Paisa",
+    "eslogan": "Restaurante La Ruana — Auténtica Sazón Criolla en Aranjuez, Medellín",
+    "calificacion": "4.6",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 300 123 4567",
+      "whatsapp": {
+        "numero": "+573001234567",
+        "link": "https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 68 #51C-43, Aranjuez, Medellín, Antioquia",
+      "ciudad": "Aranjuez, Medellín",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Restaurante+La+Ruana/@6.2679007,-75.6755149,12z/data=!4m10!1m2!2m1!1srestaurantes+en+Cartagena+%23+68-21,+Aranjuez,+Medell%C3%ADn,+Antioquia!3m6!1s0x8e44292b0573a207:0x7fb59c1c2990c085!8m2!3d6.2659651!4d-75.5647469!15sCkFyZXN0YXVyYW50ZXMgZW4gQ2FydGFnZW5hICMgNjgtMjEsIEFyYW5qdWV6LCBNZWRlbGzDrW4sIEFudGlvcXVpYVo-IjxyZXN0YXVyYW50ZXMgZW4gY2FydGFnZW5hIDY4IDIxIGFyYW5qdWV6IG1lZGVsbMOtbiBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxNFYwOUVUblZVUjFwWVdteFNTRmxXU25aamJXeElZakU1U2xOdFl4QULgAQD6AQQIABBF!16s%2Fg%2F11rvgstqrd",
+      "latitud": 6.2659651,
+      "longitud": -75.5647469
+    },
+    "horario_atencion": "Lunes a Domingo: 11:30 AM – 9:30 PM",
+    "sitio_web": "",
+    "tokens": {
+      "BUSINESS_NAME": "Restaurante La Ruana",
+      "PRIMARY_COLOR": "#F7A81B",
+      "HERO_BADGE": "🔥 TRADICIÓN PAISA · ARANJUEZ",
+      "HERO_SLOGAN": "AUTÉNTICA COCINA CRIOLLA & ASADOS AL CARBÓN",
+      "HERO_SUBTITLE": "Bandejas montañeras con chicharrón crujiente, cortes de carne jugosos a la brasa, sancochos en leña y cazuelas tradicionales en Aranjuez, Medellín.",
+      "STORY_TITLE": "HERENCIA PAISA Y SAZÓN HECHA CON AMOR",
+      "STORY_P1": "En Restaurante La Ruana rendimos homenaje a la cocina campesina antioqueña con ingredientes 100% frescos.",
+      "STORY_P2": "Cada plato se sirve generoso y recién preparado con el calor de hogar que caracteriza nuestra tradición.",
+      "STAT1_VALUE": "100%",
+      "STAT1_LABEL": "Sazón Criolla",
+      "STAT2_VALUE": "< 30 min",
+      "STAT2_LABEL": "Domicilios Aranjuez",
+      "STAT3_VALUE": "16+",
+      "STAT3_LABEL": "Años de Tradición",
+      "STAT4_VALUE": "4.6 ★",
+      "STAT4_LABEL": "Google Reviews",
+      "ADDRESS": "Cl. 68 #51C-43, Aranjuez",
+      "CITY": "Medellín",
+      "HORARIO": "Lunes a Domingo: 11:30 AM – 9:30 PM",
+      "WHATSAPP_LINK": "https://wa.me/573001234567?text=Hola%20Restaurante%20La%20Ruana%2C%20quisiera%20hacer%20un%20pedido%20a%20domicilio%20o%20reservar.",
+      "GOOGLE_MAPS_URL": "https://www.google.com/maps/place/Restaurante+La+Ruana/@6.2679007,-75.6755149,12z/data=!4m10!1m2!2m1!1srestaurantes+en+Cartagena+%23+68-21,+Aranjuez,+Medell%C3%ADn,+Antioquia!3m6!1s0x8e44292b0573a207:0x7fb59c1c2990c085!8m2!3d6.2659651!4d-75.5647469!15sCkFyZXN0YXVyYW50ZXMgZW4gQ2FydGFnZW5hICMgNjgtMjEsIEFyYW5qdWV6LCBNZWRlbGzDrW4sIEFudGlvcXVpYVo-IjxyZXN0YXVyYW50ZXMgZW4gY2FydGFnZW5hIDY4IDIxIGFyYW5qdWV6IG1lZGVsbMOtbiBhbnRpb3F1aWGSAQpyZXN0YXVyYW50mgFEQ2k5RFFVbFJRVU52WkVOb2RIbGpSamx2VDIxNFYwOUVUblZVUjFwWVdteFNTRmxXU25aamJXeElZakU1U2xOdFl4QULgAQD6AQQIABBF!16s%2Fg%2F11rvgstqrd",
+      "MAP_EMBED_URL": "https://maps.google.com/maps?q=Restaurante+La+Ruana,+Cl.+68+%2351C-43,+Aranjuez,+Medell%C3%ADn,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "SLUG": "restaurante-la-ruana"
+    },
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "canal_directo": "WhatsApp Pedidos & Domicilios",
+      "oportunidad_saas": "ALTA"
+    },
+    "categorias_menu": [
+      { "id": "todos", "nombre": "Criollos", "sub": "Bandejas & Tradición" },
+      { "id": "parrilla", "nombre": "Parrilla", "sub": "Cortes al Carbón" },
+      { "id": "pescados", "nombre": "Pescados", "sub": "Fresco del Caribe" },
+      { "id": "sopas", "nombre": "Sancochos", "sub": "Sabor Casero" },
+      { "id": "bebidas", "nombre": "Bebidas", "sub": "Jugos Naturales" },
+      { "id": "postres", "nombre": "Postres", "sub": "Dulce Casero" }
+    ],
+    "platos_principales": [
+      {
+        "id": "plato-1",
+        "categoria": "criolla",
+        "nombre": "Bandeja La Ruana Tradicional",
+        "descripcion": "Chicharrón crujiente de pierna, carne molida campesina, huevo frito, frijoles caseros, arroz, tajadas de maduro, arepa paisa y aguacate.",
+        "precio": 33000,
+        "precio_formateado": "$33.000",
+        "badge": "MÁS PEDIDO",
+        "foto_url": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-2",
+        "categoria": "parrilla",
+        "nombre": "Churrasco & Punta de Anca a la Brasa",
+        "descripcion": "Corte de res madurado asado al carbón de leña con papas rústicas, ensalada fresca de la huerta y chimichurri artesanal.",
+        "precio": 37000,
+        "precio_formateado": "$37.000",
+        "badge": "CORTE PREMIUM",
+        "foto_url": "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-3",
+        "categoria": "pescados",
+        "nombre": "Mojarra Dorada con Patacones",
+        "descripcion": "Mojarra entera frita crocante, servida con patacones pisados con hogao, arroz con coco y ensalada.",
+        "precio": 35000,
+        "precio_formateado": "$35.000",
+        "badge": "ESPECIALIDAD",
+        "foto_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-4",
+        "categoria": "sopas",
+        "nombre": "Sancocho de Gallina Criolla",
+        "descripcion": "Caldo campesino espeso con plátano, yuca, papa, mazorca y porción de gallina dorada con arroz y aguacate.",
+        "precio": 27000,
+        "precio_formateado": "$27.000",
+        "badge": "TRADICIONAL",
+        "foto_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-5",
+        "categoria": "parrilla",
+        "nombre": "Costillas BBQ Campesinas",
+        "descripcion": "Costillar de cerdo tierno ahumado a fuego lento con salsa BBQ de panela, papas al vapor y ensalada.",
+        "precio": 35000,
+        "precio_formateado": "$35.000",
+        "badge": "RECOMENDADO",
+        "foto_url": "https://images.unsplash.com/photo-1558030006-450675393462?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-6",
+        "categoria": "pescados",
+        "nombre": "Cazuela de Mariscos Tradicional",
+        "descripcion": "Camarones, calamares y filete de pescado en reducción cremosa de coco con patacón crocante.",
+        "precio": 39000,
+        "precio_formateado": "$39.000",
+        "badge": "FAVORITO",
+        "foto_url": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-7",
+        "categoria": "bebidas",
+        "nombre": "Jugos Naturales & Limonada",
+        "descripcion": "Limonada de coco, limonada de panela o jugos naturales en agua o leche de maracuyá, lulo, mango y guanábana.",
+        "precio": 8000,
+        "precio_formateado": "$8.000",
+        "badge": "REFRESCANTE",
+        "foto_url": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": "plato-8",
+        "categoria": "postres",
+        "nombre": "Postre Tres Leches Casero",
+        "descripcion": "Bizcocho húmedo bañado en infusión de tres leches con merengue dorado y canela.",
+        "precio": 9000,
+        "precio_formateado": "$9.000",
+        "badge": "DULCE CASERO",
+        "foto_url": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=80"
+      }
+    ],
+    "metricas_autoridad": [
+      { "cifra": "100%", "etiqueta": "Sazón Criolla" },
+      { "cifra": "16+", "etiqueta": "Años de Tradición" },
+      { "cifra": "< 30 min", "etiqueta": "Domicilios Aranjuez" },
+      { "cifra": "4.6 ★", "etiqueta": "Google Reviews" }
+    ]
+  }
+}

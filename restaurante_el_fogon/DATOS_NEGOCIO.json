@@ -1,0 +1,135 @@
+{
+  "id": "lead-1790955008136-1",
+  "status": "nuevo",
+  "negocio": {
+    "nombre": "Restaurante El Fogón Apartadó",
+    "rubro": "Restaurante",
+    "categoria": "Comida Típica y Carnes",
+    "eslogan": "Restaurante El Fogón Apartadó — Tradición Criolla & Parrilla al Carbón en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 321 583 2242",
+      "whatsapp": {
+        "numero": "+573215832242",
+        "link": "https://wa.me/573215832242?text=Hola%20Restaurante%20El%20Fog%C3%B3n%20Apartad%C3%B3%2C%20quisiera%20pedir%20informaci%C3%B3n%20o%20hacer%20un%20domicilio."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 99 #10451, Apartadó, Antioquia",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Restaurante+El+Fog%C3%B3n+Apartad%C3%B3/@7.8837986,-76.643853,16z/data=!4m10!1m2!2m1!1srestaurantes+en+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500d00295e9f83:0x6f9086124f54d0fd!8m2!3d7.8837986!4d-76.6348408!15sCiRyZXN0YXVyYW50ZXMgZW4gQXBhcnRhZMOzLCBBbnRpb3F1aWFaJSIjcmVzdGF1cmFudGVzIGVuIGFwYXJ0YWTDsyBhbnRpb3F1aWGSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11zx0zhc6q",
+      "latitud": 7.8837986,
+      "longitud": -76.6348408
+    },
+    "horario_atencion": "Lunes a Domingo: 11:00 AM - 10:00 PM",
+    "sitio_web": "",
+    "tokens": {
+      "BUSINESS_NAME": "Restaurante El Fogón Apartadó",
+      "PRIMARY_COLOR": "#DC2626",
+      "HERO_BADGE": "🔥 TRADICIÓN CRIOLLA · APARTADÓ",
+      "HERO_SLOGAN": "SABOR AL FOGÓN. PASIÓN CRIOLLA.",
+      "HERO_SUBTITLE": "Cortes madurados a la brasa, bandejas criollas tradicionales, sancochos en leña y jugos refrescantes preparados al instante con ingredientes 100% frescos en Apartadó.",
+      "STORY_TITLE": "CALIDAD EN CADA BOCADO. RAPIDEZ EN CADA ENTREGA.",
+      "STORY_P1": "En Restaurante El Fogón unimos la tradición del asado campesino con los mejores cortes seleccionados.",
+      "STORY_P2": "Horneamos y asamos al carbón de leña para garantizar el sabor más jugoso y representativo de Apartadó.",
+      "STAT1_VALUE": "100%",
+      "STAT1_LABEL": "Carne Fresca",
+      "STAT2_VALUE": "< 30 min",
+      "STAT2_LABEL": "Envío Rápido",
+      "STAT3_VALUE": "18+",
+      "STAT3_LABEL": "Años Sazón",
+      "STAT4_VALUE": "5.0 ★",
+      "STAT4_LABEL": "Google Reviews",
+      "ADDRESS": "Cl. 99 #10451",
+      "CITY": "Apartadó",
+      "HORARIO": "Lunes a Domingo: 11:00 AM - 10:00 PM",
+      "WHATSAPP_LINK": "https://wa.me/573215832242?text=Hola%20Restaurante%20El%20Fog%C3%B3n%20Apartad%C3%B3%2C%20quisiera%20pedir%20a%20domicilio.",
+      "GOOGLE_MAPS_URL": "https://www.google.com/maps/place/Restaurante+El+Fog%C3%B3n+Apartad%C3%B3/@7.8837986,-76.643853,16z/data=!4m10!1m2!2m1!1srestaurantes+en+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500d00295e9f83:0x6f9086124f54d0fd!8m2!3d7.8837986!4d-76.6348408!15sCiRyZXN0YXVyYW50ZXMgZW4gQXBhcnRhZMOzLCBBbnRpb3F1aWFaJSIjcmVzdGF1cmFudGVzIGVuIGFwYXJ0YWTDsyBhbnRpb3F1aWGSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11zx0zhc6q",
+      "MAP_EMBED_URL": "https://maps.google.com/maps?q=Restaurante+El+Fog%C3%B3n+Apartad%C3%B3,+Cl.+99+%2310451,+Apartad%C3%B3,+Antioquia&t=&z=16&ie=UTF8&iwloc=&output=embed",
+      "SLUG": "el-fogon-apartado"
+    },
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "canal_directo": "WhatsApp Pedidos & Domicilios",
+      "oportunidad_saas": "MEDIA"
+    },
+    "categorias_menu": [
+      { "id": "todos", "nombre": "Todos", "icono": "fa-utensils" },
+      { "id": "carnes", "nombre": "Carnes al Fogón", "icono": "fa-fire" },
+      { "id": "criollos", "nombre": "Parrilla Criolla", "icono": "fa-drumstick-bite" },
+      { "id": "sopas", "nombre": "Sopas & Sancochos", "icono": "fa-bowl-food" },
+      { "id": "acompanamientos", "nombre": "Acompañamientos", "icono": "fa-bread-slice" },
+      { "id": "bebidas", "nombre": "Bebidas & Jugos", "icono": "fa-glass-water" }
+    ],
+    "platos_principales": [
+      {
+        "id": "plato-1",
+        "categoria": "carnes",
+        "nombre": "Tomahawk & Churrasco al Fogón",
+        "descripcion": "Corte jugoso madurado a la brasa con papas rústicas crocantes, romero fresco y chimichurri criollo.",
+        "precio": 38000,
+        "precio_formateado": "$38.000",
+        "badge": "MÁS PEDIDO",
+        "foto_url": "https://images.unsplash.com/photo-1615937657715-bc7b4b7962c1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-2",
+        "categoria": "carnes",
+        "nombre": "Punta de Anca al Carbón",
+        "descripcion": "Jugosa punta de anca asada a fuego lento en fogón de leña, acompañada de patacón y arepa con queso.",
+        "precio": 35000,
+        "precio_formateado": "$35.000",
+        "badge": "ESPECIALIDAD",
+        "foto_url": "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-3",
+        "categoria": "criollos",
+        "nombre": "Bandeja Criolla El Fogón",
+        "descripcion": "Chicharrón carnudo crujiente, carne asada, huevo frito, frijoles caseros, arroz, aguacate y plátano maduro.",
+        "precio": 32000,
+        "precio_formateado": "$32.000",
+        "badge": "TRADICIÓN",
+        "foto_url": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-4",
+        "categoria": "criollos",
+        "nombre": "Costillas BBQ Ahumadas",
+        "descripcion": "Costillas de cerdo tiernas bañadas en salsa criolla ahumada, con yuca frita y ensalada de la casa.",
+        "precio": 34000,
+        "precio_formateado": "$34.000",
+        "badge": "RECOMENDADO",
+        "foto_url": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-5",
+        "categoria": "sopas",
+        "nombre": "Sancocho de Gallina Criolla",
+        "descripcion": "Sancocho tradicional cocinado en leña con mazorca, plátano, yuca, papa, porción de gallina y arroz.",
+        "precio": 26000,
+        "precio_formateado": "$26.000",
+        "badge": "CASERO",
+        "foto_url": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "plato-6",
+        "categoria": "bebidas",
+        "nombre": "Limonada de Coco & Jugos Naturales",
+        "descripcion": "Refrescantes jugos en agua o leche de maracuyá, mango, lulo o nuestra cremosa limonada de coco.",
+        "precio": 9000,
+        "precio_formateado": "$9.000",
+        "badge": "REFRESCANTE",
+        "foto_url": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "metricas_autoridad": [
+      { "cifra": "50+", "etiqueta": "Platos Criollos" },
+      { "cifra": "18+", "etiqueta": "Años de Sazón" },
+      { "cifra": "100%", "etiqueta": "Carne Fresca" },
+      { "cifra": "5.0 ★", "etiqueta": "Google Reviews" }
+    ]
+  }
+}

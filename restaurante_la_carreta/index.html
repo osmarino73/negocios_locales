@@ -1,0 +1,2310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Restaurante La Carreta | Comida Rápida Gourmet, Burgers & Parrilla en Apartadó</title>
+  <meta name="description" content="Restaurante La Carreta en Apartadó. Hamburguesas smash artesanales, cortes a la brasa, pizzas, alitas BBQ y papas rústicas con entrega rápida a domicilio. ¡Pide en línea por WhatsApp!">
+  <meta name="keywords" content="restaurante la carreta, la carreta apartado, hamburguesas apartado, comidas rapidas apartado, parrilla apartado, domicilios apartado uraba">
+  <meta name="author" content="Restaurante La Carreta">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Restaurante La Carreta | Comida Rápida Gourmet, Burgers & Parrilla en Apartadó">
+  <meta property="og:description" content="Sabor auténtico a la brasa, carnes maduradas y hamburguesas artesanales en Cra. 102 #99-2, Apartadó. Pide a domicilio por WhatsApp.">
+  <meta property="og:image" content="hero_carreta.webp">
+
+  <!-- Google Fonts: Bebas Neue, Caveat & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Schema.org JSON-LD (SEO Local para Restaurantes) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FastFoodRestaurant",
+    "name": "Restaurante La Carreta",
+    "image": "hero_carreta.webp",
+    "telephone": "+573502476939",
+    "servesCuisine": ["Fast Food", "Parrilla", "Hamburguesas Artesanales", "Alitas BBQ", "Comida Rápida Gourmet"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 102 #99-2 a 99-56",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8833698,
+      "longitude": -76.6331128
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "28"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:30",
+        "closes": "22:30"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ========================================================
+       VARIABLES & DESIGN SYSTEM (BURGER HUB ARCHETYPE)
+       ======================================================== */
+    :root {
+      --color-accent: #F7A81B;
+      --color-accent-hover: #DE9310;
+      --color-accent-glow: rgba(247, 168, 27, 0.4);
+      --color-yellow-banner: #FFB700;
+
+      --bg-dark: #0B0C0E;
+      --bg-card: #121316;
+      --bg-card-border: rgba(255, 255, 255, 0.08);
+      --bg-card-hover: #181A1F;
+
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --text-dark: #0B0C0E;
+
+      --font-display: 'Bebas Neue', cursive, sans-serif;
+      --font-script: 'Caveat', cursive;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 26px;
+      --radius-pill: 9999px;
+
+      --shadow-gold: 0 8px 24px rgba(247, 168, 27, 0.35);
+      --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: clip;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* ========================================================
+       SMART HEADER (BURGER HUB SLEEK DARK NAVBAR)
+       ======================================================== */
+    .header-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 12, 14, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: var(--transition);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 20px;
+    }
+
+    /* Logotipo Tipográfico Puro */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      color: #FFFFFF;
+    }
+
+    .brand-title span {
+      color: var(--color-accent);
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* Enlaces Centrales */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      color: #CBD5E1;
+      transition: var(--transition);
+      position: relative;
+      padding: 6px 0;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-accent);
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-accent);
+      border-radius: 2px;
+    }
+
+    /* Barra Derecha */
+    .nav-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(247, 168, 27, 0.5);
+    }
+
+    .btn-mobile-menu {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: var(--transition);
+    }
+
+    /* Drawer Móvil */
+    .mobile-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .mobile-drawer-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 290px;
+      max-width: 85%;
+      background: #0B0C0E;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 10001;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+    }
+
+    .mobile-drawer.active {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .drawer-brand {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: #FFFFFF;
+    }
+
+    .drawer-brand span {
+      color: var(--color-accent);
+    }
+
+    .btn-drawer-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .drawer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: auto;
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      color: #CBD5E1;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .drawer-link.active, .drawer-link:hover {
+      background: rgba(247, 168, 27, 0.12);
+      color: var(--color-accent);
+    }
+
+    .drawer-footer-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn-drawer-order {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 12px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+    }
+
+    /* ========================================================
+       SECCIÓN 1: #INICIO (HERO BURGER HUB FULL-WIDTH BLEED)
+       ======================================================== */
+    .hero-burgerhub-section {
+      background-color: var(--bg-dark);
+      position: relative;
+      overflow: hidden;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      padding: 60px 0 80px;
+    }
+
+    /* Doble Imagen Responsive Desktop 16:9 y Móvil 9:16 */
+    .hero-bg-cover {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .hero-bg-picture {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .hero-bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right center;
+      opacity: 1 !important; /* Nitidez y brillo total sin filtros oscuros */
+    }
+
+    /* Degradado Mínimo al 40% (Regla Oficial de las Skills) */
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background: linear-gradient(
+        90deg, 
+        #0B0C0E 0%, 
+        #0B0C0E 22%, 
+        rgba(11, 12, 14, 0.90) 30%, 
+        rgba(11, 12, 14, 0.40) 36%, 
+        rgba(11, 12, 14, 0.05) 39%, 
+        transparent 42%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content-wrap {
+      position: relative;
+      z-index: 3;
+      max-width: 580px;
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      color: var(--color-accent);
+      line-height: 1.1;
+      display: block;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3.4rem, 5.8vw, 4.8rem);
+      line-height: 0.94;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-title span {
+      color: var(--color-accent);
+      display: block;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #CBD5E1;
+      margin-bottom: 28px;
+      max-width: 490px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.04em;
+      padding: 13px 30px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(247, 168, 27, 0.5);
+    }
+
+    .btn-hero-video {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: var(--transition);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-hero-video:hover {
+      color: var(--color-accent);
+    }
+
+    .video-play-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      transition: var(--transition);
+    }
+
+    .btn-hero-video:hover .video-play-circle {
+      border-color: var(--color-accent);
+      background: rgba(247, 168, 27, 0.2);
+      color: var(--color-accent);
+    }
+
+    /* Sellos de Confianza Integrados */
+    .hero-features-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 20px;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: #CBD5E1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .hero-feature-item i {
+      color: var(--color-accent);
+      font-size: 1.05rem;
+    }
+
+    /* ========================================================
+       SECCIÓN 2: CINTA FLOTANTE BLANCA DE CATEGORÍAS (BURGER HUB)
+       ======================================================== */
+    .categories-floating-section {
+      margin-top: -38px;
+      position: relative;
+      z-index: 10;
+      padding-bottom: 40px;
+    }
+
+    .categories-card-white {
+      background: #FFFFFF;
+      border-radius: var(--radius-xl);
+      padding: 18px 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      align-items: center;
+    }
+
+    .cat-item-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 14px 12px;
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      cursor: pointer;
+      user-select: none;
+      border-right: 1px solid #ECEFF2;
+      position: relative;
+    }
+
+    .cat-item-pill:last-child {
+      border-right: none;
+    }
+
+    .cat-item-pill:hover, .cat-item-pill.active {
+      background: rgba(247, 168, 27, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .cat-svg-icon {
+      width: 44px;
+      height: 44px;
+      color: #1E293B;
+      margin-bottom: 8px;
+      transition: var(--transition);
+      display: block;
+    }
+
+    .cat-item-pill.active .cat-svg-icon,
+    .cat-item-pill:hover .cat-svg-icon {
+      color: #0F172A;
+      transform: scale(1.08);
+    }
+
+    .cat-item-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      color: #0F172A;
+      line-height: 1.1;
+      margin-bottom: 3px;
+      transition: var(--transition);
+    }
+
+    .cat-item-pill.active .cat-item-name,
+    .cat-item-pill:hover .cat-item-name {
+      color: #000000;
+    }
+
+    .cat-item-sub {
+      font-size: 0.74rem;
+      color: #64748B;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    /* ========================================================
+       SECCIÓN 3: #MENU (OUR BESTSELLERS - GRID OSCURO)
+       ======================================================== */
+    .bestsellers-section {
+      padding: 40px 0 70px;
+      background-color: var(--bg-dark);
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.1rem;
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .section-title-display {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 4.4vw, 3.8rem);
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .section-title-display span {
+      color: var(--color-accent);
+    }
+
+    /* Buscador en Tiempo Real */
+    .menu-search-wrapper {
+      max-width: 620px;
+      margin: 0 auto 36px;
+    }
+
+    .menu-search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-pill);
+      padding: 6px 10px 6px 22px;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+    }
+
+    .menu-search-box:focus-within {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(247, 168, 27, 0.2);
+    }
+
+    .menu-search-box i {
+      color: #64748B;
+      font-size: 1rem;
+      margin-right: 12px;
+    }
+
+    .menu-search-box input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    .menu-search-box input::placeholder {
+      color: #64748B;
+    }
+
+    /* Grid de Bestsellers */
+    .bestsellers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-bottom: 40px;
+    }
+
+    .bestseller-card {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bestseller-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(247, 168, 27, 0.35);
+      background: var(--bg-card-hover);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #1A1C22;
+    }
+
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .bestseller-card:hover .card-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .card-badge-top {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(11, 12, 14, 0.85);
+      border: 1px solid rgba(247, 168, 27, 0.4);
+      color: var(--color-accent);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(4px);
+    }
+
+    .card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .card-price {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 0.03em;
+      color: var(--color-accent);
+    }
+
+    .btn-card-add {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      transition: var(--transition);
+      box-shadow: 0 4px 12px rgba(247, 168, 27, 0.3);
+    }
+
+    .btn-card-add:hover {
+      background: var(--color-accent-hover);
+      transform: scale(1.1);
+    }
+
+    .menu-cta-center {
+      text-align: center;
+    }
+
+    .btn-view-full-menu {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      padding: 13px 34px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+    }
+
+    .btn-view-full-menu:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ========================================================
+       SECCIÓN 4: BANNER OFERTA ESPECIAL AMARILLO (BURGER HUB)
+       ======================================================== */
+    .special-offer-banner-section {
+      padding: 20px 0 60px;
+      background-color: var(--bg-dark);
+    }
+
+    .yellow-promo-card {
+      background: var(--bg-banner-yellow);
+      color: var(--text-dark);
+      border-radius: var(--radius-xl);
+      padding: 36px 48px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(255, 183, 0, 0.25);
+    }
+
+    .promo-col-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .promo-clock-icon {
+      font-size: 3.2rem;
+      color: var(--text-dark);
+    }
+
+    .promo-left-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .promo-eyebrow-dark {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .promo-title-dark {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+    }
+
+    .promo-col-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-left: 2px dashed rgba(0, 0, 0, 0.2);
+      border-right: 2px dashed rgba(0, 0, 0, 0.2);
+      padding: 0 20px;
+    }
+
+    .promo-discount-num {
+      font-family: var(--font-display);
+      font-size: 3.6rem;
+      line-height: 0.9;
+      color: var(--text-dark);
+    }
+
+    .promo-discount-label {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .promo-chip-coupon {
+      background: #0B0C0E;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .promo-chip-coupon:hover {
+      transform: scale(1.05);
+    }
+
+    .promo-col-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .promo-moto-icon {
+      font-size: 3.8rem;
+      color: var(--text-dark);
+    }
+
+    .btn-promo-action {
+      background: #0B0C0E;
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      letter-spacing: 0.05em;
+      padding: 10px 24px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-promo-action:hover {
+      background: #252830;
+      transform: translateY(-2px);
+    }
+
+    /* ========================================================
+       SECCIÓN 5: #NOSOTROS (EXPERIENCE LAYOUT & SOBRE NOSOTROS)
+       ======================================================== */
+    .about-section {
+      padding: 60px 0 70px;
+      background-color: var(--bg-dark);
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-image-showcase {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .about-image-showcase img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+    }
+
+    .about-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(11, 12, 14, 0.9);
+      border: 1px solid rgba(247, 168, 27, 0.4);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      backdrop-filter: blur(8px);
+    }
+
+    .about-floating-badge i {
+      color: var(--color-accent);
+      font-size: 1.5rem;
+    }
+
+    .about-floating-badge strong {
+      display: block;
+      font-size: 0.95rem;
+      color: #FFFFFF;
+      font-weight: 800;
+    }
+
+    .about-floating-badge span {
+      font-size: 0.74rem;
+      color: #94A3B8;
+    }
+
+    .about-content-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .about-desc {
+      font-size: 0.95rem;
+      color: #CBD5E1;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .metrics-row-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .metric-box {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-md);
+      padding: 14px 10px;
+      text-align: center;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .metric-label {
+      font-size: 0.68rem;
+      color: #94A3B8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ========================================================
+       SECCIÓN 6: #UBICACION (SEDE & GOOGLE MAPS)
+       ======================================================== */
+    .location-section {
+      padding: 60px 0 80px;
+      background-color: var(--bg-dark);
+    }
+
+    .location-card-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      background: var(--bg-card);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+
+    .location-info-panel {
+      padding: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-title {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .location-title span {
+      color: var(--color-accent);
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .info-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(247, 168, 27, 0.12);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .info-label {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+
+    .info-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .btn-maps-route {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--text-dark);
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      padding: 13px 28px;
+      border-radius: var(--radius-pill);
+      box-shadow: var(--shadow-gold);
+      font-weight: 800;
+      transition: var(--transition);
+      align-self: flex-start;
+    }
+
+    .btn-maps-route:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .location-map-frame {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+    }
+
+    .location-map-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      border: 0;
+      display: block;
+    }
+
+    /* ========================================================
+       FOOTER NOCTURNO BURGER HUB STYLE
+       ======================================================== */
+    .site-footer {
+      background-color: #060708;
+      color: #94A3B8;
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 26px;
+    }
+
+    .footer-col-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #94A3B8;
+      margin: 14px 0 20px;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .footer-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-list a {
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      transition: var(--transition);
+    }
+
+    .footer-list a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #CBD5E1;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact-item i {
+      color: var(--color-accent);
+    }
+
+    .footer-social-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      color: #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--color-accent);
+      color: var(--text-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: #64748B;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ========================================================
+       BOTÓN FLOTANTE OFICIAL DE WHATSAPP (ANTI-CORTE MÓVIL)
+       ======================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 58px;
+      height: 58px;
+      background: #25D366;
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #FFFFFF;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: inherit;
+      opacity: 0.6;
+      z-index: -1;
+      animation: pulseWhatsApp 2s infinite;
+    }
+
+    @keyframes pulseWhatsApp {
+      0% { transform: scale(1); opacity: 0.6; }
+      70% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+
+    /* ========================================================
+       RESPONSIVE DESIGN (< 768px MÓVIL CALIBRADO)
+       ======================================================== */
+    @media (max-width: 992px) {
+      .bestsellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .categories-card-white {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .yellow-promo-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 30px 24px;
+      }
+      .promo-col-left, .promo-col-center, .promo-col-right {
+        border: none;
+        padding: 0;
+        justify-content: center;
+      }
+      .experience-layout {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* Header Móvil */
+      .nav-links {
+        display: none !important;
+      }
+
+      .btn-header-cta {
+        display: none !important;
+      }
+
+      .btn-mobile-menu {
+        display: flex !important;
+      }
+
+      .header-nav {
+        height: 64px;
+        justify-content: space-between;
+      }
+
+      .brand-title {
+        font-size: 1.65rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.55rem;
+      }
+
+      /* Hero Móvil Calibrado (Comida 100% Despejada, Nítida y Equilibrada) */
+      .hero-burgerhub-section {
+        min-height: 100svh !important;
+        min-height: 660px !important;
+        padding: 85px 16px 36px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+      }
+
+      .hero-bg-cover, .hero-bg-picture {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero-bg-img {
+        object-position: center 28% !important;
+        object-fit: cover !important;
+        opacity: 1 !important;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          rgba(11, 12, 14, 0.45) 0%, 
+          transparent 18%, 
+          transparent 38%, 
+          rgba(11, 12, 14, 0.82) 56%, 
+          rgba(11, 12, 14, 0.98) 76%, 
+          #0B0C0E 100%
+        ) !important;
+      }
+
+      .hero-content-wrap {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 350px;
+        width: 100%;
+        position: relative;
+        z-index: 3;
+      }
+
+      .hero-script-tag {
+        font-size: 1.45rem;
+        margin-bottom: 2px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+
+      .hero-title {
+        font-size: 2.25rem;
+        line-height: 0.96;
+        margin-bottom: 8px;
+        text-shadow: 0 3px 12px rgba(0,0,0,0.95);
+      }
+
+      .hero-desc {
+        font-size: 0.82rem;
+        line-height: 1.4;
+        margin-bottom: 14px;
+        max-width: 310px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 0;
+      }
+
+      .btn-hero-primary {
+        width: 100%;
+        max-width: 260px;
+        padding: 12px 20px;
+        font-size: 1.08rem;
+        justify-content: center;
+      }
+
+      .btn-hero-video {
+        font-size: 0.82rem;
+        gap: 8px;
+      }
+
+      .video-play-circle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.82rem;
+      }
+
+      /* Ocultar sellos repetitivos en móvil para máxima limpieza y evitar colisiones */
+      .hero-features-row {
+        display: none !important;
+      }
+
+      /* Categorías Móvil - Carrusel Horizontal Deslizable Ribbon con Scroll Snap */
+      .categories-floating-section {
+        margin-top: 14px !important;
+        padding: 0 16px 32px;
+        position: relative;
+        z-index: 10;
+      }
+
+      .categories-card-white {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 10px !important;
+        padding: 12px 14px !important;
+        border-radius: 18px !important;
+        background: #FFFFFF !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+        scrollbar-width: none !important;
+        -webkit-overflow-scrolling: touch !important;
+        width: 100% !important;
+      }
+
+      .categories-card-white::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .cat-item-pill {
+        flex: 0 0 102px !important;
+        min-width: 102px !important;
+        scroll-snap-align: start;
+        border-right: none !important;
+        border: 1px solid #E2E8F0 !important;
+        background: #F8FAFC !important;
+        border-radius: 14px !important;
+        padding: 10px 6px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+
+      .cat-item-pill.active {
+        background: rgba(247, 168, 27, 0.14) !important;
+        border-color: var(--color-accent) !important;
+        box-shadow: 0 4px 12px rgba(247, 168, 27, 0.25) !important;
+      }
+
+      .cat-svg-icon {
+        width: 34px !important;
+        height: 34px !important;
+        margin-bottom: 4px !important;
+      }
+
+      .cat-item-name {
+        font-family: var(--font-display) !important;
+        font-size: 0.92rem !important;
+        color: #0F172A !important;
+        line-height: 1 !important;
+        margin-bottom: 2px !important;
+      }
+
+      .cat-item-sub {
+        display: block !important;
+        font-size: 0.62rem !important;
+        color: #64748B !important;
+        white-space: nowrap !important;
+      }
+
+      /* Grid Platos Móvil (2 Columnas) */
+      .bestsellers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .card-img-wrap {
+        height: 140px;
+      }
+
+      .card-body {
+        padding: 12px;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+      }
+
+      .card-desc {
+        display: none;
+      }
+
+      .card-price {
+        font-size: 1.25rem;
+      }
+
+      .btn-card-add {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+      }
+
+      /* Ubicación Móvil */
+      .location-card-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .location-info-panel {
+        padding: 26px 20px;
+        text-align: center;
+      }
+
+      .info-item {
+        justify-content: center;
+        text-align: left;
+      }
+
+      .btn-maps-route {
+        align-self: center;
+      }
+
+      .location-map-frame {
+        min-height: 280px;
+      }
+
+      /* Footer Móvil */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+      }
+
+      .footer-social-wrap {
+        justify-content: center;
+      }
+
+      .footer-bottom-row {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================
+       SMART HEADER (BURGER HUB SLEEK DARK NAVBAR)
+       ======================================================== -->
+  <header class="header-wrapper" id="smartHeader">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo Tipográfico Puro -->
+        <a href="#inicio" class="brand-logo" aria-label="Ir al inicio de Restaurante La Carreta">
+          <div class="brand-title">RESTAURANTE <span>LA CARRETA</span></div>
+          <div class="brand-subtitle">RESTAURANTE · APARTADÓ</div>
+        </a>
+
+        <!-- Enlaces Centrales Desktop -->
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#ubicacion" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- Barra Derecha -->
+        <div class="nav-right-actions">
+          <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20deseo%20hacer%20un%20pedido%20a%20domicilio%20por%20favor." class="btn-header-cta" target="_blank" rel="noopener">
+            <i class="fa-solid fa-bag-shopping"></i> PEDIR EN LÍNEA
+          </a>
+
+          <button class="btn-mobile-menu" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       DRAWER DE NAVEGACIÓN MÓVIL
+       ======================================================== -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menú de navegación móvil">
+    <div class="drawer-header">
+      <div class="drawer-brand">
+        LA <span>CARRETA</span>
+      </div>
+      <button class="btn-drawer-close" id="drawerCloseBtn" aria-label="Cerrar menú">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#inicio" class="drawer-link active"><i class="fa-solid fa-house"></i> Inicio</a></li>
+      <li><a href="#menu" class="drawer-link"><i class="fa-solid fa-burger"></i> Nuestro Menú</a></li>
+      <li><a href="#nosotros" class="drawer-link"><i class="fa-solid fa-utensils"></i> Sobre Nosotros</a></li>
+      <li><a href="#ubicacion" class="drawer-link"><i class="fa-solid fa-map-location-dot"></i> Sede & Contacto</a></li>
+    </ul>
+    <div class="drawer-footer-cta">
+      <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20deseo%20hacer%20un%20pedido%20a%20domicilio%20por%20favor." class="btn-drawer-order" target="_blank" rel="noopener">
+        <i class="fa-solid fa-bag-shopping"></i> PEDIR A DOMICILIO
+      </a>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       SECCIÓN 1: #INICIO (HERO BURGER HUB FULL-WIDTH BLEED)
+       ======================================================== -->
+  <section class="hero-burgerhub-section" id="inicio">
+    <!-- Doble Imagen Responsive Desktop 16:9 y Móvil 9:16 -->
+    <div class="hero-bg-cover">
+      <picture class="hero-bg-picture">
+        <source media="(max-width: 768px)" srcset="hero_carreta_mobile.webp" width="768" height="1376">
+        <img src="hero_carreta.webp" alt="Hamburguesas smash artesanales gourmet, papas crujientes y parrilla en Restaurante La Carreta Apartadó" class="hero-bg-img" loading="eager" width="1920" height="1072">
+      </picture>
+    </div>
+
+    <!-- Degradado Mínimo al 40% (Regla Oficial de las Skills - Comida 100% Despejada y Nítida) -->
+    <div class="hero-bg-overlay"></div>
+
+    <!-- Contenido Hero -->
+    <div class="container" style="position: relative; z-index: 3;">
+      <div class="hero-content-wrap">
+        <span class="hero-script-tag">Sabor Que Satisface Tu Antojo</span>
+        <h1 class="hero-title">
+          BUENA COMIDA,
+          <span>RÁPIDA & FRESCA</span>
+        </h1>
+        <p class="hero-desc">
+          Comida rápida gourmet elaborada con ingredientes frescos de primera calidad, servida caliente y al instante para saciar tu antojo en Apartadó.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20deseo%20hacer%20un%20pedido%20a%20domicilio%20por%20favor." class="btn-hero-primary" target="_blank" rel="noopener">
+            PEDIR AHORA <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#menu" class="btn-hero-video">
+            <span class="video-play-circle"><i class="fa-solid fa-utensils"></i></span>
+            VER NUESTRO MENÚ
+          </a>
+        </div>
+
+        <!-- Sellos de Confianza Integrados -->
+        <div class="hero-features-row">
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-motorcycle"></i>
+            <span>ENVÍO RÁPIDO (<30 Min)</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-award"></i>
+            <span>MÁXIMA CALIDAD (100% Fresco)</span>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-tag"></i>
+            <span>OFERTAS ÚNICAS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 2: CINTA FLOTANTE BLANCA DE CATEGORÍAS (BURGER HUB)
+       ======================================================== -->
+  <div class="categories-floating-section">
+    <div class="container">
+      <div class="categories-card-white" id="categoriesRibbon">
+        <!-- 1. Burgers -->
+        <div class="cat-item-pill active" data-category="todos">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20C10 13.3726 16.268 8 24 8C31.732 8 38 13.3726 38 20H10Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <circle cx="18" cy="14" r="1.2" fill="var(--color-accent)"/>
+            <circle cx="24" cy="12" r="1.2" fill="var(--color-accent)"/>
+            <circle cx="30" cy="15" r="1.2" fill="var(--color-accent)"/>
+            <path d="M8 24.5L24 27.5L40 24.5" stroke="var(--color-accent)" stroke-width="2.6" stroke-linecap="round"/>
+            <rect x="8" y="28" width="32" height="5.5" rx="2.75" stroke="currentColor" stroke-width="2.6"/>
+            <path d="M12 37.5H36C37.1046 37.5 38 36.6046 38 35.5V33.5H10V35.5C10 36.6046 10.8954 37.5 12 37.5Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+          </svg>
+          <span class="cat-item-name">BURGERS</span>
+          <span class="cat-item-sub">Gourmet & Juicy</span>
+        </div>
+
+        <!-- 2. Papas / Fries -->
+        <div class="cat-item-pill" data-category="papas">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="9" width="4" height="17" rx="1.5" stroke="var(--color-accent)" stroke-width="2" fill="rgba(247, 168, 27, 0.25)"/>
+            <rect x="20" y="6" width="4.5" height="20" rx="1.5" stroke="var(--color-accent)" stroke-width="2" fill="rgba(247, 168, 27, 0.4)"/>
+            <rect x="26.5" y="8" width="4" height="18" rx="1.5" stroke="var(--color-accent)" stroke-width="2" fill="rgba(247, 168, 27, 0.25)"/>
+            <rect x="32" y="11" width="3.5" height="15" rx="1.5" stroke="var(--color-accent)" stroke-width="2" fill="rgba(247, 168, 27, 0.15)"/>
+            <path d="M11 22L14.5 40.5C14.8 42 16 42.5 17.5 42.5H30.5C32 42.5 33.2 42 33.5 40.5L37 22C34 25 30 24 24 24C18 24 14 25 11 22Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M24 29.5L25.2 32L28 32.3L26 34.2L26.5 37L24 35.6L21.5 37L22 34.2L20 32.3L22.8 32L24 29.5Z" fill="var(--color-accent)"/>
+          </svg>
+          <span class="cat-item-name">PAPAS</span>
+          <span class="cat-item-sub">Seasoned & Crispy</span>
+        </div>
+
+        <!-- 3. Pizza -->
+        <div class="cat-item-pill" data-category="pizzas">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 41L9 15.5C13 11.5 35 11.5 39 15.5L24 41Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M8.5 15.5C13 10.5 35 10.5 39.5 15.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="20" cy="22" r="2.2" fill="var(--color-accent)" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="28" cy="25" r="2.2" fill="var(--color-accent)" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="24" cy="33" r="1.8" fill="var(--color-accent)" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span class="cat-item-name">PIZZA</span>
+          <span class="cat-item-sub">Artisanal & Hot</span>
+        </div>
+
+        <!-- 4. Bebidas / Drinks -->
+        <div class="cat-item-pill" data-category="bebidas">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28 6L24.5 14H21.5" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="24" cy="15" rx="12.5" ry="2.5" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M13 16L16.5 40.5C16.8 42 17.8 42.5 19.5 42.5H28.5C30.2 42.5 31.2 42 31.5 40.5L35 16" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M14.5 26C18 28 30 24 33.5 26" stroke="var(--color-accent)" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">BEBIDAS</span>
+          <span class="cat-item-sub">Chill & Refreshing</span>
+        </div>
+
+        <!-- 5. Pollo / Chicken -->
+        <div class="cat-item-pill" data-category="pollo">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 20C13 12 20 8 27 9C34 10 38.5 16 36.5 24C35 30 28.5 32 23.5 31L17.5 37" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.5 36L12.5 40C11 41.5 8.5 40.5 8.5 38.5C8.5 37.5 9.5 36.5 10.5 36C9.5 35 9.5 33.5 11 33C12.5 32.5 14 33.5 15 34.5L16.5 36Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <path d="M25 16C27 17 29 16 30 17" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 23C24 24 27 23 29 25" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">POLLO</span>
+          <span class="cat-item-sub">Crispy & Spicy</span>
+        </div>
+
+        <!-- 6. Postres / Desserts -->
+        <div class="cat-item-pill" data-category="postres">
+          <svg class="cat-svg-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="9.5" r="2.8" fill="var(--color-accent)" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M25 7C27 4.5 29.5 4.5 30.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14 23.5C11 21.5 13 16 18 16C19 13 23 12 26 14C29 12 33 14 33 17C37 17 38 21.5 34 23.5Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M14 23.5L17 39.5C17.2 40.5 18.2 41.5 19.5 41.5H28.5C29.8 41.5 30.8 40.5 31 39.5L34 23.5H14Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M20 24.5L21.5 40.5M24 24.5V40.5M28 24.5L26.5 40.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="cat-item-name">POSTRES</span>
+          <span class="cat-item-sub">Sweet Treats</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SECCIÓN 3: #MENU (OUR BESTSELLERS - POPULAR PICKS)
+       ======================================================== -->
+  <section class="bestsellers-section" id="menu">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="script-eyebrow">Los Más Pedidos</span>
+        <h2 class="section-title-display">NUESTROS <span>FAVORITOS</span></h2>
+      </div>
+
+      <!-- Buscador en tiempo real -->
+      <div class="menu-search-wrapper">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menuSearchInput" placeholder="Buscar por plato, ingrediente o combo (ej. Cheese Burger, Strips, Papas)..." aria-label="Buscar platos del menú">
+        </div>
+      </div>
+
+      <!-- Grid de Tarjetas de Bestsellers -->
+      <div class="bestsellers-grid" id="menuCardsGrid">
+
+        <!-- Card 1: Classic Cheese Burger -->
+        <article class="bestseller-card" data-category="todos">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&auto=format&fit=crop&q=80" alt="Classic Cheese Burger La Carreta" loading="lazy">
+            <span class="card-badge-top">MÁS PEDIDA</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">CLASSIC CHEESE BURGER</h3>
+            <p class="card-desc">Carne madurada a la parrilla con queso cheddar fundido, lechuga, tomate y salsa especial de la casa.</p>
+            <div class="card-footer">
+              <span class="card-price">$22.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20la%20Classic%20Cheese%20Burger%20($22.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Pizza Suprema de Queso & Pepperoni -->
+        <article class="bestseller-card" data-category="pizzas">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&auto=format&fit=crop&q=80" alt="Pizza Suprema de Queso y Pepperoni" loading="lazy">
+            <span class="card-badge-top">FAVORITA</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">VEGGIE & PEPPERONI SUPREME</h3>
+            <p class="card-desc">Masa madre crujiente, mozzarella hilado, pepperoni seleccionado y orégano silvestre.</p>
+            <div class="card-footer">
+              <span class="card-price">$28.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20la%20Pizza%20Suprema%20($28.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Crispy Chicken Strips -->
+        <article class="bestseller-card" data-category="pollo">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=600&auto=format&fit=crop&q=80" alt="Crispy Chicken Strips doradas" loading="lazy">
+            <span class="card-badge-top">CRUJIENTE</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">CRISPY CHICKEN STRIPS</h3>
+            <p class="card-desc">Tiras de pechuga extra crujientes doradas al punto con salsa tártara casera y papas.</p>
+            <div class="card-footer">
+              <span class="card-price">$20.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20las%20Crispy%20Chicken%20Strips%20($20.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Papas Rústicas al Parmesano -->
+        <article class="bestseller-card" data-category="papas">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=600&auto=format&fit=crop&q=80" alt="Papas Rústicas al Parmesano" loading="lazy">
+            <span class="card-badge-top">ENTRADA TOP</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">PERI PERI FRIES GRATINADAS</h3>
+            <p class="card-desc">Papas doradas en gajos sazonadas con finas hierbas, paprika y queso parmesano gratinado.</p>
+            <div class="card-footer">
+              <span class="card-price">$14.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20las%20Papas%20R%C3%BAsticas%20($14.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Alitas BBQ Ahumadas -->
+        <article class="bestseller-card" data-category="pollo">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?w=600&auto=format&fit=crop&q=80" alt="Alitas BBQ Ahumadas" loading="lazy">
+            <span class="card-badge-top">ESPECIAL</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ALITAS BBQ AHUMADAS (8 UDS)</h3>
+            <p class="card-desc">Alitas extra crujientes glaseadas en salsa barbacoa ahumada artesanal con bastones de apio.</p>
+            <div class="card-footer">
+              <span class="card-price">$22.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20las%20Alitas%20BBQ%20($22.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Chuzo Desgranado Mixto -->
+        <article class="bestseller-card" data-category="todos">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&auto=format&fit=crop&q=80" alt="Chuzo Desgranado Mixto La Carreta" loading="lazy">
+            <span class="card-badge-top">RECOMENDADO</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">CHUZO DESGRANADO MIXTO</h3>
+            <p class="card-desc">Carne de res y pechuga a la brasa, maíz dulce, ripio de papa, queso costeño fundido y salsas caseras.</p>
+            <div class="card-footer">
+              <span class="card-price">$24.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20el%20Chuzo%20Desgranado%20($24.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7: Costillas BBQ Glaseadas -->
+        <article class="bestseller-card" data-category="todos">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=600&auto=format&fit=crop&q=80" alt="Costillas BBQ Glaseadas" loading="lazy">
+            <span class="card-badge-top">PARRILLA</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">COSTILLAS BBQ GLASEADAS</h3>
+            <p class="card-desc">Costillitas horneadas a fuego lento, caramelizadas con salsa barbacoa de la casa y papas criollas.</p>
+            <div class="card-footer">
+              <span class="card-price">$34.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20las%20Costillas%20BBQ%20($34.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: Volcán de Chocolate -->
+        <article class="bestseller-card" data-category="postres">
+          <div class="card-img-wrap">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80" alt="Volcán de Chocolate Lava Cake" loading="lazy">
+            <span class="card-badge-top">DULCE TOP</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">VOLCÁN LAVA CAKE DE CHOCOLATE</h3>
+            <p class="card-desc">Bizcocho de cacao fino con centro líquido caliente de chocolate belga y helado artesanal.</p>
+            <div class="card-footer">
+              <span class="card-price">$14.000</span>
+              <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quiero%20pedir%20el%20Volc%C3%A1n%20de%20Chocolate%20($14.000)." class="btn-card-add" aria-label="Añadir al pedido" target="_blank" rel="noopener">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Botón Ver Menú Completo -->
+      <div class="menu-cta-center">
+        <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20deseo%20ver%20la%20carta%20completa%20en%20PDF%20o%20hacer%20un%20pedido%20especial." class="btn-view-full-menu" target="_blank" rel="noopener">
+          VER CARTA COMPLETA <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 4: #NOSOTROS (EXPERIENCE LAYOUT & SOBRE NOSOTROS)
+       ======================================================== -->
+  <section class="about-section" id="nosotros">
+    <div class="container">
+      <div class="experience-layout">
+        <!-- Imagen Showcase -->
+        <div class="about-image-showcase">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80" alt="Ambiente acogedor de cocina y salón en Restaurante La Carreta Apartadó" loading="lazy">
+          <div class="about-floating-badge">
+            <i class="fa-solid fa-medal"></i>
+            <div>
+              <strong>4.3 ★★★★★</strong>
+              <span>Excelente Calificación en Apartadó</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenido Texto -->
+        <div class="about-content-text">
+          <span class="script-eyebrow" style="text-align: left;">Nuestra Pasión Culinaria</span>
+          <h2 class="section-title-display" style="text-align: left; margin-bottom: 16px;">
+            COMIDA RÁPIDA CON <span>ALMA ARTESANAL</span>
+          </h2>
+          <p class="about-desc">
+            En Restaurante La Carreta seleccionamos carnes maduradas, pan brioche horneado a diario y vegetales frescos de proveedores locales para entregarte una experiencia gastronómica que combina velocidad, frescura y sabor memorable en Apartadó.
+          </p>
+
+          <!-- 4 Métricas de Autoridad -->
+          <div class="metrics-row-4">
+            <div class="metric-box">
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Ingredientes Frescos</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-number">&lt;30M</div>
+              <div class="metric-label">Entrega Domicilio</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-number">+15K</div>
+              <div class="metric-label">Platos Servidos</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-number">4.3★</div>
+              <div class="metric-label">Satisfacción Total</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20platos%20y%20combos." class="btn-hero-primary" style="align-self: flex-start;" target="_blank" rel="noopener">
+            CONOCER NUESTRA CARTA <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       SECCIÓN 6: #UBICACION (SEDE & GOOGLE MAPS)
+       ======================================================== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="location-card-wrapper">
+        <div class="location-info-panel">
+          <span class="script-eyebrow" style="text-align: left; margin-bottom: 4px;">Visítanos o Pide a Casa</span>
+          <h2 class="location-title">SEDE & <span>DOMICILIOS</span></h2>
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="info-label">Dirección Física</div>
+                <div class="info-val">Cra. 102 #99-2 a 99-56, Apartadó, Antioquia</div>
+              </div>
+            </li>
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <div class="info-label">Línea de Pedidos WhatsApp</div>
+                <div class="info-val">(+57) 350 247 6939</div>
+              </div>
+            </li>
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="info-label">Horario de Atención</div>
+                <div class="info-val">Lunes a Domingo: 11:30 AM – 10:30 PM</div>
+              </div>
+            </li>
+          </ul>
+          <a href="https://www.google.com/maps/place/Restaurante+La+Carreta/@7.8857236,-76.6448172,16z" class="btn-maps-route" target="_blank" rel="noopener">
+            <i class="fa-solid fa-route"></i> CÓMO LLEGAR A LA SEDE
+          </a>
+        </div>
+        <div class="location-map-frame">
+          <iframe 
+            src="https://maps.google.com/maps?q=7.8833698,-76.6331128&z=16&output=embed" 
+            loading="lazy" 
+            title="Ubicación oficial en Google Maps de Restaurante La Carreta Apartadó"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       FOOTER NOCTURNO BURGER HUB STYLE
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="brand-title">RESTAURANTE <span>LA CARRETA</span></div>
+          <div class="brand-subtitle">RESTAURANTE · APARTADÓ</div>
+          <p class="footer-col-desc">
+            Comida rápida gourmet elaborada al momento con los mejores ingredientes frescos. Sabor único y crujiente en Apartadó.
+          </p>
+          <div class="footer-social-wrap">
+            <a href="https://wa.me/573502476939" class="social-btn" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Enlaces Rápidos -->
+        <div>
+          <h3 class="footer-heading">ENLACES RÁPIDOS</h3>
+          <ul class="footer-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Nuestro Menú</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion">Sede & Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Atención al Cliente -->
+        <div>
+          <h3 class="footer-heading">ATENCIÓN AL CLIENTE</h3>
+          <ul class="footer-list">
+            <li><a href="https://wa.me/573502476939" target="_blank" rel="noopener">Rastreo de Pedidos</a></li>
+            <li><a href="https://wa.me/573502476939" target="_blank" rel="noopener">Zona de Cobertura</a></li>
+            <li><a href="#menu">Preguntas Frecuentes</a></li>
+            <li><a href="#ubicacion">Horarios y Sedes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contáctanos -->
+        <div>
+          <h3 class="footer-heading">CONTÁCTANOS</h3>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(+57) 350 247 6939</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>pedidos@lacarreta.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Cra. 102 #99-2, Apartadó</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>11:30 AM – 10:30 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>© 2026 Restaurante La Carreta. Todos los derechos reservados. Cra. 102 #99-2, Apartadó, Colombia.</div>
+        <div>Diseño optimizado para SEO Local & Conversión Directa.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       BOTÓN FLOTANTE OFICIAL DE WHATSAPP (ANTI-CORTE MÓVIL)
+       ======================================================== -->
+  <a href="https://wa.me/573502476939?text=Hola%20Restaurante%20La%20Carreta,%20deseo%20hacer%20un%20pedido%20a%20domicilio%20por%20favor." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Contactar por WhatsApp a Restaurante La Carreta">
+    <div class="whatsapp-pulse"></div>
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ========================================================
+       INTERACTIVIDAD VANILLA JAVASCRIPT
+       ======================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Drawer Móvil
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileDrawerOverlay = document.getElementById('mobileDrawerOverlay');
+      const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+
+      const openDrawer = () => {
+        mobileDrawer.classList.add('active');
+        mobileDrawerOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeDrawer = () => {
+        mobileDrawer.classList.remove('active');
+        mobileDrawerOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', openDrawer);
+      if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+      if (mobileDrawerOverlay) mobileDrawerOverlay.addEventListener('click', closeDrawer);
+
+      document.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+
+      // 2. Filtro de Categorías en la Cinta Blanca
+      const catPills = document.querySelectorAll('.cat-item-pill');
+      const menuCards = document.querySelectorAll('.bestseller-card');
+
+      catPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          catPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          const category = pill.getAttribute('data-category');
+
+          menuCards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            if (category === 'todos' || cardCat === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 3. Buscador en tiempo real
+      const searchInput = document.getElementById('menuSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          menuCards.forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+            if (query === '' || title.includes(query) || desc.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
