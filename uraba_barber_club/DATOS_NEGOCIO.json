@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "lead-1789742666485-9",
+  "status": "nuevo",
+  "negocio": {
+    "nombre": "Urabá Barber Club",
+    "rubro": "Barbería VIP & Club Masculino",
+    "categoria": "barberia",
+    "eslogan": "Más que un corte, un estilo de vida en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 321 769 9315",
+      "telefono_tel": "+573217699315",
+      "whatsapp": {
+        "numero": "+573217699315",
+        "link": "https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 100 #99-63",
+      "barrio_referencia": "Sector Comercial Urbano",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Urab%C3%A1+Barber+Club/@7.8848946,-76.6301023,17z/data=!4m11!1m3!2m2!1sbarberias+en+apartado!6e1!3m6!1s0x8e500d0069ff0469:0x2e6819106d1ecf87!8m2!3d7.8848097!4d-76.6322076!15sChViYXJiZXJpYXMgZW4gYXBhcnRhZG-SAQtiYXJiZXJfc2hvcOABAA!16s%2Fg%2F11nvh0qdq2",
+      "coordenadas": {
+        "lat": 7.8848097,
+        "lng": -76.6322076
+      },
+      "iframe_embed": "https://maps.google.com/maps?q=Urab%C3%A1+Barber+Club,+Cra.+100+%2399-63,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 8:30 PM",
+      "domingos": "9:00 AM - 4:00 PM"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "DIRECTO WHATSAPP",
+      "oportunidad_saas": "ALTA (Lead Calificado)",
+      "motivo_auditoria": "Sin sitio web previo. Oportunidad de digitalización premium para Urabá."
+    },
+    "servicios": [
+      {
+        "id": 1,
+        "nombre": "Corte Clásico & Fade",
+        "descripcion": "Degradados de alta precisión (Low, Mid, High Fade y Taper) adaptados a la fisonomía de tu rostro con navaja.",
+        "duracion": "45 mins",
+        "precio": "$25.000",
+        "precio_num": 25000,
+        "foto_url": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 2,
+        "nombre": "Perfilado de Barba & Ritual",
+        "descripcion": "Diseño, alineación milimétrica con aceites nutritivos botánicos y acabado afilado a navaja tradicional.",
+        "duracion": "30 mins",
+        "precio": "$18.000",
+        "precio_num": 18000,
+        "foto_url": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 3,
+        "nombre": "Afeitado Toalla Caliente",
+        "descripcion": "Experiencia clásica de barbero con toallas al vapor aromatizadas, espuma tibia mentolada y masaje facial.",
+        "duracion": "40 mins",
+        "precio": "$22.000",
+        "precio_num": 22000,
+        "foto_url": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 4,
+        "nombre": "Corte Infantil & Kids",
+        "descripcion": "Estilo moderno y paciencia total para niños y jóvenes con las mejores tendencias y acabados limpios.",
+        "duracion": "35 mins",
+        "precio": "$20.000",
+        "precio_num": 20000,
+        "foto_url": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 5,
+        "nombre": "Hair Tattoo & Diseños",
+        "descripcion": "Líneas geométricas, tribales, sombras y arte capilar personalizado ejecutado con precisión milimétrica.",
+        "duracion": "45 mins",
+        "precio": "$30.000",
+        "precio_num": 30000,
+        "foto_url": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 6,
+        "nombre": "Lavado Spa & Exfoliación",
+        "descripcion": "Higiene capilar profunda con champú refrescante mentolado, exfoliación de cuero cabelludo y tónico revitalizante.",
+        "duracion": "25 mins",
+        "precio": "$15.000",
+        "precio_num": 15000,
+        "foto_url": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": 1,
+        "nombre": "Carlos 'El Patrón' Murillo",
+        "cargo": "Master Barber & Fundador",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Carlos%20Murillo."
+      },
+      {
+        "id": 2,
+        "nombre": "Andrés 'Andy Fade' Córdoba",
+        "cargo": "Especialista en Fades & Diseños",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Andr%C3%A9s%20C%C3%B3rdoba."
+      },
+      {
+        "id": 3,
+        "nombre": "Mateo 'Teo' Rentería",
+        "cargo": "Especialista en Barbas Clásicas",
+        "calificacion": "4.9",
+        "foto_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Mateo%20Renter%C3%ADa."
+      },
+      {
+        "id": 4,
+        "nombre": "Samuel Valencia",
+        "cargo": "Barbero Estilista & Cortes Modernos",
+        "calificacion": "4.9",
+        "foto_url": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Samuel%20Valencia."
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "id": "lead-1789742666485-28",
+  "status": "nuevo",
+  "negocio": {
+    "nombre": "Mambo's Barberia",
+    "rubro": "Barbería VIP & Grooming Masculino",
+    "categoria": "barberia",
+    "eslogan": "Más que un corte, un estilo de vida en Medellín",
+    "calificacion": "5.0",
+    "resenas": "50",
+    "contacto": {
+      "telefono_principal": "(+57) 314 782 9104",
+      "telefono_tel": "+573147829104",
+      "whatsapp": {
+        "numero": "+573147829104",
+        "link": "https://wa.me/573147829104?text=Hola%20Mambo%27s%20Barberia%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 43A #1-50, El Poblado",
+      "barrio_referencia": "Sector Comercial / El Poblado",
+      "ciudad": "Medellín",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Mambo%27s+Barberia/data=!4m7!3m6!1s0x8e500d0079fb96e1:0x725b17f4d2aed665!8m2!3d7.8844074!4d-76.6179989!16s%2Fg%2F11wfhq9npf!19sChIJ4Zb7eQANUI4RZdau0vQXW3I?authuser=0",
+      "coordenadas": {
+        "lat": 6.2084,
+        "lng": -75.5684
+      },
+      "iframe_embed": "https://maps.google.com/maps?q=Mambo%27s+Barberia,+Medell%C3%ADn,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:30 AM - 8:30 PM",
+      "domingos": "9:30 AM - 5:00 PM"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "DIRECTO WHATSAPP",
+      "oportunidad_saas": "ALTA (Lead Calificado)",
+      "motivo_auditoria": "Sin sitio web previo. Oportunidad de digitalización premium para Medellín."
+    },
+    "servicios": [
+      {
+        "id": 1,
+        "nombre": "Corte Clásico & Fade",
+        "descripcion": "Degradados de alta precisión (Low, Mid, High Fade y Taper) adaptados a la fisonomía de tu rostro con acabado a navaja.",
+        "duracion": "45 mins",
+        "precio": "$28.000",
+        "precio_num": 28000,
+        "foto_url": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 2,
+        "nombre": "Perfilado de Barba & Ritual",
+        "descripcion": "Diseño, alineación milimétrica con aceites nutritivos botánicos, toalla tibia y acabado a navaja tradicional.",
+        "duracion": "35 mins",
+        "precio": "$22.000",
+        "precio_num": 22000,
+        "foto_url": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 3,
+        "nombre": "Afeitado Toalla Caliente",
+        "descripcion": "Experiencia clásica de barbero con toallas al vapor aromatizadas, espuma tibia mentolada y masaje facial hidratante.",
+        "duracion": "40 mins",
+        "precio": "$25.000",
+        "precio_num": 25000,
+        "foto_url": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 4,
+        "nombre": "Corte Infantil & Joven",
+        "descripcion": "Estilo moderno y paciencia total para niños y jóvenes con las mejores tendencias urbanas y acabados limpios.",
+        "duracion": "35 mins",
+        "precio": "$22.000",
+        "precio_num": 22000,
+        "foto_url": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 5,
+        "nombre": "Hair Tattoo & Diseños",
+        "descripcion": "Líneas geométricas, tribales, sombras y arte capilar personalizado ejecutado con precisión milimétrica.",
+        "duracion": "45 mins",
+        "precio": "$32.000",
+        "precio_num": 32000,
+        "foto_url": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": 6,
+        "nombre": "Lavado Spa & Exfoliación",
+        "descripcion": "Higiene capilar profunda con champú refrescante mentolado, exfoliación de cuero cabelludo y tónico revitalizante.",
+        "duracion": "25 mins",
+        "precio": "$18.000",
+        "precio_num": 18000,
+        "foto_url": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": 1,
+        "nombre": "Mateo 'Mambo' Valencia",
+        "cargo": "Master Barber & Fundador",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573147829104?text=Hola%20Mambo%27s%20Barberia%2C%20quisiera%20agendar%20cita%20con%20Mateo%20Valencia."
+      },
+      {
+        "id": 2,
+        "nombre": "Camilo 'Fade King' Restrepo",
+        "cargo": "Especialista en Fades & Degradados",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573147829104?text=Hola%20Mambo%27s%20Barberia%2C%20quisiera%20agendar%20cita%20con%20Camilo%20Restrepo."
+      },
+      {
+        "id": 3,
+        "nombre": "Sebastián Giraldo",
+        "cargo": "Especialista en Barbas Clásicas & Ritual",
+        "calificacion": "4.9",
+        "foto_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573147829104?text=Hola%20Mambo%27s%20Barberia%2C%20quisiera%20agendar%20cita%20con%20Sebasti%C3%A1n%20Giraldo."
+      },
+      {
+        "id": 4,
+        "nombre": "Daniel Londoño",
+        "cargo": "Barbero Estilista & Diseños Urbanos",
+        "calificacion": "4.9",
+        "foto_url": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80",
+        "link_reserva": "https://wa.me/573147829104?text=Hola%20Mambo%27s%20Barberia%2C%20quisiera%20agendar%20cita%20con%20Daniel%20Londo%C3%B1o."
+      }
+    ]
+  }
+}

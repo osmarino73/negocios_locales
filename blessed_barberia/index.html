@@ -223,13 +223,16 @@
        SMART HEADER / NAVBAR INTELIGENTE
     ======================================================== */
     .header-sticky-wrapper {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
       padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease, border-color 0.3s ease;
+      background: transparent !important;
+      border-bottom: none !important;
+      box-shadow: none !important;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
     }
 
     .header-sticky-wrapper.header-hidden {
@@ -237,11 +240,11 @@
     }
 
     .header-sticky-wrapper.scrolled {
-      background-color: rgba(12, 13, 15, 0.94);
+      background: rgba(12, 13, 15, 0.5) !important;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border-dark);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
     }
 
     .header-nav {
@@ -399,31 +402,55 @@
       display: none;
     }
 
-    /* Cero filtros opacos globales para 100% nitidez óptica del video */
+    /* Capa de degradado aterciopelado: horizontal + protección inferior para máxima legibilidad */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(12, 13, 15, 0.55) 100%),
+        linear-gradient(
+          90deg,
+          #0c0d0f 0%,
+          #0c0d0f 25%,
+          rgba(12, 13, 15, 0.96) 32%,
+          rgba(12, 13, 15, 0.8) 40%,
+          rgba(12, 13, 15, 0.5) 50%,
+          rgba(12, 13, 15, 0.2) 62%,
+          rgba(12, 13, 15, 0.05) 74%,
+          transparent 84%
+        );
+    }
 
     .hero-container-align {
       position: relative;
       z-index: 4;
       width: 100%;
+      height: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: flex-start; /* Asimétrico a la izquierda para despejar al sujeto */
-      padding-top: 40px;
+      padding-top: 0;
+      padding-bottom: clamp(48px, 9vh, 85px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 420px;
+      max-width: 550px;
+      min-height: 290px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 0;
-      transform: translateY(-50%) translateY(16px);
+      transform: translateY(16px);
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -437,7 +464,7 @@
     .hero-scroll-step.active {
       opacity: 1;
       pointer-events: auto;
-      transform: translateY(-50%) translateY(0);
+      transform: translateY(0);
     }
 
     .hero-script-tag {
@@ -851,19 +878,22 @@
 
     .service-card-footer {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
       width: 100%;
-      padding-top: 10px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .service-card-price {
+      width: 100%;
       font-family: var(--font-display-hero);
       font-size: 1.22rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       color: var(--color-gold);
+      line-height: 1.1;
     }
 
     /* Enlace minimalista AGENDAR ➔ */
@@ -1492,11 +1522,21 @@
       }
 
       .btn-header-cta {
-        padding: 8px 16px;
-        font-size: 0.78rem;
+        display: none !important;
       }
 
-      /* Hero Móvil: Estrictamente min-height 720px y texto en la mitad inferior */
+      /* Hero Móvil: Cero degradados oscuros laterales, 100% video despejado arriba */
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg, 
+          rgba(12, 13, 15, 0) 0%, 
+          rgba(12, 13, 15, 0) 42%, 
+          rgba(12, 13, 15, 0.55) 65%, 
+          rgba(12, 13, 15, 0.90) 84%, 
+          #0c0d0f 98%
+        ) !important;
+      }
+
       .canvas-sticky-wrapper {
         align-items: flex-end;
         justify-content: center;
@@ -1787,7 +1827,7 @@
   <!-- SECCIÓN #INICIO: CANVAS VIDEO SCROLL SCRUBBING (300VH) -->
   <section class="hero-scroll-section" id="inicio">
     <div class="canvas-sticky-wrapper">
-      <!-- Canvas que reproduce los 72 fotogramas WebP -->
+      <!-- Canvas que reproduce los 74 fotogramas WebP -->
       <canvas id="scroll-video-canvas"></canvas>
       
       <!-- Poster estático de reserva para evitar pantallas negras -->
@@ -1797,6 +1837,9 @@
         alt="Portada de Blessed Barbería Apartadó"
         class="canvas-poster-img"
       />
+
+      <!-- Capa de degradado aterciopelado con protección inferior -->
+      <div class="canvas-gradient-overlay"></div>
 
       <!-- Storytelling Editorial Asimétrico (3 Pasos Secuenciales) -->
       <div class="container hero-container-align">
@@ -1911,7 +1954,7 @@
             <h3 class="service-card-title">Corte Clásico &amp; Fade Urbano</h3>
             <p class="service-card-desc">Degradados de alta precisión (Low, Mid, High Fade, Taper) adaptados a tu estructura facial con acabado a navaja.</p>
             <div class="service-card-footer">
-              <span class="service-card-price">$25.000 COP</span>
+              <span class="service-card-price">$25.000</span>
               <a href="https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20agendar%20el%20servicio%20de%20Corte%20Cl%C3%A1sico%20%26%20Fade%20Urbano." target="_blank" class="btn-card-book-minimal">
                 Agendar <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -1928,7 +1971,7 @@
             <h3 class="service-card-title">Perfilado de Barba &amp; Hot Towel</h3>
             <p class="service-card-desc">Ritual de afeitado y perfilado con toalla caliente aromatizada, aceites botánicos y bálsamo calmante para la piel.</p>
             <div class="service-card-footer">
-              <span class="service-card-price">$20.000 COP</span>
+              <span class="service-card-price">$20.000</span>
               <a href="https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20agendar%20el%20servicio%20de%20Perfilado%20de%20Barba%20%26%20Hot%20Towel." target="_blank" class="btn-card-book-minimal">
                 Agendar <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -1945,7 +1988,7 @@
             <h3 class="service-card-title">Combo Blessed: Corte + Barba VIP</h3>
             <p class="service-card-desc">La experiencia integral: corte estilizado, perfilado milimétrico de barba, toalla térmica y peinado final con pomada prémium.</p>
             <div class="service-card-footer">
-              <span class="service-card-price">$40.000 COP</span>
+              <span class="service-card-price">$40.000</span>
               <a href="https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20agendar%20el%20Combo%20Blessed%20Corte%20%2B%20Barba%20VIP." target="_blank" class="btn-card-book-minimal">
                 Agendar <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -1962,7 +2005,7 @@
             <h3 class="service-card-title">Corte Infantil / Kids Blessed</h3>
             <p class="service-card-desc">Atención con paciencia, cuidado y estilo moderno para niños y adolescentes con las tendencias más solicitadas.</p>
             <div class="service-card-footer">
-              <span class="service-card-price">$22.000 COP</span>
+              <span class="service-card-price">$22.000</span>
               <a href="https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20agendar%20un%20Corte%20Infantil." target="_blank" class="btn-card-book-minimal">
                 Agendar <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -1979,7 +2022,7 @@
             <h3 class="service-card-title">Hair Design &amp; Líneas Navaja</h3>
             <p class="service-card-desc">Diseños artísticos personalizados, grecas geométricas y líneas de alta definición trazadas con máxima destreza a mano alzada.</p>
             <div class="service-card-footer">
-              <span class="service-card-price">$15.000 COP</span>
+              <span class="service-card-price">$15.000</span>
               <a href="https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20agendar%20Hair%20Design%20%26%20L%C3%ADneas%20Navaja." target="_blank" class="btn-card-book-minimal">
                 Agendar <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -1996,7 +2039,7 @@
             <h3 class="service-card-title">Lavado Capilar &amp; Exfoliación</h3>
             <p class="service-card-desc">Higiene profunda con champú refrescante mentolado, masaje capilar desestresante y tónico reconstituyente.</p>
             <div class="service-card-footer">
-              <span class="service-card-price">$15.000 COP</span>
+              <span class="service-card-price">$15.000</span>
               <a href="https://wa.me/573042173338?text=Hola%20Blessed%20barber%C3%ADa%2C%20quisiera%20agendar%20Lavado%20Capilar%20%26%20Exfoliaci%C3%B3n." target="_blank" class="btn-card-book-minimal">
                 Agendar <i class="fa-solid fa-arrow-right"></i>
               </a>
@@ -2307,7 +2350,7 @@
       const smartHeader = document.getElementById('smart-header');
 
       // 2. Configuración de Parámetros
-      const TOTAL_FRAMES = 72; // Total exacto de fotogramas extraídos
+      const TOTAL_FRAMES = 74; // Total exacto de fotogramas extraídos (74 frames + poster)
       let isMobile = window.innerWidth < 768;
       let framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
 
@@ -2441,19 +2484,19 @@
         }
       }
 
-      // 8. Smart Header: Siempre visible en Hero; auto-hide en secciones inferiores al bajar
+      // 8. Smart Header: 100% transparente en el Hero; cristal sutil en secciones inferiores
       let lastScrollY = window.scrollY;
       function handleSmartHeader() {
         if (!smartHeader || !scrollSection) return;
         const currentScrollY = window.scrollY;
         const heroBottom = scrollSection.offsetTop + scrollSection.offsetHeight;
 
-        // Si estamos dentro del Hero, la barra SIEMPRE se muestra y adopta estilo translúcido al avanzar
-        if (currentScrollY < heroBottom - 100) {
+        // Dentro del Hero: la barra es 100% TRANSPARENTE
+        if (currentScrollY < heroBottom - 120) {
           smartHeader.classList.remove('header-hidden');
-          smartHeader.classList.toggle('scrolled', currentScrollY > 40);
+          smartHeader.classList.remove('scrolled'); // 100% transparente en todo el recorrido del Hero
         } else {
-          // Fuera del Hero: auto-hide al bajar, reappearance al subir
+          // Fuera del Hero: cristal translúcido suave (auto-hide al bajar, reappearance al subir)
           smartHeader.classList.add('scrolled');
           if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 120) {
             // Bajando: ocultar

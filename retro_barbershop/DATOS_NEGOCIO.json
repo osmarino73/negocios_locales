@@ -1,0 +1,106 @@
+{
+  "id": "retro_barbershop_monteria",
+  "status": "activo",
+  "negocio": {
+    "nombre": "Retro barbershop",
+    "rubro": "Barbería",
+    "categoria": "barberia",
+    "eslogan": "Retro barbershop — Barbería en Montería",
+    "calificacion": "4.7",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 310 815 9779",
+      "whatsapp": {
+        "numero": "+573108159779",
+        "link": "https://wa.me/573108159779?text=Hola%20Retro%20barbershop%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 10 Oe. # 43-69 local 1, Montería, Córdoba",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://maps.google.com/maps?q=Retro+barbershop,+Cra.+10+Oe.+%23+43-69+local+1,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 8:00 PM | Domingos: 9:00 AM - 2:00 PM",
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sitio web de alto impacto con Canvas Video Scroll Scrubbing y Agendamiento WhatsApp."
+    },
+    "servicios": [
+      {
+        "nombre": "Corte de Cabello & Styling",
+        "duracion": "45 min",
+        "precio": "$35.000",
+        "descripcion": "Asesoría de imagen, corte personalizado clásico o moderno con perfilado, lavado revitalizante y peinado con cera prémium.",
+        "imagen": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Corte & Ritual de Barba VIP",
+        "duracion": "60 min",
+        "precio": "$55.000",
+        "descripcion": "Combo exclusivo de corte de autor más perfilado de barba con toalla caliente, aceites esenciales de aromaterapia y bálsamo hidratante.",
+        "imagen": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Perfilado de Barba & Hot Towel",
+        "duracion": "35 min",
+        "precio": "$28.000",
+        "descripcion": "Diseño y simetría de barba con navaja de afeitar tradicional, ritual de vapor con toalla caliente y tratamiento revitalizante.",
+        "imagen": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Limpieza & Exfoliación Facial",
+        "duracion": "40 min",
+        "precio": "$45.000",
+        "descripcion": "Tratamiento facial purificante con mascarilla negra de carbón activado, eliminación de impurezas e hidratación profunda.",
+        "imagen": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Pigmentación & Camuflaje de Canas",
+        "duracion": "30 min",
+        "precio": "$40.000",
+        "descripcion": "Tinte sutil especializado para barba y cabello que matiza las canas de forma natural manteniendo el aspecto varonil.",
+        "imagen": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Masaje Capilar & Tratamiento Anticaída",
+        "duracion": "30 min",
+        "precio": "$38.000",
+        "descripcion": "Masaje relajante en cuero cabelludo con tónicos fortalecedores que estimulan la circulación y el crecimiento saludable.",
+        "imagen": "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Carlos Restrepo",
+        "rol": "Master Barber & Stylist",
+        "experiencia": "8+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Mateo Gómez",
+        "rol": "Especialista en Barba & Navaja",
+        "experiencia": "6+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Andrés Morales",
+        "rol": "Especialista en Fade & Tendencias",
+        "experiencia": "5+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "David Hernández",
+        "rol": "Especialista en Tratamientos & Faciales",
+        "experiencia": "4+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}

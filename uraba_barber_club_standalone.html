@@ -1,0 +1,2301 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0c0d0f" />
+  <title>Urabá Barber Club | Barbería VIP & Cortes Fade en Apartadó</title>
+  <meta name="description" content="Urabá Barber Club en Apartadó, Antioquia. Cortes clásicos, degradados Fade de alta precisión, perfilado de barba con toalla caliente y cuidado masculino exclusivo. Agenda por WhatsApp." />
+  <meta name="keywords" content="barberia en apartado, uraba barber club, cortes fade apartado, perfilado de barba uraba, barber shop apartado antioquia, afeitado clasico" />
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="Urabá Barber Club | Más que un corte, un estilo de vida" />
+  <meta property="og:description" content="Cortes de precisión, degradados urbanos y ritual de barba en Cra. 100 #99-63, Apartadó. Agenda tu cita directa por WhatsApp." />
+  <meta property="og:image" content="uraba_barber_club/assets/hero_desktop.webp" />
+  <meta property="og:url" content="https://www.google.com/maps/place/Urab%C3%A1+Barber+Club" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Schema.org JSON-LD (SEO Local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Urabá Barber Club",
+    "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80",
+    "description": "Barbería exclusiva en Apartadó especializada en cortes clásicos, fades de alta precisión, perfilado de barba con toalla caliente y cuidado capilar masculino.",
+    "telephone": "+573217699315",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra. 100 #99-63",
+      "addressLocality": "Apartadó",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 7.8848097,
+      "longitude": -76.6322076
+    },
+    "url": "https://www.google.com/maps/place/Urab%C3%A1+Barber+Club",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "20:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "09:00",
+        "closes": "16:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catálogo de Barbería & Grooming Masculino",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Corte Clásico & Fade",
+            "description": "Degradados de alta precisión adaptados a la fisonomía de tu rostro."
+          },
+          "price": "25000",
+          "priceCurrency": "COP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Perfilado de Barba & Ritual",
+            "description": "Diseño, alineación milimétrica con aceites nutritivos y acabado navaja."
+          },
+          "price": "18000",
+          "priceCurrency": "COP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Afeitado Toalla Caliente",
+            "description": "Experiencia clásica con toallas calientes aromáticas y espuma tibia."
+          },
+          "price": "22000",
+          "priceCurrency": "COP"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Cinzel + Oswald + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ==========================================================================
+       SISTEMA DE TOKENS DE DISEÑO: "LEGEND AMBER GOLD & OBSIDIAN"
+       ========================================================================== */
+    :root {
+      --color-accent: #d5a755;
+      --color-accent-hover: #e5bb68;
+      --color-accent-subtle: rgba(213, 167, 85, 0.14);
+      --color-accent-border: rgba(213, 167, 85, 0.25);
+      --color-accent-glow: rgba(213, 167, 85, 0.35);
+
+      --bg-dark: #0c0d0f;
+      --bg-surface: #121317;
+      --bg-card: #15161a;
+      --bg-card-hover: #1c1e24;
+
+      --text-white: #ffffff;
+      --text-offwhite: #f5f5f7;
+      --text-muted: #a1a1aa;
+      --text-dim: #71717a;
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-card: rgba(255, 255, 255, 0.06);
+
+      --font-brand: 'Cinzel', Georgia, serif;
+      --font-display: 'Oswald', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+
+      --radius-sm: 6px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-pill: 999px;
+
+      --shadow-gold: 0 8px 24px rgba(213, 167, 85, 0.25);
+      --shadow-dark: 0 14px 34px rgba(0, 0, 0, 0.55);
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset global y protección viewport */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: clip;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-offwhite);
+      line-height: 1.6;
+      overflow-x: clip;
+      width: 100%;
+      max-width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding-top: env(safe-area-inset-top, 0px);
+      background: transparent;
+      border-bottom: none;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background: rgba(12, 13, 15, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .header-sticky-wrapper.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    .header-nav {
+      max-width: 1220px;
+      margin: 0 auto;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      padding-left: max(24px, env(safe-area-inset-left, 24px));
+      padding-right: max(24px, env(safe-area-inset-right, 24px));
+    }
+
+    /* Logotipo Tipográfico Puro (Prohibición estricta de íconos/emojis) */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+      user-select: none;
+    }
+
+    .brand-name {
+      font-family: var(--font-brand);
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-white);
+      line-height: 1.1;
+    }
+
+    .brand-name span {
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-top: 3px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--color-accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-accent);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 24px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bg-dark);
+      background: var(--color-accent);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-gold);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(213, 167, 85, 0.45);
+    }
+
+    /* ==========================================================================
+       HERO FULL-WIDTH BLEED INMERSIVO (FOTOGRAFÍA ESTÁTICA DEDICADA)
+       ========================================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      height: 92vh;
+      max-height: 860px;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-bottom: clamp(48px, 9vh, 85px);
+    }
+
+    /* Fotografía de portada en alta fidelidad */
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 70%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-bg-cover picture,
+    .hero-bg-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      opacity: 0.96;
+    }
+
+    /* Doble degradado orgánico aterciopelado (horizontal + vertical inferior) */
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(12, 13, 15, 0.6) 100%),
+        linear-gradient(
+          90deg, 
+          #0c0d0f 0%, 
+          #0c0d0f 25%, 
+          rgba(12, 13, 15, 0.96) 32%, 
+          rgba(12, 13, 15, 0.8) 40%, 
+          rgba(12, 13, 15, 0.5) 50%, 
+          rgba(12, 13, 15, 0.2) 62%, 
+          rgba(12, 13, 15, 0.05) 74%, 
+          transparent 84%
+        );
+    }
+
+    .hero-container {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-text-block {
+      max-width: 580px;
+    }
+
+    .hero-eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--color-accent-subtle);
+      border: 1px solid var(--color-accent-border);
+      color: var(--color-accent);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--text-white);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 26px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: var(--bg-dark);
+      font-size: 0.86rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-gold);
+      border: 1px solid var(--color-accent);
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(213, 167, 85, 0.4);
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-offwhite);
+      padding: 13px 22px;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(8px);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-hero-minimal-link:hover {
+      border-color: var(--color-accent);
+      color: var(--color-accent);
+      background: var(--color-accent-subtle);
+      transform: translateY(-2px);
+    }
+
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar-cluster {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar-cluster img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--bg-dark);
+      margin-left: -8px;
+      object-fit: cover;
+    }
+
+    .avatar-cluster img:first-child {
+      margin-left: 0;
+    }
+
+    .proof-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proof-stars {
+      color: var(--color-accent);
+      font-size: 0.82rem;
+      letter-spacing: 2px;
+    }
+
+    .proof-rating {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS (TRUST BAR)
+       ========================================================================== */
+    .trust-bar-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 24px 0;
+      position: relative;
+      z-index: 5;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .trust-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--color-accent-subtle);
+      border: 1px solid var(--color-accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .trust-item:hover .trust-icon-box {
+      transform: translateY(-2px) scale(1.05);
+      border-color: var(--color-accent);
+      box-shadow: 0 4px 14px var(--color-accent-glow);
+    }
+
+    .trust-text h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-white);
+      margin-bottom: 2px;
+    }
+
+    .trust-text p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       ENCABEZADOS DE SECCIÓN UNIVERSALES
+       ========================================================================== */
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 52px;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      color: var(--color-accent);
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 3.8vw, 2.9rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      color: var(--text-white);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px auto 14px;
+      color: var(--color-accent);
+    }
+
+    .section-divider::before,
+    .section-divider::after {
+      content: '';
+      width: 45px;
+      height: 1px;
+      background: var(--color-accent-border);
+    }
+
+    .section-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       SECCIÓN: SERVICIOS (#servicios) - FULL-BLEED MINIMALISTA
+       ========================================================================== */
+    .services-section {
+      padding: 96px 0;
+      background-color: var(--bg-dark);
+      position: relative;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      position: relative;
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-card);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent-border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+    }
+
+    .service-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.05);
+    }
+
+    /* Degradado aterciopelado: 45% superior 100% transparente */
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        180deg, 
+        rgba(12, 13, 15, 0) 0%, 
+        rgba(12, 13, 15, 0) 42%, 
+        rgba(12, 13, 15, 0.72) 70%, 
+        rgba(12, 13, 15, 0.95) 90%, 
+        #0c0d0f 100%
+      );
+      pointer-events: none;
+    }
+
+    .service-card-content {
+      position: relative;
+      z-index: 3;
+      padding: 22px;
+      width: 100%;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text-white);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      line-height: 1.15;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Footer en dos filas verticales independientes */
+    .service-card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+    }
+
+    .service-card-price {
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: 1.28rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+
+    .btn-card-book-minimal {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-offwhite);
+      transition: var(--transition-smooth);
+    }
+
+    .btn-card-book-minimal i {
+      color: var(--color-accent);
+      font-size: 0.72rem;
+      transition: transform 0.25s ease;
+    }
+
+    .service-card:hover .btn-card-book-minimal {
+      color: var(--color-accent);
+    }
+
+    .service-card:hover .btn-card-book-minimal i {
+      transform: translateX(5px);
+    }
+
+    .services-cta-wrap {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: SOBRE NOSOTROS (#nosotros) - ESTÁNDAR EDITORIAL
+       ========================================================================== */
+    .experience-section {
+      padding: 96px 0;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.08fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-dark);
+      aspect-ratio: 4/3;
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(12, 13, 15, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--color-accent-border);
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      color: var(--color-accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    }
+
+    .experience-content h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 3.8vw, 3rem);
+      font-weight: 700;
+      line-height: 1.08;
+      color: var(--text-white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+    }
+
+    .experience-content h2 em {
+      font-style: normal;
+      color: var(--color-accent);
+    }
+
+    .experience-content p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 34px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: NUESTROS PROFESIONALES (#profesionales) - RETRATO EDITORIAL
+       ========================================================================== */
+    .team-section {
+      padding: 96px 0;
+      background-color: var(--bg-dark);
+      position: relative;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .team-card {
+      position: relative;
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-card);
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent-border);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+    }
+
+    .team-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.04);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        180deg, 
+        rgba(12, 13, 15, 0) 0%, 
+        rgba(12, 13, 15, 0.1) 45%, 
+        rgba(12, 13, 15, 0.75) 72%, 
+        rgba(12, 13, 15, 0.96) 92%, 
+        #0c0d0f 100%
+      );
+      pointer-events: none;
+    }
+
+    .team-card-content {
+      position: relative;
+      z-index: 3;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .team-card-accent-line {
+      width: 28px;
+      height: 2px;
+      background: var(--color-accent);
+      margin-bottom: 8px;
+      transition: width 0.3s ease;
+    }
+
+    .team-card:hover .team-card-accent-line {
+      width: 48px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 2px;
+    }
+
+    .team-role {
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .team-rating {
+      color: var(--color-accent);
+      font-size: 0.76rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .team-rating span {
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      margin-left: 4px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: TESTIMONIOS (CLIENTES SATISFECHOS)
+       ========================================================================== */
+    .testimonials-section {
+      padding: 96px 0;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: var(--transition-smooth);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-accent-border);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .testimonial-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--color-accent);
+      margin-bottom: 14px;
+    }
+
+    .testimonial-stars {
+      color: var(--color-accent);
+      font-size: 0.82rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-text {
+      font-size: 0.86rem;
+      color: var(--text-offwhite);
+      line-height: 1.55;
+      margin-bottom: 14px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: UBICACIÓN (#ubicacion) - GOOGLE MAPS INTERACTIVO
+       ========================================================================== */
+    .location-section {
+      padding: 96px 0;
+      background-color: var(--bg-dark);
+      position: relative;
+    }
+
+    .location-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      box-shadow: var(--shadow-dark);
+    }
+
+    .location-info-panel {
+      padding: 44px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-info-panel h3 {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .location-info-panel h3 span {
+      color: var(--color-accent);
+    }
+
+    .location-lead {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .location-details-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .location-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .location-detail-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-sm);
+      background: var(--color-accent-subtle);
+      border: 1px solid var(--color-accent-border);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .location-detail-text h5 {
+      font-size: 0.74rem;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 2px;
+    }
+
+    .location-detail-text p {
+      font-size: 0.88rem;
+      color: var(--text-offwhite);
+      line-height: 1.4;
+    }
+
+    .location-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .location-frame-wrapper {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      background: #111;
+    }
+
+    .location-frame-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background: #08090b;
+      border-top: 1px solid var(--border-subtle);
+      padding: 72px 0 28px;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.9fr 0.9fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 56px;
+    }
+
+    .footer-brand .brand-name {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .footer-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 14px 0 20px;
+      max-width: 300px;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-offwhite);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: var(--transition-smooth);
+    }
+
+    .footer-social-link:hover {
+      background: var(--color-accent);
+      border-color: var(--color-accent);
+      color: var(--bg-dark);
+      transform: translateY(-2px);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-white);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent);
+      padding-left: 4px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .footer-contact-item i {
+      color: var(--color-accent);
+      margin-top: 3px;
+      font-size: 0.85rem;
+    }
+
+    /* Módulo de Reserva en el Footer */
+    .footer-reserve-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .footer-reserve-box h5 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--text-white);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .btn-footer-reserve {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: var(--bg-dark);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 11px 18px;
+      border-radius: var(--radius-sm);
+      border: none;
+      box-shadow: var(--shadow-gold);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* ==========================================================================
+       BOTÓN FLOTANTE WHATSAPP ANTI-CORTE MÓVIL
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.85rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 99999;
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       RESPONSIVIDAD MÓVIL (< 768px) - CALIBRACIÓN MANDATORIA
+       ========================================================================== */
+    @media (max-width: 768px) {
+      /* Smart Header Móvil: Ultra limpio, sin botón agendar ni hamburguesa */
+      .header-nav {
+        height: auto;
+        min-height: 54px;
+        padding: 12px 20px;
+        padding-left: max(20px, env(safe-area-inset-left, 20px));
+        padding-right: max(20px, env(safe-area-inset-right, 20px));
+      }
+
+      .btn-header-cta {
+        display: none !important;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .brand-name {
+        font-size: 1.25rem;
+        line-height: 1.1;
+        letter-spacing: 0.08em;
+      }
+
+      .brand-subtitle {
+        font-size: 0.58rem;
+        line-height: 1.2;
+        letter-spacing: 0.16em;
+        margin-top: 2px;
+      }
+
+      /* Hero Móvil: min-height 720px estricto, modelo visible, texto mitad inferior */
+      .hero-fullwidth-section {
+        min-height: 720px !important;
+        height: 100vh;
+        padding: 140px 16px 28px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero-bg-cover img {
+        object-position: center top;
+        opacity: 0.95;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg, 
+          transparent 0%, 
+          transparent 75%, 
+          rgba(12, 13, 15, 0.78) 88%, 
+          #0c0d0f 100%
+        ) !important;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 360px;
+        width: 100%;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      }
+
+      .hero-eyebrow-badge {
+        font-size: 0.68rem;
+        letter-spacing: 0.16em;
+        margin-bottom: 8px;
+      }
+
+      .hero-title {
+        font-size: 1.95rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        margin: 0 auto 20px;
+      }
+
+      .btn-primary, .btn-hero-minimal-link {
+        width: 100%;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+        justify-content: center;
+      }
+
+      .hero-social-proof {
+        justify-content: center;
+      }
+
+      /* Trust Bar Móvil: Carrusel horizontal deslizable (Scroll Snap) */
+      .trust-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        margin: 0 -24px;
+        padding: 8px 24px;
+        scrollbar-width: none;
+      }
+
+      .trust-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .trust-item {
+        flex: 0 0 260px;
+        scroll-snap-align: start;
+        background: var(--bg-card);
+        padding: 14px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-subtle);
+      }
+
+      /* Servicios Móvil: 2 columnas obligatorias */
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .service-card {
+        min-height: 0;
+        aspect-ratio: 3/4.4;
+        border-radius: 16px;
+      }
+
+      .service-card-content {
+        padding: 8px 10px 10px !important;
+      }
+
+      .service-card-title {
+        font-size: 1.05rem;
+      }
+
+      .service-card-desc {
+        display: none !important;
+      }
+
+      .service-card-price {
+        font-size: 1.15rem;
+      }
+
+      .btn-card-book-minimal {
+        font-size: 0.72rem;
+      }
+
+      /* Sobre Nosotros Móvil: 1 columna, métricas 2 columnas */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      /* Equipo Móvil: Carrusel horizontal Scroll Snap obligatorio con efecto «Peek» */
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        margin: 0 -24px;
+        width: calc(100% + 48px);
+        padding: 8px 24px 20px;
+        scrollbar-width: none;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .team-card {
+        flex: 0 0 255px;
+        aspect-ratio: 3/4.2;
+        min-height: 0;
+        scroll-snap-align: start;
+        border-radius: 18px;
+      }
+
+      /* Testimonios Móvil: Carrusel horizontal */
+      .testimonials-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        margin: 0 -24px;
+        padding: 8px 24px;
+        scrollbar-width: none;
+      }
+
+      .testimonials-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .testimonial-card {
+        flex: 0 0 270px;
+        scroll-snap-align: start;
+      }
+
+      /* Ubicación Móvil: 1 columna, botones ancho completo */
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+
+      .location-info-panel {
+        padding: 30px 20px;
+      }
+
+      .location-actions {
+        flex-direction: column;
+      }
+
+      .location-actions .btn-primary,
+      .location-actions .btn-hero-minimal-link {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .location-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+        border-top: 1px solid var(--border-subtle);
+      }
+
+      /* Footer Móvil */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <header class="header-sticky-wrapper" id="smartHeader">
+    <nav class="header-nav">
+      <a href="#inicio" class="brand-logo" aria-label="Urabá Barber Club - Inicio">
+        <span class="brand-name">URABÁ <span>BARBER CLUB</span></span>
+        <span class="brand-subtitle">BARBERÍA & CLUB MASCULINO · APARTADÓ</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#profesionales" class="nav-link">Barberos</a></li>
+        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20una%20cita." class="btn-header-cta" target="_blank" rel="noopener">
+          Agendar
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       1. SECCIÓN: HERO INMERSIVO FULL-WIDTH BLEED (#inicio)
+       ========================================================================== -->
+  <section class="hero-fullwidth-section" id="inicio">
+    <!-- Capa posterior fotográfica en alta fidelidad -->
+    <div class="hero-bg-cover">
+      <picture>
+        <source media="(max-width: 768px)" srcset="uraba_barber_club/assets/hero_mobile.webp" />
+        <img src="uraba_barber_club/assets/hero_desktop.webp" alt="Cliente y barbero en Urabá Barber Club Apartadó" class="hero-bg-img" />
+      </picture>
+    </div>
+
+    <!-- Doble degradado orgánico aterciopelado -->
+    <div class="hero-bg-overlay"></div>
+
+    <div class="hero-container">
+      <div class="hero-text-block">
+        <div class="hero-eyebrow-badge">
+          <i class="fa-solid fa-scissors"></i> BARBERÍA EXCLUSIVA · APARTADÓ
+        </div>
+        <h1 class="hero-title">
+          MÁS QUE UN CORTE. <br />
+          <em>UN ESTILO DE VIDA.</em>
+        </h1>
+        <p class="hero-desc">
+          Cortes de precisión, degradados impecables y cuidado integral de barba en Apartadó. Una experiencia pensada para el hombre que proyecta su mejor versión.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20una%20cita." class="btn-primary" target="_blank" rel="noopener">
+            Agendar Cita <i class="fa-solid fa-calendar-check"></i>
+          </a>
+          <a href="#servicios" class="btn-hero-minimal-link">
+            Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-social-proof">
+          <div class="avatar-cluster">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Cliente Urabá Barber Club" />
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Cliente Urabá Barber Club" />
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=120&q=80" alt="Cliente Urabá Barber Club" />
+          </div>
+          <div class="proof-text">
+            <div class="proof-stars">★★★★★</div>
+            <div class="proof-rating">5.0 (Clientes Satisfechos en Apartadó)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. BARRA DE PILARES / GARANTÍAS (TRUST BAR)
+       ========================================================================== -->
+  <section class="trust-bar-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-scissors"></i>
+          </div>
+          <div class="trust-text">
+            <h4>Barberos Expertos</h4>
+            <p>Técnica precisa y asesoría personalizada</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-bottle-droplet"></i>
+          </div>
+          <div class="trust-text">
+            <h4>Productos Prémium</h4>
+            <p>Cuidado capilar y aceites de primera línea</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="trust-text">
+            <h4>Higiene & Seguridad</h4>
+            <p>Esterilización rigurosa y confort total</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon-box">
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <div class="trust-text">
+            <h4>Satisfacción Total</h4>
+            <p>Resultados impecables que superan expectativas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. SECCIÓN: SERVICIOS (#servicios) - FULL-BLEED MINIMALISTA
+       ========================================================================== -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-eyebrow">NUESTROS SERVICIOS</span>
+        <h2 class="section-title">Servicios Que <em>Ofrecemos</em></h2>
+        <div class="section-divider">
+          <i class="fa-solid fa-scissors"></i>
+        </div>
+        <p class="section-desc">
+          Técnicas de barbería clásica y estilismo moderno adaptados a tu estructura facial.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Corte Clásico & Fade en Apartadó" class="service-card-img" loading="lazy" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Corte Clásico & Fade</h3>
+            <p class="service-card-desc">Degradados de alta precisión (Low, Mid, High Fade y Taper) con perfilado a navaja.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$25.000</div>
+              <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20deseo%20agendar%20el%20servicio%20de%20Corte%20Cl%C3%A1sico%20%26%20Fade." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 2 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=800&q=80" alt="Perfilado de Barba & Ritual en Apartadó" class="service-card-img" loading="lazy" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Perfilado de Barba</h3>
+            <p class="service-card-desc">Diseño, alineación milimétrica con aceites nutritivos botánicos y navaja tradicional.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$18.000</div>
+              <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20deseo%20agendar%20el%20servicio%20de%20Perfilado%20de%20Barba." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 3 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Afeitado Toalla Caliente en Apartadó" class="service-card-img" loading="lazy" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Toalla Caliente</h3>
+            <p class="service-card-desc">Ritual clásico con toallas al vapor aromatizadas, espuma tibia mentolada y masaje facial.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$22.000</div>
+              <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20deseo%20agendar%20el%20servicio%20de%20Afeitado%20Toalla%20Caliente." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 4 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Corte Infantil & Kids en Apartadó" class="service-card-img" loading="lazy" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Corte Infantil & Kids</h3>
+            <p class="service-card-desc">Estilo moderno y paciencia total para niños y jóvenes con las mejores tendencias urbanas.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$20.000</div>
+              <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20deseo%20agendar%20el%20servicio%20de%20Corte%20Infantil." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 5 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=80" alt="Hair Tattoo & Diseños en Apartadó" class="service-card-img" loading="lazy" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Hair Tattoo & Diseños</h3>
+            <p class="service-card-desc">Líneas geométricas, tribales, sombras y arte capilar personalizado ejecutado a navaja.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$30.000</div>
+              <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20deseo%20agendar%20el%20servicio%20de%20Hair%20Tattoo." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 6 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80" alt="Lavado Spa & Exfoliación en Apartadó" class="service-card-img" loading="lazy" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Lavado Spa Capilar</h3>
+            <p class="service-card-desc">Higiene capilar profunda con champú refrescante mentolado, exfoliación y tónico.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$15.000</div>
+              <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20deseo%20agendar%20el%20servicio%20de%20Lavado%20Spa." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="services-cta-wrap">
+        <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20consultar%20todos%20los%20servicios%20y%20precios." class="btn-primary" target="_blank" rel="noopener">
+          Ver Todos Los Servicios <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. SECCIÓN: SOBRE NOSOTROS (#nosotros) - AMBIENTE DE BARBERÍA COHERENTE
+       ========================================================================== -->
+  <section class="experience-section" id="nosotros">
+    <div class="container">
+      <div class="experience-layout">
+        <!-- Fotografía de barbería clásica en cuero y madera -->
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80" alt="Sillones clásicos y ambiente de Urabá Barber Club Apartadó" loading="lazy" />
+          <div class="experience-floating-badge">
+            <i class="fa-solid fa-award"></i> Club Masculino VIP · Apartadó
+          </div>
+        </div>
+
+        <div class="experience-content">
+          <span class="section-eyebrow">SOBRE NOSOTROS</span>
+          <h2>Precisión. Estilo. <em>Confianza.</em></h2>
+          <p>
+            En <strong>Urabá Barber Club</strong> entendemos que un buen corte es mucho más que un servicio: es una declaración de carácter y estilo personal. Nuestro espacio combina la calidez y el oficio tradicional de la barbería clásica con las últimas tendencias de degradados y estilismo urbano en el corazón de Apartadó.
+          </p>
+
+          <div class="metrics-row">
+            <div class="metric-item">
+              <span class="metric-number">5+</span>
+              <span class="metric-label">Años de Experiencia</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">10k+</span>
+              <span class="metric-label">Clientes Satisfechos</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">4</span>
+              <span class="metric-label">Barberos Máster</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-number">5.0★</span>
+              <span class="metric-label">Calificación Google</span>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20su%20club." class="btn-primary" target="_blank" rel="noopener">
+            Conoce Nuestra Experiencia <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SECCIÓN: NUESTROS PROFESIONALES (#profesionales) - RETRATO EDITORIAL
+       ========================================================================== -->
+  <section class="team-section" id="profesionales">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-eyebrow">NUESTROS BARBEROS</span>
+        <h2 class="section-title">Maestros del <em>Estilo</em></h2>
+        <div class="section-divider">
+          <i class="fa-solid fa-scissors"></i>
+        </div>
+        <p class="section-desc">
+          Especialistas apasionados por la técnica y dedicados a perfeccionar cada detalle.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Barbero 1 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Carlos Murillo - Master Barber" class="team-card-img" loading="lazy" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Carlos 'El Patrón' Murillo</h3>
+            <div class="team-role">Master Barber & Fundador</div>
+            <div class="team-rating">
+              ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Carlos%20Murillo." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Barbero 2 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Andrés Córdoba - Especialista en Fades" class="team-card-img" loading="lazy" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Andrés 'Andy Fade' Córdoba</h3>
+            <div class="team-role">Especialista en Fades & Diseños</div>
+            <div class="team-rating">
+              ⭐⭐⭐⭐⭐ <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Andr%C3%A9s%20C%C3%B3rdoba." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Barbero 3 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Mateo Rentería - Especialista en Barbas" class="team-card-img" loading="lazy" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Mateo 'Teo' Rentería</h3>
+            <div class="team-role">Especialista en Barbas Clásicas</div>
+            <div class="team-rating">
+              ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+            </div>
+            <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Mateo%20Renter%C3%ADa." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Barbero 4 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=600&q=80" alt="Samuel Valencia - Barbero Estilista" class="team-card-img" loading="lazy" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Samuel Valencia</h3>
+            <div class="team-role">Barbero Estilista & Cortes Modernos</div>
+            <div class="team-rating">
+              ⭐⭐⭐⭐⭐ <span>(4.9)</span>
+            </div>
+            <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita%20con%20Samuel%20Valencia." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. SECCIÓN: TESTIMONIOS (CLIENTES SATISFECHOS)
+       ========================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-eyebrow">OPINIONES REALES</span>
+        <h2 class="section-title">Clientes <em>Satisfechos</em></h2>
+        <div class="section-divider">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="section-desc">
+          La confianza y lealtad de nuestros clientes en Apartadó es nuestro mayor sello de calidad.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Cliente James T." class="testimonial-avatar" loading="lazy" />
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "¡La mejor barbería en Apartadó! Atención puntual, el degradado quedó impecable y el ambiente es de primera."
+          </p>
+          <div class="testimonial-author">— James T.</div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Cliente Michael R." class="testimonial-avatar" loading="lazy" />
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "El ritual de barba con toalla caliente es una experiencia obligatoria. Gran profesionalismo y pulcritud."
+          </p>
+          <div class="testimonial-author">— Michael R.</div>
+        </div>
+
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&q=80" alt="Cliente David L." class="testimonial-avatar" loading="lazy" />
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">
+            "Siempre salgo con el corte perfecto. Barberos con mucha técnica y asesoría de imagen que se nota."
+          </p>
+          <div class="testimonial-author">— David L.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. SECCIÓN: UBICACIÓN (#ubicacion) - GOOGLE MAPS INTERACTIVO
+       ========================================================================== -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="location-card">
+        <div class="location-info-panel">
+          <span class="section-eyebrow">VISÍTANOS EN APARTADÓ</span>
+          <h3>Urabá <span>Barber Club</span></h3>
+          <p class="location-lead">
+            Ubicados estratégicamente en la zona comercial urbana de Apartadó, con parqueadero cercano y ambiente climatizado de confort.
+          </p>
+
+          <ul class="location-details-list">
+            <li class="location-detail-item">
+              <div class="location-detail-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="location-detail-text">
+                <h5>Dirección Física</h5>
+                <p>Cra. 100 #99-63, Apartadó, Antioquia, Colombia</p>
+              </div>
+            </li>
+
+            <li class="location-detail-item">
+              <div class="location-detail-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="location-detail-text">
+                <h5>Teléfono & WhatsApp</h5>
+                <p>(+57) 321 769 9315</p>
+              </div>
+            </li>
+
+            <li class="location-detail-item">
+              <div class="location-detail-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="location-detail-text">
+                <h5>Horario de Atención</h5>
+                <p>Lunes a Sábado: 8:00 AM – 8:30 PM<br />Domingos: 9:00 AM – 4:00 PM</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="location-actions">
+            <a href="https://maps.google.com/maps?q=Urab%C3%A1+Barber+Club,+Cra.+100+%2399-63,+Apartad%C3%B3,+Antioquia,+Colombia" target="_blank" rel="noopener" class="btn-primary">
+              Ver en Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20cita." target="_blank" rel="noopener" class="btn-hero-minimal-link">
+              Agendar por WhatsApp <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="location-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Urab%C3%A1+Barber+Club,+Cra.+100+%2399-63,+Apartad%C3%B3,+Antioquia,+Colombia&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" 
+            title="Mapa de Urabá Barber Club en Apartadó" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="brand-logo" aria-label="Urabá Barber Club">
+            <span class="brand-name">URABÁ <span>BARBER CLUB</span></span>
+            <span class="brand-subtitle">BARBERÍA & CLUB MASCULINO · APARTADÓ</span>
+          </a>
+          <p class="footer-desc">
+            Cortes de precisión, degradados contemporáneos y barbería clásica de alta distinción en Apartadó, Antioquia.
+          </p>
+          <div class="footer-socials">
+            <a href="https://wa.me/573217699315" target="_blank" rel="noopener" class="footer-social-link" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="tel:+573217699315" class="footer-social-link" aria-label="Llamar">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+            <a href="#ubicacion" class="footer-social-link" aria-label="Ubicación">
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces Rápidos</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#profesionales">Barberos</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#servicios">Corte Clásico & Fade</a></li>
+            <li><a href="#servicios">Perfilado de Barba</a></li>
+            <li><a href="#servicios">Toalla Caliente</a></li>
+            <li><a href="#servicios">Corte Infantil</a></li>
+            <li><a href="#servicios">Hair Tattoo & Diseños</a></li>
+            <li><a href="#servicios">Lavado Spa Capilar</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto & Reservas</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Cra. 100 #99-63, Apartadó, Antioquia</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>(+57) 321 769 9315</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>Lun - Sáb: 8:00 AM - 8:30 PM<br />Dom: 9:00 AM - 4:00 PM</span>
+          </div>
+
+          <div class="footer-reserve-box">
+            <h5>Agenda tu Cita Hoy</h5>
+            <p>Atención preferencial sin filas a través de WhatsApp.</p>
+            <a href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20agendar%20una%20cita." class="btn-footer-reserve" target="_blank" rel="noopener">
+              Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Urabá Barber Club. Todos los derechos reservados. Cra. 100 #99-63, Apartadó, Antioquia, Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE WHATSAPP ANTI-CORTE MÓVIL
+       ========================================================================== -->
+  <a 
+    href="https://wa.me/573217699315?text=Hola%20Urab%C3%A1%20Barber%20Club%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." 
+    class="whatsapp-float" 
+    target="_blank" 
+    rel="noopener" 
+    aria-label="Contactar a Urabá Barber Club por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       SMART NAVBAR JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script>
+    (function () {
+      const header = document.getElementById('smartHeader');
+      const heroSection = document.getElementById('inicio');
+      let lastScrollY = window.scrollY;
+
+      function updateNavbar() {
+        const currentScrollY = window.scrollY;
+        const heroHeight = heroSection ? heroSection.offsetHeight : 600;
+
+        // Si estamos dentro del Hero, la barra siempre permanece visible
+        if (currentScrollY <= heroHeight * 0.7) {
+          header.classList.remove('scrolled');
+          header.classList.remove('header-hidden');
+        } else {
+          // Una vez pasado el Hero, aplicamos estilo con fondo blur
+          header.classList.add('scrolled');
+
+          // Auto-hide al bajar, reaparición al subir
+          if (currentScrollY > lastScrollY && currentScrollY > 200) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        }
+
+        lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY;
+      }
+
+      window.addEventListener('scroll', updateNavbar, { passive: true });
+      updateNavbar();
+    })();
+  </script>
+
+</body>
+</html>
+
