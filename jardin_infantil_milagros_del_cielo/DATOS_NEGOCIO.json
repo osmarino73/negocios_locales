@@ -1,0 +1,104 @@
+{
+  "negocio": {
+    "id": "jardin_infantil_milagros_del_cielo",
+    "nombre": "Jardín infantil Milagros del cielo Apartadó",
+    "nombre_corto": "Milagros del Cielo",
+    "rubro": "Jardín de infancia & Preescolar",
+    "categoria": "jard_n_de_infancia",
+    "eslogan": "Un lugar feliz para crecer, jugar y aprender con amor y valores en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "50",
+    "contacto": {
+      "telefono_principal": "(+57) 312 283 8118",
+      "telefono_formato": "+573122838118",
+      "whatsapp": {
+        "numero": "+573122838118",
+        "link": "https://wa.me/573122838118?text=Hola%20Jard%C3%ADn%20infantil%20Milagros%20del%20cielo%20Apartad%C3%B3%2C%20quisiera%20solicitar%20informaci%C3%B3n%20para%20un%20cupo."
+      },
+      "email": "contacto@milagrosdelcielo.edu.co"
+    },
+    "ubicacion": {
+      "direccion": "el Darien, Diagonal 100# 109-31B",
+      "barrio": "el Darien",
+      "ciudad": "Apartadó",
+      "departamento": "Antioquia",
+      "pais": "Colombia",
+      "direccion_completa": "el Darien, Diagonal 100# 109-31B, Apartadó, Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Jard%C3%ADn+infantil+Milagros+del+cielo+Apartad%C3%B3/@7.8813772,-76.6539942,15z/data=!4m10!1m2!2m1!1scentro+infantil+en+Apartado+antioquia,+Antioquia!3m6!1s0x8e500d03b06a2dab:0x1f055124247f92ac!8m2!3d7.888906!4d-76.6390726!15sCjBjZW50cm8gaW5mYW50aWwgZW4gQXBhcnRhZG8gYW50aW9xdWlhLCBBbnRpb3F1aWGSAQxraW5kZXJnYXJ0ZW7gAQA!16s%2Fg%2F11rngrk_z5",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Jard%C3%ADn+infantil+Milagros+del+cielo+Apartad%C3%B3,+Diagonal+100%23+109-31B,+Apartad%C3%B3,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_viernes": "7:00 AM - 5:30 PM",
+      "sabados": "8:00 AM - 12:30 PM",
+      "domingos_y_festivos": "Cerrado"
+    },
+    "sitio_web": "https://www.facebook.com/profile.php?id=100063535420643",
+    "redes_sociales": {
+      "facebook": "https://www.facebook.com/profile.php?id=100063535420643",
+      "instagram": "https://instagram.com/jardinmilagrosdelcielo"
+    },
+    "servicios": [
+      {
+        "id": "caminadores_salacuna",
+        "nombre": "Caminadores & Sala Cuna",
+        "rango_edad": "1 a 2 años",
+        "precio": "$320.000",
+        "frecuencia": "mensual",
+        "descripcion": "Estimulación temprana sensorial, desarrollo psicomotor y cuidado afectivo personalizado para los primeros pasos.",
+        "badge_color": "yellow",
+        "imagen": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "parvulos",
+        "nombre": "Párvulos & Descubrimiento",
+        "rango_edad": "2 a 3 años",
+        "precio": "$350.000",
+        "frecuencia": "mensual",
+        "descripcion": "Desarrollo del lenguaje, juego simbólico, socialización afectiva y autonomía en hábitos diarios.",
+        "badge_color": "rose",
+        "imagen": "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "prejardin",
+        "nombre": "Prejardín Exploradores",
+        "rango_edad": "3 a 4 años",
+        "precio": "$380.000",
+        "frecuencia": "mensual",
+        "descripcion": "Iniciación al pensamiento lógico-matemático, expresión artística, motricidad fina y exploración natural.",
+        "badge_color": "purple",
+        "imagen": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "jardin",
+        "nombre": "Jardín / Kindergarten",
+        "rango_edad": "4 a 5 años",
+        "precio": "$400.000",
+        "frecuencia": "mensual",
+        "descripcion": "Prelectura, fonética básica, proyectos lúdicos de ciencia, valores ciudadanos y autonomía socioemocional.",
+        "badge_color": "cyan",
+        "imagen": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "transicion",
+        "nombre": "Transición / Pre-K",
+        "rango_edad": "5 a 6 años",
+        "precio": "$420.000",
+        "frecuencia": "mensual",
+        "descripcion": "Preparación integral para la educación primaria con lectoescritura, pensamiento crítico y bilingüismo básico.",
+        "badge_color": "green",
+        "imagen": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "club_tareas",
+        "nombre": "Club de Tareas & After School",
+        "rango_edad": "3 a 8 años",
+        "precio": "$250.000",
+        "frecuencia": "mensual",
+        "descripcion": "Acompañamiento en tareas escolares, refuerzo pedagógico, lonchera saludable y talleres creativos en la tarde.",
+        "badge_color": "orange",
+        "imagen": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": []
+  }
+}
