@@ -1,0 +1,29 @@
+{
+  "id": "lead-1789763126371-13",
+  "status": "nuevo",
+  "notes": "",
+  "negocio": {
+    "nombre": "Clínica Odontológica - Dr Rafael Negrete",
+    "rubro": "Clínica Odontológica",
+    "categoria": "general",
+    "calificacion": "5.0",
+    "resenas": "50",
+    "contacto": {
+      "telefono_principal": "(+57) 323 813 5428",
+      "telefono": "(+57) 323 813 5428",
+      "whatsapp": {
+        "numero": "(+57) 323 813 5428",
+        "link": "https://wa.me/573238135428?text=Hola%20Cl%C3%ADnica%20Odontol%C3%B3gica%20-%20Dr%20Rafael%20Negrete%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Clínica Odontológica - Dr Rafael Negrete, Apartadó",
+      "ciudad": "Apartadó",
+      "google_maps_url": "https://www.google.com/maps/place/Cl%C3%ADnica+Odontol%C3%B3gica+-+Dr+Rafael+Negrete/data=!4m7!3m6!1s0x8e5a2f7339d83dd3:0x2b583e9e6e0ce164!8m2!3d8.7683953!4d-75.8642719!16s%2Fg%2F11rbs45pfq!19sChIJ0z3YOXMvWo4RZOEMbp4-WCs?authuser=0"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "oportunidad_saas": "ALTA (Lead Calificado)"
+    }
+  }
+}

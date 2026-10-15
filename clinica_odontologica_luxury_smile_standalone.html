@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Clínica Odontológica Luxury Smile — Odontología de Alta Gama en Montería</title>
+  <meta name="description" content="Clínica Odontológica Luxury Smile en Montería. Diseño de sonrisa digital 3D, ortodoncia invisible, implantes dentales, blanqueamiento LED y odontología estética sin dolor. Reserva tu cita por WhatsApp.">
+  <meta name="keywords" content="clinica odontologica monteria, luxury smile monteria, diseno de sonrisa monteria, ortodoncia monteria, implantes dentales monteria, dentistas monteria">
+  
+  <!-- OpenGraph Metatags -->
+  <meta property="og:title" content="Clínica Odontológica Luxury Smile — Odontología de Alta Gama en Montería">
+  <meta property="og:description" content="Transformamos tu sonrisa con tecnología 3D de vanguardia, estética dental de lujo y atención personalizada sin dolor.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luxurysmilemonteria.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Schema.org JSON-LD SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Clínica Odontológica Luxury Smile Montería",
+    "image": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1200&q=80",
+    "@id": "https://luxurysmilemonteria.com",
+    "url": "https://luxurysmilemonteria.com",
+    "telephone": "+573004970078",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montería",
+      "addressRegion": "Córdoba",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.7536491,
+      "longitude": -75.8864639
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "14:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "116"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       VARIABLES DE DISEÑO Y RESET GLOBAL
+       ========================================================================== */
+    :root {
+      --color-accent: #009bbd;
+      --color-teal: #007791;
+      --color-accent-glow: rgba(0, 155, 189, 0.25);
+      --bg-light: #f8fcff;
+      --bg-card: #ffffff;
+      --bg-soft-teal: #eef9fc;
+      --bg-navy: #0a223d;
+      --text-dark: #0c1e30;
+      --text-muted: #5a6e82;
+      --text-light: #ffffff;
+      --border-soft: rgba(0, 155, 189, 0.18);
+      --border-light: rgba(0, 155, 189, 0.08);
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 28px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      overflow-y: visible;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding-top: env(safe-area-inset-top, 0px);
+      background: rgba(248, 252, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+      transition: transform 0.4s ease;
+    }
+
+    .header-sticky-wrapper.hide {
+      transform: translateY(-100%);
+    }
+
+    .header-nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* LOGOTIPO OFICIAL */
+    .brand-logo-img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.25));
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--text-dark);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .brand-name span {
+      color: var(--color-accent);
+    }
+
+    .brand-subtitle {
+      font-size: 0.60rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--color-teal);
+      text-transform: uppercase;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-accent);
+    }
+
+    /* BOTONES GLOBALES */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-teal) 100%);
+      color: #ffffff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px var(--color-accent-glow);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(0, 155, 189, 0.45);
+      background: linear-gradient(135deg, #00b4dc 0%, var(--color-accent) 100%);
+    }
+
+    .btn-header-cta {
+      padding: 10px 22px;
+      font-size: 0.8rem;
+    }
+
+    /* BOTÓN DE MENÚ MÓVIL (HAMBURGUESA) */
+    .mobile-menu-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(0, 155, 189, 0.1);
+      border: 1px solid rgba(0, 155, 189, 0.25);
+      color: var(--text-dark);
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: var(--color-accent);
+      color: #ffffff;
+    }
+
+    /* ==========================================================================
+       1. HERO HEADER INMERSIVO FULL-WIDTH BLEED (#inicio)
+       ========================================================================== */
+    .hero-fullwidth-section {
+      position: relative;
+      width: 100%;
+      min-height: 640px;
+      height: 100vh;
+      max-height: 800px;
+      background-color: var(--bg-light);
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-bg-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 1;
+    }
+
+    .hero-bg-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(248, 252, 255, 0.65) 100%),
+        linear-gradient(
+          90deg, 
+          #f8fcff 0%, 
+          #f8fcff 32%, 
+          rgba(248, 252, 255, 0.95) 45%, 
+          rgba(248, 252, 255, 0.60) 60%, 
+          rgba(248, 252, 255, 0.15) 75%, 
+          transparent 90%
+        );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 100px;
+      padding-bottom: clamp(48px, 9vh, 85px);
+    }
+
+    .hero-text-block {
+      max-width: 600px;
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      color: var(--color-teal);
+      line-height: 1;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-accent);
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      max-width: 530px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-soft);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 0.78rem;
+      box-shadow: 0 4px 16px rgba(0, 155, 189, 0.1);
+    }
+
+    .hero-proof-stars {
+      color: #ffb800;
+      letter-spacing: 2px;
+    }
+
+    .hero-proof-text {
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       2. BARRA DE PILARES / GARANTÍAS
+       ========================================================================== */
+    .pillars-section {
+      background-color: var(--bg-soft-teal);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 24px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 12px;
+      border-right: 1px solid rgba(0, 155, 189, 0.12);
+    }
+
+    .pillar-item:last-child {
+      border-right: none;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 155, 189, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .pillar-item:hover .pillar-icon {
+      transform: rotate(6deg) scale(1.05);
+      background: var(--color-accent);
+      color: #ffffff;
+    }
+
+    .pillar-text h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.2;
+    }
+
+    .pillar-text p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.2;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       3. SECCIÓN SERVICIOS (#servicios)
+       ========================================================================== */
+    .section-padding {
+      padding: 95px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 55px;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.5rem;
+      color: var(--color-teal);
+      line-height: 1;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 2.75rem);
+      color: var(--text-dark);
+      line-height: 1.18;
+      margin-bottom: 12px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+
+    .section-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* GRID 3 COLUMNAS DESKTOP */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      position: relative;
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 30px rgba(0, 155, 189, 0.08);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(0, 155, 189, 0.18);
+    }
+
+    .service-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.06);
+    }
+
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(12, 30, 48, 0) 0%,
+        rgba(12, 30, 48, 0) 45%,
+        rgba(12, 30, 48, 0.78) 72%,
+        rgba(12, 30, 48, 0.96) 92%,
+        #0c1e30 100%
+      );
+    }
+
+    .service-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 22px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: #c0d4e8;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* FOOTER EN DOS FILAS INDEPENDIENTES */
+    .service-card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      padding-top: 10px;
+    }
+
+    .service-card-price {
+      width: 100%;
+      font-size: 1.22rem;
+      font-weight: 700;
+      color: #4cd5f5;
+      line-height: 1;
+    }
+
+    .service-card-price small {
+      font-size: 0.72em;
+      font-weight: 500;
+      opacity: 0.85;
+      color: #b0cbe5;
+    }
+
+    .btn-card-book-minimal {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+      padding: 4px 0;
+    }
+
+    .btn-card-book-minimal i {
+      font-size: 0.75rem;
+      color: #4cd5f5;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-card-book-minimal:hover {
+      color: #4cd5f5;
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(5px);
+    }
+
+    /* ==========================================================================
+       4. SECCIÓN SOBRE NOSOTROS & EQUIPO (#nosotros)
+       ========================================================================== */
+    .nosotros-section {
+      background-color: var(--bg-soft-teal);
+      position: relative;
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 85px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 20px 40px rgba(0, 155, 189, 0.12);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: rgba(12, 30, 48, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-soft);
+      padding: 16px 22px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .floating-badge-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: #4cd5f5;
+      line-height: 1;
+    }
+
+    .floating-badge-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 4px;
+    }
+
+    .experience-content .section-script-eyebrow {
+      text-align: left;
+    }
+
+    .experience-content .section-title {
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    .experience-content p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-soft);
+      margin-bottom: 30px;
+    }
+
+    .metric-item {
+      text-align: left;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--color-accent);
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* NUESTROS PROFESIONALES (Grid 4 columnas desktop / Retrato Editorial 3:4.2) */
+    .team-header {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .team-card {
+      position: relative;
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 10px 25px rgba(0, 155, 189, 0.08);
+      transition: all 0.4s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(0, 155, 189, 0.18);
+    }
+
+    .team-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.05);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(12, 30, 48, 0) 0%,
+        rgba(12, 30, 48, 0.25) 45%,
+        rgba(12, 30, 48, 0.85) 75%,
+        #0c1e30 100%
+      );
+    }
+
+    .team-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      z-index: 2;
+    }
+
+    .team-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background-color: var(--color-accent);
+      margin-bottom: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .team-card:hover .team-card-accent-line {
+      width: 48px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      color: #4cd5f5;
+      font-weight: 600;
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    .team-rating {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #ffb800;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================================================
+       5. MAPA & UBICACIÓN (#ubicacion)
+       ========================================================================== */
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background-color: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 155, 189, 0.12);
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .map-info-panel .section-script-eyebrow {
+      text-align: left;
+    }
+
+    .map-info-panel .section-title {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--bg-soft-teal);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .info-text strong {
+      display: block;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-teal);
+      margin-bottom: 2px;
+    }
+
+    .info-text p {
+      font-size: 0.92rem;
+      color: var(--text-dark);
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 14px;
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      min-height: 440px;
+      position: relative;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ==========================================================================
+       6. FOOTER PRINCIPAL & MÓDULO DE RESERVA
+       ========================================================================== */
+    .main-footer {
+      background-color: var(--bg-navy);
+      color: #ffffff;
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-col-brand .brand-logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-col-brand .brand-name {
+      color: #ffffff;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.85rem;
+      color: #b0cbe5;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: var(--color-accent);
+      color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 0.86rem;
+      color: #b0cbe5;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #4cd5f5;
+    }
+
+    .reservation-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .reservation-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .reservation-card p {
+      font-size: 0.8rem;
+      color: #b0cbe5;
+      margin-bottom: 16px;
+    }
+
+    .btn-footer-reserve {
+      width: 100%;
+      padding: 12px 20px;
+      font-size: 0.82rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: #8daecf;
+    }
+
+    /* ==========================================================================
+       WHATSAPP FLOAT ANTI-CORTE MÓVIL
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      z-index: 99999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(6deg);
+      box-shadow: 0 14px 32px rgba(37, 211, 102, 0.6);
+    }
+
+    /* ==========================================================================
+       RESPONSIVIDAD MÓVIL (< 768px)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .btn-header-cta {
+        display: none !important;
+      }
+
+      .mobile-menu-toggle {
+        display: flex !important;
+      }
+
+      .header-nav {
+        height: 64px;
+        justify-content: space-between !important;
+      }
+
+      .brand-logo {
+        align-items: center;
+        width: auto;
+      }
+
+      .brand-name {
+        font-size: 1.25rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.58rem;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(248, 252, 255, 0.98);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-soft);
+        padding: 24px;
+        display: flex !important;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: 0 15px 35px rgba(12, 30, 48, 0.12);
+        transform: translateY(-150%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+        z-index: 999;
+      }
+
+      .nav-links.nav-active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        font-weight: 700;
+        padding: 12px 18px;
+        border-radius: 10px;
+        color: var(--text-dark);
+        background: var(--bg-soft-teal);
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: all 0.2s ease;
+      }
+
+      .nav-links a:hover {
+        background: var(--color-accent);
+        color: #ffffff;
+      }
+
+      /* Hero Móvil Calibrado */
+      .hero-fullwidth-section {
+        min-height: 720px !important;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .hero-bg-cover {
+        width: 100%;
+        opacity: 0.95;
+      }
+
+      .hero-bg-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(248, 252, 255, 0) 0%,
+          rgba(248, 252, 255, 0) 38%,
+          rgba(248, 252, 255, 0.70) 56%,
+          rgba(248, 252, 255, 0.95) 76%,
+          #f8fcff 96%
+        );
+      }
+
+      .hero-container-align {
+        justify-content: center;
+        padding: 140px 16px 28px;
+      }
+
+      .hero-text-block {
+        text-align: center;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+
+      .hero-script-tag {
+        font-size: 2.2rem;
+      }
+
+      .hero-title {
+        font-size: 1.85rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .hero-actions .btn-primary {
+        width: 100%;
+        max-width: 275px;
+      }
+
+      /* Pilares: Scroll Snap Horizontal */
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 12px;
+        padding: 4px 16px;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 210px;
+        scroll-snap-align: start;
+        border-right: none;
+        background: #ffffff;
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-sm);
+        padding: 10px;
+      }
+
+      /* Servicios: Grid 2 Columnas Móvil */
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 12px;
+        row-gap: 16px;
+      }
+
+      .service-card {
+        aspect-ratio: 3/4.4;
+        min-height: 0;
+      }
+
+      .service-card-content {
+        padding: 8px 10px 10px !important;
+      }
+
+      .service-card-title {
+        font-size: 0.95rem;
+        margin-bottom: 2px;
+      }
+
+      .service-card-desc {
+        display: none !important;
+      }
+
+      .service-card-footer {
+        padding-top: 4px;
+        gap: 2px;
+      }
+
+      .service-card-price {
+        font-size: 0.98rem;
+      }
+
+      .btn-card-book-minimal {
+        font-size: 0.72rem;
+      }
+
+      /* Nosotros */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .salon-image-showcase img {
+        height: 320px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      /* Profesionales: Carrusel Scroll Snap Horizontal con Efecto Peek */
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px;
+        margin: 0 -24px;
+        width: calc(100% + 48px);
+        padding: 8px 24px 20px;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .team-card {
+        flex: 0 0 255px;
+        aspect-ratio: 3/4.2;
+        min-height: 0;
+        scroll-snap-align: start;
+      }
+
+      /* Ubicación */
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 30px 20px;
+      }
+
+      .map-actions {
+        flex-direction: column;
+      }
+
+      .map-actions .btn-primary {
+        width: 100%;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+      }
+
+      /* Footer */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SMART HEADER / NAVBAR -->
+  <header class="header-sticky-wrapper" id="main-header">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo Oficial Tipográfico Puro -->
+        <a href="#inicio" class="brand-logo">
+          <span class="brand-name">LUXURY <span>SMILE</span></span>
+          <span class="brand-subtitle">CLÍNICA ODONTOLÓGICA · MONTERÍA</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+
+        <a href="https://wa.me/573004970078?text=Hola%20Cl%C3%ADnica%20Odontol%C3%B3gica%20Luxury%20Smile%20Monter%C3%ADa%2C%20quisiera%20solicitar%20informaci%C3%B3n." class="btn-primary btn-header-cta" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú de navegación">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. HERO HEADER INMERSIVO FULL-WIDTH BLEED (#inicio) -->
+  <section class="hero-fullwidth-section" id="inicio">
+    <img 
+      src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1600&q=80" 
+      alt="Sonrisa Radiante en Clínica Odontológica Luxury Smile Montería" 
+      class="hero-bg-cover" 
+    />
+    <div class="hero-bg-overlay"></div>
+
+    <div class="container hero-container-align">
+      <div class="hero-text-block">
+        <span class="hero-script-tag">Sonrisa Radiante &amp; Saludable</span>
+        <span class="hero-eyebrow">CLÍNICA ODONTOLÓGICA · MONTERÍA</span>
+        <h1 class="hero-title">Sonrisas<br>Que Perduran<br><em>Toda una Vida.</em></h1>
+        <p class="hero-desc">Combinamos tecnología digital 3D, carillas cerámicas de alta precisión y atención médica libre de dolor en Montería.</p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/573004970078?text=Hola%20Cl%C3%ADnica%20Odontol%C3%B3gica%20Luxury%20Smile%20Monter%C3%ADa%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n." class="btn-primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Agendar Valoración
+          </a>
+          <a href="#servicios" class="btn-hero-minimal-link">
+            Ver Tratamientos <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="hero-proof-badge">
+          <span class="hero-proof-stars">★★★★★</span>
+          <span class="hero-proof-text">5.0 en Google Reviews (116 Pacientes Felices)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. BARRA DE PILARES / GARANTÍAS -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-tooth"></i></div>
+          <div class="pillar-text">
+            <h4>Tecnología 3D Digital</h4>
+            <p>Escáner intraoral sin moldes</p>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="pillar-text">
+            <h4>Atención Sin Dolor</h4>
+            <p>Protocolos de confort VIP</p>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+          <div class="pillar-text">
+            <h4>Diseño Personalizado</h4>
+            <p>Armonía facial &amp; naturalidad</p>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="pillar-text">
+            <h4>Bioseguridad VIP</h4>
+            <p>Esterilización hospitalaria</p>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-award"></i></div>
+          <div class="pillar-text">
+            <h4>Calificación 5.0★</h4>
+            <p>Líderes en Montería</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. CATÁLOGO DE SERVICIOS (#servicios) -->
+  <section class="section-padding" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-script-eyebrow">Tratamientos Exclusivos</span>
+        <h2 class="section-title">Especialidades Odontológicas de <em>Alta Gama</em></h2>
+        <p class="section-desc">Soluciones integrales de estética dental, ortodoncia e implantología diseñadas por especialistas certificados.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Diseño de Sonrisa Digital 3D" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Diseño de Sonrisa Digital 3D</h3>
+            <p class="service-card-desc">Transformación estética dental mediante carillas cerámicas o resina de alta definición calibradas con escáner 3D.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $1.200.000</div>
+              <a href="https://wa.me/573004970078?text=Hola,%20deseo%20agendar%20Dise%C3%B1o%20de%20Sonrisa%20Digital%203D" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 2 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" alt="Ortodoncia Invisible & Brackets" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Ortodoncia Invisible &amp; Brackets</h3>
+            <p class="service-card-desc">Alineación dental avanzada con alineadores transparentes o brackets estéticos autoligables para una sonrisa perfecta.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $180.000</div>
+              <a href="https://wa.me/573004970078?text=Hola,%20deseo%20agendar%20Ortodoncia%20Invisible" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 3 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80" alt="Blanqueamiento Dental LED" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Blanqueamiento Dental LED</h3>
+            <p class="service-card-desc">Aclaramiento dental intensivo con luz fría LED que elimina manchas profundas sin dañar el esmalte ni sensibilidad.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$250.000</div>
+              <a href="https://wa.me/573004970078?text=Hola,%20deseo%20agendar%20Blanqueamiento%20Dental%20LED" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 4 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Implantes Dentales de Titanio" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Implantes Dentales de Titanio</h3>
+            <p class="service-card-desc">Rehabilitación oral fija de alta duración con implantes oseointegrados y coronas de circonio idénticas al diente real.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $1.800.000</div>
+              <a href="https://wa.me/573004970078?text=Hola,%20deseo%20agendar%20Implantes%20Dentales" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 5 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Limpieza Profunda & Profilaxis" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Limpieza Profilaxis Ultrasonido</h3>
+            <p class="service-card-desc">Remoción de cálculo, placa bacteriana y manchas superficiales con ultrasonido de precisión y fluorización.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$120.000</div>
+              <a href="https://wa.me/573004970078?text=Hola,%20deseo%20agendar%20Limpieza%20Profilaxis%20Ultrasonido" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Servicio 6 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Endodoncia & Odontología Restauradora" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Endodoncia &amp; Restauración</h3>
+            <p class="service-card-desc">Tratamiento de conducto microscópico y reconstrucción estética para eliminar el dolor y conservar la pieza original.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$220.000</div>
+              <a href="https://wa.me/573004970078?text=Hola,%20deseo%20agendar%20Endodoncia%20%26%20Restauraci%C3%B3n" class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SOBRE NOSOTROS & EQUIPO (#nosotros) -->
+  <section class="section-padding nosotros-section" id="nosotros">
+    <div class="container">
+      <!-- BLOQUE EDITORIAL SOBRE NOSOTROS -->
+      <div class="experience-layout">
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Consultorio Odontológico Luxury Smile Montería" />
+          <div class="experience-floating-badge">
+            <div class="floating-badge-number">5.0★</div>
+            <div class="floating-badge-label">116 Reseñas en Google</div>
+          </div>
+        </div>
+
+        <div class="experience-content">
+          <span class="section-script-eyebrow">Sobre Nosotros</span>
+          <h2 class="section-title">Tu salud oral en manos<br><em>de verdaderos expertos.</em></h2>
+          <p>En Clínica Odontológica Luxury Smile Montería redefinimos la experiencia clínica combinando instalaciones de lujo con estándares internacionales de bioseguridad, diagnóstico 3D y tratamientos indoloros adaptados a tus objetivos estéticos.</p>
+
+          <div class="metrics-row">
+            <div class="metric-item">
+              <div class="metric-number">10+</div>
+              <div class="metric-label">Años Exp.</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">3.5k+</div>
+              <div class="metric-label">Sonrisas Diseñadas</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Digital 3D</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">5.0★</div>
+              <div class="metric-label">Calificación Google</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573004970078?text=Hola%20Cl%C3%ADnica%20Odontol%C3%B3gica%20Luxury%20Smile%20Monter%C3%ADa%2C%20quisiera%20mas%20informacion." class="btn-primary" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- NUESTROS PROFESIONALES -->
+      <div class="team-header">
+        <span class="section-script-eyebrow">Cuerpo Médico</span>
+        <h2 class="section-title">Nuestros <em>Odontólogos Especialistas</em></h2>
+      </div>
+
+      <div class="team-grid">
+        <!-- Odontólogo 1 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dra. Natalia Morales" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Dra. Natalia Morales</h3>
+            <div class="team-role">Estética &amp; Diseño de Sonrisa</div>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573004970078?text=Hola,%20quisiera%20agendar%20con%20Dra.%20Natalia%20Morales" class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Odontólogo 2 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Alejandro Restrepo" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Dr. Alejandro Restrepo</h3>
+            <div class="team-role">Implantólogo &amp; Cirujano</div>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573004970078?text=Hola,%20quisiera%20agendar%20con%20Dr.%20Alejandro%20Restrepo" class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Odontólogo 3 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1594824813566-78853b811402?auto=format&fit=crop&w=800&q=80" alt="Dra. Camila Torres" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Dra. Camila Torres</h3>
+            <div class="team-role">Ortodoncista &amp; Alineadores</div>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573004970078?text=Hola,%20quisiera%20agendar%20con%20Dra.%20Camila%20Torres" class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Odontólogo 4 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80" alt="Dr. Fernando Ruiz" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Dr. Fernando Ruiz</h3>
+            <div class="team-role">Rehabilitador &amp; Endodoncista</div>
+            <div class="team-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <a href="https://wa.me/573004970078?text=Hola,%20quisiera%20agendar%20con%20Dr.%20Fernando%20Ruiz" class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. MAPA & CONTACTO (#ubicacion) -->
+  <section class="section-padding" id="ubicacion">
+    <div class="container">
+      <div class="map-showcase-card">
+        <div class="map-info-panel">
+          <span class="section-script-eyebrow">Ubicación &amp; Citas</span>
+          <h2 class="section-title">Nuestra <em>Sede Odontológica</em></h2>
+
+          <ul class="info-list">
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="info-text">
+                <strong>Dirección Clínica</strong>
+                <p>Montería, Córdoba, Colombia</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="info-text">
+                <strong>Horario de Atención</strong>
+                <p>Lun a Vie: 8:00 AM – 6:00 PM<br>Sáb: 8:00 AM – 2:00 PM</p>
+              </div>
+            </li>
+
+            <li class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="info-text">
+                <strong>Teléfono &amp; WhatsApp</strong>
+                <p>(+57) 300 497 0078</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="map-actions">
+            <a href="https://maps.google.com/maps?q=Cl%C3%ADnica+Odontol%C3%B3gica+Luxury+Smile,+Monter%C3%ADa,+C%C3%B3rdoba" class="btn-primary" target="_blank" rel="noopener">
+              <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar
+            </a>
+            <a href="tel:+573004970078" class="btn-hero-minimal-link" style="border: 1px solid var(--border-soft); border-radius: 50px; padding: 12px 24px;">
+              <i class="fa-solid fa-phone"></i> Llamar Ahora
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Cl%C3%ADnica+Odontol%C3%B3gica+Luxury+Smile,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Clínica Odontológica Luxury Smile Montería">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOOTER PRINCIPAL -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna Marca -->
+        <div class="footer-col-brand">
+          <a href="#inicio" class="brand-logo">
+            <img src="data:image/png;base64,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" alt="Clínica Odontológica Luxury Smile" class="brand-logo-img" />
+          </a>
+          <p class="footer-brand-desc">Odontología de alta gama, diseño de sonrisa digital y tratamientos avanzados sin dolor para cuidar tu salud oral en Montería.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/573004970078" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna Enlaces -->
+        <div>
+          <h4 class="footer-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Tratamientos</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#nosotros">Odontólogos</a></li>
+            <li><a href="#ubicacion">Ubicación &amp; Mapa</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Horarios -->
+        <div>
+          <h4 class="footer-title">Atención</h4>
+          <ul class="footer-links">
+            <li><strong style="color: #4cd5f5;">Lunes a Viernes:</strong><br>8:00 AM – 6:00 PM</li>
+            <li><strong style="color: #4cd5f5;">Sábados:</strong><br>8:00 AM – 2:00 PM</li>
+            <li><strong style="color: #4cd5f5;">Ciudad:</strong><br>Montería, Córdoba</li>
+          </ul>
+        </div>
+
+        <!-- Columna Módulo Reserva -->
+        <div>
+          <div class="reservation-card">
+            <h4>Agenda tu Valoración</h4>
+            <p>Reserva tu turno prioritario por WhatsApp con nuestros especialistas.</p>
+            <a href="https://wa.me/573004970078?text=Hola%20Cl%C3%ADnica%20Odontol%C3%B3gica%20Luxury%20Smile%20Monter%C3%ADa%2C%20quisiera%20agendar%20una%20valoraci%C3%B3n." class="btn-primary btn-footer-reserve" target="_blank" rel="noopener">
+              Agendar
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Clínica Odontológica Luxury Smile Montería. Todos los derechos reservados.</p>
+        <p>Optimizado para SEO Local &amp; Experiencia Móvil</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/573004970078?text=Hola%20Cl%C3%ADnica%20Odontol%C3%B3gica%20Luxury%20Smile%20Monter%C3%ADa%2C%20quisiera%20solicitar%20informaci%C3%B3n." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- SMART HEADER SCRIPT & MOBILE MENU TOGGLE -->
+  <script>
+    (function () {
+      const header = document.getElementById('main-header');
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      // Toggle Mobile Menu
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const navLinks = document.querySelector('.nav-links');
+      const menuIcon = mobileMenuToggle.querySelector('i');
+
+      mobileMenuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        if (navLinks.classList.contains('nav-active')) {
+          menuIcon.className = 'fa-solid fa-xmark';
+        } else {
+          menuIcon.className = 'fa-solid fa-bars';
+        }
+      });
+
+      // Close mobile menu when clicking links
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('nav-active');
+          menuIcon.className = 'fa-solid fa-bars';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

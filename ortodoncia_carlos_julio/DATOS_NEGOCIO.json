@@ -1,0 +1,30 @@
+{
+  "id": "lead-1789763126373-16",
+  "status": "nuevo",
+  "notes": "Clínica de ortodoncia especializada de alta gama.",
+  "negocio": {
+    "nombre": "Ortodoncia Dr. Carlos Julio",
+    "nombre_comercial": "Dr. Carlos Julio — Ortodoncia Especializada",
+    "rubro": "Clínica Odontológica",
+    "categoria": "ortodoncia",
+    "calificacion": "5.0",
+    "resenas": "50",
+    "contacto": {
+      "telefono_principal": "(+57) 321 523 9435",
+      "telefono": "(+57) 321 523 9435",
+      "whatsapp": {
+        "numero": "(+57) 321 523 9435",
+        "link": "https://wa.me/573215239435?text=Hola%20Dr.%20Carlos%20Julio%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20los%20tratamientos%20de%20ortodoncia."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 44 #10 - 91",
+      "ciudad": "Montería",
+      "google_maps_url": "https://maps.google.com/maps?q=Ortodoncia+Carlos+Julio,+Monteria,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "sitio_web": "https://www.ortodonciacarlosjulio.com/",
+    "sistema_reservas": {
+      "oportunidad_saas": "ALTA (Lead Calificado)"
+    }
+  }
+}

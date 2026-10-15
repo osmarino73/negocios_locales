@@ -1,0 +1,106 @@
+{
+  "id": "rio_centro_odontologico_monteria",
+  "status": "activo",
+  "negocio": {
+    "nombre": "Rio Centro Odontologico",
+    "rubro": "Clínica Odontológica",
+    "categoria": "odontologia",
+    "eslogan": "Rio Centro Odontologico — Sonrisas de Autor & Salud Oral en Montería",
+    "calificacion": "5.0",
+    "resenas": "50",
+    "contacto": {
+      "telefono_principal": "(+57) 301 284 5326",
+      "whatsapp": {
+        "numero": "+573012845326",
+        "link": "https://wa.me/573012845326?text=Hola%20Rio%20Centro%20Odontologico%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Montería, Córdoba, Colombia",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://maps.google.com/maps?q=Rio+Centro+Odontologico,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": "Lunes a Viernes: 8:00 AM - 6:30 PM | Sábados: 8:00 AM - 1:30 PM",
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "oportunidad_saas": "ALTA",
+      "motivo_auditoria": "Landing page de estética odontológica con arquitectura de lujo y conversión por WhatsApp."
+    },
+    "servicios": [
+      {
+        "nombre": "Diseño de Sonrisa Cerámico",
+        "duracion": "60 min",
+        "precio": "$1.350.000",
+        "descripcion": "Transformación estética dental de autor con carillas de disilicato de litio calibradas digitalmente para máxima naturalidad.",
+        "imagen": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Ortodoncia de Alta Definición",
+        "duracion": "45 min",
+        "precio": "$190.000",
+        "descripcion": "Alineación dental avanzada con brackets estéticos de zafiro o alineadores invisibles de alta precisión.",
+        "imagen": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Blanqueamiento Láser VIP",
+        "duracion": "50 min",
+        "precio": "$280.000",
+        "descripcion": "Tratamiento de aclaramiento dental intensivo con tecnología láser fría que garantiza tonos más blancos sin sensibilidad.",
+        "imagen": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Rehabilitación e Implantes 3D",
+        "duracion": "90 min",
+        "precio": "$1.950.000",
+        "descripcion": "Reemplazo de piezas dentales faltantes mediante implantes oseointegrados y coronas de zirconio de durabilidad garantizada.",
+        "imagen": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Profilaxis & Detox Oral Ultrasonido",
+        "duracion": "40 min",
+        "precio": "$130.000",
+        "descripcion": "Higiene profunda con eliminación de placa y sarro mediante ultrasonido sin dolor, pulido estético y aplicación de flúor.",
+        "imagen": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Endodoncia Microscópica",
+        "duracion": "60 min",
+        "precio": "$240.000",
+        "descripcion": "Tratamiento de conducto guiado por microscopio clínico para salvar dientes comprometidos y eliminar dolor de raíz.",
+        "imagen": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Dr. Juan Pablo Ríos",
+        "rol": "Director Médico & Especialista en Estética Oral",
+        "experiencia": "11+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Dra. Sofía Mendoza",
+        "rol": "Especialista en Ortodoncia & Alineadores",
+        "experiencia": "8+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Dr. Andrés Villalba",
+        "rol": "Cirujano Maxilofacial & Implantólogo",
+        "experiencia": "10+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Dra. Valeria Gómez",
+        "rol": "Rehabilitadora Oral & Endodoncista",
+        "experiencia": "7+ años de experiencia",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1594824813566-78853b811402?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}
