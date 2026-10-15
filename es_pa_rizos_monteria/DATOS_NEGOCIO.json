@@ -1,0 +1,116 @@
+{
+  "negocio": {
+    "nombre": "Es Pa'Rizos Salón de belleza y Barbería en Montería",
+    "nombre_corto": "Es Pa'Rizos",
+    "subtitulo": "Salón de belleza & Barbería · Montería",
+    "rubro": "Peluquería",
+    "categoria": "barberia",
+    "especialidad": "Peluquería Canina, Rizos, Corte Rizo a Rizo & Barbería Clásica",
+    "eslogan": "Es Pa'Rizos Salón de belleza y Barbería en Montería — Peluquería en Montería",
+    "calificacion": "4.8",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 300 811 1516",
+      "whatsapp": {
+        "numero": "+573008111516",
+        "link": "https://wa.me/573008111516?text=Hola%20Es%20Pa'Rizos%20Sal%C3%B3n%20de%20belleza%20y%20Barber%C3%ADa%20en%20Monter%C3%ADa%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 24 #8-11 Loc 2, Montería, Córdoba",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Es+Pa'Rizos+Sal%C3%B3n+de+belleza+y+Barber%C3%ADa+en+Monter%C3%ADa/@8.7603455,-75.9029552,15z/data=!4m10!1m2!2m1!1ssalon+de+belleza+en+monteria!3m6!1s0x8e5a31e43631ed3d:0x4d1b1373bb37dcc8!8m2!3d8.7514768!4d-75.8848247!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhWh4iHHNhbG9uIGRlIGJlbGxlemEgZW4gbW9udGVyaWGSAQpoYWlyX3NhbG9umgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJJTm5GcE9YTjNSUkFC4AEA-gEECAAQMg!16s%2Fg%2F11mvv818jm",
+      "iframe_maps": "https://maps.google.com/maps?q=Es+Pa%27Rizos+Sal%C3%B3n+de+belleza+y+Barber%C3%ADa,+Cl.+24+%238-11+Loc+2,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:00 PM · Domingos con cita previa",
+    "sitio_web": "https://instagram.com/esparizos?igshid=4bmvti9c388x",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
+    },
+    "servicios": [
+      {
+        "id": "definicion-rizos",
+        "nombre": "Definición & Tratamiento de Rizos",
+        "descripcion": "Técnica avanzada de hidratación, nutrición y muelle de rizos con productos prémium libres de sulfatos.",
+        "precio": "$85.000",
+        "precio_num": 85000,
+        "categoria": "Rizos",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte-rizo-a-rizo",
+        "nombre": "Corte Especializado Rizo a Rizo",
+        "descripcion": "Corte en seco adaptado a la caída natural y patrón de ondas de tu cabello para maximizar volumen y estructura.",
+        "precio": "$65.000",
+        "precio_num": 65000,
+        "categoria": "Corte & Estilo",
+        "imagen": "https://images.unsplash.com/photo-1562004768-ace650be73d3?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "barba-royale-perfilado",
+        "nombre": "Barba Royale & Perfilado Rizo",
+        "descripcion": "Ritual de toalla caliente, perfilado a navaja tradicional y aceites esenciales para barba y patillas.",
+        "precio": "$45.000",
+        "precio_num": 45000,
+        "categoria": "Barbería",
+        "imagen": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "hidratacion-glow",
+        "nombre": "Hidratación Profunda & Glow Capilar",
+        "descripcion": "Mascarilla intensiva con infusión de keratina vegetal y aceites tropicales para un brillo sedoso incomparable.",
+        "precio": "$95.000",
+        "precio_num": 95000,
+        "categoria": "Tratamiento",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte-fade-barbero",
+        "nombre": "Corte Fuego & Fade Barbero",
+        "descripcion": "Degradado de alta precisión (Fade, Low, Mid o High) con texturizado superior y peinado final.",
+        "precio": "$50.000",
+        "precio_num": 50000,
+        "categoria": "Barbería",
+        "imagen": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "coloracion-luces-rizos",
+        "nombre": "Coloración & Luces para Rizos",
+        "descripcion": "Técnica de iluminado o tinte diseñado específicamente para cuidar la elasticidad y hebra del rizo.",
+        "precio": "$130.000",
+        "precio_num": 130000,
+        "categoria": "Color",
+        "imagen": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Yennifer Restrepo",
+        "rol": "Especialista en Rizos & Visagismo Capilar",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Carlos Mendoza",
+        "rol": "Maestro Barbero & Perfilado Tradicional",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Valentina Gómez",
+        "rol": "Terapeuta Capilar & Hidratación Zen",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Andrés Palacios",
+        "rol": "Estilista Curly & Colorista de Autor",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}

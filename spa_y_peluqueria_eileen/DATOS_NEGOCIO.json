@@ -1,0 +1,80 @@
+{
+  "negocio": {
+    "nombre": "Spa y peluqueria Eileen",
+    "rubro": "Centro de Estética, Spa & Peluquería",
+    "categoria": "spa",
+    "eslogan": "Spa y peluqueria Eileen — Centro de estética en Carepa",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 300 675 5739",
+      "whatsapp": {
+        "numero": "+573006755739",
+        "link": "https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 80, Carepa, Antioquia",
+      "ciudad": "Carepa",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Spa+y+peluqueria+Eileen/@7.760161,-76.6764593,15z/data=!4m10!1m2!2m1!1ssal%C3%B3n+de+belleza+en+carepa,+Antioquia!3m6!1s0x8e5011edfdced331:0xec852d5e88a9f45b!8m2!3d7.7545704!4d-76.6584695!15sCiZzYWzDs24gZGUgYmVsbGV6YSBlbiBjYXJlcGEsIEFudGlvcXVpYZIBDGJlYXV0eV9zYWxvbuABAA!16s%2Fg%2F11j7st6d0c"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM – 7:00 PM",
+    "sitio_web": "http://www.spaeileen.com.co/",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
+    },
+    "servicios": [
+      {
+        "titulo": "Nail Art & Esculpidas 3D",
+        "descripcion": "Diseño de uñas acrílicas, gel, efectos 3D, pedrería y esmaltado semipermanente.",
+        "precio": "$85.000"
+      },
+      {
+        "titulo": "Balayage & Colorimetría",
+        "descripcion": "Iluminación capilar, babylights y reconstrucción intensiva del color.",
+        "precio": "$220.000"
+      },
+      {
+        "titulo": "Spa Facial & Limpieza Ultrasónica",
+        "descripcion": "Limpieza facial profunda, hidratación con ácido hialurónico y velo orgánico.",
+        "precio": "$120.000"
+      },
+      {
+        "titulo": "Cortes & Peinados Sociales",
+        "descripcion": "Diseño de corte personalizado, brushing, ondas al agua y peinados de gala.",
+        "precio": "$75.000"
+      },
+      {
+        "titulo": "Masajes Relajantes & Spa Corporal",
+        "descripcion": "Masaje descontracturante, aromaterapia y piedras volcánicas para relajación total.",
+        "precio": "$130.000"
+      },
+      {
+        "titulo": "Maquillaje Profesional & Novias",
+        "descripcion": "Maquillaje social y novias de alta definición con acabado duradero.",
+        "precio": "$150.000"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Eileen Torres",
+        "rol": "Master Stylist & Directora"
+      },
+      {
+        "nombre": "Valeria Gómez",
+        "rol": "Master Nail Artist & 3D Design"
+      },
+      {
+        "nombre": "Camila Morales",
+        "rol": "Especialista en Piel & Spa Facial"
+      },
+      {
+        "nombre": "Sofia Restrepo",
+        "rol": "Colorista & Balayage Specialist"
+      }
+    ]
+  }
+}

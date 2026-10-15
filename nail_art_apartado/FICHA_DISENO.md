@@ -51,7 +51,7 @@ Documentación técnica y tokens de diseño para **Nail Art Sede Apartado** en A
    - **Navbar 100% transparente en el Hero**: `background: transparent; border-bottom: 1px solid transparent; backdrop-filter: none;` con `text-shadow` de alto contraste en branding y enlaces.
    - Activa fondo oscuro obsidian con `backdrop-filter: blur(14px)` únicamente al descender más allá del Hero (`currentScrollY > heroBottom - 120`).
    - Permanente y visible durante todo el recorrido del Hero Canvas; auto-hide suave al descender en secciones inferiores.
-   - En móvil (< 768px): Logotipo a la izquierda y botón conciso **«Agendar»** a la derecha. Menú hamburguesa deshabilitado.
+   - En móvil (< 768px): Logotipo con el 100% del ancho disponible (prohibido botón «Agendar» en navbar móvil; menú hamburguesa deshabilitado).
    - Soporte de `padding-top: env(safe-area-inset-top, 0px)`.
 2. **`#inicio` (Canvas Video Scrubbing)**:
    - 300vh de scroll interactivo sincronizado con el cursor o el dedo.

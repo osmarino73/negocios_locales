@@ -462,14 +462,18 @@
       height: 100%;
       z-index: 3;
       pointer-events: none;
-      background: linear-gradient(
-        90deg,
-        #0d0b0d 0%,
-        rgba(13, 11, 13, 0.90) 22%,
-        rgba(13, 11, 13, 0.65) 38%,
-        rgba(13, 11, 13, 0.20) 54%,
-        transparent 70%
-      );
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(13, 11, 13, 0.65) 100%),
+        linear-gradient(
+          90deg,
+          #0d0b0d 0%,
+          #0d0b0d 24%,
+          rgba(13, 11, 13, 0.96) 34%,
+          rgba(13, 11, 13, 0.78) 44%,
+          rgba(13, 11, 13, 0.45) 55%,
+          rgba(13, 11, 13, 0.15) 66%,
+          transparent 78%
+        );
     }
 
     .hero-container-align {
@@ -848,16 +852,16 @@
       transform: scale(1.06);
     }
 
-    /* Degradado Aterciopelado Inferior (38% superior transparente) */
+    /* Degradado Aterciopelado Inferior (45% superior transparente) */
     .service-card-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(
         180deg,
         rgba(13, 11, 13, 0) 0%,
-        rgba(13, 11, 13, 0) 38%,
-        rgba(13, 11, 13, 0.68) 65%,
-        rgba(13, 11, 13, 0.94) 90%,
+        rgba(13, 11, 13, 0) 45%,
+        rgba(13, 11, 13, 0.72) 72%,
+        rgba(13, 11, 13, 0.95) 92%,
         #0d0b0d 100%
       );
       z-index: 2;
@@ -867,55 +871,65 @@
     .service-card-content {
       position: relative;
       z-index: 3;
-      padding: 24px 22px;
+      padding: 20px 18px 16px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
     }
 
     .service-card-accent-line {
-      width: 38px;
+      width: 32px;
       height: 2px;
       background: var(--color-accent);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       transition: width 0.3s ease;
     }
 
     .service-card:hover .service-card-accent-line {
-      width: 60px;
+      width: 50px;
       background: var(--color-accent);
     }
 
     .service-card-desc {
-      font-size: 0.82rem;
-      color: rgba(255, 255, 255, 0.82);
-      line-height: 1.4;
-      margin-bottom: 6px;
+      display: none;
     }
 
     .service-card-title {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: 1.22rem;
       font-weight: 600;
       color: #ffffff;
-      line-height: 1.25;
-      margin-bottom: 8px;
+      line-height: 1.2;
+      margin-bottom: 6px;
     }
 
     .service-card-footer {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
       width: 100%;
       margin-top: 8px;
-      padding-top: 10px;
+      padding-top: 8px;
       border-top: 1px solid rgba(255, 255, 255, 0.14);
+      gap: 6px;
     }
 
     .service-card-price {
       font-size: 1.05rem;
       font-weight: 700;
       color: var(--color-accent);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      width: 100%;
+    }
+
+    .service-card-price small {
+      font-size: 0.72em;
+      font-weight: 500;
+      opacity: 0.85;
+      text-transform: capitalize;
     }
 
     .btn-card-book-minimal {
@@ -931,7 +945,8 @@
       align-items: center;
       gap: 6px;
       transition: var(--transition);
-      padding: 4px 0;
+      padding: 2px 0;
+      width: 100%;
     }
 
     .btn-card-book-minimal i {
@@ -1573,9 +1588,9 @@
         background: linear-gradient(
           180deg,
           rgba(13, 11, 13, 0) 0%,
-          rgba(13, 11, 13, 0) 44%,
-          rgba(13, 11, 13, 0.40) 58%,
-          rgba(13, 11, 13, 0.85) 75%,
+          rgba(13, 11, 13, 0) 36%,
+          rgba(13, 11, 13, 0.65) 54%,
+          rgba(13, 11, 13, 0.94) 74%,
           #0d0b0d 96%
         );
       }
@@ -1703,7 +1718,7 @@
         min-width: 0 !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 14px 10px;
+        padding: 0 !important;
         border-radius: 16px;
         border: 1px solid rgba(216, 125, 125, 0.35);
         box-shadow: 0 10px 28px rgba(0, 0, 0, 0.8), 0 0 12px rgba(216, 125, 125, 0.1);
@@ -1712,40 +1727,62 @@
       .service-card-content {
         min-width: 0;
         width: 100%;
+        padding: 8px 10px 10px !important;
       }
 
       .service-card-accent-line {
-        width: 22px;
-        margin-bottom: 6px;
+        width: 18px;
+        height: 1.5px;
+        margin-bottom: 3px;
       }
 
       .service-card-title {
-        font-size: 0.93rem;
+        font-size: 0.82rem;
         line-height: 1.15;
-        margin-bottom: 6px;
+        margin-bottom: 3px;
         word-break: break-word;
         overflow-wrap: break-word;
       }
 
       .service-card-desc {
-        display: none;
+        display: none !important;
       }
 
       .service-card-footer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-        padding-top: 8px;
-        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        gap: 3px !important;
+        width: 100% !important;
+        padding-top: 4px !important;
+        margin-top: 3px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
       }
 
       .service-card-price {
-        font-size: 0.92rem;
+        font-size: 0.80rem !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        gap: 3px !important;
+        width: 100% !important;
+      }
+
+      .service-card-price small {
+        font-size: 0.72em !important;
+        font-weight: 500 !important;
+        opacity: 0.85 !important;
       }
 
       .btn-card-book-minimal {
-        font-size: 0.72rem;
+        font-size: 0.68rem !important;
+        line-height: 1.2 !important;
+        padding: 0 !important;
+        white-space: nowrap !important;
+        width: 100% !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 5px !important;
       }
 
       /* Sobre Nosotros en Móvil */
@@ -1953,6 +1990,10 @@
                   Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">Atención personalizada con cita previa</span>
+              </div>
             </div>
 
           </div>
@@ -2041,7 +2082,7 @@
               <h3 class="service-card-title">Manicura Rusa &amp; Semipermanente</h3>
               <p class="service-card-desc">Técnica de limpieza milimétrica de cutícula y esmaltado de alta precisión con duración de hasta 21 días.</p>
               <div class="service-card-footer">
-                <span class="service-card-price">$45.000 COP</span>
+                <span class="service-card-price">$45.000</span>
                 <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Manicura%20Rusa%20y%20Semipermanente." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                   AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -2058,7 +2099,7 @@
               <h3 class="service-card-title">Extensiones Acrílicas Esculpidas</h3>
               <p class="service-card-desc">Construcción arquitectónica sobre molde con curvatura natural, máxima resistencia y estilizado impecable.</p>
               <div class="service-card-footer">
-                <span class="service-card-price">Desde $85.000 COP</span>
+                <span class="service-card-price"><small>Desde</small> $85.000</span>
                 <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Extensiones%20Acr%C3%ADlicas%20Esculpidas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                   AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -2068,14 +2109,14 @@
 
           <!-- Servicio 3 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Nail Art & Detalles en Pan de Oro Dp Beauty Nails" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art & Detalles en Pan de Oro Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
               <h3 class="service-card-title">Nail Art &amp; Detalles en Pan de Oro</h3>
               <p class="service-card-desc">Creaciones a mano alzada, incrustaciones foil, pedrería fina y encapsulados con acabados de pasarela.</p>
               <div class="service-card-footer">
-                <span class="service-card-price">Desde $35.000 COP</span>
+                <span class="service-card-price"><small>Desde</small> $35.000</span>
                 <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Nail%20Art%20y%20Detalles%20en%20Pan%20de%20Oro." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                   AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -2085,14 +2126,14 @@
 
           <!-- Servicio 4 -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping & Gel Nivelador Dp Beauty Nails" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Kapping & Gel Nivelador Dp Beauty Nails" class="service-card-img" loading="lazy">
             <div class="service-card-overlay"></div>
             <div class="service-card-content">
               <div class="service-card-accent-line"></div>
               <h3 class="service-card-title">Kapping &amp; Gel Nivelador</h3>
               <p class="service-card-desc">Blindaje protector de gel que refuerza la uña débil o quebradiza, promoviendo su crecimiento sano y firme.</p>
               <div class="service-card-footer">
-                <span class="service-card-price">$55.000 COP</span>
+                <span class="service-card-price">$55.000</span>
                 <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Kapping%20y%20Gel%20Nivelador." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                   AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -2109,7 +2150,7 @@
               <h3 class="service-card-title">Pedicura Spa &amp; Exfoliación Relajante</h3>
               <p class="service-card-desc">Tratamiento podal integral con sales minerales, hidratación botánica profunda y masaje descontracturante.</p>
               <div class="service-card-footer">
-                <span class="service-card-price">$40.000 COP</span>
+                <span class="service-card-price">$40.000</span>
                 <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Pedicura%20Spa%20y%20Exfoliaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                   AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -2126,7 +2167,7 @@
               <h3 class="service-card-title">Retiro Seguro &amp; Spa Nutritivo</h3>
               <p class="service-card-desc">Remoción profesional libre de abrasión mecánica con baño nutritivo de aceites esenciales y keratina pura.</p>
               <div class="service-card-footer">
-                <span class="service-card-price">$25.000 COP</span>
+                <span class="service-card-price">$25.000</span>
                 <a href="https://wa.me/573005078357?text=Hola%20Dp%20Beauty%20Nails%2C%20deseo%20agendar%20el%20servicio%20de%20Retiro%20Seguro%20y%20Spa%20Nutritivo." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                   AGENDAR <i class="fa-solid fa-arrow-right"></i>
                 </a>

@@ -10,10 +10,10 @@
   
   <!-- Open Graph / Meta Social -->
   <meta property="og:title" content="Rizos Felices Urabá | Especialistas en Cabello Rizado">
-  <meta property="og:description" content="Realzando tu belleza natural rizo a rizo. Cortes en seco, terapias botánicas y asesoría experta en Apartadó.">
+  <meta property="og:description" content="Realzando tu belleza natural rizo a rizo. Cortes en seco hebra por hebra, terapias botánicas y asesoría experta en Apartadó.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_CO">
-  <meta property="og:image" content="../assets/heroes/peinados/Woman_smiling_with_styled_hair_202609021630.webp">
+  <meta property="og:image" content="public/frames/desktop/poster.webp">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -52,17 +52,17 @@
   }
   </script>
 
-  <!-- Google Fonts: DM Serif Display & Plus Jakarta Sans -->
+  <!-- Google Fonts: DM Serif Display, Plus Jakarta Sans, Alex Brush -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
     /* ============================================================
-       VARIABLES & DESIGN SYSTEM (FORENSIC TMR HAUTE BEAUTY)
+       VARIABLES & DESIGN SYSTEM (FORENSIC HAUTE BEAUTY TMR)
     ============================================================ */
     :root {
       --bg-base: #0a0807;
@@ -82,15 +82,16 @@
       --text-dark-btn: #1a130e;
 
       --font-display: 'DM Serif Display', Georgia, serif;
+      --font-script: 'Alex Brush', cursive;
       --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
       --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
       --radius-pill: 9999px;
 
-      --shadow-card: 0 12px 35px rgba(0, 0, 0, 0.5);
-      --shadow-gold: 0 6px 20px rgba(223, 183, 140, 0.25);
+      --shadow-card: 0 14px 40px rgba(0, 0, 0, 0.55);
+      --shadow-gold: 0 8px 25px rgba(223, 183, 140, 0.25);
       --transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -100,23 +101,20 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      overflow-x: hidden;
+    /* Regla Mandatoria: overflow-x: clip para proteger position: sticky del Canvas */
+    html, body {
+      margin: 0;
+      padding: 0;
       width: 100%;
       max-width: 100%;
-    }
-
-    body {
-      font-family: var(--font-body);
+      overflow-x: clip;
+      overflow-y: visible;
       background-color: var(--bg-base);
       color: var(--text-main);
+      font-family: var(--font-body);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      width: 100%;
-      max-width: 100%;
+      scroll-behavior: smooth;
     }
 
     img {
@@ -138,7 +136,7 @@
       padding: 0 24px;
     }
 
-    /* Utilitario Serifa Itálica Dorada */
+    /* Utilitarios Tipográficos Forenses */
     .italic-gold {
       font-family: var(--font-display);
       font-style: italic;
@@ -147,7 +145,7 @@
     }
 
     /* ============================================================
-       SMART HEADER & NAVBAR
+       SMART HEADER & NAVBAR INTELIGENTE
     ============================================================ */
     .header-sticky-wrapper {
       position: fixed;
@@ -156,7 +154,7 @@
       width: 100%;
       z-index: 1000;
       padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.4s ease, background 0.3s ease;
+      transition: transform 0.4s ease, background 0.3s ease, border-color 0.3s ease;
     }
 
     .header-sticky-wrapper.header-hidden {
@@ -164,7 +162,7 @@
     }
 
     .header-sticky-wrapper.header-scrolled {
-      background: rgba(10, 8, 7, 0.95);
+      background: rgba(10, 8, 7, 0.94);
       backdrop-filter: blur(14px);
       box-shadow: 0 4px 25px rgba(0,0,0,0.5);
       border-bottom: 1px solid var(--gold-border);
@@ -200,6 +198,7 @@
       text-transform: uppercase;
       font-weight: 600;
       margin-top: 2px;
+      white-space: nowrap;
     }
 
     .nav-links {
@@ -242,104 +241,166 @@
     }
 
     /* ============================================================
-       HERO FULL-WIDTH BLEED
+       CANVAS VIDEO SCROLL SCRUBBING HERO (#inicio)
     ============================================================ */
-    .hero-fullwidth-section {
+    .hero-scroll-section {
       position: relative;
-      min-height: 650px;
+      height: 300vh;
+      width: 100%;
+      background-color: #0a0807;
+    }
+
+    .canvas-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
       display: flex;
       align-items: center;
-      background-color: #0c0907;
-      padding: 120px 0 70px;
-      overflow: hidden;
+      justify-content: center;
     }
 
-    .hero-bg-cover {
+    #scroll-video-canvas {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 65%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .hero-bg-img {
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: right center;
-      opacity: 0.96;
+      z-index: 1;
+      image-rendering: -webkit-optimize-contrast;
     }
 
-    .hero-bg-overlay {
+    .canvas-poster-img {
       position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        90deg, 
-        #0c0907 0%, 
-        #0c0907 26%, 
-        rgba(12, 9, 7, 0.98) 35%, 
-        rgba(12, 9, 7, 0.88) 44%, 
-        rgba(12, 9, 7, 0.65) 54%, 
-        rgba(12, 9, 7, 0.35) 66%, 
-        rgba(12, 9, 7, 0.12) 78%, 
-        rgba(12, 9, 7, 0.02) 88%, 
-        transparent 95%
-      );
-    }
-
-    .hero-content-wrapper {
-      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       z-index: 2;
+      transition: opacity 0.35s ease;
     }
 
-    .hero-text-block {
+    .canvas-poster-img.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Capa de degradado aterciopelado: horizontal + protección inferior */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(10, 8, 7, 0.55) 100%),
+        linear-gradient(
+          90deg,
+          #0a0807 0%,
+          #0a0807 24%,
+          rgba(10, 8, 7, 0.96) 34%,
+          rgba(10, 8, 7, 0.82) 44%,
+          rgba(10, 8, 7, 0.50) 56%,
+          rgba(10, 8, 7, 0.16) 68%,
+          transparent 80%
+        );
+    }
+
+    /* Anclaje Inferior Mandatorio (60% Superior Despejado) */
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 0;
+      padding-bottom: clamp(48px, 9vh, 85px);
+    }
+
+    .hero-scroll-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
       max-width: 580px;
+      min-height: 295px;
     }
 
-    .eyebrow-line {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.76rem;
+    .hero-scroll-step {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(18px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scroll-step.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Firma Caligráfica de Marca */
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 3.4vw, 2.75rem);
+      line-height: 1.05;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
+      display: block;
+      font-weight: 400;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.70rem;
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--accent-gold);
-      margin-bottom: 14px;
-    }
-
-    .eyebrow-line::after {
-      content: '';
-      display: inline-block;
-      width: 35px;
-      height: 1px;
-      background: var(--accent-gold);
-      margin-left: 10px;
-      vertical-align: middle;
-      opacity: 0.7;
+      margin-bottom: 12px;
+      display: block;
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: 3.5rem;
-      line-height: 1.08;
+      font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+      line-height: 1.12;
       color: var(--text-main);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
       font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 4px 25px rgba(0, 0, 0, 0.9);
     }
 
     .hero-desc {
       color: var(--text-muted);
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 30px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      margin-bottom: 22px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
       gap: 16px;
+      margin-bottom: 18px;
     }
 
     .btn-primary {
@@ -349,13 +410,14 @@
       gap: 10px;
       background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
       color: var(--text-dark-btn);
-      padding: 14px 30px;
+      padding: 13px 28px;
       border-radius: var(--radius-sm);
-      font-size: 0.92rem;
+      font-size: 0.90rem;
       font-weight: 700;
       letter-spacing: 0.03em;
       box-shadow: var(--shadow-gold);
       border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
     }
 
     .btn-primary:hover {
@@ -364,63 +426,53 @@
       background: linear-gradient(135deg, #ebd0b0 0%, var(--accent-gold) 100%);
     }
 
-    .btn-secondary {
+    .btn-hero-minimal-link {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(10px);
-      color: var(--text-main);
-      padding: 14px 26px;
-      border-radius: var(--radius-sm);
-      font-size: 0.92rem;
-      font-weight: 500;
-      border: 1px solid var(--gold-border-bright);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(223, 183, 140, 0.1);
-      border-color: var(--accent-gold);
-      color: var(--accent-gold);
-    }
-
-    .hero-floating-badge {
-      position: absolute;
-      bottom: 24px;
-      right: 28px;
-      z-index: 3;
-      background: rgba(20, 16, 13, 0.88);
-      backdrop-filter: blur(14px);
-      border: 1px solid var(--gold-border);
-      padding: 14px 22px;
-      border-radius: var(--radius-md);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: var(--shadow-card);
-    }
-
-    .hero-badge-number {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      color: var(--accent-gold);
-      font-weight: 400;
-      line-height: 1;
-    }
-
-    .hero-badge-text {
-      font-size: 0.72rem;
+      gap: 8px;
       color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin: 4px 0 2px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 8px 0;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
 
-    .hero-badge-stars {
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--accent-gold);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(20, 16, 13, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-border);
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 0.76rem;
+      color: var(--text-main);
+    }
+
+    .hero-proof-stars {
       color: #f5b041;
-      font-size: 0.75rem;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
+    }
+
+    .hero-proof-text {
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
     /* ============================================================
@@ -430,7 +482,9 @@
       background: var(--bg-surface);
       border-top: 1px solid var(--gold-border);
       border-bottom: 1px solid var(--gold-border);
-      padding: 30px 0;
+      padding: 32px 0;
+      position: relative;
+      z-index: 10;
     }
 
     .guarantees-grid {
@@ -467,8 +521,8 @@
 
     .guarantee-item:hover .guarantee-icon-wrap {
       border-color: var(--accent-gold);
-      background: rgba(223, 183, 140, 0.16);
-      transform: scale(1.05);
+      background: rgba(223, 183, 140, 0.18);
+      transform: scale(1.06);
     }
 
     .guarantee-info h4 {
@@ -485,144 +539,212 @@
     }
 
     /* ============================================================
-       CATÁLOGO DE SERVICIOS (6 COLUMNAS)
+       CATÁLOGO DE SERVICIOS (GRID 3 COLUMNAS — FULL-BLEED MINIMALISTA)
     ============================================================ */
     .services-section {
-      padding: 95px 0;
+      padding: 100px 0;
       background: var(--bg-base);
     }
 
     .section-header-center {
       text-align: center;
-      max-width: 650px;
+      max-width: 680px;
       margin: 0 auto 55px;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 400;
+    }
+
+    .section-eyebrow {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      display: block;
     }
 
     .section-title {
       font-family: var(--font-display);
-      font-size: 2.8rem;
+      font-size: clamp(2.3rem, 3.4vw, 3rem);
       color: var(--text-main);
       line-height: 1.15;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       font-weight: 400;
     }
 
     .section-desc {
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.6;
     }
 
-    .services-grid-6 {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
+    /* Tarjeta Full-Bleed Minimalista (3:4) */
     .service-card {
-      background: var(--bg-surface-card);
-      border-radius: var(--radius-md);
+      position: relative;
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: var(--radius-lg);
       overflow: hidden;
       border: 1px solid var(--gold-border);
       box-shadow: var(--shadow-card);
       transition: var(--transition);
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
     }
 
     .service-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       border-color: var(--accent-gold);
-      background: var(--bg-surface-hover);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(223, 183, 140, 0.2);
     }
 
-    .service-img-wrap {
-      width: 100%;
-      aspect-ratio: 1/1;
-      overflow: hidden;
-      background: #14100d;
-    }
-
-    .service-img {
+    .service-card-bg {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s ease;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
     }
 
-    .service-card:hover .service-img {
+    .service-card:hover .service-card-bg {
       transform: scale(1.06);
     }
 
-    .service-content {
-      padding: 16px;
+    /* Degradado aterciopelado: 40-45% superior 100% transparente */
+    .service-card-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 8, 7, 0) 0%,
+        rgba(10, 8, 7, 0) 42%,
+        rgba(10, 8, 7, 0.72) 70%,
+        rgba(10, 8, 7, 0.94) 90%,
+        #0a0807 100%
+      );
+    }
+
+    .service-card-content {
+      position: relative;
+      z-index: 3;
+      padding: 22px;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-    }
-
-    .service-title {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      color: var(--text-main);
-      margin-bottom: 10px;
-      min-height: 38px;
-      line-height: 1.25;
-      font-weight: 400;
-    }
-
-    .service-badges-row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-    }
-
-    .service-badge-pill {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 8px;
-      border-radius: var(--radius-sm);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text-muted);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .service-badge-pill.price {
-      background: var(--accent-gold-glow);
-      color: var(--accent-gold);
-      border-color: var(--gold-border);
-      font-weight: 700;
-    }
-
-    .btn-card-book {
-      margin-top: auto;
       width: 100%;
+    }
+
+    .service-card-cat {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 4px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--text-main);
+      line-height: 1.22;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+
+    .service-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background: var(--accent-gold);
+      margin-bottom: 10px;
+      transition: width 0.3s ease;
+    }
+
+    .service-card:hover .service-card-accent-line {
+      width: 52px;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Footer de dos filas independientes */
+    .service-card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 8px;
+    }
+
+    .service-card-price {
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--accent-gold);
+      letter-spacing: 0.02em;
+    }
+
+    .btn-card-book-minimal {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 6px;
-      background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-dark) 100%);
-      color: var(--text-dark-btn);
-      padding: 9px 12px;
-      border-radius: var(--radius-sm);
-      font-size: 0.78rem;
+      color: var(--text-main);
+      font-size: 0.80rem;
       font-weight: 700;
-      letter-spacing: 0.02em;
-      border: 1px solid rgba(255,255,255,0.2);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
       transition: var(--transition);
+      cursor: pointer;
     }
 
-    .btn-card-book:hover {
-      background: linear-gradient(135deg, #ebd0b0 0%, var(--accent-gold) 100%);
-      transform: translateY(-2px);
+    .btn-card-book-minimal i {
+      font-size: 0.72rem;
+      color: var(--accent-gold);
+      transition: transform 0.3s ease;
+    }
+
+    .btn-card-book-minimal:hover {
+      color: var(--accent-gold);
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(5px);
     }
 
     /* ============================================================
-       SOBRE NOSOTROS & TARJETAS DE MÉTRICAS (ESTILO FORENSE)
+       SOBRE NOSOTROS & NUESTROS PROFESIONALES (#nosotros)
     ============================================================ */
     .about-experience-section {
-      padding: 95px 0;
+      padding: 100px 0;
       background: var(--bg-surface);
       border-top: 1px solid var(--gold-border);
       border-bottom: 1px solid var(--gold-border);
@@ -630,10 +752,10 @@
 
     .experience-layout {
       display: grid;
-      grid-template-columns: 1fr 1.1fr;
+      grid-template-columns: 1fr 1.05fr;
       gap: 55px;
       align-items: center;
-      margin-bottom: 75px;
+      margin-bottom: 90px;
     }
 
     .experience-image-wrap {
@@ -646,8 +768,9 @@
 
     .experience-img {
       width: 100%;
-      height: 440px;
+      height: 480px;
       object-fit: cover;
+      display: block;
     }
 
     .experience-floating-glass {
@@ -657,38 +780,39 @@
       right: 24px;
       background: rgba(14, 11, 9, 0.85);
       backdrop-filter: blur(14px);
-      padding: 16px 20px;
+      border: 1px solid var(--gold-border);
+      padding: 18px 22px;
       border-radius: var(--radius-md);
-      border: 1px solid var(--gold-border-bright);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
     }
 
     .experience-floating-glass h5 {
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       color: var(--accent-gold);
       margin-bottom: 4px;
       font-weight: 400;
     }
 
     .experience-floating-glass p {
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .experience-content h2 {
       font-family: var(--font-display);
-      font-size: 2.8rem;
+      font-size: clamp(2.2rem, 3.2vw, 2.9rem);
       line-height: 1.15;
-      margin-bottom: 18px;
-      color: var(--text-main);
+      margin-bottom: 20px;
       font-weight: 400;
+      color: var(--text-main);
     }
 
     .experience-content p {
       color: var(--text-muted);
-      font-size: 0.96rem;
-      line-height: 1.75;
+      font-size: 0.95rem;
+      line-height: 1.7;
       margin-bottom: 28px;
     }
 
@@ -696,47 +820,47 @@
     .metrics-row-forensic {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin: 30px 0 35px;
+      gap: 14px;
+      margin-bottom: 34px;
     }
 
     .metric-card-forensic {
-      background: radial-gradient(circle at center, #221b16 0%, #16110d 100%);
+      background: var(--bg-surface-card);
       border: 1px solid var(--gold-border);
       border-radius: var(--radius-md);
-      padding: 22px 14px;
+      padding: 18px 12px;
       text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
       transition: var(--transition);
     }
 
     .metric-card-forensic:hover {
       border-color: var(--accent-gold);
       transform: translateY(-4px);
+      background: var(--bg-surface-hover);
     }
 
     .metric-number-forensic {
-      font-family: var(--font-display);
-      font-size: 2.1rem;
-      color: var(--text-main);
-      font-weight: 400;
       display: block;
-      line-height: 1;
-      margin-bottom: 6px;
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: var(--accent-gold);
+      line-height: 1.1;
+      margin-bottom: 4px;
     }
 
     .metric-label-forensic {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
-      letter-spacing: 0.05em;
-      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
     }
 
-    /* ESPECIALISTAS (4 COLUMNAS) */
+    /* BLOQUE DE ESPECIALISTAS (4 COLUMNAS — RETRATO EDITORIAL) */
     .team-section-header {
       text-align: center;
-      max-width: 600px;
-      margin: 0 auto 45px;
+      max-width: 650px;
+      margin: 0 auto 50px;
     }
 
     .team-grid {
@@ -746,112 +870,112 @@
     }
 
     .team-card {
-      background: var(--bg-surface-card);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius-md);
-      padding: 26px 18px;
-      text-align: center;
       position: relative;
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gold-border);
+      box-shadow: var(--shadow-card);
       transition: var(--transition);
       display: flex;
       flex-direction: column;
-      align-items: center;
-      box-shadow: var(--shadow-card);
+      justify-content: flex-end;
     }
 
     .team-card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-8px);
       border-color: var(--accent-gold);
-      background: var(--bg-surface-hover);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(223, 183, 140, 0.2);
     }
 
-    .team-avatar-wrap {
-      position: relative;
-      width: 104px;
-      height: 104px;
-      margin-bottom: 16px;
-    }
-
-    .team-avatar {
+    .team-card-photo {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
-      border: 2px solid var(--accent-gold);
-      padding: 3px;
+      object-position: center top;
+      transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
     }
 
-    .team-badge {
+    .team-card:hover .team-card-photo {
+      transform: scale(1.05);
+    }
+
+    .team-card-overlay {
       position: absolute;
-      bottom: -4px;
-      right: -4px;
-      background: var(--accent-gold);
-      color: var(--text-dark-btn);
-      font-size: 0.62rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      padding: 3px 8px;
-      border-radius: var(--radius-sm);
-      letter-spacing: 0.05em;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(10, 8, 7, 0) 0%,
+        rgba(10, 8, 7, 0) 45%,
+        rgba(10, 8, 7, 0.75) 72%,
+        rgba(10, 8, 7, 0.95) 92%,
+        #0a0807 100%
+      );
     }
 
-    .team-name {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--text-main);
-      margin-bottom: 4px;
-      font-weight: 400;
-    }
-
-    .team-role {
-      font-size: 0.78rem;
-      color: var(--accent-gold);
-      margin-bottom: 8px;
-      min-height: 38px;
-      line-height: 1.3;
-    }
-
-    .team-stars {
-      color: #f5b041;
-      font-size: 0.75rem;
-      margin-bottom: 16px;
-      letter-spacing: 1px;
-    }
-
-    .btn-team-book {
+    .team-card-content {
+      position: relative;
+      z-index: 3;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      background: transparent;
-      color: var(--text-main);
-      border: 1px solid var(--gold-border-bright);
-      padding: 9px 12px;
-      border-radius: var(--radius-sm);
-      font-size: 0.78rem;
-      font-weight: 600;
-      transition: var(--transition);
-      margin-top: auto;
     }
 
-    .btn-team-book:hover {
+    .team-card-accent-line {
+      width: 28px;
+      height: 2px;
       background: var(--accent-gold);
-      border-color: var(--accent-gold);
-      color: var(--text-dark-btn);
+      margin-bottom: 8px;
+      transition: width 0.3s ease;
+    }
+
+    .team-card:hover .team-card-accent-line {
+      width: 48px;
+    }
+
+    .team-card-name {
+      font-family: var(--font-display);
+      font-size: 1.28rem;
+      color: var(--text-main);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .team-card-role {
+      font-size: 0.74rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+      min-height: 18px;
+    }
+
+    .team-card-stars {
+      color: #f5b041;
+      font-size: 0.74rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
     }
 
     /* ============================================================
-       UBICACIÓN & CONTACTO
+       UBICACIÓN & CONTACTO (#ubicacion)
     ============================================================ */
     .location-section {
-      padding: 95px 0;
+      padding: 100px 0;
       background: var(--bg-base);
     }
 
     .location-layout {
       display: grid;
-      grid-template-columns: 1fr 1.2fr;
+      grid-template-columns: 1fr 1.25fr;
       gap: 36px;
       background: var(--bg-surface-card);
       border-radius: var(--radius-lg);
@@ -861,7 +985,7 @@
     }
 
     .location-info {
-      padding: 45px;
+      padding: 48px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -906,18 +1030,19 @@
     .contact-details p {
       font-size: 0.85rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
     .map-frame-wrap {
       width: 100%;
-      min-height: 380px;
+      min-height: 400px;
       height: 100%;
     }
 
     .map-frame-wrap iframe {
       width: 100%;
       height: 100%;
-      min-height: 380px;
+      min-height: 400px;
       border: 0;
     }
 
@@ -927,13 +1052,13 @@
     .main-footer {
       background: #080605;
       color: var(--text-muted);
-      padding: 75px 0 25px;
+      padding: 80px 0 28px;
       border-top: 1px solid var(--gold-border);
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      grid-template-columns: 1.5fr 1fr 1.1fr 1.2fr;
       gap: 40px;
       margin-bottom: 50px;
     }
@@ -991,6 +1116,7 @@
     .footer-reserve-card p {
       font-size: 0.78rem;
       margin-bottom: 14px;
+      color: var(--text-muted);
     }
 
     .btn-footer-reserve {
@@ -1003,8 +1129,14 @@
       width: 100%;
       padding: 10px 16px;
       border-radius: var(--radius-sm);
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-footer-reserve:hover {
+      background: linear-gradient(135deg, #ebd0b0 0%, var(--accent-gold) 100%);
+      transform: translateY(-2px);
     }
 
     .footer-bottom {
@@ -1016,7 +1148,7 @@
     }
 
     /* ============================================================
-       BOTÓN FLOTANTE WHATSAPP
+       BOTÓN FLOTANTE WHATSAPP ANTI-CORTE
     ============================================================ */
     .whatsapp-float {
       position: fixed;
@@ -1047,82 +1179,84 @@
     @media (max-width: 768px) {
       .header-nav {
         height: auto;
-        min-height: 64px;
-        padding: 10px 0;
+        min-height: 52px;
+        padding: 12px 20px;
+        padding-left: max(20px, env(safe-area-inset-left, 20px));
+        padding-right: max(20px, env(safe-area-inset-right, 20px));
       }
 
       .nav-links {
         display: none;
       }
 
+      /* Prohibición de botón de agendar en navbar móvil para máxima amplitud de marca */
+      .btn-header-cta {
+        display: none !important;
+      }
+
       .brand-name {
         font-size: 1.22rem;
         line-height: 1.1;
+        letter-spacing: 0.08em;
       }
 
       .brand-subtitle {
         font-size: 0.58rem;
+        letter-spacing: 0.16em;
       }
 
-      .btn-header-cta {
-        padding: 8px 16px;
-        font-size: 0.78rem;
+      /* HERO CANVAS MÓVIL (720px OBLIGATORIO) */
+      .hero-scroll-section {
+        height: 260vh;
       }
 
-      /* HERO MÓVIL (720px OBLIGATORIO) */
-      .hero-fullwidth-section {
-        min-height: 720px !important;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding: 140px 16px 28px;
+      .canvas-sticky-wrapper {
+        height: 100dvh;
       }
 
-      .hero-bg-cover {
-        width: 100%;
-      }
-
-      .hero-bg-img {
-        object-position: center top;
-        opacity: 0.95;
-      }
-
-      .hero-bg-overlay {
+      .canvas-gradient-overlay {
         background: linear-gradient(
           180deg, 
           rgba(10, 8, 7, 0) 0%, 
-          rgba(10, 8, 7, 0.38) 38%, 
-          rgba(10, 8, 7, 0.6) 54%, 
-          rgba(10, 8, 7, 0.92) 74%, 
+          rgba(10, 8, 7, 0) 38%, 
+          rgba(10, 8, 7, 0.62) 54%, 
+          rgba(10, 8, 7, 0.94) 74%, 
           #0a0807 96%
         );
       }
 
-      .hero-floating-badge {
-        display: none;
+      .hero-container-align {
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 16px;
+        padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
       }
 
-      .hero-text-block {
-        text-align: center;
-        margin: 0 auto;
+      .hero-scroll-content {
         max-width: 360px;
-        width: 100%;
-        text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+        min-height: 290px;
+        margin: 0 auto;
+        text-align: center;
       }
 
-      .eyebrow-line {
-        font-size: 0.72rem;
+      .hero-scroll-step {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-script-tag {
+        font-size: 2.1rem;
+        margin-bottom: 2px;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.70rem;
         letter-spacing: 0.18em;
         margin-bottom: 6px;
-        justify-content: center;
-      }
-
-      .eyebrow-line::after {
-        display: none;
       }
 
       .hero-title {
-        font-size: 1.95rem;
+        font-size: 1.90rem;
         line-height: 1.12;
         margin-bottom: 10px;
       }
@@ -1130,7 +1264,7 @@
       .hero-desc {
         font-size: 0.85rem;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
       }
 
       .hero-actions {
@@ -1138,15 +1272,19 @@
         align-items: center;
         gap: 10px;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 14px;
       }
 
-      .btn-primary, .btn-secondary {
+      .btn-primary {
         width: 100%;
         max-width: 275px;
         padding: 12px 20px;
         font-size: 0.84rem;
         justify-content: center;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.82rem;
       }
 
       /* GARANTÍAS SCROLL SNAP FLUIDO */
@@ -1188,89 +1326,122 @@
       .guarantee-info h4 {
         font-size: 0.76rem;
         line-height: 1.2;
-        white-space: normal;
-        min-height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
       }
 
       .guarantee-info p {
         font-size: 0.65rem;
+      }
+
+      /* SERVICIOS: OBLIGATORIO 2 COLUMNAS EN MÓVIL */
+      .services-section {
+        padding: 70px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 14px;
+        row-gap: 18px;
+      }
+
+      .service-card {
+        aspect-ratio: 3/4.4;
+        min-height: 0;
+        border-radius: 16px;
+      }
+
+      .service-card-content {
+        padding: 10px 12px 12px !important;
+      }
+
+      .service-card-cat {
+        font-size: 0.60rem;
+      }
+
+      .service-card-title {
+        font-size: 0.98rem;
         line-height: 1.2;
-        color: var(--text-muted);
-        margin-top: 2px;
-        white-space: normal;
-        text-align: center;
+        margin-bottom: 4px;
       }
 
-      /* SERVICIOS 2 COLUMNAS MÓVIL */
-      .services-grid-6 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .service-content {
-        padding: 10px;
-      }
-
-      .service-title {
-        font-size: 0.88rem;
-        min-height: 32px;
+      .service-card-accent-line {
         margin-bottom: 6px;
+        width: 22px;
       }
 
-      .service-badge-pill {
-        font-size: 0.65rem;
-        padding: 3px 6px;
+      .service-card-desc {
+        display: none !important;
       }
 
-      .btn-card-book {
+      .service-card-price {
+        font-size: 1.05rem;
+      }
+
+      .btn-card-book-minimal {
         font-size: 0.72rem;
-        padding: 7px 8px;
       }
 
       /* EXPERIENCIA & PROFESIONALES */
+      .about-experience-section {
+        padding: 70px 0;
+      }
+
       .experience-layout {
         grid-template-columns: 1fr;
         gap: 30px;
+        margin-bottom: 60px;
+      }
+
+      .experience-img {
+        height: 340px;
       }
 
       .metrics-row-forensic {
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 10px;
       }
 
-      /* PROFESIONALES 2 COLUMNAS MÓVIL */
+      /* PROFESIONALES: CARRUSEL HORIZONTAL SCROLL SNAP EN 1 FILA EN MÓVIL */
       .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+        padding: 8px 16px 20px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
       }
 
-      .team-badge {
-        display: none !important;
+      .team-grid::-webkit-scrollbar {
+        display: none;
       }
 
       .team-card {
-        padding: 16px 10px;
+        flex: 0 0 255px;
+        aspect-ratio: 3/4.2;
+        min-height: 370px;
+        scroll-snap-align: start;
+        border-radius: 18px;
       }
 
-      .team-avatar-wrap {
-        width: 75px;
-        height: 75px;
+      .team-card-content {
+        padding: 16px;
       }
 
-      .team-name {
-        font-size: 0.95rem;
+      .team-card-name {
+        font-size: 1.15rem;
       }
 
-      .team-role {
-        font-size: 0.7rem;
-        min-height: 34px;
+      .team-card-role {
+        font-size: 0.72rem;
       }
 
       /* UBICACIÓN & FOOTER */
+      .location-section {
+        padding: 70px 0;
+      }
+
       .location-layout {
         grid-template-columns: 1fr;
       }
@@ -1279,9 +1450,18 @@
         padding: 28px 20px;
       }
 
+      .location-info h3 {
+        font-size: 1.85rem;
+      }
+
+      .map-frame-wrap {
+        min-height: 320px;
+        height: 320px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 32px;
       }
     }
   </style>
@@ -1310,38 +1490,62 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero-fullwidth-section" id="inicio">
-    <div class="hero-bg-cover">
-      <img src="../assets/heroes/peinados/Woman_smiling_with_styled_hair_202609021630.webp" alt="Rizos Felices Urabá en Apartadó" class="hero-bg-img" />
-      <div class="hero-bg-overlay"></div>
-    </div>
-    
-    <div class="hero-floating-badge">
-      <span class="hero-badge-number">5.0</span>
-      <span class="hero-badge-text">Haute Curly VIP</span>
-      <div class="hero-badge-stars">★★★★★</div>
-    </div>
+  <!-- HERO SECTION CON CANVAS VIDEO SCROLL SCRUBBING -->
+  <section class="hero-scroll-section" id="inicio">
+    <div class="canvas-sticky-wrapper">
+      <!-- Canvas interactivo sincronizado con el scroll -->
+      <canvas id="scroll-video-canvas"></canvas>
 
-    <div class="container hero-content-wrapper">
-      <div class="hero-text-block">
-        <span class="eyebrow-line">
-          Apartadó, Antioquia
-        </span>
-        <h1 class="hero-title">
-          Realzando tu <span class="italic-gold">Belleza Natural</span>, Rizo a Rizo
-        </h1>
-        <p class="hero-desc">
-          Especialistas en corte en seco, hidratación profunda y definición profesional para ondas, rizos y texturas afro en Apartadó.
-        </p>
-        <div class="hero-actions">
-          <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20una%20cita%20para%20mis%20rizos." class="btn-primary" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>Agendar Cita</span>
-          </a>
-          <a href="#servicios" class="btn-secondary">
-            <span>Ver Catálogo</span>
-          </a>
+      <!-- Poster de reserva para evitar parpadeos negros -->
+      <img 
+        id="canvas-poster-fallback" 
+        src="public/frames/desktop/poster.webp" 
+        alt="Portada Rizos Felices Urabá"
+        class="canvas-poster-img"
+      />
+
+      <!-- Capa de degradado aterciopelado -->
+      <div class="canvas-gradient-overlay"></div>
+
+      <!-- Contenido editorial secuencial anclado al tercio inferior -->
+      <div class="container hero-container-align">
+        <div class="hero-scroll-content">
+          <!-- Paso 1 (0% a 50% de scroll): Bienvenida & Máximo Impacto Editorial -->
+          <div class="hero-scroll-step step-1 active">
+            <span class="hero-script-tag">Salón Especializado en Rizos</span>
+            <span class="hero-eyebrow">ESPECIALISTAS EN CABELLO RIZADO · APARTADÓ</span>
+            <h1 class="hero-title">El arte de cuidar tu textura natural<br><span class="italic-gold">con máxima distinción.</span></h1>
+            <div class="hero-actions">
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20una%20cita%20para%20mis%20rizos." class="btn-primary" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Agendar Cita</span>
+              </a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="hero-proof-badge">
+              <span class="hero-proof-stars">★★★★★</span>
+              <span class="hero-proof-text">5.0 en Google Reviews · Apartadó</span>
+            </div>
+          </div>
+
+          <!-- Paso 2 (50% a 100% de scroll): Técnica, Corte Hebra a Hebra & Filosofía Limpia -->
+          <div class="hero-scroll-step step-2">
+            <span class="hero-script-tag">Técnicas Botánicas &amp; Corte en Seco</span>
+            <span class="hero-eyebrow">DIAGNÓSTICO &amp; SALUD CAPILAR</span>
+            <h2 class="hero-title">Definición, volumen y nutrición profunda<br><span class="italic-gold">sin alterar tu patrón.</span></h2>
+            <p class="hero-desc">Protocolos botánicos puros, hidratación con vapor ozonizado y cortes hebra por hebra diseñados para respetar la caída natural de tus rizos, ondas y texturas afro.</p>
+            <div class="hero-actions">
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20una%20cita%20para%20mis%20rizos." class="btn-primary" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Agendar Cita</span>
+              </a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1354,8 +1558,8 @@
         <div class="guarantee-item">
           <div class="guarantee-icon-wrap"><i class="fa-solid fa-scissors"></i></div>
           <div class="guarantee-info">
-            <h4>Terapeutas Capilares</h4>
-            <p>Especialistas en rizos</p>
+            <h4>Corte en Seco</h4>
+            <p>Hebra por hebra</p>
           </div>
         </div>
         <div class="guarantee-item">
@@ -1390,144 +1594,146 @@
     </div>
   </section>
 
-  <!-- CATÁLOGO DE SERVICIOS (6 COLUMNAS) -->
+  <!-- CATÁLOGO DE SERVICIOS (GRID 3 COLUMNAS — FULL-BLEED MINIMALISTA) -->
   <section class="services-section" id="servicios">
     <div class="container">
       <div class="section-header-center">
-        <span class="eyebrow-line">Nuestra Carta</span>
+        <span class="section-script-eyebrow">Nuestra Carta</span>
+        <span class="section-eyebrow">TRATAMIENTOS &amp; TÉCNICAS PRÉMIUM</span>
         <h2 class="section-title">Servicios <span class="italic-gold">Especializados</span></h2>
-        <p class="section-desc">Procedimientos botánicos y técnicas de corte hebra por hebra para el cuidado de tus rizos.</p>
+        <p class="section-desc">Procedimientos botánicos y técnicas de corte hebra por hebra para revitalizar tus ondas, rizos y texturas afro.</p>
       </div>
 
-      <div class="services-grid-6">
+      <div class="services-grid">
         <!-- Servicio 1 -->
         <article class="service-card">
-          <div class="service-img-wrap">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Corte en Seco & Definición Rizo a Rizo" class="service-img" />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Corte en Seco & Definición</h3>
-            <div class="service-badges-row">
-              <span class="service-badge-pill">⏱️ 75 Mins</span>
-              <span class="service-badge-pill price">💰 $55.000 COP</span>
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Corte en Seco & Definición" class="service-card-bg" loading="lazy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-cat">Corte Especializado</span>
+            <h3 class="service-card-title">Corte en Seco &amp; Definición</h3>
+            <div class="service-card-accent-line"></div>
+            <p class="service-card-desc">Corte personalizado hebra por hebra respetando el patrón y caída natural de tus rizos.</p>
+            <div class="service-card-footer">
+              <span class="service-card-price">$55.000</span>
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Corte%20en%20Seco%20y%20Definici%C3%B3n." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Corte%20en%20Seco%20%26%20Definici%C3%B3n." class="btn-card-book" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Agendar Cita</span>
-            </a>
           </div>
         </article>
 
         <!-- Servicio 2 -->
         <article class="service-card">
-          <div class="service-img-wrap">
-            <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80" alt="Terapia de Hidronutrición" class="service-img" />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Terapia Hidronutrición</h3>
-            <div class="service-badges-row">
-              <span class="service-badge-pill">⏱️ 60 Mins</span>
-              <span class="service-badge-pill price">💰 $60.000 COP</span>
+          <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80" alt="Terapia de Hidronutrición" class="service-card-bg" loading="lazy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-cat">Tratamiento Botánico</span>
+            <h3 class="service-card-title">Terapia de Hidronutrición</h3>
+            <div class="service-card-accent-line"></div>
+            <p class="service-card-desc">Baño botánico de mantecas naturales, aminoácidos y vapor ozonizado anti-frizz.</p>
+            <div class="service-card-footer">
+              <span class="service-card-price">$60.000</span>
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Terapia%20de%20Hidronutrici%C3%B3n." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Terapia%20de%20Hidronutrici%C3%B3n." class="btn-card-book" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Agendar Cita</span>
-            </a>
           </div>
         </article>
 
         <!-- Servicio 3 -->
         <article class="service-card">
-          <div class="service-img-wrap">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Detox & Exfoliación Capilar" class="service-img" />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Detox & Exfoliación</h3>
-            <div class="service-badges-row">
-              <span class="service-badge-pill">⏱️ 50 Mins</span>
-              <span class="service-badge-pill price">💰 $45.000 COP</span>
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Detox & Exfoliación Capilar" class="service-card-bg" loading="lazy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-cat">Salud Capilar</span>
+            <h3 class="service-card-title">Detox &amp; Exfoliación Capilar</h3>
+            <div class="service-card-accent-line"></div>
+            <p class="service-card-desc">Limpieza profunda de residuos, exfoliación del cuero cabelludo y estimulación folicular.</p>
+            <div class="service-card-footer">
+              <span class="service-card-price">$45.000</span>
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Detox%20y%20Exfoliaci%C3%B3n%20Capilar." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Detox%20Capilar." class="btn-card-book" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Agendar Cita</span>
-            </a>
           </div>
         </article>
 
         <!-- Servicio 4 -->
         <article class="service-card">
-          <div class="service-img-wrap">
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Protocolo de Transición Capilar" class="service-img" />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Protocolo Transición</h3>
-            <div class="service-badges-row">
-              <span class="service-badge-pill">⏱️ 90 Mins</span>
-              <span class="service-badge-pill price">💰 $70.000 COP</span>
+          <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Protocolo de Transición" class="service-card-bg" loading="lazy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-cat">Reconstrucción</span>
+            <h3 class="service-card-title">Protocolo de Transición</h3>
+            <div class="service-card-accent-line"></div>
+            <p class="service-card-desc">Reconstrucción intensiva con proteínas hidrolizadas y aceites nutritivos para cabellos en cambio.</p>
+            <div class="service-card-footer">
+              <span class="service-card-price">$70.000</span>
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Protocolo%20de%20Transici%C3%B3n." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Protocolo%20de%20Transici%C3%B3n." class="btn-card-book" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Agendar Cita</span>
-            </a>
           </div>
         </article>
 
         <!-- Servicio 5 -->
         <article class="service-card">
-          <div class="service-img-wrap">
-            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Balayage & Pintura Curly" class="service-img" />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Balayage & Pintura Curly</h3>
-            <div class="service-badges-row">
-              <span class="service-badge-pill">⏱️ 120 Mins</span>
-              <span class="service-badge-pill price">💰 $120.000 COP</span>
+          <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Balayage & Pintura Curly" class="service-card-bg" loading="lazy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-cat">Color &amp; Luz</span>
+            <h3 class="service-card-title">Balayage &amp; Pintura Curly</h3>
+            <div class="service-card-accent-line"></div>
+            <p class="service-card-desc">Iluminación a mano alzada sin alterar el patrón de rizo ni deshidratar la fibra capilar.</p>
+            <div class="service-card-footer">
+              <span class="service-card-price">$120.000</span>
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Balayage%20Curly." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Balayage%20Curly." class="btn-card-book" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Agendar Cita</span>
-            </a>
           </div>
         </article>
 
         <!-- Servicio 6 -->
         <article class="service-card">
-          <div class="service-img-wrap">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Definición Glow & Peinado para Eventos" class="service-img" />
-          </div>
-          <div class="service-content">
-            <h3 class="service-title">Definición Glow & Peinado</h3>
-            <div class="service-badges-row">
-              <span class="service-badge-pill">⏱️ 60 Mins</span>
-              <span class="service-badge-pill price">💰 $50.000 COP</span>
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Definición Glow & Peinado" class="service-card-bg" loading="lazy">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-cat">Estilismo &amp; Eventos</span>
+            <h3 class="service-card-title">Definición Glow &amp; Peinado</h3>
+            <div class="service-card-accent-line"></div>
+            <p class="service-card-desc">Técnica fitagem y finger coils para definición duradera, brillo sedoso y peinados de eventos.</p>
+            <div class="service-card-footer">
+              <span class="service-card-price">$50.000</span>
+              <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Definici%C3%B3n%20Glow." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
             </div>
-            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20Definici%C3%B3n%20Glow." class="btn-card-book" target="_blank" rel="noopener">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span>Agendar Cita</span>
-            </a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- SOBRE NOSOTROS & ESPECIALISTAS -->
+  <!-- SOBRE NOSOTROS & NUESTROS PROFESIONALES (#nosotros) -->
   <section class="about-experience-section" id="nosotros">
     <div class="container">
       <div class="experience-layout">
         <div class="experience-image-wrap">
-          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Ambiente de Rizos Felices Urabá" class="experience-img" />
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Ambiente de Rizos Felices Urabá" class="experience-img" loading="lazy" />
           <div class="experience-floating-glass">
             <h5>La belleza es autenticidad</h5>
-            <p>Rizos saludables, definidos y llenos de vida con atención personalizada.</p>
+            <p>Rizos saludables, definidos y llenos de vida con atención personalizada hebra a hebra.</p>
           </div>
         </div>
 
         <div class="experience-content">
-          <span class="eyebrow-line">Sobre Nosotros</span>
+          <span class="section-script-eyebrow">Sobre Nosotros</span>
+          <span class="section-eyebrow">EXPERIENCIA &amp; PASIÓN CAPILAR</span>
           <h2>Hay una belleza única en cada <span class="italic-gold">patrón de rizo</span></h2>
           <p>
-            En <strong>Rizos Felices Urabá</strong> nos dedicamos a transformar la relación que tienes con tu cabello natural. Con fórmulas botánicas limpias, técnicas especializadas de corte en seco hebra por hebra y asesoría cercana, logramos que tus rizos brillen con salud y volumen.
+            En <strong>Rizos Felices Urabá</strong> nos dedicamos a transformar la relación que tienes con tu cabello natural. Con fórmulas botánicas limpias, técnicas especializadas de corte en seco hebra por hebra y asesoría cercana, logramos que tus rizos brillen con salud, definición y volumen equilibrado.
           </p>
           
           <!-- 4 TARJETAS DE MÉTRICAS TMR FORENSE -->
@@ -1557,89 +1763,91 @@
         </div>
       </div>
 
-      <!-- BLOQUE DE ESPECIALISTAS (4 COLUMNAS) -->
+      <!-- BLOQUE DE ESPECIALISTAS (RETRATO EDITORIAL 4 COLS EN DESKTOP / SCROLL SNAP EN MÓVIL) -->
       <div class="team-section-header">
-        <span class="eyebrow-line">Nuestro Equipo</span>
-        <h3 class="section-title">Especialistas <span class="italic-gold">Certificadas</span></h3>
-        <p class="section-desc">Terapeutas dedicadas a cuidar, recuperar y embellecer tu textura capilar.</p>
+        <span class="section-script-eyebrow">Nuestro Equipo</span>
+        <span class="section-eyebrow">TERAPEUTAS CERTIFICADAS</span>
+        <h3 class="section-title">Especialistas <span class="italic-gold">en Rizos &amp; Afro</span></h3>
+        <p class="section-desc">Profesionales dedicadas a cuidar, recuperar y embellecer la textura natural de tu cabello.</p>
       </div>
 
       <div class="team-grid">
         <!-- Especialista 1 -->
-        <div class="team-card">
-          <div class="team-avatar-wrap">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Yurany Córdoba - Master Curly" class="team-avatar" />
-            <span class="team-badge">Master</span>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Yurany Córdoba - Master Curly" class="team-card-photo" loading="lazy">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Yurany Córdoba</h4>
+            <p class="team-card-role">Master Curly Stylist</p>
+            <div class="team-card-stars">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Yurany%20C%C3%B3rdoba." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <h4 class="team-name">Yurany Córdoba</h4>
-          <p class="team-role">Master Curly Stylist</p>
-          <div class="team-stars">★★★★★ (5.0)</div>
-          <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Yurany%20C%C3%B3rdoba." class="btn-team-book" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>Agendar Cita</span>
-          </a>
-        </div>
+        </article>
 
         <!-- Especialista 2 -->
-        <div class="team-card">
-          <div class="team-avatar-wrap">
-            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Kelly Palacios - Terapeuta Afro" class="team-avatar" />
-            <span class="team-badge">Senior</span>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Kelly Palacios - Terapeuta Afro" class="team-card-photo" loading="lazy">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Kelly Palacios</h4>
+            <p class="team-card-role">Terapeuta Capilar &amp; Afro</p>
+            <div class="team-card-stars">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Kelly%20Palacios." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <h4 class="team-name">Kelly Palacios</h4>
-          <p class="team-role">Terapeuta Capilar & Afro</p>
-          <div class="team-stars">★★★★★ (5.0)</div>
-          <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Kelly%20Palacios." class="btn-team-book" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>Agendar Cita</span>
-          </a>
-        </div>
+        </article>
 
         <!-- Especialista 3 -->
-        <div class="team-card">
-          <div class="team-avatar-wrap">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Dayana Mena - Colorista Curly" class="team-avatar" />
-            <span class="team-badge">Senior</span>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Dayana Mena - Colorista Curly" class="team-card-photo" loading="lazy">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Dayana Mena</h4>
+            <p class="team-card-role">Colorista &amp; Balayage Curly</p>
+            <div class="team-card-stars">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Dayana%20Mena." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <h4 class="team-name">Dayana Mena</h4>
-          <p class="team-role">Colorista & Balayage Curly</p>
-          <div class="team-stars">★★★★★ (5.0)</div>
-          <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Dayana%20Mena." class="btn-team-book" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>Agendar Cita</span>
-          </a>
-        </div>
+        </article>
 
         <!-- Especialista 4 -->
-        <div class="team-card">
-          <div class="team-avatar-wrap">
-            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Yuliet Rentería - Trenzas & Peinados" class="team-avatar" />
-            <span class="team-badge">Pro</span>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80" alt="Yuliet Rentería - Trenzas & Peinados" class="team-card-photo" loading="lazy">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h4 class="team-card-name">Yuliet Rentería</h4>
+            <p class="team-card-role">Estilista en Peinados &amp; Trenzas</p>
+            <div class="team-card-stars">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Yuliet%20Renter%C3%ADa." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <h4 class="team-name">Yuliet Rentería</h4>
-          <p class="team-role">Estilista en Peinados & Trenzas</p>
-          <div class="team-stars">★★★★★ (5.0)</div>
-          <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20con%20Yuliet%20Renter%C3%ADa." class="btn-team-book" target="_blank" rel="noopener">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>Agendar Cita</span>
-          </a>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- UBICACIÓN & CONTACTO -->
+  <!-- UBICACIÓN & CONTACTO (#ubicacion) -->
   <section class="location-section" id="ubicacion">
     <div class="container">
       <div class="location-layout">
         <div class="location-info">
-          <span class="eyebrow-line">Encuéntranos</span>
+          <span class="section-script-eyebrow">Encuéntranos</span>
+          <span class="section-eyebrow">UBICACIÓN ESTRATÉGICA</span>
           <h3>Visítanos en Apartadó</h3>
           
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div class="contact-details">
-              <h5>Dirección</h5>
+              <h5>Dirección Física</h5>
               <p>Cl. 100 #108-37, Sector Centro, Apartadó, Antioquia</p>
             </div>
           </div>
@@ -1647,7 +1855,7 @@
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
             <div class="contact-details">
-              <h5>Teléfono & WhatsApp</h5>
+              <h5>Teléfono &amp; WhatsApp</h5>
               <p>(+57) 310 726 7538</p>
             </div>
           </div>
@@ -1655,7 +1863,7 @@
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
             <div class="contact-details">
-              <h5>Horario de Atención</h5>
+              <h5>Horarios de Atención</h5>
               <p>Lunes a Sábado: 8:00 AM - 7:00 PM<br>Domingos: Previa Cita</p>
             </div>
           </div>
@@ -1667,14 +1875,14 @@
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa de ubicación Rizos Felices Urabá">
+            title="Mapa de ubicación Rizos Felices Urabá en Apartadó">
           </iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER PRINCIPAL -->
   <footer class="main-footer">
     <div class="container">
       <div class="footer-grid">
@@ -1684,12 +1892,12 @@
             <span class="brand-subtitle">Especialistas en Rizos · Apartadó</span>
           </a>
           <p>
-            El templo del cuidado y definición del cabello rizado, ondulado y afro en Apartadó, Antioquia.
+            El templo del cuidado, nutrición botánica y definición del cabello rizado, ondulado y afro en Apartadó, Antioquia.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Enlaces</h4>
+          <h4>Navegación</h4>
           <ul class="footer-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#servicios">Servicios</a></li>
@@ -1702,7 +1910,7 @@
           <h4>Contacto</h4>
           <ul class="footer-links">
             <li><i class="fa-solid fa-phone" style="margin-right: 6px; color: var(--accent-gold);"></i> (+57) 310 726 7538</li>
-            <li><i class="fa-solid fa-location-dot" style="margin-right: 6px; color: var(--accent-gold);"></i> Cl. 100 #108-37</li>
+            <li><i class="fa-solid fa-location-dot" style="margin-right: 6px; color: var(--accent-gold);"></i> Cl. 100 #108-37, Centro</li>
             <li><i class="fa-solid fa-city" style="margin-right: 6px; color: var(--accent-gold);"></i> Apartadó, Antioquia</li>
           </ul>
         </div>
@@ -1720,38 +1928,185 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Rizos Felices Urabá. Todos los derechos reservados. Apartadó, Colombia.</p>
+        <p>&copy; 2026 Rizos Felices Urabá. Todos los derechos reservados. Apartadó, Antioquia, Colombia.</p>
       </div>
     </div>
   </footer>
 
   <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20una%20cita%20para%20mis%20rizos." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/573107267538?text=Hola%20Rizos%20Felices%20Urab%C3%A1%2C%20quisiera%20agendar%20una%20cita%20para%20mis%20rizos." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp a Rizos Felices Urabá">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- SCRIPT SMART HEADER SCROLL -->
+  <!-- MOTOR CANVAS HTML5 INTERACTIVO & SMART HEADER SCROLL -->
   <script>
-    let lastScrollTop = 0;
-    const header = document.getElementById('headerWrapper');
+    (function () {
+      // 1. Elementos del DOM
+      const canvas = document.getElementById('scroll-video-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const posterImg = document.getElementById('canvas-poster-fallback');
+      const scrollSection = document.querySelector('.hero-scroll-section');
+      const header = document.getElementById('headerWrapper');
 
-    window.addEventListener('scroll', function() {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      // 2. Parámetros del motor Canvas
+      const TOTAL_FRAMES = 72;
+      const isMobile = window.innerWidth < 768;
+      const framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
 
-      if (scrollTop > 80) {
-        header.classList.add('header-scrolled');
-      } else {
-        header.classList.remove('header-scrolled');
+      if (posterImg) {
+        posterImg.src = `${framesFolder}/poster.webp`;
       }
 
-      if (scrollTop > lastScrollTop && scrollTop > 250) {
-        header.classList.add('header-hidden');
-      } else {
-        header.classList.remove('header-hidden');
+      const getFrameUrl = (index) => {
+        const pad = String(index).padStart(4, '0');
+        return `${framesFolder}/frame-${pad}.webp`;
+      };
+
+      const images = [];
+      let loadedCount = 0;
+      let currentFrameIndex = 0;
+      let targetFrameIndex = 0;
+      let rafId = null;
+
+      // 3. Calibrar tamaño del Canvas con soporte High-DPI (Retina)
+      function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        renderFrame(currentFrameIndex);
+      }
+      window.addEventListener('resize', resizeCanvas, { passive: true });
+
+      // 4. Renderizador con Cobertura 100% Full Cover Edge-to-Edge
+      function renderFrame(index) {
+        const img = images[index];
+        if (!img || !img.complete) return;
+
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth || img.width;
+        const ih = img.naturalHeight || img.height;
+
+        ctx.fillStyle = '#0a0807';
+        ctx.fillRect(0, 0, cw, ch);
+
+        const scale = Math.max(cw / iw, ch / ih);
+        const nw = iw * scale;
+        const nh = ih * scale;
+
+        const isMob = window.innerWidth < 768;
+        // En escritorio se desplaza ligeramente a la derecha para dejar aire al texto en el tercio inferior izquierdo
+        const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.05);
+        const ny = (ch - nh) / 2;
+
+        ctx.drawImage(img, nx, ny, nw, nh);
       }
 
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    }, { passive: true });
+      // 5. Precarga asíncrona de imágenes
+      function preloadImages() {
+        const loadPromises = [];
+
+        for (let i = 1; i <= TOTAL_FRAMES; i++) {
+          const p = new Promise((resolve) => {
+            const img = new Image();
+            img.src = getFrameUrl(i);
+            img.onload = () => {
+              loadedCount++;
+              if (loadedCount === 1) {
+                currentFrameIndex = 0;
+                renderFrame(0);
+              }
+              if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
+                if (posterImg) {
+                  posterImg.classList.add('loaded');
+                  posterImg.style.display = 'none';
+                }
+              }
+              resolve();
+            };
+            img.onerror = () => {
+              resolve();
+            };
+            images.push(img);
+          });
+          loadPromises.push(p);
+        }
+
+        Promise.all(loadPromises).then(() => {
+          if (posterImg) {
+            posterImg.classList.add('loaded');
+            posterImg.style.display = 'none';
+          }
+        });
+      }
+
+      // 6. Sincronización de scroll, frames y alternancia de 2 pasos
+      let lastScrollTop = 0;
+
+      function onScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // A. Smart Header: Permanece siempre visible en el Hero
+        const heroHeight = scrollSection ? scrollSection.offsetHeight : 600;
+        if (scrollTop > 80) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+
+        if (scrollTop < heroHeight - 120) {
+          header.classList.remove('header-hidden');
+        } else {
+          if (scrollTop > lastScrollTop && scrollTop > heroHeight) {
+            header.classList.add('header-hidden');
+          } else {
+            header.classList.remove('header-hidden');
+          }
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+        // B. Canvas Frame calculation
+        if (!scrollSection) return;
+        const rect = scrollSection.getBoundingClientRect();
+        const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+        
+        if (scrollDistance <= 0) return;
+
+        const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+        
+        targetFrameIndex = Math.min(
+          TOTAL_FRAMES - 1,
+          Math.floor(progress * TOTAL_FRAMES)
+        );
+
+        if (targetFrameIndex !== currentFrameIndex) {
+          currentFrameIndex = targetFrameIndex;
+          if (!rafId) {
+            rafId = requestAnimationFrame(() => {
+              renderFrame(currentFrameIndex);
+              rafId = null;
+            });
+          }
+        }
+
+        // C. Alternancia de 2 pasos editoriales (50% / 50%)
+        const steps = document.querySelectorAll('.hero-scroll-step');
+        if (steps.length >= 2) {
+          const activeIndex = progress < 0.5 ? 0 : 1;
+          steps.forEach((step, idx) => {
+            step.classList.toggle('active', idx === activeIndex);
+          });
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Inicialización
+      resizeCanvas();
+      preloadImages();
+      onScroll();
+    })();
   </script>
 </body>
 </html>

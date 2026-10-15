@@ -1,0 +1,129 @@
+{
+  "negocio": {
+    "nombre": "TIENDA Y PELUQUERIA ALMA SAS",
+    "nombre_corto": "Alma Peluquería",
+    "rubro": "Centro de estética & Peluquería",
+    "categoria": "estetica",
+    "eslogan": "TIENDA Y PELUQUERIA ALMA SAS — Centro de estética en Cra. 1W #·0038-19",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 305 286 0999",
+      "telefono_raw": "+573052860999",
+      "whatsapp": {
+        "numero": "+573052860999",
+        "link": "https://wa.me/573052860999?text=Hola%20TIENDA%20Y%20PELUQUERIA%20ALMA%20SAS%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "BARRIO JUAN XXIII, Cra. 1W #·0038-19, Montería, Córdoba",
+      "barrio": "Barrio Juan XXIII",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/TIENDA+Y+PELUQUERIA+ALMA+SAS/@8.765643,-75.903389,15z/data=!4m11!1m3!2m2!1ssalon+de+belleza+en+monteria!6e1!3m6!1s0x8e5a2f107078e47d:0x7538280a5c38d39!8m2!3d8.765643!4d-75.8853646!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11t71_c9r8",
+      "iframe_embed_url": "https://maps.google.com/maps?q=TIENDA+Y+PELUQUERIA+ALMA+SAS,+BARRIO+JUAN+XXIII,+Cra.+1W+%230038-19,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa reserva por WhatsApp"
+    },
+    "sitio_web": "https://instagram.com/almatiendaypeluqueria?igshid=YmMyMTA2M2Y=",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
+    },
+    "servicios": [
+      {
+        "id": "diseno-color-balayage",
+        "nombre": "Balayage & Mechas de Alta Definición",
+        "descripcion": "Tonalización personalizada, matizado de brillo, nutrición capilar profunda y peinado de autor con ondas radiantes.",
+        "duracion": "180 Mins",
+        "badge": "Tendencia Capilar",
+        "precio": "$180.000",
+        "icono": "fa-scissors",
+        "imagen": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisado-organico-keratina",
+        "nombre": "Alisado Orgánico & Queratina Sin Formol",
+        "descripcion": "Tratamiento de sellado térmico orgánico, nutrición intensiva con aminoácidos y acabado liso brillante sin encrespamiento.",
+        "duracion": "150 Mins",
+        "badge": "Brillo Espejo",
+        "precio": "$160.000",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte-estilizado-cepillado",
+        "nombre": "Corte de Autor, Cepillado & Peinado",
+        "descripcion": "Asesoría de visagismo capilar personalizada, lavado relajante con masaje craneal y moldeado profesional al calor.",
+        "duracion": "60 Mins",
+        "badge": "Estilo Exclusivo",
+        "precio": "$65.000",
+        "icono": "fa-user-nurse",
+        "imagen": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "tratamiento-capilar-repuesto",
+        "nombre": "Terapia de Reposición Capilar & Cauterización",
+        "descripcion": "Reconstrucción intensiva de la fibra con ampolla concentrada, queratina liquida y veloterapia selladora.",
+        "duracion": "75 Mins",
+        "badge": "Reparación Total",
+        "precio": "$95.000",
+        "icono": "fa-bottle-droplet",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "limpieza-facial-profunda",
+        "nombre": "Limpieza Facial Profunda & Fototerapia",
+        "descripcion": "Extracción ultrasónica sin dolor, vapor de ozono, mascarilla de colágeno hidroplástica y sellado con fotón LED.",
+        "duracion": "60 Mins",
+        "badge": "Piel Glow",
+        "precio": "$85.000",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "spa-manicura-pedicura",
+        "nombre": "Manicura & Pedicura Spa Semipermanente",
+        "descripcion": "Exfoliación con sales aromáticas, hidratación profunda con parafina y esmaltado de secado UV de alta durabilidad.",
+        "duracion": "75 Mins",
+        "badge": "Manos de Lujo",
+        "precio": "$75.000",
+        "icono": "fa-hand-holding-heart",
+        "imagen": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Alma Rosa Villegas",
+        "rol": "Directora & Estilista Máster Capilar",
+        "badge": "Directora",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "María Paula Gómez",
+        "rol": "Especialista en Color, Balayage & Mechas",
+        "badge": "Máster Colorista",
+        "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Carolina Hernández",
+        "rol": "Cosmiatra & Terapeuta Facial Spa",
+        "badge": "Cosmiatra Senior",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Valeria Martínez",
+        "rol": "Diseñadora Capilar & Alisados Orgánicos",
+        "badge": "Especialista Alisados",
+        "avatar": "https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "4.9"
+      }
+    ]
+  }
+}

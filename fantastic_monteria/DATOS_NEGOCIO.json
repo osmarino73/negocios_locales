@@ -1,0 +1,144 @@
+{
+  "negocio": {
+    "nombre": "Fantastic Montería Salón de Belleza",
+    "rubro": "Centro de estética",
+    "categoria": "estetica",
+    "eslogan": "Fantastic Montería Salón de Belleza — Centro de estética en Montería",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 302 414 3774",
+      "telefono_raw": "+573024143774",
+      "whatsapp": {
+        "numero": "+573024143774",
+        "link": "https://wa.me/573024143774?text=Hola%20Fantastic%20Monter%C3%ADa%20Sal%C3%B3n%20de%20Belleza%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      },
+      "instagram": "https://www.instagram.com/fantasticmtr?igsh=eXYwZ21qZmVrMHk4"
+    },
+    "ubicacion": {
+      "direccion": "Cra. 16a #38-5, Montería, Córdoba",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Fantastic+Monter%C3%ADa+Sal%C3%B3n+de+Belleza/@8.7594197,-75.8944995,14z/data=!4m10!1m2!2m1!1ssalon+de+belleza+monteria!3m6!1s0x8e5a2fc119c88ed1:0x560a8eff9b74843d!8m2!3d8.7524208!4d-75.8733957!15sChlzYWxvbiBkZSBiZWxsZXphIG1vbnRlcmlhWhsiGXNhbG9uIGRlIGJlbGxlemEgbW9udGVyaWGSAQxiZWF1dHlfc2Fsb26aAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnQwZGxNd01XRmlia3BQVWxaWk1GWXdkRnBrTVdRMFpXMDFjVkl6WXhBQuABAPoBBAgAEDo!16s%2Fg%2F11nr1n6h61",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Fantastic+Monter%C3%ADa+Sal%C3%B3n+de+Belleza,+Cra.+16a+%2338-5,+Monter%C3%ADa,+C%C3%B3rdoba,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa cita y disponibilidad"
+    },
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
+    },
+    "servicios": [
+      {
+        "id": "facial-dermo-glow",
+        "nombre": "Tratamiento Facial Dermo Glow",
+        "precio": "$110.000",
+        "duracion": "60 min",
+        "tecnica": "Hydrafacial & Nutrición Profunda",
+        "icono": "fa-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "balayage-iluminacion-vip",
+        "nombre": "Balayage & Colorimetría VIP",
+        "precio": "Desde $180.000",
+        "duracion": "180 min",
+        "tecnica": "Diseño de Color & Protección Capilar",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "masaje-relajante-zen",
+        "nombre": "Masaje Relajante & Piedras Volcánicas",
+        "precio": "$95.000",
+        "duracion": "60 min",
+        "tecnica": "Terapia Descontracturante Holística",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisado-organico",
+        "nombre": "Alisado Orgánico Células Madre",
+        "precio": "Desde $150.000",
+        "duracion": "120 min",
+        "tecnica": "Liso Espejo Sin Formol",
+        "icono": "fa-feather",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "moldeo-corporal",
+        "nombre": "Moldeo & Reducción Corporal",
+        "precio": "$130.000",
+        "duracion": "75 min",
+        "tecnica": "Aparatología Avanzada & Drenaje",
+        "icono": "fa-gem",
+        "imagen": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "diseno-cejas-pestanas",
+        "nombre": "Diseño de Cejas & Pestañas",
+        "precio": "$85.000",
+        "duracion": "60 min",
+        "tecnica": "Perfilado, Henna & Efecto Pestañina",
+        "icono": "fa-eye",
+        "imagen": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "id": "carolina-monterroza",
+        "nombre": "Carolina Monterroza",
+        "rol": "Directora & Estética Facial",
+        "experiencia": "+8 años exp.",
+        "badge": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "valeria-isaza",
+        "nombre": "Valeria Isaza",
+        "rol": "Colorista Master & Balayage Specialist",
+        "experiencia": "+7 años exp.",
+        "badge": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "daniela-restrepo",
+        "nombre": "Daniela Restrepo",
+        "rol": "Terapeuta Spa & Moldeo Corporal",
+        "experiencia": "+6 años exp.",
+        "badge": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "id": "camila-vega",
+        "nombre": "Camila Vega",
+        "rol": "Lash & Brow Artist / Mirada VIP",
+        "experiencia": "+5 años exp.",
+        "badge": "Pro",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  },
+  "about_image_url": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
+  "video_scroll": {
+    "origen": ".agents/document_salones/belleza-cabello-negra",
+    "video_desktop": "Model_advertising_beauty_salon_v…_20260917073249.mp4",
+    "video_mobile": "Model_showing_hair_in_video_20260917073358.mp4",
+    "frames_desktop_total": 74,
+    "frames_mobile_total": 74,
+    "fps": 18.5,
+    "duracion_segundos": 4.0,
+    "formato": "image/webp",
+    "calidad_desktop": "Q85 (1920x1080)",
+    "calidad_mobile": "Q76 (720x1280)",
+    "overlay": "canvas-gradient-overlay (doble degradado aterciopelado)",
+    "narrativa": "2 pasos editoriales secuenciales (50% / 50%) con anclaje inferior y 60% superior despejado"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "negocio": {
+    "nombre": "Katerine Canedo Estética Integral",
+    "rubro": "Esteticista facial & Cosmiatría",
+    "categoria": "estetica",
+    "eslogan": "Katerine Canedo Estética Integral — Esteticista facial en Montería",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 311 862 4122",
+      "whatsapp": {
+        "numero": "+573118624122",
+        "link": "https://wa.me/573118624122?text=Hola%20Katerine%20Canedo%20Est%C3%A9tica%20Integral%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20mi%20cita%20facial."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 32 #9-80, Montería, Córdoba",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://maps.google.com/maps?q=Katerine+Canedo+Est%C3%A9tica+Integral,+Cl.+32+%239-80,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:00 PM (Previa Cita)",
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Agendamiento directo por WhatsApp"
+    },
+    "servicios": [
+      {
+        "id": "limpieza-facial-detox",
+        "nombre": "Limpieza Facial Profunda & Detox",
+        "descripcion": "Protocolo de higiene cutánea avanzada con vaporozono, desincrustación ultrasónica, extracción manual de impurezas y mascarilla descongestiva de alta definición.",
+        "precio": "$120.000",
+        "duracion": "75 min",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "dermapen-induccion-colageno",
+        "nombre": "Dermapen & Inducción de Colágeno",
+        "descripcion": "Microneedling médico-estético con activos bioestimulantes y ácido hialurónico concentrado para atenuar líneas de expresión, poros y secuelas de acné.",
+        "precio": "$180.000",
+        "duracion": "60 min",
+        "imagen": "https://images.unsplash.com/photo-1512290900673-700200411649?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "hidralips-glow",
+        "nombre": "Hidralips Glow & Regeneración Labial",
+        "descripcion": "Tratamiento intensivo de microexfoliación e infusión de péptidos labiales para restaurar el volumen natural, tersura e hidratación profunda.",
+        "precio": "$110.000",
+        "duracion": "45 min",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "peeling-quimico-renovador",
+        "nombre": "Peeling Químico Renovador",
+        "descripcion": "Exfoliación médica con alfa y beta hidroxiácidos formulada a la medida para unificar el tono cutáneo, desvanecer manchas de pigmentación y aportar luminosidad instantánea.",
+        "precio": "$150.000",
+        "duracion": "50 min",
+        "imagen": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "radiofrecuencia-antiaging",
+        "nombre": "Lifting Anti-Aging & Radiofrecuencia",
+        "descripcion": "Radiofrecuencia multipolar tensora combinada con sueroterapia tópica para estimular elastina y reafirmar el óvalo facial de forma no invasiva.",
+        "precio": "$210.000",
+        "duracion": "70 min",
+        "imagen": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "masaje-kobido-glow",
+        "nombre": "Masaje Facial Kobido & Ritual Glow",
+        "descripcion": "Técnica japonesa ancestral de amasamiento miofascial facial y drenaje linfático para moldear facciones, desinflamar y lograr un brillo natural deslumbrante.",
+        "precio": "$135.000",
+        "duracion": "60 min",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Katerine Canedo",
+        "rol": "Esteticista Facial & Directora",
+        "experiencia": "10+ años de experiencia",
+        "especialidad": "Dermapen, Peeling & Diagnóstico Facial",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Camila Restrepo",
+        "rol": "Cosmiatra & Especialista Glow",
+        "experiencia": "6 años de experiencia",
+        "especialidad": "Limpieza Profunda & Detox Cutáneo",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Valeria Mendoza",
+        "rol": "Terapeuta Facial & Hydralips Specialist",
+        "experiencia": "5 años de experiencia",
+        "especialidad": "Regeneración Labial & Bioestimulación",
+        "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Sofía Arango",
+        "rol": "Técnica en Aparatología Anti-Aging",
+        "experiencia": "7 años de experiencia",
+        "especialidad": "Radiofrecuencia Multipolar & Kobido",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+        "calificacion": "5.0"
+      }
+    ]
+  }
+}

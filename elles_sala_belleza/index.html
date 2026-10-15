@@ -73,11 +73,16 @@
       --bg-light-surface: #ffffff;
       --bg-light-card: #f4ede4;
 
-      /* Acentos Oro Rosa Camel Glow */
-      --color-gold: #d49b78;
-      --color-gold-light: #e8c4ad;
-      --color-gold-dark: #b87d58;
-      --color-gold-hover: #c08865;
+      /* Acentos Oficiales Oro Rosa Camel Glow (Unicidad Estricta del Color Principal) */
+      --color-accent: #d49b78;
+      --color-accent-light: #e8c4ad;
+      --color-accent-dark: #b87d58;
+      --color-accent-hover: #c08865;
+
+      --color-gold: var(--color-accent);
+      --color-gold-light: var(--color-accent-light);
+      --color-gold-dark: var(--color-accent-dark);
+      --color-gold-hover: var(--color-accent-hover);
 
       /* Bordes y Líneas */
       --border-dark: rgba(212, 155, 120, 0.22);
@@ -95,8 +100,8 @@
       --text-light-muted: #827b73;
 
       /* Degradados */
-      --gold-gradient: linear-gradient(135deg, #e8c4ad 0%, #d49b78 50%, #b87d58 100%);
-      --gold-gradient-hover: linear-gradient(135deg, #ffffff 0%, #e8c4ad 50%, #d49b78 100%);
+      --gold-gradient: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 50%, var(--color-accent-dark) 100%);
+      --gold-gradient-hover: linear-gradient(135deg, #ffffff 0%, var(--color-accent-light) 50%, var(--color-accent) 100%);
 
       /* Tipografía */
       --font-display: 'DM Serif Display', Georgia, serif;
@@ -287,9 +292,7 @@
       height: 100vh;
       height: 100dvh;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      background-color: #0f0e0c;
+      background-color: var(--bg-dark-base);
     }
 
     .hero-canvas-wrap {
@@ -318,7 +321,7 @@
       object-fit: cover;
       z-index: 2;
       opacity: 1;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.4s ease;
       pointer-events: none;
     }
 
@@ -327,8 +330,8 @@
       visibility: hidden;
     }
 
-    /* Gradiente suave: protege texto a la izquierda sin opacar a la modelo */
-    .hero-vignette-overlay {
+    /* Doble degradado orgánico aterciopelado para máxima legibilidad sin opacar a la modelo */
+    .canvas-gradient-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -336,96 +339,143 @@
       height: 100%;
       z-index: 3;
       pointer-events: none;
-      background: linear-gradient(
-        90deg, 
-        #0f0e0c 0%, 
-        #0f0e0c 24%, 
-        rgba(15, 14, 12, 0.85) 38%, 
-        rgba(15, 14, 12, 0.35) 54%, 
-        transparent 72%
-      );
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(15, 14, 12, 0.65) 100%),
+        linear-gradient(
+          90deg, 
+          #0f0e0c 0%, 
+          #0f0e0c 24%, 
+          rgba(15, 14, 12, 0.96) 34%, 
+          rgba(15, 14, 12, 0.78) 44%, 
+          rgba(15, 14, 12, 0.45) 55%, 
+          rgba(15, 14, 12, 0.15) 66%, 
+          transparent 78%
+        );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end; /* Anclaje inferior mandatorio para respetar el 60% superior despejado */
+      justify-content: flex-start; /* Asimétrico a la izquierda para despejar a la modelo */
+      padding-top: 0;
+      padding-bottom: clamp(40px, 7.5vh, 75px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 400px;
-      padding: 0 20px;
-      margin-left: max(20px, calc((100vw - 1200px) / 2));
-      pointer-events: none;
+      max-width: 560px;
+      min-height: 330px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
+      bottom: 0;
+      left: 0;
+      transform: translateY(16px);
       width: 100%;
-      max-width: 560px;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.45s ease, transform 0.45s ease;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
+      opacity: 0;
       pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .hero-scroll-step.active {
       opacity: 1;
-      visibility: visible;
-      transform: translateY(-50%);
       pointer-events: auto;
+      transform: translateY(0);
     }
 
-    .hero-tag {
+    .btn-hero-minimal-link {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent-light);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      color: var(--color-accent-light);
+      margin-bottom: 4px;
+      display: inline-block;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-eyebrow {
       font-size: 0.72rem;
       font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--color-gold);
-      margin-bottom: 12px;
+      color: var(--color-accent-light);
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
-      font-weight: 400;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: 1px;
       color: var(--text-dark-primary);
-      margin-bottom: 8px;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 28px rgba(0, 0, 0, 0.9);
     }
 
-    .hero-script {
-      font-family: var(--font-script);
-      font-size: clamp(3rem, 5.8vw, 4.4rem);
-      color: var(--color-gold);
-      display: block;
+    .hero-title em {
+      color: var(--color-accent-light);
+      font-style: italic;
       font-weight: 400;
-      line-height: 0.95;
-      margin: 4px 0 14px;
+    }
+
+    .step-1 .hero-title {
+      margin-bottom: 26px; /* Espaciado equilibrado sin párrafo */
     }
 
     .hero-desc {
-      font-size: 0.98rem;
+      font-size: 0.95rem;
       color: var(--text-dark-secondary);
       line-height: 1.6;
-      margin-bottom: 26px;
-      max-width: 520px;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 20px;
     }
 
     .btn-primary {
@@ -452,30 +502,22 @@
       box-shadow: 0 10px 28px rgba(212, 155, 120, 0.45);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: var(--text-dark-primary);
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 14px 26px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-dark);
+    .hero-proof-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      transition: var(--transition);
-      touch-action: manipulation;
+      font-size: 0.8rem;
+      color: var(--text-dark-secondary);
     }
 
-    .btn-secondary:hover {
-      background: rgba(212, 155, 120, 0.18);
-      border-color: var(--color-gold);
-      color: var(--color-gold);
-      transform: translateY(-3px);
+    .hero-proof-stars {
+      color: #f7ba2a;
+      letter-spacing: 1px;
+    }
+
+    .hero-proof-text {
+      color: var(--text-dark-muted);
+      font-weight: 500;
     }
 
     /* ==========================================================================
@@ -1190,61 +1232,78 @@
         font-size: 0.58rem;
       }
 
-      /* Hero Móvil: Scroll Container y Canvas 720px min-height */
-      .hero-sticky-viewport {
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 28px;
+      /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      .hero-scroll-container {
+        min-height: 720px !important;
       }
 
-      .hero-vignette-overlay {
+      .hero-sticky-viewport {
+        min-height: 720px !important;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .canvas-gradient-overlay {
         background: linear-gradient(
           180deg, 
           rgba(15, 14, 12, 0) 0%, 
-          rgba(15, 14, 12, 0) 38%, 
-          rgba(15, 14, 12, 0.65) 55%, 
-          rgba(15, 14, 12, 0.94) 76%, 
-          #0f0e0c 98%
+          rgba(15, 14, 12, 0) 36%, 
+          rgba(15, 14, 12, 0.65) 54%, 
+          rgba(15, 14, 12, 0.94) 74%, 
+          #0f0e0c 96%
         );
+      }
+
+      .hero-container-align {
+        min-height: 720px !important;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 28px;
       }
 
       .hero-scroll-content {
         margin: 0 auto;
         max-width: 360px;
-        min-height: 380px;
-        padding: 0 16px;
+        min-height: 290px;
         text-align: center;
       }
 
       .hero-scroll-step {
-        left: 0;
-        right: 0;
-        top: auto;
-        bottom: 20px;
-        transform: none;
         align-items: center;
         text-align: center;
-        margin: 0 auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
 
-      .hero-scroll-step.active {
-        transform: none;
+      .hero-script-tag {
+        font-size: 2.2rem;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
       }
 
       .hero-title {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
         line-height: 1.12;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
-      .hero-script {
-        font-size: 2.6rem;
-        margin: 2px 0 10px;
+      .step-1 .hero-title {
+        margin-bottom: 18px;
       }
 
       .hero-desc {
-        font-size: 0.86rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size: 0.84rem;
+        line-height: 1.46;
+        margin-bottom: 16px;
+        max-width: 330px;
+        text-align: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-actions {
@@ -1252,15 +1311,20 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+        margin-bottom: 12px;
       }
 
-      .btn-primary,
-      .btn-secondary {
+      .btn-primary {
         width: 100%;
         max-width: 275px;
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.84rem;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.84rem;
+        padding: 4px 0;
       }
 
       /* Barra de Pilares Carrusel Horizontal Deslizable en Móvil */
@@ -1460,48 +1524,49 @@
           <img src="public/frames/desktop/poster.webp" id="heroPosterFallback" class="hero-poster-fallback" alt="Elles Sala de Belleza y Cosmética en Apartadó">
         </div>
 
-        <!-- Capa de Degradado Suave para Contraste -->
-        <div class="hero-vignette-overlay"></div>
+        <!-- Capa de Degradado Aterciopelado para Contraste Orgánico -->
+        <div class="canvas-gradient-overlay"></div>
 
-        <!-- Contenedor Tipográfico Editorial en 2 Pasos -->
-        <div class="hero-scroll-content">
-          <!-- Paso 1 (0% a 50% de scroll) -->
-          <div class="hero-scroll-step active" id="heroStep1">
-            <span class="hero-tag">✦ Sala de Belleza & Cosmética en Apartadó</span>
-            <h1 class="hero-title">
-              Estilo & Elegancia
-              <span class="hero-script">que Transforman</span>
-            </h1>
-            <p class="hero-desc">
-              Tu salón de belleza de confianza en Apartadó. Especialistas en colorimetría, alisados espejo, cuidado facial glow y cosmética capilar de alta gama.
-            </p>
-            <div class="hero-actions">
-              <a href="https://wa.me/573043407429?text=Hola%20Elles%20Sala%20de%20Belleza%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-              </a>
-              <a href="#servicios" class="btn-secondary">
-                <i class="fa-solid fa-sparkles"></i> Ver Servicios
-              </a>
+        <!-- Contenedor Tipográfico Editorial en 2 Pasos (50% / 50%) -->
+        <div class="container hero-container-align">
+          <div class="hero-scroll-content">
+            <!-- Paso 1 (0% a 50% de scroll) -->
+            <div class="hero-scroll-step step-1 active" id="heroStep1">
+              <span class="hero-script-tag">Belleza &amp; Estilo de Autor</span>
+              <span class="hero-eyebrow">SALA DE BELLEZA &amp; COSMÉTICA · APARTADÓ</span>
+              <h1 class="hero-title">Estilo &amp; Elegancia<br><em>que Transforman.</em></h1>
+              <div class="hero-actions">
+                <a href="https://wa.me/573043407429?text=Hola%20Elles%20Sala%20de%20Belleza%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+                </a>
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">4.9 en Google Reviews · Apartadó</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Paso 2 (50% a 100% de scroll) -->
-          <div class="hero-scroll-step" id="heroStep2">
-            <span class="hero-tag">✦ Técnicas Prémium & Asesoría Personalizada</span>
-            <h2 class="hero-title">
-              Brillo & Cuidado
-              <span class="hero-script">para Cada Detalle</span>
-            </h2>
-            <p class="hero-desc">
-              Desde balayage con matices luminosos hasta maquillaje profesional y nail art de pasarela. Productos seleccionados para consentirte y resaltar tu luz propia.
-            </p>
-            <div class="hero-actions">
-              <a href="https://wa.me/573043407429?text=Hola%20Elles%20Sala%20de%20Belleza%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar Turno
-              </a>
-              <a href="#nosotros" class="btn-secondary">
-                <i class="fa-solid fa-heart"></i> Conócenos
-              </a>
+            <!-- Paso 2 (50% a 100% de scroll) -->
+            <div class="hero-scroll-step step-2" id="heroStep2">
+              <span class="hero-script-tag">Elegancia &amp; Distinción</span>
+              <span class="hero-eyebrow">TÉCNICAS PRÉMIUM &amp; ASESORÍA PERSONALIZADA</span>
+              <h2 class="hero-title">Brillo &amp; Cuidado<br><em>para Cada Detalle.</em></h2>
+              <p class="hero-desc">Desde colorimetría, alisados espejo y cuidado facial glow hasta maquillaje profesional y cosmética capilar de alta gama. Resalta tu luz propia con productos seleccionados.</p>
+              <div class="hero-actions">
+                <a href="https://wa.me/573043407429?text=Hola%20Elles%20Sala%20de%20Belleza%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Turno
+                </a>
+                <a href="#nosotros" class="btn-hero-minimal-link">
+                  Conoce el Salón <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">Atención personalizada con cita previa</span>
+              </div>
             </div>
           </div>
         </div>

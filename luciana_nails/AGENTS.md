@@ -24,7 +24,7 @@ Instrucciones y contexto específico para el mantenimiento y evolución de **Luc
 ---
 
 ## 📌 Estructura Oficial de Secciones (Mandatoria)
-1. **Smart Header**: Sin barra superior promocional. Móvil: Logo tipográfico puro (izq) y botón conciso **«Agendar»** (der) sin botón hamburguesa.
+1. **Smart Header**: Navbar 100% transparente y fijo (`position: fixed`) sobre el Hero; fondo translúcido con blur y borde sutil solo fuera del Hero (`.scrolled`). Sin barra superior promocional. Móvil: Logo tipográfico puro (izq) y botón conciso **«Agendar»** (der) sin botón hamburguesa.
 2. **`#inicio` (Hero Canvas Video Scroll Scrubbing — 300vh)**: Desktop anclaje inferior con 60% superior despejado; móvil estrictamente `min-height: 720px !important;`.
 3. **Barra de Pilares / Garantías**: 5 sellos de confianza. En móvil: Carrusel horizontal en 1 fila con auto-scroll suave (3s) y pausa al tacto.
 4. **`#servicios` (Catálogo de Manicura & Pedicura)**: Grid de **3 Columnas en Escritorio (`repeat(3, 1fr)`)**, estrictamente **2 Columnas en Móvil**. Tarjetas Full-Bleed 3:4 con degradado inferior aterciopelado.

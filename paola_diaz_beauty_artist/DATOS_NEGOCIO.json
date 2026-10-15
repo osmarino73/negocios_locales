@@ -1,35 +1,38 @@
 {
   "negocio": {
-    "nombre": "Uñitas Mágicas 💅",
+    "nombre": "Paola Diaz Beauty Artist",
     "rubro": "Salón de manicura y pedicura",
     "categoria": "nails",
-    "eslogan": "Uñitas Mágicas 💅 — Salón de manicura y pedicura en Apartadó",
+    "eslogan": "Paola Diaz Beauty Artist — Salón de manicura y pedicura en Vélez",
     "calificacion": "5.0",
     "resenas": "1",
     "contacto": {
-      "telefono_principal": "(+57) 322 522 8092",
-      "telefono_raw": "+573225228092",
+      "telefono_principal": "(+57) 314 738 2104",
+      "telefono_raw": "+573147382104",
       "whatsapp": {
-        "numero": "+573225228092",
-        "link": "https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%20%F0%9F%92%85%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+        "numero": "+573147382104",
+        "link": "https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20solicitar%20informaci%C3%B3n."
       }
     },
     "ubicacion": {
-      "direccion": "Barrio Obrero, Apartadó, Antioquia",
-      "ciudad": "Apartadó",
-      "departamento_pais": "Antioquia, Colombia",
-      "google_maps_url": "https://www.google.com/maps/place/U%C3%91ITAS+MAGICAS+%F0%9F%92%85/@7.8876502,-76.6278117,15z/data=!4m10!1m2!2m1!1snail+en+Apartad%C3%B3,+Antioquia!3m6!1s0x8e500dc91f90f643:0x469dd4206354a293!8m2!3d7.8876502!4d-76.6278117!15sChxuYWlsIGVuIEFwYXJ0YWTDsywgQW50aW9xdWlhWh0iG25haWwgZW4gYXBhcnRhZMOzIGFudGlvcXVpYZIBCm5haWxfc2Fsb27gAQA!16s%2Fg%2F11hxnx09v_",
-      "iframe_embed_url": "https://maps.google.com/maps?q=U%C3%91ITAS+MAGICAS,+Barrio+Obrero,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      "direccion": "Cra. 107 #103a - 44, Vélez, Apartadó, Antioquia",
+      "ciudad": "Vélez",
+      "departamento_pais": "Apartadó, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Paola+Diaz+Beauty+Artist/@7.8929892,-76.6537447,15z/data=!4m10!1m2!2m1!1ssal%C3%B3n+de+belleza+en+apartad%C3%B3+antioquia!3m6!1s0x8e500db31ba62add:0x9ba746b25c262c20!8m2!3d7.8929892!4d-76.6357203!15sCihzYWzDs24gZGUgYmVsbGV6YSBlbiBhcGFydGFkw7MgYW50aW9xdWlhkgEKbmFpbF9zYWxvbuABAA!16s%2Fg%2F11nvxkpyk8",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Paola+Diaz+Beauty+Artist,+Cra.+107+%23103a+-+44,+V%C3%A9lez,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
     },
-    "horario_atencion": {
-      "lunes_a_sabado": "8:00 AM - 7:00 PM",
-      "domingos_y_festivos": "Previa cita y disponibilidad"
+    "horario_atencion": "No especificado en Google Maps",
+    "sitio_web": "https://wa.me/573147382104",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
     },
     "servicios": [
       {
         "id": "semipermanente-pastel",
-        "nombre": "Semipermanente Pastel",
-        "precio": "$45.000 COP",
+        "nombre": "Semipermanente",
+        "precio": "$45.000",
         "duracion": "60 min",
         "tecnica": "Brillo Intacto 21 Días",
         "icono": "fa-gem",
@@ -38,7 +41,7 @@
       {
         "id": "unas-acrilicas",
         "nombre": "Extensiones Acrílicas",
-        "precio": "Desde $85.000 COP",
+        "precio": "Desde $85.000",
         "duracion": "90 min",
         "tecnica": "Esculpido & Estructura",
         "icono": "fa-wand-magic-sparkles",
@@ -47,7 +50,7 @@
       {
         "id": "nail-art-magico",
         "nombre": "Nail Art & Diseños",
-        "precio": "Desde $25.000 COP",
+        "precio": "Desde $25.000",
         "duracion": "45 min",
         "tecnica": "Mano Alzada & Glitter",
         "icono": "fa-paint-brush",
@@ -56,7 +59,7 @@
       {
         "id": "kapping-nivelacion",
         "nombre": "Kapping & Gel Nivelador",
-        "precio": "$55.000 COP",
+        "precio": "$55.000",
         "duracion": "60 min",
         "tecnica": "Protección & Crecimiento",
         "icono": "fa-shield-halved",
@@ -65,7 +68,7 @@
       {
         "id": "pedicura-spa",
         "nombre": "Pedicura Spa & Relax",
-        "precio": "$40.000 COP",
+        "precio": "$40.000",
         "duracion": "60 min",
         "tecnica": "Exfoliación & Masaje",
         "icono": "fa-spa",
@@ -74,7 +77,7 @@
       {
         "id": "press-on-nails",
         "nombre": "Press-On Nails VIP",
-        "precio": "Desde $50.000 COP",
+        "precio": "Desde $50.000",
         "duracion": "40 min",
         "tecnica": "Sets Personalizados",
         "icono": "fa-heart",
@@ -83,9 +86,9 @@
     ],
     "especialistas": [
       {
-        "id": "angie-mosquera",
-        "nombre": "Angie Mosquera",
-        "rol": "Fundadora & Master Nail Artist",
+        "id": "paola-diaz",
+        "nombre": "Paola Diaz",
+        "rol": "Directora & Master Nail Artist",
         "experiencia": "+7 años exp.",
         "badge": "Master",
         "calificacion": "5.0",
@@ -119,5 +122,19 @@
         "foto": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80"
       }
     ]
+  },
+  "video_scroll": {
+    "origen": ".agents/document/nail_A-2morena",
+    "video_desktop": "Nail_art_video_direction_1080p_20260914070039.mp4",
+    "video_mobile": "Crear_video_promocional_uñas_1080p_20260914070125.mp4",
+    "frames_desktop_total": 74,
+    "frames_mobile_total": 74,
+    "fps": 18,
+    "duracion_segundos": 4.0,
+    "formato": "image/webp",
+    "calidad_desktop": "Q85 (1920x1080)",
+    "calidad_mobile": "Q76 (720x1280)",
+    "overlay": "canvas-gradient-overlay (doble degradado aterciopelado)",
+    "narrativa": "2 pasos editoriales secuenciales (50% / 50%) con anclaje inferior y 60% superior despejado"
   }
 }

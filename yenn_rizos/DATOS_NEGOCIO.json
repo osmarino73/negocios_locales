@@ -1,0 +1,164 @@
+{
+  "negocio": {
+    "nombre": "YENN RIZOS",
+    "subtitulo": "Estudio Capilar Especializado en Rizos, Ondas & Afro",
+    "rubro": "Peluquería & Estética Capilar Especializada en Rizos",
+    "categoria": "HairSalon",
+    "eslogan": "Esculpimos, definimos y potenciamos la belleza natural de tus rizos en Apartadó.",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 301 613 9876",
+      "telefono_limpio": "+573016139876",
+      "whatsapp": {
+        "numero": "+573016139876",
+        "link": "https://wa.me/573016139876?text=Hola%20YENN%20RIZOS%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 108 & Cl. 107A #057840",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://maps.google.com/maps?q=YENN+RIZOS,+Cl.+107A+%23057840,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos": "Con Cita Previa",
+      "texto_resumido": "Lun - Sáb: 8:00 AM - 7:00 PM | Dom: Con Cita Previa"
+    },
+    "sitio_web": "https://www.facebook.com/profile.php?id=61580287659025&locale=es_LA",
+    "pilares": [
+      {
+        "titulo": "Estilistas Expertas",
+        "desc": "Especialistas certificadas en corte en seco y patrones rizados.",
+        "icono": "fa-scissors"
+      },
+      {
+        "titulo": "Cosmética Botánica",
+        "desc": "Productos libres de sulfatos, siliconas y parabenos.",
+        "icono": "fa-leaf"
+      },
+      {
+        "titulo": "Diagnóstico hebra a hebra",
+        "desc": "Evaluación de porosidad, densidad y elasticidad natural.",
+        "icono": "fa-wand-magic-sparkles"
+      },
+      {
+        "titulo": "Técnica Curly Auténtica",
+        "desc": "Métodos fitagem, finger coils y secado con difusor de calor controlado.",
+        "icono": "fa-spa"
+      },
+      {
+        "titulo": "Satisfacción 100%",
+        "desc": "Atención cálida, personalizada y resultados con acabado glow.",
+        "icono": "fa-shield-halved"
+      }
+    ],
+    "servicios": [
+      {
+        "id": "corte-en-seco",
+        "nombre": "Corte en Seco & Definición Custom",
+        "categoria": "Corte",
+        "duracion": "75 min",
+        "precio": "$55.000",
+        "desc": "Corte personalizado rizo por rizo en estado natural para respetar la caída y volumen sin sorpresas de encogimiento.",
+        "icono": "fa-scissors",
+        "img": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "hidronutricion-botanica",
+        "nombre": "Terapia de Hidronutrición Botánica",
+        "categoria": "Tratamiento",
+        "duracion": "60 min",
+        "precio": "$65.000",
+        "desc": "Baño nutritivo con aceites puros, aminoácidos y vapor ozonizado para sellar cutículas y eliminar el frizz.",
+        "icono": "fa-droplet",
+        "img": "https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "detox-capilar",
+        "nombre": "Detox & Exfoliación Scalp",
+        "categoria": "Salud Capilar",
+        "duracion": "50 min",
+        "precio": "$45.000",
+        "desc": "Limpieza profunda de acumulación de geles y mantecas, purificación del cuero cabelludo y activación folicular.",
+        "icono": "fa-leaf",
+        "img": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "transicion-capilar",
+        "nombre": "Protocolo de Transición Capilar",
+        "categoria": "Reconstrucción",
+        "duracion": "90 min",
+        "precio": "$75.000",
+        "desc": "Tratamiento intensivo proteico para recuperar ondas dañadas por químicas o calor excesivo.",
+        "icono": "fa-shield-halved",
+        "img": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "balayage-curly",
+        "nombre": "Balayage & Iluminación Curly",
+        "categoria": "Color",
+        "duracion": "140 min",
+        "precio": "$130.000",
+        "desc": "Aclarado estratégico a mano alzada respetando la elasticidad del rizo con decolorantes oleosos hidratantes.",
+        "icono": "fa-wand-magic-sparkles",
+        "img": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "definicion-fitagem",
+        "nombre": "Definición Fitagem & Peinado Glow",
+        "categoria": "Styling",
+        "duracion": "60 min",
+        "precio": "$50.000",
+        "desc": "Técnica fitagem fina con gel fijador de chía y linaza, secado con difusor y volumen controlado para eventos.",
+        "icono": "fa-sparkles",
+        "img": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "equipo": [
+      {
+        "id": 1,
+        "nombre": "Yennifer Rentería",
+        "cargo": "Directora & Master Curly Stylist",
+        "rango": "Master",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573016139876?text=Hola%20YENN%20RIZOS%2C%20quisiera%20agendar%20cita%20con%20la%20Master%20Yennifer%20Renter%C3%ADa."
+      },
+      {
+        "id": 2,
+        "nombre": "Kelly Palacios",
+        "cargo": "Terapeuta Capilar & Especialista Afro",
+        "rango": "Senior",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573016139876?text=Hola%20YENN%20RIZOS%2C%20quisiera%20agendar%20cita%20con%20la%20especialista%20Kelly%20Palacios."
+      },
+      {
+        "id": 3,
+        "nombre": "Dayana Mena",
+        "cargo": "Colorista & Balayage Curly",
+        "rango": "Senior",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573016139876?text=Hola%20YENN%20RIZOS%2C%20quisiera%20agendar%20cita%20con%20la%20colorista%20Dayana%20Mena."
+      },
+      {
+        "id": 4,
+        "nombre": "Yuliet Córdoba",
+        "cargo": "Estilista en Definición & Styling",
+        "rango": "Pro",
+        "calificacion": "5.0",
+        "foto_url": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=500&q=80",
+        "link_reserva": "https://wa.me/573016139876?text=Hola%20YENN%20RIZOS%2C%20quisiera%20agendar%20cita%20con%20la%20estilista%20Yuliet%20C%C3%B3rdoba."
+      }
+    ],
+    "metricas": [
+      { "valor": "+7", "etiqueta": "Años de Experiencia" },
+      { "valor": "+1.800", "etiqueta": "Rizos Transformados" },
+      { "valor": "100%", "etiqueta": "Cosmética Botánica" },
+      { "valor": "5.0 ★", "etiqueta": "Calificación Urabá" }
+    ]
+  }
+}

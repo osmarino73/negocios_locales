@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karelis Soto Spa Uñas &amp; Peluquería | Nails &amp; Estética Capilar en Montería</title>
+  <meta name="description" content="Karelis Soto Spa Uñas &amp; Peluquería en el Centro de Montería. Manicura semipermanente, uñas acrílicas esculpidas, pedicura spa, cepillado y colorimetría profesional. ¡Agenda tu cita!">
+  <meta name="keywords" content="Karelis Soto Spa Uñas, peluquería en montería, spa de uñas montería, manicura semipermanente centro monteria, acrilicas monteria, pedicura spa monteria">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Karelis Soto Spa Uñas &amp; Peluquería | Montería">
+  <meta property="og:description" content="Especialistas en uñas esculpidas, manicura semipermanente, pedicura spa y tratamiento capilar en el Centro de Montería.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://karelissotospaunas.com">
+  <meta property="og:image" content="public/frames/desktop/poster.webp">
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org JSON-LD para SEO Local -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Karelis Soto Spa Uñas & Peluquería",
+    "image": "public/frames/desktop/poster.webp",
+    "@id": "https://karelissotospaunas.com",
+    "url": "https://karelissotospaunas.com",
+    "telephone": "+573005589108",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 24 #7-96, centro",
+      "addressLocality": "Montería",
+      "addressRegion": "Córdoba",
+      "postalCode": "230001",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.751441,
+      "longitude": -75.8851465
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-dark: #0b0b0d;
+      --bg-card: #131217;
+      --bg-card-hover: #1b1a20;
+      --color-accent: #d4b296;
+      --color-accent-hover: #e6c5a8;
+      --text-light: #f7f3ee;
+      --text-muted: #aaa39c;
+      --border-soft: rgba(212, 178, 150, 0.18);
+      --font-display: 'Cormorant Garamond', serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --shadow-glow: 0 10px 30px rgba(212, 178, 150, 0.15);
+    }
+
+    /* Regla Crítica Mandatoria: overflow-x: clip */
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      overflow-y: visible;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       HEADER & NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.4s ease;
+      padding-top: env(safe-area-inset-top, 0px);
+      background: transparent;
+      border-bottom: none;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    /* Logotipo Tipográfico Puro (Sin íconos decorativos) */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      line-height: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+    }
+
+    .brand-subtitle {
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 3px;
+      white-space: nowrap;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--text-light);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      background: var(--color-accent);
+      color: #0b0b0d;
+      font-weight: 700;
+      font-size: 0.84rem;
+      letter-spacing: 0.04em;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(212, 178, 150, 0.25);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       HERO CANVAS VIDEO SCRUBBING (300vh)
+       ========================================================================== */
+    .hero-scroll-section {
+      position: relative;
+      height: 300vh;
+      width: 100%;
+      background-color: var(--bg-dark);
+    }
+
+    .canvas-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scroll-video-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .canvas-poster-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      transition: opacity 0.4s ease;
+    }
+
+    .canvas-poster-img.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Capa de degradado aterciopelado con protección inferior */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 55%, rgba(11, 11, 13, 0.75) 85%, var(--bg-dark) 100%),
+        linear-gradient(
+          90deg,
+          #0b0b0d 0%,
+          rgba(11, 11, 13, 0.92) 28%,
+          rgba(11, 11, 13, 0.65) 45%,
+          rgba(11, 11, 13, 0.20) 65%,
+          transparent 80%
+        );
+    }
+
+    /* Contenedor editorial anclado al tercio inferior */
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding-top: 0;
+      padding-bottom: clamp(48px, 9vh, 85px);
+    }
+
+    .hero-scroll-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      max-width: 580px;
+      min-height: 290px;
+    }
+
+    .hero-scroll-step {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(16px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scroll-step.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.2rem, 3.6vw, 3rem);
+      color: var(--color-accent);
+      line-height: 1;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.95);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 3.8vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0 0 16px 0;
+      color: var(--text-light);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-accent);
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.95);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 28px;
+      background: var(--color-accent);
+      color: #0b0b0d;
+      font-weight: 700;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(212, 178, 150, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 6px 14px;
+      background: rgba(19, 18, 23, 0.7);
+      border: 1px solid var(--border-soft);
+      border-radius: 50px;
+      backdrop-filter: blur(8px);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .hero-proof-stars {
+      color: #f59e0b;
+      letter-spacing: 1px;
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS
+       ========================================================================== */
+    .pillars-section {
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 28px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .pillar-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(212, 178, 150, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .pillar-card:hover {
+      background: rgba(212, 178, 150, 0.06);
+      border-color: var(--border-soft);
+    }
+
+    .pillar-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(212, 178, 150, 0.12);
+      color: var(--color-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .pillar-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    /* ==========================================================================
+       SECCIÓN REUTILIZABLE: ENCABEZADOS DE SECCIÓN
+       ========================================================================== */
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 60px auto;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.4rem;
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 3.4vw, 3rem);
+      font-weight: 600;
+      color: var(--text-light);
+      margin: 0 0 12px 0;
+      line-height: 1.15;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--color-accent);
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ==========================================================================
+       CATÁLOGO DE SERVICIOS (Grid 3 Columnas Desktop / 2 Columnas Móvil)
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .service-card {
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      border-color: rgba(212, 178, 150, 0.4);
+    }
+
+    .service-card-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-card-bg {
+      transform: scale(1.05);
+    }
+
+    /* Degradado aterciopelado inferior (40% superior libre) */
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        180deg, 
+        rgba(19, 18, 23, 0) 0%, 
+        rgba(19, 18, 23, 0) 42%, 
+        rgba(19, 18, 23, 0.75) 70%, 
+        rgba(19, 18, 23, 0.96) 92%, 
+        var(--bg-card) 100%
+      );
+    }
+
+    .service-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 22px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .service-card-category {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin: 0 0 6px 0;
+      line-height: 1.2;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Footer de Dos Filas Verticales Independientes */
+    .service-card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+    }
+
+    .service-card-price {
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .btn-card-book-minimal {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    .btn-card-book-minimal i {
+      font-size: 0.75rem;
+      color: var(--color-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .btn-card-book-minimal:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(5px);
+    }
+
+    /* ==========================================================================
+       SOBRE NOSOTROS & NUESTROS PROFESIONALES
+       ========================================================================== */
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 90px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      aspect-ratio: 4/3;
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(19, 18, 23, 0.88);
+      border: 1px solid var(--border-soft);
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .experience-badge-icon {
+      font-size: 1.6rem;
+      color: var(--color-accent);
+    }
+
+    .experience-badge-text {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .experience-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+      margin: 28px 0;
+      padding: 20px 0;
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1;
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    /* Grid Equipo / Profesionales (4 Columnas Desktop) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .team-card {
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+    }
+
+    .team-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, transparent 50%, rgba(19, 18, 23, 0.95) 90%, var(--bg-card) 100%);
+    }
+
+    .team-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 18px;
+      z-index: 2;
+    }
+
+    .team-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background: var(--color-accent);
+      margin-bottom: 8px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text-light);
+      margin: 0 0 2px 0;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      color: var(--color-accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .team-rating {
+      font-size: 0.74rem;
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    /* ==========================================================================
+       UBICACIÓN & MAPA INTERACTIVO
+       ========================================================================== */
+    .location-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .location-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-title {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--text-light);
+      margin: 0 0 16px 0;
+    }
+
+    .location-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .location-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+
+    }
+
+    .location-item i {
+      color: var(--color-accent);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+
+    .location-item-text strong {
+      display: block;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    .location-item-text span {
+      color: var(--text-muted);
+      font-size: 0.86rem;
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      min-height: 420px;
+      height: 100%;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background: #070708;
+      border-top: 1px solid var(--border-soft);
+      padding: 70px 0 30px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col-brand p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin-top: 14px;
+    }
+
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin: 0 0 18px 0;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 0.86rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-reserve-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      padding: 22px;
+      border-radius: var(--radius-md);
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .btn-footer-reserve {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      background: var(--color-accent);
+      color: #0b0b0d;
+      font-weight: 700;
+      font-size: 0.86rem;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-accent-hover);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       BOTÓN FLOTANTE WHATSAPP ANTI-CORTE MÓVIL
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+      z-index: 99999;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    /* ==========================================================================
+       RESPONSIVIDAD MÓVIL (< 768px)
+       ========================================================================== */
+    @media (max-width: 768px) {
+      /* Navbar Móvil */
+      .nav-links, .btn-header-cta {
+        display: none !important;
+      }
+      
+      .header-nav {
+        justify-content: center;
+        height: 64px;
+      }
+
+      .brand-logo {
+        text-align: center;
+      }
+
+      .brand-name {
+        font-size: 1.25rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.58rem;
+      }
+
+      /* Hero Section Móvil (Estrictamente min-height: 720px !important) */
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg,
+          transparent 0%,
+          transparent 80%,
+          rgba(11, 11, 13, 0.75) 90%,
+          var(--bg-dark) 100%
+        ) !important;
+      }
+
+      .hero-container-align {
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 16px;
+        padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero-scroll-content {
+        max-width: 360px;
+        min-height: 290px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-scroll-step {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 1.85rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.45;
+        margin-bottom: 16px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .btn-primary {
+        width: 100%;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+      }
+
+      /* Barra de Pilares Móvil (Carrusel Scroll Snap) */
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 12px;
+        padding: 0 16px;
+      }
+
+      .pillar-card {
+        flex: 0 0 220px;
+        scroll-snap-align: start;
+      }
+
+      /* Catálogo Servicios Móvil (2 Columnas Balanceadas) */
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card {
+        aspect-ratio: 3/4.4;
+        min-height: 0;
+      }
+
+      .service-card-content {
+        padding: 10px 12px 12px 12px !important;
+      }
+
+      .service-card-title {
+        font-size: 1.05rem;
+        margin-bottom: 2px;
+      }
+
+      .service-card-desc {
+        display: none !important;
+      }
+
+      .service-card-footer {
+        padding-top: 6px;
+        gap: 4px;
+      }
+
+      .service-card-price {
+        font-size: 1.15rem;
+      }
+
+      .btn-card-book-minimal {
+        font-size: 0.74rem;
+      }
+
+      /* Sobre Nosotros & Equipo Móvil */
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      /* Equipo / Profesionales (Carrusel Scroll Snap Horizontal) */
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+        padding: 8px 16px 20px 16px;
+        scrollbar-width: none;
+      }
+
+      .team-card {
+        flex: 0 0 255px;
+        aspect-ratio: 3/4.2;
+        min-height: 0;
+        scroll-snap-align: start;
+      }
+
+      /* Ubicación Móvil */
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+
+      .location-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+      }
+
+      /* Footer Móvil */
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <div class="header-sticky-wrapper">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo Tipográfico Puro -->
+        <a href="#inicio" class="brand-logo">
+          <span class="brand-name">Karelis Soto</span>
+          <span class="brand-subtitle">SPA UÑAS &amp; PELUQUERÍA · MONTERÍA</span>
+        </a>
+
+        <!-- Enlaces Desktop -->
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+
+        <!-- CTA Header Desktop -->
+        <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20solicitar%20informaci%C3%B3n." class="btn-header-cta" target="_blank" rel="noopener">Agendar Cita</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HERO CANVAS VIDEO SCRUBBING (300vh)
+       ========================================================================== -->
+  <section class="hero-scroll-section" id="inicio">
+    <div class="canvas-sticky-wrapper">
+      <canvas id="scroll-video-canvas"></canvas>
+      
+      <!-- Poster Fallback -->
+      <img 
+        id="canvas-poster-fallback" 
+        src="public/frames/desktop/poster.webp" 
+        alt="Karelis Soto Spa Uñas"
+        class="canvas-poster-img"
+      />
+
+      <div class="canvas-gradient-overlay"></div>
+
+      <div class="container hero-container-align">
+        <div class="hero-scroll-content">
+          <!-- Paso 1 (0% a 50%) -->
+          <div class="hero-scroll-step step-1 active">
+            <span class="hero-script-tag">Karelis Soto</span>
+            <span class="hero-eyebrow">NAIL SPA &amp; PELUQUERÍA · MONTERÍA</span>
+            <h1 class="hero-title">Arte y elegancia para tus uñas<br><em>con la distinción que mereces.</em></h1>
+            <div class="hero-actions">
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20solicitar%20informaci%C3%B3n." class="btn-primary" target="_blank" rel="noopener">Agendar Cita</a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="hero-proof-badge">
+              <span class="hero-proof-stars">★★★★★</span>
+              <span>4.7 en Google Reviews · Montería</span>
+            </div>
+          </div>
+
+          <!-- Paso 2 (50% a 100%) -->
+          <div class="hero-scroll-step step-2">
+            <span class="hero-eyebrow">ACABADOS DE ALTA DEFINICIÓN</span>
+            <h2 class="hero-title">Detalles impecables,<br><em>duración y cuidado profesional.</em></h2>
+            <p class="hero-desc">Manicura semipermanente, esculpido en acrílico, pedicura spa y estilismo capilar con productos de primera gama en un ambiente de confort.</p>
+            <div class="hero-actions">
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20solicitar%20informaci%C3%B3n." class="btn-primary" target="_blank" rel="noopener">Agendar Cita</a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BARRA DE PILARES / GARANTÍAS
+       ========================================================================== -->
+  <div class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-hand-sparkles"></i></div>
+          <h3 class="pillar-title">Nail Artists<br>Certificadas</h3>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="pillar-title">Productos<br>Prémium</h3>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="pillar-title">Higiene &amp;<br>Bioseguridad</h3>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-crown"></i></div>
+          <h3 class="pillar-title">Acabados de<br>Larga Duración</h3>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-icon-box"><i class="fa-solid fa-heart"></i></div>
+          <h3 class="pillar-title">Atención<br>Personalizada</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CATÁLOGO DE SERVICIOS
+       ========================================================================== -->
+  <section class="section-padding" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-script-eyebrow">Catálogo Exclusivo</span>
+        <h2 class="section-title">Nuestros Servicios de <em>Peluquería &amp; Spa</em></h2>
+        <p class="section-subtitle">Técnicas especializadas de manicura, esculpido, tratamiento capilar y pedicura para resaltar tu belleza.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Servicio 1 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Manicura Semipermanente" class="service-card-bg">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-category">Uñas</span>
+            <h3 class="service-card-title">Manicura Semipermanente &amp; Nail Art</h3>
+            <p class="service-card-desc">Limpieza profunda de cutícula, nivelación con base rubber y esmaltado de alta duración.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$45.000</div>
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20Manicura%20Semipermanente." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Uñas Acrílicas Esculpidas" class="service-card-bg">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-category">Uñas</span>
+            <h3 class="service-card-title">Acrílicas Esculpidas &amp; Encapsulado</h3>
+            <p class="service-card-desc">Extensión en acrílico de alta resistencia, baby boomer, efectos espejo y cristales.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$85.000</div>
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20U%C3%B1as%20Acr%C3%ADlicas." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa Rusa" class="service-card-bg">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-category">Spa</span>
+            <h3 class="service-card-title">Pedicura Spa Rusa con Sales</h3>
+            <p class="service-card-desc">Exfoliación con sales orgánicas, hidromasaje, mascarilla nutritiva y esmaltado prolongado.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$55.000</div>
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20Pedicura%20Spa." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Corte Editorial & Cepillado" class="service-card-bg">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-category">Peluquería</span>
+            <h3 class="service-card-title">Corte Editorial &amp; Cepillado</h3>
+            <p class="service-card-desc">Diseño de corte según visagismo facial, secado con técnicas de brillo y acabado con ondas.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$40.000</div>
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20Corte%20y%20Cepillado." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 5 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Tratamiento Capilar Brillo Espejo" class="service-card-bg">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-category">Peluquería</span>
+            <h3 class="service-card-title">Tratamiento Capilar Brillo Espejo</h3>
+            <p class="service-card-desc">Cauterización molecular capilar, nutrición intensiva sin formol y sellado de puntas.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price">$65.000</div>
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20Tratamiento%20Capilar." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 6 -->
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Colorimetría & Balayage" class="service-card-bg">
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <span class="service-card-category">Peluquería</span>
+            <h3 class="service-card-title">Colorimetría &amp; Mechas Balayage</h3>
+            <p class="service-card-desc">Aclaración progresiva con matices dorados o platinados y cuidado protector de fibra.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $150.000</div>
+              <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20Colorimetr%C3%ADa." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                Agendar <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SOBRE NOSOTROS & NUESTROS PROFESIONALES
+       ========================================================================== -->
+  <section class="section-padding" id="nosotros" style="background: rgba(255,255,255,0.01);">
+    <div class="container">
+      <div class="experience-layout">
+        <!-- Fotografía de Ambiente Coherente con Salón de Uñas -->
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Ambiente Karelis Soto Spa Uñas">
+          <div class="experience-floating-badge">
+            <div class="experience-badge-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="experience-badge-text">
+              Karelis Soto<br>
+              <small style="color:var(--color-accent); font-weight:500;">Experiencia Spa VIP</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-content">
+          <span class="section-script-eyebrow">Filosofía &amp; Pasión</span>
+          <h2 class="section-title">Especialistas en la belleza de <em>tus manos y cabello</em></h2>
+          <p class="section-subtitle" style="text-align:left;">En <strong>Karelis Soto Spa Uñas &amp; Peluquería</strong> combinamos la precisión artística del manicure y esculpido en acrílico con lo último en salud capilar. Nos dedicamos a brindar experiencias de relajación y transformación personalizada.</p>
+          
+          <div class="metrics-row">
+            <div class="metric-item">
+              <div class="metric-number">+5</div>
+              <div class="metric-label">Años de Exp.</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">+2.5k</div>
+              <div class="metric-label">Clientes</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">100%</div>
+              <div class="metric-label">Higiene VIP</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-number">4.7★</div>
+              <div class="metric-label">Reputación</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20conocer%20m%C3%A1s." class="btn-primary" target="_blank" rel="noopener">Conocer la Experiencia</a>
+        </div>
+      </div>
+
+      <!-- Equipo / Profesionales -->
+      <div class="section-header" style="margin-bottom: 40px;">
+        <span class="section-script-eyebrow">Manos Expertas</span>
+        <h2 class="section-title">Nuestras <em>Especialistas</em></h2>
+        <p class="section-subtitle">Terapeutas y estilistas apasionadas por perfeccionar cada detalle.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Profesional 1 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Karelis Soto" class="team-card-img">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Karelis Soto</h3>
+            <div class="team-role">Master Nail Artist &amp; Fundadora</div>
+            <div class="team-rating">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573005589108?text=Hola%20Karelis%20Soto,%20quisiera%20agendar%20una%20cita%20contigo." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profesional 2 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" alt="Melisa Ramos" class="team-card-img">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Melisa Ramos</h3>
+            <div class="team-role">Especialista en Acrílico</div>
+            <div class="team-rating">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573005589108?text=Hola,%20quisiera%20agendar%20cita%20con%20Melisa%20Ramos." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profesional 3 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Claudia Vega" class="team-card-img">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Claudia Vega</h3>
+            <div class="team-role">Estilista Master &amp; Colorista</div>
+            <div class="team-rating">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573005589108?text=Hola,%20quisiera%20agendar%20cita%20con%20Claudia%20Vega." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Profesional 4 -->
+        <div class="team-card">
+          <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80" alt="Laura Mendoza" class="team-card-img">
+          <div class="team-card-overlay"></div>
+          <div class="team-card-content">
+            <div class="team-card-accent-line"></div>
+            <h3 class="team-name">Laura Mendoza</h3>
+            <div class="team-role">Pedicura Spa &amp; Reflexología</div>
+            <div class="team-rating">★★★★★ (5.0)</div>
+            <a href="https://wa.me/573005589108?text=Hola,%20quisiera%20agendar%20cita%20con%20Laura%20Mendoza." class="btn-card-book-minimal" target="_blank" rel="noopener">
+              Agendar <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       UBICACIÓN & MAPA INTERACTIVO
+       ========================================================================== -->
+  <section class="section-padding" id="ubicacion">
+    <div class="container">
+      <div class="location-card">
+        <div class="location-info-panel">
+          <span class="section-script-eyebrow" style="text-align:left;">En el Centro</span>
+          <h2 class="location-title">Ven a Visitar nuestro <em>Spa &amp; Salón</em></h2>
+          
+          <ul class="location-list">
+            <li class="location-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="location-item-text">
+                <strong>Dirección Física</strong>
+                <span>Cl. 24 #7-96, centro, Montería, Córdoba</span>
+              </div>
+            </li>
+            <li class="location-item">
+              <i class="fa-solid fa-clock"></i>
+              <div class="location-item-text">
+                <strong>Horario de Atención</strong>
+                <span>Lunes a Sábado: 8:00 AM - 7:00 PM<br>Domingo: Previa Cita</span>
+              </div>
+            </li>
+            <li class="location-item">
+              <i class="fa-solid fa-phone"></i>
+              <div class="location-item-text">
+                <strong>Teléfono &amp; WhatsApp</strong>
+                <span>(+57) 300 558 9108</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20solicitar%20ubicaci%C3%B3n." class="btn-primary" target="_blank" rel="noopener">Solicitar Ubicación WhatsApp</a>
+        </div>
+
+        <div class="map-frame-wrapper">
+          <iframe 
+            src="https://maps.google.com/maps?q=Karelis+soto+spa+u%C3%B1as,+Cl.+24+%237-96,+centro,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa Karelis Soto Spa Uñas Montería">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col-brand">
+          <a href="#inicio" class="brand-logo">
+            <span class="brand-name">Karelis Soto</span>
+            <span class="brand-subtitle">SPA UÑAS &amp; PELUQUERÍA · MONTERÍA</span>
+          </a>
+          <p>Tu santuario de belleza y cuidado personal en el Centro de Montería. Manicura de precisión, esculpido en acrílico, pedicura spa y tratamiento capilar.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contacto</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+573005589108">(+57) 300 558 9108</a></li>
+            <li><a href="#ubicacion">Cl. 24 #7-96, centro</a></li>
+            <li><a href="#ubicacion">Montería, Córdoba</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-reserve-box">
+            <h4 class="footer-heading" style="margin-bottom:6px;">Reserva tu Cita</h4>
+            <p>Agenda fácilmente en línea y asegura tu espacio con nuestras especialistas.</p>
+            <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20agendar%20una%20cita." class="btn-footer-reserve" target="_blank" rel="noopener">Agendar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Karelis Soto Spa Uñas &amp; Peluquería. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Flotante WhatsApp -->
+  <a href="https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20solicitar%20informaci%C3%B3n." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacto por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       MOTOR JAVASCRIPT: CANVAS SCRUBBING & SCROLL INTELIGENTE
+       ========================================================================== -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('scroll-video-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const posterImg = document.getElementById('canvas-poster-fallback');
+      const scrollSection = document.querySelector('.hero-scroll-section');
+
+      // 1. Configuración de parámetros
+      const TOTAL_FRAMES = 74;
+      const isMobile = window.innerWidth < 768;
+      const framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+
+      if (posterImg) {
+        posterImg.src = `${framesFolder}/poster.webp`;
+      }
+
+      const getFrameUrl = (index) => {
+        const pad = String(index).padStart(4, '0');
+        return `${framesFolder}/frame-${pad}.webp`;
+      };
+
+      const images = [];
+      let loadedCount = 0;
+      let currentFrameIndex = 0;
+      let targetFrameIndex = 0;
+      let rafId = null;
+
+      // 2. Resize Canvas con soporte High-DPI
+      function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        renderFrame(currentFrameIndex);
+      }
+      window.addEventListener('resize', resizeCanvas, { passive: true });
+
+      // 3. Renderizador Full Cover Edge-to-Edge
+      function renderFrame(index) {
+        const img = images[index];
+        if (!img || !img.complete) return;
+
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth || img.width;
+        const ih = img.naturalHeight || img.height;
+
+        ctx.fillStyle = '#0b0b0d';
+        ctx.fillRect(0, 0, cw, ch);
+
+        const scale = Math.max(cw / iw, ch / ih);
+        const nw = iw * scale;
+        const nh = ih * scale;
+
+        const isMob = window.innerWidth < 768;
+        const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.04);
+        const ny = (ch - nh) / 2;
+
+        ctx.drawImage(img, nx, ny, nw, nh);
+      }
+
+      // 4. Precarga de imágenes con Promise.all
+      function preloadImages() {
+        const loadPromises = [];
+
+        for (let i = 1; i <= TOTAL_FRAMES; i++) {
+          const p = new Promise((resolve) => {
+            const img = new Image();
+            img.src = getFrameUrl(i);
+            img.onload = () => {
+              loadedCount++;
+              if (loadedCount === 1) {
+                currentFrameIndex = 0;
+                renderFrame(0);
+              }
+              if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
+                if (posterImg) {
+                  posterImg.classList.add('loaded');
+                }
+              }
+              resolve();
+            };
+            img.onerror = () => resolve();
+            images.push(img);
+          });
+          loadPromises.push(p);
+        }
+
+        Promise.all(loadPromises).then(() => {
+          if (posterImg) {
+            posterImg.classList.add('loaded');
+          }
+        });
+      }
+
+      // 5. Motor de Scroll Sync (2 Pasos Editoriales 50%/50%)
+      function updateScrollProgress() {
+        if (!scrollSection) return;
+        const rect = scrollSection.getBoundingClientRect();
+        const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+        
+        if (scrollDistance <= 0) return;
+
+        const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+        
+        targetFrameIndex = Math.min(
+          TOTAL_FRAMES - 1,
+          Math.floor(progress * TOTAL_FRAMES)
+        );
+
+        if (targetFrameIndex !== currentFrameIndex) {
+          currentFrameIndex = targetFrameIndex;
+          if (!rafId) {
+            rafId = requestAnimationFrame(() => {
+              renderFrame(currentFrameIndex);
+              rafId = null;
+            });
+          }
+        }
+
+        // Alternancia de los 2 pasos editoriales
+        const steps = document.querySelectorAll('.hero-scroll-step');
+        if (steps.length >= 2) {
+          const activeIndex = progress < 0.5 ? 0 : 1;
+          steps.forEach((step, idx) => {
+            step.classList.toggle('active', idx === activeIndex);
+          });
+        }
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+      // Auto-Hide Navbar al scroll abajo
+      let lastScrollY = window.scrollY;
+      const headerWrapper = document.querySelector('.header-sticky-wrapper');
+
+      window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+        if (!headerWrapper) return;
+
+        // Permanecer visible dentro del Hero
+        if (currentY < window.innerHeight) {
+          headerWrapper.style.transform = 'translateY(0)';
+          return;
+        }
+
+        if (currentY > lastScrollY + 10) {
+          headerWrapper.style.transform = 'translateY(-100%)';
+        } else if (currentY < lastScrollY - 10) {
+          headerWrapper.style.transform = 'translateY(0)';
+        }
+        lastScrollY = currentY;
+      }, { passive: true });
+
+      // Inicialización
+      resizeCanvas();
+      preloadImages();
+    })();
+  </script>
+</body>
+</html>

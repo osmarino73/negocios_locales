@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>DALI Saloom - Alta peluqueria — Centro de Estética en Montería</title>
+  <meta name="description" content="DALI Saloom - Alta peluqueria en Montería, Córdoba. Centro de estética y estilistas expertos en coloración, balayage, corte editorial, tratamientos y maquillaje social. Cra. 14 #55-106.">
+  <meta name="keywords" content="peluqueria en monteria, centro de estetica monteria, balayage monteria, corte de cabello monteria, dali saloom, alta peluqueria">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="DALI Saloom - Alta peluqueria | Centro de Estética en Montería">
+  <meta property="og:description" content="Experiencia de alta peluqueria y estética en Montería. Estilistas expertos, balayage glow, tratamientos de restauración y maquillaje social.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalisaloom.colombia.local/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "DALI Saloom - Alta peluqueria",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
+    "@id": "https://dalisaloom.colombia.local/#business",
+    "url": "https://dalisaloom.colombia.local/",
+    "telephone": "+5747891819",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Doble vía Monteverde, Cra. 14 #55-106",
+      "addressLocality": "Montería",
+      "addressRegion": "Córdoba",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.7628624,
+      "longitude": -75.8628686
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y SISTEMA DE DISEÑO (FICHA_DISENO.md)
+       ========================================================================== */
+    :root {
+      --color-accent: #cbb39c;          /* Camel Cobre de Marca */
+      --color-accent-dark: #ab9178;     /* Cobre Sombra */
+      --color-accent-glow: rgba(203, 179, 156, 0.35);
+      
+      --bg-dark: #0d0b0a;               /* Obsidian Noche Aterciopelado */
+      --bg-dark-card: #171412;          /* Ébano Mate */
+      --bg-dark-card-hover: #211c19;
+      --bg-light: #fbf9f6;              /* Marfil Warm */
+      --bg-light-alt: #f4efe9;
+      
+      --text-dark-primary: #f4efe9;     /* Textos en Fondos Oscuros */
+      --text-dark-secondary: #c9c0b8;
+      --text-light-primary: #1c1815;    /* Textos en Fondos Claros */
+      --text-light-secondary: #5a524c;
+      
+      --border-soft: rgba(203, 179, 156, 0.22);
+      --border-soft-light: rgba(28, 24, 21, 0.1);
+      
+      --font-display: 'DM Serif Display', serif;
+      --font-serif: 'Cormorant Garamond', serif;
+      --font-script: 'Alex Brush', cursive;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      
+      --shadow-ambient: 0 10px 30px rgba(0, 0, 0, 0.35);
+      --shadow-glow: 0 0 25px rgba(203, 179, 156, 0.25);
+      --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset Global & Clip de Scroll (Preserva position: sticky) */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip; /* REGLA OBLIGATORIA AGENTS.md */
+      overflow-y: visible;
+      font-family: var(--font-sans);
+      background-color: var(--bg-dark);
+      color: var(--text-dark-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.4s ease, background-color 0.4s ease;
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background-color: rgba(13, 11, 10, 0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-soft);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      padding: 0 24px;
+    }
+
+    /* Logotipo Tipográfico Puro (Sin Íconos) */
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dark-primary);
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.64rem;
+      letter-spacing: 0.22em;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      text-transform: uppercase;
+      margin-top: 3px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--text-dark-secondary);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-accent);
+      color: var(--bg-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: var(--transition-smooth);
+      border: 1px solid var(--color-accent);
+    }
+
+    .btn-header-cta:hover {
+      background-color: var(--color-accent-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Navbar en Móvil: Oculta botón de agendar para 100% de ancho del logotipo */
+    @media (max-width: 768px) {
+      .header-nav {
+        height: auto;
+        min-height: 58px;
+        padding: 12px 20px;
+      }
+      .nav-menu { display: none; }
+      .btn-header-cta { display: none !important; }
+      .brand-name { font-size: 1.25rem; }
+      .brand-subtitle { font-size: 0.58rem; letter-spacing: 0.18em; }
+    }
+
+    /* ==========================================================================
+       HERO CANVAS VIDEO SCROLL SCRUBBING (#inicio)
+       ========================================================================== */
+    .hero-scroll-section {
+      position: relative;
+      height: 300vh; /* 3 pantallas de scroll para animación holgada */
+      width: 100%;
+      background-color: var(--bg-dark);
+    }
+
+    .canvas-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scroll-video-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .canvas-poster-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      transition: opacity 0.4s ease;
+    }
+
+    .canvas-poster-img.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* Doble Degradado Aterciopelado (Eased Gradient Horizontal + Protección Inferior) */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(13, 11, 10, 0.65) 100%),
+        linear-gradient(
+          90deg, 
+          #0d0b0a 0%, 
+          #0d0b0a 22%, 
+          rgba(13, 11, 10, 0.94) 32%, 
+          rgba(13, 11, 10, 0.78) 42%, 
+          rgba(13, 11, 10, 0.45) 54%, 
+          rgba(13, 11, 10, 0.12) 68%, 
+          transparent 82%
+        );
+    }
+
+    /* Contenedor Editorial Anclado al Tercio Inferior (60% Superior Despejado) */
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end; /* ANCLAJE INFERIOR MANDATORIO */
+      justify-content: flex-start;
+      padding-top: 0;
+      padding-bottom: clamp(48px, 9vh, 85px);
+    }
+
+    .hero-scroll-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      max-width: 580px;
+      min-height: 290px;
+    }
+
+    .hero-scroll-step {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(18px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scroll-step.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* Firma Script de Autor */
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 3.4vw, 2.75rem);
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      line-height: 1.05;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.70rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--text-dark-secondary);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--text-dark-primary);
+      margin-bottom: 16px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
+    }
+
+    .hero-title em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      font-weight: 500;
+    }
+
+    .hero-desc {
+      font-size: 0.94rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      max-width: 480px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 30px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-accent);
+      color: var(--bg-dark);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      transition: var(--transition-smooth);
+      border: 1px solid var(--color-accent);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-accent-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 10px 0;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.80rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    /* Insignia Compacta Google Reviews */
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(23, 20, 18, 0.75);
+      border: 1px solid var(--border-soft);
+      backdrop-filter: blur(8px);
+      font-size: 0.78rem;
+    }
+
+    .hero-proof-stars {
+      color: #ffb703;
+      letter-spacing: 1px;
+    }
+
+    .hero-proof-text {
+      color: var(--text-dark-secondary);
+    }
+
+    /* Responsividad Móvil del Hero Header (< 768px) */
+    @media (max-width: 768px) {
+      .hero-scroll-section {
+        height: 300vh;
+      }
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg, 
+          rgba(13, 11, 10, 0) 0%, 
+          rgba(13, 11, 10, 0) 38%, 
+          rgba(13, 11, 10, 0.65) 54%, 
+          rgba(13, 11, 10, 0.95) 76%, 
+          #0d0b0a 96%
+        );
+      }
+      .hero-container-align {
+        justify-content: center;
+        align-items: flex-end;
+        padding: 140px 16px 28px;
+      }
+      .hero-scroll-content {
+        max-width: 360px;
+        min-height: 280px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .hero-scroll-step {
+        align-items: center;
+        text-align: center;
+      }
+      .hero-title {
+        font-size: 1.88rem;
+        line-height: 1.14;
+        margin-bottom: 10px;
+      }
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.48;
+        margin-bottom: 18px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+      .btn-primary {
+        width: 100%;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+      }
+    }
+
+    /* ==========================================================================
+       BARRA DE PILARES / GARANTÍAS DE CONFIANZA
+       ========================================================================== */
+    .pillars-section {
+      background-color: var(--bg-dark-card);
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+      padding: 32px 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+    }
+
+    .pillar-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 12px 10px;
+    }
+
+    .pillar-icon-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: rgba(203, 179, 156, 0.08);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      transition: var(--transition-smooth);
+    }
+
+    .pillar-card:hover .pillar-icon-badge {
+      transform: translateY(-4px) rotate(4deg);
+      background: var(--color-accent);
+      color: var(--bg-dark);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .pillar-title {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 4px;
+    }
+
+    .pillar-desc {
+      font-size: 0.74rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.35;
+    }
+
+    /* Móvil: Carrusel Horizontal Deslizable (Scroll Snap) */
+    @media (max-width: 768px) {
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px;
+        padding: 4px 0;
+      }
+      .pillars-grid::-webkit-scrollbar { display: none; }
+      .pillar-card {
+        flex: 0 0 200px;
+        scroll-snap-align: start;
+        background: rgba(23, 20, 18, 0.5);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-md);
+        padding: 16px 12px;
+      }
+    }
+
+    /* ==========================================================================
+       SECCIÓN DE SERVICIOS (#servicios) - CATÁLOGO FULL-BLEED MINIMALISTA
+       ========================================================================== */
+    .services-section {
+      padding: 100px 0;
+      background-color: var(--bg-dark);
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 56px;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.2rem;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      color: var(--text-dark-primary);
+      margin-bottom: 14px;
+    }
+
+    .section-title em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+    }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.6;
+    }
+
+    /* Grid de 3 Columnas en Escritorio */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    /* Tarjeta Full-Bleed Minimalista (Relación 3:4) */
+    .service-card {
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      background-color: var(--bg-dark-card);
+      border: 1px solid var(--border-soft);
+      transition: var(--transition-smooth);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), var(--shadow-glow);
+      border-color: var(--color-accent);
+    }
+
+    .service-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.06);
+    }
+
+    /* Degradado Inferior Aterciopelado (45% superior libre) */
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(23, 20, 18, 0) 0%, 
+        rgba(23, 20, 18, 0) 45%, 
+        rgba(23, 20, 18, 0.78) 72%, 
+        rgba(23, 20, 18, 0.96) 94%, 
+        var(--bg-dark-card) 100%
+      );
+      z-index: 2;
+    }
+
+    .service-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .service-card-category {
+      font-size: 0.66rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      color: var(--text-dark-primary);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .service-card-desc {
+      font-size: 0.82rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.45;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Footer de Dos Filas Verticales Independientes */
+    .service-card-footer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 10px;
+    }
+
+    /* Fila 1: Precio con 100% de Ancho (Token Dinámico) */
+    .service-card-price {
+      width: 100%;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      font-weight: 600;
+    }
+
+    .service-card-price small {
+      font-family: var(--font-sans);
+      font-size: 0.72em;
+      font-weight: 500;
+      opacity: 0.85;
+    }
+
+    /* Fila 2: Enlace Minimalista AGENDAR ➔ */
+    .btn-card-book-minimal {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-dark-primary);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: var(--transition-smooth);
+      padding: 4px 0;
+    }
+
+    .btn-card-book-minimal i {
+      font-size: 0.75rem;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      transition: transform 0.3s ease;
+    }
+
+    .btn-card-book-minimal:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(6px);
+    }
+
+    /* Servicios en Móvil: Obligatorio Grid de 2 Columnas Balanceadas (< 768px) */
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 14px;
+        row-gap: 18px;
+      }
+      .service-card {
+        aspect-ratio: 3/4.4;
+        min-height: 0;
+        min-width: 0;
+        border-radius: var(--radius-md);
+      }
+      .service-card-content {
+        padding: 12px 12px 14px !important;
+      }
+      .service-card-title {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+      .service-card-desc {
+        display: none !important; /* REGLA AGENTS.md EN MÓVIL */
+      }
+      .service-card-price {
+        font-size: 1.10rem;
+      }
+      .btn-card-book-minimal {
+        font-size: 0.75rem;
+      }
+    }
+
+    /* ==========================================================================
+       SECCIÓN SOBRE NOSOTROS & PROFESIONALES (#nosotros)
+       ========================================================================== */
+    .about-section {
+      padding: 100px 0;
+      background-color: var(--bg-dark-card);
+      border-top: 1px solid var(--border-soft);
+      position: relative;
+    }
+
+    /* Layout Editorial Sobre Nosotros */
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 90px;
+    }
+
+    .salon-image-showcase {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .salon-image-showcase img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(13, 11, 10, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--color-accent);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-icon {
+      font-size: 1.5rem;
+      color: var(--color-accent);
+    }
+
+    .badge-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .badge-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--text-dark-primary);
+    }
+
+    .badge-sub {
+      font-size: 0.72rem;
+      color: var(--text-dark-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    .experience-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+      margin: 28px 0;
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric-num {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--color-accent);
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      font-size: 0.74rem;
+      color: var(--text-dark-secondary);
+      margin-top: 2px;
+    }
+
+    /* Grid de Profesionales (4 Columnas en Desktop) */
+    .team-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .team-card {
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      background-color: var(--bg-dark);
+      border: 1px solid var(--border-soft);
+      transition: var(--transition-smooth);
+    }
+
+    .team-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .team-card-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.6s ease;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.05);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg, 
+        rgba(13, 11, 10, 0) 0%, 
+        rgba(13, 11, 10, 0.2) 40%, 
+        rgba(13, 11, 10, 0.85) 75%, 
+        rgba(13, 11, 10, 0.98) 100%
+      );
+      z-index: 2;
+    }
+
+    .team-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .team-accent-line {
+      width: 32px;
+      height: 2px;
+      background-color: var(--color-accent); /* TOKEN DINÁMICO */
+      margin-bottom: 8px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      color: var(--text-dark-primary);
+      margin-bottom: 2px;
+    }
+
+    .team-role {
+      font-size: 0.78rem;
+      color: var(--color-accent); /* TOKEN DINÁMICO */
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .team-rating {
+      font-size: 0.74rem;
+      color: #ffb703;
+      margin-bottom: 12px;
+    }
+
+    /* Responsividad Móvil de Nosotros & Profesionales (< 768px) */
+    @media (max-width: 768px) {
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      /* Equipo en Móvil: Carrusel Horizontal Deslizable Obligatorio (Scroll Snap) */
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px;
+        margin: 0 -16px;
+        width: calc(100% + 32px);
+        padding: 8px 16px 20px;
+      }
+      .team-grid::-webkit-scrollbar { display: none; }
+      .team-card {
+        flex: 0 0 255px; /* TAMAÑO FIJO Y EFECTO PEEK AGENTS.md */
+        aspect-ratio: 3/4.2;
+        scroll-snap-align: start;
+      }
+    }
+
+    /* ==========================================================================
+       SECCIÓN DE UBICACIÓN & CONTACTO (#ubicacion)
+       ========================================================================== */
+    .location-section {
+      padding: 100px 0;
+      background-color: var(--bg-dark);
+      position: relative;
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background-color: var(--bg-dark-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+      box-shadow: var(--shadow-ambient);
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .info-icon-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(203, 179, 156, 0.1);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .info-text-group h4 {
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-dark-primary);
+      margin-bottom: 2px;
+    }
+
+    .info-text-group p {
+      font-size: 0.86rem;
+      color: var(--text-dark-secondary);
+      line-height: 1.45;
+    }
+
+    .map-actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .map-frame-wrapper {
+      width: 100%;
+      min-height: 420px;
+      position: relative;
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(0.2) contrast(1.1);
+    }
+
+    /* Ubicación en Móvil (< 768px) */
+    @media (max-width: 768px) {
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+      .map-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .map-actions .btn-primary,
+      .map-actions .btn-hero-minimal-link {
+        width: 100%;
+        justify-content: center;
+      }
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+      }
+    }
+
+    /* ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== */
+    .site-footer {
+      background-color: #080706;
+      border-top: 1px solid var(--border-soft);
+      padding: 80px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand-col p {
+      font-size: 0.86rem;
+      color: var(--text-dark-secondary);
+      margin-top: 14px;
+      line-height: 1.55;
+      max-width: 320px;
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark-primary);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-link {
+      font-size: 0.86rem;
+      color: var(--text-dark-secondary);
+      transition: var(--transition-smooth);
+    }
+
+    .footer-link:hover {
+      color: var(--color-accent);
+      padding-left: 4px;
+    }
+
+    .footer-hours-list p {
+      font-size: 0.84rem;
+      color: var(--text-dark-secondary);
+      margin-bottom: 8px;
+    }
+
+    /* Módulo de Reserva en Footer (Botón Conciso «Agendar») */
+    .footer-reserve-box {
+      background-color: var(--bg-dark-card);
+      border: 1px solid var(--border-soft);
+      padding: 20px;
+      border-radius: var(--radius-md);
+    }
+
+    .footer-reserve-box p {
+      font-size: 0.82rem;
+      color: var(--text-dark-secondary);
+      margin-bottom: 14px;
+    }
+
+    .btn-footer-reserve {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: var(--radius-full);
+      background-color: var(--color-accent);
+      color: var(--bg-dark);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: 0;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .btn-footer-reserve:hover {
+      background-color: var(--color-accent-dark);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-dark-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    /* ==========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP ANTI-CORTE MÓVIL
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px)); /* ANTI-CORTE MÓVIL */
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #25d366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 99999; /* SIEMPRE POR ENCIMA */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1) rotate(6deg);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.65);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SMART HEADER / NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <header class="header-sticky-wrapper" id="smart-header">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- Logotipo Tipográfico Puro (Sin Íconos) -->
+        <a href="#inicio" class="brand-logo">
+          <span class="brand-name">DALI Saloom</span>
+          <span class="brand-subtitle">ALTA PELUQUERÍA · MONTERÍA</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+        </ul>
+
+        <!-- Botón solo visible en Escritorio -->
+        <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom%20-%20Alta%20peluqueria%2C%20quisiera%20agendar%20una%20cita." class="btn-header-cta" target="_blank" rel="noopener">
+          Agendar Cita
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         #INICIO: HERO FULL-WIDTH BLEED CANVAS VIDEO SCROLL SCRUBBING
+         ========================================================================== -->
+    <section class="hero-scroll-section" id="inicio">
+      <div class="canvas-sticky-wrapper">
+        <!-- Canvas Animado de Fotogramas -->
+        <canvas id="scroll-video-canvas"></canvas>
+        
+        <!-- Poster Fallback Estático -->
+        <img 
+          id="canvas-poster-fallback" 
+          src="public/frames/desktop/poster.webp" 
+          alt="DALI Saloom - Alta peluqueria en Montería" 
+          class="canvas-poster-img"
+        />
+
+        <!-- Doble Degradado Aterciopelado Overlay -->
+        <div class="canvas-gradient-overlay"></div>
+
+        <!-- Contenido Editorial en 2 Pasos Anclado al Tercio Inferior -->
+        <div class="container hero-container-align">
+          <div class="hero-scroll-content">
+            
+            <!-- Paso 1 (0% a 50% de scroll) -->
+            <div class="hero-scroll-step step-1 active">
+              <span class="hero-script-tag">Alta Peluquería &amp; Estética</span>
+              <span class="hero-eyebrow">MONTERÍA · DOBLE VÍA MONTEVERDE</span>
+              <h1 class="hero-title">El arte de cuidar tu estilo<br><em>con máxima distinción.</em></h1>
+              
+              <div class="hero-actions">
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom%20-%20Alta%20peluqueria%2C%20quisiera%20agendar%20una%20cita." class="btn-primary" target="_blank" rel="noopener">
+                  Agendar Cita
+                </a>
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">4.6 en Google Reviews · Montería</span>
+              </div>
+            </div>
+
+            <!-- Paso 2 (50% a 100% de scroll) -->
+            <div class="hero-scroll-step step-2">
+              <span class="hero-script-tag">Técnica &amp; Coloración Glow</span>
+              <span class="hero-eyebrow">EXPERIENCIA EXCLUSIVA</span>
+              <h2 class="hero-title">Detalles que realzan<br><em>tu belleza natural.</em></h2>
+              <p class="hero-desc">Balayage de autor, cortes editoriales y tratamientos de restauración capilar profunda diseñados especialmente para ti.</p>
+
+              <div class="hero-actions">
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom%20-%20Alta%20peluqueria%2C%20deseo%20consultar%20por%20sus%20servicios." class="btn-primary" target="_blank" rel="noopener">
+                  Agendar Cita
+                </a>
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BARRA DE PILARES / GARANTÍAS DE CONFIANZA
+         ========================================================================== -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="pillars-grid">
+          
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <h3 class="pillar-title">Estilistas Expertos</h3>
+            <p class="pillar-desc">Master coloristas de amplia trayectoria</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-bottle-droplet"></i>
+            </div>
+            <h3 class="pillar-title">Productos Prémium</h3>
+            <p class="pillar-desc">Marcas exclusivas internacionales</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-gem"></i>
+            </div>
+            <h3 class="pillar-title">Experiencia de Lujo</h3>
+            <p class="pillar-desc">Ambiente exclusivo y relajante</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="pillar-title">Satisfacción Total</h3>
+            <p class="pillar-desc">Garantía en cada procedimiento</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon-badge">
+              <i class="fa-solid fa-shield-cat"></i>
+            </div>
+            <h3 class="pillar-title">Higiene &amp; Bioseguridad</h3>
+            <p class="pillar-desc">Protocolos estrictos de cuidado</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         #SERVICIOS: CATÁLOGO FULL-BLEED MINIMALISTA
+         ========================================================================== -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-script-eyebrow">Carta de Servicios</span>
+          <h2 class="section-title">Experiencias creadas para <em>destacar tu luz.</em></h2>
+          <p class="section-desc">Procedimientos capilares, colormetría y estética con los más altos estándares de calidad y técnica.</p>
+        </div>
+
+        <div class="services-grid">
+          
+          <!-- Servicio 1 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Corte & Styling Editorial en DALI Saloom" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <span class="service-card-category">Peluquería</span>
+              <h3 class="service-card-title">Corte &amp; Styling Editorial</h3>
+              <p class="service-card-desc">Diseño de corte personalizado según tu visajismo, asesoría de imagen y moldeado voluminoso.</p>
+              
+              <div class="service-card-footer">
+                <div class="service-card-price">$60.000</div>
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20el%20servicio%20de%20Corte%20%26%20Styling%20Editorial." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 2 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Colormetría & Balayage Glow en DALI Saloom" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <span class="service-card-category">Coloración</span>
+              <h3 class="service-card-title">Colormetría &amp; Balayage Glow</h3>
+              <p class="service-card-desc">Aclaración gradual con matización prémium, diseño de mechas multidimensionales y protección Plex.</p>
+              
+              <div class="service-card-footer">
+                <div class="service-card-price"><small>Desde</small> $180.000</div>
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20el%20servicio%20de%20Colormetr%C3%ADa%20%26%20Balayage%20Glow." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 3 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Hidratación & Cauterización Capilar en DALI Saloom" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <span class="service-card-category">Tratamientos</span>
+              <h3 class="service-card-title">Hidratación Capilar Profunda</h3>
+              <p class="service-card-desc">Restauración molecular intensiva para recuperar elasticidad, brillo y sellar la cutícula capilar.</p>
+              
+              <div class="service-card-footer">
+                <div class="service-card-price">$90.000</div>
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20el%20servicio%20de%20Hidrataci%C3%B3n%20Capilar%20Profunda." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 4 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Social & Eventos en DALI Saloom" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <span class="service-card-category">Estética</span>
+              <h3 class="service-card-title">Maquillaje Social &amp; Eventos</h3>
+              <p class="service-card-desc">Maquillaje HD con piel blindada, pestañas punto a punto y fijación de larga duración.</p>
+              
+              <div class="service-card-footer">
+                <div class="service-card-price">$120.000</div>
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20el%20servicio%20de%20Maquillaje%20Social." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 5 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Moldeado & Ondas al Agua en DALI Saloom" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <span class="service-card-category">Styling</span>
+              <h3 class="service-card-title">Moldeado &amp; Ondas al Agua</h3>
+              <p class="service-card-desc">Lavado relajante con masaje capilar, cepillado profesional y ondas glamurosas de alta fijación.</p>
+              
+              <div class="service-card-footer">
+                <div class="service-card-price">$45.000</div>
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20el%20servicio%20de%20Moldeado%20%26%20Ondas%20al%20Agua." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Servicio 6 -->
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Manicura & Pedicura Spa en DALI Saloom" class="service-card-img" loading="lazy">
+            <div class="service-card-overlay"></div>
+            <div class="service-card-content">
+              <span class="service-card-category">Uñas &amp; Estética</span>
+              <h3 class="service-card-title">Manicura &amp; Pedicura Spa</h3>
+              <p class="service-card-desc">Exfoliación suave, mascarilla hidratante, masaje y esmaltado semipermanente de alta resistencia.</p>
+              
+              <div class="service-card-footer">
+                <div class="service-card-price">$55.000</div>
+                <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20el%20servicio%20de%20Manicura%20%26%20Pedicura%20Spa." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                  AGENDAR <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         #NOSOTROS: SOBRE NOSOTROS & NUESTROS PROFESIONALES
+         ========================================================================== -->
+    <section class="about-section" id="nosotros">
+      <div class="container">
+        
+        <!-- Bloque Editorial Sobre Nosotros -->
+        <div class="experience-layout">
+          <div class="salon-image-showcase">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80" alt="Instalaciones de DALI Saloom - Alta peluqueria en Montería">
+            <div class="experience-floating-badge">
+              <i class="fa-solid fa-crown badge-icon"></i>
+              <div class="badge-text">
+                <span class="badge-title">VIP Salon</span>
+                <span class="badge-sub">Montería, Córdoba</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-content">
+            <span class="section-script-eyebrow">Sobre Nosotros</span>
+            <h2 class="section-title">Pasión por la alta peluquería <em>y la estética de vanguardia.</em></h2>
+            <p class="section-desc">En DALI Saloom combinamos técnicas de autor, productos internacionales prémium y un trato personalizado en un ambiente acogedor y exclusivo en Montería.</p>
+
+            <div class="metrics-row">
+              <div class="metric-item">
+                <span class="metric-num">10+</span>
+                <span class="metric-label">Años de Exp.</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num">2.5k+</span>
+                <span class="metric-label">Clientes Felices</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num">100%</span>
+                <span class="metric-label">Marcas Prémium</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-num">4.6★</span>
+                <span class="metric-label">Calificación</span>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20servicios." class="btn-primary" target="_blank" rel="noopener">
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Bloque Nuestros Profesionales (4 Columnas Desktop / Scroll Snap Mobile) -->
+        <div class="team-header">
+          <span class="section-script-eyebrow">Nuestras Estilistas</span>
+          <h2 class="section-title">Talento y pasión al <em>servicio de tu estilo.</em></h2>
+        </div>
+
+        <div class="team-grid">
+          
+          <!-- Profesional 1 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Dali - Master Colorista" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Dali</h3>
+              <span class="team-role">Directora Creativa &amp; Colorista</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/5747891819?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Dali." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Profesional 2 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Valentina - Balayage Specialist" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Valentina</h3>
+              <span class="team-role">Especialista en Balayage</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/5747891819?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Valentina." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Profesional 3 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80" alt="Camila - Terapeuta Capilar" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Camila</h3>
+              <span class="team-role">Terapeuta Capilar &amp; Styling</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/5747891819?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Camila." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Profesional 4 -->
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Sofia - Makeup Artist" class="team-card-img" loading="lazy">
+            <div class="team-card-overlay"></div>
+            <div class="team-card-content">
+              <div class="team-accent-line"></div>
+              <h3 class="team-name">Sofia</h3>
+              <span class="team-role">Makeup Artist &amp; Estética</span>
+              <div class="team-rating">⭐⭐⭐⭐⭐ (5.0)</div>
+              <a href="https://wa.me/5747891819?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Sofia." class="btn-card-book-minimal" target="_blank" rel="noopener">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         #UBICACION: MAPA INTERACTIVO & DATOS DE CONTACTO
+         ========================================================================== -->
+    <section class="location-section" id="ubicacion">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-script-eyebrow">Nuestra Ubicación</span>
+          <h2 class="section-title">Visítanos en <em>Monteverde, Montería.</em></h2>
+        </div>
+
+        <div class="map-showcase-card">
+          <div class="map-info-panel">
+            
+            <div class="info-item">
+              <div class="info-icon-badge">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="info-text-group">
+                <h4>Dirección Física</h4>
+                <p>Doble vía Monteverde, Cra. 14 #55-106<br>Montería, Córdoba, Colombia</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-badge">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="info-text-group">
+                <h4>Horarios de Atención</h4>
+                <p>Lunes a Sábado: 8:00 AM - 7:00 PM<br>Domingos y Festivos: Cerrado</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon-badge">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="info-text-group">
+                <h4>Teléfono &amp; WhatsApp</h4>
+                <p>PBX: 47891819<br>WhatsApp: +57 47891819</p>
+              </div>
+            </div>
+
+            <div class="map-actions">
+              <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20una%20cita." class="btn-primary" target="_blank" rel="noopener">
+                Agendar por WhatsApp
+              </a>
+              <a href="https://www.google.com/maps/place/DALI+Saloom+-+Alta+peluqueria/@8.7628624,-75.880893,15z" class="btn-hero-minimal-link" target="_blank" rel="noopener">
+                Abrir en Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Mapa Embebido con Fórmula Oficial z=16 -->
+          <div class="map-frame-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=DALI+Saloom+-+Alta+peluqueria,+Cra.+14+%2355-106,+Monteri%C3%B1a,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de DALI Saloom - Alta peluqueria en Google Maps">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER PRINCIPAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand-col">
+          <a href="#inicio" class="brand-logo">
+            <span class="brand-name">DALI Saloom</span>
+            <span class="brand-subtitle">ALTA PELUQUERÍA · MONTERÍA</span>
+          </a>
+          <p>Tu centro de estética y alta peluquería de confianza en Montería. Pasión por la belleza, la salud capilar y la atención personalizada.</p>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Navegación</h3>
+          <ul class="footer-links">
+            <li><a href="#inicio" class="footer-link">Inicio</a></li>
+            <li><a href="#servicios" class="footer-link">Servicios de Peluquería</a></li>
+            <li><a href="#nosotros" class="footer-link">Sobre Nosotros</a></li>
+            <li><a href="#ubicacion" class="footer-link">Ubicación &amp; Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Horarios</h3>
+          <div class="footer-hours-list">
+            <p><strong>Lunes a Sábado:</strong><br>8:00 AM - 7:00 PM</p>
+            <p><strong>Domingos:</strong><br>Cerrado</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-title">Reserva Online</h3>
+          <div class="footer-reserve-box">
+            <p>Agenda tu cita de forma rápida y directa por WhatsApp con nuestras estilistas.</p>
+            <a href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom,%20deseo%20agendar%20una%20cita." class="btn-footer-reserve" target="_blank" rel="noopener">
+              Agendar
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DALI Saloom - Alta peluqueria. Todos los derechos reservados.</p>
+        <p>Montería, Córdoba — Colombia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE WHATSAPP (ANTI-CORTE MÓVIL)
+       ========================================================================== -->
+  <a 
+    href="https://wa.me/5747891819?text=Hola%20DALI%20Saloom%20-%20Alta%20peluqueria%2C%20quisiera%20solicitar%20informaci%C3%B3n." 
+    class="whatsapp-float" 
+    target="_blank" 
+    rel="noopener"
+    aria-label="Contactar por WhatsApp a DALI Saloom">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================================================
+       MOTOR JAVASCRIPT: CANVAS VIDEO SCROLL SCRUBBING & NAVBAR INTELIGENTE
+       ========================================================================== -->
+  <script>
+    (function () {
+      // 1. Smart Header Auto-Hide al hacer scroll
+      const header = document.getElementById('smart-header');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+      }, { passive: true });
+
+      // 2. Motor Canvas Video Scroll Scrubbing
+      const canvas = document.getElementById('scroll-video-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const posterImg = document.getElementById('canvas-poster-fallback');
+      const scrollSection = document.querySelector('.hero-scroll-section');
+
+      const TOTAL_FRAMES = 74;
+      const isMobile = window.innerWidth < 768;
+      const framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+
+      if (posterImg) {
+        posterImg.src = `${framesFolder}/poster.webp`;
+      }
+
+      const getFrameUrl = (index) => {
+        const pad = String(index).padStart(4, '0');
+        return `${framesFolder}/frame-${pad}.webp`;
+      };
+
+      const images = [];
+      let loadedCount = 0;
+      let currentFrameIndex = 0;
+      let targetFrameIndex = 0;
+      let rafId = null;
+
+      function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        renderFrame(currentFrameIndex);
+      }
+      window.addEventListener('resize', resizeCanvas, { passive: true });
+
+      function renderFrame(index) {
+        const img = images[index];
+        if (!img || !img.complete) return;
+
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth || img.width;
+        const ih = img.naturalHeight || img.height;
+
+        ctx.fillStyle = '#0d0b0a';
+        ctx.fillRect(0, 0, cw, ch);
+
+        // Cobertura 100% Full Cover (Edge-to-Edge)
+        const scale = Math.max(cw / iw, ch / ih);
+        const nw = iw * scale;
+        const nh = ih * scale;
+
+        const isMob = window.innerWidth < 768;
+        const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.04);
+        const ny = (ch - nh) / 2;
+
+        ctx.drawImage(img, nx, ny, nw, nh);
+      }
+
+      function preloadImages() {
+        const loadPromises = [];
+
+        for (let i = 1; i <= TOTAL_FRAMES; i++) {
+          const p = new Promise((resolve) => {
+            const img = new Image();
+            img.src = getFrameUrl(i);
+            img.onload = () => {
+              loadedCount++;
+              if (loadedCount === 1) {
+                currentFrameIndex = 0;
+                renderFrame(0);
+              }
+              if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
+                if (posterImg) {
+                  posterImg.classList.add('loaded');
+                  posterImg.style.display = 'none';
+                }
+              }
+              resolve();
+            };
+            img.onerror = () => {
+              resolve();
+            };
+            images.push(img);
+          });
+          loadPromises.push(p);
+        }
+
+        Promise.all(loadPromises).then(() => {
+          if (posterImg) {
+            posterImg.classList.add('loaded');
+            posterImg.style.display = 'none';
+          }
+        });
+      }
+
+      function updateScrollProgress() {
+        if (!scrollSection) return;
+        const rect = scrollSection.getBoundingClientRect();
+        const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+        
+        if (scrollDistance <= 0) return;
+
+        const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+        
+        targetFrameIndex = Math.min(
+          TOTAL_FRAMES - 1,
+          Math.floor(progress * TOTAL_FRAMES)
+        );
+
+        if (targetFrameIndex !== currentFrameIndex) {
+          currentFrameIndex = targetFrameIndex;
+          if (!rafId) {
+            rafId = requestAnimationFrame(() => {
+              renderFrame(currentFrameIndex);
+              rafId = null;
+            });
+          }
+        }
+
+        // Alternancia de los 2 pasos editoriales según el progreso de scroll (50% / 50%)
+        const steps = document.querySelectorAll('.hero-scroll-step');
+        if (steps.length >= 2) {
+          const activeIndex = progress < 0.5 ? 0 : 1;
+          steps.forEach((step, idx) => {
+            step.classList.toggle('active', idx === activeIndex);
+          });
+        }
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+      resizeCanvas();
+      preloadImages();
+    })();
+  </script>
+</body>
+</html>

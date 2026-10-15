@@ -19,14 +19,14 @@ Bienvenido a la carpeta de **Dp Beauty Nails** (Apartadó, Antioquia). Este docu
 
 Este proyecto implementa reproducción de video sincronizada con el scroll del usuario mediante Canvas HTML5:
 
-1. **Videos de Entrada**:
-   - Desktop: `uñas_morena.mp4` (16:9, 1920x1080, 4.0s).
-   - Mobile: `uñas_morena-movil.mp4` (9:16 vertical nativo, 1080x1920, 4.0s).
+1. **Videos de Entrada (nail_A-1)**:
+   - Desktop: `Woman_wearing_gold_jewelry_1080p_20260914065547.mp4` (16:9, 1920x1080, 4.0s).
+   - Mobile: `Crear_video_promocional_uñas_1080p_20260914065609.mp4` (9:16 vertical nativo, 1080x1920, 4.0s).
 2. **Ubicación de Fotogramas**:
    - Desktop (1920x1080 Q85): `public/frames/desktop/frame-%04d.webp` (74 frames) + `poster.webp`
    - Mobile (720x1280 Q76 vertical nativo): `public/frames/mobile/frame-%04d.webp` (74 frames) + `poster.webp`
 3. **Script de Regeneración**:
-   - Si se cambia el video base, ejecutar `node scripts/extract-frames.js [nuevo_video.mp4]`.
+   - Ejecutar `node scripts/extract-frames.js`.
 4. **Regla Crítica de CSS**:
    - `html, body` debe mantener siempre `overflow-x: clip;` y **NUNCA** `overflow-x: hidden;`, ya que este último anula la fijación `position: sticky` en navegadores móviles.
 5. **Encuadre y Cobertura Edge-to-Edge**:

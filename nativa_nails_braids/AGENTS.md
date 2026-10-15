@@ -22,7 +22,7 @@ Instrucciones y contexto específico para el mantenimiento y evolución de **Nat
    - Logotipo tipográfico puro (sin iconos ni emojis).
    - **Navbar 100% transparente en el Hero**: Permanece transparente y visible durante todo el recorrido del Canvas.
    - Activa fondo oscuro espresso `#0d0b0a` con blur al salir del Hero (`currentScrollY > heroBottom - 120`). Auto-hide suave al descender en secciones inferiores.
-   - En móvil (< 768px): Logotipo a la izquierda y botón conciso **«Agendar»** a la derecha sin botón hamburguesa.
+   - En móvil (< 768px): Logotipo con el 100% del ancho disponible (prohibido botón «Agendar» en navbar móvil para evitar recortes y colisiones; sin botón hamburguesa).
 2. **`#inicio` (Canvas Video Scroll Scrubbing - 300vh)**:
    - Escritorio: Textos a la izquierda, video nítido a la derecha.
    - Móvil: Calibración inferior (`align-items: flex-end; min-height: 720px !important;`), textos en la mitad inferior con `hero-scroll-step` en `bottom: 0`, dejando las uñas y el rostro de la modelo 100% visibles.

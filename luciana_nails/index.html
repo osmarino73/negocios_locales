@@ -165,17 +165,25 @@
        SMART HEADER / NAVBAR INTELIGENTE
        ========================================================================== */
     .header-sticky-wrapper {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: var(--bg-dark-trans);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-dark);
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
       padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.35s ease, background-color 0.35s ease;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease;
+    }
+
+    .header-sticky-wrapper.scrolled {
+      background: var(--bg-dark-trans);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-dark);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
 
     .header-hidden {
@@ -204,6 +212,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       color: var(--text-dark-primary);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
     }
 
     .brand-title span {
@@ -219,6 +228,7 @@
       letter-spacing: 1.5px;
       color: var(--color-gold-light);
       margin-top: -2px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
 
     .main-nav {
@@ -235,6 +245,7 @@
       color: var(--text-dark-secondary);
       position: relative;
       padding: 4px 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
 
     .nav-link:hover,
@@ -2353,7 +2364,7 @@
         preloadImages();
       })();
 
-      // 2. Smart Header: Siempre visible en Hero; auto-hide en secciones inferiores al bajar
+      // 2. Smart Header: Transparente y siempre visible en Hero; fondo oscuro y auto-hide en secciones inferiores al bajar
       let lastScrollY = window.pageYOffset;
       const header = document.getElementById('stickyHeader');
       const scrollSection = document.querySelector('.hero-scroll-section');
@@ -2363,14 +2374,14 @@
         const currentScrollY = window.pageYOffset;
         const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight) : 700;
 
-        // Dentro del Hero: permanece siempre visible
-        if (currentScrollY < heroBottom - 100) {
+        // Dentro del Hero: permanece siempre visible y 100% transparente
+        if (currentScrollY < heroBottom - 120) {
           header.classList.remove('header-hidden');
-          header.classList.toggle('scrolled', currentScrollY > 40);
+          header.classList.remove('scrolled');
         } else {
-          // Fuera del Hero: auto-hide al descender, reaparece al subir
+          // Fuera del Hero: adquiere fondo oscuro con blur; auto-hide al descender, reaparece al subir
           header.classList.add('scrolled');
-          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 120) {
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 100) {
             header.classList.add('header-hidden');
           } else {
             header.classList.remove('header-hidden');

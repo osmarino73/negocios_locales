@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Mobile WebApp Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0d0b0a">
+
+  <title>Spa y Peluquería Eileen | Centro de Estética, Spa & Peluquería en Carepa</title>
+  <meta name="description" content="Spa y Peluquería Eileen en Carepa, Antioquia. Especialistas en Nail Art 3D, acrílicas, balayage, tratamientos faciales orgánicos y spa de relajación.">
+  <meta name="keywords" content="spa y peluqueria eileen, salon de belleza carepa, nail art carepa, spa carepa antioquia, balayage carepa, unas acrilicas carepa">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Spa y Peluquería Eileen | Centro de Estética en Carepa">
+  <meta property="og:description" content="Diseño de uñas 3D, balayage capilar, tratamientos faciales y spa de relajación con atención VIP en Carepa.">
+  <meta property="og:url" content="https://www.google.com/maps/place/Spa+y+peluqueria+Eileen/@7.760161,-76.6764593,15z">
+
+  <!-- Schema.org JSON-LD Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Spa y Peluquería Eileen",
+    "description": "Centro de estética, spa y peluquería especializado en Nail Art 3D, esculpidas, balayage capilar y spa de relajación.",
+    "url": "http://www.spaeileen.com.co/",
+    "telephone": "+573006755739",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cl. 80",
+      "addressLocality": "Carepa",
+      "addressRegion": "Antioquia",
+      "addressCountry": "CO"
+    },
+    "hasMap": "https://www.google.com/maps/place/Spa+y+peluqueria+Eileen/@7.760161,-76.6764593,15z",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Smart Header / Transparent Navbar -->
+  <header class="header-sticky-wrapper" id="main-header">
+    <div class="header-nav container">
+      <a href="#inicio" class="brand-logo">
+        <span class="brand-name">Spa &amp; Peluquería Eileen</span>
+        <span class="brand-subtitle">CENTRO DE ESTÉTICA &amp; SPA · CAREPA</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#ubicacion" class="nav-link">Ubicación</a>
+      </nav>
+
+      <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn-primary btn-header-cta">
+        Agendar Cita
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: Canvas Video Scroll Scrubbing -->
+  <section class="hero-scroll-section" id="inicio">
+    <div class="canvas-sticky-wrapper">
+      <canvas id="scroll-video-canvas"></canvas>
+      
+      <!-- Poster Fallback against black flash -->
+      <img 
+        id="canvas-poster-fallback" 
+        src="public/frames/desktop/poster.webp" 
+        alt="Spa y Peluquería Eileen"
+        class="canvas-poster-img"
+      />
+
+      <!-- Desktop Left Horizontal 90deg Gradient Overlay -->
+      <div class="canvas-gradient-overlay"></div>
+
+      <!-- 2-Step Sequential Editorial Content -->
+      <div class="container hero-container-align">
+        <div class="hero-scroll-content">
+          
+          <!-- Step 1 (0% to 50% Scroll Progress) -->
+          <div class="hero-scroll-step step-1 active">
+            <span class="hero-script-tag">Spa &amp; Peluquería Eileen · Carepa</span>
+            <h1 class="hero-title">El arte de resaltar tu belleza<br><em>con máxima distinción.</em></h1>
+            
+            <div class="hero-actions">
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20reservar%20una%20cita." target="_blank" rel="noopener" class="btn-primary">
+                Agendar Cita
+              </a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="hero-proof-badge">
+              <span class="hero-proof-stars">★★★★★</span>
+              <span>5.0 en Google Reviews · Carepa, Antioquia</span>
+            </div>
+          </div>
+
+          <!-- Step 2 (50% to 100% Scroll Progress) -->
+          <div class="hero-scroll-step step-2">
+            <span class="hero-script-tag">Nail Art 3D &amp; Estética de Alta Gama</span>
+            <h2 class="hero-title">Experiencias creadas<br><em>para consentirte.</em></h2>
+            <p class="hero-desc">Diseños exclusivos de uñas acrílicas en 3D, balayage capilar y limpieza facial profunda con productos orgánicos de la más alta calidad.</p>
+            
+            <div class="hero-actions">
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener" class="btn-primary">
+                Agendar Cita
+              </a>
+              <a href="#nosotros" class="btn-hero-minimal-link">
+                Conocer Especialistas <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS / GUARANTEES BAR -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-hand-sparkles"></i></div>
+          <div>
+            <div class="pillar-title">Nail Art &amp; 3D</div>
+            <div class="pillar-desc">Acrílicas & Gel Esculpidas</div>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-scissors"></i></div>
+          <div>
+            <div class="pillar-title">Estilistas Expertos</div>
+            <div class="pillar-desc">Master coloristas certificados</div>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-crown"></i></div>
+          <div>
+            <div class="pillar-title">Experiencia VIP</div>
+            <div class="pillar-desc">Atención cálida y privada</div>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
+          <div>
+            <div class="pillar-title">Satisfacción Total</div>
+            <div class="pillar-desc">Garantía de acabado perfecto</div>
+          </div>
+        </div>
+
+        <div class="pillar-item">
+          <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <div class="pillar-title">Higiene &amp; Seguridad</div>
+            <div class="pillar-desc">Protocolos de esterilización 100%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION: Full-Bleed Minimalist 3-Col Desktop / 2-Col Mobile -->
+  <section class="services-section" id="servicios">
+    <div class="container">
+      <div class="text-center">
+        <span class="script-eyebrow">Catálogo Exclusivo</span>
+        <h2 class="section-title">Nuestros Servicios de <em>Estética &amp; Spa.</em></h2>
+        <p class="section-desc">Diseñados para realzar tu estilo y hacerte sentir renovada en un ambiente relajante y exclusivo en Carepa.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <!-- Service 1 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Nail Art & Esculpidas 3D" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Nail Art &amp; Esculpidas 3D</h3>
+            <p class="service-card-desc">Uñas acrílicas, gel, efectos 3D, pedrería fina y esmaltado semipermanente de larga duración.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $85.000</div>
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20agendar%20Nail%20Art%203D" target="_blank" rel="noopener" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 2 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Balayage & Colorimetría" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Balayage &amp; Colorimetría</h3>
+            <p class="service-card-desc">Iluminación capilar personalizada, babylights y reconstrucción profunda del color.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $220.000</div>
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20agendar%20Balayage" target="_blank" rel="noopener" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 3 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Spa Facial & Limpieza Ultrasónica" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Spa Facial &amp; Limpieza</h3>
+            <p class="service-card-desc">Limpieza profunda ultrasónica, exfoliación orgánica e hidratación con ácido hialurónico.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $120.000</div>
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20agendar%20un%20Spa%20Facial" target="_blank" rel="noopener" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 4 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Cortes & Peinados Sociales" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Cortes &amp; Peinados Sociales</h3>
+            <p class="service-card-desc">Diseño de corte según visagismo facial, brushing, ondas al agua y peinados de fiesta.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $75.000</div>
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20agendar%20Corte%20o%20Peinado" target="_blank" rel="noopener" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 5 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=800&q=80" alt="Masajes Relajantes & Spa Corporal" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Masajes Relajantes &amp; Spa</h3>
+            <p class="service-card-desc">Masaje descontracturante, aromaterapia relajante y piedras volcánicas de renovación.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $130.000</div>
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20agendar%20Masaje%20Relajante" target="_blank" rel="noopener" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Service 6 -->
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="Maquillaje Profesional & Novias" class="service-card-img" />
+          <div class="service-card-overlay"></div>
+          <div class="service-card-content">
+            <h3 class="service-card-title">Maquillaje Profesional</h3>
+            <p class="service-card-desc">Maquillaje social y de novias de alta definición con técnica a prueba de agua.</p>
+            <div class="service-card-footer">
+              <div class="service-card-price"><small>Desde</small> $150.000</div>
+              <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20agendar%20Maquillaje" target="_blank" rel="noopener" class="btn-card-book-minimal">
+                AGENDAR <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & TEAM SECTION (#nosotros) -->
+  <section class="about-section" id="nosotros">
+    <div class="container">
+      
+      <!-- Editorial Experience Block -->
+      <div class="experience-layout">
+        <div class="salon-image-showcase">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1000&q=80" alt="Ambiente Spa y Peluquería Eileen" />
+          <div class="experience-floating-badge">
+            <i class="fa-solid fa-award badge-icon"></i>
+            <div>
+              <span class="badge-text-title">Eileen Experience VIP</span>
+              <span class="badge-text-sub">Atención de Lujo en Carepa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content-block">
+          <span class="script-eyebrow">Sobre Nosotros</span>
+          <h2>Tu lugar ideal para la belleza y el <em>cuidado personal.</em></h2>
+          <p>En Spa y Peluquería Eileen nos apasiona resaltar tu mejor versión. Ofrecemos tratamientos integrales de manicure en 3D, peluquería, colorometría y estética facial en un espacio diseñado para tu máxima tranquilidad en Carepa.</p>
+
+          <div class="metrics-row">
+            <div class="metric-card">
+              <span class="metric-number">10+</span>
+              <span class="metric-label">Años de Exp.</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">3.500+</span>
+              <span class="metric-label">Clientas Felices</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">100%</span>
+              <span class="metric-label">Prémium Orgánico</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-number">5.0 ★</span>
+              <span class="metric-label">Google Rating</span>
+            </div>
+          </div>
+
+          <a href="#ubicacion" class="btn-primary">
+            Conocer Ubicación
+          </a>
+        </div>
+      </div>
+
+      <!-- Team Block (4 Columns Desktop / Scroll Snap Carousel Mobile) -->
+      <div class="team-header text-center">
+        <span class="script-eyebrow">Nuestro Equipo</span>
+        <h2 class="section-title">Especialistas <em>Certificadas.</em></h2>
+      </div>
+
+      <div class="team-grid">
+        
+        <!-- Member 1 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Eileen Torres" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-info">
+            <div class="team-accent-line"></div>
+            <h3 class="team-name">Eileen Torres</h3>
+            <div class="team-role">Master Stylist &amp; Directora</div>
+            <div class="team-rating"><span>★★★★★</span> (5.0)</div>
+            <a href="https://wa.me/573006755739?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Eileen%20Torres" target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Member 2 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Valeria Gómez" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-info">
+            <div class="team-accent-line"></div>
+            <h3 class="team-name">Valeria Gómez</h3>
+            <div class="team-role">Master Nail Artist &amp; 3D</div>
+            <div class="team-rating"><span>★★★★★</span> (5.0)</div>
+            <a href="https://wa.me/573006755739?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Valeria%20G%C3%B3mez" target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Member 3 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Camila Morales" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-info">
+            <div class="team-accent-line"></div>
+            <h3 class="team-name">Camila Morales</h3>
+            <div class="team-role">Especialista en Piel &amp; Spa</div>
+            <div class="team-rating"><span>★★★★★</span> (5.0)</div>
+            <a href="https://wa.me/573006755739?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Camila%20Morales" target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Member 4 -->
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=800&q=80" alt="Sofia Restrepo" class="team-card-img" />
+          <div class="team-card-overlay"></div>
+          <div class="team-card-info">
+            <div class="team-accent-line"></div>
+            <h3 class="team-name">Sofia Restrepo</h3>
+            <div class="team-role">Colorista &amp; Balayage</div>
+            <div class="team-rating"><span>★★★★★</span> (5.0)</div>
+            <a href="https://wa.me/573006755739?text=Hola,%20quisiera%20agendar%20una%20cita%20con%20Sofia%20Restrepo" target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & CONTACT SECTION (#ubicacion) -->
+  <section class="location-section" id="ubicacion">
+    <div class="container">
+      <div class="location-grid">
+        
+        <!-- Info Card -->
+        <div class="location-info-card">
+          <span class="script-eyebrow">Encuéntranos</span>
+          <h2 class="section-title">Visítanos en <em>Carepa.</em></h2>
+          
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div class="info-title">Dirección</div>
+              <div class="info-text">Cl. 80, Carepa, Antioquia, Colombia</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <div class="info-title">Horario de Atención</div>
+              <div class="info-text">Lunes a Sábado: 8:00 AM – 7:00 PM</div>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="info-title">Teléfono &amp; WhatsApp</div>
+              <div class="info-text">(+57) 300 675 5739</div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn-primary" style="width: 100%; margin-top: 12px;">
+            <i class="fa-brands fa-whatsapp"></i> Agendar por WhatsApp
+          </a>
+        </div>
+
+        <!-- Google Map Interactive -->
+        <div class="map-container">
+          <iframe 
+            src="https://maps.google.com/maps?q=Spa+y+peluqueria+Eileen,+Cl.+80,+Carepa,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Google Maps Spa y Peluquería Eileen">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <a href="#inicio" class="brand-logo">
+            <span class="brand-name">Spa &amp; Peluquería Eileen</span>
+            <span class="brand-subtitle">CENTRO DE ESTÉTICA &amp; SPA · CAREPA</span>
+          </a>
+          <p>Tu centro de estética de confianza en Carepa. Especialistas en Nail Art 3D, esculpidas, balayage y tratamientos de spa.</p>
+          <div class="social-links">
+            <a href="https://wa.me/573006755739" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#ubicacion">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Horarios</h4>
+          <ul class="footer-links">
+            <li><span>Lunes - Sábado:</span></li>
+            <li style="color: var(--color-white); margin-bottom: 8px;">8:00 AM – 7:00 PM</li>
+            <li><span>Domingos:</span></li>
+            <li style="color: var(--color-slate-300);">Cerrado</li>
+          </ul>
+        </div>
+
+        <div class="booking-module-card">
+          <h4 class="footer-column-title">Reserva VIP</h4>
+          <p>Agenda tu cita directamente con nuestras especialistas por WhatsApp.</p>
+          <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20reservar%20una%20cita." target="_blank" rel="noopener" class="btn-primary" style="width: 100%;">
+            Agendar
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-copyright">
+        &copy; 2026 Spa y Peluquería Eileen. Todos los derechos reservados. Centro de Estética en Carepa, Antioquia.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (Anti-corte Mobile) -->
+  <a href="https://wa.me/573006755739?text=Hola%20Spa%20y%20peluqueria%20Eileen%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contacto WhatsApp Directo">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- CANVAS VIDEO SCROLL ANIMATION ENGINE -->
+  <script>
+  (function () {
+    const canvas = document.getElementById('scroll-video-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d', { alpha: false });
+    const posterImg = document.getElementById('canvas-poster-fallback');
+    const scrollSection = document.querySelector('.hero-scroll-section');
+    const header = document.getElementById('main-header');
+
+    const TOTAL_FRAMES = 74;
+    const isMobile = window.innerWidth < 768;
+    const framesFolder = isMobile ? 'public/frames/mobile' : 'public/frames/desktop';
+
+    if (posterImg) {
+      posterImg.src = `${framesFolder}/poster.webp`;
+    }
+
+    const getFrameUrl = (index) => {
+      const pad = String(index).padStart(4, '0');
+      return `${framesFolder}/frame-${pad}.webp`;
+    };
+
+    const images = [];
+    let loadedCount = 0;
+    let currentFrameIndex = 0;
+    let targetFrameIndex = 0;
+    let rafId = null;
+
+    function resizeCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
+      renderFrame(currentFrameIndex);
+    }
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
+    function renderFrame(index) {
+      const img = images[index];
+      if (!img || !img.complete) return;
+
+      const cw = canvas.width;
+      const ch = canvas.height;
+      const iw = img.naturalWidth || img.width;
+      const ih = img.naturalHeight || img.height;
+
+      ctx.fillStyle = '#0d0b0a';
+      ctx.fillRect(0, 0, cw, ch);
+
+      const scale = Math.max(cw / iw, ch / ih);
+      const nw = iw * scale;
+      const nh = ih * scale;
+
+      const nx = isMobile ? (cw - nw) / 2 : (cw - nw);
+      const ny = (ch - nh) / 2;
+
+      ctx.drawImage(img, nx, ny, nw, nh);
+    }
+
+    function preloadImages() {
+      const loadPromises = [];
+
+      for (let i = 1; i <= TOTAL_FRAMES; i++) {
+        const p = new Promise((resolve) => {
+          const img = new Image();
+          img.src = getFrameUrl(i);
+          img.onload = () => {
+            loadedCount++;
+            if (loadedCount === 1) {
+              currentFrameIndex = 0;
+              renderFrame(0);
+            }
+            if (loadedCount >= Math.min(6, TOTAL_FRAMES)) {
+              if (posterImg) {
+                posterImg.classList.add('loaded');
+                posterImg.style.display = 'none';
+              }
+            }
+            resolve();
+          };
+          img.onerror = () => {
+            resolve();
+          };
+          images.push(img);
+        });
+        loadPromises.push(p);
+      }
+
+      Promise.all(loadPromises).then(() => {
+        if (posterImg) {
+          posterImg.classList.add('loaded');
+          posterImg.style.display = 'none';
+        }
+      });
+    }
+
+    function updateScrollProgress() {
+      if (header) {
+        if (window.scrollY > window.innerHeight * 0.8) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+
+      if (!scrollSection) return;
+      const rect = scrollSection.getBoundingClientRect();
+      const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+      
+      if (scrollDistance <= 0) return;
+
+      const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+      
+      targetFrameIndex = Math.min(
+        TOTAL_FRAMES - 1,
+        Math.floor(progress * TOTAL_FRAMES)
+      );
+
+      if (targetFrameIndex !== currentFrameIndex) {
+        currentFrameIndex = targetFrameIndex;
+        if (!rafId) {
+          rafId = requestAnimationFrame(() => {
+            renderFrame(currentFrameIndex);
+            rafId = null;
+          });
+        }
+      }
+
+      const steps = document.querySelectorAll('.hero-scroll-step');
+      if (steps.length >= 2) {
+        const activeIndex = progress < 0.5 ? 0 : 1;
+        steps.forEach((step, idx) => {
+          step.classList.toggle('active', idx === activeIndex);
+        });
+      }
+    }
+
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+    resizeCanvas();
+    preloadImages();
+  })();
+  </script>
+</body>
+</html>

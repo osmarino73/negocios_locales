@@ -1,23 +1,37 @@
-# Contexto de IA: Uñitas Mágicas 💅 (Apartadó, Antioquia)
+# Instrucciones para Agentes de IA: Paola Diaz Beauty Artist
 
-Instrucciones y contexto específico para el mantenimiento y evolución de **Uñitas Mágicas 💅**.
-
----
-
-## 🏛️ Identidad y Clonación Forense
-- **Referencia Visual**: *NAILÉ ART STUDIO / NAIL ART THAT SPEAKS YOU* (Estética chic femenina, tonos soft blush cream `#fdf8f6`, acentos en rose berry `#d84b75`, contrastes en porcelain milk `#ffffff`, tipografía *Playfair Display* y firma *Alex Brush*).
-- **Copywriting**: Directo, cálido y enfocado en el público local de Apartadó, destacando el cuidado de uñas, durabilidad, nail art y press-on nails sin tecnicismos pomposos (*«de autor»*).
+Este directorio contiene la landing page oficial y el Triángulo de Contexto IA para **Paola Diaz Beauty Artist**, ubicada en Cra. 107 #103a - 44, Vélez, Apartadó, Antioquia.
 
 ---
 
-## 📌 Estructura Oficial de 6 Secciones (Mandatoria)
-1. **Smart Header**: Sin barra superior promocional. Móvil: Logo (izq) y botón conciso **«Agendar»** (der) sin botón hamburguesa.
-2. **`#inicio` (Hero Full-Width Bleed)**: Desktop `640px`, Móvil `720px !important;`.
-3. **Barra de Pilares / Garantías**: 5 sellos. En móvil: Carrusel horizontal en 1 fila con auto-scroll suave (3s) y pausa al tacto.
-4. **`#servicios` (Catálogo de Manicura & Pedicura)**: Grid de **6 Columnas en Escritorio (`repeat(6, 1fr)`)**, estrictamente **2 Columnas en Móvil**.
-5. **`#nosotros` (Sobre Nosotros & Especialistas — Estándar Crismar)**:
-   - Bloque Editorial: Foto de salón VIP + badge flotante + 4 métricas de autoridad (en 2 columnas en móvil) + botón directo.
-   - Bloque Profesionales: 4 especialistas en **4 Columnas en Escritorio (`repeat(4, 1fr)`)**, **2 Columnas en Móvil** con `.team-badge` oculto en móvil.
-6. **`#ubicacion` (Mapa & Contacto)**: Barrio Obrero, Apartadó + Google Maps interactivo (`z=16`).
-7. **Footer Principal**: Tarjeta de reserva con botón conciso **«Agendar»**.
-8. **WhatsApp Flotante**: `env(safe-area-inset-bottom)`, `overflow: hidden`, `translate3d`, `z-index: 999999`, sin tooltip distorsionador.
+## 🎯 Secciones Oficiales Implementadas
+
+1. **`#inicio` (Hero Canvas Video Scroll Scrubbing — 300vh)**:
+   - Motor interactivo de scroll scrubbing en Canvas HTML5 con 74 fotogramas WebP ultra ligeros (extraídos de `.agents/document/nail_A-2morena`).
+   - Doble banco calibrado: `public/frames/desktop/` (1920x1080 Q85) y `public/frames/mobile/` (720x1280 Q76 9:16 nativo).
+   - `.canvas-gradient-overlay` aterciopelado con curva eased horizontal (0% a 24% oscuro, 100% transparente desde el 78%).
+   - **Anclaje Inferior Mandatorio & 60% Superior Despejado**: Contenedor anclado al fondo (`align-items: flex-end; padding-bottom: clamp(40px, 7.5vh, 75px);`), dejando libre y nítido el rostro, trenzas y arte de uñas de la modelo.
+   - Enlace minimalista `.btn-hero-minimal-link` (`Ver Servicios ➔` / `Conoce el Spa ➔`) y sello de prueba social 5.0★.
+2. **Barra de Pilares / Garantías**:
+   - 5 sellos de confianza (*Esmaltes Prémium, Esterilización Total, Manicuristas Máster, Nail Art en Tendencia, Satisfacción Total*).
+   - En móvil (< 768px): Carrusel horizontal deslizable (*Scroll Snap*) en una sola fila compacta con desplazamiento táctil fluido.
+3. **`#servicios` (Catálogo de Servicios — Grid 3 Columnas)**:
+   - Grid de **3 columnas en escritorio (`repeat(3, 1fr)`)** y **2 columnas en móvil**.
+   - Tarjetas **Full-Bleed Minimalistas** (3:4) con fotografía protagonista al 100%, degradado aterciopelado inferior, precio claro sin sufijo COP y enlace minimalista `AGENDAR ➔`.
+4. **`#nosotros` (Sobre Nosotros & Retrato Editorial)**:
+   - Bloque editorial con fotografía de salón de uñas (`photo-1519014816548-bf5fe059798b`), badge VIP flotante, 4 métricas de autoridad.
+   - Equipo en formato **Retrato Editorial** (3:4.2): 4 columnas en escritorio / Carrusel horizontal *Scroll Snap* con efecto «Peek» en móvil, liderado por Paola Diaz (Directora & Master Nail Artist).
+5. **`#ubicacion` (Mapa & Contacto)**:
+   - Panel informativo en Cra. 107 #103a - 44, Vélez, Apartadó con Google Maps interactivo georreferenciado (`z=16`).
+   - Teléfono / WhatsApp: `+573147382104`.
+6. **Footer Principal**:
+   - Enlaces de navegación, contacto y módulo de reserva con botón conciso **«Agendar»**.
+
+---
+
+## 📱 Reglas Críticas
+
+- **Hero Móvil**: `min-height: 720px !important;`, degradado con el 36% superior 100% transparente y textos en la mitad inferior.
+- **Unicidad Estricta del Color Principal**: Consumo obligatorio de `var(--color-accent)` (`#d84b75` Rose Berry Glam). Prohibidos los colores hardcoded.
+- **Header Inteligente**: Logotipo tipográfico puro sin emojis decorativos («PAOLA DIAZ BEAUTY ARTIST»), auto-hide inteligente fuera del hero y botón conciso **«Agendar»**.
+- **WhatsApp Float**: Despeje seguro inferior (`bottom: calc(28px + env(safe-area-inset-bottom, 0px));`), sin `overflow: hidden` recortador.

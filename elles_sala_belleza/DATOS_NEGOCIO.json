@@ -119,5 +119,19 @@
         "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80"
       }
     ]
+  },
+  "video_scroll": {
+    "origen": ".agents/document/nail_A-1",
+    "video_desktop": "Woman_wearing_gold_jewelry_1080p_20260914065547.mp4",
+    "video_mobile": "Crear_video_promocional_uñas_1080p_20260914065609.mp4",
+    "frames_desktop_total": 74,
+    "frames_mobile_total": 74,
+    "fps": 18,
+    "duracion_segundos": 4.0,
+    "formato": "image/webp",
+    "calidad_desktop": "Q85 (1920x1080)",
+    "calidad_mobile": "Q76 (720x1280)",
+    "overlay": "canvas-gradient-overlay (doble degradado aterciopelado)",
+    "narrativa": "2 pasos editoriales secuenciales (50% / 50%) con anclaje inferior y 60% superior despejado"
   }
 }

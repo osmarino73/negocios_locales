@@ -29,12 +29,15 @@ Documentación técnica y tokens de diseño para **Elles Sala de Belleza & Tiend
 ## 🎬 Sistema Hero Video Scroll Scrubbing (300vh Canvas Engine)
 
 - **Canvas Viewport Fijo**: 100vh con interpolación fluida mediante `requestAnimationFrame`.
-- **Doble Banco de Cuadros Calibrados**:
-  - `desktop/`: 74 fotogramas WebP (1920x1080 nativo, Q85) con `object-fit: cover` y degradado lateral suave (0% a 24% oscuro, 100% transparente desde el 72%).
-  - `mobile/`: 74 fotogramas WebP (720x1280 9:16 centrado simétrico, Q76) con encuadre vertical que mantiene el rostro de la modelo y las uñas espectaculares en el tercio superior.
+- **Doble Banco de Cuadros Calibrados (74 Fotogramas Extraídos de `nail_A-1`)**:
+  - `desktop/`: 74 fotogramas WebP (1920x1080 nativo, Q85) con `object-fit: cover` y `.canvas-gradient-overlay` (0% a 24% oscuro, 100% transparente desde el 78%).
+  - `mobile/`: 74 fotogramas WebP (720x1280 9:16 nativo, Q76) con encuadre vertical centrado, dejando el 36% superior 100% despejado y libre de veladuras.
+- **Anclaje Inferior Mandatorio & 60% Superior Despejado**:
+  - Vista desktop: `.hero-container-align` anclado al fondo (`align-items: flex-end; padding-bottom: clamp(40px, 7.5vh, 75px);`) dejando el rostro y joyas de la modelo completamente visibles.
+  - Vista móvil: `.hero-scroll-container` y `.hero-sticky-viewport` con `min-height: 720px !important;` y textos en la mitad inferior.
 - **Narrativa Editorial en 2 Pasos (50% / 50%)**:
-  - *Paso 1 (0% a 50%)*: "Estilo & Elegancia que Transforman" con botón directo a WhatsApp.
-  - *Paso 2 (50% a 100%)*: "Brillo & Cuidado para Cada Detalle" enfocado en balayage, alisados y cosmética capilar.
+  - *Paso 1 (0% a 50%)*: "Belleza & Estilo de Autor — Estilo & Elegancia que Transforman" con botón de agendar y enlace minimalista `Ver Servicios ➔`.
+  - *Paso 2 (50% a 100%)*: "Elegancia & Distinción — Brillo & Cuidado para Cada Detalle" enfocado en balayage, alisados y cosmética capilar.
 - **High-DPI Retina Support**: Escala interna con `window.devicePixelRatio || 1` y `ctx.imageSmoothingQuality = 'high'`.
 
 ---

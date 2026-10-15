@@ -1,0 +1,108 @@
+{
+  "negocio": {
+    "nombre": "HAIR CLINIC SPA MONTERIA",
+    "rubro": "Peluquería & Spa Capilar",
+    "categoria": "spa",
+    "eslogan": "HAIR CLINIC SPA MONTERIA — Peluquería y Salud Capilar en Montería",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 310 252 1059",
+      "whatsapp": {
+        "numero": "+573102521059",
+        "link": "https://wa.me/573102521059?text=Hola%20HAIR%20CLINIC%20SPA%20MONTERIA%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra. 12 #57 - 12, Montería, Córdoba",
+      "barrio": "Norte",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/HAIR+CLINIC+SPA+MONTERIA/@8.7653089,-75.8814432,15z/data=!3m1!4b1!4m6!3m5!1s0x8e5a2fc47c77f3b5:0x79770b5b8d822169!8m2!3d8.7652881!4d-75.862989!16s%2Fg%2F11wmtp5fms",
+      "embed_iframe_url": "https://maps.google.com/maps?q=HAIR+CLINIC+SPA+MONTERIA,+Cra.+12+%2357+-+12,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:00 PM | Domingo: 9:00 AM - 2:00 PM",
+    "sitio_web": "https://www.instagram.com/hairclinicolombia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Agendamiento directo mediante WhatsApp"
+    },
+    "servicios": [
+      {
+        "id": "terapia-capilar",
+        "nombre": "Terapia Capilar & Recuperación Profunda",
+        "descripcion": "Tratamiento reparador celular con queratina orgánica y nutrición intensiva para fibra dañada.",
+        "precio": "$120.000",
+        "precio_desde": false,
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "colorimetria-balayage",
+        "nombre": "Colorimetría & Balayage de Autor",
+        "descripcion": "Mechas balayage, babylights y matización personalizada con protectores plex de alta gama.",
+        "precio": "$180.000",
+        "precio_desde": true,
+        "imagen": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisado-organico",
+        "nombre": "Alisado Orgánico & Keratin Spa",
+        "descripcion": "Alisado térmico biocompatible con brillo de espejo y control total del encrespamiento.",
+        "precio": "$150.000",
+        "precio_desde": true,
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte-estilizado",
+        "nombre": "Corte Estilizado & Peinado VIP",
+        "descripcion": "Diseño de corte personalizado con asesoría de visagismo, lavado spa y modelado profesional.",
+        "precio": "$65.000",
+        "precio_desde": false,
+        "imagen": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "spa-cuero-cabelludo",
+        "nombre": "Spa & Detox del Cuero Cabelludo",
+        "descripcion": "Masaje capilar desintoxicante con micro-vaporización, exfoliación y ampollas nutritivas.",
+        "precio": "$85.000",
+        "precio_desde": false,
+        "imagen": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "ritual-rizos",
+        "nombre": "Ritual de Rizos & Definición Hydramax",
+        "descripcion": "Tratamiento activador de rizos, hidratación profunda y corte técnico especializado para texturas.",
+        "precio": "$95.000",
+        "precio_desde": false,
+        "imagen": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Dra. Valeria Gómez",
+        "rol": "Máster en Colorimetría & Salud Capilar",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Camila Benítez",
+        "rol": "Especialista en Alisados Orgánicos & Keratin Spa",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Diana Monterrosa",
+        "rol": "Estilista Senior & Visagista Capilar",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Sofía Córdoba",
+        "rol": "Terapeuta Capilar & Especialista en Rizos",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+}

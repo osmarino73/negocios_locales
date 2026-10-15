@@ -1,0 +1,137 @@
+{
+  "negocio": {
+    "nombre": "Karelis soto spa uñas",
+    "nombre_comercial": "Karelis Soto Spa Uñas & Peluquería",
+    "rubro": "Peluquería & Nail Spa Profesional",
+    "categoria": "spa",
+    "eslogan": "Karelis soto spa uñas — Peluquería & Spa de Uñas en el Centro de Montería",
+    "calificacion": "4.7",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 300 558 9108",
+      "telefono_formato_int": "+573005589108",
+      "whatsapp": {
+        "numero": "+573005589108",
+        "link": "https://wa.me/573005589108?text=Hola%20Karelis%20soto%20spa%20u%C3%B1as%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 24 #7-96, centro",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "referencia": "Sector Centro, Montería, Córdoba",
+      "google_maps_url": "https://maps.google.com/maps?q=Karelis+soto+spa+u%C3%B1as,+Cl.+24+%237-96,+centro,+Monter%C3%ADa,+C%C3%B3rdoba&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos": "Previa cita",
+      "texto_resumido": "Lun - Sáb: 8:00 AM - 7:00 PM | Dom: Previa Cita"
+    },
+    "servicios": [
+      {
+        "id": "manicura_semipermanente",
+        "nombre": "Manicura Semipermanente & Nail Art",
+        "categoria": "Uñas",
+        "duracion": "60 min",
+        "precio": "$45.000",
+        "destacado": true,
+        "descripcion": "Limpieza profunda de cutícula, nivelación con base rubber, esmaltado de alta duración y nail art personalizado.",
+        "foto": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "acrilicas_esculpidas",
+        "nombre": "Uñas Acrílicas Esculpidas & Encapsulado",
+        "categoria": "Uñas",
+        "duracion": "120 min",
+        "precio": "$85.000",
+        "destacado": true,
+        "descripcion": "Extensión esculpida en acrílico de alta resistencia, acabados baby boomer, efectos espejo y cristales de lujo.",
+        "foto": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "pedicura_spa",
+        "nombre": "Pedicura Spa Rusa con Sales Minerales",
+        "categoria": "Spa",
+        "duracion": "75 min",
+        "precio": "$55.000",
+        "destacado": true,
+        "descripcion": "Exfoliación con sales orgánicas, retiro de durezas, hidromasaje, mascarilla nutritiva y esmaltado de larga duración.",
+        "foto": "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte_peinado",
+        "nombre": "Corte Editorial & Cepillado Volumétrico",
+        "categoria": "Peluquería",
+        "duracion": "50 min",
+        "precio": "$40.000",
+        "destacado": true,
+        "descripcion": "Diseño de corte según visagismo facial, secado con técnicas de brillo y acabado con ondas al agua desestructuradas.",
+        "foto": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "tratamiento_capilar",
+        "nombre": "Tratamiento Capilar Brillo Espejo",
+        "categoria": "Peluquería",
+        "duracion": "90 min",
+        "precio": "$65.000",
+        "destacado": true,
+        "descripcion": "Cauterización molecular de hebra capilar, nutrición intensiva libre de formol y sellado de puntas abiertas.",
+        "foto": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "color_balayage",
+        "nombre": "Colorimetría & Mechas Balayage",
+        "categoria": "Peluquería",
+        "duracion": "180 min",
+        "precio": "$150.000",
+        "destacado": true,
+        "descripcion": "Técnica de aclarándole progresivo con matices dorados o platinados, cuidado protector de fibra y matizado de autor.",
+        "foto": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Karelis Soto",
+        "rol": "Master Nail Artist & Fundadora",
+        "nivel": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "nombre": "Melisa Ramos",
+        "rol": "Especialista en Acrílico & Encapsulados",
+        "nivel": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "nombre": "Claudia Vega",
+        "rol": "Estilista Master & Colorista Capilar",
+        "nivel": "Master",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        "nombre": "Laura Mendoza",
+        "rol": "Terapeuta de Pedicura Spa & Reflexología",
+        "nivel": "Senior",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=400&q=80"
+      }
+    ]
+  },
+  "video_scroll": {
+    "origen": ".agents/document_salones/belleza-uñas-blanca",
+    "video_desktop": "Creating_beauty_salon_advertisin…_1080p_20260917101449.mp4",
+    "video_mobile": "Model_showing_nail_design_1080p_20260917101529.mp4",
+    "frames_desktop_total": 74,
+    "frames_mobile_total": 74,
+    "fps": 18.5,
+    "duracion_segundos": 4.0,
+    "formato": "image/webp",
+    "calidad_desktop": "Q85 (1920x1080)",
+    "calidad_mobile": "Q76 (720x1280)",
+    "overlay": "canvas-gradient-overlay (doble degradado aterciopelado en desktop / 20% inferior en móvil)",
+    "narrativa": "2 pasos editoriales secuenciales (50% / 50%) con anclaje inferior y 60% superior despejado"
+  }
+}

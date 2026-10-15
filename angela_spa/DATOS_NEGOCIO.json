@@ -1,0 +1,129 @@
+{
+  "negocio": {
+    "nombre": "ANGELA SPA & BELLEZA",
+    "nombre_corto": "Angela Spa",
+    "rubro": "Centro de estética & Spa",
+    "categoria": "spa",
+    "eslogan": "ANGELA SPA & BELLEZA — Centro de estética en Montería",
+    "calificacion": "4.7",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 315 252 7580",
+      "telefono_raw": "+573152527580",
+      "whatsapp": {
+        "numero": "+573152527580",
+        "link": "https://wa.me/573152527580?text=Hola%20ANGELA%20SPA%20%26%20BELLEZA%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20sus%20tratamientos."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cra 16b #44-05 Monteverde Monte verde, Montería, Córdoba",
+      "barrio": "Monteverde",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/ANGELA+SPA+%26+BELLEZA/@8.7547173,-75.8856758,15z/data=!4m10!1m2!2m1!1ssalon+de+belleza+en+monteria!3m6!1s0x8e5a2f68715e9237:0x3cfabd3f710a23ab!8m2!3d8.7551769!4d-75.8663628!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhWh4iHHNhbG9uIGRlIGJlbGxlemEgZW4gbW9udGVyaWGSAQxiZWF1dHlfc2Fsb26aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTNNSEJmVXkxM1JSQULgAQD6AQQIABA-!16s%2Fg%2F11w4c0zb63",
+      "iframe_embed_url": "https://maps.google.com/maps?q=ANGELA+SPA+%26+BELLEZA,+Cra+16b+%2344-05+Monteverde,+Monter%C3%ADa,+C%C3%B3rdoba,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa reserva"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
+    },
+    "servicios": [
+      {
+        "id": "limpieza-facial-profunda",
+        "nombre": "Limpieza Facial Profunda & Hidrodermo",
+        "descripcion": "Extracción ultrasónica, vapor de ozono, mascarilla hidroplástica y sellado con hialurónico.",
+        "duracion": "60 Mins",
+        "badge": "Piel Renovada",
+        "precio": "$85.000",
+        "icono": "fa-spa",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "rejuvenecimiento-facial",
+        "nombre": "Rejuvenecimiento Facial & Fototerapia LED",
+        "descripcion": "Protocolo antiedad con radiofrecuencia corporal/facial, colágeno y fotón LED para firmeza.",
+        "duracion": "50 Mins",
+        "badge": "Efecto Glow",
+        "precio": "$95.000",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "masaje-relajante-piedras",
+        "nombre": "Masaje Relajante & Piedras Volcánicas",
+        "descripcion": "Terapia descontracturante corporal con aromaterapia, aceites calientes y piedras termales.",
+        "duracion": "60 Mins",
+        "badge": "Antiestrés",
+        "precio": "$80.000",
+        "icono": "fa-hand-holding-heart",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "moldeo-corporal-cavitacion",
+        "nombre": "Moldeo Corporal & Cavitación Ultrasónica",
+        "descripcion": "Protocolo reductor localizado, drenaje linfático asistido y aparatología reafirmante.",
+        "duracion": "60 Mins",
+        "badge": "Reducción & Firmeza",
+        "precio": "$90.000",
+        "icono": "fa-person-dress",
+        "imagen": "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "diseno-cejas-pestanas-hd",
+        "nombre": "Diseño de Cejas & Pestañas HD",
+        "descripcion": "Perfilado con hilo hindú, pigmentación con henna orgánica y lifting de pestañas con queratina.",
+        "duracion": "45 Mins",
+        "badge": "Mirada Impacto",
+        "precio": "$60.000",
+        "icono": "fa-eye",
+        "imagen": "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "maderoterapia-reductora",
+        "nombre": "Maderoterapia & Ritual Reductor Spa",
+        "descripcion": "Técnica con maderas terapéuticas para moldear silueta, tonificar y activar la microcirculación.",
+        "duracion": "50 Mins",
+        "badge": "Moldeo Pro",
+        "precio": "$85.000",
+        "icono": "fa-heart-pulse",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Dra. Ángela Gómez",
+        "rol": "Directora & Cosmiatra Especialista",
+        "badge": "Directora",
+        "avatar": "https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Valentina Morales",
+        "rol": "Terapeuta Facial & Rejuvenecimiento",
+        "badge": "Master Facial",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "5.0"
+      },
+      {
+        "nombre": "Camila Mendoza",
+        "rol": "Especialista en Moldeo Corporal",
+        "badge": "Terapeuta Pro",
+        "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "4.9"
+      },
+      {
+        "nombre": "Sofía Córdoba",
+        "rol": "Cosmetóloga & Masoterapeuta Spa",
+        "badge": "Senior Spa",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+        "calificacion": "4.9"
+      }
+    ]
+  }
+}

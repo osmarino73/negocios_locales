@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Uñitas Mágicas | Salón de Manicura, Uñas & Pedicura en Apartadó</title>
-  <meta name="description" content="Salón de manicura semipermanente, uñas acrílicas, press-on nails y pedicura spa en Apartadó, Antioquia. Acabados duraderos en Barrio Obrero.">
+  <title>Paola Diaz Beauty Artist | Salón de Manicura, Uñas &amp; Pedicura en Vélez, Apartadó</title>
+  <meta name="description" content="Salón de manicura semipermanente, extensiones acrílicas, nail art y pedicura spa en Vélez, Apartadó. Diseños exclusivos y esterilización clínica en Paola Diaz Beauty Artist.">
   <meta name="theme-color" content="#0d0b0c">
 
   <!-- OpenGraph / Redes Sociales -->
-  <meta property="og:title" content="Uñitas Mágicas | Salón de Manicura en Apartadó">
-  <meta property="og:description" content="Nail art y manicura impecable que resalta tu estilo. Agenda tu cita en Apartadó.">
+  <meta property="og:title" content="Paola Diaz Beauty Artist | Salón de Manicura en Vélez, Apartadó">
+  <meta property="og:description" content="Nail art y manicura impecable que resalta tu estilo. Agenda tu cita en Vélez, Apartadó con Paola Diaz Beauty Artist.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="public/frames/desktop/poster.webp">
 
@@ -18,20 +18,20 @@
   {
     "@context": "https://schema.org",
     "@type": "NailSalon",
-    "name": "Uñitas Mágicas",
+    "name": "Paola Diaz Beauty Artist",
     "image": "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=85",
-    "telephone": "+573225228092",
+    "telephone": "+573147382104",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Barrio Obrero",
-      "addressLocality": "Apartadó",
+      "streetAddress": "Cra. 107 #103a - 44, Vélez",
+      "addressLocality": "Vélez, Apartadó",
       "addressRegion": "Antioquia",
       "addressCountry": "CO"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 7.8876502,
-      "longitude": -76.6278117
+      "latitude": 7.8929892,
+      "longitude": -76.6357203
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
@@ -59,7 +59,7 @@
 
   <style>
     /* ==========================================================================
-       VARIABLES Y DESIGN TOKENS (UÑITAS MÁGICAS: OBSIDIAN ROSE & BERRY CHIC)
+       VARIABLES Y DESIGN TOKENS (PAOLA DIAZ BEAUTY ARTIST: OBSIDIAN ROSE & BERRY CHIC)
        ========================================================================== */
     :root {
       /* Paleta Oscura Inmersiva (Hero, Sobre Nosotros, Footer) */
@@ -73,11 +73,17 @@
       --bg-light-surface: #fdfbf9;
       --bg-light-card: #ffffff;
 
-      /* Acentos Rose Berry & Blush Glam */
-      --color-rose: #d84b75;
-      --color-rose-light: #f27297;
-      --color-rose-dark: #b3325a;
-      --color-rose-hover: #e65c85;
+      /* Acentos Rose Berry & Blush Glam (Unicidad Estricta del Color Principal) */
+      --color-accent: #d84b75;
+      --color-accent-light: #f27297;
+      --color-accent-dark: #b3325a;
+      --color-accent-hover: #e65c85;
+
+      /* Alias retrocompatibles */
+      --color-rose: var(--color-accent);
+      --color-rose-light: var(--color-accent-light);
+      --color-rose-dark: var(--color-accent-dark);
+      --color-rose-hover: var(--color-accent-hover);
 
       /* Bordes y Líneas */
       --border-dark: rgba(216, 75, 117, 0.22);
@@ -95,8 +101,8 @@
       --text-light-muted: #8f737c;
 
       /* Degradados */
-      --rose-gradient: linear-gradient(135deg, #f27297 0%, #d84b75 50%, #b3325a 100%);
-      --rose-gradient-hover: linear-gradient(135deg, #ffffff 0%, #f27297 50%, #d84b75 100%);
+      --rose-gradient: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 50%, var(--color-accent-dark) 100%);
+      --rose-gradient-hover: linear-gradient(135deg, #ffffff 0%, var(--color-accent-light) 50%, var(--color-accent) 100%);
 
       /* Tipografía */
       --font-display: 'Playfair Display', Georgia, serif;
@@ -161,17 +167,26 @@
        SMART HEADER / NAVBAR INTELIGENTE
        ========================================================================== */
     .header-sticky-wrapper {
-      position: sticky;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: var(--bg-dark-trans);
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .header-sticky-wrapper.header-scrolled,
+    .header-sticky-wrapper.scrolled {
+      background: rgba(13, 11, 12, 0.94);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-dark);
-      padding-top: env(safe-area-inset-top, 0px);
-      transition: transform 0.35s ease, background-color 0.35s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
 
     .header-hidden {
@@ -200,6 +215,7 @@
       letter-spacing: 0.08em;
       color: var(--text-dark-primary);
       line-height: 1.1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
     }
 
     .brand-name span {
@@ -214,6 +230,7 @@
       color: var(--color-rose-light);
       margin-top: 2px;
       white-space: nowrap;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .main-nav {
@@ -230,6 +247,7 @@
       color: var(--text-dark-secondary);
       position: relative;
       padding: 4px 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
     }
 
     .nav-link:hover,
@@ -267,12 +285,14 @@
       box-shadow: var(--shadow-rose);
       white-space: nowrap;
       flex-shrink: 0;
+      transition: var(--transition);
     }
 
     .btn-header-cta:hover {
       background: var(--rose-gradient-hover);
       color: #2c1820;
       transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(216, 75, 117, 0.4);
     }
 
     /* ==========================================================================
@@ -292,9 +312,7 @@
       height: 100vh;
       height: 100dvh;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      background-color: #0d0b0c;
+      background-color: var(--bg-dark-base);
     }
 
     .hero-canvas-wrap {
@@ -332,8 +350,8 @@
       visibility: hidden;
     }
 
-    /* Gradiente suave: protege texto a la izquierda sin opacar el centro/derecha */
-    .hero-vignette-overlay {
+    /* Doble degradado orgánico aterciopelado para máxima legibilidad sin opacar a la modelo */
+    .canvas-gradient-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -341,96 +359,113 @@
       height: 100%;
       z-index: 3;
       pointer-events: none;
-      background: linear-gradient(
-        90deg, 
-        #0d0b0c 0%, 
-        #0d0b0c 24%, 
-        rgba(13, 11, 12, 0.85) 38%, 
-        rgba(13, 11, 12, 0.35) 54%, 
-        transparent 72%
-      );
+      background: 
+        linear-gradient(180deg, transparent 65%, rgba(13, 11, 12, 0.65) 100%),
+        linear-gradient(
+          90deg, 
+          #0d0b0c 0%, 
+          #0d0b0c 24%, 
+          rgba(13, 11, 12, 0.96) 34%, 
+          rgba(13, 11, 12, 0.78) 44%, 
+          rgba(13, 11, 12, 0.45) 55%, 
+          rgba(13, 11, 12, 0.15) 66%, 
+          transparent 78%
+        );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end; /* Anclaje inferior mandatorio para respetar el 60% superior despejado */
+      justify-content: flex-start; /* Asimétrico a la izquierda para despejar a la modelo */
+      padding-top: 0;
+      padding-bottom: clamp(40px, 7.5vh, 75px);
     }
 
     .hero-scroll-content {
       position: relative;
       z-index: 4;
       width: 100%;
-      max-width: 580px;
-      min-height: 400px;
-      padding: 0 20px;
-      margin-left: max(20px, calc((100vw - 1200px) / 2));
-      pointer-events: none;
+      max-width: 560px;
+      min-height: 330px;
     }
 
     .hero-scroll-step {
       position: absolute;
-      top: 50%;
-      left: 20px;
-      transform: translateY(-50%);
+      bottom: 0;
+      left: 0;
+      transform: translateY(16px);
       width: 100%;
-      max-width: 560px;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.45s ease, transform 0.45s ease;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
+      opacity: 0;
       pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .hero-scroll-step.active {
       opacity: 1;
-      visibility: visible;
-      transform: translateY(-50%);
       pointer-events: auto;
+      transform: translateY(0);
     }
 
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      font-weight: 800;
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.1rem, 3.8vw, 3rem);
+      line-height: 1.05;
+      color: var(--color-accent-light);
+      margin-bottom: 2px;
+      display: block;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--color-rose-light);
-      margin-bottom: 12px;
+      letter-spacing: 2px;
+      color: var(--text-dark-secondary);
+      margin-bottom: 8px;
+      display: block;
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+      font-size: clamp(2rem, 3.6vw, 3.2rem);
       font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      color: var(--text-dark-primary);
-      margin-bottom: 8px;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--text-dark-title);
+      margin-bottom: 14px;
     }
 
-    .hero-script {
-      font-family: var(--font-script);
-      font-size: clamp(3rem, 5.8vw, 4.4rem);
-      color: var(--color-rose-light);
-      display: block;
+    .hero-title em {
+      font-family: var(--font-display);
+      font-style: italic;
+      color: var(--color-accent-light);
       font-weight: 400;
-      line-height: 0.95;
-      margin: 4px 0 14px;
     }
 
     .hero-desc {
-      font-size: 0.98rem;
+      font-size: 0.94rem;
       color: var(--text-dark-secondary);
-      line-height: 1.6;
-      margin-bottom: 26px;
-      max-width: 520px;
+      line-height: 1.55;
+      margin-bottom: 20px;
+      max-width: 480px;
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       flex-wrap: wrap;
+      margin-bottom: 14px;
     }
 
     .btn-primary {
@@ -457,30 +492,47 @@
       box-shadow: 0 10px 28px rgba(216, 75, 117, 0.45);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      color: var(--text-dark-primary);
-      font-size: 0.88rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 14px 26px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-dark);
+    .btn-hero-minimal-link {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
       transition: var(--transition);
       touch-action: manipulation;
     }
 
-    .btn-secondary:hover {
-      background: rgba(216, 75, 117, 0.18);
-      border-color: var(--color-rose);
-      color: var(--color-rose-light);
-      transform: translateY(-3px);
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent-light);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      color: var(--text-dark-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
+    }
+
+    .hero-proof-stars {
+      color: #f7ba2a;
+      letter-spacing: 2px;
+      font-size: 0.82rem;
     }
 
     /* ==========================================================================
@@ -1181,9 +1233,9 @@
         display: none !important;
       }
 
+      /* Regla Permanente: Prohibido botón «Agendar» en navbar móvil */
       .btn-header-cta {
-        padding: 8px 16px;
-        font-size: 0.78rem;
+        display: none !important;
       }
 
       .brand-name {
@@ -1194,61 +1246,78 @@
         font-size: 0.58rem;
       }
 
-      /* Hero Móvil: Scroll Container y Canvas 720px min-height */
-      .hero-sticky-viewport {
-        align-items: flex-end;
-        justify-content: center;
-        padding-bottom: 28px;
+      /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
+      .hero-scroll-container {
+        min-height: 720px !important;
       }
 
-      .hero-vignette-overlay {
+      .hero-sticky-viewport {
+        min-height: 720px !important;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      .canvas-gradient-overlay {
         background: linear-gradient(
           180deg, 
           rgba(13, 11, 12, 0) 0%, 
-          rgba(13, 11, 12, 0) 38%, 
-          rgba(13, 11, 12, 0.65) 55%, 
-          rgba(13, 11, 12, 0.94) 76%, 
-          #0d0b0c 98%
+          rgba(13, 11, 12, 0) 36%, 
+          rgba(13, 11, 12, 0.65) 54%, 
+          rgba(13, 11, 12, 0.94) 74%, 
+          #0d0b0c 96%
         );
+      }
+
+      .hero-container-align {
+        min-height: 720px !important;
+        justify-content: center;
+        padding-top: 0;
+        padding-bottom: 28px;
       }
 
       .hero-scroll-content {
         margin: 0 auto;
         max-width: 360px;
-        min-height: 380px;
-        padding: 0 16px;
+        min-height: 290px;
         text-align: center;
       }
 
       .hero-scroll-step {
-        left: 0;
-        right: 0;
-        top: auto;
-        bottom: 20px;
-        transform: none;
         align-items: center;
         text-align: center;
-        margin: 0 auto;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
 
-      .hero-scroll-step.active {
-        transform: none;
+      .hero-script-tag {
+        font-size: 2.2rem;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.65rem;
+        letter-spacing: 1.5px;
       }
 
       .hero-title {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
         line-height: 1.12;
+        margin-bottom: 10px;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95);
       }
 
-      .hero-script {
-        font-size: 2.6rem;
-        margin: 2px 0 10px;
+      .step-1 .hero-title {
+        margin-bottom: 18px;
       }
 
       .hero-desc {
-        font-size: 0.86rem;
-        line-height: 1.5;
-        margin-bottom: 20px;
+        font-size: 0.84rem;
+        line-height: 1.46;
+        margin-bottom: 16px;
+        max-width: 330px;
+        text-align: center;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95);
       }
 
       .hero-actions {
@@ -1256,15 +1325,20 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+        margin-bottom: 12px;
       }
 
-      .btn-primary,
-      .btn-secondary {
+      .btn-primary {
         width: 100%;
         max-width: 275px;
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.84rem;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.84rem;
+        padding: 4px 0;
       }
 
       /* Barra de Pilares Carrusel Horizontal Deslizable en Móvil */
@@ -1432,9 +1506,9 @@
   <header class="header-sticky-wrapper" id="stickyHeader">
     <div class="site-header">
       <div class="container nav-container">
-        <a href="#inicio" class="brand-logo" aria-label="Inicio Uñitas Mágicas">
-          <span class="brand-name">UÑITAS <span>MÁGICAS</span></span>
-          <span class="brand-subtitle">Salón de Manicura & Pedicura • Apartadó</span>
+        <a href="#inicio" class="brand-logo" aria-label="Inicio Paola Diaz Beauty Artist">
+          <span class="brand-name">PAOLA DIAZ <span>BEAUTY ARTIST</span></span>
+          <span class="brand-subtitle">Salón de Manicura &amp; Pedicura • Vélez, Apartadó</span>
         </a>
 
         <nav class="main-nav" aria-label="Navegación principal">
@@ -1444,7 +1518,7 @@
           <a href="#ubicacion" class="nav-link">Ubicación</a>
         </nav>
 
-        <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
+        <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-header-cta">
           <i class="fa-brands fa-whatsapp"></i> Agendar
         </a>
       </div>
@@ -1461,51 +1535,52 @@
         <div class="hero-canvas-wrap">
           <canvas id="heroCanvas"></canvas>
           <!-- Poster Fallback Inicial para Cero Pantallas Negras -->
-          <img src="public/frames/desktop/poster.webp" id="heroPosterFallback" class="hero-poster-fallback" alt="Uñitas Mágicas Manicura Prémium en Apartadó">
+          <img src="public/frames/desktop/poster.webp" id="heroPosterFallback" class="hero-poster-fallback" alt="Paola Diaz Beauty Artist Manicura Prémium en Vélez, Apartadó">
         </div>
 
-        <!-- Capa de Degradado Suave para Contraste -->
-        <div class="hero-vignette-overlay"></div>
+        <!-- Capa de Degradado Aterciopelado para Contraste Orgánico -->
+        <div class="canvas-gradient-overlay"></div>
 
-        <!-- Contenedor Tipográfico Editorial en 2 Pasos -->
-        <div class="hero-scroll-content">
-          <!-- Paso 1 (0% a 50% de scroll) -->
-          <div class="hero-scroll-step active" id="heroStep1">
-            <span class="hero-tag">✦ Manicura & Estilo en Apartadó</span>
-            <h1 class="hero-title">
-              Nail Art & Magia
-              <span class="hero-script">en Cada Detalle</span>
-            </h1>
-            <p class="hero-desc">
-              Luce uñas espectaculares con acabados de alta duración y diseños que reflejan tu esencia. Atención cálida y productos de calidad en Barrio Obrero.
-            </p>
-            <div class="hero-actions">
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar Cita
-              </a>
-              <a href="#servicios" class="btn-secondary">
-                <i class="fa-solid fa-sparkles"></i> Ver Servicios
-              </a>
+        <!-- Contenedor Tipográfico Editorial en 2 Pasos (50% / 50%) -->
+        <div class="container hero-container-align">
+          <div class="hero-scroll-content">
+            <!-- Paso 1 (0% a 50% de scroll) -->
+            <div class="hero-scroll-step step-1 active" id="heroStep1">
+              <span class="hero-script-tag">Nail Art &amp; Estilo Chic</span>
+              <span class="hero-eyebrow">SALÓN DE MANICURA &amp; SPA · VÉLEZ, APARTADÓ</span>
+              <h1 class="hero-title">Magia &amp; Detalle<br><em>en Cada Uña.</em></h1>
+              <div class="hero-actions">
+                <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
+                </a>
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">5.0 en Google Reviews · Vélez, Apartadó</span>
+              </div>
             </div>
-          </div>
 
-          <!-- Paso 2 (50% a 100% de scroll) -->
-          <div class="hero-scroll-step" id="heroStep2">
-            <span class="hero-tag">✦ Esculpido, Brillo & Duración</span>
-            <h2 class="hero-title">
-              Elegancia Pura
-              <span class="hero-script">que Habla por Ti</span>
-            </h2>
-            <p class="hero-desc">
-              Especialistas en extensiones acrílicas, esmaltado semipermanente, kapping nivelador y pedicura spa con máxima higiene y dedicación.
-            </p>
-            <div class="hero-actions">
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20consultar%20disponibilidad%20para%20u%C3%B1as." target="_blank" rel="noopener noreferrer" class="btn-primary">
-                <i class="fa-brands fa-whatsapp"></i> Agendar Turno
-              </a>
-              <a href="#nosotros" class="btn-secondary">
-                <i class="fa-solid fa-heart"></i> Conócenos
-              </a>
+            <!-- Paso 2 (50% a 100% de scroll) -->
+            <div class="hero-scroll-step step-2" id="heroStep2">
+              <span class="hero-script-tag">Elegancia &amp; Distinción</span>
+              <span class="hero-eyebrow">TÉCNICAS AVANZADAS &amp; BIOSEGURIDAD</span>
+              <h2 class="hero-title">Arte &amp; Perfección<br><em>que Habla por Ti.</em></h2>
+              <p class="hero-desc">Especialistas en extensiones acrílicas, esmaltado semipermanente, kapping nivelador y pedicura spa con máxima higiene y dedicación en Vélez, Apartadó.</p>
+              <div class="hero-actions">
+                <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20consultar%20disponibilidad%20para%20u%C3%B1as." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Turno
+                </a>
+                <a href="#nosotros" class="btn-hero-minimal-link">
+                  Conoce el Spa <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">Atención personalizada con cita previa</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1550,7 +1625,7 @@
             <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
             <div class="pillar-text">
               <h4>Satisfacción Total</h4>
-              <p>Calificación 5.0 ★ en Apartadó</p>
+              <p>Calificación 5.0 ★ en Vélez, Apartadó</p>
             </div>
           </div>
         </div>
@@ -1565,19 +1640,19 @@
         <div class="section-header-center">
           <span class="section-script-eyebrow">Nuestra Carta de Servicios</span>
           <h2 class="section-title section-title-light">Servicios Populares</h2>
-          <p class="section-desc section-desc-light">Técnicas de manicura, esculpido y diseño adaptadas a tus gustos y al cuidado de tus uñas.</p>
+          <p class="section-desc section-desc-light">Técnicas de manicura, esculpido y diseño adaptadas a tus gustos en Vélez, Apartadó.</p>
         </div>
 
         <div class="services-grid">
           <!-- Servicio 1: Semipermanente Pastel -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Semipermanente Pastel en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Semipermanente en Vélez, Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
               <h3 class="service-card-title">Semipermanente</h3>
-              <span class="service-card-price">$45.000 COP</span>
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20Semipermanente." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <span class="service-card-price">$45.000</span>
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20Semipermanente." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1585,13 +1660,13 @@
 
           <!-- Servicio 2: Uñas Acrílicas -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Extensiones Acrílicas en Vélez, Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
               <h3 class="service-card-title">Extensiones Acrílicas</h3>
-              <span class="service-card-price">Desde $85.000 COP</span>
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20Extensiones%20Acr%C3%ADlicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <span class="service-card-price"><small>Desde</small> $85.000</span>
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20Extensiones%20Acr%C3%ADlicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1599,13 +1674,13 @@
 
           <!-- Servicio 3: Nail Art Mágico -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art y Diseños en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Nail Art y Diseños en Vélez, Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
-              <h3 class="service-card-title">Nail Art & Diseños</h3>
-              <span class="service-card-price">Desde $25.000 COP</span>
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20Nail%20Art." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <h3 class="service-card-title">Nail Art &amp; Diseños</h3>
+              <span class="service-card-price"><small>Desde</small> $25.000</span>
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20Nail%20Art." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1613,13 +1688,13 @@
 
           <!-- Servicio 4: Kapping Gel -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping y Gel Nivelador en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Kapping y Gel Nivelador en Vélez, Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
-              <h3 class="service-card-title">Kapping & Nivelación</h3>
-              <span class="service-card-price">$55.000 COP</span>
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20Kapping%20Gel." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <h3 class="service-card-title">Kapping &amp; Nivelación</h3>
+              <span class="service-card-price">$55.000</span>
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20Kapping%20Gel." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1627,13 +1702,13 @@
 
           <!-- Servicio 5: Pedicura Spa -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa y Relax en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Pedicura Spa y Relax en Vélez, Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
-              <h3 class="service-card-title">Pedicura Spa & Relax</h3>
-              <span class="service-card-price">$40.000 COP</span>
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20Pedicura%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <h3 class="service-card-title">Pedicura Spa &amp; Relax</h3>
+              <span class="service-card-price">$40.000</span>
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20Pedicura%20Spa." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1641,13 +1716,13 @@
 
           <!-- Servicio 6: Press-On Nails VIP -->
           <article class="service-card">
-            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Press-On Nails Personalizados en Apartadó" class="service-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80" alt="Press-On Nails Personalizados en Vélez, Apartadó" class="service-card-img" loading="lazy">
             <div class="service-card-gradient"></div>
             <div class="service-card-bottom">
               <div class="service-card-accent-line"></div>
               <h3 class="service-card-title">Press-On Nails VIP</h3>
-              <span class="service-card-price">Desde $50.000 COP</span>
-              <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20Press-On%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <span class="service-card-price"><small>Desde</small> $50.000</span>
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20Press-On%20Nails." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1664,7 +1739,7 @@
         <!-- Bloque 1: Experiencia y Ambiente Coherente de Salón de Uñas -->
         <div class="experience-layout">
           <div class="salon-image-showcase">
-            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=85" alt="Salón de manicura Uñitas Mágicas Apartadó" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1200&q=85" alt="Salón de manicura Paola Diaz Beauty Artist Vélez, Apartadó" loading="lazy">
             <div class="experience-floating-badge">
               <strong>VIP</strong>
               <span>Nail Studio</span>
@@ -1674,10 +1749,10 @@
           <div class="experience-text-content">
             <span class="section-script-eyebrow" style="color: var(--color-rose-light);">Sobre Nosotros</span>
             <h2 class="experience-title">
-              Creatividad & Pasión. <span>Uñas que Enamoran.</span>
+              Creatividad &amp; Pasión. <span>Uñas que Enamoran.</span>
             </h2>
             <p>
-              En Uñitas Mágicas creamos un espacio para consentirte en Barrio Obrero, Apartadó. Diseñamos cada set de uñas con precisión, esmaltes de alta duración y un cuidado meticuloso para que siempre luzcas manos radiantes y elegantes.
+              En Paola Diaz Beauty Artist creamos un espacio para consentirte en Vélez, Apartadó. Diseñamos cada set de uñas con precisión, esmaltes de alta duración y un cuidado meticuloso para que siempre luzcas manos radiantes y elegantes.
             </p>
 
             <div class="metrics-row">
@@ -1699,7 +1774,7 @@
               </div>
             </div>
 
-            <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quiero%20conocer%20m%C3%A1s%20y%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quiero%20conocer%20m%C3%A1s%20y%20agendar%20mi%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
               <i class="fa-solid fa-calendar-check"></i> Conoce Nuestro Salón
             </a>
           </div>
@@ -1713,14 +1788,14 @@
         </div>
 
         <div class="team-grid">
-          <!-- Especialista 1 -->
+          <!-- Especialista 1: Paola Diaz -->
           <article class="team-card">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Angie Mosquera Fundadora y Master Nail Artist" class="team-card-img" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Paola Diaz Directora y Master Nail Artist" class="team-card-img" loading="lazy">
             <div class="team-card-gradient"></div>
             <div class="team-card-bottom">
               <div class="team-card-accent-line"></div>
-              <h4 class="team-card-name">Angie Mosquera</h4>
-              <span class="team-card-role">Fundadora & Master Nail Artist</span>
+              <h4 class="team-card-name">Paola Diaz</h4>
+              <span class="team-card-role">Directora &amp; Master Nail Artist</span>
               <div class="team-card-rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -1729,7 +1804,7 @@
                 <i class="fa-solid fa-star"></i>
                 <span>(5.0)</span>
               </div>
-              <a href="https://wa.me/573225228092?text=Hola%20Angie%2C%20quisiera%20agendar%20cita%20contigo%20en%20U%C3%B1itas%20M%C3%A1gicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <a href="https://wa.me/573147382104?text=Hola%20Paola%2C%20quisiera%20agendar%20cita%20contigo%20en%20Paola%20Diaz%20Beauty%20Artist." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1751,7 +1826,7 @@
                 <i class="fa-solid fa-star"></i>
                 <span>(5.0)</span>
               </div>
-              <a href="https://wa.me/573225228092?text=Hola%20Dayana%2C%20quisiera%20agendar%20cita%20para%20Acr%C3%ADlicas%20en%20U%C3%B1itas%20M%C3%A1gicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <a href="https://wa.me/573147382104?text=Hola%20Dayana%2C%20quisiera%20agendar%20cita%20para%20Acr%C3%ADlicas%20en%20Paola%20Diaz%20Beauty%20Artist." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1764,7 +1839,7 @@
             <div class="team-card-bottom">
               <div class="team-card-accent-line"></div>
               <h4 class="team-card-name">Melisa Córdoba</h4>
-              <span class="team-card-role">Artista de Nail Art & Decoración</span>
+              <span class="team-card-role">Artista de Nail Art &amp; Decoración</span>
               <div class="team-card-rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -1773,7 +1848,7 @@
                 <i class="fa-solid fa-star"></i>
                 <span>(5.0)</span>
               </div>
-              <a href="https://wa.me/573225228092?text=Hola%20Melisa%2C%20quisiera%20agendar%20cita%20de%20Nail%20Art%20en%20U%C3%B1itas%20M%C3%A1gicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <a href="https://wa.me/573147382104?text=Hola%20Melisa%2C%20quisiera%20agendar%20cita%20de%20Nail%20Art%20en%20Paola%20Diaz%20Beauty%20Artist." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1786,7 +1861,7 @@
             <div class="team-card-bottom">
               <div class="team-card-accent-line"></div>
               <h4 class="team-card-name">Tatiana Robledo</h4>
-              <span class="team-card-role">Terapeuta de Pedicura & Spa</span>
+              <span class="team-card-role">Terapeuta de Pedicura &amp; Spa</span>
               <div class="team-card-rating">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -1795,7 +1870,7 @@
                 <i class="fa-solid fa-star"></i>
                 <span>(5.0)</span>
               </div>
-              <a href="https://wa.me/573225228092?text=Hola%20Tatiana%2C%20quisiera%20agendar%20cita%20de%20Pedicura%20Spa%20en%20U%C3%B1itas%20M%C3%A1gicas." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
+              <a href="https://wa.me/573147382104?text=Hola%20Tatiana%2C%20quisiera%20agendar%20cita%20de%20Pedicura%20Spa%20en%20Paola%20Diaz%20Beauty%20Artist." target="_blank" rel="noopener noreferrer" class="btn-card-book-minimal">
                 AGENDAR <span>➔</span>
               </a>
             </div>
@@ -1810,17 +1885,17 @@
     <section class="location-section" id="ubicacion">
       <div class="container">
         <div class="section-header-center">
-          <span class="section-script-eyebrow">Visítanos en Apartadó</span>
+          <span class="section-script-eyebrow">Visítanos en Vélez, Apartadó</span>
           <h2 class="section-title section-title-light">Ubicación & Horarios</h2>
-          <p class="section-desc section-desc-light">Te esperamos en Barrio Obrero con un ambiente relajante y servicio de primera.</p>
+          <p class="section-desc section-desc-light">Te esperamos en Cra. 107 #103a - 44 con un ambiente relajante y servicio de primera categoría.</p>
         </div>
 
         <div class="map-showcase-card">
           <div class="map-info-panel">
             <div>
               <div class="location-header">
-                <h3>Uñitas Mágicas</h3>
-                <p>Salón de Manicura, Pedicura & Uñas Esculpidas</p>
+                <h3>Paola Diaz Beauty Artist</h3>
+                <p>Salón de Manicura, Pedicura & Spa de Uñas</p>
               </div>
 
               <div class="info-list">
@@ -1828,7 +1903,7 @@
                   <div class="info-icon-box"><i class="fa-solid fa-location-dot"></i></div>
                   <div class="info-text">
                     <strong>Dirección</strong>
-                    <span>Barrio Obrero, Apartadó, Antioquia</span>
+                    <span>Cra. 107 #103a - 44, Vélez, Apartadó, Antioquia</span>
                   </div>
                 </div>
 
@@ -1844,24 +1919,24 @@
                   <div class="info-icon-box"><i class="fa-solid fa-phone"></i></div>
                   <div class="info-text">
                     <strong>Teléfono Directo</strong>
-                    <span>(+57) 322 522 8092</span>
+                    <span>(+57) 314 738 2104</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <a href="https://maps.google.com/maps?q=U%C3%91ITAS+MAGICAS,+Barrio+Obrero,+Apartad%C3%B3,+Antioquia,+Colombia" target="_blank" rel="noopener noreferrer" class="btn-primary" style="justify-content: center; width: 100%;">
+            <a href="https://maps.google.com/maps?q=Paola+Diaz+Beauty+Artist,+Cra.+107+%23103a+-+44,+V%C3%A9lez,+Apartad%C3%B3,+Antioquia,+Colombia" target="_blank" rel="noopener noreferrer" class="btn-primary" style="justify-content: center; width: 100%;">
               <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar con Google Maps
             </a>
           </div>
 
           <div class="map-frame-wrapper">
             <iframe
-              src="https://maps.google.com/maps?q=U%C3%91ITAS+MAGICAS,+Barrio+Obrero,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Paola+Diaz+Beauty+Artist,+Cra.+107+%23103a+-+44,+V%C3%A9lez,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
               allowfullscreen=""
-              title="Mapa de ubicación Uñitas Mágicas en Apartadó"
-              aria-label="Mapa de Google con la ubicación de Uñitas Mágicas">
+              title="Mapa de ubicación Paola Diaz Beauty Artist en Vélez, Apartadó"
+              aria-label="Mapa de Google con la ubicación de Paola Diaz Beauty Artist">
             </iframe>
           </div>
         </div>
@@ -1876,14 +1951,14 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-col-brand">
-          <div class="brand-name">UÑITAS <span>MÁGICAS</span></div>
+          <div class="brand-name">PAOLA DIAZ <span>BEAUTY ARTIST</span></div>
           <p>
-            Tu salón de manicura y spa de uñas en Apartadó. Diseños en tendencia, instrumental esterilizado y atención personalizada.
+            Tu salón exclusivo de manicura, pedicura y spa de uñas en Vélez, Apartadó. Diseños en tendencia, instrumental esterilizado y atención personalizada.
           </p>
           <div class="social-links">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://wa.me/573225228092" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://wa.me/573147382104" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -1902,7 +1977,7 @@
           <div class="footer-reserve-box">
             <h5>Atención Inmediata</h5>
             <p>Escríbenos por WhatsApp para consultar disponibilidad y agendar tu turno.</p>
-            <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
+            <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-footer-reserve">
               <i class="fa-solid fa-calendar-check"></i> Agendar
             </a>
           </div>
@@ -1910,7 +1985,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Uñitas Mágicas. Todos los derechos reservados. Apartadó, Antioquia.</p>
+        <p>© 2026 Paola Diaz Beauty Artist. Todos los derechos reservados. Vélez, Apartadó, Antioquia.</p>
         <p>Salón de Manicura & Spa de Uñas • Calificación 5.0 ★</p>
       </div>
     </div>
@@ -1919,7 +1994,7 @@
   <!-- ==========================================================================
        WHATSAPP FLOTANTE INTERACTIVO
        ========================================================================== -->
-  <a href="https://wa.me/573225228092?text=Hola%20U%C3%B1itas%20M%C3%A1gicas%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/573147382104?text=Hola%20Paola%20Diaz%20Beauty%20Artist%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -2087,14 +2162,20 @@
       const header = document.getElementById('stickyHeader');
 
       window.addEventListener('scroll', () => {
+        if (!header) return;
         const currentScrollY = window.pageYOffset;
-        const heroHeight = scrollSection ? scrollSection.offsetHeight : 600;
+        const heroBottom = scrollSection ? (scrollSection.offsetTop + scrollSection.offsetHeight - 120) : 600;
 
-        // Dentro del Hero la barra de navegación permanece visible siempre
-        if (currentScrollY <= heroHeight) {
+        // Dentro del Hero: permanece 100% invisible/transparente sobre el video
+        if (currentScrollY <= heroBottom) {
           header.classList.remove('header-hidden');
+          header.classList.remove('header-scrolled');
+          header.classList.remove('scrolled');
         } else {
-          if (currentScrollY > lastScrollY) {
+          // Fuera del Hero: adquiere fondo oscuro y auto-hide al bajar
+          header.classList.add('header-scrolled');
+          header.classList.add('scrolled');
+          if (currentScrollY > lastScrollY && currentScrollY > heroBottom + 80) {
             header.classList.add('header-hidden');
           } else {
             header.classList.remove('header-hidden');

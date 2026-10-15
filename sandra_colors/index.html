@@ -323,15 +323,18 @@
       width: 100%;
       height: 100%;
       z-index: 3;
-      background: linear-gradient(
-        90deg,
-        #0f0e0c 0%,
-        #0f0e0c 20%,
-        rgba(15, 14, 12, 0.88) 30%,
-        rgba(15, 14, 12, 0.50) 42%,
-        rgba(15, 14, 12, 0.12) 52%,
-        transparent 60%
-      );
+      background: 
+        linear-gradient(180deg, transparent 58%, rgba(15, 14, 12, 0.75) 100%),
+        linear-gradient(
+          90deg,
+          #0f0e0c 0%,
+          #0f0e0c 22%,
+          rgba(15, 14, 12, 0.95) 32%,
+          rgba(15, 14, 12, 0.75) 42%,
+          rgba(15, 14, 12, 0.40) 52%,
+          rgba(15, 14, 12, 0.10) 62%,
+          transparent 72%
+        );
       pointer-events: none;
     }
 
@@ -342,16 +345,21 @@
       max-width: 1220px;
       margin: 0 auto;
       padding: 0 24px;
-      padding-top: 60px;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: clamp(44px, 8.5vh, 80px);
+      pointer-events: none;
     }
 
     .story-step {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      max-width: 580px;
+      bottom: clamp(44px, 8.5vh, 80px);
+      left: 24px;
+      max-width: 540px;
       opacity: 0;
       visibility: hidden;
+      transform: translateY(14px);
       transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
       pointer-events: none;
     }
@@ -359,69 +367,71 @@
     .story-step.active {
       opacity: 1;
       visibility: visible;
-      transform: translateY(-50%);
+      transform: translateY(0);
       pointer-events: auto;
     }
 
-    .eyebrow-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: var(--radius-pill);
-      background: rgba(200, 147, 118, 0.14);
-      border: 1px solid var(--gold-border);
-      color: var(--accent-light);
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
+    .hero-script-tag {
+      display: block;
+      font-family: var(--font-script);
+      font-size: clamp(2.2rem, 3.6vw, 2.9rem);
+      font-weight: 400;
+      color: var(--accent-primary);
+      line-height: 1;
+      margin-bottom: 2px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+    }
+
+    .hero-eyebrow {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      color: var(--accent-light);
+      margin-bottom: 8px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: 3.1rem;
+      font-size: clamp(2.3rem, 3.8vw, 3.3rem);
       font-weight: 400;
-      line-height: 1.15;
+      line-height: 1.08;
       color: #ffffff;
       margin-bottom: 12px;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
     }
 
-    .hero-script {
-      display: block;
-      font-family: var(--font-script);
-      font-size: 1.18em;
-      font-weight: 400;
+    .hero-title em {
+      font-style: italic;
       color: var(--accent-light);
-      line-height: 1;
-      margin-top: 4px;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      font-family: var(--font-display);
     }
 
     .hero-desc {
-      font-size: 1.02rem;
-      line-height: 1.6;
+      font-size: 0.94rem;
+      line-height: 1.55;
       color: var(--text-white-muted);
-      margin-bottom: 28px;
-      max-width: 500px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      margin-bottom: 20px;
+      max-width: 480px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
+      margin-bottom: 14px;
     }
 
     .btn-hero-primary {
       background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-hover) 100%);
       color: #ffffff;
-      padding: 14px 28px;
+      padding: 13px 28px;
       border-radius: var(--radius-pill);
-      font-size: 0.92rem;
+      font-size: 0.90rem;
       font-weight: 600;
       letter-spacing: 0.04em;
       border: 1px solid rgba(255, 255, 255, 0.22);
@@ -439,26 +449,56 @@
       color: #0f0e0c;
     }
 
-    .btn-hero-secondary {
-      background: rgba(255, 255, 255, 0.08);
+    .btn-hero-minimal-link {
       color: #ffffff;
-      padding: 14px 26px;
-      border-radius: var(--radius-pill);
-      font-size: 0.92rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      transition: var(--transition);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      padding: 8px 0;
+      transition: var(--transition);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
     }
 
-    .btn-hero-secondary:hover {
-      background: rgba(255, 255, 255, 0.18);
-      border-color: rgba(255, 255, 255, 0.35);
-      color: #ffffff;
+    .btn-hero-minimal-link i {
+      color: var(--accent-primary);
+      transition: transform 0.25s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--accent-light);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 14, 12, 0.72);
+      border: 1px solid var(--gold-border);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .hero-proof-stars {
+      color: #f59e0b;
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+    }
+
+    .hero-proof-text {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-white-muted);
+      letter-spacing: 0.04em;
     }
 
     .scroll-indicator {
@@ -1197,9 +1237,9 @@
         margin-top: 2px;
       }
 
+      .nav-actions,
       .btn-header-cta {
-        padding: 8px 16px;
-        font-size: 0.78rem;
+        display: none !important;
       }
 
       /* Hero Calibrado Móvil (min-height: 720px !important) */
@@ -1211,60 +1251,61 @@
         min-height: 720px !important;
         align-items: flex-end;
         justify-content: center;
-        padding-bottom: calc(30px + env(safe-area-inset-bottom, 0px));
+        padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
       }
 
       .hero-overlay-gradient {
         background: linear-gradient(
           180deg,
           rgba(15, 14, 12, 0) 0%,
-          rgba(15, 14, 12, 0) 46%,
-          rgba(15, 14, 12, 0.35) 58%,
-          rgba(15, 14, 12, 0.78) 72%,
-          #0f0e0c 94%
+          rgba(15, 14, 12, 0) 38%,
+          rgba(15, 14, 12, 0.55) 54%,
+          rgba(15, 14, 12, 0.90) 74%,
+          #0f0e0c 96%
         );
       }
 
       .hero-content-wrapper {
         padding: 0 16px;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
       }
 
       .story-step {
-        top: auto;
-        bottom: 0;
-        transform: translateY(0);
-        max-width: 360px;
-        margin: 0 auto;
-        text-align: center;
+        bottom: calc(28px + env(safe-area-inset-bottom, 0px));
         left: 0;
         right: 0;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 360px;
+        width: 100%;
       }
 
-      .story-step.active {
-        transform: translateY(0);
+      .hero-script-tag {
+        font-size: 2.1rem;
+        margin-bottom: 2px;
       }
 
-      .eyebrow-pill {
+      .hero-eyebrow {
         font-size: 0.68rem;
-        letter-spacing: 0.16em;
-        margin-bottom: 8px;
-        padding: 4px 12px;
+        letter-spacing: 0.18em;
+        margin-bottom: 6px;
       }
 
       .hero-title {
-        font-size: 1.9rem;
+        font-size: 1.95rem;
         line-height: 1.12;
-        margin-bottom: 8px;
-      }
-
-      .hero-script {
-        font-size: 1.25em;
+        margin-bottom: 10px;
       }
 
       .hero-desc {
         font-size: 0.85rem;
-        line-height: 1.48;
-        margin-bottom: 20px;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .hero-actions {
@@ -1272,15 +1313,29 @@
         align-items: center;
         gap: 10px;
         width: 100%;
+        margin-bottom: 12px;
       }
 
-      .btn-hero-primary,
-      .btn-hero-secondary {
+      .btn-hero-primary {
         width: 100%;
         max-width: 275px;
         padding: 12px 20px;
         font-size: 0.84rem;
         justify-content: center;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.84rem;
+        padding: 4px 0;
+        justify-content: center;
+      }
+
+      .hero-proof-badge {
+        padding: 5px 12px;
+      }
+
+      .hero-proof-text {
+        font-size: 0.70rem;
       }
 
       .scroll-indicator {
@@ -1489,47 +1544,48 @@
       </div>
 
       <div class="hero-content-wrapper">
-        <!-- Paso 1 (0% a 48% Scroll) -->
+        <!-- Paso 1 (0% a 48% Scroll): Titular de Impacto Editorial sin párrafo para despejar el 60% superior -->
         <div class="story-step active" id="step1">
-          <span class="eyebrow-pill">
-            <i class="fa-solid fa-sparkles"></i> Salón de Belleza & Color Studio • Apartadó
-          </span>
+          <span class="hero-script-tag">Sandra Color´s</span>
+          <span class="hero-eyebrow">SALÓN DE BELLEZA &amp; COLOR STUDIO · APARTADÓ</span>
           <h1 class="hero-title">
-            Donde tu Estilo Abraza tu Confianza
-            <span class="hero-script">Color, brillo & transformación</span>
+            El arte del color,<br><em>en tu cabello.</em>
           </h1>
-          <p class="hero-desc">
-            Especialistas en balayage iluminado, colorimetría capilar, alisados orgánicos de keratina y tratamientos profundos en Apartadó.
-          </p>
           <div class="hero-actions">
             <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
               <i class="fa-brands fa-whatsapp"></i> Agendar Cita
             </a>
-            <a href="#servicios" class="btn-hero-secondary">
-              Ver Servicios <i class="fa-solid fa-arrow-down"></i>
+            <a href="#servicios" class="btn-hero-minimal-link">
+              Ver Servicios <i class="fa-solid fa-arrow-right"></i>
             </a>
+          </div>
+          <div class="hero-proof-badge">
+            <span class="hero-proof-stars">★★★★★</span>
+            <span class="hero-proof-text">5.0 en Google Reviews · Apartadó, Antioquia</span>
           </div>
         </div>
 
-        <!-- Paso 2 (52% a 100% Scroll) -->
+        <!-- Paso 2 (52% a 100% Scroll): Especialización, Colorimetría & Alisados con propuesta de valor -->
         <div class="story-step" id="step2">
-          <span class="eyebrow-pill">
-            <i class="fa-solid fa-gem"></i> Alta Colorimetría & Salud Capilar
-          </span>
+          <span class="hero-script-tag">Color &amp; Salud Capilar</span>
+          <span class="hero-eyebrow">ALTA COLORIMETRÍA &amp; ALISADOS · APARTADÓ</span>
           <h2 class="hero-title">
-            Ondas de Lujo y Cabello Radiante
-            <span class="hero-script">Movimiento, suavidad y sedosidad</span>
+            Ondas de lujo,<br><em>brillo y suavidad.</em>
           </h2>
           <p class="hero-desc">
-            Transformaciones personalizadas con productos prémium sin daño, para lucir un cabello con movimiento sedoso, brillo y elegancia duradera.
+            Especialistas en balayage iluminado, colorimetría avanzada, alisados orgánicos de keratina y salud capilar en Apartadó.
           </p>
           <div class="hero-actions">
             <a href="https://wa.me/573128755269?text=Hola%20Sandra%20Color%C2%B4s%2C%20deseo%20reservar%20una%20sesi%C3%B3n%20de%20color%20o%20alisado." target="_blank" rel="noopener noreferrer" class="btn-hero-primary">
-              <i class="fa-brands fa-whatsapp"></i> Reservar Ahora
+              <i class="fa-brands fa-whatsapp"></i> Reservar Cita
             </a>
-            <a href="#nosotros" class="btn-hero-secondary">
-              Conocer Equipo <i class="fa-solid fa-arrow-down"></i>
+            <a href="#servicios" class="btn-hero-minimal-link">
+              Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
             </a>
+          </div>
+          <div class="hero-proof-badge">
+            <span class="hero-proof-stars">★★★★★</span>
+            <span class="hero-proof-text">Atención personalizada con cita previa</span>
           </div>
         </div>
       </div>

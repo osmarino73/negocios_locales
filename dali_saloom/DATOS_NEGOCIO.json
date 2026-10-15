@@ -1,0 +1,124 @@
+{
+  "negocio": {
+    "id": "dali_saloom",
+    "nombre": "DALI Saloom - Alta peluqueria",
+    "rubro": "Centro de estética",
+    "categoria": "estetica",
+    "eslogan": "El arte de cuidar tu estilo y resaltar tu belleza con distinción",
+    "calificacion": "4.6",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "47891819",
+      "whatsapp": {
+        "numero": "+5747891819",
+        "link": "https://wa.me/5747891819?text=Hola%20DALI%20Saloom%20-%20Alta%20peluqueria%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Doble vía Monteverde, Cra. 14 #55-106",
+      "barrio": "Monteverde",
+      "ciudad": "Montería",
+      "departamento": "Córdoba",
+      "pais": "Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/DALI+Saloom+-+Alta+peluqueria/@8.7628624,-75.880893,15z/data=!4m10!1m2!2m1!1ssalon+de+belleza+en+monteria!3m6!1s0x8e5a2fc610a167e5:0x34e943c147ffd405!8m2!3d8.7628624!4d-75.8628686!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11c6lp4xnf",
+      "google_maps_embed": "https://maps.google.com/maps?q=DALI+Saloom+-+Alta+peluqueria,+Cra.+14+%2355-106,+Monteri%C3%B1a,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Cerrado"
+    },
+    "pilares": [
+      { "titulo": "Estilistas Expertos", "descripcion": "Master coloristas y estilistas de alta gama" },
+      { "titulo": "Productos Prémium", "descripcion": "Marcas exclusivas internacionales de cuidado capilar" },
+      { "titulo": "Experiencia de Lujo", "descripcion": "Atención personalizada en ambiente relajante y exclusivo" },
+      { "titulo": "Satisfacción Total", "descripcion": "Garantía en técnicas de color, corte y estética" },
+      { "titulo": "Higiene & Seguridad", "descripcion": "Protocolos strictly de bioseguridad en cada servicio" }
+    ],
+    "servicios": [
+      {
+        "id": "corte-styling",
+        "nombre": "Corte & Styling Editorial",
+        "categoria": "Peluquería",
+        "descripcion": "Diseño de corte personalizado según tu estilo, asesoría de visajismo y acabado con secado o moldeado voluminoso.",
+        "precio": "$60.000",
+        "duracion": "60 min",
+        "imagen": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "balayage-glow",
+        "nombre": "Colormetría & Balayage Glow",
+        "categoria": "Coloración",
+        "descripcion": "Técnica de aclaración gradual y personalizada con matización prémium, diseño de mechas dimensionales y protección capilar Plex.",
+        "precio": "$180.000",
+        "duracion": "180 min",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "tratamiento-profundo",
+        "nombre": "Hidratación & Cauterización Capilar",
+        "categoria": "Tratamientos",
+        "descripcion": "Restauración molecular intensiva para recuperar el brillo, la elasticidad y sellar la cutícula del cabello dañado o procesado.",
+        "precio": "$90.000",
+        "duracion": "75 min",
+        "imagen": "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "maquillaje-social",
+        "nombre": "Maquillaje Social & Eventos",
+        "categoria": "Estética",
+        "descripcion": "Maquillaje de alta definición con piel blindada, pestañas punto a punto y acabado de larga duración para tus momentos más especiales.",
+        "precio": "$120.000",
+        "duracion": "60 min",
+        "imagen": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "cepillado-ondas",
+        "nombre": "Moldeado & Ondas al Agua",
+        "categoria": "Styling",
+        "descripcion": "Lavado relajante con masaje capilar, cepillado profesional y ondas glamurosas de alta fijación con protección térmica.",
+        "precio": "$45.000",
+        "duracion": "45 min",
+        "imagen": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "manicura-spa",
+        "nombre": "Manicura & Pedicura Spa",
+        "categoria": "Uñas & Estética",
+        "descripcion": "Exfoliación suave, mascarilla hidratante, masaje de manos y pies, limpieza profunda de cutícula y esmaltado semipermanente de alta duración.",
+        "precio": "$55.000",
+        "duracion": "60 min",
+        "imagen": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Dali",
+        "rol": "Directora Creativa & Master Colorista",
+        "experiencia": "10+ años de experiencia",
+        "calificacion": "5.0 ★★★★★",
+        "imagen": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Valentina",
+        "rol": "Especialista en Balayage & Cutting",
+        "experiencia": "8 años de experiencia",
+        "calificacion": "5.0 ★★★★★",
+        "imagen": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Camila",
+        "rol": "Terapeuta Capilar & Tratamientos",
+        "experiencia": "6 años de experiencia",
+        "calificacion": "5.0 ★★★★★",
+        "imagen": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Sofia",
+        "rol": "Makeup Artist & Estética Social",
+        "experiencia": "7 años de experiencia",
+        "calificacion": "5.0 ★★★★★",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+}

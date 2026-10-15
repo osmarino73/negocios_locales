@@ -45,7 +45,7 @@ Documentación técnica y tokens de diseño para **Luciana Nails** en Apartadó,
 
 ## 📐 Estructura Oficial de Secciones
 
-1. **Smart Header**: Logotipo tipográfico puro a la izquierda + Menú desktop + Botón conciso «Agendar» a la derecha. En móvil (< 768px): eliminación de menú hamburguesa, soporte de safe-area top y proporciones móviles calibradas.
+1. **Smart Header**: Navbar 100% transparente y fijo (`position: fixed`) sobre el Hero para integración visual cinematográfica con el Canvas de video; añade fondo translúcido con desenfoque (`backdrop-filter: blur(14px)`) y borde sutil solo al descender hacia las secciones inferiores (`.scrolled`). Logotipo tipográfico puro a la izquierda + Menú desktop + Botón conciso «Agendar» a la derecha. En móvil (< 768px): eliminación de menú hamburguesa, soporte de safe-area top y proporciones móviles calibradas.
 2. **`#inicio` (Hero Canvas Video Scroll Scrubbing — 300vh)**: Secuencia cinematográfica de 72 frames WebP sincronizada con scroll táctil/mouse, High-DPI Retina, poster fallback instantáneo y narrativa editorial en 2 pasos (50% / 50%). En móvil calibrado a `min-height: 720px !important;` con Safe Zone facial y anclaje inferior.
 3. **Barra de Pilares / Garantías**: 5 sellos con carrusel horizontal deslizable (*Scroll Snap*), auto-scroll suave y pausa táctil en móvil.
 4. **`#servicios` (Catálogo de Servicios)**: Grid 3 Columnas en Escritorio (`repeat(3, 1fr)`), 2 Columnas balanceadas en Móvil (`repeat(2, 1fr)`). Tarjetas Full-Bleed Minimalistas 3:4 con degradado aterciopelado (38% superior 100% transparente), sin píldoras superiores de duración, precio en COP y enlace minimalista `AGENDAR ➔`.

@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>ANGELA SPA & BELLEZA — Centro de estética en Montería, Córdoba</title>
+  <meta name="description" content="ANGELA SPA & BELLEZA en Montería, Córdoba. Especialistas en limpiezas faciales profundas, rejuvenecimiento facial, masajes relajantes con piedras volcánicas y moldeo corporal. Agenda tu cita hoy.">
+  
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="ANGELA SPA & BELLEZA — Centro de estética en Montería">
+  <meta property="og:description" content="Descubre la experiencia de estética, bienestar y relajación de lujo en Montería. Limpiezas faciales, moldeo corporal y masajes relajantes.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://angelaspamonteria.com">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "ANGELA SPA & BELLEZA",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+573152527580",
+    "url": "https://angelaspamonteria.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cra 16b #44-05 Monteverde Monte verde",
+      "addressLocality": "Montería",
+      "addressRegion": "Córdoba",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 8.7551769,
+      "longitude": -75.8663628
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "19:00"
+    },
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "1"
+    }
+  }
+  </script>
+
+  <style>
+    /* DESIGN TOKENS */
+    :root {
+      --color-bg-main: #0c0c0d;
+      --color-bg-card: #161619;
+      --color-bg-card-hover: #1f1f24;
+      --color-accent: #D98A6C;
+      --color-accent-hover: #C57B5C;
+      --color-accent-soft: rgba(217, 138, 108, 0.12);
+      --color-text-main: #F7F5F3;
+      --color-text-muted: #9E9893;
+      --color-border: rgba(217, 138, 108, 0.18);
+      
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-script: 'Alex Brush', cursive;
+
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* GLOBAL RESET & BASE STYLES */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* CRITICAL RULE: overflow-x: clip PRESERVES STICKY POSITIONING */
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      overflow-y: visible;
+      font-family: var(--font-body);
+      background-color: var(--color-bg-main);
+      color: var(--color-text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* SMART HEADER & NAVBAR */
+    .header-sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 100%;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      border-bottom: none;
+      padding-top: env(safe-area-inset-top, 0px);
+      transition: var(--transition);
+    }
+
+    .header-nav {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-text-main);
+      line-height: 1.1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-top: 3px;
+      white-space: nowrap;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      transition: var(--transition);
+      letter-spacing: 0.04em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-link:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #0c0c0d;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 10px 22px;
+      border-radius: 50px;
+      transition: var(--transition);
+      box-shadow: 0 4px 16px rgba(217, 138, 108, 0.2);
+    }
+
+    .btn-header-cta:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* HERO CANVAS SCROLL SCRUBBING SECTION */
+    .hero-scroll-section {
+      position: relative;
+      height: 300vh;
+      width: 100%;
+      background-color: var(--color-bg-main);
+    }
+
+    .canvas-sticky-wrapper {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scroll-video-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .canvas-poster-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      transition: opacity 0.35s ease;
+    }
+
+    .canvas-poster-img.loaded {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      display: none;
+    }
+
+    /* DOUBLE GRADIENT OVERLAY FOR TEXT READABILITY WITHOUT WASHING FACE */
+    .canvas-gradient-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 3;
+      pointer-events: none;
+      background: 
+        linear-gradient(180deg, transparent 55%, rgba(12, 12, 13, 0.72) 100%),
+        linear-gradient(
+          90deg, 
+          #0c0c0d 0%, 
+          #0c0c0d 26%, 
+          rgba(12, 12, 13, 0.94) 36%, 
+          rgba(12, 12, 13, 0.78) 46%, 
+          rgba(12, 12, 13, 0.45) 58%, 
+          rgba(12, 12, 13, 0.12) 72%, 
+          transparent 86%
+        );
+    }
+
+    .hero-container-align {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 0 6% clamp(48px, 9vh, 85px);
+    }
+
+    .hero-scroll-content {
+      position: relative;
+      z-index: 4;
+      width: 100%;
+      max-width: 580px;
+      min-height: 290px;
+    }
+
+    .hero-scroll-step {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(16px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-scroll-step.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .hero-scroll-step .hero-title,
+    .hero-scroll-step .hero-desc,
+    .hero-scroll-step .hero-eyebrow {
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 4px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-script-tag {
+      font-family: var(--font-script);
+      font-size: clamp(2.1rem, 3.6vw, 2.9rem);
+      color: var(--color-accent);
+      margin-bottom: 2px;
+      line-height: 1.05;
+      display: block;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--color-accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--color-text-main);
+      margin-bottom: 16px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--color-accent);
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--color-accent);
+      color: #0c0c0d;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 30px;
+      border-radius: 50px;
+      transition: var(--transition);
+      box-shadow: 0 8px 24px rgba(217, 138, 108, 0.28);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(217, 138, 108, 0.38);
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--color-text-main);
+      transition: var(--transition);
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-accent);
+      transform: translateX(4px);
+    }
+
+    .hero-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 18px;
+      background: rgba(22, 22, 25, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 1px solid var(--color-border);
+      font-size: 0.8rem;
+    }
+
+    .hero-proof-stars {
+      color: #f59e0b;
+    }
+
+    /* PILLARS / GUARANTEE BAR */
+    .pillars-bar {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      background: #121215;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 24px 6%;
+    }
+
+    .pillars-grid {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-accent-soft);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* SECTION HEADERS */
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 48px;
+    }
+
+    .section-script-eyebrow {
+      font-family: var(--font-script);
+      font-size: 2.3rem;
+      color: var(--color-accent);
+      display: block;
+      margin-bottom: 2px;
+      line-height: 1;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 600;
+      color: var(--color-text-main);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* SERVICES SECTION */
+    .services-section {
+      padding: 90px 6%;
+      max-width: 1350px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      aspect-ratio: 3/4;
+      min-height: 440px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--color-accent);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    }
+
+    .service-card-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: transform 0.6s ease;
+    }
+
+    .service-card:hover .service-card-bg {
+      transform: scale(1.05);
+    }
+
+    .service-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        180deg, 
+        rgba(12, 12, 13, 0) 0%, 
+        rgba(12, 12, 13, 0) 45%, 
+        rgba(12, 12, 13, 0.78) 72%, 
+        rgba(12, 12, 13, 0.96) 94%, 
+        #0c0c0d 100%
+      );
+      pointer-events: none;
+    }
+
+    .service-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 22px 24px 24px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+
+    .service-card-desc {
+      font-size: 0.83rem;
+      color: var(--color-text-muted);
+      line-height: 1.45;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .service-card-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+
+    .service-card-price {
+      width: 100%;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .btn-card-book-minimal {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-text-main);
+      transition: var(--transition);
+    }
+
+    .btn-card-book-minimal i {
+      color: var(--color-accent);
+      transition: transform 0.3s ease;
+    }
+
+    .btn-card-book-minimal:hover {
+      color: var(--color-accent);
+    }
+
+    .btn-card-book-minimal:hover i {
+      transform: translateX(5px);
+    }
+
+    /* ABOUT US & TEAM SECTION */
+    .nosotros-section {
+      padding: 90px 6%;
+      max-width: 1350px;
+      margin: 0 auto;
+    }
+
+    .experience-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-bottom: 95px;
+    }
+
+    .experience-media {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .salon-image-showcase {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+
+    .experience-floating-badge {
+      position: absolute;
+      bottom: 22px;
+      right: 22px;
+      background: rgba(22, 22, 25, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--color-border);
+      padding: 14px 22px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+    }
+
+    .badge-icon {
+      color: var(--color-accent);
+      font-size: 1.5rem;
+    }
+
+    .badge-text-title {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .badge-text-sub {
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+    }
+
+    .experience-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 24px 0 30px;
+      padding-top: 22px;
+      border-top: 1px solid var(--color-border);
+      width: 100%;
+    }
+
+    .metric-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .metric-number {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--color-accent);
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      font-size: 0.74rem;
+      color: var(--color-text-muted);
+      font-weight: 500;
+      margin-top: 4px;
+    }
+
+    /* TEAM GRID (RETRATO EDITORIAL 3:4.2) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .team-card {
+      aspect-ratio: 3/4.2;
+      min-height: 410px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-accent);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+    }
+
+    .team-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover .team-card-img {
+      transform: scale(1.04);
+    }
+
+    .team-card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        180deg, 
+        rgba(12, 12, 13, 0) 0%, 
+        rgba(12, 12, 13, 0) 40%, 
+        rgba(12, 12, 13, 0.85) 75%, 
+        #0c0c0d 100%
+      );
+      pointer-events: none;
+    }
+
+    .team-card-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .team-card-accent-line {
+      width: 32px;
+      height: 2px;
+      background: var(--color-accent);
+      margin-bottom: 6px;
+    }
+
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .team-role {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      line-height: 1.2;
+    }
+
+    .team-rating {
+      font-size: 0.78rem;
+      color: #f59e0b;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* LOCATION & MAP SECTION */
+    .ubicacion-section {
+      padding: 90px 6%;
+      max-width: 1350px;
+      margin: 0 auto;
+    }
+
+    .map-showcase-card {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      background: var(--color-bg-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      margin-top: 40px;
+    }
+
+    .map-info-panel {
+      padding: 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 26px;
+    }
+
+    .info-block {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--color-accent-soft);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .info-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .info-text {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    .map-frame-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(0.2) contrast(1.1) invert(0.9) hue-rotate(180deg);
+    }
+
+    /* FOOTER */
+    .footer-main {
+      background: #080809;
+      border-top: 1px solid var(--color-border);
+      padding: 70px 6% 35px;
+    }
+
+    .footer-grid {
+      max-width: 1300px;
+      margin: 0 auto 50px;
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+      gap: 40px;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      margin: 16px 0 22px;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .footer-social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-main);
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .social-btn:hover {
+      background: var(--color-accent);
+      color: #0c0c0d;
+      transform: translateY(-3px);
+    }
+
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-link-item a {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      transition: var(--transition);
+    }
+
+    .footer-link-item a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-booking-card {
+      background: var(--color-bg-card);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-booking-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .footer-booking-text {
+      font-size: 0.82rem;
+      color: var(--color-text-muted);
+      line-height: 1.45;
+    }
+
+    .btn-footer-reserve {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--color-accent);
+      color: #0c0c0d;
+      font-weight: 700;
+      font-size: 0.86rem;
+      padding: 12px 20px;
+      border-radius: 50px;
+      transition: var(--transition);
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-footer-reserve:hover {
+      background: var(--color-accent-hover);
+    }
+
+    .footer-bottom {
+      max-width: 1300px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    /* WHATSAPP FLOATING BUTTON */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      right: max(20px, env(safe-area-inset-right, 20px));
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08) rotate(6deg);
+    }
+
+    /* MEDIA QUERIES (< 768px MOBILE) */
+    @media (max-width: 768px) {
+      .header-nav {
+        justify-content: center;
+        text-align: center;
+        padding: 12px 16px;
+      }
+
+      .brand-logo {
+        align-items: center;
+      }
+
+      .nav-menu, .btn-header-cta {
+        display: none !important;
+      }
+
+      .canvas-gradient-overlay {
+        background: linear-gradient(
+          180deg, 
+          rgba(12, 12, 13, 0) 0%, 
+          rgba(12, 12, 13, 0) 36%, 
+          rgba(12, 12, 13, 0.65) 54%, 
+          rgba(12, 12, 13, 0.94) 75%, 
+          #0c0c0d 96%
+        );
+      }
+
+      .hero-container-align {
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0 16px;
+        padding-bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .hero-scroll-content {
+        max-width: 360px;
+        min-height: 290px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .hero-scroll-step {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-eyebrow {
+        justify-content: center;
+        font-size: 0.68rem;
+        margin-bottom: 6px;
+      }
+
+      .hero-eyebrow::before {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 1.9rem;
+        line-height: 1.12;
+        margin-bottom: 10px;
+      }
+
+      .hero-desc {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 18px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .btn-primary {
+        width: 100%;
+        max-width: 275px;
+        padding: 12px 20px;
+        font-size: 0.84rem;
+        justify-content: center;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.82rem;
+      }
+
+      /* PILLARS MOBILE SCROLL SNAP */
+      .pillars-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 14px;
+        width: 100%;
+        padding: 4px 0;
+      }
+
+      .pillars-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pillar-item {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        background: rgba(22, 22, 25, 0.7);
+        padding: 8px 14px;
+        border-radius: 50px;
+        border: 1px solid var(--color-border);
+      }
+
+      /* SERVICES MOBILE 2 COLUMNS */
+      .services-section {
+        padding: 60px 16px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .service-card {
+        aspect-ratio: 3/4.4;
+        min-height: 0;
+        padding: 0 !important;
+      }
+
+      .service-card-content {
+        padding: 10px 12px 12px !important;
+        gap: 4px;
+      }
+
+      .service-card-title {
+        font-size: 0.94rem;
+        line-height: 1.2;
+      }
+
+      .service-card-desc {
+        display: none !important;
+      }
+
+      .service-card-price {
+        font-size: 1.05rem;
+      }
+
+      .btn-card-book-minimal {
+        font-size: 0.78rem;
+      }
+
+      /* ABOUT & TEAM MOBILE */
+      .nosotros-section {
+        padding: 60px 16px;
+      }
+
+      .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 60px;
+      }
+
+      .metrics-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      /* TEAM CAROUSEL SCROLL SNAP */
+      .team-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 16px;
+        margin: 32px -16px 0;
+        width: calc(100% + 32px);
+        padding: 8px 16px 20px;
+      }
+
+      .team-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .team-card {
+        flex: 0 0 255px;
+        aspect-ratio: 3/4.2;
+        min-height: 0;
+        scroll-snap-align: start;
+      }
+
+      /* LOCATION MOBILE */
+      .ubicacion-section {
+        padding: 60px 16px;
+      }
+
+      .map-showcase-card {
+        grid-template-columns: 1fr;
+      }
+
+      .map-info-panel {
+        padding: 28px 20px;
+      }
+
+      .map-frame-wrapper {
+        min-height: 320px;
+        height: 320px;
+      }
+
+      /* FOOTER MOBILE */
+      .footer-main {
+        padding: 50px 16px 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SMART HEADER / NAVBAR -->
+  <header class="header-sticky-wrapper">
+    <nav class="header-nav">
+      <a href="#inicio" class="brand-logo">
+        <span class="brand-name">ANGELA SPA</span>
+        <span class="brand-subtitle">CENTRO DE ESTÉTICA · MONTERÍA</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+      </ul>
+
+      <a href="https://wa.me/573152527580?text=Hola%20ANGELA%20SPA%20%26%20BELLEZA%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener" class="btn-header-cta">
+        <i class="fa-brands fa-whatsapp"></i> Agendar
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO CANVAS VIDEO SCROLL SCRUBBING SECTION (#inicio) -->
+  <section class="hero-scroll-section" id="inicio">
+    <div class="canvas-sticky-wrapper">
+      <!-- HTML5 CANVAS FOR SCROLL ANIMATION -->
+      <canvas id="scroll-video-canvas"></canvas>
+
+      <!-- POSTER FALLBACK IMAGE -->
+      <img id="canvas-poster-fallback" 
+           src="angela_spa/public/frames/desktop/poster.webp" 
+           alt="ANGELA SPA & BELLEZA — Centro de estética en Montería" 
+           class="canvas-poster-img" />
+
+      <!-- VELVETY GRADIENT OVERLAY -->
+      <div class="canvas-gradient-overlay"></div>
+
+      <!-- EDITORIAL CONTENT 2 STEPS SCRIPT ANCHORED AT BOTTOM THIRD -->
+      <div class="hero-container-align">
+        <div class="hero-scroll-content">
+          <!-- PASO 1 (0% A 50% SCROLL) -->
+          <div class="hero-scroll-step step-1 active">
+            <span class="hero-script-tag">Experiencia de Lujo</span>
+            <div class="hero-eyebrow">ESTÉTICA & WELLNESS · MONTERÍA</div>
+            <h1 class="hero-title">Tu refugio de bienestar y <em>belleza radiante</em></h1>
+            <div class="hero-actions">
+              <a href="https://wa.me/573152527580?text=Hola%20ANGELA%20SPA%20%26%20BELLEZA%2C%20quisiera%20solicitar%20informaci%C3%B3n%20para%20agendar%20mi%20cita." target="_blank" rel="noopener" class="btn-primary">
+                <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+              </a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Explorar Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+            <div class="hero-proof-badge">
+              <span class="hero-proof-stars">★★★★★</span>
+              <span>4.7 en Google Reviews · Montería</span>
+            </div>
+          </div>
+
+          <!-- PASO 2 (50% A 100% SCROLL) -->
+          <div class="hero-scroll-step step-2">
+            <span class="hero-script-tag">Ciencia & Armonía</span>
+            <div class="hero-eyebrow">TRATAMIENTOS FACIALES & CORPORALES</div>
+            <h2 class="hero-title">Detalles que resaltan <em>tu brillo natural</em></h2>
+            <p class="hero-desc">Limpiezas faciales ultrasónicas, rejuvenecimiento con fotón LED y moldeo corporal asistido en un ambiente zen de serenidad absoluta.</p>
+            <div class="hero-actions">
+              <a href="https://wa.me/573152527580?text=Hola%20ANGELA%20SPA%20%26%20BELLEZA%2C%20quisiera%20agendar%20mi%20tratamiento." target="_blank" rel="noopener" class="btn-primary">
+                <i class="fa-regular fa-calendar-check"></i> Agendar Cita
+              </a>
+              <a href="#servicios" class="btn-hero-minimal-link">
+                Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE PILARES / GARANTÍAS -->
+  <section class="pillars-bar">
+    <div class="pillars-grid">
+      <div class="pillar-item">
+        <div class="pillar-icon"><i class="fa-solid fa-user-doctor"></i></div>
+        <span>Cosmiatras Especializadas</span>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
+        <span>Productos 100% Orgánicos</span>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-icon"><i class="fa-solid fa-gem"></i></div>
+        <span>Instalaciones VIP Zen</span>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-icon"><i class="fa-solid fa-shield-heart"></i></div>
+        <span>Bioseguridad Garantizada</span>
+      </div>
+      <div class="pillar-item">
+        <div class="pillar-icon"><i class="fa-solid fa-star"></i></div>
+        <span>Atención Personalizada 5★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO DE SERVICIOS (#servicios) -->
+  <section id="servicios" class="services-section">
+    <div class="section-header">
+      <span class="section-script-eyebrow">Nuestra Carta</span>
+      <h2 class="section-title">Servicios Exclusivos de Estética</h2>
+      <p class="section-subtitle">Protocolos personalizados con aparatología de vanguardia y cosmética de alta gama para realzar tu brillo natural.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- SERVICIO 1 -->
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Limpieza Facial Profunda & Hidrodermo" class="service-card-bg">
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Limpieza Facial Profunda & Hidrodermo</h3>
+          <p class="service-card-desc">Extracción ultrasónica, vapor de ozono, mascarilla hidroplástica y sellado con ácido hialurónico.</p>
+          <div class="service-card-footer">
+            <div class="service-card-price">$85.000</div>
+            <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20agendar%20el%20servicio%20de%20Limpieza%20Facial%20Profunda." target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 2 -->
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1512290900672-1f02e6a0d4c8?auto=format&fit=crop&w=800&q=80" alt="Rejuvenecimiento Facial & Fototerapia LED" class="service-card-bg">
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Rejuvenecimiento Facial & Fototerapia LED</h3>
+          <p class="service-card-desc">Protocolo antiedad con radiofrecuencia, estimulación de colágeno y fototerapia para firmeza inmediata.</p>
+          <div class="service-card-footer">
+            <div class="service-card-price">$95.000</div>
+            <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20agendar%20el%20servicio%20de%20Rejuvenecimiento%20Facial." target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 3 -->
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Masaje Relajante & Piedras Volcánicas" class="service-card-bg">
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Masaje Relajante & Piedras Volcánicas</h3>
+          <p class="service-card-desc">Terapia descontracturante corporal con aromaterapia, aceites calientes y piedras termales.</p>
+          <div class="service-card-footer">
+            <div class="service-card-price">$80.000</div>
+            <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20agendar%20un%20Masaje%20Relajante%20con%20Piedras%20Volc%C3%A1nicas." target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 4 -->
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80" alt="Moldeo Corporal & Cavitación Ultrasónica" class="service-card-bg">
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Moldeo Corporal & Cavitación Ultrasónica</h3>
+          <p class="service-card-desc">Protocolo reductor localizado, drenaje linfático asistido y aparatología reafirmante corporal.</p>
+          <div class="service-card-footer">
+            <div class="service-card-price">$90.000</div>
+            <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20agendar%20el%20tratamiento%20de%20Moldeo%20Corporal." target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 5 -->
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?auto=format&fit=crop&w=800&q=80" alt="Diseño de Cejas & Pestañas HD" class="service-card-bg">
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Diseño de Cejas & Pestañas HD</h3>
+          <p class="service-card-desc">Perfilado con hilo hindú, pigmentación con henna orgánica y lifting de pestañas con queratina.</p>
+          <div class="service-card-footer">
+            <div class="service-card-price">$60.000</div>
+            <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20agendar%20el%20servicio%20de%20Dise%C3%B1o%20de%20Cejas%20y%20Pesta%C3%B1as." target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICIO 6 -->
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Maderoterapia & Ritual Reductor Spa" class="service-card-bg">
+        <div class="service-card-overlay"></div>
+        <div class="service-card-content">
+          <h3 class="service-card-title">Maderoterapia & Ritual Reductor Spa</h3>
+          <p class="service-card-desc">Técnica con maderas terapéuticas para moldear silueta, tonificar y activar la microcirculación.</p>
+          <div class="service-card-footer">
+            <div class="service-card-price">$85.000</div>
+            <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20agendar%20el%20Ritual%20de%20Maderoterapia." target="_blank" rel="noopener" class="btn-card-book-minimal">
+              AGENDAR <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SOBRE NOSOTROS & EQUIPO (#nosotros) -->
+  <section id="nosotros" class="nosotros-section">
+    <!-- BLOQUE EDITORIAL SOBRE NOSOTROS -->
+    <div class="experience-layout">
+      <div class="experience-media">
+        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80" alt="Ambiente Zen y Cabina de Spa ANGELA SPA & BELLEZA" class="salon-image-showcase">
+        <div class="experience-floating-badge">
+          <div class="badge-icon"><i class="fa-solid fa-crown"></i></div>
+          <div>
+            <div class="badge-text-title">Experiencia VIP</div>
+            <div class="badge-text-sub">Instalaciones Zen en Montería</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="experience-content">
+        <span class="section-script-eyebrow">Nuestra Filosofía</span>
+        <h2 class="section-title">Ciencia, arte y la calidez que mereces</h2>
+        <p class="section-subtitle">En ANGELA SPA & BELLEZA combinamos técnicas de cosmiatría avanzada con un enfoque holístico de bienestar. Cada tratamiento está diseñado como un ritual exclusivo para renovar tu energía y resaltar tu estética en un espacio de paz incomparable.</p>
+        
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-number">+8</span>
+            <span class="metric-label">Años Experiencia</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">+2.5K</span>
+            <span class="metric-label">Clientes Felices</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">100%</span>
+            <span class="metric-label">Garantía VIP</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-number">4.7 ★</span>
+            <span class="metric-label">Calificación Google</span>
+          </div>
+        </div>
+
+        <a href="https://wa.me/573152527580?text=Hola,%20quisiera%20conocer%20m%C3%A1s%20sobre%20sus%20tratamientos%20en%20ANGELA%20SPA." target="_blank" rel="noopener" class="btn-primary">
+          <i class="fa-solid fa-comments"></i> Hablar con una Especialista
+        </a>
+      </div>
+    </div>
+
+    <!-- BLOQUE NUESTROS PROFESIONALES (RETRATO EDITORIAL 3:4.2) -->
+    <div class="section-header">
+      <span class="section-script-eyebrow">Manos Expertas</span>
+      <h2 class="section-title">Nuestras Especialistas</h2>
+      <p class="section-subtitle">Un equipo altamente capacitado apasionado por el cuidado, la precisión estética y el servicio de máxima excelencia.</p>
+    </div>
+
+    <div class="team-grid">
+      <!-- TEAM 1 -->
+      <article class="team-card">
+        <img src="https://images.unsplash.com/photo-1594824813501-447a113c8f85?auto=format&fit=crop&w=600&q=80" alt="Dra. Ángela Gómez" class="team-card-img">
+        <div class="team-card-overlay"></div>
+        <div class="team-card-content">
+          <div class="team-card-accent-line"></div>
+          <h3 class="team-name">Dra. Ángela Gómez</h3>
+          <span class="team-role">Directora & Cosmiatra Especialista</span>
+          <div class="team-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> (5.0)</div>
+          <a href="https://wa.me/573152527580?text=Hola,%20deseo%20agendar%20una%20valoraci%C3%B3n%20con%20la%20Dra.%20%C3%81ngela%20G%C3%B3mez." target="_blank" rel="noopener" class="btn-card-book-minimal">
+            AGENDAR <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TEAM 2 -->
+      <article class="team-card">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Valentina Morales" class="team-card-img">
+        <div class="team-card-overlay"></div>
+        <div class="team-card-content">
+          <div class="team-card-accent-line"></div>
+          <h3 class="team-name">Valentina Morales</h3>
+          <span class="team-role">Terapeuta Facial & Rejuvenecimiento</span>
+          <div class="team-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> (5.0)</div>
+          <a href="https://wa.me/573152527580?text=Hola,%20deseo%20agendar%20una%20cita%20de%20tratamiento%20facial%20con%20Valentina%20Morales." target="_blank" rel="noopener" class="btn-card-book-minimal">
+            AGENDAR <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TEAM 3 -->
+      <article class="team-card">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Camila Mendoza" class="team-card-img">
+        <div class="team-card-overlay"></div>
+        <div class="team-card-content">
+          <div class="team-card-accent-line"></div>
+          <h3 class="team-name">Camila Mendoza</h3>
+          <span class="team-role">Especialista en Moldeo Corporal</span>
+          <div class="team-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.9)</div>
+          <a href="https://wa.me/573152527580?text=Hola,%20deseo%20agendar%20tratamiento%20corporal%20con%20Camila%20Mendoza." target="_blank" rel="noopener" class="btn-card-book-minimal">
+            AGENDAR <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- TEAM 4 -->
+      <article class="team-card">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Sofía Córdoba" class="team-card-img">
+        <div class="team-card-overlay"></div>
+        <div class="team-card-content">
+          <div class="team-card-accent-line"></div>
+          <h3 class="team-name">Sofía Córdoba</h3>
+          <span class="team-role">Cosmetóloga & Masoterapeuta Spa</span>
+          <div class="team-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> (4.9)</div>
+          <a href="https://wa.me/573152527580?text=Hola,%20deseo%20agendar%20un%20masaje%20relajante%20con%20Sof%C3%ADa%20C%C3%B3rdoba." target="_blank" rel="noopener" class="btn-card-book-minimal">
+            AGENDAR <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MAPA & UBICACIÓN (#ubicacion) -->
+  <section id="ubicacion" class="ubicacion-section">
+    <div class="section-header">
+      <span class="section-script-eyebrow">Nuestra Sede</span>
+      <h2 class="section-title">Visítanos en Montería</h2>
+      <p class="section-subtitle">Ubicados en un exclusivo sector de Monteverde con parqueadero privado y confort total para tu visita.</p>
+    </div>
+
+    <div class="map-showcase-card">
+      <div class="map-info-panel">
+        <div class="info-block">
+          <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h3 class="info-title">Dirección</h3>
+            <p class="info-text">Cra 16b #44-05 Monteverde Monte verde<br>Montería, Córdoba, Colombia</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+          <div>
+            <h3 class="info-title">Horario de Atención</h3>
+            <p class="info-text">Lunes a Sábado: 8:00 AM – 7:00 PM<br>Domingos y Festivos: Previa Reserva</p>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+          <div>
+            <h3 class="info-title">Contacto Directo</h3>
+            <p class="info-text">Teléfono: (+57) 315 252 7580<br>WhatsApp: +57 315 252 7580</p>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/ANGELA+SPA+%26+BELLEZA/@8.7547173,-75.8856758,15z/data=!4m10!1m2!2m1!1ssalon+de+belleza+en+monteria!3m6!1s0x8e5a2f68715e9237:0x3cfabd3f710a23ab!8m2!3d8.7551769!4d-75.8663628!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhWh4iHHNhbG9uIGRlIGJlbGxlemEgZW4gbW9udGVyaWGSAQxiZWF1dHlfc2Fsb26aASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTNNSEJmVXkxM1JSQULgAQD6AQQIABA-!16s%2Fg%2F11w4c0zb63" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 10px; width: fit-content;">
+          <i class="fa-solid fa-diamond-turn-right"></i> Cómo Llegar en GPS
+        </a>
+      </div>
+
+      <div class="map-frame-wrapper">
+        <iframe class="map-frame" 
+                src="https://maps.google.com/maps?q=ANGELA+SPA+%26+BELLEZA,+Cra+16b+%2344-05+Monteverde,+Monter%C3%ADa,+C%C3%B3rdoba,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER PRINCIPAL -->
+  <footer class="footer-main">
+    <div class="footer-grid">
+      <!-- COLUMNA 1: MARCA -->
+      <div>
+        <a href="#inicio" class="brand-logo">
+          <span class="brand-name">ANGELA SPA</span>
+          <span class="brand-subtitle">CENTRO DE ESTÉTICA · MONTERÍA</span>
+        </a>
+        <p class="footer-brand-desc">Tu espacio exclusivo de estética facial, corporal y bienestar integral en Montería. Tecnología, ciencia y relajación.</p>
+        <div class="footer-social-links">
+          <a href="https://wa.me/573152527580" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <!-- COLUMNA 2: NAVEGACIÓN -->
+      <div>
+        <h3 class="footer-title">Navegación</h3>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="#inicio">Inicio</a></li>
+          <li class="footer-link-item"><a href="#servicios">Servicios</a></li>
+          <li class="footer-link-item"><a href="#nosotros">Nosotros</a></li>
+          <li class="footer-link-item"><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 3: SERVICIOS -->
+      <div>
+        <h3 class="footer-title">Tratamientos</h3>
+        <ul class="footer-links-list">
+          <li class="footer-link-item"><a href="#servicios">Limpieza Facial Profunda</a></li>
+          <li class="footer-link-item"><a href="#servicios">Rejuvenecimiento LED</a></li>
+          <li class="footer-link-item"><a href="#servicios">Masaje Piedras Volcánicas</a></li>
+          <li class="footer-link-item"><a href="#servicios">Moldeo Corporal</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 4: MÓDULO DE RESERVA -->
+      <div>
+        <div class="footer-booking-card">
+          <h3 class="footer-booking-title">Reserva tu Experiencia</h3>
+          <p class="footer-booking-text">Agenda directamente vía WhatsApp con atención inmediata.</p>
+          <a href="https://wa.me/573152527580?text=Hola%20ANGELA%20SPA%20%26%20BELLEZA%2C%20quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener" class="btn-footer-reserve">
+            <i class="fa-brands fa-whatsapp"></i> Agendar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 ANGELA SPA & BELLEZA — Todos los derechos reservados. Cra 16b #44-05 Monteverde, Montería, Córdoba.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/573152527580?text=Hola%20ANGELA%20SPA%20%26%20BELLEZA%2C%20quisiera%20solicitar%20informaci%C3%B3n%20sobre%20sus%20tratamientos." 
+     target="_blank" 
+     rel="noopener" 
+     class="whatsapp-float" 
+     aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- MOTOR JAVASCRIPT: CANVAS SCROLL SCRUBBING HIGH-DPI -->
+  <script>
+    (function () {
+      const canvas = document.getElementById('scroll-video-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d', { alpha: false });
+      const posterImg = document.getElementById('canvas-poster-fallback');
+      const scrollSection = document.querySelector('.hero-scroll-section');
+
+      const TOTAL_FRAMES = 74;
+      const isMobile = window.innerWidth < 768;
+      const framesFolder = isMobile ? 'angela_spa/public/frames/mobile' : 'angela_spa/public/frames/desktop';
+
+      if (posterImg) {
+        posterImg.src = `${framesFolder}/poster.webp`;
+      }
+
+      const getFrameUrl = (index) => {
+        const pad = String(index).padStart(4, '0');
+        return `${framesFolder}/frame-${pad}.webp`;
+      };
+
+      const images = [];
+      let loadedCount = 0;
+      let currentFrameIndex = 0;
+      let targetFrameIndex = 0;
+      let rafId = null;
+
+      function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        renderFrame(currentFrameIndex);
+      }
+      window.addEventListener('resize', resizeCanvas, { passive: true });
+
+      function renderFrame(index) {
+        const img = images[index];
+        if (!img || !img.complete) return;
+
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth || img.width;
+        const ih = img.naturalHeight || img.height;
+
+        ctx.fillStyle = '#0c0c0d';
+        ctx.fillRect(0, 0, cw, ch);
+
+        const scale = Math.max(cw / iw, ch / ih);
+        const nw = iw * scale;
+        const nh = ih * scale;
+
+        const isMob = window.innerWidth < 768;
+        const nx = isMob ? (cw - nw) / 2 : ((cw - nw) / 2) + (cw * 0.05);
+        const ny = (ch - nh) / 2;
+
+        ctx.drawImage(img, nx, ny, nw, nh);
+      }
+
+      function preloadImages() {
+        const loadPromises = [];
+
+        for (let i = 1; i <= TOTAL_FRAMES; i++) {
+          const p = new Promise((resolve) => {
+            const img = new Image();
+            img.src = getFrameUrl(i);
+            img.onload = () => {
+              loadedCount++;
+              if (loadedCount === 1) {
+                currentFrameIndex = 0;
+                renderFrame(0);
+              }
+              if (loadedCount >= Math.min(5, TOTAL_FRAMES)) {
+                if (posterImg) {
+                  posterImg.classList.add('loaded');
+                  posterImg.style.display = 'none';
+                }
+              }
+              resolve();
+            };
+            img.onerror = () => {
+              resolve();
+            };
+            images.push(img);
+          });
+          loadPromises.push(p);
+        }
+
+        Promise.all(loadPromises).then(() => {
+          if (posterImg) {
+            posterImg.classList.add('loaded');
+            posterImg.style.display = 'none';
+          }
+        });
+      }
+
+      function updateScrollProgress() {
+        if (!scrollSection) return;
+        const rect = scrollSection.getBoundingClientRect();
+        const scrollDistance = scrollSection.offsetHeight - window.innerHeight;
+        
+        if (scrollDistance <= 0) return;
+
+        const progress = Math.min(Math.max(-rect.top / scrollDistance, 0), 1);
+        
+        targetFrameIndex = Math.min(
+          TOTAL_FRAMES - 1,
+          Math.floor(progress * TOTAL_FRAMES)
+        );
+
+        if (targetFrameIndex !== currentFrameIndex) {
+          currentFrameIndex = targetFrameIndex;
+          if (!rafId) {
+            rafId = requestAnimationFrame(() => {
+              renderFrame(currentFrameIndex);
+              rafId = null;
+            });
+          }
+        }
+
+        const steps = document.querySelectorAll('.hero-scroll-step');
+        if (steps.length >= 2) {
+          const activeIndex = progress < 0.5 ? 0 : 1;
+          steps.forEach((step, idx) => {
+            step.classList.toggle('active', idx === activeIndex);
+          });
+        }
+      }
+
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+      resizeCanvas();
+      preloadImages();
+    })();
+  </script>
+</body>
+</html>

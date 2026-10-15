@@ -1,0 +1,126 @@
+{
+  "negocio": {
+    "nombre": "Natalia Morelo Magic Secret",
+    "rubro": "Centro de estética y belleza capilar",
+    "categoria": "estetica",
+    "eslogan": "Natalia Morelo Magic Secret — Centro de estética y belleza capilar en Apartadó",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 300 538 7278",
+      "telefono_raw": "+573005387278",
+      "whatsapp": {
+        "numero": "+573005387278",
+        "link": "https://wa.me/573005387278?text=Hola%20Natalia%20Morelo%20Magic%20Secret%2C%20quisiera%20solicitar%20informaci%C3%B3n%20y%20agendar%20una%20cita."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 99A #108-103 a 108-35, Apartadó, Antioquia",
+      "barrio": "Apartadó Centro",
+      "ciudad": "Apartadó",
+      "departamento_pais": "Antioquia, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Natalia+Morelo+Magic+Secret/@7.8830801,-76.6527634,15z/data=!4m10!1m2!2m1!1snail+currulao!3m6!1s0x8e500d10587c0273:0x5da4dcefe9c02f86!8m2!3d7.8848899!4d-76.636203!15sCg1uYWlsIGN1cnJ1bGFvkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11pkcrq_jp",
+      "iframe_embed_url": "https://maps.google.com/maps?q=Natalia+Morelo+Magic+Secret,+Cl.+99A+%23108-103,+Apartad%C3%B3,+Antioquia,+Colombia&t=&z=16&ie=UTF8&iwloc=&output=embed"
+    },
+    "horario_atencion": {
+      "lunes_a_sabado": "8:00 AM - 7:00 PM",
+      "domingos_y_festivos": "Previa cita y disponibilidad"
+    },
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO",
+      "oportunidad_saas": "ALTA",
+      "motivo_auditoria": "Agendamiento optimizado con WhatsApp directo y enlaces minimalistas"
+    },
+    "servicios": [
+      {
+        "id": "balayage-colorimetria",
+        "nombre": "Balayage & Colorimetría",
+        "precio": "$180.000",
+        "duracion": "180 min",
+        "tecnica": "Iluminación & Matiz",
+        "icono": "fa-wand-magic-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "alisado-organico",
+        "nombre": "Alisado Orgánico Espejo",
+        "precio": "$140.000",
+        "duracion": "150 min",
+        "tecnica": "Keratina Libre de Formol",
+        "icono": "fa-sparkles",
+        "imagen": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "cauterizacion-capilar",
+        "nombre": "Cauterización & Botox",
+        "precio": "$65.000",
+        "duracion": "75 min",
+        "tecnica": "Sellado & Nutrición",
+        "icono": "fa-droplet",
+        "imagen": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "limpieza-facial-glow",
+        "nombre": "Limpieza Facial Glow",
+        "precio": "$75.000",
+        "duracion": "60 min",
+        "tecnica": "Hidrodermoabrasión",
+        "icono": "fa-face-smile-beam",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "ondas-glamour",
+        "nombre": "Ondas Glamour & Peinado",
+        "precio": "$55.000",
+        "duracion": "50 min",
+        "tecnica": "Styling de Alta Definición",
+        "icono": "fa-star",
+        "imagen": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "spa-manicura",
+        "nombre": "Spa de Manicura & Uñas",
+        "precio": "$45.000",
+        "duracion": "60 min",
+        "tecnica": "Esmaltado Semipermanente",
+        "icono": "fa-gem",
+        "imagen": "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Natalia Morelo",
+        "cargo": "Directora & Master Stylist",
+        "experiencia": "8+ años de experiencia",
+        "especialidad": "Colorimetría y Diseño Capilar",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Valentina Ríos",
+        "cargo": "Especialista en Color",
+        "experiencia": "6+ años de experiencia",
+        "especialidad": "Balayage, Babylights y Mechas",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Camila Duque",
+        "cargo": "Cosmetóloga Facial",
+        "experiencia": "5+ años de experiencia",
+        "especialidad": "Cuidado Facial y Peeling Glow",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "nombre": "Daniela Restrepo",
+        "cargo": "Terapeuta Capilar",
+        "experiencia": "5+ años de experiencia",
+        "especialidad": "Alisados y Recuperación Capilar",
+        "calificacion": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80"
+      }
+    ]
+  }
+}

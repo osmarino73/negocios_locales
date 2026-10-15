@@ -1,0 +1,118 @@
+{
+  "negocio": {
+    "nombre": "Kbeyo's Peluqueria Unisex",
+    "rubro": "Peluquería",
+    "categoria": "salon",
+    "eslogan": "Kbeyo's Peluqueria Unisex — Peluquería en Centro",
+    "calificacion": "4.8",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 313 594 4747",
+      "whatsapp": {
+        "numero": "+573135944747",
+        "link": "https://wa.me/573135944747?text=Hola%20Kbeyo's%20Peluqueria%20Unisex%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Calle 24 #13-82 Local 3 C.C. Isla Center, Centro, Monteria, Córdoba",
+      "ciudad": "Centro, Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Kbeyo's+Peluqueria+Unisex/@8.7514768,-75.9028491,15z/data=!4m10!1m2!2m1!1ssalon+de+belleza+en+monteria!3m6!1s0x8e5a2fe11348bec3:0x31a6e57f4cdf78c!8m2!3d8.7485168!4d-75.8809493!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhkgEKaGFpcl9zYWxvbuABAA!16s%2Fg%2F11dxddvh6w"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:00 PM",
+    "sitio_web": "",
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Agendamiento directo mediante WhatsApp sin fricción"
+    },
+    "servicios": [
+      {
+        "id": "balayage-autor",
+        "nombre": "Colorimetría & Balayage de Autor",
+        "categoria": "Color & Iluminación",
+        "descripcion": "Diseño de color personalizado con degradado orgánico, matices luminosos y máxima protección capilar.",
+        "precio": "$160.000",
+        "duracion": "3.5 Horas",
+        "destacado": true,
+        "foto": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "keratina-organica",
+        "nombre": "Tratamiento de Keratina & Alisado Orgánico",
+        "categoria": "Alisados & Restauración",
+        "descripcion": "Tratamiento alisador sin formol que aporta brillo espejo, sellado térmico y sedosidad extrema.",
+        "precio": "$120.000",
+        "duracion": "2.5 Horas",
+        "destacado": true,
+        "foto": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "corte-unisex-estilo",
+        "nombre": "Corte Unisex & Asesoría de Estilo",
+        "categoria": "Corte & Estilo",
+        "descripcion": "Corte técnico y personalizado adaptado a la morfología de tu rostro, textura capilar y estilo de vida.",
+        "precio": "$35.000",
+        "duracion": "45 Min",
+        "destacado": true,
+        "foto": "https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "cauterizacion-spa",
+        "nombre": "Hidratación Cauterizadora & Spa Capilar",
+        "categoria": "Tratamiento Capilar",
+        "descripcion": "Nutrición profunda con aminoácidos y aceites esenciales para reparar hebras maltratadas por procesos químicos.",
+        "precio": "$75.000",
+        "duracion": "1.5 Horas",
+        "destacado": false,
+        "foto": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "moldeado-peinado-gala",
+        "nombre": "Moldeado & Peinado de Gala",
+        "categoria": "Peinados & Eventos",
+        "descripcion": "Cepillado voluminoso, ondas al agua o recogido sofisticado con fijación flexible y acabado Glow.",
+        "precio": "$50.000",
+        "duracion": "1 Hora",
+        "destacado": false,
+        "foto": "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "perfilado-barba-corte",
+        "nombre": "Perfilado de Barba & Corte Masculino VIP",
+        "categoria": "Corte Masculino",
+        "descripcion": "Corte masculino de precisión con navaja, perfilado de barba con toalla caliente y bálsamo hidratante.",
+        "precio": "$40.000",
+        "duracion": "50 Min",
+        "destacado": true,
+        "foto": "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Carlos Kbeyo",
+        "rol": "Director & Master Stylist",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        "nombre": "Diana Mendoza",
+        "rol": "Especialista en Color & Balayage",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        "nombre": "Valeria Ramos",
+        "rol": "Terapeuta Capilar & Alisados",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        "nombre": "Andrés Silva",
+        "rol": "Barber Master & Estilista Unisex",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop"
+      }
+    ]
+  }
+}

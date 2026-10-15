@@ -1,0 +1,116 @@
+{
+  "negocio": {
+    "nombre": "Atemporal Estudio de Belleza.",
+    "rubro": "Centro de estética",
+    "categoria": "estetica",
+    "eslogan": "Atemporal Estudio de Belleza. — Centro de estética en Montería",
+    "calificacion": "5.0",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 312 634 7781",
+      "whatsapp": {
+        "numero": "+573126347781",
+        "link": "https://wa.me/573126347781?text=Hola%20Atemporal%20Estudio%20de%20Belleza.%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 35 #8a-39, Montería, Córdoba",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Atemporal+Estudio+de+Belleza./@8.7514768,-75.9028491,15z/data=!4m10!1m2!2m1!1ssalon+de+belleza+en+monteria!3m6!1s0x8e5a5be70cae4c0f:0xed29aebd6adab349!8m2!3d8.7573832!4d-75.879539!15sChxzYWxvbiBkZSBiZWxsZXphIGVuIG1vbnRlcmlhkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11xv7lp8gk"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:00 PM",
+    "sitio_web": "https://atemporalstudio.co/",
+    "sistema_reservas": {
+      "estado": "REVISAR",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Sin auditoría"
+    },
+    "servicios": [
+      {
+        "id": "limpieza-facial-glow",
+        "nombre": "Limpieza Facial Profunda & Glow",
+        "categoria": "Facial",
+        "precio": "$120.000",
+        "duracion": "60 min",
+        "descripcion": "Tratamiento purificante con hidratación intensiva, peeling ultrasónico y alta frecuencia para devolver la luminosidad natural a la piel.",
+        "imagen": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "diseno-cejas-laminado",
+        "nombre": "Diseño de Cejas & Laminado",
+        "categoria": "Cejas",
+        "precio": "$90.000",
+        "duracion": "45 min",
+        "descripcion": "Visagismo personalizado, depilación con hilo orgánico, laminado y sombreado con henna de alta definición para una mirada impactante.",
+        "imagen": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "lifting-pestanas",
+        "nombre": "Lifting & Extensión de Pestañas",
+        "categoria": "Pestañas",
+        "precio": "$85.000",
+        "duracion": "60 min",
+        "descripcion": "Curvatura perfecta, tinte negro azabache y nutrición intensiva con queratina para un volumen natural elegante sin maltratar tus pestañas.",
+        "imagen": "https://images.unsplash.com/photo-1583001809873-a1284d57004d?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "dermapen-rejuvenecimiento",
+        "nombre": "Rejuvenecimiento Facial & Dermapen",
+        "categoria": "Aparatología",
+        "precio": "$150.000",
+        "duracion": "75 min",
+        "descripcion": "Terapia de inducción de colágeno mediante microagujas y cóctel de ácido hialurónico con factores de crecimiento para atenúar líneas y manchas.",
+        "imagen": "https://images.unsplash.com/photo-1512290900673-7002ff01da33?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        "id": "manicura-semipermanente",
+        "nombre": "Manicura & Pedicura Semipermanente",
+        "categoria": "Uñas",
+        "precio": "$75.000",
+        "duracion": "60 min",
+        "descripcion": "Ritual de exfoliación, limado de precisión, tratamiento de cutícula y esmaltado semipermanente de alta resistencia y brillo espejo.",
+        "imagen": "https://pub-22e6e94a97b84b068f4217675926ef7f.r2.dev/stock/nails/about-nuva-nails-manicurista.jpg"
+      },
+      {
+        "id": "tratamiento-corporal-reductor",
+        "nombre": "Tratamiento Corporal Moldeador",
+        "categoria": "Corporal",
+        "precio": "$130.000",
+        "duracion": "60 min",
+        "descripcion": "Masaje drenante manual combinado con cavitación y radiofrecuencia para tonificar tejidos y moldear la silueta de forma efectiva.",
+        "imagen": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Dra. Valentina Ospina",
+        "rol": "Especialista en Estética Facial",
+        "experiencia": "8 años de experiencia",
+        "estrellas": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Camila Restrepo",
+        "rol": "Diseñadora de Cejas & Pestañas",
+        "experiencia": "6 años de experiencia",
+        "estrellas": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Isabella Mendoza",
+        "rol": "Terapeuta Corporal & Masajes",
+        "experiencia": "5 años de experiencia",
+        "estrellas": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        "nombre": "Mariana Morales",
+        "rol": "Master Nail Artist & Spa",
+        "experiencia": "7 años de experiencia",
+        "estrellas": "5.0",
+        "imagen": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80"
+      }
+    ]
+  }
+}

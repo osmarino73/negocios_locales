@@ -1,0 +1,112 @@
+{
+  "negocio": {
+    "nombre": "Isaza Salón",
+    "rubro": "Centro de estética",
+    "categoria": "estetica",
+    "eslogan": "Isaza Salón — Centro de estética en Montería",
+    "calificacion": "4.7",
+    "resenas": "1",
+    "contacto": {
+      "telefono_principal": "(+57) 301 212 5224",
+      "whatsapp": {
+        "numero": "+573012125224",
+        "link": "https://wa.me/573012125224?text=Hola%20Isaza%20Sal%C3%B3n%2C%20quisiera%20solicitar%20informaci%C3%B3n."
+      }
+    },
+    "ubicacion": {
+      "direccion": "Cl. 59 #6-50, Montería, Córdoba",
+      "ciudad": "Montería",
+      "departamento_pais": "Córdoba, Colombia",
+      "google_maps_url": "https://www.google.com/maps/place/Isaza+Sal%C3%B3n/@8.7594197,-75.8944995,14z/data=!4m10!1m2!2m1!1ssalon+de+belleza+monteria!3m6!1s0x8e5a2f995521a0e3:0x4b503cd3f8633364!8m2!3d8.7699708!4d-75.8676528!15sChlzYWxvbiBkZSBiZWxsZXphIG1vbnRlcmlhkgEMYmVhdXR5X3NhbG9u4AEA!16s%2Fg%2F11gs8j7wg6"
+    },
+    "horario_atencion": "Lunes a Sábado: 8:00 AM - 7:00 PM",
+    "sitio_web": "https://www.instagram.com/isazasalon/",
+    "sistema_reservas": {
+      "estado": "ACTIVO_WHATSAPP",
+      "oportunidad_saas": "MEDIA",
+      "motivo_auditoria": "Agendamiento directo mediante WhatsApp sin fricción"
+    },
+    "servicios": [
+      {
+        "id": "keratina-organica",
+        "nombre": "Keratina Orgánica & Alisado",
+        "categoria": "Peluquería & Cabello",
+        "descripcion": "Tratamiento alisador sin formol que aporta brillo espejo, sellado térmico y sedosidad extrema.",
+        "precio": "$120.000",
+        "duracion": "2.5 Horas",
+        "destacado": true
+      },
+      {
+        "id": "balayage-autor",
+        "nombre": "Colorimetría & Balayage de Autor",
+        "categoria": "Color",
+        "descripcion": "Diseño de color personalizado con degradado natural, protección de fibra capilar y matizado de lujo.",
+        "precio": "$180.000",
+        "duracion": "3.5 Horas",
+        "destacado": true
+      },
+      {
+        "id": "cauterizacion-spa",
+        "nombre": "Hidratación & Cauterización Capilar",
+        "categoria": "Tratamiento Capilar",
+        "descripcion": "Restauración intensiva con aminoácidos y aceites esenciales para recuperar la elasticidad del cabello.",
+        "precio": "$85.000",
+        "duracion": "1.5 Horas",
+        "destacado": true
+      },
+      {
+        "id": "peinado-editorial",
+        "nombre": "Peinado Editorial & Ondas Glow",
+        "categoria": "Peinados",
+        "descripcion": "Moldeado térmico de larga duración con fijación flexible y acabado brillante para eventos de gala.",
+        "precio": "$65.000",
+        "duracion": "1 Hora",
+        "destacado": false
+      },
+      {
+        "id": "corte-visagismo",
+        "nombre": "Corte & Asesoría de Imagen",
+        "categoria": "Corte",
+        "descripcion": "Corte técnico personalizado según la morfología del rostro, textura y estilo de vida.",
+        "precio": "$45.000",
+        "duracion": "45 Min",
+        "destacado": false
+      },
+      {
+        "id": "facial-glow-spa",
+        "nombre": "Tratamiento Facial Glow & Estética Spa",
+        "categoria": "Estética Facial",
+        "descripcion": "Limpieza profunda con punta de diamante, velo de colágeno e iluminación facial bioluminiscente.",
+        "precio": "$95.000",
+        "duracion": "1.5 Horas",
+        "destacado": true
+      }
+    ],
+    "especialistas": [
+      {
+        "nombre": "Camila Isaza",
+        "rol": "Directora & Master Stylist",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        "nombre": "Valeria Gómez",
+        "rol": "Especialista en Colorimetría",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        "nombre": "Sofia Restrepo",
+        "rol": "Terapeuta Capilar & Spa",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=800&auto=format&fit=crop"
+      },
+      {
+        "nombre": "Mariana López",
+        "rol": "Estilista Senior & Visagismo",
+        "calificacion": "5.0",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop"
+      }
+    ]
+  }
+}

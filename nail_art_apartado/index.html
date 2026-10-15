@@ -441,6 +441,7 @@
       color: var(--color-gold);
       font-style: italic;
       font-weight: 400;
+      font-family: var(--font-serif);
     }
 
     .step-1 .hero-title {
@@ -511,6 +512,33 @@
       border-color: var(--color-gold);
       color: var(--color-gold);
       transform: translateY(-3px);
+    }
+
+    .btn-hero-minimal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-dark-secondary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 0;
+      text-decoration: none;
+      transition: var(--transition);
+      touch-action: manipulation;
+    }
+
+    .btn-hero-minimal-link i {
+      font-size: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-hero-minimal-link:hover {
+      color: var(--color-gold-light);
+    }
+
+    .btn-hero-minimal-link:hover i {
+      transform: translateX(5px);
     }
 
     .hero-proof-badge {
@@ -1351,10 +1379,7 @@
       }
 
       .btn-header-cta {
-        padding: 8px 16px;
-        font-size: 0.78rem;
-        white-space: nowrap;
-        flex-shrink: 0;
+        display: none !important;
       }
 
       /* Hero Móvil: Estrictamente min-height 720px y contenido en la mitad inferior */
@@ -1458,6 +1483,12 @@
         justify-content: center;
         padding: 12px 20px;
         font-size: 0.82rem;
+      }
+
+      .btn-hero-minimal-link {
+        font-size: 0.84rem;
+        padding: 4px 0;
+        justify-content: center;
       }
 
       .hero-proof-badge {
@@ -1688,15 +1719,15 @@
           <div class="hero-scroll-content">
             <!-- Paso 1 (0% a 50%): Gran Titular Principal sin párrafo para despejar el video -->
             <div class="hero-scroll-step step-1 active">
-              <span class="hero-script-tag">Nail Fashion &amp; Beauty</span>
-              <span class="hero-eyebrow">SALÓN DE MANICURA, NAIL ART &amp; SUMINISTROS · APARTADÓ</span>
-              <h1 class="hero-title">ARTE EN TUS UÑAS.<br><em>ELEGANCIA &amp; DISTINCIÓN.</em></h1>
+              <span class="hero-script-tag">Arte &amp; Belleza en Uñas</span>
+              <span class="hero-eyebrow">SALÓN DE MANICURA &amp; ARTE · APARTADÓ</span>
+              <h1 class="hero-title">Arte en tus uñas,<br><em>elegancia &amp; distinción.</em></h1>
               <div class="hero-actions">
                 <a href="https://wa.me/573105977085?text=Hola%20Nail%20Art%20Sede%20Apartado%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
                   <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="#servicios" class="btn-secondary">
-                  <i class="fa-solid fa-sparkles"></i> Ver Servicios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Ver Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
               </div>
               <div class="hero-proof-badge">
@@ -1708,16 +1739,20 @@
             <!-- Paso 2 (50% a 100%): Técnica, Procedimientos & Detalle con descripción completa -->
             <div class="hero-scroll-step step-2">
               <span class="hero-script-tag">Detalle &amp; Precisión</span>
-              <span class="hero-eyebrow">TÉCNICA, ESMALTADO &amp; ACRÍLICAS</span>
-              <h2 class="hero-title">PASIÓN &amp; PERFECCIÓN.<br><em>DISEÑOS MODERNOS.</em></h2>
-              <p class="hero-desc">Encuentra en Apartadó un espacio especializado en resaltar la belleza de tus manos con técnicas avanzadas de manicura, extensiones acrílicas, nail art en tendencia y suministros profesionales de primera línea.</p>
+              <span class="hero-eyebrow">TÉCNICA &amp; CUIDADO PRÉMIUM</span>
+              <h2 class="hero-title">Pasión &amp; precisión,<br><em>diseños que cautivan.</em></h2>
+              <p class="hero-desc">Luce uñas impecables con técnicas avanzadas de manicura, extensiones acrílicas, nail art en tendencia y suministros profesionales en Apartadó.</p>
               <div class="hero-actions">
-                <a href="#servicios" class="btn-primary">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Conocer Servicios
+                <a href="https://wa.me/573105977085?text=Hola%20Nail%20Art%20Sede%20Apartado%2C%20quisiera%20agendar%20una%20cita." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i> Agendar Cita
                 </a>
-                <a href="https://wa.me/573105977085?text=Hola%20Nail%20Art%20Sede%20Apartado%2C%20quisiera%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" class="btn-secondary">
-                  <i class="fa-brands fa-whatsapp"></i> Consultar Horarios
+                <a href="#servicios" class="btn-hero-minimal-link">
+                  Conocer Servicios <i class="fa-solid fa-arrow-right"></i>
                 </a>
+              </div>
+              <div class="hero-proof-badge">
+                <span class="hero-proof-stars">★★★★★</span>
+                <span class="hero-proof-text">Atención personalizada con cita previa</span>
               </div>
             </div>
           </div>

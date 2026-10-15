@@ -1,76 +1,65 @@
-/**
- * Script turnkey para extraer secuencias WebP optimizadas para scroll en Dp Beauty Nails
- * Ejecución: node scripts/extract-frames.js [ruta-al-video.mp4]
- */
-const { execSync, spawnSync } = require('child_process');
-const fs = require('fs');
+const { execSync } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
-const defaultVideo = path.join('..', '.agents', 'skills', 'negocio-local-html', 'document', '0909.mp4');
-const videoInput = process.argv[2] || (fs.existsSync(defaultVideo) ? defaultVideo : '0909.mp4');
+const rootDir = path.resolve(__dirname, '..');
+const sourceDir = path.resolve('c:/Users/Rio Belen/negocios_locales/.agents/document/nail_A-1');
 
-if (!fs.existsSync(videoInput)) {
-  console.error(`❌ Error: El video "${videoInput}" no existe.`);
-  process.exit(1);
-}
+const deskOutDir = path.join(rootDir, 'public', 'frames', 'desktop');
+const mobOutDir = path.join(rootDir, 'public', 'frames', 'mobile');
 
-// 1. Resolver binario de FFmpeg
-let ffmpegCmd = 'ffmpeg';
-try {
-  execSync('ffmpeg -version', { stdio: 'ignore' });
-} catch {
-  console.log('⚠️ FFmpeg global no detectado. Intentando usar ffmpeg-static via npx...');
-  try {
-    const staticBin = execSync('npx -y ffmpeg-static --path', { encoding: 'utf-8' }).trim();
-    if (staticBin && fs.existsSync(staticBin)) {
-      ffmpegCmd = staticBin;
-    }
-  } catch (err) {
-    console.error('❌ No se pudo resolver FFmpeg. Instale FFmpeg o ejecute "npm i -D ffmpeg-static".');
-    process.exit(1);
+// Ensure output directories exist
+fs.mkdirSync(deskOutDir, { recursive: true });
+fs.mkdirSync(mobOutDir, { recursive: true });
+
+// Source video files
+const deskVideo = path.join(sourceDir, 'Woman_wearing_gold_jewelry_1080p_20260914065547.mp4');
+const mobVideo = path.join(sourceDir, 'Crear_video_promocional_uñas_1080p_20260914065609.mp4');
+
+console.log('Source Desktop:', deskVideo);
+console.log('Source Mobile:', mobVideo);
+
+// Clean existing frames
+[deskOutDir, mobOutDir].forEach(dir => {
+  if (fs.existsSync(dir)) {
+    fs.readdirSync(dir).forEach(file => {
+      if (file.endsWith('.webp')) {
+        fs.unlinkSync(path.join(dir, file));
+      }
+    });
   }
+});
+
+console.log('1. Extracting Desktop frames (18 fps, 1920x1080, Q85)...');
+execSync(`ffmpeg -y -i "${deskVideo}" -r 18 -vf "scale=1920:1080:flags=lanczos" -c:v libwebp -quality 85 -lossless 0 -compression_level 4 "${path.join(deskOutDir, 'frame-%04d.webp')}"`, { stdio: 'inherit' });
+
+console.log('2. Extracting Mobile frames (18 fps, 720x1280, Q76)...');
+execSync(`ffmpeg -y -i "${mobVideo}" -r 18 -vf "scale=720:1280:flags=lanczos" -c:v libwebp -quality 76 -lossless 0 -compression_level 4 "${path.join(mobOutDir, 'frame-%04d.webp')}"`, { stdio: 'inherit' });
+
+// Create posters from first frame
+const deskFrames = fs.readdirSync(deskOutDir).filter(f => f.startsWith('frame-') && f.endsWith('.webp')).sort();
+const mobFrames = fs.readdirSync(mobOutDir).filter(f => f.startsWith('frame-') && f.endsWith('.webp')).sort();
+
+console.log(`Desktop frames count: ${deskFrames.length}`);
+console.log(`Mobile frames count: ${mobFrames.length}`);
+
+if (deskFrames.length > 0) {
+  fs.copyFileSync(path.join(deskOutDir, deskFrames[0]), path.join(deskOutDir, 'poster.webp'));
+  console.log('Desktop poster created.');
 }
 
-// 2. Crear carpetas de salida
-const desktopDir = path.join(__dirname, '..', 'public', 'frames', 'desktop');
-const mobileDir = path.join(__dirname, '..', 'public', 'frames', 'mobile');
-fs.mkdirSync(desktopDir, { recursive: true });
-fs.mkdirSync(mobileDir, { recursive: true });
-
-console.log(`🎬 Procesando "${videoInput}" con: ${ffmpegCmd}`);
-
-// 3. Extraer Desktop (16:9, 1920x1080 nativo, 72 frames a 12 fps, calidad 85)
-console.log('🖥️ Generando frames para Desktop (1920x1080)...');
-spawnSync(ffmpegCmd, [
-  '-y', '-i', videoInput,
-  '-vf', 'fps=12,scale=1920:1080',
-  '-c:v', 'libwebp',
-  '-quality', '85',
-  '-compression_level', '6',
-  path.join(desktopDir, 'frame-%04d.webp')
-], { stdio: 'inherit' });
-
-// 4. Extraer Mobile (9:16, 720x1280 centrado, 72 frames a 12 fps, calidad 76)
-console.log('📱 Generando frames para Mobile (720x1280)...');
-spawnSync(ffmpegCmd, [
-  '-y', '-i', videoInput,
-  '-vf', 'fps=12,scale=720:1280:force_original_aspect_ratio=increase,crop=720:1280',
-  '-c:v', 'libwebp',
-  '-quality', '76',
-  '-compression_level', '6',
-  path.join(mobileDir, 'frame-%04d.webp')
-], { stdio: 'inherit' });
-
-// 5. Copiar posters
-const firstDesk = path.join(desktopDir, 'frame-0001.webp');
-if (fs.existsSync(firstDesk)) {
-  fs.copyFileSync(firstDesk, path.join(desktopDir, 'poster.webp'));
-  console.log('✅ Poster Desktop generado.');
-}
-const firstMob = path.join(mobileDir, 'frame-0001.webp');
-if (fs.existsSync(firstMob)) {
-  fs.copyFileSync(firstMob, path.join(mobileDir, 'poster.webp'));
-  console.log('✅ Poster Mobile generado.');
+if (mobFrames.length > 0) {
+  fs.copyFileSync(path.join(mobOutDir, mobFrames[0]), path.join(mobOutDir, 'poster.webp'));
+  console.log('Mobile poster created.');
 }
 
-console.log('🎉 ¡Secuencia de fotogramas generada exitosamente en public/frames/!');
+// Calculate total sizes
+const getDirSize = (dir) => {
+  return fs.readdirSync(dir).reduce((total, file) => {
+    return total + fs.statSync(path.join(dir, file)).size;
+  }, 0);
+};
+
+console.log(`Total Desktop frames size: ${(getDirSize(deskOutDir) / 1024 / 1024).toFixed(2)} MB`);
+console.log(`Total Mobile frames size: ${(getDirSize(mobOutDir) / 1024 / 1024).toFixed(2)} MB`);
+console.log('Frame extraction completed successfully!');
